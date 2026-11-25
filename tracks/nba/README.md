@@ -1,5 +1,120 @@
 # Sports Edge Lab · NBA
 
+<!-- NBA B105 RECOVERY STATUS BEGIN -->
+## November 19: B104 recovery audit; B105 delivery verified
+
+[Open the current NBA recovery dashboard](reports/b105_execution_status.html) · [Download exact aggregate evidence](reports/b105_execution_status.json) · [Preserved B104 preparation](reports/b104_execution_status.html).
+
+**B104 stopped without a verified final return. Its completed work is recoverable.** The audit verified 975 registry bodies, 6,291 native artifact references and all 5,607 unique S3 payloads (2,683,086,355 bytes) by full GET and SHA-256, with zero missing, unknown or mismatched objects. The 240 fit-task records contain **225 successful model recipes: 201 new estimators and 201 new calibrators, plus 24 reused pairs**. Fifteen recipes failed: 13 PyTorch interop initialization failures and two TensorFlow serialization-parity failures. Validation produced **450 scored variants** across 225 tasks, and **all 320 original distribution heads were reapplied without refitting**. The historical current-run S3 test registry has zero closures. A separate content audit recovered **46 base-model test results and 92 raw/calibrated ledgers**, comprising 24 earlier cached results and 22 new B104 inference results. All **161 recovered payload files (14,719,711 bytes)** have an immutable full-GET/SHA-verified backup. At most **179 original base-model test inference calls remain**, plus successful replacements for up to 15 failed neural recipes.
+
+The source and native evidence establish **memory amplification at frozen-test entry**: a **1,141,248,706-byte selection lock** was repeatedly decoded by 36 admitted workers. OOM-kill counters rose from zero to 15; logs identify 13 frozen-test workers killed by SIGKILL. **The owner's exact exit status was not retained**, so its own OOM-victim attribution remains an inference. The failure was not established as a three-minute timeout or a LightGBM training defect.
+
+B104 did perform concurrent scientific work: **32.2775 measured cores with 35 active base-fit workers**, and **29.4468 cores with 32 active validation workers**. These peaks do not establish the sustained 180-second occupancy gate. The requested B105 policy remains **12–36 useful cores**, an explicit **36-worker ceiling**, one native thread per independent fit and a **USD 200 compute guard**.
+
+Bounded B105 native verification completed **12 existing-model tasks with 12 overlapping native calls and one native thread**. The short call windows measured **4.1753–4.6783 cores over 0.1161–0.2669 seconds**, so the **180-second / 75%-occupancy gate was not evaluated**. Combined worker RSS peaked at **4,889,866,240 bytes**; warm resume repeated zero frozen-test calls. Three real child-exit/publication cases passed against actual S3, with **35 objects full-GET/SHA verified**, zero canonical owner-pointer writes and zero scientific fits. Four engineering-fixture optimizer calls remain separate from owner scientific work.
+
+**B105 is installed and its immutable remote copy is verified; zero B105 owner executions or new owner fits are credited.** All **60 native archive regression tests** and **9/9 read-only native launch-readiness gates** passed. The executable is **11,163,003 bytes**, SHA-256 `5673b4689fb8f9da7c7c1c5303b71cc04b3e154e00ea9fcc62ff4c193d199a0f`. Owner launch must resolve the newest checkpoint and current safe capacity again. The new review separates verified preparation from owner research, final-return publication and deployment. The point/winner audit compares **5,808 preserved baseline variants and 450 box-feature variants** on identical **1,321 / 1,322** validation rows, with 24 negative controls excluded from rankings. Preserved models retain the margin and winner-objective leads; CatBoost box-feature models lead all four total-point MAE/RMSE roles, whose **2026–27 test metrics remain pending**. All 320 preserved distribution heads also have a same-manifest comparison on **1,321 / 1,322 / 210** rows. Fresh completed-test reporting, all-contender comparison, census qualification and full V13 completion remain open. No champion promotion, merge or website deployment is claimed. All earlier dated records below remain unchanged.
+<!-- NBA B105 RECOVERY STATUS END -->
+
+<!-- NBA B104 EXECUTION STATUS BEGIN -->
+## November 19: B104 preparation and the requested 12–36-core continuation
+
+[Open the current NBA execution and preparation dashboard](reports/b104_execution_status.html) · [Download exact aggregate evidence](reports/b104_execution_status.json) · [Preserved B103 execution audit](reports/b103_execution_status.md).
+
+**Private B104 delivery and native installation have passed verification; owner research execution remains pending.** Read-only native readiness also passed, with no research execution or scientific CPU acceptance credited. The requested owner configuration targets **12 scientific workers normally**, requests **36 cores**, and enforces an explicit **36-worker hard ceiling** subject to safe shared CPU, memory and I/O capacity. Native threads remain bounded per independent fit. Configuration does not establish measured utilization, and unlimited wall time does not waive the **USD 200 compute guard**.
+
+The latest actual B103 bounded execution remains separate: **12 new estimator fits, 12 calibrators, zero observed failures**, and **PARTIAL_RESUMABLE_BOUNDED_ACCEPTANCE** with policy exit 2. Context preparation peaked at **20.442 measured owner CPU equivalents**; the fit phase peaked at **4.6169** over **50.10 seconds**, with **zero sustained 180-second occupancy passes**. No B104 science is credited by this preparation update.
+
+The dashboard preserves **846/2,429 completed replay groups**, **24/240 box-score base recipes**, and **320 original distribution files verified with zero renewed applications credited**. The application counter remains unknown. It distinguishes the frozen **1,321 / 1,322 / 210** population from the older **1,314 / 1,315 / 210** comparison and marks fresh test reporting, full contender scoring, source gaps and remaining research incomplete. B104 prepares test refresh after selection locks and the actual pinned storage-navigation format. No full V13 completion, champion promotion, merge or website deployment is claimed.
+<!-- NBA B104 EXECUTION STATUS END -->
+
+<!-- NBA B103 EXECUTION STATUS BEGIN -->
+## November 19: B103 completed bounded research; full campaign remains incomplete
+
+[Read the actual B103 bounded execution and preserved B102 failure audit](reports/b103_execution_status.md) · [Sanitized aggregate evidence](reports/b103_execution_status.json).
+
+**B103 ran on the owner workspace and completed one bounded execution with 12 new estimator fits, 12 new calibration fits and zero observed failures.** It remains **PARTIAL_RESUMABLE_BOUNDED_ACCEPTANCE**, with exit **2** under the partial-campaign policy and **zero full campaign executions**. The prior preparation-only snapshot and earlier B102 full-run failure remain dated history, not the current B103 activity count.
+
+**846 of 2,429 preserved validation replay groups** are now complete, including **12 new groups** and **834 authenticated prior groups**; **1,583 remain missing**. The registered box-score campaign has **24 of 240 base recipes plus their calibrators** complete across distinct B102/B103 fits, leaving **216** base recipes. All **320 B100 distribution files** were verified; zero missing files were restored and **zero renewed applications are credited**. The actual application counter remains unknown. Prior authority for **5,808 projections** was reused without claiming new projection work.
+
+Context preparation peaked at **20.442 sampled owner CPU equivalents**, while the estimator phase peaked at **4.6169** over **50.10 seconds**. Its gate is **CONDITIONAL_SHORT_QUEUE_COMPLETION_NOT_FULL_CAPACITY_PASS**, with **zero sustained 180-second / 75%-occupancy passes**. Requested workers, context CPU and fitting CPU are separate measurements; sustained 12–24-core fitting remains unproven.
+
+The frozen comparison populations are **1,321 / 1,322 / 210**, separate from B100's older **1,314 / 1,315 / 210**. The **210 test games are not a fresh all-completed-game census**. B104 is being prepared for post-selection-lock test refresh and the actual storage-navigation format; this snapshot does not certify its build, upload or execution. Full same-population comparison, source qualification, remaining research and resulting dashboards remain unfinished. No full-season champion, automatic promotion, merge or website deployment is claimed.
+<!-- NBA B103 EXECUTION STATUS END -->
+
+<!-- NBA B102 EXECUTION STATUS BEGIN -->
+## November 19: B101 failed; B102 authenticated all saved projections, with scientific work still open
+
+[Read the B102 failure and recovery audit](reports/b102_execution_status.html) · [Download the sanitized aggregate evidence](reports/b102_execution_status.json).
+
+**The actual B101 owner execution failed and exited 2.** An earlier historical-input worker exceeded the 64 MiB message limit. The later private projection stage completed **2,374 of 5,808 tasks**, deferred **3,434**, and reported **zero individual task failures and zero new fits**. A global IO-pressure rule admitted only one worker despite a requested ceiling of 24. After 180.84 productive seconds, a scientific occupancy gate incorrectly stopped the presentation work. This observed failure supersedes the earlier B101 preparation notice below; the dated preparation evidence remains unchanged.
+
+**A bounded native B102 recovery check then authenticated all 5,808 existing projection outputs and all 6,969,600 records**, with exactly 1,200 declared games per variant, zero missing outputs, zero missing records, zero null predictions and zero regenerated projections. All 320 original B100 distribution state files were present and verified; zero missing files required restoration. Saved-state verification does not establish renewed model application. This recovery created **zero new estimator, calibration or residual-distribution fits and zero new forecast values**; it did not launch the full research campaign.
+
+The check measured **21 overlapping projection tasks**, reached 24 physical workers, and used about **1.17 completed-task CPU equivalents** over 144.76 seconds. Worker concurrency does not establish sustained 12–24-core utilization. Independent logs exposed a further publication-backlog bottleneck. The next queue revision separates verification from publication and reuses authenticated checkpoint references; **22 targeted engineering tests passed**, while native evidence for that revision remains outside this dated snapshot. The 75% / 180-second scientific acceptance threshold remains unchanged and failed measurements remain failures. The whole-instance interval estimate is **USD 0.109743**, not an invoice or an allocated NBA charge.
+
+**Overall scientific status remains PARTIAL_RESUMABLE.** The retained model comparisons still use identical annual populations of **1,314 / 1,315 / 210 completed games**, with **14 known validation omissions** and no expanded-population rescoring. Full-census qualification, the registered scientific campaign, sustained CPU acceptance, source-clock/coverage closure and complete resulting dashboards remain unfinished. Previously inspected 2026–27 test results remain exposed and cannot select models. No champion promotion, merge or website deployment is established by this NBA-only draft addition.
+<!-- NBA B102 EXECUTION STATUS END -->
+
+<!-- NBA B101 EXECUTION STATUS BEGIN -->
+## November 18: B100 completed its registered campaign; B101 research is in preparation
+
+[Read the current execution and research review](reports/b101_execution_status.html) · [Download sanitized aggregate evidence](reports/b101_execution_status.json).
+
+**The audited B100 run completed all 320 new residual-distribution fits and current forecasts for all 5,808 saved point-model variants**, with zero new base-estimator fits, zero new calibration fits, zero failed jobs and zero provider requests. Its current population contains **210 completed 2026–27 games and 990 upcoming games**. The saved current forecast counts supersede the inherited 206-game subsection; they do not establish original historical issuance.
+
+Every point variant and distribution head uses identical retained annual populations of **1,314 / 1,315 / 210 completed games**. The review shows all fourteen 50/50 validation-selected objective/horizon roles with their saved annual metrics. **Fourteen known validation omissions remain: six play-in games and one Cup final in each validation season.** Authentic source records support proposed counts of **1,321 and 1,322**, but those expanded populations have not yet been rescored. No qualified full-season champion or full V13 completion is claimed.
+
+B100 reached 24 fitting worker processes, while its **20.03-second representative interval averaged 6.13 measured cores**; the full residual-fit stage lasted **33.28 seconds**. Safe admission varied from 1 to 24 cores. It recorded **zero full three-minute occupancy passes**, so requested sustained 12–24-core throughput remains unproven. The through-delivery whole-instance wall estimate is **USD 0.479552**; actual invoiced cost and NBA allocation remain unknown.
+
+**B101 is planned and unexecuted.** The finite campaign reuses all 320 original heads, reconciles the expanded common population, and registers up to 240 new box-score estimator recipes with calibrators, 162 learned model combinations, 216 combination residual heads, and 480 fixed positive-tail compositions requiring zero fits. Numerical duplicates share fitted state. The next owner launch must preserve completed identities and measure actual useful CPU. Final packaged and private staging verification are pending. No new per-game forecasts or production promotion are published; main integration and website deployment remain separate pending steps. Earlier dated B100/B099/B098 records below remain unchanged.
+<!-- NBA B101 EXECUTION STATUS END -->
+
+<!-- NBA B100 EXECUTION STATUS BEGIN -->
+## November 18: B099 refreshed inputs and delivered a compact return; scientific queues remain deferred
+
+[Read the current execution-status review](reports/b100_execution_status.html) · [Download the sanitized aggregate evidence](reports/b100_execution_status.json).
+
+**The observed B099 continuation is PARTIAL_RESUMABLE.** Five provider requests refreshed test inputs to **210 completed 2026–27 games**, but the current forecast preparation completed one task and deferred six. All **160 registered residual-input preparation tasks were deferred**, with **zero new estimator, calibration or residual-distribution fits**. The frozen prediction contract therefore remains at 206 completed games; fresh inputs do not certify current forecasts.
+
+Private export projection work did complete: **5,808 verified projections, comprising 3,776 new and 2,032 reused**, followed by three private logical exports. The projection pool peaked at 24 processes, but its measured interval averaged **5.63 cores, 23.47% of 24 admitted cores, over 80.45 seconds**. It recorded **zero full three-minute occupancy passes**. The requested sustained 12–24-core scientific throughput remains unmet.
+
+The verified return is **one ZIP of 340,294,167 bytes with 3,112 payloads**. The through-delivery whole-instance wall estimate is **USD 0.4785**; actual invoiced cost and NBA cost allocation remain unknown. The USD 200 guard is a ceiling, not reported spending.
+
+**The canonical B100 runner is installed, and native readiness passed all eight read-only gates.** The exact archive passed **133 engineering tests with zero failures, errors or skips**, plus **one separate actual-checkpoint entrypoint test** that stopped before owner dispatch. All **1,034 inherited B099 members** remain unchanged. Nine initial private delivery files totaling **9,855,823 bytes** passed installation and complete-body readback verification. The repair preserves safety thresholds while allowing bounded waiting through temporary capacity loss; the private comparison mobile control was verified with its original evidence unchanged. Later preparation documents and pointers are outside this dated certification. This preparation credits **zero owner executions, fits, inference rows or provider requests**. B100 throughput still requires evidence from the owner run.
+
+No full V13 completion, qualified full-season champion or production promotion is claimed. The B099 and B098 preparation pages below remain dated records. This NBA-only status addition changes no historical score, forecast value or source clock. Main integration and website deployment are pending.
+<!-- NBA B100 EXECUTION STATUS END -->
+
+<!-- NBA B099 EXECUTION STATUS BEGIN -->
+## November 18: two B098 startup failures; B099 package verified, native installation pending
+
+[Read the latest execution-status review](reports/b099_execution_status.html) · [Download the sanitized aggregate evidence](reports/b099_execution_status.json).
+
+**Both observed B098 owner attempts failed before scientific dispatch and exited 2.** The frozen-input consumer rejected the preserved population's records wrapper because it required a bare list. Each attempt produced **zero new estimator fits, zero calibration fits and zero provider requests**. The latest attempt requested 24 cores but recorded **zero scientific CPU samples and no measured capacity pass**; the absent measurement is not a measured zero-core average. Earlier engineering checks did not cover this actual latest-checkpoint consumer path.
+
+The latest physical return passed integrity verification: **6,530,108,006 logical bytes, 13 ordered parts and 22,500 payloads**. Its scientific status remains **PARTIAL_RESUMABLE**. Re-embedding 22,484 prior identities inflated packaging; transfer volume is not new research. B097's **672 new estimator fits, 1,232 new calibration fits and 5,808 scored variants with uncertainty reports** remain preserved. Its earlier fitting occupancy pass does not carry over to its failed export or either B098 attempt.
+
+**The exact canonical B099 archive passed 159 engineering tests with zero failures, errors or skips**, including the actual latest frozen-source boundary. Complete-body SHA-256 readback verified six private delivery files totaling **28,422,157 bytes**. **Space installation and native readiness preflight remain pending** because the authenticated Space session expired; the owner bootstrap installs verified bytes, checks native readiness, then launches the run. Registered work adds current forecasting from locked components and up to 320 residual-distribution heads fitted from authenticated prevalidation history, with no optimizer updates from 2026–27 outcomes. Preparation credits **zero owner executions, fits, inference rows or provider retrievals**, and no scientific occupancy pass. The next owner launch must resolve the newest durable checkpoint again, respect explicit worker ceilings, and prove useful scientific throughput with real process accounting.
+
+Full V13 completion, independently qualified full-season champions and production promotion remain unclaimed. This status addition changes no historical score, forecast value, original issue clock or source-coverage asset. The earlier B098 page below remains a dated record. Main-branch integration and website deployment are separate pending steps.
+<!-- NBA B099 EXECUTION STATUS END -->
+
+<!-- NBA B098 EXECUTION STATUS BEGIN -->
+## November 17 Pacific: B097 completed fits, then failed export; B098 owner run pending
+
+[Read the execution-status review](reports/b098_execution_status.html) · [Aggregate evidence](reports/b098_execution_status.json).
+
+The authenticated B097 science checkpoint records **672 new estimator fits, 1,232 new calibration fits, 150 reused estimators, 150 reused calibrators and 5,808 completed uncertainty reports**. It also records four provider requests, zero failed estimator fits and zero automatic promotions. **The owner execution failed during private export and remains incomplete.** Its projection pool was fixed at one worker after a transient admission sample while the gate retained 24 admitted cores; measured occupancy was 3.62% over 182.33 seconds, with 3,776 projection jobs pending. Earlier fitting independently passed the capacity gate at 92.12% occupancy over 183.01 seconds. The later duplicate-launch refusal preserved an active predecessor; it did not fix this export failure.
+
+**B098 is a locally prepared repair, with owner execution pending.** Eleven focused export checks passed using invented fixtures; configured ceiling cases of 12, 24 and 48 admitted at most four actual local workers. That engineering evidence is not an owner sustained-capacity pass. A later check of the actual packaged runner passed **70 canonical engineering tests at 2026-11-18 05:42:44 UTC**, with zero owner research executions or provider requests. This status proposal does not certify staging or deployment and launches no research.
+
+At the separate **2026-11-18 05:33:19 UTC** observation, B097 physical return finalization was still running, with 12,152 of 41,240 payloads verified. A completed B097 archive or latest-return promotion was not established by that observation. The next owner launch must resolve the newest durable checkpoint again. Actual invoiced cost remains unknown; the approximately USD 2.9222 whole-instance estimate at the 04:29 science checkpoint excludes later finalization.
+
+Earlier scientific metrics, selected original issues and source-coverage assets remain unchanged with their dated qualifications. This notice adds execution accounting, not new public scientific scores, forecast values, certified champions or a production promotion. GitHub source publication and website deployment remain separate.
+<!-- NBA B098 EXECUTION STATUS END -->
+
+
 
 <!-- NBA B095 CURRENT REVIEW BEGIN -->
 ## November 17 Pacific: two B095 failures before research; B096 prepared

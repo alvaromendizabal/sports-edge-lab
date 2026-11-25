@@ -1,0 +1,257 @@
+{
+  "B104_preparation": {
+    "built_or_uploaded_runner_claimed": false,
+    "full_research_run_launched": false,
+    "owner_execution_claimed": false,
+    "purpose": [
+      "Refresh current descriptive test reporting after validation selection locks, preserving existing fitted and validation identities.",
+      "Read the actual pinned bundled storage-navigation format and current continuation without global storage mutations."
+    ],
+    "status": "IN_PROGRESS_NOT_CERTIFIED_BY_THIS_DATED_SNAPSHOT"
+  },
+  "cumulative_registered_work": {
+    "basis": "Distinct prior B102 and current B103 fitted/replay identities; prior work is not new B103 credit.",
+    "box_base_estimators_complete": 24,
+    "box_base_recipes_missing": 216,
+    "box_base_recipes_registered": 240,
+    "box_calibrators_complete": 24,
+    "preserved_scored_variants_complete": 2151,
+    "preserved_validation_replay_groups_complete": 846,
+    "preserved_validation_replay_groups_missing": 1583,
+    "preserved_validation_replay_groups_registered": 2429,
+    "preserved_variants_registered": 5808,
+    "registered_counts_are_full_v13_completion": false
+  },
+  "current_evidence_cutoff_utc": "2026-11-19T03:19:40.959366Z",
+  "current_status": "PARTIAL_RESUMABLE_BOUNDED_ACCEPTANCE",
+  "dated_snapshot_utc": "2026-11-19",
+  "evaluation": {
+    "fresh_all_completed_test_reporting_complete": false,
+    "full_season_champions_qualified": false,
+    "historical_B100_validation_games": [
+      1314,
+      1315
+    ],
+    "independent_full_season_census_verified": false,
+    "market_overlap_is_full_population": false,
+    "primary_validation_selection_weights": [
+      0.5,
+      0.5
+    ],
+    "prior_test_exposure_preserved": true,
+    "same_population_all_contender_comparison_complete": false,
+    "test_count_scope": "FROZEN_210_GAME_SNAPSHOT_NOT_FRESH_ALL_COMPLETED_GAME_CENSUS",
+    "test_declared_completed_games": 210,
+    "test_outcomes_select_models": false,
+    "test_season": "2026-27",
+    "unknown_missing_count_is_zero": false,
+    "validation_declared_completed_games": [
+      1321,
+      1322
+    ],
+    "validation_seasons": [
+      "2024-25",
+      "2025-26"
+    ],
+    "weight_sensitivity_refits_estimators": false
+  },
+  "evidence_provenance": {
+    "historical_B102_execution": {
+      "execution_report_sha256": "7aa0e2ef6116d5e7b9f4901554dcf37139ace98007286f060413fcd46098eb1c",
+      "invocation_receipt_sha256": "9037feb2db10a03da559cfe8938b5fa44eef351b6b7df69bc7b8dadc9047a0f8",
+      "private_evidence_publicly_downloadable": false,
+      "source_bodies_rehashed_before_projection": true,
+      "telemetry_sha256": "12437df5bb007918899d6cb94d6e1bb5568c98d9c370c483ac7ad7e9020b2f66"
+    },
+    "latest_B103_bounded_execution": {
+      "compact_summary_sha256": "ebb589b17126db8549cfc8bdceee18c57b367039fe5951c4286addfbf4a3179c",
+      "execution_report_sha256": "9c2e946a07b374e47634639990ef631efb6dbd077c0052b663ccc00857b9cc8d",
+      "independent_telemetry_sha256": "d469cfd86197734156b6b8c7c12d9ef1ff43aba30d78c44d045990f03412d1d9",
+      "invocation_receipt_sha256": "29d47862d6631c71a5be7851f8d3713731db918ce85ed2782bcb7d7bcda6dd72",
+      "private_evidence_publicly_downloadable": false,
+      "source_bodies_rehashed_before_projection": true
+    }
+  },
+  "historical_B103_preparation": {
+    "automatic_full_research_chaining": false,
+    "combined_engineering_errors": 0,
+    "combined_engineering_failures": 0,
+    "combined_engineering_tests_passed": 96,
+    "configured_workers_are_measured_busy_cores": false,
+    "full_research_run_launched": false,
+    "full_research_run_ready": false,
+    "hard_max_workers": 24,
+    "installer_engineering_tests_passed": 11,
+    "native_blocker": "Authenticated native workspace session unavailable during preparation.",
+    "native_installation_verified": false,
+    "native_readiness_verified": false,
+    "native_workload_acceptance_verified": false,
+    "new_B103_fits": 0,
+    "next_owner_scope": "Installation, read-only readiness and bounded real-work acceptance; then stop for evidence review.",
+    "previous_combined_attempt": {
+      "errors": 13,
+      "failures": 2,
+      "repair": "Resolve test dependencies and isolate test harness hooks; final combined suite includes a regression for worker serialization identity.",
+      "tests": 95
+    },
+    "prior_release_members_byte_preserved": 1162,
+    "repair_scope": [
+      "Use current pressure and verified owner worker identities while retaining memory, CPU, disk, cost and other-owner capacity safeguards.",
+      "Preserve completed replay checkpoints and original numerical identities; do not refit verified completed states.",
+      "Allow independent registered work after valid inputs while retaining full-cohort rejection for dependent comparisons.",
+      "After incomplete campaign work, emit compact diagnostics and defer redundant full dashboard regeneration."
+    ],
+    "requested_cores": 24,
+    "status": "PREPARED_CANDIDATE_NATIVE_ACCEPTANCE_PENDING"
+  },
+  "historical_B103_preparation_scope": "PRE_INVOCATION_PREPARATION_SNAPSHOT_SUPERSEDED_FOR_NATIVE_ACTIVITY_BY_LATEST_BOUNDED_EXECUTION",
+  "latest_bounded_owner_execution": {
+    "B100_actual_application_counter": null,
+    "B100_distribution_files_verified": 320,
+    "B100_missing_files_restored": 0,
+    "B100_new_application_credit": 0,
+    "actual_invoiced_usd": null,
+    "actual_provider_credits": 0,
+    "bounded_completed_executions": 1,
+    "bounded_executions": 1,
+    "bounded_failed_executions": 0,
+    "bounded_incomplete_executions": 0,
+    "compact_return": {
+      "bytes": 20226,
+      "historical_payloads_repacked": 0,
+      "sha256": "72a74b33a8fb7be074fc6d5db189474a816c2021774554dd31a7a1263904c8a0",
+      "verified_payloads": 8
+    },
+    "cpu": {
+      "acceptance": "CONDITIONAL_SHORT_QUEUE_COMPLETION_NOT_FULL_CAPACITY_PASS",
+      "configured_workers_are_measured_busy_cores": false,
+      "context_peak_is_estimator_fit_utilization": false,
+      "context_preparation_peak_sampled_owner_cores": 20.44237471292999,
+      "estimator_phase_elapsed_seconds": 50.095931,
+      "estimator_phase_peak_sampled_owner_cores": 4.616901583083376,
+      "independent_telemetry_samples": 41,
+      "initial_ready_estimator_tasks": 12,
+      "measured_full_interval_passes": 0,
+      "per_fit_native_threads": 1,
+      "required_occupancy_fraction": 0.75,
+      "required_representative_seconds": 180
+    },
+    "current_projection_files_rehashed": 0,
+    "current_projection_worker_tasks": 0,
+    "execution_complete": false,
+    "execution_mode": "BOUNDED_REAL_OWNER_ACCEPTANCE",
+    "execution_outcome": "BOUNDED_TASKS_COMPLETED_FULL_CAMPAIGN_DEFERRED",
+    "exit_code_meaning": "Partial campaign policy exit after completed bounded tasks; no observed execution exception.",
+    "failed_estimator_fits": 0,
+    "failed_jobs": 0,
+    "finished_at_utc": "2026-11-19T03:19:40.959366Z",
+    "full_owner_completed_executions": 0,
+    "full_owner_executions": 0,
+    "full_research_run_launched": false,
+    "full_v13_complete": false,
+    "hard_max_workers": 24,
+    "invocation_exit_code": 2,
+    "nba_allocated_cost_usd": null,
+    "new_calibration_fits": 12,
+    "new_estimator_fits": 12,
+    "new_meta_model_fits": 0,
+    "new_preserved_validation_replay_groups": 12,
+    "new_provider_requests": 0,
+    "new_residual_distribution_fits": 0,
+    "previous_preserved_validation_replay_groups_authenticated": 834,
+    "prior_projection_checkpoint_count": 5808,
+    "projection_reuse_scope": "PRIOR_PINNED_PROJECTION_CHECKPOINT_NO_NEW_PROJECTION_CPU_CREDIT",
+    "registered_campaign_branch_failures": 0,
+    "release": "B103",
+    "requested_cores": 24,
+    "research_entered": true,
+    "scientific_status": "PARTIAL_RESUMABLE_BOUNDED_ACCEPTANCE",
+    "started_at_utc": "2026-11-19T03:12:40.773501Z",
+    "whole_instance_through_delivery_estimate_usd": "0.3078780719383571618055555556"
+  },
+  "latest_full_owner_execution": {
+    "actual_invoiced_usd": null,
+    "cause": "Shared memory-pressure admission drained worker grants to zero; a continuous no-capacity wait expired while queued work remained and no scientific worker was active.",
+    "compact_return": {
+      "bytes": 185186,
+      "historical_payloads_repacked": 0,
+      "sha256": "efb8efd2e493cc07f0f6b552f3200f22dabd65841bcac5c540e8b649d3e0bc1e",
+      "verified_payloads": 9
+    },
+    "exception_type": "CurrentForecastsIncomplete",
+    "execution_complete": false,
+    "exit_code": 2,
+    "failed_or_partial_executions": 1,
+    "failure_stage": "preserved_point_replay",
+    "full_v13_complete": false,
+    "individual_estimator_failures": 0,
+    "individual_inference_task_failures": 0,
+    "nba_allocated_cost_usd": null,
+    "new_calibration_fits": 0,
+    "new_estimator_fits": 0,
+    "new_meta_model_fits": 0,
+    "new_provider_requests": 0,
+    "new_residual_distribution_fits": 0,
+    "no_capacity_wait_seconds": 180.03756937400613,
+    "productive_projection_deadline_cause": false,
+    "projection_recovery": {
+      "complete_verified": 5808,
+      "completed_task_cpu_seconds": 24.255078550999958,
+      "deferred": 0,
+      "elapsed_seconds": 53.29116581600101,
+      "failed": 0,
+      "measured_overlapping_tasks": 24,
+      "new_outputs": 0,
+      "proof_basis": "Fresh output/source hash, schema and identity checks; authenticated prior durability reused.",
+      "registered": 5808
+    },
+    "redundant_post_failure_export": {
+      "html_export_seconds": 162.38213678800093,
+      "is_compact_return_packaging": false,
+      "second_projection_verification_seconds": 249.9502333390119
+    },
+    "registered_branch_failures": 1,
+    "release": "B102",
+    "research_entered": true,
+    "scientific_status": "PARTIAL_RESUMABLE",
+    "successful_executions": 0,
+    "sustained_three_minute_75_percent_cpu_passes": 0,
+    "through_delivery_whole_instance_estimate_usd": "1.063516651605999844444444444",
+    "validation_replay": {
+      "candidate_variants": 5808,
+      "completed_base_groups": 834,
+      "completed_task_cpu_seconds": 2764.493739559,
+      "completed_variants": 2127,
+      "deferred_base_groups": 1595,
+      "elapsed_seconds": 614.0229920340062,
+      "measured_peak_active_scoring_processes": 24,
+      "new_fit_credit": 0,
+      "registered_base_groups": 2429,
+      "remaining_variants_including_downstream_blends": 3681,
+      "sample_mean_owner_cpu_equivalents": 4.595356128764722,
+      "sample_peak_owner_cpu_equivalents": 20.018211791367577
+    }
+  },
+  "owner": "NBA",
+  "preserved_prior_work": {
+    "B100_current_application_count": null,
+    "B100_current_application_credit_claimed": false,
+    "B100_current_application_credit_count": 0,
+    "B100_missing_states_restored": 0,
+    "B100_residual_distribution_states_verified_present": 320,
+    "earlier_B102_bounded_new_calibrations": 12,
+    "earlier_B102_bounded_new_estimators": 12,
+    "earlier_bounded_work_is_new_full_run_work": false
+  },
+  "publication": {
+    "automatic_champion_promotions": 0,
+    "draft_pr": 392,
+    "engineering_ci_is_scientific_acceptance": false,
+    "main_integrated": false,
+    "private_runtime_source_added": false,
+    "public_forecast_values_added": 0,
+    "website_deployed": false
+  },
+  "schema": "sel.nba.public.b103_execution_status.v2",
+  "scope": "SANITIZED_AGGREGATE_EXECUTION_STATUS_NO_NEW_FORECAST_VALUES"
+}

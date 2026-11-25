@@ -1,0 +1,182 @@
+{
+  "schema": "sel.nba.public_execution_status.b099.v1",
+  "owner": "NBA",
+  "snapshot_at_utc": "2026-11-18T18:48:56Z",
+  "evidence_scope": "Two observed B098 owner attempts and preserved B097 science; not an all-time attempt census.",
+  "actual_owner_status": "PARTIAL_RESUMABLE",
+  "execution_complete": false,
+  "full_v13_complete": false,
+  "automatic_promotions": 0,
+  "attempts": [
+    {
+      "release": "B098",
+      "run_at_utc": "2026-11-18T07:45:54Z",
+      "exit_code": 2,
+      "failure_stage": "Frozen export input loading",
+      "failure_class": "Population wrapper/list mismatch",
+      "scientific_workers_dispatched": 0,
+      "new_estimator_fits": 0,
+      "new_calibration_fits": 0,
+      "new_provider_requests": 0,
+      "occupancy_pass": false
+    },
+    {
+      "release": "B098",
+      "run_at_utc": "2026-11-18T17:47:51Z",
+      "exit_code": 2,
+      "failure_stage": "Frozen export input loading",
+      "failure_class": "Population wrapper/list mismatch",
+      "scientific_workers_dispatched": 0,
+      "new_estimator_fits": 0,
+      "new_calibration_fits": 0,
+      "new_provider_requests": 0,
+      "occupancy_pass": false
+    }
+  ],
+  "latest_attempt": {
+    "science_started_at_utc": "2026-11-18T17:48:07.555679Z",
+    "science_finished_at_utc": "2026-11-18T17:48:12.825827Z",
+    "reported_science_elapsed_seconds": 5.451772706001066,
+    "requested_cores": 24,
+    "requested_max_workers": 24,
+    "scientific_cpu_sample_count": 0,
+    "measured_scientific_cores": null,
+    "full_interval_occupancy_passes": 0,
+    "new_verified_science_commits": 0,
+    "actual_billed_cost_usd": null,
+    "whole_instance_wall_interval_estimate_usd": "0.3297405827275838916666666667",
+    "owner_cost_allocation": "Unknown; the shared instance estimate is not allocated between projects.",
+    "guard_usd": 200,
+    "guard_spent": false
+  },
+  "latest_return": {
+    "integrity_verified": true,
+    "scientific_status": "PARTIAL_RESUMABLE",
+    "logical_bytes": 6530108006,
+    "ordered_parts": 13,
+    "payloads": 22500,
+    "logical_sha256": "177bbd2b904248450d6da8cf4b38573e2fd956aa5a867d2610d9ffd921945c37",
+    "integrity_is_scientific_completion": false,
+    "observed_redundant_prior_identities_reembedded": 22484
+  },
+  "preserved_b097": {
+    "new_estimator_fits": 672,
+    "new_calibration_fits": 1232,
+    "reused_estimator_fits": 150,
+    "reused_calibration_fits": 150,
+    "completed_base_jobs": 822,
+    "completed_scored_variants_and_uncertainty_reports": 5808,
+    "failed_estimator_jobs": 0,
+    "provider_requests": 4,
+    "fit_occupancy_percent": 92.11995517394568,
+    "fit_interval_seconds": 183.005918088,
+    "fit_measured_cores": 22.11,
+    "fit_admitted_cores": 24,
+    "private_export_occupancy_percent": 3.623826,
+    "private_export_interval_seconds": 182.334907,
+    "private_export_measured_cores": 0.87,
+    "private_export_configured_workers": 1,
+    "private_export_gate_cores": 24,
+    "private_export_pending_jobs": 3776,
+    "execution_complete": false,
+    "full_v13_complete": false
+  },
+  "b099_preparation": {
+    "status": "PREPARED_VERIFIED",
+    "final_packaged_verification": "VERIFIED",
+    "private_staging_verification": "REMOTE_OBJECT_BYTES_VERIFIED_SPACE_INSTALL_PENDING",
+    "new_owner_executions": 0,
+    "new_owner_estimator_fits": 0,
+    "new_owner_calibration_fits": 0,
+    "new_owner_distribution_fits": 0,
+    "owner_throughput_pass": false,
+    "planned_distribution_heads": 320,
+    "planned_current_forecasts": "Update eligible changed/current inputs using locked fitted components; resolve durable checkpoints again at owner launch.",
+    "distribution_training_boundary": "Authenticated held-out history before the 2024–25 validation season; no 2026–27 outcome optimization.",
+    "base_estimator_refit_for_evaluation_weights": false,
+    "default_scientific_workers": 12,
+    "opportunistic_scientific_workers": 24,
+    "explicit_max_workers_is_hard_ceiling": true,
+    "native_threads_per_worker": 1,
+    "log_interval_seconds": 10,
+    "occupancy_minimum_percent": 75,
+    "occupancy_interval_seconds": 180,
+    "occupancy_gate_conditional_on_sufficient_independent_work_and_safe_capacity": true,
+    "full_v13_complete": false,
+    "delivery_status": "S3_VERIFIED_SPACE_INSTALL_AND_NATIVE_PREFLIGHT_PENDING",
+    "canonical_engineering_tests": 159,
+    "engineering_failures": 0,
+    "engineering_errors": 0,
+    "engineering_skips": 0,
+    "actual_latest_frozen_source_boundary_tested": true,
+    "delivery_files_full_body_sha256_verified": 6,
+    "delivery_bytes_full_body_sha256_verified": 28422157,
+    "space_home_installation": "PENDING_EXPIRED_AUTH_SESSION",
+    "native_readiness_preflight": "PENDING_OWNER_BOOTSTRAP",
+    "new_owner_inference_rows": 0,
+    "new_owner_provider_requests": 0,
+    "owner_cpu_acceptance": "NOT_RUN",
+    "verification_summary": "The exact canonical archive passed 159 engineering tests with zero failures, errors or skips, including the actual latest frozen-source boundary. Complete-body SHA-256 readback verified six private delivery files totaling 28,422,157 bytes. Space installation and native readiness preflight remain pending because the authenticated Space session expired. The owner bootstrap installs verified bytes, performs native readiness checks, and then launches the owner run."
+  },
+  "scientific_contract": {
+    "validation_seasons": [
+      "2024–25",
+      "2025–26"
+    ],
+    "test_season": "2026–27",
+    "selection_weights": [
+      [
+        50,
+        50
+      ],
+      [
+        40,
+        60
+      ],
+      [
+        30,
+        70
+      ],
+      [
+        20,
+        80
+      ],
+      [
+        10,
+        90
+      ]
+    ],
+    "primary_validation_weight": [
+      50,
+      50
+    ],
+    "test_outcomes_choose_models_or_calibration": false,
+    "training_rows_reweighted_by_season": false,
+    "previous_test_exposure_erased": false,
+    "full_independent_game_census_proven": false,
+    "qualified_full_season_champion": false,
+    "remaining_gaps": [
+      "Independent all-competition and postseason census qualification",
+      "Complete point-in-time player, lineup, injury and replacement input lineage",
+      "Additional possession and box-score interactions with authenticated clocks",
+      "Complete historical opening/closing paths and additional market schemas",
+      "Source-specific historical rights, clocks, coverage and matched comparisons",
+      "Broader registered validation-safe calibration and blending program"
+    ]
+  },
+  "evidence": {
+    "latest_execution_report_bytes": 167703423,
+    "latest_execution_report_sha256": "fff08099636453c57ee998d6119b609a6eb043bb763ec2df98b9bf04666ce2d3",
+    "actual_failure_reason": "B098_FROZEN_RESUME_POPULATION_LIST_REQUIRED",
+    "private_evidence_publication": "Only this sanitized aggregate projection is published."
+  },
+  "publication": {
+    "status": "DRAFT_SOURCE_REVIEW",
+    "main_branch_integration": "PENDING",
+    "website_deployment": "PENDING",
+    "scientific_completion": "INCOMPLETE",
+    "production_promotion": "NONE",
+    "new_public_forecast_values": 0,
+    "historical_scientific_assets_changed": false
+  }
+}
