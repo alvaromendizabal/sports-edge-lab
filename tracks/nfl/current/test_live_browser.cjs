@@ -153,6 +153,11 @@ function verifyHostedHtml(observed, source, context) {
       await noOverflow();
       await page.screenshot({ path: path.join(output, `week12-${width}.png`), fullPage: false });
       assert(await page.locator('a[href*="research-history.html"]').count());
+      for (const [view, anchor] of Object.entries({slate:"slate", circa:"circa", performance:"results", cards:"cards"})) {
+        await page.goto(new URL("?view=" + view, base).href);
+        await page.waitForURL(u => u.hash === "#" + anchor && !u.searchParams.has("view"));
+        assert(!new URL(page.url()).pathname.endsWith("research-history.html"));
+      }
       await page.goto(new URL("?view=cards&type=games&clock=T60&page=4", base).href);
       await page.waitForURL(u => u.pathname.endsWith("/research-history.html") && u.searchParams.get("page") === "4");
       await page.waitForFunction(() => document.querySelector("#cards-page-label")?.textContent.trim() === "4 / 4");

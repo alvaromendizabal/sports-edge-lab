@@ -1,9 +1,17 @@
+# NFL Week 12 · November 24, 2026 Pacific
+
+[Open the live game dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/) · [All contest options](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#circa) · [Model results](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#results) · [Phone cards](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#cards) · [Public release receipt](current/publication.json)
+
+The N186 return issued model forecasts for every Week 12 game. Los Angeles opens Wednesday at 5 p.m. Pacific with a 58.0% win probability, a projected 3.47-point advantage and a 46.28-point total against Green Bay. The public comparison dates those forecasts separately from DraftKings, Kalshi and Polymarket observations. The 32 provisional contest sides use DraftKings spreads pending the official Circa worksheet. The annual model comparisons use 2024 and 2025 validation and a previously exposed 2026 replay.
+
+[Archived Week 11 dashboard](current/research-history.html?view=slate) · [Archived November 23 publication](current/publication-n175.json)
+
 <!-- NFL_CURRENT_SLATE_20261120_START -->
-# NFL current slate dashboard · November 20, 2026
+# Archived NFL slate dashboard · November 20, 2026
 
-[Current browser dashboard source](current/index.html) · [Saved selected data](current/data.json) · [Dashboard methodology](current/README.md)
+[Week 11 browser dashboard source](current/research-history.html) · [Saved selected data](current/data.json) · [Dashboard methodology](current/README.md)
 
-**Publication state: public Site deployed, version 1.** [Open the current NFL dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/) · [Publication receipt](current/publication.json). All seven current application assets returned HTTP 200 anonymously and matched the browser-tested preview bytes. The production browser reopen was blocked by unavailable tool connection/context and remains explicitly unverified.
+**November 20 publication state.** [Open the Week 11 archive](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/research-history.html) · [Subsequent Week 11 publication receipt](current/publication-n175.json). All seven current application assets returned HTTP 200 anonymously and matched the browser-tested preview bytes. The production browser reopen was blocked by unavailable tool connection/context and remains explicitly unverified.
 
 The dashboard includes 12 upcoming games, 24 exact-line Circa sides and six phone cards. Default forecasts retain November 16 inputs with R18-selected T120 models. Current T60 matchup values remain unavailable. All 216 newer R20 fits were audited without training; none improved the incumbent in 14 same-clock, same-cohort comparisons. Original source, compilation and selection clocks remain separate from publication time.
 
@@ -74,3 +82,4 @@ The executable retained the N084 scientific namespace. The later N086 execution 
 </details>
 
 </details>
+

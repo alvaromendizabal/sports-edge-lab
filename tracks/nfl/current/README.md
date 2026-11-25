@@ -4,7 +4,7 @@
 
 Week 12 covers all 16 scheduled matchups. The public board shows the NFL models' issued picks for winner, point margin and total, with the forecast and price observations dated separately. The contest view grades a cover as one point and a push as half a point. Its weekday preview uses the named sportsbook's lines until the official Circa worksheet has been observed and verified. The performance view records the validation and exposed-season denominators.
 
-The earlier Week 11 dashboard, its clock selectors, its archived evidence and its phone cards are available at the original bookmarked query routes and the [Week 11 archive](research-history.html). The [November 23 receipt](publication-n175.json) documents the earlier deployment.
+The earlier Week 11 dashboard, its clock selectors, its archived evidence and its phone cards remain available at dated, clocked and paginated bookmarks and the [Week 11 archive](research-history.html). The [November 23 receipt](publication-n175.json) documents the earlier deployment.
 
 ## Verified content — November 20, 2026 Pacific
 
