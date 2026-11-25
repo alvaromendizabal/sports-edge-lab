@@ -214,6 +214,12 @@ def validate(root: Path, allow_empty=False):
         errors.append("Nine score objectives and all three distinct official cards are required")
     if current_html.count('data-n194-game=') != 16 or current_html.count('data-n194-validation=') != 5 or contest.count('data-n194-sides=') != 5 or not (root / 'archive/n193/all-games/index.html').is_file():
         errors.append("Current and historical N194/N193 consumer routes and official model cards are incomplete")
+    direct = (root / "against-the-spread/index.html").read_text()
+    for key in ("official-games", "dk-games", "annual", "ratios", "source-coverage"):
+        if f'data-n195="{key}"' not in direct:
+            errors.append(f"Missing specialist evidence: {key}")
+    if not (root / "archive/n194/circa/index.html").is_file() or "n195-specialist" not in current_html:
+        errors.append("Missing specialist entrance or N194 archive")
     for marker in private_markers:
         if marker in current_html:
             errors.append(f"Week 12 contains an internal marker {marker}")

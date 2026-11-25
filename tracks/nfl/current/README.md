@@ -2,11 +2,13 @@
 
 [Open the NFL dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/) · [Thanksgiving tripleheader](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/thanksgiving/) · [All Week 12 games](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/weeks/12/) · [Circa picks and performance](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa/) · [All-games policy comparison](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/all-games/) · [Phone graphics](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#cards)
 
+N195 compared 47,579 policies on the same official games. [New against-the-spread research board](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/against-the-spread/) · [Earlier N194 edition](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n194/). The new weekly-five and full-slate selections differ. Zero contest entries were recorded.
+
 The completed N194 owner compared 45 league decisions and retained all nine equal-weight primary forecasts. Two total-MAE sensitivities selected new models. [Season results](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#situation-review) · [Historical NFL spread benchmark and current 16-game comparison](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#n194-ats) · [All Week 12 games](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/weeks/12/).
 
 The [official Circa model cards](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa/#n194-circa) compare 46,019 validated policies. The two side-probability objectives now choose distinct policies. The [all-games view](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/all-games/) shows all 16 selections and matched annual records. No contest entry was submitted. [18 phone graphics](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#cards) · [Dated N193 edition](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n193/).
 
-[Current public release receipt](publication.json) · [N193 receipt](publication-n193.json) · [N192 receipt](publication-n192.json) · [N191 receipt](publication-n191.json) · [N190 receipt](publication-n190.json) · [N189 receipt](publication-n189.json)
+[Current public release receipt](publication.json) · [N194 receipt](publication-n194.json) · [N193 receipt](publication-n193.json) · [N192 receipt](publication-n192.json) · [N191 receipt](publication-n191.json) · [N190 receipt](publication-n190.json) · [N189 receipt](publication-n189.json)
 
 The earlier Week 11 dashboard, its clock selectors, its archived evidence and its phone cards remain available at dated, clocked and paginated bookmarks and the [Week 11 archive](research-history.html). The [November 23 receipt](publication-n175.json) documents the earlier deployment.
 

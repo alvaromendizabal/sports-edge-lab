@@ -134,6 +134,18 @@ function verifyHostedHtml(observed, source, context) {
     const text = selector => page.locator(selector).innerText();
     const count = (selector, expected) => page.locator(selector).count().then(actual => assert.equal(actual, expected, selector));
     const noOverflow = async () => { const layout = await page.evaluate(() => ({ width: window.innerWidth, scroll: document.documentElement.scrollWidth, outside: [...document.querySelectorAll("main *, header *")].filter(e => e.getBoundingClientRect().right > innerWidth + 1 && !e.closest(".scroll")).slice(0, 8).map(e => [e.tagName, e.id, e.className, e.getBoundingClientRect().right]) })); assert(layout.scroll <= layout.width + 1, JSON.stringify(layout)); };
+    await check(`${width}px: N195 official research choices and source-matched comparisons`, async () => {
+      await page.goto(new URL('against-the-spread/', base).href, {waitUntil:'domcontentloaded'});
+      await count('[data-n195="official-games"] tbody tr', 16);
+      await count('[data-n195="dk-games"] tbody tr', 16);
+      await count('[data-n195="annual"] tbody tr', 15);
+      await count('[data-n195="ratios"] tbody tr', 15);
+      await count('#five .cards li',15);
+      await count('#n195-week12-phone a img',4);
+      assert.match(await text('#lines'), /55 adjacent strike checks, the specialist failed 52/);
+      assert.match(await text('main'), /Zero contest entries/);
+      await noOverflow();
+    });
     await check(`${width}px: home opens the current release; older shared links still open the original dated slate`, async () => {
       await page.goto(base.href, { waitUntil: "domcontentloaded" });
       await noOverflow();
