@@ -137,9 +137,12 @@ function verifyHostedHtml(observed, source, context) {
       assert.match(await page.locator("body").innerText(), /Week 12/i);
       assert(page.url().startsWith(base.href));
       assert.match(await text(".hero-stats"), /LAR by 4.25|Rams by 4.25/);
-      assert.match(await text(".hero-footer"), /9:39 PM PT/);
-      assert.match(await text("#results"), /N188 VS N187/i);
+      assert.match(await text(".hero-footer"), /10:08 PM PT/);
+      assert.match(await text("#results"), /N189 VS N188/i);
       await count("#completed-games tbody tr", 163);
+      await count("[data-joint-games] tbody tr", 109);
+      await count("[data-joint-ratio] tbody tr", 15);
+      assert.match(await text("#joint-scores"), /25.17/);
       await count("[data-secondary-ratio] tbody tr", 15);
       assert.match(await text("#secondary-nominees"), /74.04%/);
       assert.match(await text(".hero-stats"), /47.22/);
@@ -188,6 +191,8 @@ function verifyHostedHtml(observed, source, context) {
       await page.goto(new URL("circa/", base).href);
       assert.equal(await text("h1"), "Circa Million Picks & Performance Dashboard");
       await count("[data-card-season] tbody tr", 47);
+      await count("[data-card-validation] tbody tr", 5);
+      assert.match(await text("main"), /42.07%/);
       await count("#option-grid tbody tr", 32);
       await page.locator("#rank-filter").selectOption("top");
       await count(".contest-game:visible", 5);
