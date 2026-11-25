@@ -220,6 +220,9 @@ def validate(root: Path, allow_empty=False):
             errors.append(f"Missing specialist evidence: {key}")
     if not (root / "archive/n194/circa/index.html").is_file() or "n195-specialist" not in current_html:
         errors.append("Missing specialist entrance or N194 archive")
+    for role in ("all_points","top5_points","direct_brier"):
+        if f'data-n195="alternatives-{role}"' not in direct:
+            errors.append(f"Missing complete official alternatives for {role}")
     for marker in private_markers:
         if marker in current_html:
             errors.append(f"Week 12 contains an internal marker {marker}")
