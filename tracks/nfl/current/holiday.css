@@ -9,3 +9,5 @@
  .reading .fixture,.holidaytop nav{max-width:100%}.vintage-link{white-space:normal}
  .section-head select,.filters select,.filters input{max-width:100%}
 }
+
+.range-panel{padding:1rem 0 .4rem;margin-top:.9rem;border-top:2px solid #7ba796}.range-panel h3{font-size:1.2rem;margin:0}.range-panel .scroll{margin:.4rem 0}.range-panel small{color:#4d665d}.range-panel table th,.range-panel table td{padding:.45rem .5rem;text-align:left}.issue-band{display:flex;align-items:baseline;gap:.75rem;flex-wrap:wrap;padding:.65rem 0;color:#e4f2e9;border-top:1px solid #35574e}.issue-band span{font-size:.8rem;color:#a5d7c1}.issue-band a{color:#b7e9c9}.range-panel .source-table{min-width:29rem}.range-panel .scroll{max-width:100%;overflow-x:auto}#intervals .scroll{margin:1rem 0}.fixture .range-panel{max-width:55rem}.game .range-panel .source-table{font-size:13px}
