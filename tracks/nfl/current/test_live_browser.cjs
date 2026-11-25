@@ -134,7 +134,7 @@ function verifyHostedHtml(observed, source, context) {
     const text = selector => page.locator(selector).innerText();
     const count = (selector, expected) => page.locator(selector).count().then(actual => assert.equal(actual, expected, selector));
     const noOverflow = async () => { const layout = await page.evaluate(() => ({ width: window.innerWidth, scroll: document.documentElement.scrollWidth, outside: [...document.querySelectorAll("main *, header *")].filter(e => e.getBoundingClientRect().right > innerWidth + 1 && !e.closest(".scroll")).slice(0, 8).map(e => [e.tagName, e.id, e.className, e.getBoundingClientRect().right]) })); assert(layout.scroll <= layout.width + 1, JSON.stringify(layout)); };
-    await check(`${width}px: N198 field notes show all 16 roster forecasts, 284 public assets, all Circa roles and seven current share cards`, async () => {
+    await check(`${width}px: N198 field notes show all 16 roster forecasts, 285 public assets, all Circa roles and seven current share cards`, async () => {
       await page.goto(new URL("week-12-field-notes/", base).href, {waitUntil: "domcontentloaded"});
       assert.match(await text(".dateline"), /3:33 p.m. Pacific.*N198/);
       assert.match(await text("#record"), /227 new estimators/);
@@ -172,7 +172,11 @@ function verifyHostedHtml(observed, source, context) {
       assert.match(await text("#availability-SEA-SF"), /Darnold.*practice/);
       await page.locator('.rosterlink[href="#availability-GB-LAR"]').click();
       assert.match(await text("#availability-GB-LAR"), /Puka Nacua/);
-      assert.match(await text("#availability"), /awaiting official verification at 3:34 p.m./);
+      assert.match(await text("#availability"), /3:47 p.m. Pacific/);
+      assert.match(await text("#availability-GB-LAR"), /Micah Parsons/);
+      assert.match(await text("#availability-GB-LAR"), /Inactive: Josh Jacobs/);
+      assert.match(await text("#availability-GB-LAR"), /Confirmed active: Micah Parsons/);
+      assert.match(await text("#availability"), /28 of 32 teams/);
       await count("#phone img", 7);
       assert.match(await text("#circa"), /before Wednesday’s 5 p.m./);
       await noOverflow();
