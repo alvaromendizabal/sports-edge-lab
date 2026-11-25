@@ -4,7 +4,7 @@
 
 N190 retained the original N189 league and paired team-score forecasts for all 109 scheduled games. It selected 15 additional decisions for winner accuracy, margin RMSE and total RMSE across five validation ratios. The [seasonal scorecard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#current-objectives) covers 285 games each in 2024 and 2025, plus 163 previously examined 2026 games graded after selection. The week pages show the two issue clocks separately. Week 12 compares DraftKings, Kalshi and Polymarket at matched lines and discloses coverage across the full source inventory.
 
-The [contest dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa/) separates official worksheet verification, sportsbook reference lines and actual submissions. The [N189 archive](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n189/) preserves the preceding board and six original mobile graphics.
+The [contest dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa/) separates official worksheet verification, DraftKings reference lines and actual submissions. The [N189 archive](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n189/) preserves the preceding board and six original mobile graphics.
 
 [Current public release receipt](current/publication.json)
 
