@@ -2,7 +2,15 @@
 
 [Open the board](index.html) · [Complete public dataset](board.json) · [69-game table](weekly_games.md) · [Games CSV](weekly_games.csv) · [Exact primary-contract baselines CSV](weekly_contract_point_baselines.csv) · [Phone graphic index](graphics/graphics_index.json) · [Earlier FBS evidence](../README.md)
 
-This dated board uses verified frozen V116 models with refreshed inputs. V117 is the next owner-run preparation; it has not been launched by this publication. The latest actual V116 owner invocation was interrupted during checkpoint recovery, before scientific dispatch. Its verified partial return preserves resumable work and does not constitute a successful research execution.
+This V118 release/status edition retains the verified frozen V116 forecasts and their November 25 source clocks. The owner ran V117; its verified return finished on **November 26 at 02:21:39.832795 UTC** with a resumable partial failure, **zero new model fits and zero new calibrator fits**. An input-identity guard rejected 588 raw-feature callbacks before fitting. The return separately records **9,932 new scoring-worker callbacks**: 1,008 retained-frontier, 4,462 current-report and 4,462 uncertainty callbacks. Its **31,766 reused scoring events** are not a count of unique tasks. Scoring, checkpoint recovery and preserved earlier work do not become new fits or a successful research run.
+
+**V118 is prepared and awaiting the owner’s launch.** This public update starts no main research run and claims no V118 model result. The retained game rows, contract observations, model identities, original selection rules, annual metrics, source coverage and forecast timestamps are unchanged.
+
+## New spread and total research protocol
+
+The owner explicitly revised the next spread and total campaign: **2024 and 2025 supply training; completed 2026 games supply validation and selection.** The new branch is labeled `2026_EXPOSED_VALIDATION`. It does not replace the original registry or relabel the models displayed below. Previously inspected 2026 outcomes cannot become pristine test evidence; prospective testing for the new models begins only after the actual launch-time cutoff, with each forecast’s issue and source clocks retained.
+
+The prepared campaign registers 1,344 base-fit slots, of which **1,176 are qualified** and **168 remain blocked by absent historical source columns**. It compares seven model families, point and threshold distributions, grouped feature ablations and calibration in a finite resumable queue. A **5,254-column candidate catalog** is available across the feature views; each fitted view reports its actual retained columns, so this count is not a claim that every model trains on every column. It retains full-population comparisons against the incumbent and reports missing inputs and negative findings. Runtime controls admit 4–42 safely available cores with a hard 42-core ceiling, bounded native threads and a USD 200 compute guard; no wall-time limit waives that guard. These are preparation and execution requirements, not completed fits or an achieved spread/total accuracy.
 
 ## What is available
 
@@ -43,7 +51,7 @@ These current references are separate from the authentic native Kalshi contract 
 
 ## Selection, denominators and the 70% research target
 
-Selection uses 2024 and 2025, with 50/50 annual weights as the primary rule. The other four ratios reuse the same predictions. No 2026 outcome selects the displayed models, strike rule, blend, calibration or feature choices. The 2026 results remain previously exposed test reporting.
+The **displayed inherited models** use 2024 and 2025 selection, with 50/50 annual weights as the primary rule. The other four ratios reuse the same predictions. No 2026 outcome selected these displayed model identities, strike rule, blend, calibration or feature choices. Their 2026 results remain previously exposed test reporting. The separate pending V118 campaign follows the owner’s revised 2026-selection protocol described above.
 
 | Selected role / metric | 2024 retained validation, n=919 | 2025 validation, n=934 | Current completed 2026 diagnostic, n=824 |
 | --- | ---: | ---: | ---: |
@@ -60,9 +68,9 @@ The owner's 70% target is a spread/total research target. A 74.39% straight-up w
 
 ## Phone pages and publication status
 
-**58 deterministic 1290 × 2796 PNGs** cover the complete weekly display: 14 all-game pages, 22 spread point-baseline pages and 22 total point-baseline pages. They preserve exact propositions, selected model aliases, clocks and qualifications. The PNG index binds every page to the complete public scientific snapshot and records its hash, dimensions and checked text bounds.
+**59 deterministic 1290 × 2796 PNGs** cover the complete weekly display and current research status: one release-status page, 14 all-game pages, 22 spread point-baseline pages and 22 total point-baseline pages. They preserve exact propositions, selected model aliases, clocks and qualifications. The new status page makes the verified V117 zero-fit return and pending V118 campaign explicit. The PNG index binds every page to the complete public snapshot and records its hash, dimensions and checked text bounds.
 
-GitHub source, hosted deployment and scientific production promotion are distinct. The last verified FBS Site remains **version 48 from November 16**. The source credential delivery required for a new Site deployment was unavailable; no new hosted release is claimed. This public tree is ready for review and static export. The full prior FBS tree and all other sports remain preserved.
+GitHub source, hosted deployment and scientific production promotion are distinct. The last verified FBS Site remains **version 48 from November 16**, rechecked on November 26. This V118 update has not been deployed to that host. This public tree is prepared for review and static export; it does not establish a new hosted release or scientific promotion. The full prior FBS tree and all other sports remain preserved.
 
 The presentation can be reproduced without a source subscription or model execution:
 

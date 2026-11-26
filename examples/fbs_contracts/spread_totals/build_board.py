@@ -80,6 +80,30 @@ def validate(data):
     require(selection.get("training_year_reweighting") is False, "training reweighting forbidden")
     require(isinstance(selection.get("primary_strike_rule"), str) and selection["primary_strike_rule"],
             "predeclared primary strike rule required")
+    # A prepared campaign is release information, not authority to relabel the
+    # inherited model forecasts or their original evaluation populations.
+    next_research = data["release"].get("next_research")
+    if next_research is not None:
+        require(isinstance(next_research, dict), "next research object required")
+        require(set(next_research) <= {"release", "status", "scope", "training_seasons", "selection_season",
+                "selection_regime", "prior_test_exposure_disclosed", "prospective_test", "forecast_snapshot_replaced",
+                "new_fits_reported", "new_calibrations_reported", "campaign_summary", "resource_policy",
+                "incumbent_comparison"}, "next research exceeds public status scope")
+        require(next_research.get("status") == "PREPARED_AWAITING_OWNER_LAUNCH",
+                "prepared research cannot claim executed results")
+        require(next_research.get("scope") == ["margin", "total"], "next research must remain FBS spread and total scoped")
+        require(next_research.get("training_seasons") == [2024, 2025]
+                and next_research.get("selection_season") == 2026,
+                "next research split must follow the explicit owner override")
+        require(next_research.get("selection_regime") == "2026_EXPOSED_VALIDATION"
+                and next_research.get("prior_test_exposure_disclosed") is True,
+                "2026 selection must disclose prior exposure")
+        require(next_research.get("forecast_snapshot_replaced") is False,
+                "prepared campaign cannot replace inherited forecasts")
+        require(next_research.get("new_fits_reported") == 0
+                and next_research.get("new_calibrations_reported") == 0,
+                "prepared campaign cannot credit unexecuted fits")
+        require(bool(next_research.get("prospective_test")), "future test boundary must be disclosed")
     models = data["models"]
     for alias, model in models.items():
         require(re.fullmatch(r"[A-Z][0-9]{2}", alias) is not None, "public model aliases required")

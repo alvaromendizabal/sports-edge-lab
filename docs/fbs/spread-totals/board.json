@@ -233830,8 +233830,19 @@
   "graphics": {
     "pages": [
       {
+        "alt": "V117 reported zero new model fits; V118 awaits owner launch. Existing forecasts retain their November 25 cutoff.",
+        "bytes": 265122,
+        "caption": "Verified prior failure, pending owner campaign and unchanged forecast cutoff",
+        "file": "graphics/fbs_release_status.png",
+        "height": 2796,
+        "kind": "release_status",
+        "sha256": "09576f04742ba25f8f6c58f3c65adb7c3bcf8d3a242e1eefd65ec91633a280b7",
+        "title": "V118 research and execution status",
+        "width": 1290
+      },
+      {
         "alt": "Kent State at Eastern Michigan; Miami (OH) at Western Michigan; TCU at Texas Tech; Mississippi State at Ole Miss; Nebraska at Iowa",
-        "bytes": 329513,
+        "bytes": 330986,
         "caption": "5 games · forecast Nov 25 · 3:30 PM PT",
         "file": "graphics/fbs_all_games_001.png",
         "game_ids": [
@@ -233843,13 +233854,13 @@
         ],
         "height": 2796,
         "kind": "all_games",
-        "sha256": "91595021daf51bbfe920a6dbdd41ebcf80f9dac80c481e3f24994c24fa9108b1",
+        "sha256": "f47bc87d4346498e85146967b0c996e094775c6c07f58882d7b09a94c77b03a8",
         "title": "All games · page 1 of 14",
         "width": 1290
       },
       {
         "alt": "Tulsa at UTSA; Buffalo at Akron; Toledo at Ohio; App State at South Alabama; Florida at Florida State",
-        "bytes": 310415,
+        "bytes": 311942,
         "caption": "5 games · forecast Nov 25 · 3:30 PM PT",
         "file": "graphics/fbs_all_games_002.png",
         "game_ids": [
@@ -233861,13 +233872,13 @@
         ],
         "height": 2796,
         "kind": "all_games",
-        "sha256": "abc850ba9e1de4d5ea901d175ccf663af2d512cb5039e314c0533b56d5c0522a",
+        "sha256": "22024d65fe52893143456c1e33ecff902d9a76612013018969d6b463dce7a7e4",
         "title": "All games · page 2 of 14",
         "width": 1290
       },
       {
         "alt": "Temple at Memphis; North Dakota State at San José State; Air Force at New Mexico; Texas at Texas A&M; Minnesota at Wisconsin",
-        "bytes": 332592,
+        "bytes": 334111,
         "caption": "5 games · forecast Nov 25 · 3:30 PM PT",
         "file": "graphics/fbs_all_games_003.png",
         "game_ids": [
@@ -233879,13 +233890,13 @@
         ],
         "height": 2796,
         "kind": "all_games",
-        "sha256": "4dfaabb5ad2761f3dbd1fc275261412d389266aa9eeefdfa993d92cc59d6077a",
+        "sha256": "996ae93c91d74d2e9d7dd85526eecbd2484804c4458afe0349cbf257e9703e2e",
         "title": "All games · page 3 of 14",
         "width": 1290
       },
       {
         "alt": "West Virginia at Utah; Louisville at Kentucky; Boston College at Miami; NC State at North Carolina; Notre Dame at Syracuse",
-        "bytes": 322352,
+        "bytes": 323868,
         "caption": "5 games · forecast Nov 25 · 3:30 PM PT",
         "file": "graphics/fbs_all_games_004.png",
         "game_ids": [
@@ -233897,13 +233908,13 @@
         ],
         "height": 2796,
         "kind": "all_games",
-        "sha256": "a302d3454320cbbf22ce0ebc89070c97b572b98217976209f1274fa50afc7c69",
+        "sha256": "1a41e81f3a321cda5a87990ea5ea178c09ef5b634a3c7ad40ded629c23443581",
         "title": "All games · page 4 of 14",
         "width": 1290
       },
       {
         "alt": "Michigan at Ohio State; UConn at Wyoming; Navy at Charlotte; Central Michigan at Ball State; Louisiana Tech at Georgia Southern",
-        "bytes": 328437,
+        "bytes": 329962,
         "caption": "5 games · forecast Nov 25 · 3:30 PM PT",
         "file": "graphics/fbs_all_games_005.png",
         "game_ids": [
@@ -233915,13 +233926,13 @@
         ],
         "height": 2796,
         "kind": "all_games",
-        "sha256": "db29db24e497e89ad1aff3541ae3f0de50564203b97fef41ee67a41b69dcd52a",
+        "sha256": "3a483e6d30586ae9a22b39a8e20e30a93070fb92d4de23e5812bb61fdaf72b20",
         "title": "All games · page 5 of 14",
         "width": 1290
       },
       {
         "alt": "Illinois at Northwestern; LSU at Arkansas; Florida Atlantic at East Carolina; Kennesaw State at Western Kentucky; Marshall at UL Monroe",
-        "bytes": 328197,
+        "bytes": 329729,
         "caption": "5 games · forecast Nov 25 · 3:30 PM PT",
         "file": "graphics/fbs_all_games_006.png",
         "game_ids": [
@@ -233933,13 +233944,13 @@
         ],
         "height": 2796,
         "kind": "all_games",
-        "sha256": "fe4e0afebc93eb91d6b94ea7448664d4b7cd6150d662beaa7203c93063decf57",
+        "sha256": "dc370134300e7969fa0ee35c658b5e6880e8d6bf75cb9c7109e8d38a99ff8353",
         "title": "All games · page 6 of 14",
         "width": 1290
       },
       {
         "alt": "Southern Miss at Old Dominion; UCF at Colorado; Kansas State at Iowa State; Army at Rice; Coastal Carolina at James Madison",
-        "bytes": 320965,
+        "bytes": 322490,
         "caption": "5 games · forecast Nov 25 · 3:30 PM PT",
         "file": "graphics/fbs_all_games_007.png",
         "game_ids": [
@@ -233951,13 +233962,13 @@
         ],
         "height": 2796,
         "kind": "all_games",
-        "sha256": "ed4706df5c17df4ebb208e1ffc02b940fc22a6f795555a538cbedaa5b045e20d",
+        "sha256": "292066f87760f521b841c559b23d02188f70f6e269e3ef3f5e1e1e8a10fbcf6e",
         "title": "All games · page 7 of 14",
         "width": 1290
       },
       {
         "alt": "Louisiana at Georgia State; Liberty at Missouri State; Sam Houston at Florida International; New Mexico State at Middle Tennessee; South Carolina at Clemson",
-        "bytes": 325564,
+        "bytes": 327037,
         "caption": "5 games · forecast Nov 25 · 3:30 PM PT",
         "file": "graphics/fbs_all_games_008.png",
         "game_ids": [
@@ -233969,13 +233980,13 @@
         ],
         "height": 2796,
         "kind": "all_games",
-        "sha256": "00c128a01335803465656f12577dfacfe4b0491a76d1b3654a81bb489d4555d9",
+        "sha256": "0f12705b41a4d5f9706e2d9a141a8c7331666dc6545f05b2de1b79d74e834c7f",
         "title": "All games · page 8 of 14",
         "width": 1290
       },
       {
         "alt": "Virginia at Virginia Tech; Troy at Arkansas State; Georgia Tech at Georgia; Cincinnati at BYU; Duke at Wake Forest",
-        "bytes": 326991,
+        "bytes": 328551,
         "caption": "5 games · forecast Nov 25 · 3:30 PM PT",
         "file": "graphics/fbs_all_games_009.png",
         "game_ids": [
@@ -233987,13 +233998,13 @@
         ],
         "height": 2796,
         "kind": "all_games",
-        "sha256": "6ea4e048872b79e6cf6f4dcb62bee5b25b3c1bfc201eeb73e15275486bc43098",
+        "sha256": "5032182b2881ed5c9f8604aad9f2aca60496161d20c61267e8b8b091b8aff0d8",
         "title": "All games · page 9 of 14",
         "width": 1290
       },
       {
         "alt": "SMU at Stanford; Penn State at Maryland; USC at UCLA; Tulane at South Florida; UTEP at Northern Illinois",
-        "bytes": 308076,
+        "bytes": 309590,
         "caption": "5 games · forecast Nov 25 · 3:30 PM PT",
         "file": "graphics/fbs_all_games_010.png",
         "game_ids": [
@@ -234005,13 +234016,13 @@
         ],
         "height": 2796,
         "kind": "all_games",
-        "sha256": "deead2dc8be35c733d7758800d0864842f378e1a880045fbec5e98da5673f860",
+        "sha256": "55cced5f6c2c15fd2700d5d7f599385012dc358347cfa7ff04df564f40570565",
         "title": "All games · page 10 of 14",
         "width": 1290
       },
       {
         "alt": "Massachusetts at Bowling Green; Jacksonville State at Delaware; UAB at North Texas; Oklahoma at Missouri; Michigan State at Rutgers",
-        "bytes": 327248,
+        "bytes": 328797,
         "caption": "5 games · forecast Nov 25 · 3:30 PM PT",
         "file": "graphics/fbs_all_games_011.png",
         "game_ids": [
@@ -234023,13 +234034,13 @@
         ],
         "height": 2796,
         "kind": "all_games",
-        "sha256": "ac7e2477e0862192b5c92a76653472eb57b60eb099f569d00f9fc35906de2f31",
+        "sha256": "f45a36f50ffeb6d40f8fd7d6fc0ee920c096ddd9f887e3d529ae15c0317e5bd5",
         "title": "All games · page 11 of 14",
         "width": 1290
       },
       {
         "alt": "Boise State at Colorado State; Kansas at Oklahoma State; San Diego State at Washington State; Tennessee at Vanderbilt; Purdue at Indiana",
-        "bytes": 334339,
+        "bytes": 335842,
         "caption": "5 games · forecast Nov 25 · 3:30 PM PT",
         "file": "graphics/fbs_all_games_012.png",
         "game_ids": [
@@ -234041,13 +234052,13 @@
         ],
         "height": 2796,
         "kind": "all_games",
-        "sha256": "68b8dfe0b971fa081e6bfe19ddb8f0965ccae4546bf24ca1bcb9a0e89a2bf3df",
+        "sha256": "9cd16a78f74b30223dcbfe79ec96e9716656d32bb5befaeb590922bd5a5fe2ef",
         "title": "All games · page 12 of 14",
         "width": 1290
       },
       {
         "alt": "Auburn at Alabama; Pittsburgh at California; Washington at Oregon; Arizona State at Arizona; Nevada at UNLV",
-        "bytes": 316925,
+        "bytes": 318439,
         "caption": "5 games · forecast Nov 25 · 3:30 PM PT",
         "file": "graphics/fbs_all_games_013.png",
         "game_ids": [
@@ -234059,13 +234070,13 @@
         ],
         "height": 2796,
         "kind": "all_games",
-        "sha256": "7cec8bfef1a59fb187988b0c71a17116c84b1086d7b3cfd8766babbe466eba81",
+        "sha256": "f2cfce0ed1eb577b1fcbe21126c57811c310d25cc2c285017a04ec82748ee1f2",
         "title": "All games · page 13 of 14",
         "width": 1290
       },
       {
         "alt": "Baylor at Houston; Texas State at Utah State; Oregon State at Fresno State; Sacramento State at Hawai'i",
-        "bytes": 274533,
+        "bytes": 276061,
         "caption": "4 games · forecast Nov 25 · 3:30 PM PT",
         "file": "graphics/fbs_all_games_014.png",
         "game_ids": [
@@ -234076,13 +234087,13 @@
         ],
         "height": 2796,
         "kind": "all_games",
-        "sha256": "f7e72b940c7b09ef4db26e15259201a2e5e32429f7ed38dad151078f75ecfe20",
+        "sha256": "8ee3a21c2d563a2d2405d6681cb6c9748ba99c3221756e8e8ac10bde42a19e58",
         "title": "All games · page 14 of 14",
         "width": 1290
       },
       {
         "alt": "If Texas Tech wins by more than 5.5 points in the TCU vs Texas Tech college football game originally scheduled for Nov 26, 2026, then the market resolves to Yes.; If Buffalo wins by more than 5.5 points in the Buffalo vs Akron college football game originally scheduled for Nov 27, 2026, then the market resolves to Yes.; If Ole Miss wins by more than 13.5 points in the Mississippi St. vs Ole Miss college football game originally scheduled for Nov 27, 2026, then the market resolves to Yes.",
-        "bytes": 294851,
+        "bytes": 296451,
         "caption": "Unranked point-estimate sides; no binary probability",
         "contract_ids": [
           "KXNCAAFSPREAD-26NOV26TCUTTU-TTU6",
@@ -234092,13 +234103,13 @@
         "file": "graphics/fbs_spread_point_baseline_001.png",
         "height": 2796,
         "kind": "spread_point_baseline",
-        "sha256": "49cd47a65a1160e188cb3ac0cef2257dd856ae61a1728f32cb9af23384747d51",
+        "sha256": "46685163da2c43f558d6136cb34e39dd5361d8b6ff779e922c251af9042e9f1c",
         "title": "Spreads · Point Baselines · page 1 of 22",
         "width": 1290
       },
       {
         "alt": "If Iowa wins by more than 4.5 points in the Nebraska vs Iowa college football game originally scheduled for Nov 27, 2026, then the market resolves to Yes.; If UTSA wins by more than 1.5 points in the Tulsa vs UTSA college football game originally scheduled for Nov 27, 2026, then the market resolves to Yes.; If Toledo wins by more than 1.5 points in the Toledo vs Ohio college football game originally scheduled for Nov 27, 2026, then the market resolves to Yes.",
-        "bytes": 279735,
+        "bytes": 281256,
         "caption": "Unranked point-estimate sides; no binary probability",
         "contract_ids": [
           "KXNCAAFSPREAD-26NOV27NEBIOWA-IOWA5",
@@ -234108,13 +234119,13 @@
         "file": "graphics/fbs_spread_point_baseline_002.png",
         "height": 2796,
         "kind": "spread_point_baseline",
-        "sha256": "d0993a3b1a41378ec7180e49facf5b1d64857a69985d32a28433b363dd3d7971",
+        "sha256": "4deb473aec96bc6b0dede6ab05195309ab63d0c9ad1552856bdcfb646cb6b6c3",
         "title": "Spreads · Point Baselines · page 2 of 22",
         "width": 1290
       },
       {
         "alt": "If South Alabama wins by more than 1.5 points in the Appalachian St. vs South Alabama college football game originally scheduled for Nov 27, 2026, then the market resolves to Yes.; If Florida wins by more than 1.5 points in the Florida vs Florida St. college football game originally scheduled for Nov 27, 2026, then the market resolves to Yes.; If North Dakota St. wins by more than 5.5 points in the North Dakota St. vs San Jose St. college football game originally scheduled for Nov 27, 2026, then the market resolves to Yes.",
-        "bytes": 301578,
+        "bytes": 303104,
         "caption": "Unranked point-estimate sides; no binary probability",
         "contract_ids": [
           "KXNCAAFSPREAD-26NOV27APPUSA-USA2",
@@ -234124,13 +234135,13 @@
         "file": "graphics/fbs_spread_point_baseline_003.png",
         "height": 2796,
         "kind": "spread_point_baseline",
-        "sha256": "4761a046b4adff89db61ffda8a355ad6647ef12590930bd3822938bee73c93e5",
+        "sha256": "cc1d391e33958fd473d5aaa914272a5adf70e359ed6e1f208b58f3d87267142b",
         "title": "Spreads · Point Baselines · page 3 of 22",
         "width": 1290
       },
       {
         "alt": "If Memphis wins by more than 11.5 points in the Temple vs Memphis college football game originally scheduled for Nov 27, 2026, then the market resolves to Yes.; If New Mexico wins by more than 4.5 points in the Air Force vs New Mexico college football game originally scheduled for Nov 27, 2026, then the market resolves to Yes.; If Wisconsin wins by more than 1.5 points in the Minnesota vs Wisconsin college football game originally scheduled for Nov 27, 2026, then the market resolves to Yes.",
-        "bytes": 296424,
+        "bytes": 297897,
         "caption": "Unranked point-estimate sides; no binary probability",
         "contract_ids": [
           "KXNCAAFSPREAD-26NOV27TEMMEM-MEM12",
@@ -234140,13 +234151,13 @@
         "file": "graphics/fbs_spread_point_baseline_004.png",
         "height": 2796,
         "kind": "spread_point_baseline",
-        "sha256": "f33e8740283a9e90b07ccbb153da1221b5b6f19e1d2de528e8a1d4716a8be61d",
+        "sha256": "4d38eda5fa175c02d7630f2d928eb7f2f5873de06f460d1daac2473df61172e7",
         "title": "Spreads · Point Baselines · page 4 of 22",
         "width": 1290
       },
       {
         "alt": "If Texas wins by more than 4.5 points in the Texas vs Texas A&M college football game originally scheduled for Nov 27, 2026, then the market resolves to Yes.; If Utah wins by more than 13.5 points in the West Virginia vs Utah college football game originally scheduled for Nov 27, 2026, then the market resolves to Yes.; If Miami (FL) wins by more than 17.5 points in the Boston College vs Miami (FL) college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.",
-        "bytes": 300998,
+        "bytes": 302544,
         "caption": "Unranked point-estimate sides; no binary probability",
         "contract_ids": [
           "KXNCAAFSPREAD-26NOV27TEXTXAM-TEX5",
@@ -234156,13 +234167,13 @@
         "file": "graphics/fbs_spread_point_baseline_005.png",
         "height": 2796,
         "kind": "spread_point_baseline",
-        "sha256": "3a8622a3e4ddd59908fd459daa238c97218c9b41ae6c5518c42399c877eddbe5",
+        "sha256": "e2ab618a14a4a0588dcbd8dd97ba80af618c4b87264facd3166e39ec1fe896cd",
         "title": "Spreads · Point Baselines · page 5 of 22",
         "width": 1290
       },
       {
         "alt": "If Central Michigan wins by more than 1.5 points in the Central Michigan vs Ball St. college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If UConn wins by more than 1.5 points in the UConn vs Wyoming college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If Louisville wins by more than 1.5 points in the Louisville vs Kentucky college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.",
-        "bytes": 301408,
+        "bytes": 302941,
         "caption": "Unranked point-estimate sides; no binary probability",
         "contract_ids": [
           "KXNCAAFSPREAD-26NOV28CMUBALL-CMU2",
@@ -234172,13 +234183,13 @@
         "file": "graphics/fbs_spread_point_baseline_006.png",
         "height": 2796,
         "kind": "spread_point_baseline",
-        "sha256": "2f5097d07d17c105817a99100117035be131573576c440e32ada57dead8a40cb",
+        "sha256": "20d40785e266c118c1e52c00211718e730b5fca64708dd6e8925f5253e4ec16b",
         "title": "Spreads · Point Baselines · page 6 of 22",
         "width": 1290
       },
       {
         "alt": "If Louisiana Tech wins by more than 1.5 points in the Louisiana Tech vs Georgia Southern college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If Ohio St. wins by more than 5.5 points in the Michigan vs Ohio St. college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If Navy wins by more than 9.5 points in the Navy vs Charlotte college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.",
-        "bytes": 300376,
+        "bytes": 301934,
         "caption": "Unranked point-estimate sides; no binary probability",
         "contract_ids": [
           "KXNCAAFSPREAD-26NOV28LTGASO-LT2",
@@ -234188,13 +234199,13 @@
         "file": "graphics/fbs_spread_point_baseline_007.png",
         "height": 2796,
         "kind": "spread_point_baseline",
-        "sha256": "78d8cfbf9d4bff871667b290c5725e41d374d1555782c53198a360affe3b523e",
+        "sha256": "e0bc1533fc5bcd32f99ec4913ab1aba682960c4404079d0414ab7d760abe7ed5",
         "title": "Spreads · Point Baselines · page 7 of 22",
         "width": 1290
       },
       {
         "alt": "If North Carolina wins by more than 4.5 points in the NC St. vs North Carolina college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If Notre Dame wins by more than 14.5 points in the Notre Dame vs Syracuse college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If Northwestern wins by more than 1.5 points in the Illinois vs Northwestern college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.",
-        "bytes": 300234,
+        "bytes": 301852,
         "caption": "Unranked point-estimate sides; no binary probability",
         "contract_ids": [
           "KXNCAAFSPREAD-26NOV28NCSTUNC-UNC5",
@@ -234204,13 +234215,13 @@
         "file": "graphics/fbs_spread_point_baseline_008.png",
         "height": 2796,
         "kind": "spread_point_baseline",
-        "sha256": "2cb6b0cd35988ee297ec4ee5056f4a38acccd29b136347a5a2f8cafb19e4fb39",
+        "sha256": "34a3db244e4cf7145da4d474886638093e737d1df62c5326239dd7b790bc0cf4",
         "title": "Spreads · Point Baselines · page 8 of 22",
         "width": 1290
       },
       {
         "alt": "If LSU wins by more than 5.5 points in the LSU vs Arkansas college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If East Carolina wins by more than 1.5 points in the Florida Atlantic vs East Carolina college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If Kennesaw St. wins by more than 1.5 points in the Kennesaw St. vs Western Kentucky college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.",
-        "bytes": 302660,
+        "bytes": 304256,
         "caption": "Unranked point-estimate sides; no binary probability",
         "contract_ids": [
           "KXNCAAFSPREAD-26NOV28LSUARK-LSU6",
@@ -234220,13 +234231,13 @@
         "file": "graphics/fbs_spread_point_baseline_009.png",
         "height": 2796,
         "kind": "spread_point_baseline",
-        "sha256": "fb3aebe2e23bb9603d5edd9eec2159dd0d89920f3dd107d60ab9481f0f53a1de",
+        "sha256": "10695ddf5ca3317b80100a2257486b14feb2148c38ec14e10c1c3cd180447848",
         "title": "Spreads · Point Baselines · page 9 of 22",
         "width": 1290
       },
       {
         "alt": "If Old Dominion wins by more than 1.5 points in the Southern Miss vs Old Dominion college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If Army wins by more than 4.5 points in the Army vs Rice college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If James Madison wins by more than 7.5 points in the Coastal Carolina vs James Madison college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.",
-        "bytes": 301633,
+        "bytes": 303182,
         "caption": "Unranked point-estimate sides; no binary probability",
         "contract_ids": [
           "KXNCAAFSPREAD-26NOV28USMODU-ODU2",
@@ -234236,13 +234247,13 @@
         "file": "graphics/fbs_spread_point_baseline_010.png",
         "height": 2796,
         "kind": "spread_point_baseline",
-        "sha256": "1c00fdb91d0f80fcf48fcadce944499cc2d4d5e1ad89672c4480be2a05ef4e01",
+        "sha256": "8b7c341bbe079e8aba11fe8a061866dba6c8c4546c28603643c443124d9a7ae7",
         "title": "Spreads · Point Baselines · page 10 of 22",
         "width": 1290
       },
       {
         "alt": "If Iowa St. wins by more than 1.5 points in the Kansas St. vs Iowa St. college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If Liberty wins by more than 7.5 points in the Liberty vs Missouri St. college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If Middle Tennessee wins by more than 1.5 points in the New Mexico St. vs Middle Tennessee college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.",
-        "bytes": 305513,
+        "bytes": 307050,
         "caption": "Unranked point-estimate sides; no binary probability",
         "contract_ids": [
           "KXNCAAFSPREAD-26NOV28KSUISU-ISU2",
@@ -234252,13 +234263,13 @@
         "file": "graphics/fbs_spread_point_baseline_011.png",
         "height": 2796,
         "kind": "spread_point_baseline",
-        "sha256": "2865914534892959707841ba60ea44f5ab43aada774fcbc818dc503e294f503b",
+        "sha256": "1f36e80471a23ee2ba8ce011e73a1678deec55c152054f959dae5d0f17ad3fb7",
         "title": "Spreads · Point Baselines · page 11 of 22",
         "width": 1290
       },
       {
         "alt": "If Florida International wins by more than 5.5 points in the Sam Houston vs Florida International college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If UCF wins by more than 1.5 points in the UCF vs Colorado college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If Louisiana wins by more than 1.5 points in the Louisiana vs Georgia St. college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.",
-        "bytes": 290709,
+        "bytes": 292252,
         "caption": "Unranked point-estimate sides; no binary probability",
         "contract_ids": [
           "KXNCAAFSPREAD-26NOV28SHSUFIU-FIU6",
@@ -234268,13 +234279,13 @@
         "file": "graphics/fbs_spread_point_baseline_012.png",
         "height": 2796,
         "kind": "spread_point_baseline",
-        "sha256": "fb8726db4a21d30a784dc1ea1aa4bbf06dc20df54c76a07d9df8daac845f3b80",
+        "sha256": "808ad32a38b351854f788272794b5c7e5fb887e30e08b8e7a6b77bd4639b820b",
         "title": "Spreads · Point Baselines · page 12 of 22",
         "width": 1290
       },
       {
         "alt": "If South Carolina wins by more than 1.5 points in the South Carolina vs Clemson college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If Arkansas St. wins by more than 1.5 points in the Troy vs Arkansas St. college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If Virginia Tech wins by more than 1.5 points in the Virginia vs Virginia Tech college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.",
-        "bytes": 303314,
+        "bytes": 304863,
         "caption": "Unranked point-estimate sides; no binary probability",
         "contract_ids": [
           "KXNCAAFSPREAD-26NOV28SCARCLEM-SCAR2",
@@ -234284,13 +234295,13 @@
         "file": "graphics/fbs_spread_point_baseline_013.png",
         "height": 2796,
         "kind": "spread_point_baseline",
-        "sha256": "265120112f266de02751487d0a645fb55b499bcde39a1a2a800fa5a6282fbb36",
+        "sha256": "cad8d4e39d4192735529081075d05b7f5ef0aa82740f2cce1c06983da8b924f4",
         "title": "Spreads · Point Baselines · page 13 of 22",
         "width": 1290
       },
       {
         "alt": "If BYU wins by more than 7.5 points in the Cincinnati vs BYU college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If Wake Forest wins by more than 5.5 points in the Duke vs Wake Forest college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If Georgia wins by more than 33.5 points in the Georgia Tech vs Georgia college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.",
-        "bytes": 297788,
+        "bytes": 299339,
         "caption": "Unranked point-estimate sides; no binary probability",
         "contract_ids": [
           "KXNCAAFSPREAD-26NOV28CINBYU-BYU8",
@@ -234300,13 +234311,13 @@
         "file": "graphics/fbs_spread_point_baseline_014.png",
         "height": 2796,
         "kind": "spread_point_baseline",
-        "sha256": "548cad97348affcf9bbce23913a1393672c8a4f4e0a0405c7f5cebbd2f2e4512",
+        "sha256": "c7d9742229d3c966787521556c7ff04fc746f00f553deabb854d7056eda05d45",
         "title": "Spreads · Point Baselines · page 14 of 22",
         "width": 1290
       },
       {
         "alt": "If Delaware wins by more than 1.5 points in the Jacksonville St. vs Delaware college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If UMass wins by more than 1.5 points in the UMass vs Bowling Green college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If Penn St. wins by more than 4.5 points in the Penn St. vs Maryland college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.",
-        "bytes": 302476,
+        "bytes": 303985,
         "caption": "Unranked point-estimate sides; no binary probability",
         "contract_ids": [
           "KXNCAAFSPREAD-26NOV28JVSTDEL-DEL2",
@@ -234316,13 +234327,13 @@
         "file": "graphics/fbs_spread_point_baseline_015.png",
         "height": 2796,
         "kind": "spread_point_baseline",
-        "sha256": "ee4bdc36a8dbbc29d2508f60b3c78372f087048f4f6d93941bc371d2d1411ff5",
+        "sha256": "26b9ecc99a1bac8248c8250509b858873cd93845807ad75c84588dc8ad7f9434",
         "title": "Spreads · Point Baselines · page 15 of 22",
         "width": 1290
       },
       {
         "alt": "If SMU wins by more than 5.5 points in the SMU vs Stanford college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If South Florida wins by more than 4.5 points in the Tulane vs South Florida college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If USC wins by more than 4.5 points in the USC vs UCLA college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.",
-        "bytes": 286519,
+        "bytes": 287959,
         "caption": "Unranked point-estimate sides; no binary probability",
         "contract_ids": [
           "KXNCAAFSPREAD-26NOV28SMUSTAN-SMU6",
@@ -234332,13 +234343,13 @@
         "file": "graphics/fbs_spread_point_baseline_016.png",
         "height": 2796,
         "kind": "spread_point_baseline",
-        "sha256": "c05f94961a96d0d9a73516e857261a18414340ee6ea03ec4ce734ca212aab08f",
+        "sha256": "6cf2f17b499d64ca451fc00e647967b045572924d753e279100c070d115e7f1b",
         "title": "Spreads · Point Baselines · page 16 of 22",
         "width": 1290
       },
       {
         "alt": "If Northern Illinois wins by more than 1.5 points in the UTEP vs Northern Illinois college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If North Texas wins by more than 1.5 points in the UAB vs North Texas college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If Michigan St. wins by more than 1.5 points in the Michigan St. vs Rutgers college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.",
-        "bytes": 299430,
+        "bytes": 300977,
         "caption": "Unranked point-estimate sides; no binary probability",
         "contract_ids": [
           "KXNCAAFSPREAD-26NOV28UTEPNIU-NIU2",
@@ -234348,13 +234359,13 @@
         "file": "graphics/fbs_spread_point_baseline_017.png",
         "height": 2796,
         "kind": "spread_point_baseline",
-        "sha256": "6d8e7e0c0a10466ff0f1870cb0a10aefaf49c25495194a39ee847417fd6ee628",
+        "sha256": "abe88fc0ca91f0a8366e3565d03630727f66c200da4120e25eadc9cd730030ee",
         "title": "Spreads · Point Baselines · page 17 of 22",
         "width": 1290
       },
       {
         "alt": "If Oklahoma wins by more than 1.5 points in the Oklahoma vs Missouri college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If Boise St. wins by more than 16.5 points in the Boise St. vs Colorado St. college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If Oklahoma St. wins by more than 4.5 points in the Kansas vs Oklahoma St. college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.",
-        "bytes": 304543,
+        "bytes": 306009,
         "caption": "Unranked point-estimate sides; no binary probability",
         "contract_ids": [
           "KXNCAAFSPREAD-26NOV28OKLAMIZZ-OKLA2",
@@ -234364,13 +234375,13 @@
         "file": "graphics/fbs_spread_point_baseline_018.png",
         "height": 2796,
         "kind": "spread_point_baseline",
-        "sha256": "9fbdfad9317125021287f259426b2c1bdb65e34f2f1826f0bb301dc55865c33d",
+        "sha256": "22c413088adbe1eb43aa67e13e66e05af62de76fb26e0d5686b976afef76fc97",
         "title": "Spreads · Point Baselines · page 18 of 22",
         "width": 1290
       },
       {
         "alt": "If San Diego St. wins by more than 1.5 points in the San Diego St. vs Washington St. college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If Indiana wins by more than 14.5 points in the Purdue vs Indiana college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If Tennessee wins by more than 5.5 points in the Tennessee vs Vanderbilt college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.",
-        "bytes": 297955,
+        "bytes": 299454,
         "caption": "Unranked point-estimate sides; no binary probability",
         "contract_ids": [
           "KXNCAAFSPREAD-26NOV28SDSUWSU-SDSU2",
@@ -234380,13 +234391,13 @@
         "file": "graphics/fbs_spread_point_baseline_019.png",
         "height": 2796,
         "kind": "spread_point_baseline",
-        "sha256": "df3498924128b122e33612a5be58635da0639e3b061f0651f5f7f7cb8bec5546",
+        "sha256": "f4c6dbc97d9eb657f14ed048ad0f55c0ff39d79c96a1b61b647cea44ed0b2607",
         "title": "Spreads · Point Baselines · page 19 of 22",
         "width": 1290
       },
       {
         "alt": "If Alabama wins by more than 7.5 points in the Auburn vs Alabama college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If Pittsburgh wins by more than 4.5 points in the Pittsburgh vs California college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If Oregon wins by more than 5.5 points in the Washington vs Oregon college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.",
-        "bytes": 297430,
+        "bytes": 298960,
         "caption": "Unranked point-estimate sides; no binary probability",
         "contract_ids": [
           "KXNCAAFSPREAD-26NOV28AUBALA-ALA8",
@@ -234396,13 +234407,13 @@
         "file": "graphics/fbs_spread_point_baseline_020.png",
         "height": 2796,
         "kind": "spread_point_baseline",
-        "sha256": "396d8b20fb6a47c171bb7f2315e9653dd85094f057993af8e1d3c9a8c2a15a24",
+        "sha256": "710052c8831ef12f03da41c6c8e9d3e2d2196dc79377600aff120cff94848dd6",
         "title": "Spreads · Point Baselines · page 20 of 22",
         "width": 1290
       },
       {
         "alt": "If Arizona wins by more than 4.5 points in the Arizona St. vs Arizona college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If UNLV wins by more than 1.5 points in the Nevada vs UNLV college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If Houston wins by more than 1.5 points in the Baylor vs Houston college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.",
-        "bytes": 289061,
+        "bytes": 290676,
         "caption": "Unranked point-estimate sides; no binary probability",
         "contract_ids": [
           "KXNCAAFSPREAD-26NOV28ASUARIZ-ARIZ5",
@@ -234412,13 +234423,13 @@
         "file": "graphics/fbs_spread_point_baseline_021.png",
         "height": 2796,
         "kind": "spread_point_baseline",
-        "sha256": "78dbcdb482eae6a27dce0f5344551d5571ba8ba8bcf658ae0a4ee6821f46e3b3",
+        "sha256": "197c58afc86752dc326183e3d2a72fc4eadc38005c06999e89957bf19516a3b3",
         "title": "Spreads · Point Baselines · page 21 of 22",
         "width": 1290
       },
       {
         "alt": "If Texas St. wins by more than 4.5 points in the Texas St. vs Utah St. college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If Fresno St. wins by more than 1.5 points in the Oregon St. vs Fresno St. college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If Hawai'i wins by more than 5.5 points in the Sacramento St. vs Hawai'i college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.",
-        "bytes": 297636,
+        "bytes": 299156,
         "caption": "Unranked point-estimate sides; no binary probability",
         "contract_ids": [
           "KXNCAAFSPREAD-26NOV28TXSTUSU-TXST5",
@@ -234428,13 +234439,13 @@
         "file": "graphics/fbs_spread_point_baseline_022.png",
         "height": 2796,
         "kind": "spread_point_baseline",
-        "sha256": "94cc8fcf6ccb2457470f7e8cd4974fd4c528eaf2ea5fbd9652e07602e3f79c55",
+        "sha256": "0027781e46b87294ea04d6e6ae51289ae860d9b58829fbcdc1e485c9c62de92e",
         "title": "Spreads · Point Baselines · page 22 of 22",
         "width": 1290
       },
       {
         "alt": "If the teams collectively score more than 48.5 points in the TCU vs Texas Tech college football game originally scheduled for Nov 26, 2026, then the market resolves to Yes.; If the teams collectively score more than 49.5 points in the Buffalo vs Akron college football game originally scheduled for Nov 27, 2026, then the market resolves to Yes.; If the teams collectively score more than 57.5 points in the Mississippi St. vs Ole Miss college football game originally scheduled for Nov 27, 2026, then the market resolves to Yes.",
-        "bytes": 295256,
+        "bytes": 296782,
         "caption": "Unranked point-estimate sides; no binary probability",
         "contract_ids": [
           "KXNCAAFTOTAL-26NOV26TCUTTU-49",
@@ -234444,13 +234455,13 @@
         "file": "graphics/fbs_total_point_baseline_001.png",
         "height": 2796,
         "kind": "total_point_baseline",
-        "sha256": "e94cec312300d0c51d17c40884c56ba0db30513c7ca1b60ccd0505ad2c11013d",
+        "sha256": "4cdfa61974b50f4bdbffc92470ece5a18719d85f5ee8b54a35dcc140deaf1fa8",
         "title": "Totals · Point Baselines · page 1 of 22",
         "width": 1290
       },
       {
         "alt": "If the teams collectively score more than 39.5 points in the Nebraska vs Iowa college football game originally scheduled for Nov 27, 2026, then the market resolves to Yes.; If the teams collectively score more than 61.5 points in the Tulsa vs UTSA college football game originally scheduled for Nov 27, 2026, then the market resolves to Yes.; If the teams collectively score more than 50.5 points in the Toledo vs Ohio college football game originally scheduled for Nov 27, 2026, then the market resolves to Yes.",
-        "bytes": 292045,
+        "bytes": 293545,
         "caption": "Unranked point-estimate sides; no binary probability",
         "contract_ids": [
           "KXNCAAFTOTAL-26NOV27NEBIOWA-40",
@@ -234460,13 +234471,13 @@
         "file": "graphics/fbs_total_point_baseline_002.png",
         "height": 2796,
         "kind": "total_point_baseline",
-        "sha256": "51f71fbaf8980f598d035aa90bb94d1e1acc9f886147cb9697b19e1a0cd10263",
+        "sha256": "212f274158043196f5366c773c6ed20f9b3c70cae183efe7b9652e21addbf1ee",
         "title": "Totals · Point Baselines · page 2 of 22",
         "width": 1290
       },
       {
         "alt": "If the teams collectively score more than 57.5 points in the Appalachian St. vs South Alabama college football game originally scheduled for Nov 27, 2026, then the market resolves to Yes.; If the teams collectively score more than 55.5 points in the Florida vs Florida St. college football game originally scheduled for Nov 27, 2026, then the market resolves to Yes.; If the teams collectively score more than 40.5 points in the North Dakota St. vs San Jose St. college football game originally scheduled for Nov 27, 2026, then the market resolves to Yes.",
-        "bytes": 294839,
+        "bytes": 296449,
         "caption": "Unranked point-estimate sides; no binary probability",
         "contract_ids": [
           "KXNCAAFTOTAL-26NOV27APPUSA-58",
@@ -234476,13 +234487,13 @@
         "file": "graphics/fbs_total_point_baseline_003.png",
         "height": 2796,
         "kind": "total_point_baseline",
-        "sha256": "d28d8ab8aa70f0cc6f769e7fe202e20dfbb0824e7b373c57e572bceba8974da9",
+        "sha256": "dc677c12343d66f6accd8613c8024dca9838472bff563e464159b3fbcaa78e00",
         "title": "Totals · Point Baselines · page 3 of 22",
         "width": 1290
       },
       {
         "alt": "If the teams collectively score more than 65.5 points in the Temple vs Memphis college football game originally scheduled for Nov 27, 2026, then the market resolves to Yes.; If the teams collectively score more than 42.5 points in the Air Force vs New Mexico college football game originally scheduled for Nov 27, 2026, then the market resolves to Yes.; If the teams collectively score more than 37.5 points in the Minnesota vs Wisconsin college football game originally scheduled for Nov 27, 2026, then the market resolves to Yes.",
-        "bytes": 296064,
+        "bytes": 297513,
         "caption": "Unranked point-estimate sides; no binary probability",
         "contract_ids": [
           "KXNCAAFTOTAL-26NOV27TEMMEM-66",
@@ -234492,13 +234503,13 @@
         "file": "graphics/fbs_total_point_baseline_004.png",
         "height": 2796,
         "kind": "total_point_baseline",
-        "sha256": "bcb8285cefcccc291da9837b5208a8e2ea949a27e76a9fed740a5f1e1d9fc108",
+        "sha256": "18e1e8b2ba66980b0d05f44e7e71e678f653753b645045cb3be33d21a0174fe2",
         "title": "Totals · Point Baselines · page 4 of 22",
         "width": 1290
       },
       {
         "alt": "If the teams collectively score more than 42.5 points in the Texas vs Texas A&M college football game originally scheduled for Nov 27, 2026, then the market resolves to Yes.; If the teams collectively score more than 71.5 points in the West Virginia vs Utah college football game originally scheduled for Nov 27, 2026, then the market resolves to Yes.; If the teams collectively score more than 54.5 points in the Boston College vs Miami (FL) college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.",
-        "bytes": 299525,
+        "bytes": 301060,
         "caption": "Unranked point-estimate sides; no binary probability",
         "contract_ids": [
           "KXNCAAFTOTAL-26NOV27TEXTXAM-43",
@@ -234508,13 +234519,13 @@
         "file": "graphics/fbs_total_point_baseline_005.png",
         "height": 2796,
         "kind": "total_point_baseline",
-        "sha256": "b623519296efbdc71f32f223e45f381c270bc5ca3502530550d2e5673edced93",
+        "sha256": "017837f9b400b3830276a7d5abccda29aa186b3c1fe86d9e2a6413bd93577606",
         "title": "Totals · Point Baselines · page 5 of 22",
         "width": 1290
       },
       {
         "alt": "If the teams collectively score more than 47.5 points in the Central Michigan vs Ball St. college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If the teams collectively score more than 50.5 points in the UConn vs Wyoming college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If the teams collectively score more than 54.5 points in the Louisville vs Kentucky college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.",
-        "bytes": 304060,
+        "bytes": 305600,
         "caption": "Unranked point-estimate sides; no binary probability",
         "contract_ids": [
           "KXNCAAFTOTAL-26NOV28CMUBALL-48",
@@ -234524,13 +234535,13 @@
         "file": "graphics/fbs_total_point_baseline_006.png",
         "height": 2796,
         "kind": "total_point_baseline",
-        "sha256": "8632ee609c1039639dafc8e3a4739a9b7113cc02b32aa89d025e808cb5d4b977",
+        "sha256": "4373a7d82c7d9b87ad859fc2c33531cb3231518e5542c577fcfdd8d3e9ad220f",
         "title": "Totals · Point Baselines · page 6 of 22",
         "width": 1290
       },
       {
         "alt": "If the teams collectively score more than 53.5 points in the Louisiana Tech vs Georgia Southern college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If the teams collectively score more than 39.5 points in the Michigan vs Ohio St. college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If the teams collectively score more than 57.5 points in the Navy vs Charlotte college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.",
-        "bytes": 301054,
+        "bytes": 302622,
         "caption": "Unranked point-estimate sides; no binary probability",
         "contract_ids": [
           "KXNCAAFTOTAL-26NOV28LTGASO-54",
@@ -234540,13 +234551,13 @@
         "file": "graphics/fbs_total_point_baseline_007.png",
         "height": 2796,
         "kind": "total_point_baseline",
-        "sha256": "64ad57cd5273f9e85cf1f96aa83f549018cfe17f7cb645a26f9d74c93193dd61",
+        "sha256": "b61a5c5670fbd2cb5f16dfbd2319e864fb44a2f950cccf6ac7b20ac451d766a6",
         "title": "Totals · Point Baselines · page 7 of 22",
         "width": 1290
       },
       {
         "alt": "If the teams collectively score more than 54.5 points in the NC St. vs North Carolina college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If the teams collectively score more than 57.5 points in the Notre Dame vs Syracuse college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If the teams collectively score more than 50.5 points in the Illinois vs Northwestern college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.",
-        "bytes": 300788,
+        "bytes": 302404,
         "caption": "Unranked point-estimate sides; no binary probability",
         "contract_ids": [
           "KXNCAAFTOTAL-26NOV28NCSTUNC-55",
@@ -234556,13 +234567,13 @@
         "file": "graphics/fbs_total_point_baseline_008.png",
         "height": 2796,
         "kind": "total_point_baseline",
-        "sha256": "ee3224d33b117fbdfc081f4ba70dcd94eb9b3e985bf944f6a8036af7bfc7a931",
+        "sha256": "429916948b008555149bddf40398321c537006eecf07799670ae5320e4ecc003",
         "title": "Totals · Point Baselines · page 8 of 22",
         "width": 1290
       },
       {
         "alt": "If the teams collectively score more than 47.5 points in the LSU vs Arkansas college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If the teams collectively score more than 56.5 points in the Florida Atlantic vs East Carolina college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If the teams collectively score more than 55.5 points in the Kennesaw St. vs Western Kentucky college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.",
-        "bytes": 303043,
+        "bytes": 304552,
         "caption": "Unranked point-estimate sides; no binary probability",
         "contract_ids": [
           "KXNCAAFTOTAL-26NOV28LSUARK-48",
@@ -234572,13 +234583,13 @@
         "file": "graphics/fbs_total_point_baseline_009.png",
         "height": 2796,
         "kind": "total_point_baseline",
-        "sha256": "47d145f172cff993f0b21707739473337c6e2477e0fa6fd4544f96c1e392bef2",
+        "sha256": "d7ebea9eb6d460d372cbd927a726bab4d2683c46c67022762a33a5f295f734ba",
         "title": "Totals · Point Baselines · page 9 of 22",
         "width": 1290
       },
       {
         "alt": "If the teams collectively score more than 51.5 points in the Southern Miss vs Old Dominion college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If the teams collectively score more than 50.5 points in the Army vs Rice college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If the teams collectively score more than 56.5 points in the Coastal Carolina vs James Madison college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.",
-        "bytes": 301790,
+        "bytes": 303329,
         "caption": "Unranked point-estimate sides; no binary probability",
         "contract_ids": [
           "KXNCAAFTOTAL-26NOV28USMODU-52",
@@ -234588,13 +234599,13 @@
         "file": "graphics/fbs_total_point_baseline_010.png",
         "height": 2796,
         "kind": "total_point_baseline",
-        "sha256": "afe9886047e754724ad46b1e7f8a03d71fa6a8d0e15a951ff9c682ad8323716f",
+        "sha256": "a54eb35058226539754a455eb65871c9a57d829289e61966421a9dcdf5923507",
         "title": "Totals · Point Baselines · page 10 of 22",
         "width": 1290
       },
       {
         "alt": "If the teams collectively score more than 54.5 points in the Kansas St. vs Iowa St. college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If the teams collectively score more than 52.5 points in the Liberty vs Missouri St. college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If the teams collectively score more than 53.5 points in the New Mexico St. vs Middle Tennessee college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.",
-        "bytes": 302576,
+        "bytes": 304089,
         "caption": "Unranked point-estimate sides; no binary probability",
         "contract_ids": [
           "KXNCAAFTOTAL-26NOV28KSUISU-55",
@@ -234604,13 +234615,13 @@
         "file": "graphics/fbs_total_point_baseline_011.png",
         "height": 2796,
         "kind": "total_point_baseline",
-        "sha256": "937a5d43f726e1006543b1967f53cc858c05dadbfd9d5524af5e24ed838a2438",
+        "sha256": "a5abe453fb876b3285ce4b18fdd913a45792d1edbbc4e7cf36c226bf25b7f22c",
         "title": "Totals · Point Baselines · page 11 of 22",
         "width": 1290
       },
       {
         "alt": "If the teams collectively score more than 41.5 points in the Sam Houston vs Florida International college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If the teams collectively score more than 51.5 points in the UCF vs Colorado college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If the teams collectively score more than 57.5 points in the Louisiana vs Georgia St. college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.",
-        "bytes": 296738,
+        "bytes": 298322,
         "caption": "Unranked point-estimate sides; no binary probability",
         "contract_ids": [
           "KXNCAAFTOTAL-26NOV28SHSUFIU-42",
@@ -234620,13 +234631,13 @@
         "file": "graphics/fbs_total_point_baseline_012.png",
         "height": 2796,
         "kind": "total_point_baseline",
-        "sha256": "7d0af392bfd9dd83e992ac72f90f6c50d9bf7d07b7b3f1e96230348aab2f6ffe",
+        "sha256": "8824cb3124a07a6f423532e8641f8920b32e40e01555a04c217f0e183f8a75b9",
         "title": "Totals · Point Baselines · page 12 of 22",
         "width": 1290
       },
       {
         "alt": "If the teams collectively score more than 43.5 points in the South Carolina vs Clemson college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If the teams collectively score more than 47.5 points in the Troy vs Arkansas St. college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If the teams collectively score more than 54.5 points in the Virginia vs Virginia Tech college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.",
-        "bytes": 300197,
+        "bytes": 301746,
         "caption": "Unranked point-estimate sides; no binary probability",
         "contract_ids": [
           "KXNCAAFTOTAL-26NOV28SCARCLEM-44",
@@ -234636,13 +234647,13 @@
         "file": "graphics/fbs_total_point_baseline_013.png",
         "height": 2796,
         "kind": "total_point_baseline",
-        "sha256": "175f373c868344e70404ca6ec0eaddf8069ed4ca4c81f33e6341b70dd62d5141",
+        "sha256": "a0b270064776c5e0fe496391a521e831e9c8cdec288187fcb5075aac3946d2a7",
         "title": "Totals · Point Baselines · page 13 of 22",
         "width": 1290
       },
       {
         "alt": "If the teams collectively score more than 55.5 points in the Cincinnati vs BYU college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If the teams collectively score more than 56.5 points in the Duke vs Wake Forest college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If the teams collectively score more than 55.5 points in the Georgia Tech vs Georgia college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.",
-        "bytes": 296225,
+        "bytes": 297761,
         "caption": "Unranked point-estimate sides; no binary probability",
         "contract_ids": [
           "KXNCAAFTOTAL-26NOV28CINBYU-56",
@@ -234652,13 +234663,13 @@
         "file": "graphics/fbs_total_point_baseline_014.png",
         "height": 2796,
         "kind": "total_point_baseline",
-        "sha256": "2d117da720f18ada653635b40000df5feaba63c88ba9090b73283f91fc2f26a6",
+        "sha256": "9c8d8c2a4870f7dde69e2fdfe059c5534cf80d44bb5dbd845d8984c1a4f522c1",
         "title": "Totals · Point Baselines · page 14 of 22",
         "width": 1290
       },
       {
         "alt": "If the teams collectively score more than 58.5 points in the Jacksonville St. vs Delaware college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If the teams collectively score more than 44.5 points in the UMass vs Bowling Green college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If the teams collectively score more than 51.5 points in the Penn St. vs Maryland college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.",
-        "bytes": 307458,
+        "bytes": 308998,
         "caption": "Unranked point-estimate sides; no binary probability",
         "contract_ids": [
           "KXNCAAFTOTAL-26NOV28JVSTDEL-59",
@@ -234668,13 +234679,13 @@
         "file": "graphics/fbs_total_point_baseline_015.png",
         "height": 2796,
         "kind": "total_point_baseline",
-        "sha256": "dfef09a6df6b8d4d2b8e06ea1d8fcef7cc19447e90ebfb96ee81469df521ae7e",
+        "sha256": "08192743966b01905c90c7b3ca18a0cce78d939fce3d9ee6f9b5bc42e98f1a80",
         "title": "Totals · Point Baselines · page 15 of 22",
         "width": 1290
       },
       {
         "alt": "If the teams collectively score more than 61.5 points in the SMU vs Stanford college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If the teams collectively score more than 46.5 points in the Tulane vs South Florida college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If the teams collectively score more than 48.5 points in the USC vs UCLA college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.",
-        "bytes": 296455,
+        "bytes": 297962,
         "caption": "Unranked point-estimate sides; no binary probability",
         "contract_ids": [
           "KXNCAAFTOTAL-26NOV28SMUSTAN-62",
@@ -234684,13 +234695,13 @@
         "file": "graphics/fbs_total_point_baseline_016.png",
         "height": 2796,
         "kind": "total_point_baseline",
-        "sha256": "755530e37d4299c9fee7d08939249969d8e458de07f43c1b3d1f230fcc3c72de",
+        "sha256": "8942f3c357723d53f06a1359b56729edcc2d9988c838bc41701fd9e6484c06bd",
         "title": "Totals · Point Baselines · page 16 of 22",
         "width": 1290
       },
       {
         "alt": "If the teams collectively score more than 50.5 points in the UTEP vs Northern Illinois college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If the teams collectively score more than 49.5 points in the UAB vs North Texas college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If the teams collectively score more than 49.5 points in the Michigan St. vs Rutgers college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.",
-        "bytes": 302098,
+        "bytes": 303624,
         "caption": "Unranked point-estimate sides; no binary probability",
         "contract_ids": [
           "KXNCAAFTOTAL-26NOV28UTEPNIU-51",
@@ -234700,13 +234711,13 @@
         "file": "graphics/fbs_total_point_baseline_017.png",
         "height": 2796,
         "kind": "total_point_baseline",
-        "sha256": "fa0af591fa19f1572e875fd29e527b61c3bfe6d70618fcf1ae23db49c6d87ade",
+        "sha256": "b4c2e7cf874f661d0a4dac47e68b55a50c93429cc46048c64ca5772db0133547",
         "title": "Totals · Point Baselines · page 17 of 22",
         "width": 1290
       },
       {
         "alt": "If the teams collectively score more than 43.5 points in the Oklahoma vs Missouri college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If the teams collectively score more than 75.5 points in the Boise St. vs Colorado St. college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If the teams collectively score more than 69.5 points in the Kansas vs Oklahoma St. college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.",
-        "bytes": 304831,
+        "bytes": 306323,
         "caption": "Unranked point-estimate sides; no binary probability",
         "contract_ids": [
           "KXNCAAFTOTAL-26NOV28OKLAMIZZ-44",
@@ -234716,13 +234727,13 @@
         "file": "graphics/fbs_total_point_baseline_018.png",
         "height": 2796,
         "kind": "total_point_baseline",
-        "sha256": "ea27626fe0361f199a37e0ed6ba799bb4bcb7698eec24cdc5f1232a4adc3b5ac",
+        "sha256": "691c679ed87e58d69fcdb64580c8c6e31b507bd307269916247f2839ed7b2b92",
         "title": "Totals · Point Baselines · page 18 of 22",
         "width": 1290
       },
       {
         "alt": "If the teams collectively score more than 46.5 points in the San Diego St. vs Washington St. college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If the teams collectively score more than 52.5 points in the Purdue vs Indiana college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If the teams collectively score more than 45.5 points in the Tennessee vs Vanderbilt college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.",
-        "bytes": 298688,
+        "bytes": 300225,
         "caption": "Unranked point-estimate sides; no binary probability",
         "contract_ids": [
           "KXNCAAFTOTAL-26NOV28SDSUWSU-47",
@@ -234732,13 +234743,13 @@
         "file": "graphics/fbs_total_point_baseline_019.png",
         "height": 2796,
         "kind": "total_point_baseline",
-        "sha256": "e8ff28c88447cdbd87f4256f0735c0e88ef38bd599f659b9402f76ae9b6e7bb6",
+        "sha256": "4da5ba9e8da51e57244e598cb4c7ed474243285f9fc7dda030b508daf33889c2",
         "title": "Totals · Point Baselines · page 19 of 22",
         "width": 1290
       },
       {
         "alt": "If the teams collectively score more than 51.5 points in the Auburn vs Alabama college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If the teams collectively score more than 48.5 points in the Pittsburgh vs California college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If the teams collectively score more than 50.5 points in the Washington vs Oregon college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.",
-        "bytes": 298460,
+        "bytes": 300029,
         "caption": "Unranked point-estimate sides; no binary probability",
         "contract_ids": [
           "KXNCAAFTOTAL-26NOV28AUBALA-52",
@@ -234748,13 +234759,13 @@
         "file": "graphics/fbs_total_point_baseline_020.png",
         "height": 2796,
         "kind": "total_point_baseline",
-        "sha256": "e0626840c818a521a93a0609bf27dd94f974a6cf9e563a883bf6726b89736ebc",
+        "sha256": "0c84caddccba87ae1151e200177328e6d4aad6347f6949636637974c181a1f60",
         "title": "Totals · Point Baselines · page 20 of 22",
         "width": 1290
       },
       {
         "alt": "If the teams collectively score more than 55.5 points in the Arizona St. vs Arizona college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If the teams collectively score more than 46.5 points in the Nevada vs UNLV college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If the teams collectively score more than 56.5 points in the Baylor vs Houston college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.",
-        "bytes": 295437,
+        "bytes": 297011,
         "caption": "Unranked point-estimate sides; no binary probability",
         "contract_ids": [
           "KXNCAAFTOTAL-26NOV28ASUARIZ-56",
@@ -234764,13 +234775,13 @@
         "file": "graphics/fbs_total_point_baseline_021.png",
         "height": 2796,
         "kind": "total_point_baseline",
-        "sha256": "86729a32f6a6c0e1d4738c0e1bacb01199ac242ff9195e5ae77cc5478c9aaac2",
+        "sha256": "5708ffa142b6de364f8cbb901cd1f4834334d96d142c90763849154aabfef738",
         "title": "Totals · Point Baselines · page 21 of 22",
         "width": 1290
       },
       {
         "alt": "If the teams collectively score more than 54.5 points in the Texas St. vs Utah St. college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If the teams collectively score more than 56.5 points in the Oregon St. vs Fresno St. college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.; If the teams collectively score more than 39.5 points in the Sacramento St. vs Hawai'i college football game originally scheduled for Nov 28, 2026, then the market resolves to Yes.",
-        "bytes": 300790,
+        "bytes": 302342,
         "caption": "Unranked point-estimate sides; no binary probability",
         "contract_ids": [
           "KXNCAAFTOTAL-26NOV28TXSTUSU-55",
@@ -234780,12 +234791,12 @@
         "file": "graphics/fbs_total_point_baseline_022.png",
         "height": 2796,
         "kind": "total_point_baseline",
-        "sha256": "1830238e1adb2e0ce608618b5d283951a3b966dc029003346f00d46fa0b7d4c0",
+        "sha256": "074e0053de1f8b0c50718a8eecc3443a5fc9ad240ac7e49471a45bd0abaa87ac",
         "title": "Totals · Point Baselines · page 22 of 22",
         "width": 1290
       }
     ],
-    "science_sha256": "a463685d80e776cbfe1a730fd8c32ee6e7a16ce6e8e2bf407916d7a45dbf59c2",
+    "science_sha256": "c587c1d3f9fda24b6fa2b53b19423fccb3d9da5311e0ec2e29ad83b95e2f845e",
     "scope": "week"
   },
   "missing_inputs": [
@@ -246912,21 +246923,65 @@
     {
       "label": "Fixed descriptive whole-week uncertainty diagnostic",
       "sha256": "1ffbf6bdeb56c888f0a4fd2553bdcd7a32b556b8a064e61dc1d521ac4bf37280"
+    },
+    {
+      "label": "Verified V117 partial owner execution summary; zero new model or calibration fits",
+      "sha256": "018617afa5ff4052d1611e92bc43d0f7718b4403f0ba496446e466ae1e0f9375"
     }
   ],
   "publication": {
-    "deployment_state": "New Spread & Totals host update blocked: Site source credential delivery unavailable",
-    "graphics_status_label": "V117 preparation · public host update pending",
+    "deployment_state": "FBS Site last verified at version 48; this V118 public update has not been deployed",
+    "graphics_status_label": "V118 preparation · new research pending",
     "last_verified_site_version": 48,
     "site_url": "https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site",
-    "source_state": "Dated source snapshot for GitHub review; hosted publication remains separate"
+    "source_state": "FBS V118 release/status edition; dated November 25 forecast snapshot retained"
   },
   "release": {
-    "label": "V117 preparation",
+    "label": "V118 preparation",
+    "latest_owner_execution": {
+      "finished_at": "2026-11-26T02:21:39.832795Z",
+      "guard_rejected_callbacks": 588,
+      "new_calibrator_fits": 0,
+      "new_model_fits": 0,
+      "new_scoring_callback_breakdown": {
+        "current_population_report": 4462,
+        "current_uncertainty": 4462,
+        "retained_frontier": 1008
+      },
+      "new_scoring_worker_callbacks": 9932,
+      "recovery_status": "Verified partial return; committed work preserved for resumption.",
+      "release": "V117",
+      "reused_scoring_events": 31766,
+      "reused_scoring_events_are_unique_tasks": false,
+      "status": "VERIFIED_PARTIAL_FAILURE",
+      "summary": "The input-identity guard rejected 588 raw-feature callbacks before fitting. Earlier work was retained; scoring tasks do not count as new fits."
+    },
     "new_model_fits": 0,
-    "notice": "The current board reuses verified V116 frozen models with refreshed source inputs and checked component inference; no new models are fitted by this preparation. It adds actual Kalshi propositions and dated best asks. Point-rule YES/NO choices are unranked baselines; integer-distribution fits, calibrated contract probabilities and fee-qualified net returns remain pending the owner launch. Earlier test results were previously inspected.",
-    "owner_execution_status": "V116 interrupted during checkpoint recovery before model work; V117 main run not launched",
-    "status": "V116 frozen forecasts · integer fits pending"
+    "next_research": {
+      "campaign_summary": "Prepared: 1,176 qualified base-fit jobs across seven families; 168 source-blocked jobs remain visible. The 5,254-column candidate catalog supports point/threshold heads, ablations and calibration. No owner fits completed.",
+      "forecast_snapshot_replaced": false,
+      "incumbent_comparison": "Compare new distribution forecasts with the retained point baselines on identical eligible observations. Keep full denominators, missing rows, sportsbook pushes and native contract settlement separate; report when the incumbent wins.",
+      "new_calibrations_reported": 0,
+      "new_fits_reported": 0,
+      "prior_test_exposure_disclosed": true,
+      "prospective_test": "Only games after the launch-time cutoff can supply future test evidence for the newly selected models; each forecast retains its actual issue and source clocks.",
+      "release": "V118",
+      "resource_policy": "Use 4–42 safely available cores, a hard 42-core ceiling, bounded native threads and a USD 200 compute guard. No wall-time limit; no main research run is launched by this public update.",
+      "scope": [
+        "margin",
+        "total"
+      ],
+      "selection_regime": "2026_EXPOSED_VALIDATION",
+      "selection_season": 2026,
+      "status": "PREPARED_AWAITING_OWNER_LAUNCH",
+      "training_seasons": [
+        2024,
+        2025
+      ]
+    },
+    "notice": "The verified V117 execution reported zero new model or calibration fits and returned a resumable partial failure. V118 is prepared for the owner to launch. This edition preserves the November 25 frozen-model forecasts and dated market observations; new spread and total fits, probabilities and accuracy remain pending.",
+    "owner_execution_status": "V117: verified partial failure with zero new model and calibration fits. V118: prepared, awaiting owner launch.",
+    "status": "Prior forecasts retained · new research pending"
   },
   "schema": "fbs.spread-totals.public-board.v1",
   "selection": {

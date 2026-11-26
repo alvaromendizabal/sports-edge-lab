@@ -184,6 +184,35 @@ class PublicBoardTests(unittest.TestCase):
         self.rejected(lambda d: d["selection"].update(test_used_for_selection=True), "test selection")
         self.rejected(lambda d: d["selection"].update(training_year_reweighting=True), "training reweighting")
 
+    def test_prepared_2026_selected_branch_cannot_relabel_forecasts_or_credit_fits(self):
+        d = fixture()
+        previous = deepcopy(d["games"])
+        d["release"]["next_research"] = {
+            "release": "V118", "status": "PREPARED_AWAITING_OWNER_LAUNCH", "scope": ["margin", "total"],
+            "training_seasons": [2024, 2025], "selection_season": 2026,
+            "selection_regime": "2026_EXPOSED_VALIDATION", "prior_test_exposure_disclosed": True,
+            "prospective_test": "Games after the launch-time cutoff only.",
+            "forecast_snapshot_replaced": False, "new_fits_reported": 0, "new_calibrations_reported": 0,
+            "campaign_summary": "Invented status fixture. No research execution.",
+            "resource_policy": "Invented fixture.", "incumbent_comparison": "Same eligible observations.",
+        }
+        validate(d)
+        self.assertEqual(d["games"], previous)
+        self.assertEqual(d["selection"]["validation_seasons"], [2024, 2025])
+        with tempfile.TemporaryDirectory() as t:
+            rendered = render(d, Path(t))
+            self.assertEqual(rendered["pages"][0]["kind"], "release_status")
+            self.assertEqual(rendered["games_rendered"], 2)
+        for key, value, message in [
+            ("new_fits_reported", 1, "unexecuted fits"),
+            ("forecast_snapshot_replaced", True, "cannot replace inherited"),
+            ("prior_test_exposure_disclosed", False, "disclose prior exposure"),
+        ]:
+            changed = deepcopy(d)
+            changed["release"]["next_research"][key] = value
+            with self.assertRaisesRegex(ValueError, message):
+                validate(changed)
+
     def test_private_path_and_model_recipe_are_rejected(self):
         self.rejected(lambda d: d["provenance"].append({"label": "s3://private/bucket"}), "private material")
         self.rejected(lambda d: d["models"]["P06"].update(feature_names=["private_transform"]), "public scope")

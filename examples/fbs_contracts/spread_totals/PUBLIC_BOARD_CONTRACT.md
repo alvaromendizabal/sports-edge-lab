@@ -10,6 +10,10 @@ The source is `fbs.spread-totals.public-board.v1`. The builder validates a quali
 
 `selection` supplies `validation_seasons: [2024,2025]`, `test_season: 2026`, `primary_weights: [0.5,0.5]`, `test_used_for_selection: false`, `training_year_reweighting: false`, and the exact preregistered `primary_strike_rule`. The presentation does not choose a strike using outcomes.
 
+`selection` describes the inherited forecasts actually displayed. A separately prepared campaign can appear in `release.next_research`, with status `PREPARED_AWAITING_OWNER_LAUNCH`, scope `["margin","total"]`, training seasons `[2024,2025]`, selection season `2026`, regime `2026_EXPOSED_VALIDATION`, and explicit prior exposure. The prepared status must retain `forecast_snapshot_replaced: false`, `new_fits_reported: 0`, and `new_calibrations_reported: 0`; it cannot relabel the displayed predictions or count unexecuted work. `prospective_test` describes the future launch-time boundary. Only public campaign summaries and runtime controls belong here, never private feature recipes or fitted states. A future executed export requires its own verified scientific authority and compatible presentation schema.
+
+`release.latest_owner_execution` can summarize a verified return with measured fit, calibration, scoring and rejected-callback counts kept separate. Its evidence fingerprint belongs in `provenance`. A partial failure stays partial even when earlier commits or scoring work were preserved.
+
 `models` maps public aliases such as `P06` to only `name`, `family`, `role`, `calibration_status` and `selection_objective`. Exact private feature transforms, parameters and model recipes are excluded.
 
 ## Game rows
