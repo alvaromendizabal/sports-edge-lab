@@ -4,10 +4,12 @@ import importlib.util
 import json
 from pathlib import Path
 import re
+import runpy
 import subprocess
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
 MODULE = ROOT / "examples/fbs_contracts/spread_totals"
@@ -265,6 +267,26 @@ const cases=[
 for(const [location,served] of cases){window.location=location;const value=publicationDisplay();if(value.includes('being served here')!==served)throw new Error('Origin status mismatch');if(value.includes('version 49'))throw new Error('Invented deployment version');}
 """
         subprocess.run(["node", "-e", script], check=True, capture_output=True, text=True)
+
+    def test_v119_preface_does_not_weaken_historical_readme_guard(self):
+        # Exercise the actual pinned historical check, not a duplicate of its parser.
+        prior = runpy.run_path(str(ROOT / "tests/test_fbs_v071_public.py"))
+        case = prior["ActualV070Publication"](
+            "test_prior_landing_content_preserved_outside_latest_link")
+        check = case.test_prior_landing_content_preserved_outside_latest_link
+        check()
+        read_text = Path.read_text
+        landing = ROOT / "docs/fbs/README.md"
+        for mutation in (
+            lambda text: text + "\nUnexpected edit to historical owner evidence.\n",
+            lambda text: "<!-- UNRECOGNIZED_PREFACE -->\n" + text,
+        ):
+            def altered(path, *args, **kwargs):
+                text = read_text(path, *args, **kwargs)
+                return mutation(text) if path == landing else text
+            with self.subTest(mutation=mutation), patch.object(Path, "read_text", altered):
+                with self.assertRaises(AssertionError):
+                    check()
 
     def test_deterministic_phone_graphics_keep_all_game_ids(self):
         d = fixture()
