@@ -1,0 +1,66 @@
+{
+  "historical": {
+    "status": "PASS",
+    "verified_at_utc": "2026-11-26T06:27:00.634639+00:00",
+    "logical_return_sha256": "e7abf9c9a7dc051f1c673a6efaec2808a0584472562e5fb0ef7e8ac13a0a8601",
+    "prediction_file_sha256": "16e9712de0e2e62e47286382c6a69368d00f39f70dc1f2e8169a53cd607e8bb5",
+    "prediction_rows_checked": 689128,
+    "independent_policy_candidate_regrade": 4202,
+    "completed_population": 164,
+    "completed_population_sha256": "1df47697316bd5a0b42744e749e07e0b418bccd7413d1dfc6bce318c0c475bde",
+    "every_policy_full_population": 164,
+    "all_reported_metric_max_absolute_error": 0.0,
+    "all_objective_selections_match_independent_ranking": true,
+    "weekly_policy_decisions_checked": 336,
+    "replay_game_rows_checked": 4592,
+    "replay_probability_max_absolute_error": 1.3877787807814457e-17,
+    "independent_optimizer_updates": 0,
+    "disclosure": "Independent saved-output arithmetic and prior-week reconstruction checks. Candidate design and 2026 selection are exposed; no untouched future accuracy is established."
+  },
+  "current": {
+    "status": "PASS",
+    "verified_utc": "2026-11-26T06:22:29.745020+00:00",
+    "logical_return_sha256": "e7abf9c9a7dc051f1c673a6efaec2808a0584472562e5fb0ef7e8ac13a0a8601",
+    "optimizer_calls": 0,
+    "issue_id": "789792faa62d8fce080a5b9072ba305715f4baba87cce32a351a45af96d383d3",
+    "issued_utc": "2026-11-26T06:06:09.488321+00:00",
+    "current_week_games": 15,
+    "priced_week_target_rows": 30,
+    "priced_options": 3196,
+    "all_selected_current_score_laws_coherent": true,
+    "minimum_observed_or_native_age_seconds_at_issue": 137.090238,
+    "maximum_observed_or_native_age_seconds_at_issue": 443.488321,
+    "latest_attempt_and_last_priced_issue_match": true,
+    "issues": [
+      {
+        "issue_id": "789792faa62d8fce080a5b9072ba305715f4baba87cce32a351a45af96d383d3",
+        "issued_utc": "2026-11-26T06:06:09.488321+00:00",
+        "forecast_rows": 216,
+        "priced_options": 3196,
+        "exact_reference_pmfs_checked": 216,
+        "selected_coherent_pmfs": 216,
+        "maximum_marginal_error": 2.220446049250313e-16,
+        "quoted_forecast_rows": 58,
+        "quote_age_seconds_min": 137.090238,
+        "quote_age_seconds_max": 99051.488321,
+        "forecast_rows_quotes_older_than_600_seconds": 28,
+        "quote_basis_counts": {
+          "FRESH_OBSERVED_PREGAME_QUOTE": 30,
+          "CACHED_AUTHENTIC_PREGAME_QUOTE_NOT_CLAIMED_CURRENT": 28,
+          "NO_OBSERVED_QUOTE": 158
+        },
+        "source_sha256": {
+          "ISSUE.json": "9ac75703265e541f35bff11b7dddb63c2cb96371916b23521f5ab190dded8d6b",
+          "UPCOMING_FORECASTS.json": "0a9f5f6258b0dd427985ce817f2f3614b3a254b648a995f9b4b98328f6ffef85",
+          "ALL_OBSERVED_BOOK_OPTIONS.json": "7c1afba2d80981491a904062aa953c723800f9d272fd339703ffc0361d7cc8cc"
+        }
+      }
+    ],
+    "source_sha256": {
+      "LATEST_FORECAST_ATTEMPT.json": "99e5c8565d29749a27ef793bd9fea23fa556d950cd205b9410568a290442249b",
+      "LAST_USABLE_PRICED_ISSUE.json": "4bd1399d0e495036f73994883bb6744113a7eb12ca27a9338b12ad3a716d0460",
+      "UPCOMING_FORECASTS.json": "0a9f5f6258b0dd427985ce817f2f3614b3a254b648a995f9b4b98328f6ffef85",
+      "ALL_OBSERVED_BOOK_OPTIONS.json": "7c1afba2d80981491a904062aa953c723800f9d272fd339703ffc0361d7cc8cc"
+    }
+  }
+}

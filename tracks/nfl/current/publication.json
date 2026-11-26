@@ -1,65 +1,78 @@
 {
-  "version": "NFL_N205_SCORE_DISTRIBUTIONS_AND_VERIFIED_CURRENT_REISSUE",
+  "version": "NFL_N206_COHERENT_SCORE_LAWS_AND_FULL164_RESULTS",
   "status": "DEPLOYED_AWAITING_HTTP_HASH_AUDIT",
   "public_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
-  "field_notes_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n205/",
+  "field_notes_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n206/",
   "thanksgiving_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/thanksgiving/",
   "dedicated_circa_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa/",
   "all_games_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/all-games/",
-  "deployed_at": "2026-11-26T05:03:28.951725+00:00",
-  "site_version": 60,
-  "site_source_commit": "c3494fb6c525e1de5e48ebb87f329e4404a0f1fe",
-  "archive_sha256": "43cf0dfc05b14dd34126a04bacdaaaf18aee6cf5196c0737992ee691b333402b",
-  "provider_saved_tar_sha256": "sha256:43cf0dfc05b14dd34126a04bacdaaaf18aee6cf5196c0737992ee691b333402b",
+  "deployed_at": "2026-11-26T06:49:52.185344+00:00",
+  "site_version": 62,
+  "site_source_commit": "f860ec90e7403adb96ec13fc4da6b013ca3f803e",
+  "archive_sha256": "f00fa39c7e19eae78534571612d738d9b6b820aa68ed42fbee4fce3d9847fe8c",
+  "provider_saved_tar_sha256": "sha256:f00fa39c7e19eae78534571612d738d9b6b820aa68ed42fbee4fce3d9847fe8c",
   "audience": "public",
-  "native_publication_receipt": "publication-n205.json",
-  "prior_publication_receipt": "publication-n204.json",
+  "native_publication_receipt": "publication-n206.json",
+  "prior_publication_receipt": "publication-n206-v61.json",
   "github_source_provenance": "The exact-head GitHub Actions report verifies the committed release against the hosted bytes; immutable Site source commit is recorded above.",
   "scientific_scope": {
-    "release": "N205",
-    "previous": "N204",
+    "release": "N206",
+    "previous": "N205",
     "owner_status": "COMPLETE_REGISTERED_STAGES",
     "v13_status": "INCOMPLETE",
     "selection_scope": "RECONSTRUCTED_PREVIOUSLY_EXPOSED_2026_VALIDATION",
     "training": "Uniform historical rows through 2025; pre-2026 chronological training and calibration",
-    "completed_population": 163,
-    "completed_population_sha256": "59b17db9e94df389ba6299955234016ed33354e8c8b7cca85b78f3045e87f795",
-    "forecast_issued_utc": "2026-11-26T04:23:45.084003+00:00",
-    "owner_return_sha256": "f7de44203eb065d945c590736637f0fc972589856c8e1346665bc26ae07ad220",
+    "completed_population": 164,
+    "completed_population_sha256": "1df47697316bd5a0b42744e749e07e0b418bccd7413d1dfc6bce318c0c475bde",
+    "forecast_issued_utc": "2026-11-26T06:06:09.488321+00:00",
+    "owner_return_sha256": "e7abf9c9a7dc051f1c673a6efaec2808a0584472562e5fb0ef7e8ac13a0a8601",
     "week12_games": 16,
-    "current_n205_game_issues": 15,
+    "current_n206_game_issues": 15,
     "ordinary_performance": [
       {
         "target": "margin",
         "label": "Ordinary spread",
-        "family": "Preserved N204 PyTorch direct probability",
+        "family": "N206 TensorFlow score distribution",
         "selected": {
-          "wins": 95,
-          "losses": 65,
+          "wins": 97,
+          "losses": 64,
           "settlement_pushes": 3,
           "unresolved": 0,
-          "completed": 163,
-          "eligible": 163,
+          "completed": 164,
+          "eligible": 164,
           "full_population_champion": true,
-          "full_population_win_rate": 0.5828220858895705,
-          "binary_scoring_denominator": 160,
-          "brier": 0.24793446047134854,
-          "logloss": 0.6891773399962144
+          "full_population_win_rate": 0.5914634146341463,
+          "binary_scoring_denominator": 161,
+          "brier": 0.24735696176621635,
+          "logloss": 0.6885722378675939
         },
         "earlier_week_replay": {
-          "wins": 72,
-          "losses": 88,
+          "wins": 74,
+          "losses": 87,
           "settlement_pushes": 3,
           "unresolved": 0,
-          "completed": 163,
-          "eligible": 163,
+          "completed": 164,
+          "eligible": 164,
           "full_population_champion": true,
-          "full_population_win_rate": 0.44171779141104295,
-          "binary_scoring_denominator": 160,
-          "brier": 0.262915534511927,
-          "logloss": 0.7201370433883822
+          "full_population_win_rate": 0.45121951219512196,
+          "binary_scoring_denominator": 161,
+          "brier": 0.2612450154115291,
+          "logloss": 0.7166222182085431
         },
-        "previous_policy_full163": {
+        "previous_policy_same_population": {
+          "wins": 96,
+          "losses": 65,
+          "settlement_pushes": 3,
+          "unresolved": 0,
+          "completed": 164,
+          "eligible": 164,
+          "full_population_champion": true,
+          "full_population_win_rate": 0.5853658536585366,
+          "binary_scoring_denominator": 161,
+          "brier": 0.24787518508383388,
+          "logloss": 0.6890577613563938
+        },
+        "previous_edition_record": {
           "wins": 95,
           "losses": 65,
           "settlement_pushes": 3,
@@ -72,42 +85,61 @@
           "brier": 0.24793446047134854,
           "logloss": 0.6891773399962144
         },
-        "selected_feature_count": 24,
-        "training_rows": 1330,
+        "previous_edition": "N205",
+        "same_population_extra_wins": 1,
+        "selected_cdf_base_features": 128,
+        "selected_cdf_query_fields": 33,
+        "selected_cdf_learner_fields": 161,
+        "training_unique_games": 7017,
+        "training_threshold_examples": 105255,
+        "feature_count_scope": "NEW_CDF_COMPONENT_ONLY; FROZEN_BASELINE_COMPONENT_IS_ADDITIONAL",
         "selection_scope": "RECONSTRUCTED_EXPOSED_2026_VALIDATION",
-        "selection_changed": false
+        "selection_changed": true
       },
       {
         "target": "total",
         "label": "Ordinary total",
-        "family": "Preserved N203 XGBoost score reference",
+        "family": "N206 TensorFlow score distribution",
         "selected": {
-          "wins": 94,
+          "wins": 95,
           "losses": 69,
           "settlement_pushes": 0,
           "unresolved": 0,
-          "completed": 163,
-          "eligible": 163,
+          "completed": 164,
+          "eligible": 164,
           "full_population_champion": true,
-          "full_population_win_rate": 0.5766871165644172,
-          "binary_scoring_denominator": 163,
-          "brier": 0.25182511924753187,
-          "logloss": 0.6986877210386554
+          "full_population_win_rate": 0.5792682926829268,
+          "binary_scoring_denominator": 164,
+          "brier": 0.2706471128006915,
+          "logloss": 0.743829219005229
         },
         "earlier_week_replay": {
           "wins": 74,
-          "losses": 89,
+          "losses": 90,
           "settlement_pushes": 0,
           "unresolved": 0,
-          "completed": 163,
-          "eligible": 163,
+          "completed": 164,
+          "eligible": 164,
           "full_population_champion": true,
-          "full_population_win_rate": 0.4539877300613497,
-          "binary_scoring_denominator": 163,
-          "brier": 0.27579253720985314,
-          "logloss": 0.7507330659190182
+          "full_population_win_rate": 0.45121951219512196,
+          "binary_scoring_denominator": 164,
+          "brier": 0.2762837859783869,
+          "logloss": 0.7516963481293354
         },
-        "previous_policy_full163": {
+        "previous_policy_same_population": {
+          "wins": 94,
+          "losses": 70,
+          "settlement_pushes": 0,
+          "unresolved": 0,
+          "completed": 164,
+          "eligible": 164,
+          "full_population_champion": true,
+          "full_population_win_rate": 0.573170731707317,
+          "binary_scoring_denominator": 164,
+          "brier": 0.25244742931193515,
+          "logloss": 0.6999370373825097
+        },
+        "previous_edition_record": {
           "wins": 94,
           "losses": 69,
           "settlement_pushes": 0,
@@ -120,43 +152,53 @@
           "brier": 0.25182511924753187,
           "logloss": 0.6986877210386554
         },
-        "selected_feature_count": 128,
-        "training_rows": 7017,
+        "previous_edition": "N205",
+        "same_population_extra_wins": 1,
+        "selected_cdf_base_features": 128,
+        "selected_cdf_query_fields": 33,
+        "selected_cdf_learner_fields": 161,
+        "training_unique_games": 7017,
+        "training_threshold_examples": 105255,
+        "feature_count_scope": "NEW_CDF_COMPONENT_ONLY; FROZEN_BASELINE_COMPONENT_IS_ADDITIONAL",
         "selection_scope": "RECONSTRUCTED_EXPOSED_2026_VALIDATION",
-        "selection_changed": false
+        "selection_changed": true
       }
     ],
     "objective_selections": 6,
-    "policy_replays": 20,
+    "policy_replays": 28,
     "execution": {
       "blocked_units": 0,
       "completed_units": 192,
       "deferred_units": 0,
-      "elapsed_seconds": 423.65015308700094,
+      "elapsed_seconds": 1839.6238185820039,
       "failed_units": 0,
       "new_blend_optimizers": 0,
-      "new_calibrators": 1728,
-      "new_dispersion_estimators": 768,
-      "new_fixed_pmf_mixtures": 144,
-      "new_key_mass_estimators": 576,
-      "new_probability_estimators": 0,
-      "new_score_estimators": 960,
+      "new_calibrators": 1152,
+      "new_dispersion_estimators": 0,
+      "new_fixed_pmf_mixtures": 96,
+      "new_key_mass_estimators": 0,
+      "new_probability_estimators": 768,
+      "new_score_estimators": 0,
       "new_units": 192,
-      "optimizer_completions": 3456,
-      "optimizer_cpu_seconds": 9018.614986407001,
-      "optimizer_note": "Five chronological location fits, four prior-OOF residual scale fits, nine prior-fold integer-CDF calibrators per full unit; discrete mass ratios and fixed equal PMF mixtures are counted separately from optimizers. No N204 model refits.",
-      "peak_simultaneous_optimizers": 41,
+      "optimizer_completions": 1920,
+      "optimizer_cpu_sample_intervals": 30515,
+      "optimizer_cpu_seconds": 31968.270039441,
+      "optimizer_note": "Four chronological conditional-CDF fits and six pre2026 OOF proper-score shrink gates per unit. Fifteen correlated mathematical threshold examples per unique game are not independent games, new odds, or extra optimizer calls. No incumbent refits.",
+      "peak_simultaneous_optimizers": 42,
       "planned_units": 192,
       "restored_from_verified_return": 0,
       "reused_units": 0,
-      "worker_ceiling": 41,
-      "worker_cpu_seconds": 10592.059530117,
-      "occupancy_gate": "NOT_APPLICABLE",
-      "occupancy_reason": "NO_CONTINUOUS_180_SECOND_WINDOW_WITH_AT_LEAST_4_ADMITTED_WORKERS_AND_FULL_QUEUE",
-      "distinct_fit_pids": 89
+      "worker_ceiling": 42,
+      "worker_cpu_seconds": 33355.517999335,
+      "occupancy_gate": "PASS",
+      "occupancy_lower_bound": 0.8582068480325832,
+      "occupancy_threshold": 0.75,
+      "occupancy_minimum_seconds": 180.0,
+      "occupancy_qualifying_windows": 1,
+      "distinct_fit_pids": 90
     },
-    "candidate_policies": 3338,
-    "preserved_policies": 2042,
+    "candidate_policies": 4202,
+    "preserved_policies": 3338,
     "market_coverage": {
       "usable_spread_total_bookmakers": 57,
       "observed_provider_bookmakers": 80,
@@ -174,9 +216,9 @@
           "totals": 15
         }
       },
-      "observed_utc": "2026-11-26T04:22:13.131157+00:00",
+      "observed_utc": "2026-11-26T06:03:52.398083+00:00",
       "open_games": 15,
-      "inventory_scope": "Separate verified zero-fit refresh"
+      "inventory_scope": "Verified N206 final source response; paired spread/total subset distinguished from all observed sources"
     },
     "markets": {
       "sources": 80,
@@ -220,101 +262,99 @@
     "production_promotions": 0,
     "independent_verification": {
       "status": "PASS",
-      "verified_at_utc": "2026-11-26T04:18:28.139255+00:00",
-      "logical_return_sha256": "f7de44203eb065d945c590736637f0fc972589856c8e1346665bc26ae07ad220",
-      "prediction_file_sha256": "011f4d0d56ed82bb6a07edb1351d80b352ddae3d83bc8c390e10758933cfe96f",
-      "prediction_rows_checked": 544094,
-      "independent_policy_candidate_regrade": 3338,
-      "completed_population": 163,
-      "completed_population_sha256": "59b17db9e94df389ba6299955234016ed33354e8c8b7cca85b78f3045e87f795",
-      "every_policy_full_population": 163,
+      "verified_at_utc": "2026-11-26T06:27:00.634639+00:00",
+      "logical_return_sha256": "e7abf9c9a7dc051f1c673a6efaec2808a0584472562e5fb0ef7e8ac13a0a8601",
+      "prediction_file_sha256": "16e9712de0e2e62e47286382c6a69368d00f39f70dc1f2e8169a53cd607e8bb5",
+      "prediction_rows_checked": 689128,
+      "independent_policy_candidate_regrade": 4202,
+      "completed_population": 164,
+      "completed_population_sha256": "1df47697316bd5a0b42744e749e07e0b418bccd7413d1dfc6bce318c0c475bde",
+      "every_policy_full_population": 164,
       "all_reported_metric_max_absolute_error": 0.0,
       "all_objective_selections_match_independent_ranking": true,
-      "weekly_policy_decisions_checked": 220,
-      "replay_game_rows_checked": 3260,
-      "replay_probability_max_absolute_error": 0.0,
+      "weekly_policy_decisions_checked": 336,
+      "replay_game_rows_checked": 4592,
+      "replay_probability_max_absolute_error": 1.3877787807814457e-17,
       "independent_optimizer_updates": 0,
       "disclosure": "Independent saved-output arithmetic and prior-week reconstruction checks. Candidate design and 2026 selection are exposed; no untouched future accuracy is established."
     },
-    "point_and_push_provenance": "Strict-win policies preserve N204 spread direct probability and N203 total; proper total objective is a new coherent N205 score law. Outright remains the N203 score reference.",
+    "point_and_push_provenance": "New N206 strict-win spread and total laws supply coherent point, outright, tie and push marginals. They are selected on exposed 2026 spread/total objectives; outright was not separately selected. Proper-loss objectives remain separate preserved policies.",
     "source_delivery": {
-      "mode": "SEPARATE_ZERO_FIT_SOURCE_REFRESH",
-      "original_final_provider_status": "BLOCKED_CURRENT_OFFERS",
-      "original_final_provider_error_type": "RuntimeError",
-      "original_final_options": 0,
-      "forecast_issue_utc": "2026-11-26T04:23:45.084003+00:00",
-      "priced_issue_utc": "2026-11-26T04:23:45.084003+00:00",
-      "priced_issue_id": "92244669bb54785ba69b978c0c31e5130d0f88b896e0ce3f1d26a707f6cbfde9",
+      "mode": "VERIFIED_OWNER_FINAL_SOURCE_REFRESH",
+      "final_provider_status": "VERIFIED_CURRENT_SNAPSHOT",
+      "forecast_issue_utc": "2026-11-26T06:06:09.488321+00:00",
+      "priced_issue_utc": "2026-11-26T06:06:09.488321+00:00",
+      "priced_issue_id": "789792faa62d8fce080a5b9072ba305715f4baba87cce32a351a45af96d383d3",
       "priced_options": 3196,
       "stale_priced_options": 0,
-      "original_issues": [
+      "latest_forecasts_and_priced_options_same_issue": true,
+      "maximum_observed_or_native_age_seconds_at_issue": 443.488321,
+      "initial_and_final_paid_snapshots_recorded": true,
+      "final_actual_credits": 18,
+      "all_future_rows": 216,
+      "all_future_games": 108,
+      "quote_basis_counts": {
+        "FRESH_OBSERVED_PREGAME_QUOTE": 30,
+        "CACHED_AUTHENTIC_PREGAME_QUOTE_NOT_CLAIMED_CURRENT": 28,
+        "NO_OBSERVED_QUOTE": 158
+      },
+      "current_arithmetic_audit_sha256": "a080a9e4158a83590ac7867422a2ea92286c8dd8b9f3ac5b6b90e9f5774116f9"
+    },
+    "score_distribution_objectives": 6,
+    "strict_probability_tradeoff": {
+      "total_strict_brier": 0.2706471128006915,
+      "total_proper_brier": 0.24534210763158046,
+      "total_strict_logloss": 0.743829219005229,
+      "total_proper_logloss": 0.6835514624419713,
+      "constant_half_brier": 0.25,
+      "constant_half_logloss": 0.6931471805599453,
+      "proper_total_model_label": "Preserved N205 Histogram boosting score distribution"
+    },
+    "independent_current_verification": {
+      "status": "PASS",
+      "verified_utc": "2026-11-26T06:22:29.745020+00:00",
+      "logical_return_sha256": "e7abf9c9a7dc051f1c673a6efaec2808a0584472562e5fb0ef7e8ac13a0a8601",
+      "optimizer_calls": 0,
+      "issue_id": "789792faa62d8fce080a5b9072ba305715f4baba87cce32a351a45af96d383d3",
+      "issued_utc": "2026-11-26T06:06:09.488321+00:00",
+      "current_week_games": 15,
+      "priced_week_target_rows": 30,
+      "priced_options": 3196,
+      "all_selected_current_score_laws_coherent": true,
+      "minimum_observed_or_native_age_seconds_at_issue": 137.090238,
+      "maximum_observed_or_native_age_seconds_at_issue": 443.488321,
+      "latest_attempt_and_last_priced_issue_match": true,
+      "issues": [
         {
-          "issue_id": "07583ff745af8a9355c9d920a5884cfa4f91e31329a4680b3d1b7a0ee22e4661",
-          "issued_utc": "2026-11-26T03:59:44.336318+00:00",
-          "forecast_rows": 216,
-          "priced_options": 0,
-          "exact_reference_pmfs_checked": 216,
-          "selected_coherent_pmfs": 0,
-          "maximum_marginal_error": 2.220446049250313e-16,
-          "quoted_forecast_rows": 58,
-          "quote_age_seconds_min": 91466.336318,
-          "quote_age_seconds_max": 91466.336318,
-          "forecast_rows_quotes_older_than_600_seconds": 58,
-          "quote_basis_counts": {
-            "CACHED_AUTHENTIC_PREGAME_QUOTE_NOT_CLAIMED_CURRENT": 58,
-            "NO_OBSERVED_QUOTE": 158
-          },
-          "source_sha256": {
-            "ISSUE.json": "29083d4d17b36827d64f3acafd91166d3f72156a1531abf9a177eb7b84f9ff10",
-            "UPCOMING_FORECASTS.json": "d81cb457007cda642a06b786986513dfd2adc39911c2a0368e775f264d3a4b3d",
-            "ALL_OBSERVED_BOOK_OPTIONS.json": "7426d796156df3d599644328fc8dac4f421442c02374248d2392d76343ed8dde"
-          }
-        },
-        {
-          "issue_id": "ba31f699c023abdd18e76ad1771f3f0d9dab2447f88b30696ac9ee92922f6459",
-          "issued_utc": "2026-11-26T03:57:34.210570+00:00",
+          "issue_id": "789792faa62d8fce080a5b9072ba305715f4baba87cce32a351a45af96d383d3",
+          "issued_utc": "2026-11-26T06:06:09.488321+00:00",
           "forecast_rows": 216,
           "priced_options": 3196,
           "exact_reference_pmfs_checked": 216,
-          "selected_coherent_pmfs": 0,
+          "selected_coherent_pmfs": 216,
           "maximum_marginal_error": 2.220446049250313e-16,
           "quoted_forecast_rows": 58,
-          "quote_age_seconds_min": 745.115099,
-          "quote_age_seconds_max": 91336.21057,
-          "forecast_rows_quotes_older_than_600_seconds": 58,
+          "quote_age_seconds_min": 137.090238,
+          "quote_age_seconds_max": 99051.488321,
+          "forecast_rows_quotes_older_than_600_seconds": 28,
           "quote_basis_counts": {
             "FRESH_OBSERVED_PREGAME_QUOTE": 30,
             "CACHED_AUTHENTIC_PREGAME_QUOTE_NOT_CLAIMED_CURRENT": 28,
             "NO_OBSERVED_QUOTE": 158
           },
           "source_sha256": {
-            "ISSUE.json": "fb45433a12af92533cf9daa315a89560b048e6a59210f3342286d7c25453f6f3",
-            "UPCOMING_FORECASTS.json": "2e8f14361450d50c41ae9d62e2a9ff1a4fdf7032f92247ddb25eca4c4d9b88e6",
-            "ALL_OBSERVED_BOOK_OPTIONS.json": "68aa42c77767b26d6913d810e0b912e7eac98522b9ebf818c5a6494e8ce67798"
+            "ISSUE.json": "9ac75703265e541f35bff11b7dddb63c2cb96371916b23521f5ab190dded8d6b",
+            "UPCOMING_FORECASTS.json": "0a9f5f6258b0dd427985ce817f2f3614b3a254b648a995f9b4b98328f6ffef85",
+            "ALL_OBSERVED_BOOK_OPTIONS.json": "7c1afba2d80981491a904062aa953c723800f9d272fd339703ffc0361d7cc8cc"
           }
         }
       ],
-      "latest_forecasts_and_priced_options_same_issue": true,
-      "independent_refresh_verification": {
-        "status": "PASS",
-        "optimizer_calls": 0,
-        "book_options": 3196,
-        "week12_priced_rows": 30,
-        "max_quote_or_native_age_seconds_at_issue": 357.084003,
-        "min_quote_or_native_age_seconds_at_issue": 91.952846,
-        "original_owner_work_unchanged": true,
-        "source_receipt_sha256": "b3e27e796fd35f1b4780a40e16fabe673a8eb87f3da1e84189abb102db7e9574",
-        "availability_sha256": "83d01ef4af857f619495e801ddadabb30812766d8b7f601d7f47a788b803e4b3"
+      "source_sha256": {
+        "LATEST_FORECAST_ATTEMPT.json": "99e5c8565d29749a27ef793bd9fea23fa556d950cd205b9410568a290442249b",
+        "LAST_USABLE_PRICED_ISSUE.json": "4bd1399d0e495036f73994883bb6744113a7eb12ca27a9338b12ad3a716d0460",
+        "UPCOMING_FORECASTS.json": "0a9f5f6258b0dd427985ce817f2f3614b3a254b648a995f9b4b98328f6ffef85",
+        "ALL_OBSERVED_BOOK_OPTIONS.json": "7c1afba2d80981491a904062aa953c723800f9d272fd339703ffc0361d7cc8cc"
       }
-    },
-    "score_distribution_objectives": 6,
-    "new_total_probability_selection": {
-      "previous_brier": 0.2461391198374103,
-      "new_brier": 0.24529283993138923,
-      "previous_logloss": 0.6852430982708578,
-      "new_logloss": 0.6840840239891242,
-      "strict_win_selection_changed": false,
-      "selection_scope": "EXPOSED_2026_VALIDATION"
     }
   },
   "verification": {
@@ -1283,8 +1323,8 @@
       },
       {
         "path": "index.html",
-        "sha256": "14e6eab95de8210493ab9dacc838acffe533b7793fc61baceec62a2d6c12670d",
-        "bytes": 570596,
+        "sha256": "b2d40617d49ff4466f978907201e7e52a54e8a226dcd7c91cbc4f15b613ff81c",
+        "bytes": 570581,
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
@@ -2159,8 +2199,8 @@
       },
       {
         "path": "week-12-field-notes/index.html",
-        "sha256": "cfffba8340327e19066c7365c6810828712dd991fa71150caa2985e489927d22",
-        "bytes": 113792,
+        "sha256": "545cdd0e415c5748f7ad4d0cd369bb0a58af3e91538632129ef1e9b576ec714e",
+        "bytes": 113811,
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
@@ -2557,6 +2597,66 @@
         "path": "week-12-field-notes/n205/verification.json",
         "sha256": "451e2e667c03097759c526dbbe25dae0eb9ba29c01b84760ed9dd1bd72da1776",
         "bytes": 699,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n206/N206-games-1.png",
+        "sha256": "d9fa05e86c657a6c03a69e93f39f0c11582d6c83f6e299df7571fcf56e8a38fb",
+        "bytes": 294497,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n206/N206-games-2.png",
+        "sha256": "b94b1fa4d8ea42cade639c4f60838bdbb542f9d2cb2a7bc5753fbeb0568a8100",
+        "bytes": 321350,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n206/N206-games-3.png",
+        "sha256": "b2faf350f9aef7121420f0a8972484f41394334ab7b235f7f3938b8e45e86326",
+        "bytes": 323552,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n206/N206-games-4.png",
+        "sha256": "f92cc5865fdef451ba2cc12da6d7f6e974afbb6a997114607eb3735381d5d1eb",
+        "bytes": 325466,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n206/audit.json",
+        "sha256": "467c6e198b9aba6a9910a286a3ca720fed02f9692f2f63ce666641f317548ba4",
+        "bytes": 3320,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n206/board.css",
+        "sha256": "5a1b7fcc0946676c313f50b4b89e1e26a5602394fb27d9e02c174cfa86eb0562",
+        "bytes": 13189,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n206/board.js",
+        "sha256": "308f483866a5c310171edd6b9e9969a07aa8f4ce27e85c12397557168acefdd5",
+        "bytes": 32894,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n206/index.html",
+        "sha256": "231b198b3f316b85fa5f4db8a7a025eab7cc8f9172a39782d0ff9a5913d450cd",
+        "bytes": 15195,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n206/snapshot.json",
+        "sha256": "1ab42f3ead6a6fd02330bbf275e59f9e246ae4e04ff87ece76581b7e2145acb9",
+        "bytes": 4172507,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n206/verification.json",
+        "sha256": "dae7ab763050f2d058028429f272d4fa43fd2e1388c5af955d5489c2f9e772ac",
+        "bytes": 700,
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {

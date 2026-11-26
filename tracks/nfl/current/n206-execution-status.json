@@ -2,12 +2,12 @@
   "schema": "sports-edge-lab.nfl.execution-delivery-status.v1",
   "owner": "NFL",
   "generation": "N206",
-  "role": "EXECUTION_DELIVERY_NOT_COMPLETED_RESEARCH_RESULT",
-  "recorded_utc": "2026-11-26T05:02:16.365996+00:00",
+  "role": "VERIFIED_COMPLETED_OWNER_RESEARCH",
+  "recorded_utc": "2026-11-26T06:32:38.090382+00:00",
   "canonical_release_sha256": "f4492c6043d19beeef54e6a169cfeee92797f6113a971a12988a036ed6a9506d",
   "canonical_release_bytes": 106284938,
   "parent_verified_owner_return_sha256": "f7de44203eb065d945c590736637f0fc972589856c8e1346665bc26ae07ad220",
-  "delivery_status": "SHA_GUARDED_OWNER_COMMAND_DELIVERED_NATIVE_QUALIFICATION_PASS",
+  "delivery_status": "OWNER_RUN_COMPLETED_AND_RETURN_VERIFIED",
   "native_qualification": {
     "status": "PASS",
     "created_utc": "2026-11-26T04:59:28.613851+00:00",
@@ -34,7 +34,7 @@
   },
   "assistant_main_owner_launches": 0,
   "production_promotions": 0,
-  "latest_completed_public_science": "N205",
+  "latest_completed_public_science": "N206",
   "private_code_weights_and_source_recipes_published": false,
   "qualification_history": [
     {
@@ -58,5 +58,27 @@
     "execv_replaced_with_capture": true,
     "owner_main_invocations": 0
   },
-  "scientific_interpretation": "The bounded qualification proves execution and export behavior. Its reduced settings are not the planned owner campaign, a new selected production result, or a new public market forecast."
+  "scientific_interpretation": "Bounded qualification and owner execution are separate. The owner subsequently completed all registered N206 stages; these exposed 2026 selections are independently regraded saved outputs, not untouched future performance. Qualification history and the rejected first build remain preserved.",
+  "owner_execution": {
+    "run_id": "20261126T052049Z-ae67128e475b",
+    "status": "COMPLETE_REGISTERED_STAGES",
+    "owner_invoked": true,
+    "exit_code": 0,
+    "completed_registered_stages": 8,
+    "planned_registered_stages": 8,
+    "completed_fit_units": 192,
+    "optimizer_completions": 1920,
+    "compared_policies": 4202,
+    "retained_prior_policies": 3338,
+    "completed_game_census": 164,
+    "return_logical_sha256": "e7abf9c9a7dc051f1c673a6efaec2808a0584472562e5fb0ef7e8ac13a0a8601",
+    "return_logical_bytes": 1892669696,
+    "verified_ordered_parts": 4,
+    "verified_members": 3571,
+    "historical_audit_rows": 689128,
+    "throughput_occupancy_gate": "PASS",
+    "throughput_occupancy_lower_bound": 0.8582068480325832,
+    "v13_status": "INCOMPLETE",
+    "production_promotions": 0
+  }
 }
