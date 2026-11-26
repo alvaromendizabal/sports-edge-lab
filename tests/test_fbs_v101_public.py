@@ -25,6 +25,12 @@ class RecoveryPublicEvidenceTests(unittest.TestCase):
 
     def test_complete_preexisting_readme_is_preserved(self):
         raw = (ROOT / 'docs/fbs/README.md').read_bytes()
+        if raw.startswith(b'<!-- FBS_V117_SPREAD_TOTALS_START -->\n'):
+            self.assertEqual(raw.count(b'<!-- FBS_V117_SPREAD_TOTALS_END -->\n\n'), 1)
+            raw = raw.split(b'<!-- FBS_V117_SPREAD_TOTALS_END -->\n\n', 1)[1]
+        if raw.startswith(b'<!-- FBS_V116_SELECTED_REVIEW_START -->\n'):
+            self.assertEqual(raw.count(b'<!-- FBS_V116_SELECTED_REVIEW_END -->\n\n'), 1)
+            raw = raw.split(b'<!-- FBS_V116_SELECTED_REVIEW_END -->\n\n', 1)[1]
         start = b'<!-- FBS_V101_PREPARATION_START -->\n'
         end = b'<!-- FBS_V101_PREPARATION_END -->\n\n'
         self.assertTrue(raw.startswith(start))

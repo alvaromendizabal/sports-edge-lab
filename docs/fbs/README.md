@@ -1,3 +1,35 @@
+<!-- FBS_V117_SPREAD_TOTALS_START -->
+## November 25 — FBS Spread & Totals and the actual V116 interruption
+
+[Standalone all-game board](spread-totals/index.html) · [Checked public dataset](spread-totals/board.json) · [Phone graphics](spread-totals/graphics/) · [Preserved V116 preparation report](v116/)
+
+**V116 stopped during checkpoint recovery before model fitting.** Its actual return is interrupted and resumable, with zero newly completed model fits, calibrators or scoring stages. A verified return preserves recovery evidence; it does not turn an interrupted research execution into success. The replacement V117 research run is prepared separately for the owner to launch.
+
+**Spread & Totals retains 895 observed 2026 games and all 69 games in the November 23–29 Pacific week**, including two completed games and 67 upcoming games. The board displays the saved selected winner probability, signed home-minus-away margin with a named point favorite, and combined total. P06 is the fixed equal blend of six independently authenticated pre-test sigmoid-calibrated components; P02 supplies the margin absolute-error point forecast and P05 the total point forecast. Current early previews and completed-game reconstructions retain their actual source clocks. These early forecasts do not inherit a separate early-horizon validation claim or original-issuance credit.
+
+The native Kalshi capture contains **3,535 observed spread/total contracts; 3,271 exact game-and-terms joins cover 68 FBS games**. The 264 unmatched observations are withheld from selections. All joined strike alternatives remain inspectable. A registered source-only rule chooses one primary strike per game and target; predictions and outcomes do not choose it. The completed source ledger retains **80 NO and 23 YES settlements**, including normally resolved NO outcomes. These are contract settlement counts, not model accuracy.
+
+The **66 upcoming spread and 66 upcoming total point-rule sides remain unranked**. Validation-selected integer-distribution fits and their calibrated YES/NO probabilities are pending the owner research run. Dated best asks are explicitly stale and do not establish a currently executable price or a fee-adjusted return. Marshall at UL Monroe remains on the board with its missing native-contract inputs. Fifty-eight programmatic phone pages preserve all weekly games, exact propositions, source clocks and qualifications.
+
+Selection stays with 2024/2025 and equal annual validation weights. The 40/60 through 10/90 sensitivities reuse those same predictions. Previously inspected 2026 results remain exposed test reporting. The current winner reconstruction is **613/824 (74.39%)**; it is not spread/total accuracy or evidence that the 70% contract research target has been met.
+
+**GitHub source and the public host have separate status.** The last verified hosted FBS Site remains version 48 from November 16; source-repository credential delivery is currently unavailable for a new deployment. No new hosted release, owner run, scientific acceptance pass or production-model promotion is claimed. The full prior FBS record is preserved below; other sports are unchanged.
+<!-- FBS_V117_SPREAD_TOTALS_END -->
+
+<!-- FBS_V116_SELECTED_REVIEW_START -->
+## Current FBS review — November 25, 2026 Pacific
+
+[Open this week and all-season selected outputs](v116/index.html) · [Evidence and limitations](v116/README.md) · [Bounded public JSON](v116/data/review.json)
+
+**V115 failed before current-census refresh, fitting and scoring.** Its source collector encountered an active lease and stopped with `BudgetStop`. The verified 157,555,474-byte return is partial/resumable. This invocation completed **zero new model fits, calibrators, scoring tasks and current-census calls**. Its full-host estimate is **$1.345619 over 31 minutes 25 seconds**, separate from an invoice. The 42-core configuration does not establish scientific utilization.
+
+A separate November 25 source diagnostic now observes **824 completed / 895 total 2026 games** and **69 weekly games (two completed, 67 upcoming)**. Fresh frozen-state inference has **69 weekly games with all eight policies and 0 with missing cells**, while the retained V114 view keeps its original 55 covered / 14 missing weekly games. The saved annual metrics remain **919 / 934 / 822**, with all nine 2024/2025 objective selections and five evaluation-only ratios unchanged. A separate diagnostic now scores **824 completed games / 6,592 selected policy-game rows**, excluding upcoming previews and preserving the original cards. New fits and calibrator fits in this preparation are **zero**; the owner research campaign has not launched.
+
+Every output is an unissued reconstruction or explicitly labeled early market preview of a frozen policy. The early horizon has no validation evaluation; only original trained source slots can receive authenticated current quotes. Market-only prior fallbacks remain visible. The separate current market diagnostic has **11,916 qualified records across 83 bookmaker labels**; DraftKings, Kalshi and Polymarket keep their own target/game counts and observation clocks. Current references are not canonical T60 model inputs or historical betting edges. Per-game values are rounded; annual metrics preserve their saved calculations.
+
+**This is prepared source, with website deployment pending.** The last verified FBS Site is version 48 from November 16. No production model is promoted. Exact active recipes, private cloud paths, licensed source bodies and owner execution packages remain excluded. All earlier FBS evidence and other sports are preserved below.
+<!-- FBS_V116_SELECTED_REVIEW_END -->
+
 <!-- FBS_V101_PREPARATION_START -->
 ## Latest FBS attempt — V100 recovery failed; V101 preparation is in progress
 

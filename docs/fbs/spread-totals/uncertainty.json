@@ -1,0 +1,225 @@
+{
+  "schema": "fbs.spread-totals.descriptive-uncertainty.v1",
+  "owner": "fbs",
+  "season": 2026,
+  "computed_at_utc": "2026-11-25T23:59:02.231498+00:00",
+  "forecast_as_of": "2026-11-25T23:30:00.818383Z",
+  "source_receipt_sha256": "1ffbf6bdeb56c888f0a4fd2553bdcd7a32b556b8a064e61dc1d521ac4bf37280",
+  "snapshot_sha256": "575948920ff2692e22628564a1a2094b5c8be7f5017210499c6d8a4f7a1ee5f7",
+  "manifest_sha256": "21b9187c54676b30804748afa437488894160b67bd68691099143736fff71289",
+  "completed_games": 824,
+  "scheduled_games": 895,
+  "cluster_count": 14,
+  "method": {
+    "cluster": "ISO year and week of kickoff in UTC",
+    "estimator": "sum game-level numerators across resampled weeks divided by sum game counts; games weighted, not equal-week mean",
+    "ordering": "lexicographic ISO year/week",
+    "quantile_method": "linear",
+    "quantiles": [
+      0.025,
+      0.975
+    ],
+    "replicates": 2000,
+    "rng": "numpy.random.Generator(PCG64)",
+    "same_draws_for_all_metrics": true,
+    "sample_unit": "sample K whole weeks with replacement from K observed weeks",
+    "seed": 117
+  },
+  "metrics": {
+    "P02_margin_mae": {
+      "bootstrap_estimates_sha256": "4998765802561dedd9d28ebf8529b7bfeb11559b1d9098e4522cc30c999dccee",
+      "bootstrap_replicates": 2000,
+      "confidence_level": 0.95,
+      "estimate": 13.026702658291741,
+      "n": 824,
+      "week_cluster_bootstrap_interval": [
+        11.932163646454804,
+        14.199960026283664
+      ],
+      "week_clusters": 14
+    },
+    "P05_total_mae": {
+      "bootstrap_estimates_sha256": "f95f2edaa0f0c2f182a8251b98784546e402f0e56431e0d279287f58da4a117f",
+      "bootstrap_replicates": 2000,
+      "confidence_level": 0.95,
+      "estimate": 12.715140560432264,
+      "n": 824,
+      "week_cluster_bootstrap_interval": [
+        11.885818956307642,
+        13.694938354501156
+      ],
+      "week_clusters": 14
+    },
+    "P06_accuracy": {
+      "bootstrap_estimates_sha256": "8dcd79c58f957c856ddece10fa66f3ed611e432b841d59b4d2b669565c564b2f",
+      "bootstrap_replicates": 2000,
+      "confidence_level": 0.95,
+      "correct": 613,
+      "estimate": 0.7439320388349514,
+      "n": 824,
+      "settled": 824,
+      "week_cluster_bootstrap_interval": [
+        0.6865615498894416,
+        0.7937750465595795
+      ],
+      "week_clusters": 14
+    },
+    "P06_brier": {
+      "bootstrap_estimates_sha256": "c311145c9c275017e9fc4d0f025f32d38644ade1f3fcbc7910dba1f9043f70d6",
+      "bootstrap_replicates": 2000,
+      "confidence_level": 0.95,
+      "estimate": 0.16737816921325727,
+      "n": 824,
+      "week_cluster_bootstrap_interval": [
+        0.13854007670263016,
+        0.19866444214819434
+      ],
+      "week_clusters": 14
+    },
+    "P06_log_loss": {
+      "bootstrap_estimates_sha256": "7df33f594fef4ebbb8d27e78ed7d629b77f205ebccc315a8d1126334b54648a2",
+      "bootstrap_replicates": 2000,
+      "confidence_level": 0.95,
+      "estimate": 0.4973566052968835,
+      "n": 824,
+      "week_cluster_bootstrap_interval": [
+        0.4237533545484115,
+        0.5763476856295314
+      ],
+      "week_clusters": 14
+    }
+  },
+  "P06_calibration": {
+    "bins": [
+      {
+        "absolute_calibration_gap": 0.0736622729013828,
+        "lower": 0.0,
+        "lower_inclusive": true,
+        "mean_home_win_probability": 0.0736622729013828,
+        "n": 4,
+        "observed_home_win_frequency": 0.0,
+        "observed_home_wins": 0,
+        "upper": 0.1,
+        "upper_inclusive": false
+      },
+      {
+        "absolute_calibration_gap": 0.017668665293572944,
+        "lower": 0.1,
+        "lower_inclusive": true,
+        "mean_home_win_probability": 0.1605258081507158,
+        "n": 49,
+        "observed_home_win_frequency": 0.14285714285714285,
+        "observed_home_wins": 7,
+        "upper": 0.2,
+        "upper_inclusive": false
+      },
+      {
+        "absolute_calibration_gap": 0.13618396778449687,
+        "lower": 0.2,
+        "lower_inclusive": true,
+        "mean_home_win_probability": 0.24583850412561548,
+        "n": 89,
+        "observed_home_win_frequency": 0.38202247191011235,
+        "observed_home_wins": 34,
+        "upper": 0.3,
+        "upper_inclusive": false
+      },
+      {
+        "absolute_calibration_gap": 0.049286064363629645,
+        "lower": 0.3,
+        "lower_inclusive": true,
+        "mean_home_win_probability": 0.3507139356363704,
+        "n": 70,
+        "observed_home_win_frequency": 0.4,
+        "observed_home_wins": 28,
+        "upper": 0.4,
+        "upper_inclusive": false
+      },
+      {
+        "absolute_calibration_gap": 0.04928325406284684,
+        "lower": 0.4,
+        "lower_inclusive": true,
+        "mean_home_win_probability": 0.45071674593715316,
+        "n": 74,
+        "observed_home_win_frequency": 0.5,
+        "observed_home_wins": 37,
+        "upper": 0.5,
+        "upper_inclusive": false
+      },
+      {
+        "absolute_calibration_gap": 0.05403535832003825,
+        "lower": 0.5,
+        "lower_inclusive": true,
+        "mean_home_win_probability": 0.5540353583200383,
+        "n": 62,
+        "observed_home_win_frequency": 0.5,
+        "observed_home_wins": 31,
+        "upper": 0.6,
+        "upper_inclusive": false
+      },
+      {
+        "absolute_calibration_gap": 0.08116955330867504,
+        "lower": 0.6,
+        "lower_inclusive": true,
+        "mean_home_win_probability": 0.6505377637644957,
+        "n": 82,
+        "observed_home_win_frequency": 0.7317073170731707,
+        "observed_home_wins": 60,
+        "upper": 0.7,
+        "upper_inclusive": false
+      },
+      {
+        "absolute_calibration_gap": 0.033774025258291984,
+        "lower": 0.7,
+        "lower_inclusive": true,
+        "mean_home_win_probability": 0.7542041327851737,
+        "n": 93,
+        "observed_home_win_frequency": 0.7204301075268817,
+        "observed_home_wins": 67,
+        "upper": 0.8,
+        "upper_inclusive": false
+      },
+      {
+        "absolute_calibration_gap": 0.003966431483206634,
+        "lower": 0.8,
+        "lower_inclusive": true,
+        "mean_home_win_probability": 0.8543669018501266,
+        "n": 120,
+        "observed_home_win_frequency": 0.8583333333333333,
+        "observed_home_wins": 103,
+        "upper": 0.9,
+        "upper_inclusive": false
+      },
+      {
+        "absolute_calibration_gap": 0.00046292118408219896,
+        "lower": 0.9,
+        "lower_inclusive": true,
+        "mean_home_win_probability": 0.9507391642780049,
+        "n": 181,
+        "observed_home_win_frequency": 0.9502762430939227,
+        "observed_home_wins": 172,
+        "upper": 1.0,
+        "upper_inclusive": true
+      }
+    ],
+    "expected_calibration_error": 0.04136482109028413,
+    "fixed_bin_count": 10,
+    "log_loss_clipped_probability_count": 0,
+    "log_loss_probability_clip": 1e-15,
+    "maximum_nonempty_bin_absolute_gap": 0.13618396778449687,
+    "new_calibration_fits": 0,
+    "probability_max": 0.9958146553546756,
+    "probability_min": 0.04305564325580254
+  },
+  "interpretation": [
+    "Descriptive uncertainty for previously exposed 2026 reconstructed predictions from fixed validation-selected incumbents.",
+    "Winner accuracy measures outright winners, not spread or totals proposition accuracy or price-based returns.",
+    "The bootstrap resamples observed ISO weeks; it does not quantify unobserved-season, source-reconstruction, selection, or regime uncertainty.",
+    "The confidence interval cannot make a previously inspected test season pristine or certify prospective accuracy.",
+    "No threshold, strike, model, feature, blend, calibrator, or training rule was selected or changed."
+  ],
+  "new_model_fits": 0,
+  "new_calibrator_fits": 0,
+  "selection_changed": false,
+  "prior_test_exposure": true
+}

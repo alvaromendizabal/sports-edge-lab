@@ -18,6 +18,8 @@ jobs:
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
         with:
           python-version: ${{ matrix.python-version }}
+      - name: Install pinned FBS phone-card renderer
+        run: python -m pip install --disable-pip-version-check -r examples/fbs_contracts/spread_totals/requirements.txt
       - name: Check timing, population, content closure and fit reentry
         run: |
           python -m unittest discover -s examples/fbs_contracts/tests -v
@@ -45,6 +47,11 @@ jobs:
           python tests/test_fbs_v099_completed_public.py
           python examples/fbs_contracts/v101/build_review.py --check
           python tests/test_fbs_v101_public.py
+          python examples/fbs_contracts/v116/build_review.py --check
+          python tests/test_fbs_v116_public.py
+          python examples/fbs_contracts/spread_totals/build_board.py --data docs/fbs/spread-totals/board.json --check
+          python tests/test_fbs_spread_totals_public.py
+          python examples/fbs_contracts/spread_totals/export_week.py --data docs/fbs/spread-totals/board.json --output docs/fbs/spread-totals --check
           node tests/fbs_v079_logic.test.cjs
           node tests/fbs_v090_logic.test.cjs
           node tests/fbs_v054_public_view.test.cjs
@@ -59,6 +66,7 @@ jobs:
           node --test examples/fbs_contracts/tests/test_source_progress.cjs
           node --test examples/fbs_contracts/tests/test_latest_available_logic.cjs
           python -m examples.fbs_contracts.export_site --commit "$(git rev-parse HEAD)" --output "${RUNNER_TEMP}/fbs-static-projection"
+          python -m examples.fbs_contracts.spread_totals.export_site --commit "$(git rev-parse HEAD)" --output "${RUNNER_TEMP}/fbs-spread-totals-projection"
           python -m examples.fbs_contracts.certified_resume
       - name: Preserve the exact public static projection
         if: matrix.python-version == '3.12'
@@ -66,6 +74,14 @@ jobs:
         with:
           name: fbs-public-site-projection
           path: ${{ runner.temp }}/fbs-static-projection/
+          if-no-files-found: error
+          retention-days: 14
+      - name: Preserve the exact Spread & Totals static projection
+        if: matrix.python-version == '3.12'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: fbs-spread-totals-site-projection
+          path: ${{ runner.temp }}/fbs-spread-totals-projection/
           if-no-files-found: error
           retention-days: 14
   fbs-notebook:
@@ -107,6 +123,8 @@ jobs:
           node tests/fbs_v099_browser.test.cjs
           node tests/fbs_v099_completed_browser.test.cjs
           node tests/fbs_v101_browser.test.cjs
+          node tests/fbs_v116_browser.test.cjs
+          node tests/fbs_spread_totals_browser.test.cjs
           node examples/fbs_contracts/tests/test_dashboard_browser.cjs
           node examples/fbs_contracts/tests/test_recovery_browser.cjs
           node examples/fbs_contracts/tests/test_season_browser.cjs
@@ -180,6 +198,17 @@ jobs:
           path: |
             ${{ runner.temp }}/fbs-screenshots/FBS_V101_*.png
             ${{ runner.temp }}/fbs-screenshots/FBS_V101_BROWSER_RECEIPT.json
+          if-no-files-found: error
+          retention-days: 14
+      - name: Preserve current FBS weekly and Spread & Totals evidence
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: fbs-current-spread-totals-evidence
+          path: |
+            ${{ runner.temp }}/fbs-screenshots/FBS_V116_*.png
+            ${{ runner.temp }}/fbs-screenshots/FBS_V116_BROWSER_RECEIPT.json
+            ${{ runner.temp }}/fbs-screenshots/FBS_SPREAD_TOTALS_*.png
+            ${{ runner.temp }}/fbs-screenshots/FBS_SPREAD_TOTALS_BROWSER_RECEIPT.json
           if-no-files-found: error
           retention-days: 14
       - name: Preserve historical desktop and mobile evidence views
