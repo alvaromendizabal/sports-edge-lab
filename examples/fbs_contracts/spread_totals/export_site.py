@@ -1,4 +1,4 @@
-"""Export an exact Git commit's public FBS tree and Spread & Totals homepage.
+"""Export an exact Git commit's public FBS tree with small root navigation.
 
 All historical FBS routes remain. No other owner's files, private owner package,
 provider cache, model state or credentials are read. This does not deploy a Site.
@@ -21,6 +21,30 @@ HERE = Path(__file__).resolve().parent
 REPO = "https://github.com/alvaromendizabal/sports-edge-lab"
 ALLOWED = {".html", ".css", ".js", ".json", ".csv", ".md", ".gz", ".svg", ".png", ".jpg", ".webp"}
 BOARD = "docs/fbs/spread-totals/"
+HOME_TARGET = "spread-totals/"
+
+
+def homepage():
+    """Navigate to the exact canonical route without copying its large assets."""
+    return b'''<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="refresh" content="0; url=spread-totals/">
+<title>FBS Spread &amp; Totals &middot; Sports Edge Lab</title>
+<style>body{max-width:44rem;margin:12vh auto;padding:1.5rem;font:18px/1.6 system-ui,sans-serif;color:#f3f7fb;background:#08111f}a{color:#a9d1ff}a:focus-visible{outline:3px solid #a1ebcb;outline-offset:4px}</style>
+</head>
+<body>
+<main>
+<h1>FBS Spread &amp; Totals</h1>
+<p><a href="spread-totals/">Open the all-game Spread &amp; Totals board</a>.</p>
+<p>The board displays its release, forecast cutoff, coverage and publication status.</p>
+<p><a href="retained-index-before-spread-totals.html">Open the preserved earlier FBS homepage</a>.</p>
+</main>
+</body>
+</html>
+'''
 
 
 def require(value, message):
@@ -87,22 +111,19 @@ def export(commit, output):
     for source in names:
         name = source.removeprefix("docs/fbs/")
         raw = committed(commit, source)
-        if name.endswith(".html") and source != BOARD + "index.html":
+        if name.endswith(".html") and not source.startswith(BOARD):
             raw = re.sub(r'href="([^"]+)"', lambda m: 'href="' + link(m.group(1), source) + '"', raw.decode()).encode()
         write(name, raw, source)
     previous = (output / "index.html").read_bytes()
     write("retained-index-before-spread-totals.html", previous, "docs/fbs/index.html")
-    # Mirror only the exact new page's relative assets, avoiding source rewriting.
-    for source in names:
-        if source.startswith(BOARD) and (source.endswith("board.json") or "/graphics/" in source):
-            relative = source.removeprefix(BOARD)
-            raw = committed(commit, source)
-            require(relative not in records or records[relative]["sha256"] == hashlib.sha256(raw).hexdigest(),
-                    "homepage asset would overwrite an unrelated FBS asset")
-            write(relative, raw, source)
-    write("index.html", body, BOARD + "index.html")
+    # Keep the dashboard and its relative assets at their exact committed route.
+    # The root only navigates there; no second board or graphics tree is created.
+    write("index.html", homepage(), "examples/fbs_contracts/spread_totals/export_site.py")
+    records["index.html"]["transformation"] = "GENERATED_RELATIVE_REDIRECT"
     receipt = {"schema": "fbs.spread-totals.exact-commit-static-export.v1", "source_commit_sha": commit,
                "canonical_repository": REPO, "primary_dashboard_source": BOARD + "index.html",
+               "canonical_dashboard_path": "spread-totals/index.html", "homepage_mode": "RELATIVE_REDIRECT",
+               "root_redirect_target": HOME_TARGET, "mirrored_root_dashboard_assets": False,
                "previous_homepage_retained_at": "retained-index-before-spread-totals.html",
                "publication_status": "STATIC_EXPORT_VERIFIED_DEPLOYMENT_NOT_PERFORMED",
                "source_json_sha256": hashlib.sha256(data_raw).hexdigest(), "science_sha256": digest,

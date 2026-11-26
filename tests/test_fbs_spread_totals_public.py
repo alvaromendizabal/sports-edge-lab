@@ -1,5 +1,6 @@
 """Invented-fixture checks for the public binary-contract presentation boundary."""
 from copy import deepcopy
+import hashlib
 import importlib.util
 import json
 from pathlib import Path
@@ -10,12 +11,14 @@ import sys
 import tempfile
 import unittest
 from unittest.mock import patch
+from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
 MODULE = ROOT / "examples/fbs_contracts/spread_totals"
 sys.path.insert(0, str(MODULE))
 from build_board import build, probability_rank, return_rank, point_baseline_rows, validate
 from render_phone_cards import render, science_sha
+import export_site
 
 
 def fixture():
@@ -299,6 +302,113 @@ for(const [location,served] of cases){window.location=location;const value=publi
             self.assertEqual(len(result["pages"]), 3)
             self.assertTrue(all(p["width"] == 1290 and p["height"] == 2796 for p in result["pages"]))
             self.assertTrue(all(p["text_runs"] for p in result["pages"]))
+
+
+class ExactStaticExportTests(unittest.TestCase):
+    def setUp(self):
+        temporary = tempfile.TemporaryDirectory()
+        self.addCleanup(temporary.cleanup)
+        self.directory = Path(temporary.name)
+        self.repo = self.directory / "invented-repository"
+        self.repo.mkdir()
+        self.output = self.directory / "export"
+        self.helpers = self.repo / "examples/fbs_contracts/spread_totals"
+        self.helpers.mkdir(parents=True)
+        for name in ("build_board.py", "board.html.in", "export_site.py", "render_phone_cards.py"):
+            (self.helpers / name).write_bytes((MODULE / name).read_bytes())
+        self.public = self.repo / "docs/fbs"
+        self.canonical = self.public / "spread-totals"
+        (self.canonical / "graphics").mkdir(parents=True)
+        self.prior_home = b'<!doctype html><a href="archive/index.html">Invented historical FBS homepage</a>'
+        (self.public / "index.html").write_bytes(self.prior_home)
+        (self.public / "archive").mkdir()
+        (self.public / "archive/index.html").write_bytes(b'<!doctype html><p>Invented historical route.</p>')
+        png = self.canonical / "graphics/invented_phone.png"
+        Image.new("RGB", (1290, 2796), (8, 17, 31)).save(png)
+        raw = png.read_bytes()
+        data = fixture()
+        data["graphics"] = {"science_sha256": science_sha(data), "scope": "week", "pages": [
+            {"file": "graphics/invented_phone.png", "bytes": len(raw),
+             "sha256": hashlib.sha256(raw).hexdigest(), "width": 1290, "height": 2796}]}
+        (self.canonical / "board.json").write_text(json.dumps(data, indent=2) + "\n")
+        (self.canonical / "index.html").write_text(build(data))
+        (self.canonical / "terms.html").write_text(
+            '<!doctype html><a href="https://github.com/alvaromendizabal/sports-edge-lab/tree/main/docs/fbs">Invented terms</a>')
+        (self.canonical / "weekly.csv").write_bytes(b'game_id,status\ninvented-1,fixture\n')
+        self._git("init", "--quiet")
+        self.commit = self._commit()
+
+    def _git(self, *args):
+        return subprocess.run(["git", *args], cwd=self.repo, check=True,
+                              capture_output=True).stdout
+
+    def _commit(self):
+        self._git("add", ".")
+        self._git("-c", "user.name=Invented Export Fixture", "-c", "user.email=fixture@example.invalid",
+                  "-c", "commit.gpgsign=false", "commit", "--quiet", "-m", "Invented export fixture")
+        return self._git("rev-parse", "HEAD").decode().strip()
+
+    def _export(self):
+        with patch.object(export_site, "ROOT", self.repo), patch.object(export_site, "HERE", self.helpers):
+            return export_site.export(self.commit, self.output)
+
+    def test_small_relative_homepage_preserves_all_canonical_route_hashes(self):
+        expected = {str(p.relative_to(self.public)): p.read_bytes()
+                    for p in self.canonical.rglob("*") if p.is_file()}
+        result = self._export()
+        landing = (self.output / "index.html").read_text()
+        self.assertLess(len(landing.encode()), 4096)
+        self.assertIn('<meta http-equiv="refresh" content="0; url=spread-totals/">', landing)
+        self.assertIn('<a href="spread-totals/">Open the all-game', landing)
+        self.assertNotIn("<script", landing)
+        self.assertNotIn("invented-1", landing)
+        self.assertTrue((self.output / "spread-totals/index.html").is_file())
+        self.assertFalse((self.output / "board.json").exists())
+        self.assertFalse((self.output / "graphics").exists())
+        self.assertEqual((self.output / "retained-index-before-spread-totals.html").read_bytes(), self.prior_home)
+        self.assertEqual((self.output / "archive/index.html").read_bytes(),
+                         (self.public / "archive/index.html").read_bytes())
+        receipt = json.loads((self.output / "published-snapshot.json").read_text())
+        records = {item["name"]: item for item in receipt["public_files"]}
+        self.assertEqual(receipt["homepage_mode"], "RELATIVE_REDIRECT")
+        self.assertEqual(receipt["root_redirect_target"], "spread-totals/")
+        self.assertFalse(receipt["mirrored_root_dashboard_assets"])
+        self.assertEqual(records["index.html"]["transformation"], "GENERATED_RELATIVE_REDIRECT")
+        self.assertFalse(result["website_deployed"])
+        self.assertEqual(result["new_model_fits"], 0)
+        for name, raw in expected.items():
+            with self.subTest(path=name):
+                self.assertEqual((self.output / name).read_bytes(), raw)
+                self.assertEqual(records[name]["sha256"], hashlib.sha256(raw).hexdigest())
+                self.assertEqual(records[name]["bytes"], len(raw))
+                self.assertEqual(records[name]["source_path"], "docs/fbs/" + name)
+
+    def test_preexisting_root_assets_are_preserved_without_new_mirrors(self):
+        (self.public / "board.json").write_bytes(b'{"kind":"invented historical overview"}\n')
+        (self.public / "graphics").mkdir()
+        (self.public / "graphics/historical.png").write_bytes(
+            (self.canonical / "graphics/invented_phone.png").read_bytes())
+        self.commit = self._commit()
+        self._export()
+        self.assertEqual((self.output / "board.json").read_bytes(), (self.public / "board.json").read_bytes())
+        self.assertEqual((self.output / "graphics/historical.png").read_bytes(),
+                         (self.public / "graphics/historical.png").read_bytes())
+        self.assertFalse((self.output / "graphics/invented_phone.png").exists())
+
+    def test_exact_helper_pin_still_rejects_local_modification(self):
+        helper = self.helpers / "export_site.py"
+        helper.write_bytes(helper.read_bytes() + b"\n# Uncommitted fixture modification\n")
+        with self.assertRaisesRegex(ValueError, "helper differs from exact commit"):
+            self._export()
+        self.assertFalse(self.output.exists())
+
+    def test_canonical_graphic_pin_still_rejects_changed_committed_bytes(self):
+        graphic = self.canonical / "graphics/invented_phone.png"
+        graphic.write_bytes(graphic.read_bytes() + b"changed fixture bytes")
+        self.commit = self._commit()
+        with self.assertRaisesRegex(ValueError, "graphic bytes changed"):
+            self._export()
+        self.assertFalse(self.output.exists())
 
 
 if __name__ == "__main__":
