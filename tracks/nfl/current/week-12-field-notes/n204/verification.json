@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "completed_population": 163,
+  "weekly_games": 16,
+  "current_n204_issues": 15,
+  "book_options": 3196,
+  "named_source_options": {
+    "draftkings": 60,
+    "kalshi": 56,
+    "polymarket": 60,
+    "all": 3196
+  },
+  "objective_rows": 6,
+  "annual_rows": 12,
+  "replay_policies": 8,
+  "negative_semantic_cases": 7,
+  "controls": "PASS",
+  "circa_and_v13_preserved": "PASS",
+  "privacy": "PASS",
+  "browser_rendering": "UNVERIFIED_NO_CUA_TOOL",
+  "publication_status": "NOT_PUBLISHED_AT_BUILD_TIME",
+  "snapshot_sha256": "506418f629ddb5b8e0ac664d5233e3c2307020a51ea78b8dd832f51e380ea094"
+}

@@ -1,39 +1,65 @@
 {
-  "version": "NFL_N203_CURRENT_MODELS_AND_OFFERS",
+  "version": "NFL_N204_DIRECT_COVER_AND_CURRENT_OFFERS",
   "status": "DEPLOYED_AWAITING_HTTP_HASH_AUDIT",
   "public_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
-  "field_notes_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n203/",
+  "field_notes_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n204/",
   "thanksgiving_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/thanksgiving/",
   "dedicated_circa_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa/",
   "all_games_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/all-games/",
-  "deployed_at": "2026-11-26T02:01:28.115753+00:00",
-  "site_version": 58,
-  "site_source_commit": "c847b5ff0714245f6dd95419432d9dc8ede320af",
-  "archive_sha256": "e4ef63d035488be8c5fcb3100e6e24299d796ca176b7559ed8713a62bc05334b",
-  "provider_saved_tar_sha256": "sha256:e4ef63d035488be8c5fcb3100e6e24299d796ca176b7559ed8713a62bc05334b",
+  "deployed_at": "2026-11-26T03:33:56.160612+00:00",
+  "site_version": 59,
+  "site_source_commit": "d0591878af79a02a18bc49b8614e46270c39d97b",
+  "archive_sha256": "c0b482de575329d59ba5af3172b19d318aeeb43890fbe6046badc27d52402253",
+  "provider_saved_tar_sha256": "sha256:c0b482de575329d59ba5af3172b19d318aeeb43890fbe6046badc27d52402253",
   "audience": "public",
-  "native_publication_receipt": "publication-n203.json",
-  "prior_publication_receipt": "publication-n202-v57.json",
+  "native_publication_receipt": "publication-n204.json",
+  "prior_publication_receipt": "publication-n203.json",
   "github_source_provenance": "The exact-head GitHub Actions report verifies the committed release against the hosted bytes; immutable Site source commit is recorded above.",
   "scientific_scope": {
-    "release": "N203",
-    "previous": "N202_FULL163",
+    "release": "N204",
+    "previous": "N203",
     "owner_status": "COMPLETE_REGISTERED_STAGES",
     "v13_status": "INCOMPLETE",
     "selection_scope": "RECONSTRUCTED_PREVIOUSLY_EXPOSED_2026_VALIDATION",
-    "training": "Uniform historical rows through 2025; 2024/2025 internal chronology",
+    "training": "Uniform historical rows through 2025; pre-2026 chronological training and calibration",
     "completed_population": 163,
     "completed_population_sha256": "59b17db9e94df389ba6299955234016ed33354e8c8b7cca85b78f3045e87f795",
-    "forecast_issued_utc": "2026-11-26T01:42:10.682388+00:00",
-    "owner_return_sha256": "60162889623520ff12b62f98bfee7e65cdc75aef8253af6d50c03685d17d8f7c",
+    "forecast_issued_utc": "2026-11-26T02:56:22.756036+00:00",
+    "owner_return_sha256": "f207a66afd9e909bc0ab8aa869934416a3914a910e1ae7ec2db4aa7530dec601",
     "week12_games": 16,
-    "current_n203_game_issues": 15,
+    "current_n204_game_issues": 15,
     "ordinary_performance": [
       {
         "target": "margin",
         "label": "Ordinary spread",
-        "family": "Market-input Ridge + calibration",
+        "family": "N204 PyTorch \u00b7 calibrated direct probability",
         "selected": {
+          "wins": 95,
+          "losses": 65,
+          "settlement_pushes": 3,
+          "unresolved": 0,
+          "completed": 163,
+          "eligible": 163,
+          "full_population_champion": true,
+          "full_population_win_rate": 0.5828220858895705,
+          "binary_scoring_denominator": 160,
+          "brier": 0.24793446047134854,
+          "logloss": 0.6891773399962144
+        },
+        "earlier_week_replay": {
+          "wins": 76,
+          "losses": 84,
+          "settlement_pushes": 3,
+          "unresolved": 0,
+          "completed": 163,
+          "eligible": 163,
+          "full_population_champion": true,
+          "full_population_win_rate": 0.4662576687116564,
+          "binary_scoring_denominator": 160,
+          "brier": 0.2595934707509814,
+          "logloss": 0.7132185256123915
+        },
+        "previous_policy_full163": {
           "wins": 93,
           "losses": 67,
           "settlement_pushes": 3,
@@ -46,47 +72,15 @@
           "brier": 0.24772243341269062,
           "logloss": 0.6885792701138046
         },
-        "earlier_week_replay": {
-          "wins": 74,
-          "losses": 86,
-          "settlement_pushes": 3,
-          "unresolved": 0,
-          "completed": 163,
-          "eligible": 163,
-          "full_population_champion": true,
-          "full_population_win_rate": 0.4539877300613497,
-          "binary_scoring_denominator": 160,
-          "brier": 0.25752816586984695,
-          "logloss": 0.709548408707564
-        },
-        "previous_policy_full163": {
-          "wins": 90,
-          "losses": 70,
-          "settlement_pushes": 3,
-          "unresolved": 0,
-          "completed": 163,
-          "eligible": 163,
-          "full_population_champion": true,
-          "full_population_win_rate": 0.5521472392638037,
-          "binary_scoring_denominator": 160,
-          "brier": 0.2489561286321235,
-          "logloss": 0.6910662900125225
-        },
         "selected_feature_count": 24,
-        "training_rows": 7017,
-        "training_seasons": [
-          2000,
-          2025
-        ],
-        "point_mae": 9.531279938890846,
-        "point_rmse": 12.039720703378515,
+        "training_rows": 1330,
         "selection_scope": "RECONSTRUCTED_EXPOSED_2026_VALIDATION",
         "selection_changed": true
       },
       {
         "target": "total",
         "label": "Ordinary total",
-        "family": "Historical-feature XGBoost \u00b7 empirical distribution",
+        "family": "Preserved N203 XGBoost score law",
         "selected": {
           "wins": 94,
           "losses": 69,
@@ -101,127 +95,98 @@
           "logloss": 0.6986877210386554
         },
         "earlier_week_replay": {
-          "wins": 75,
-          "losses": 88,
+          "wins": 78,
+          "losses": 85,
           "settlement_pushes": 0,
           "unresolved": 0,
           "completed": 163,
           "eligible": 163,
           "full_population_champion": true,
-          "full_population_win_rate": 0.4601226993865031,
+          "full_population_win_rate": 0.4785276073619632,
           "binary_scoring_denominator": 163,
-          "brier": 0.2673322304205688,
-          "logloss": 0.7300895942394068
+          "brier": 0.2636232960819963,
+          "logloss": 0.7223361478459783
         },
         "previous_policy_full163": {
-          "wins": 87,
-          "losses": 76,
+          "wins": 94,
+          "losses": 69,
           "settlement_pushes": 0,
           "unresolved": 0,
           "completed": 163,
           "eligible": 163,
           "full_population_champion": true,
-          "full_population_win_rate": 0.5337423312883436,
+          "full_population_win_rate": 0.5766871165644172,
           "binary_scoring_denominator": 163,
-          "brier": 0.25508358925362873,
-          "logloss": 0.7035800554140752
+          "brier": 0.25182511924753187,
+          "logloss": 0.6986877210386554
         },
         "selected_feature_count": 128,
         "training_rows": 7017,
-        "training_seasons": [
-          2000,
-          2025
-        ],
-        "point_mae": 10.752707502484734,
-        "point_rmse": 13.668924180107794,
         "selection_scope": "RECONSTRUCTED_EXPOSED_2026_VALIDATION",
-        "selection_changed": true
+        "selection_changed": false
       }
     ],
+    "objective_selections": 6,
+    "policy_replays": 8,
     "execution": {
-      "completed_units": 288,
-      "failed_units": 0,
+      "base_optimizer_completions": 1920,
+      "base_optimizer_cpu_seconds": 439.137802881,
+      "blend_checkpoint_units": 216,
+      "blend_elapsed_seconds": 5.9278375020003296,
       "blocked_units": 0,
+      "completed_units": 192,
       "deferred_units": 0,
-      "new_score_estimators": 864,
-      "new_calibrators": 288,
-      "new_dispersion_estimators": 288,
-      "optimizer_completions": 1440,
-      "peak_simultaneous_optimizers": 23,
-      "elapsed_seconds": 277.8292779020012,
-      "worker_cpu_seconds": 4605.815900081,
-      "optimizer_cpu_seconds": 3657.351571439,
-      "distinct_fit_pids": 67,
+      "elapsed_seconds": 90.09194326599754,
+      "failed_blend_units": 0,
+      "failed_units": 0,
+      "new_blend_optimizers": 432,
+      "new_calibrators": 1152,
+      "new_dispersion_estimators": 0,
+      "new_probability_estimators": 768,
+      "new_score_estimators": 0,
+      "new_units": 192,
+      "optimizer_completions": 2352,
+      "optimizer_cpu_seconds": 439.855990202,
+      "optimizer_note": "Direct probability regressions, monotone Platt/beta calibrators, and pre-2026 OOF blends; no N203 estimator refits.",
+      "peak_simultaneous_optimizers": 20,
+      "planned_units": 192,
+      "restored_from_verified_return": 0,
+      "reused_blend_units": 0,
+      "reused_units": 0,
+      "worker_ceiling": 42,
+      "worker_cpu_seconds": 1735.241614666,
       "occupancy_gate": "NOT_APPLICABLE",
-      "family_units": {
-        "tensorflow": 36,
-        "xgboost": 36,
-        "catboost": 36,
-        "torch": 36,
-        "hist_gradient": 36,
-        "extra_trees": 36,
-        "ridge": 36,
-        "lightgbm": 36
-      }
+      "distinct_fit_pids": 91
     },
-    "candidate_policies": 1248,
-    "new_feature_columns": 2700,
-    "book_options": 3196,
-    "usable_spread_total_sources": 57,
-    "named_source_coverage": {
-      "circasports": {
-        "direct_binary_quotes": 0,
-        "missing_paired_decimal_quote_games": [],
-        "normalized_pairs": 30,
-        "paired_decimal_quote_games": 15,
-        "side_options": 60
+    "candidate_policies": 2042,
+    "preserved_policies": 1248,
+    "market_coverage": {
+      "usable_spread_total_bookmakers": 57,
+      "observed_provider_bookmakers": 79,
+      "named_coverage": {
+        "draftkings": {
+          "h2h": 15,
+          "spreads": 15,
+          "totals": 15
+        },
+        "kalshi": {
+          "h2h": 14,
+          "spreads": 14,
+          "totals": 14
+        },
+        "polymarket": {
+          "h2h": 15,
+          "spreads": 15,
+          "totals": 15
+        },
+        "polymarket_us": {
+          "h2h": 15,
+          "spreads": 0,
+          "totals": 0
+        }
       },
-      "draftkings": {
-        "direct_binary_quotes": 0,
-        "missing_paired_decimal_quote_games": [],
-        "normalized_pairs": 30,
-        "paired_decimal_quote_games": 15,
-        "side_options": 60
-      },
-      "kalshi": {
-        "direct_binary_quotes": 2,
-        "missing_paired_decimal_quote_games": [
-          "2026_12_NE_LAC"
-        ],
-        "normalized_pairs": 28,
-        "paired_decimal_quote_games": 14,
-        "side_options": 56
-      },
-      "polymarket": {
-        "direct_binary_quotes": 0,
-        "missing_paired_decimal_quote_games": [],
-        "normalized_pairs": 30,
-        "paired_decimal_quote_games": 15,
-        "side_options": 60
-      },
-      "polymarket_us": {
-        "direct_binary_quotes": 0,
-        "missing_paired_decimal_quote_games": [
-          "2026_12_ATL_MIN",
-          "2026_12_BAL_HOU",
-          "2026_12_CAR_TB",
-          "2026_12_CHI_DET",
-          "2026_12_DEN_PIT",
-          "2026_12_KC_BUF",
-          "2026_12_LV_CLE",
-          "2026_12_NE_LAC",
-          "2026_12_NO_CIN",
-          "2026_12_NYG_IND",
-          "2026_12_NYJ_MIA",
-          "2026_12_PHI_DAL",
-          "2026_12_SEA_SF",
-          "2026_12_TEN_JAX",
-          "2026_12_WAS_ARI"
-        ],
-        "normalized_pairs": 0,
-        "paired_decimal_quote_games": 0,
-        "side_options": 0
-      }
+      "observed_utc": "2026-11-26T02:52:04.872040+00:00",
+      "open_games": 15
     },
     "markets": {
       "sources": 80,
@@ -260,8 +225,26 @@
     },
     "workflow_submission_actions": 0,
     "account_submission_activity": "NOT_QUERIED",
-    "new_phone_cards": 7,
-    "production_promotions": 0
+    "new_phone_cards": 4,
+    "preserved_circa_phone_cards": 3,
+    "production_promotions": 0,
+    "independent_verification": {
+      "status": "PASS",
+      "all_objective_selections_match_independent_ranking": true,
+      "all_reported_metric_max_absolute_error": 2.4424906541753444e-15,
+      "completed_population_sha256": "59b17db9e94df389ba6299955234016ed33354e8c8b7cca85b78f3045e87f795",
+      "disclosure": "All2026 results are exposed selection/reconstruction. This audit verifies arithmetic, chronology of replay choices and full denominators; it does not certify future accuracy.",
+      "every_policy_full_population": 163,
+      "independent_optimizer_updates": 0,
+      "independent_policy_candidate_regrade": 2042,
+      "prediction_file_sha256": "22118a45d2221f2de767c4b94f2bc2d1519659c8466bb0b1cda42a79bbbf4773",
+      "prediction_rows_checked": 332846,
+      "replay_game_rows_checked": 1304,
+      "replay_probability_max_absolute_error": 0.0,
+      "run_id": "20261126T025146Z-e5ec79536aea",
+      "weekly_policy_decisions_checked": 88
+    },
+    "point_and_push_provenance": "New spread conditional cover model with preserved N203 point/outright/push references; strict-win total remains the N203 score model."
   },
   "verification": {
     "base_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
@@ -1229,8 +1212,8 @@
       },
       {
         "path": "index.html",
-        "sha256": "f3214061da0c939b2b39d71fe4bc78fdbee6223cee8601983d567a71381ee915",
-        "bytes": 570424,
+        "sha256": "33e3be91d1ecf0d23d55db78849aa80ca770bc16eef8e99c61c3319d7bbb375f",
+        "bytes": 570512,
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
@@ -2105,8 +2088,8 @@
       },
       {
         "path": "week-12-field-notes/index.html",
-        "sha256": "13380ecbb404d02ec6badde7a978062852f4d1d84eadde27a40ec7fe35daad9d",
-        "bytes": 113600,
+        "sha256": "e496c3540839fcfc762b1938f1fc03dd11ec0fc52cf9094298516267622f759b",
+        "bytes": 113672,
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
@@ -2386,6 +2369,66 @@
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
+        "path": "week-12-field-notes/n204/N204-games-1.png",
+        "sha256": "86ddee97b7e22f801cf7ad32947edda4b70aa13ef8cea54d75be22d24fa1d3bd",
+        "bytes": 282757,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n204/N204-games-2.png",
+        "sha256": "6fa78086af3c36b7cf5fb6837fe597680cbe37b8e05ed5cf3b35c7a2f79c5eeb",
+        "bytes": 294499,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n204/N204-games-3.png",
+        "sha256": "5c5c36391eacb14a171dd977afd7c755249cd935decc85f1951e15333e7bff89",
+        "bytes": 300386,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n204/N204-games-4.png",
+        "sha256": "2d2afa4cb70dfab22d39d87167bfbc668316aac3ab03e6e447d12da01dd421f7",
+        "bytes": 297299,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n204/audit.json",
+        "sha256": "2782ce09e2be00e03f8a230c5ccbf1afac6d91249f0574b31addaf0c212bbc30",
+        "bytes": 1062,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n204/board.css",
+        "sha256": "9219d3fcdbf2f8f7f5444babc3e150d5564ccb6abbab9c9ee514d233f915cea6",
+        "bytes": 11786,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n204/board.js",
+        "sha256": "57447e5fb211c69d8659a5973145f7d27405c598ccddc8026fdaf9da1df6bb5d",
+        "bytes": 23966,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n204/index.html",
+        "sha256": "c4e159298a728cca7b1964a907a37e7b393f03734ead51b967d3a9f2d2b0dcfd",
+        "bytes": 14234,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n204/snapshot.json",
+        "sha256": "506418f629ddb5b8e0ac664d5233e3c2307020a51ea78b8dd832f51e380ea094",
+        "bytes": 3366449,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n204/verification.json",
+        "sha256": "6db15f778790b64507fca10f9fa845a8ca3492f92b16359d21786ae0ac3ffcf3",
+        "bytes": 613,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
         "path": "weeks/12/index.html",
         "sha256": "4d56d5d2b6a731e5477d5a7635bbb39ae421aab838e1c0de067f2a3bf2348eaa",
         "bytes": 124467,
@@ -2428,7 +2471,7 @@
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       }
     ],
-    "method": "Expected hashes for the exact deployed Site source; live anonymous validation occurs in exact-head GitHub Actions.",
+    "method": "Expected hashes for the exact deployed Site source; anonymous asset and browser validation occurs in exact-head GitHub Actions.",
     "browser_status": "PENDING_EXACT_HEAD_HOSTED_CI",
     "local_controls": "PASS",
     "viewports": [

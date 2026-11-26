@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "all_objective_selections_match_independent_ranking": true,
+  "all_reported_metric_max_absolute_error": 2.4424906541753444e-15,
+  "completed_population_sha256": "59b17db9e94df389ba6299955234016ed33354e8c8b7cca85b78f3045e87f795",
+  "disclosure": "All2026 results are exposed selection/reconstruction. This audit verifies arithmetic, chronology of replay choices and full denominators; it does not certify future accuracy.",
+  "every_policy_full_population": 163,
+  "independent_optimizer_updates": 0,
+  "independent_policy_candidate_regrade": 2042,
+  "prediction_file_sha256": "22118a45d2221f2de767c4b94f2bc2d1519659c8466bb0b1cda42a79bbbf4773",
+  "prediction_rows_checked": 332846,
+  "replay_game_rows_checked": 1304,
+  "replay_probability_max_absolute_error": 0.0,
+  "run_id": "20261126T025146Z-e5ec79536aea",
+  "weekly_policy_decisions_checked": 88,
+  "source_return_sha256": "f207a66afd9e909bc0ab8aa869934416a3914a910e1ae7ec2db4aa7530dec601",
+  "qualification_or_training": false,
+  "public_export": "AGGREGATES_ONLY_NO_FITTED_STATE"
+}
