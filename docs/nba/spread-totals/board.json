@@ -1,7 +1,7 @@
 {
   "schema": "public.nba.spread_totals.v1",
   "owner": "NBA",
-  "release": "B120 prepared board · B119 verified partial research evidence",
+  "release": "B120 owner recovery blocked · B119 verified partial research evidence",
   "source_observed_at_utc": "2026-11-25T19:34:47.323874+00:00",
   "market_comparison_asof_utc": "2026-11-25T19:33:33.256583Z",
   "publication_status": "Static public source snapshot · website deployment unverified",
@@ -155072,7 +155072,9 @@
   "contract_primary_strike_policy": "No admitted contract universe; no primary strike or rank is selected in this publication.",
   "b119_new_model_fits": 0,
   "b119_durable_publication_failed_tasks": 2140,
-  "b120_owner_execution": "NOT_LAUNCHED_AT_PREPARATION",
+  "b120_owner_execution": "STARTED_RECOVERY_BLOCKED",
+  "owner_execution_status_asof_utc": "2026-11-26T00:26:23.282535Z",
+  "prepared_execution_status": "WITHDRAWN_PENDING_REPLACEMENT",
   "b119_frontier_publication_failed_tasks": 1200,
   "b119_legacy_publication_failed_tasks": 940,
   "b119_legacy_failure_branches": {
