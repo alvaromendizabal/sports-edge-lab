@@ -1,6 +1,6 @@
 {
   "schema": "public.nba.phone_graphics.v1",
-  "source_projection_sha256": "57e059b672227565c1dfe98c3ca169fdec4de980e33cab570de2e6b2d0bfe848",
+  "source_projection_sha256": "6f8fe476562d1d6bf3bbaba79a6e906c363713a1e9b5026d8cfe1dbc53f37882",
   "games": 48,
   "images": [
     {
@@ -8,7 +8,7 @@
       "game_ids": [],
       "width": 1080,
       "height": 1920,
-      "sha256": "931b6784e2431900ba78651ae966abaeaec7bc2dc22a9218c40ccdd5884b3eea"
+      "sha256": "11f75644797c6774d2a19dfc061a61cd0c121479d7097523812cfd50f1eb8508"
     },
     {
       "file": "nba_2026-11-23_page_01.png",
@@ -21,7 +21,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "54649b780dc46a75cefd2a0991d23c1856fdfe40332890d408a716a026f5e5e8"
+      "sha256": "4908f5ef6e34f94016281bc313b276fed8a5fff0ec429d1d16c1fb0f2535b493"
     },
     {
       "file": "nba_2026-11-23_page_02.png",
@@ -34,7 +34,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "c293e9c12b95d9f335eb539c25b0031466cc3f9a26ffa2236fcb806bba67aab5"
+      "sha256": "f52ce9c538f912efc7ca3dca59423364d6078842855bf6ecc2592556685909c2"
     },
     {
       "file": "nba_2026-11-24_page_01.png",
@@ -45,7 +45,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "4cf25b109b21399cf7db585a569f1ab3ceec05c194eb6a7e3763c21cb7e98055"
+      "sha256": "6203c93b560f5b541ce693c9bf61381293f876779830e20d6a5bc312528787b3"
     },
     {
       "file": "nba_2026-11-25_page_01.png",
@@ -58,7 +58,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "052ccdc1128a7670615c3eae6a30202a43c334dd4b94c58d3be8b771f71a73e4"
+      "sha256": "cf7ce5978b4fba6a62d37b6f038393d1bab44b999b230707072a059037940453"
     },
     {
       "file": "nba_2026-11-25_page_02.png",
@@ -70,7 +70,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "6a6fb493d119e4e66379448d4e8ec80afddd9c93919ec47f8f0ba17eb57d75a5"
+      "sha256": "d83628952a660ed62d58f1e5dbe16b3b987bbe15339e935d8edddb5ade0af30a"
     },
     {
       "file": "nba_2026-11-27_page_01.png",
@@ -83,7 +83,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "0a5c1734305a07a69e78055f56e9d00ec2c4256f50e5dff7ec26c6e9bc0415de"
+      "sha256": "737213cf9293d9782a183481637c2a0783ab3992b0f2e9caf257dea983ef087a"
     },
     {
       "file": "nba_2026-11-27_page_02.png",
@@ -96,7 +96,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "e885ab29208f357b4f01b44c95ad1f211ce01b9b7093db83a191a42b34fd29ce"
+      "sha256": "8ca85b958eb793c0f7d1d72a90691bdeff5ec8761ac770373de731105abaa936"
     },
     {
       "file": "nba_2026-11-27_page_03.png",
@@ -105,7 +105,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "0466306136b4b555409956c9e94625e61b6cab103ab624df04211f6f9d5d0cf7"
+      "sha256": "e30bc3dcc1c7b9c0236f4ce3f7c7e336578331c81de9378d88a5a0d153d5cd82"
     },
     {
       "file": "nba_2026-11-28_page_01.png",
@@ -118,7 +118,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "b5414cef453c346f0027d5875f77602f55625431b05a94e5e14f281d8b2695d8"
+      "sha256": "d90ad4ef9ed62d28885935215bd54606bdc8dcbe7f9b07d253171ca3616fc0f3"
     },
     {
       "file": "nba_2026-11-29_page_01.png",
@@ -131,7 +131,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "e05338d23bc5492e6f1797dace5e62305407779912f00adaf7be78bb339e2e60"
+      "sha256": "86fd5528a8f7a542a4dcb65651520ebaf838b46d0a2ed84ce44bc82453c97bc7"
     },
     {
       "file": "nba_2026-11-29_page_02.png",
@@ -144,12 +144,14 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "9d6bc5bf2dac717a67a61a4e033920f304aec3df732dd7a1db631fc3fafb3eae"
+      "sha256": "5cb4b40f95e8fe487956ce7798201757ff6714a26c9bef7c59412a8e9398f342"
     }
   ],
-  "snapshot_label": "B119 saved outlooks \u00b7 R1 preparation snapshot",
+  "snapshot_label": "B119 saved outlooks \u00b7 R1 prepared for launch",
   "owner_status_asof_utc": "2026-11-26T00:26:23.282535Z",
-  "owner_status": "B120 recovery blocked at recorded checkpoint",
+  "owner_status": "Earlier B120 recovery blocked at recorded checkpoint",
+  "prepared_execution_status": "VERIFIED_R1_READY_FOR_OWNER_LAUNCH",
+  "prepared_execution_status_asof_utc": "2026-11-26T04:27:13.095679+00:00",
   "R1_owner_results_included": false,
   "forecasts_changed_by_graphics_generation": false,
   "publication_status": "Repository assets only; public hosting unverified"
