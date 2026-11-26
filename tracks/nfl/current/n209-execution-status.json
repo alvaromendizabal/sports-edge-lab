@@ -1,0 +1,14 @@
+{
+  "status": "NATIVE_QUALIFICATION_UNDERWAY",
+  "status_as_of_utc": "2026-11-26T21:10:00Z",
+  "executable_sha256": "a6786abd469c9bf4e0560b4c7c84f0f2ed661fe48b4baa5fb71579d7a97af284",
+  "executable_bytes": 106633603,
+  "local_regression_passes_by_release": {
+    "N209": 69,
+    "N208": 56,
+    "N207": 81
+  },
+  "planned_full_fit_units": 304,
+  "planned_full_optimizer_completions": 3952,
+  "assistant_full_owner_launches": 0
+}
