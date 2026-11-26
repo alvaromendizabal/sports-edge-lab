@@ -1,17 +1,17 @@
 {
   "schema": "fbs.spread-totals.phone-graphics.v1",
-  "science_sha256": "6a5044666d42a15b31e570aaa483bc6f50bad18419de16f4aa09582ffc1f472f",
+  "science_sha256": "15041a949bdf54d9ba4eb642ad08180377ffebb976da7ccd75004be311925c77",
   "scope": "week",
   "games_rendered": 69,
   "pages": [
     {
       "file": "graphics/fbs_release_status.png",
-      "title": "V118 research and execution status",
-      "caption": "Verified prior failure, pending owner campaign and unchanged forecast cutoff",
-      "alt": "V117 recorded zero new fits but global fit accounting is incomplete; V118 awaits owner launch. Existing forecasts retain their November 25 cutoff.",
+      "title": "V119 research and execution status",
+      "caption": "Verified saved work, pending owner campaign and unchanged forecast cutoff",
+      "alt": "V118 saved 368 fits and 736 calibration components; V119 is native verified. Forecasts retain their November 25 cutoff.",
       "kind": "release_status",
-      "bytes": 285324,
-      "sha256": "b8bcf63de740bc755c74535f4cfca961834755f262e4610f55018ec9faeb3f20",
+      "bytes": 254633,
+      "sha256": "d57eec0cd1457410b7135058a569be9b26ad10fb782e646449f849d735d069bc",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -46,7 +46,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -56,133 +56,113 @@
           ]
         },
         {
-          "text": "LATEST VERIFIED RUN · V117",
+          "text": "LATEST OBSERVED RUN · V118",
           "font_pixels": 36,
           "box": [
             75,
             430,
-            663,
+            695,
             456
           ]
         },
         {
-          "text": "Recorded: 0 model fits · 0 calibrations",
+          "text": "368 saved fits · 736 calibrations",
           "font_pixels": 48,
           "box": [
             75,
             497,
-            1108,
+            943,
             534
           ]
         },
         {
-          "text": "Global fit accounting is incomplete because a branch",
+          "text": "365 prediction partitions completed; 3 further fits were",
           "font_pixels": 40,
           "box": [
             75,
             642,
-            1140,
+            1180,
             680
           ]
         },
         {
-          "text": "failed. The raw-input guard rejected 588 callbacks;",
+          "text": "saved. Scorecards and champion selection did not",
           "font_pixels": 40,
           "box": [
             75,
             693,
-            1095,
+            1083,
             731
           ]
         },
         {
-          "text": "missing authenticated grid pins also blocked Spread &",
+          "text": "finish.",
           "font_pixels": 40,
           "box": [
             75,
             744,
-            1166,
-            782
+            196,
+            774
           ]
         },
         {
-          "text": "Totals. Recorded zeros are not a new global fit audit.",
-          "font_pixels": 40,
-          "box": [
-            74,
-            795,
-            1126,
-            833
-          ]
-        },
-        {
-          "text": "NEXT CAMPAIGN · V118",
+          "text": "NATIVE VERIFIED · V119",
           "font_pixels": 36,
           "box": [
             75,
             950,
-            550,
+            561,
             976
           ]
         },
         {
-          "text": "Prepared · awaiting owner launch",
+          "text": "808 remaining fits if unchanged",
           "font_pixels": 48,
           "box": [
             75,
             1017,
-            990,
+            940,
             1063
           ]
         },
         {
-          "text": "Prepared: 1,176 qualified base-fit jobs across seven",
+          "text": "Resume the latest exact saved states at launch. The",
           "font_pixels": 40,
           "box": [
             75,
             1162,
-            1111,
-            1200
+            1127,
+            1192
           ]
         },
         {
-          "text": "families; 168 source-blocked jobs remain visible. The",
+          "text": "fixed-time worker stop and mixed-phase progress",
           "font_pixels": 40,
           "box": [
             75,
             1213,
-            1136,
+            1070,
             1251
           ]
         },
         {
-          "text": "5,254-column candidate catalog supports",
+          "text": "failures are repaired. Forecast refresh remains",
           "font_pixels": 40,
           "box": [
             75,
             1264,
-            910,
+            1001,
             1302
           ]
         },
         {
-          "text": "point/threshold heads, ablations and calibration. No",
+          "text": "pending.",
           "font_pixels": 40,
           "box": [
             75,
             1315,
-            1113,
+            250,
             1353
-          ]
-        },
-        {
-          "text": "owner fits completed.",
-          "font_pixels": 40,
-          "box": [
-            75,
-            1366,
-            511,
-            1404
           ]
         },
         {
@@ -326,12 +306,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -350,8 +330,8 @@
         "401856762",
         "401858536"
       ],
-      "bytes": 330986,
-      "sha256": "b456a3c0987ebe9c5fa238cc158987f9c8187ad96dad57f3bbc539d1ba41a2d4",
+      "bytes": 330119,
+      "sha256": "85ef3716d367c3855134d9bb55ca2d74474e584ae98467f214c211efeb437712",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -386,7 +366,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -1026,12 +1006,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -1050,8 +1030,8 @@
         "401869930",
         "401856759"
       ],
-      "bytes": 311942,
-      "sha256": "a605200454d5305febda9d16af403b95d9d8ea17b14c50805a1e4d1bd74775cd",
+      "bytes": 311067,
+      "sha256": "4d7b0f86eba2ab786122fa70e074750fc05e01b2cd44d1af2b22c18155446a40",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -1086,7 +1066,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -1726,12 +1706,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -1750,8 +1730,8 @@
         "401856756",
         "401858544"
       ],
-      "bytes": 334111,
-      "sha256": "8c87fbd4993db7064eaede96a9ba540e157f415ce15e8326808f30892dd4b387",
+      "bytes": 333235,
+      "sha256": "3a64429f06619d18b7116c3ed96287b44e4814b725366787950e48abacd15e85",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -1786,7 +1766,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -2426,12 +2406,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -2450,8 +2430,8 @@
         "401858313",
         "401858314"
       ],
-      "bytes": 323868,
-      "sha256": "5992f8de05aa95ad402c276b637108aa6f74a472cfdc2c3f2469f3459c53205d",
+      "bytes": 322989,
+      "sha256": "35fdddbab103eef365849d60d39143f61271285ff7e6fcb871d62ef4ef47fb8f",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -2486,7 +2466,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -3126,12 +3106,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -3150,8 +3130,8 @@
         "401866474",
         "401869954"
       ],
-      "bytes": 329962,
-      "sha256": "3c375ffda8e9adf8817627b277adcf6b4e220ecfa6d4edd2ccb6ed8b11f2043f",
+      "bytes": 329098,
+      "sha256": "ad6ceb57ee395c1530f84c40dbaa63cb4008f0487977e62c2e63c0a7c90ea148",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -3186,7 +3166,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -3826,12 +3806,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -3850,8 +3830,8 @@
         "401870804",
         "401871102"
       ],
-      "bytes": 329729,
-      "sha256": "bd9ba33148e422604f10837eaeab4e23f1ffad530f9ac8a50eb7900bea0b5045",
+      "bytes": 328853,
+      "sha256": "61d8d3780a6048def223a0571bc4fbf39643845a419448e0f5cdfe2f9eec5398",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -3886,7 +3866,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -4526,12 +4506,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -4550,8 +4530,8 @@
         "401862841",
         "401869947"
       ],
-      "bytes": 322490,
-      "sha256": "8ade5d3a95c5f1a4f0fa660edd833e394810bec708ae83910037e8f187a43498",
+      "bytes": 321619,
+      "sha256": "80f80237619e2e22fe6e26a755338f6dadf24f945aaf0e2327a39fd6b23ce8d5",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -4586,7 +4566,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -5226,12 +5206,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -5250,8 +5230,8 @@
         "401871083",
         "401856764"
       ],
-      "bytes": 327037,
-      "sha256": "917662f7a52925b005a06c937e9a62e008fa0cc3a715b179284d0f5d1ff5e7aa",
+      "bytes": 326176,
+      "sha256": "635b52ada2ff3d9b64853badea64dee33529e80e09013edbb8627aeb8a8dce2a",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -5286,7 +5266,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -5926,12 +5906,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -5950,8 +5930,8 @@
         "401856876",
         "401858312"
       ],
-      "bytes": 328551,
-      "sha256": "7799ca44944ea7a6783426afa7e1b83ce842233e62d4f940f26f2f8139d870dd",
+      "bytes": 327660,
+      "sha256": "1dc33c989c91c7a5515086deb772bca45cb230a74fa27c0988b94b0de7eb3cd7",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -5986,7 +5966,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -6626,12 +6606,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -6650,8 +6630,8 @@
         "401862839",
         "401864550"
       ],
-      "bytes": 309590,
-      "sha256": "bb4d75a62305b7a059ae58149f6c584cf05cd33dba8841e9e8a6faa8afdf80ff",
+      "bytes": 308717,
+      "sha256": "546897d3bcfc9a3b341af7050c74299bf02a5cd491ce1296bbdaedfff56074b9",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -6686,7 +6666,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -7326,12 +7306,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -7350,8 +7330,8 @@
         "401856763",
         "401858542"
       ],
-      "bytes": 328797,
-      "sha256": "1d5b62e0029e9366be54cdf1dca4df1e48794fc34755021499c78f99d861af65",
+      "bytes": 327900,
+      "sha256": "f1daab85bf159cbaadffb86071e979511321b5f0d893e2e0f99ebccee76dbc50",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -7386,7 +7366,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -8026,12 +8006,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -8050,8 +8030,8 @@
         "401856765",
         "401858538"
       ],
-      "bytes": 335842,
-      "sha256": "4f5b16be80df96c8cd698c8fbc0b747bcf420aeecb69f58d09b471453c66bcf4",
+      "bytes": 334981,
+      "sha256": "fab979b373bb4ce0ac2e1c4ba2c21c3b1eb9b354d5c97641a4187dc032ae1d42",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -8086,7 +8066,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -8726,12 +8706,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -8750,8 +8730,8 @@
         "401856873",
         "401864548"
       ],
-      "bytes": 318439,
-      "sha256": "e8336179239698eaf2e00885a43ed6d23d5d68a82a19424e6f6202f0a4118db1",
+      "bytes": 317570,
+      "sha256": "0903801d6787b5ed218f6d1aa9ff735d7c1a1896b2005bcdb575d1e20b9a5af5",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -8786,7 +8766,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -9426,12 +9406,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -9449,8 +9429,8 @@
         "401860927",
         "401864547"
       ],
-      "bytes": 276061,
-      "sha256": "61557f97fdf00981d363f58a20e5b41f4cf579e7a59d0c7a3eea5479f1feee87",
+      "bytes": 275178,
+      "sha256": "a7951320227f41724de7a43688931e72b166c26a4da79ffbbbf920eabdb0aa78",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -9485,7 +9465,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -10005,12 +9985,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -10027,8 +10007,8 @@
         "KXNCAAFSPREAD-26NOV27BUFFAKR-BUFF6",
         "KXNCAAFSPREAD-26NOV27MSSTMISS-MISS14"
       ],
-      "bytes": 296451,
-      "sha256": "b90f80e2b1c614be635d10b7266584106128b10cb2024288dfc8b662693e1a8a",
+      "bytes": 295563,
+      "sha256": "80a41ccb31c8b8cdfa6d4cd959bc490001ece051bd52aaaee43bbc56708e2470",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -10063,7 +10043,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -10393,12 +10373,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -10415,8 +10395,8 @@
         "KXNCAAFSPREAD-26NOV27TLSAUTSA-UTSA2",
         "KXNCAAFSPREAD-26NOV27TOLOHIO-TOL2"
       ],
-      "bytes": 281256,
-      "sha256": "5470daaec5d34ad57ce75c8b8f21b69e133783dbe6aa0c3ee435d80858ac41fd",
+      "bytes": 280378,
+      "sha256": "d61b0c5b275bfbbcc334d72587dc8a4645d6920af05aca42ae013211a8765e5d",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -10451,7 +10431,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -10761,12 +10741,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -10783,8 +10763,8 @@
         "KXNCAAFSPREAD-26NOV27FLAFSU-FLA2",
         "KXNCAAFSPREAD-26NOV27NDSUSJSU-NDSU6"
       ],
-      "bytes": 303104,
-      "sha256": "0a8789d0c662be9eb9bc9ee33d7e26256f60c75726ec6636e236b442da6bc015",
+      "bytes": 302243,
+      "sha256": "265e81319e47bdec0aad7b3c0c0ba8d216144ced6aaee40af5ffaaced644ea01",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -10819,7 +10799,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -11149,12 +11129,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -11171,8 +11151,8 @@
         "KXNCAAFSPREAD-26NOV27AFAUNM-UNM5",
         "KXNCAAFSPREAD-26NOV27MINNWIS-WIS2"
       ],
-      "bytes": 297897,
-      "sha256": "7d59a55f48d578280aa629e67c7837d7304c7f4cc22dc4221b329006238ec284",
+      "bytes": 297044,
+      "sha256": "a69f4d8d174ffe9de987967acfdb071b752822281ea327312c88b5c07a787520",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -11207,7 +11187,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -11537,12 +11517,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -11559,8 +11539,8 @@
         "KXNCAAFSPREAD-26NOV27WVUUTAH-UTAH14",
         "KXNCAAFSPREAD-26NOV28BCMIA-MIA18"
       ],
-      "bytes": 302544,
-      "sha256": "a42e45b35b25b03d021884adc9b4d7148c6af00499cfe377cac78fb1dea4af8a",
+      "bytes": 301676,
+      "sha256": "b5139635180b5ce654502848ca4c7dc004e9a6f9a33e0e94f8e7c847962436be",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -11595,7 +11575,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -11925,12 +11905,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -11947,8 +11927,8 @@
         "KXNCAAFSPREAD-26NOV28CONNWYO-CONN2",
         "KXNCAAFSPREAD-26NOV28LOUUK-LOU2"
       ],
-      "bytes": 302941,
-      "sha256": "b0b78f56bd652bf909f4abd46b170b03bb8c1589adaa0169a74abd578831fdf5",
+      "bytes": 302075,
+      "sha256": "f7d26d3f370b921009048c728abc7c05b245e1d1379bb740d8c017c552721970",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -11983,7 +11963,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -12313,12 +12293,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -12335,8 +12315,8 @@
         "KXNCAAFSPREAD-26NOV28MICHOSU-OSU6",
         "KXNCAAFSPREAD-26NOV28NAVYCHAR-NAVY10"
       ],
-      "bytes": 301934,
-      "sha256": "dced265cdd64488615a336746ce12fbc633808c6707cb5561f48e9c4298eb9d2",
+      "bytes": 301047,
+      "sha256": "288720c52179dcd0e266f10ff13134904b41d4a425ad2b2b7fb77cecfb2ff0d4",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -12371,7 +12351,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -12701,12 +12681,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -12723,8 +12703,8 @@
         "KXNCAAFSPREAD-26NOV28NDSYR-ND15",
         "KXNCAAFSPREAD-26NOV28ILLNW-NW2"
       ],
-      "bytes": 301852,
-      "sha256": "2f139906e71dcd32d6a3e53e775ae014dc26bc999d64c05729df23f3bccbb748",
+      "bytes": 300943,
+      "sha256": "c483af37c274517101ce49ca39b8a48de3d4e1bc93f203b31ef6bae9739c8e60",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -12759,7 +12739,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -13089,12 +13069,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -13111,8 +13091,8 @@
         "KXNCAAFSPREAD-26NOV28FAUECU-ECU2",
         "KXNCAAFSPREAD-26NOV28KENNWKU-KENN2"
       ],
-      "bytes": 304256,
-      "sha256": "01447a350a3341bf011622cdddee463d5f206c32043dfb0f1f8afaa7ba59a0cc",
+      "bytes": 303370,
+      "sha256": "1628e1257c7d12f4f452621f3ec3d113b2c0dab0fb21bb42b51287511c88279c",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -13147,7 +13127,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -13477,12 +13457,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -13499,8 +13479,8 @@
         "KXNCAAFSPREAD-26NOV28ARMYRICE-ARMY5",
         "KXNCAAFSPREAD-26NOV28CCARJMU-JMU8"
       ],
-      "bytes": 303182,
-      "sha256": "eb0e6d20c894b842b57f23e99389305efe342cceb59b4c7d4c84478e1d9c1d79",
+      "bytes": 302315,
+      "sha256": "c6607827f83187a367c4497f4714bd2b14f0e9976b89576a5b44dc4f697f452e",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -13535,7 +13515,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -13855,12 +13835,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -13877,8 +13857,8 @@
         "KXNCAAFSPREAD-26NOV28LIBMOSU-LIB8",
         "KXNCAAFSPREAD-26NOV28NMSUMTU-MTU2"
       ],
-      "bytes": 307050,
-      "sha256": "ea9dcea76801401eb2c98323beff249e2ae7e447052932a895955febf5eb706e",
+      "bytes": 306177,
+      "sha256": "c63eeb20f43c5056df117399cbb7444303d3537dd4d8d969edc6bcf6248efff9",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -13913,7 +13893,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -14243,12 +14223,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -14265,8 +14245,8 @@
         "KXNCAAFSPREAD-26NOV28UCFCOLO-UCF2",
         "KXNCAAFSPREAD-26NOV28ULLGAST-ULL2"
       ],
-      "bytes": 292252,
-      "sha256": "87762e31d92b0ebb99d891459376a09a0ce667eb32df6c14905dcede3fd44fed",
+      "bytes": 291373,
+      "sha256": "b8c1fc6d3305184d88f1860b1aa6f02e08189a4e6f18098da70cbf1dd00a131c",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -14301,7 +14281,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -14621,12 +14601,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -14643,8 +14623,8 @@
         "KXNCAAFSPREAD-26NOV28TROYARST-ARST2",
         "KXNCAAFSPREAD-26NOV28UVAVT-VT2"
       ],
-      "bytes": 304863,
-      "sha256": "967ca6338f8d68fc1cc2115279c2b3694a99a416545bc72aff8d8cd196a4f6ae",
+      "bytes": 303979,
+      "sha256": "5035195ffcd99a689a38faa7453ea5fb9c9f0deb270ec3eb43d85957f53a26a6",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -14679,7 +14659,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -15009,12 +14989,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -15031,8 +15011,8 @@
         "KXNCAAFSPREAD-26NOV28DUKEWAKE-WAKE6",
         "KXNCAAFSPREAD-26NOV28GTUGA-UGA34"
       ],
-      "bytes": 299339,
-      "sha256": "bd2e4a64a2be3b3d57e08693afdbacfccf0c91ba89b5608ab9a25761ae35d751",
+      "bytes": 298450,
+      "sha256": "2356caa384bd7c4b8501aed2431630a5e66af5386d5692eecc06ea6016cd0c21",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -15067,7 +15047,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -15397,12 +15377,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -15419,8 +15399,8 @@
         "KXNCAAFSPREAD-26NOV28MASSBGSU-MASS2",
         "KXNCAAFSPREAD-26NOV28PSUMD-PSU5"
       ],
-      "bytes": 303985,
-      "sha256": "7777589766e5690fe066486c58a0d9eb30e05766b16bad8cae32f71809e6ea09",
+      "bytes": 303118,
+      "sha256": "ad309d072baa7d772f9fd36b2b3aa5f3045e47333e46f7a2fb42909a68b35cd5",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -15455,7 +15435,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -15785,12 +15765,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -15807,8 +15787,8 @@
         "KXNCAAFSPREAD-26NOV28TULNUSF-USF5",
         "KXNCAAFSPREAD-26NOV28USCUCLA-USC5"
       ],
-      "bytes": 287959,
-      "sha256": "ed8b8f68bec599331f469e27b859c9d0414a6108717f62c032bc16f386c4de74",
+      "bytes": 287168,
+      "sha256": "680ebd9b9a4da5e6837d03e68412c9d5f046ed064e6c694825a6540a51a16dd3",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -15843,7 +15823,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -16153,12 +16133,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -16175,8 +16155,8 @@
         "KXNCAAFSPREAD-26NOV28UABUNT-UNT2",
         "KXNCAAFSPREAD-26NOV28MSURUTG-MSU2"
       ],
-      "bytes": 300977,
-      "sha256": "683d584d2dd30a31e12047646bc189bcac84817a214095eea5f5810f69007b97",
+      "bytes": 300100,
+      "sha256": "48eee6955e359e51b25d1d87fb3d87a73899e56156957095874b75be035ab233",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -16211,7 +16191,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -16541,12 +16521,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -16563,8 +16543,8 @@
         "KXNCAAFSPREAD-26NOV28BSUCSU-BSU17",
         "KXNCAAFSPREAD-26NOV28KUOKST-OKST5"
       ],
-      "bytes": 306009,
-      "sha256": "efaf74b32818b1bb810e19583e42c260c8695a7a03fd84d0a2d9f16b3c1304c0",
+      "bytes": 305149,
+      "sha256": "2c39e956696747ed8a280c1de673dae1a8efc0655445be9bee3b478e32046246",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -16599,7 +16579,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -16929,12 +16909,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -16951,8 +16931,8 @@
         "KXNCAAFSPREAD-26NOV28PURIND-IND15",
         "KXNCAAFSPREAD-26NOV28TENNVAN-TENN6"
       ],
-      "bytes": 299454,
-      "sha256": "c8345b6f5649fb3d054a89954ba129ae8e8ba7a728e9d28efebea4c3600fd3ef",
+      "bytes": 298568,
+      "sha256": "b37a3f6c2a803f85d7c3381576d8e4ea1ce02195579382b640efae5a24d1b25c",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -16987,7 +16967,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -17317,12 +17297,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -17339,8 +17319,8 @@
         "KXNCAAFSPREAD-26NOV28PITTCAL-PITT5",
         "KXNCAAFSPREAD-26NOV28WASHORE-ORE6"
       ],
-      "bytes": 298960,
-      "sha256": "8022b1adbf2dce2f328fe1feca8d8f64a643fcf4f13fba1118b82ce35a2b8d17",
+      "bytes": 298079,
+      "sha256": "3bade95ab6922d8d453677a5d7e3049304dc0fe9f81347b3e56d7022b299bca6",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -17375,7 +17355,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -17705,12 +17685,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -17727,8 +17707,8 @@
         "KXNCAAFSPREAD-26NOV28NEVUNLV-UNLV2",
         "KXNCAAFSPREAD-26NOV28BAYHOU-HOU2"
       ],
-      "bytes": 290676,
-      "sha256": "75d79b1613d0019d4b86f91fdc95cdcc3b88e3b933150f96e06f6396a36c489f",
+      "bytes": 289795,
+      "sha256": "7b17c5b28ee84254b90999e7a0ce5a1f56276388b61b21c101014c42db431eb1",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -17763,7 +17743,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -18083,12 +18063,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -18105,8 +18085,8 @@
         "KXNCAAFSPREAD-26NOV28ORSTFRES-FRES2",
         "KXNCAAFSPREAD-26NOV28SACHAW-HAW6"
       ],
-      "bytes": 299156,
-      "sha256": "7d68743e13368ef6de1e9e4b7e7cce9e108e92fb01b20727fcece55b5707b0e0",
+      "bytes": 298283,
+      "sha256": "e68f0f129bf45e91d76ac186c0dcfe63c2afb8fd361ba01d45b376e4f4579c86",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -18141,7 +18121,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -18471,12 +18451,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -18493,8 +18473,8 @@
         "KXNCAAFTOTAL-26NOV27BUFFAKR-50",
         "KXNCAAFTOTAL-26NOV27MSSTMISS-58"
       ],
-      "bytes": 296782,
-      "sha256": "a6469c1e9773f405d79f0b7dbf61d0d7691f6305dc80b711b3a52ae9cf9ab432",
+      "bytes": 295901,
+      "sha256": "344c2fcf5fd692e18c4baa6750f0b3da0d16c8dec523d404a45beba494d36ab5",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -18529,7 +18509,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -18859,12 +18839,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -18881,8 +18861,8 @@
         "KXNCAAFTOTAL-26NOV27TLSAUTSA-62",
         "KXNCAAFTOTAL-26NOV27TOLOHIO-51"
       ],
-      "bytes": 293545,
-      "sha256": "b289b637becf2b837e9a5e85fdad2db0b495d1881b8197728b58d56132c2f72d",
+      "bytes": 292680,
+      "sha256": "22a17ceab8ee96047e54e25a4f8977693ac1fe3eceb7793e198ad17777a96e09",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -18917,7 +18897,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -19247,12 +19227,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -19269,8 +19249,8 @@
         "KXNCAAFTOTAL-26NOV27FLAFSU-56",
         "KXNCAAFTOTAL-26NOV27NDSUSJSU-41"
       ],
-      "bytes": 296449,
-      "sha256": "41a109f0512aef190c2d12086cb5531c5718174333b65220d27750a7942e2f0f",
+      "bytes": 295554,
+      "sha256": "c3fb1e7417ced65b5c34982bb921f0d4b2fbeec93c0e93c613065cfc885ea78b",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -19305,7 +19285,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -19635,12 +19615,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -19657,8 +19637,8 @@
         "KXNCAAFTOTAL-26NOV27AFAUNM-43",
         "KXNCAAFTOTAL-26NOV27MINNWIS-38"
       ],
-      "bytes": 297513,
-      "sha256": "16b0f7089e3b34d5549ceeabd0bde2afa722189e2be99aa01418fb5de783739a",
+      "bytes": 296647,
+      "sha256": "81eb23ea3648ec5aca08d97e575cd8fa4d9f315e39a369a190f6be2965a53626",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -19693,7 +19673,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -20023,12 +20003,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -20045,8 +20025,8 @@
         "KXNCAAFTOTAL-26NOV27WVUUTAH-72",
         "KXNCAAFTOTAL-26NOV28BCMIA-55"
       ],
-      "bytes": 301060,
-      "sha256": "e2b790086d43f91621bfe419aa54c292637bf24c9a620b64376e18c50ae25fc3",
+      "bytes": 300179,
+      "sha256": "606cbdfcae3b1fd3b7d568a58d5bd0c69aaab05f70ec56e589f912cd51342337",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -20081,7 +20061,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -20411,12 +20391,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -20433,8 +20413,8 @@
         "KXNCAAFTOTAL-26NOV28CONNWYO-51",
         "KXNCAAFTOTAL-26NOV28LOUUK-55"
       ],
-      "bytes": 305600,
-      "sha256": "eaf1da4c95d4a87fc2c4d04e6783a1a8c231dae9a8825d844965393aaf76e4a8",
+      "bytes": 304724,
+      "sha256": "d3e6779464eb6796e06b57d783e8992f8de3257e5e3c4668128ae54403566209",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -20469,7 +20449,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -20799,12 +20779,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -20821,8 +20801,8 @@
         "KXNCAAFTOTAL-26NOV28MICHOSU-40",
         "KXNCAAFTOTAL-26NOV28NAVYCHAR-58"
       ],
-      "bytes": 302622,
-      "sha256": "584551372ff8a235cd9db79930964f2428d91ffbb46e6f4b1d2e8fdf1cd50595",
+      "bytes": 301734,
+      "sha256": "0936745ff2aaf48fa58125911fefdec533953ffb5006e6ec4dfc506e063d1ad3",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -20857,7 +20837,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -21187,12 +21167,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -21209,8 +21189,8 @@
         "KXNCAAFTOTAL-26NOV28NDSYR-58",
         "KXNCAAFTOTAL-26NOV28ILLNW-51"
       ],
-      "bytes": 302404,
-      "sha256": "e435507ca329ae48230708c4ea07af6e96decd740fd0af52d01a8d04e9c80eba",
+      "bytes": 301490,
+      "sha256": "aa8be729ba2b6aa471abcd9e8738edd3a38e3fe87dfb12161166214706c69b7f",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -21245,7 +21225,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -21575,12 +21555,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -21597,8 +21577,8 @@
         "KXNCAAFTOTAL-26NOV28FAUECU-57",
         "KXNCAAFTOTAL-26NOV28KENNWKU-56"
       ],
-      "bytes": 304552,
-      "sha256": "abb5a358d44a82e13e4c87a8e997bca55a94193a66efebdf8799ec7408ab4cdc",
+      "bytes": 303682,
+      "sha256": "4d8f0871552a7cf2dfa052d06bfbe5bf6540991a3d5c8c521c909f67c14d6341",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -21633,7 +21613,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -21963,12 +21943,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -21985,8 +21965,8 @@
         "KXNCAAFTOTAL-26NOV28ARMYRICE-51",
         "KXNCAAFTOTAL-26NOV28CCARJMU-57"
       ],
-      "bytes": 303329,
-      "sha256": "b771e9835358aa9551322422a6c299420aa1e83fad04cf05ccb1c3b7ef25960c",
+      "bytes": 302453,
+      "sha256": "5b643ed396c8cfd68c5d989782f30766e97b54b4f75e68788637262d5c7a4f7e",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -22021,7 +22001,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -22351,12 +22331,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -22373,8 +22353,8 @@
         "KXNCAAFTOTAL-26NOV28LIBMOSU-53",
         "KXNCAAFTOTAL-26NOV28NMSUMTU-54"
       ],
-      "bytes": 304089,
-      "sha256": "3f96bf43a788a602070b8542fa383a6cdb02906391fda26d22fb5d445b71a3bc",
+      "bytes": 303225,
+      "sha256": "7c5ff6d11ecafeac658e70da45a42168b151550a9240992143ee70398ee9968f",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -22409,7 +22389,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -22739,12 +22719,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -22761,8 +22741,8 @@
         "KXNCAAFTOTAL-26NOV28UCFCOLO-52",
         "KXNCAAFTOTAL-26NOV28ULLGAST-58"
       ],
-      "bytes": 298322,
-      "sha256": "24d2676d1da731781f518bb4457a1f27c8564a4a0de1661a7040884cb846a3af",
+      "bytes": 297441,
+      "sha256": "97a30aec47985babcbb03e4b60e46bfb164e3b90529143e5f71a9a9754f20578",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -22797,7 +22777,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -23127,12 +23107,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -23149,8 +23129,8 @@
         "KXNCAAFTOTAL-26NOV28TROYARST-48",
         "KXNCAAFTOTAL-26NOV28UVAVT-55"
       ],
-      "bytes": 301746,
-      "sha256": "d8f46e38b178405ea9fdacf0a06cdebc1867435d2847548aed519aa43c41c2a3",
+      "bytes": 300853,
+      "sha256": "5da36428e1029788168de2563ff2c6011da379220cc8408263d550d8341e7169",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -23185,7 +23165,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -23515,12 +23495,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -23537,8 +23517,8 @@
         "KXNCAAFTOTAL-26NOV28DUKEWAKE-57",
         "KXNCAAFTOTAL-26NOV28GTUGA-56"
       ],
-      "bytes": 297761,
-      "sha256": "6a931bc47d69fb4239fd144a02f96eac46ecf448c603f72f29e96947ee6d797f",
+      "bytes": 296909,
+      "sha256": "e20f4c6f24b5efa9d6f4a6b3e5f408397b89fc062179606693d881aa13ff739b",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -23573,7 +23553,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -23903,12 +23883,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -23925,8 +23905,8 @@
         "KXNCAAFTOTAL-26NOV28MASSBGSU-45",
         "KXNCAAFTOTAL-26NOV28PSUMD-52"
       ],
-      "bytes": 308998,
-      "sha256": "5d996b3482390fd0883065330d544a4ab2a21e2be817c0961bcf89f7a5212e4b",
+      "bytes": 308128,
+      "sha256": "69b1664153e7181bf270666a3bff702f893dae73f26dd7ffab9aeba51721afed",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -23961,7 +23941,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -24291,12 +24271,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -24313,8 +24293,8 @@
         "KXNCAAFTOTAL-26NOV28TULNUSF-47",
         "KXNCAAFTOTAL-26NOV28USCUCLA-49"
       ],
-      "bytes": 297962,
-      "sha256": "a6a047ac52e6c2c59eb805242af3ecef9d5c07de9e3d491bbc1bf77f2021bf36",
+      "bytes": 297086,
+      "sha256": "976b14840b847c40a15c647854ad7afdbc388ff3a520f5ba9e679105cedc4ade",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -24349,7 +24329,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -24679,12 +24659,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -24701,8 +24681,8 @@
         "KXNCAAFTOTAL-26NOV28UABUNT-50",
         "KXNCAAFTOTAL-26NOV28MSURUTG-50"
       ],
-      "bytes": 303624,
-      "sha256": "ae517d217d564f8f8b2bc9478a459e901b4c3ff923d7d0d723fccf92ae6f9f54",
+      "bytes": 302757,
+      "sha256": "311e2afea600f07ba15909d2354f8b8b1754c4a775b5f6007db8ffd16a5f6e6e",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -24737,7 +24717,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -25067,12 +25047,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -25089,8 +25069,8 @@
         "KXNCAAFTOTAL-26NOV28BSUCSU-76",
         "KXNCAAFTOTAL-26NOV28KUOKST-70"
       ],
-      "bytes": 306323,
-      "sha256": "818681272357b3404d823996221842ab8fca01a2e0fe0fbb55e757fecabcd375",
+      "bytes": 305466,
+      "sha256": "24216b8117beb1af7e0c3d6a7068a11160573ebce947e12466eac0a30082296b",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -25125,7 +25105,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -25455,12 +25435,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -25477,8 +25457,8 @@
         "KXNCAAFTOTAL-26NOV28PURIND-53",
         "KXNCAAFTOTAL-26NOV28TENNVAN-46"
       ],
-      "bytes": 300225,
-      "sha256": "e5860d399bc49f3c5a05d87ffa92208e6fce686b346001b5ef5d117178422ccb",
+      "bytes": 299339,
+      "sha256": "bdf3c796028f9fe08a450a68c4b49ffc1758d70c58ec172868fccc51d9e404dc",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -25513,7 +25493,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -25843,12 +25823,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -25865,8 +25845,8 @@
         "KXNCAAFTOTAL-26NOV28PITTCAL-49",
         "KXNCAAFTOTAL-26NOV28WASHORE-51"
       ],
-      "bytes": 300029,
-      "sha256": "3525c57017b1a5e2fce34b1e92e6235c1d4b9bc5d036b0380d2e4c2a9bf6f864",
+      "bytes": 299120,
+      "sha256": "a63aaed8f3a0751f011933464312bc865fdc9847b7b0a664e0ff1ee8958e6ff3",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -25901,7 +25881,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -26231,12 +26211,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -26253,8 +26233,8 @@
         "KXNCAAFTOTAL-26NOV28NEVUNLV-47",
         "KXNCAAFTOTAL-26NOV28BAYHOU-57"
       ],
-      "bytes": 297011,
-      "sha256": "7bad33e7c6d5f99e4c9a58586f8efaea3a096b7b87eef475130162b3c925ac4b",
+      "bytes": 296115,
+      "sha256": "cb583e15db60ef8d84ab632d7c8d46f0f2e7af77797ffc9431210d5046afb414",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -26289,7 +26269,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -26619,12 +26599,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }
@@ -26641,8 +26621,8 @@
         "KXNCAAFTOTAL-26NOV28ORSTFRES-57",
         "KXNCAAFTOTAL-26NOV28SACHAW-40"
       ],
-      "bytes": 302342,
-      "sha256": "0e3c566e3447d7ece55e38347cbcd3c12d00d0a573e4d47a42d6202a20c5b6a2",
+      "bytes": 301456,
+      "sha256": "7bc3c1d209e29c155bd2623138ef8f7076c5f4b570f3dbb5a00e282bce77c962",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -26677,7 +26657,7 @@
           ]
         },
         {
-          "text": "V118 preparation · Forecast Nov 25 · 3:30 PM PT",
+          "text": "V119 preparation · Forecast Nov 25 · 3:30 PM PT",
           "font_pixels": 42,
           "box": [
             52,
@@ -27007,12 +26987,12 @@
           ]
         },
         {
-          "text": "V118 preparation · new research pending",
+          "text": "V119 prepared · forecast refresh pending",
           "font_pixels": 36,
           "box": [
             52,
             2735,
-            800,
+            795,
             2769
           ]
         }

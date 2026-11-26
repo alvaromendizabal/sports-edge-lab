@@ -103,6 +103,9 @@ class PublicV099(unittest.TestCase):
 
     def test_previous_landing_and_all_v098_assets_are_byte_preserved(self):
         landing=(ROOT/'docs/fbs/README.md').read_bytes();start=b'<!-- FBS_V099_ACTUAL_RETURN_START -->\n';end=b'<!-- FBS_V099_ACTUAL_RETURN_END -->\n\n'
+        if landing.startswith(b'<!-- FBS_V119_SPREAD_TOTALS_START -->\n'):
+            self.assertEqual(landing.count(b'<!-- FBS_V119_SPREAD_TOTALS_END -->\n\n'), 1)
+            landing = landing.split(b'<!-- FBS_V119_SPREAD_TOTALS_END -->\n\n', 1)[1]
         if landing.startswith(b'<!-- FBS_V117_SPREAD_TOTALS_START -->\n'):
             self.assertEqual(landing.count(b'<!-- FBS_V117_SPREAD_TOTALS_END -->\n\n'), 1)
             landing = landing.split(b'<!-- FBS_V117_SPREAD_TOTALS_END -->\n\n', 1)[1]

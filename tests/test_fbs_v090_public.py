@@ -168,6 +168,9 @@ class PublishedDataTests(unittest.TestCase):
 
     def test_entire_pre_v090_readme_suffix_is_byte_preserved(self):
         content=(ROOT/'docs/fbs/README.md').read_bytes()
+        if content.startswith(b'<!-- FBS_V119_SPREAD_TOTALS_START -->\n'):
+            self.assertEqual(content.count(b'<!-- FBS_V119_SPREAD_TOTALS_END -->\n\n'), 1)
+            content = content.split(b'<!-- FBS_V119_SPREAD_TOTALS_END -->\n\n', 1)[1]
         if content.startswith(b'<!-- FBS_V117_SPREAD_TOTALS_START -->\n'):
             self.assertEqual(content.count(b'<!-- FBS_V117_SPREAD_TOTALS_END -->\n\n'), 1)
             content = content.split(b'<!-- FBS_V117_SPREAD_TOTALS_END -->\n\n', 1)[1]

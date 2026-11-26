@@ -1,3 +1,15 @@
+<!-- FBS_V119_SPREAD_TOTALS_START -->
+## November 26 — V119 native verified; November 25 forecasts retained
+
+[Open Spread & Totals](spread-totals/index.html) · [All 69 weekly games](spread-totals/weekly_games.md) · [Release and evidence](spread-totals/README.md) · [iPhone graphics](spread-totals/graphics/)
+
+**V118 completed substantial fits but failed to produce its final return.** The native audit verified **368 saved base fits / 736 calibration components**, including **365 completed prediction partitions** and three additional saved fits needing export. Completed 2026 scorecards and new champion selection did not finish. Six unfinished attempts have no committed fit. The latest integrity-verified return remains the separate V117 partial return.
+
+**V119 is prepared and native verified.** It repairs the fixed-time worker shutdown and mixed-phase progress denominator, preserves exact scientific callback identities and resolves the newest saved work at launch. With unchanged input identities, **808 of 1,176 qualified base fits remain**; 168 source-blocked jobs remain explicit. The continuation uses 2024–25 training and completed 2026 games as **exposed validation/selection**. The displayed older winner, margin and total forecasts retain their original 2024/2025 selection rules.
+
+The board and all **59 deterministic phone graphics** retain the **November 25 forecast/market cutoffs**, all **895 observed season games**, and all **69 games in the November 23–29 Pacific snapshot**. No new forecast, executable price, threshold probability, successful owner run or production promotion is implied by this status update. At source preparation, the last API-verified host was version 48; a later native deployment receipt governs publication. Serving this snapshot does not establish scientific production promotion.
+<!-- FBS_V119_SPREAD_TOTALS_END -->
+
 <!-- FBS_V117_SPREAD_TOTALS_START -->
 ## November 25 — FBS Spread & Totals and the actual V116 interruption
 
