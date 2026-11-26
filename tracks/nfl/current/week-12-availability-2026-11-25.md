@@ -4,7 +4,7 @@ Wednesday, November 25, 2026 · All kickoff times Pacific.
 
 Club and league reports below supplement the forecasts issued at 10:06 p.m. Pacific. Their inclusion in that model issue is unverified. Thursday games have final team injury designations. Other future games use preliminary practice or team reports. Game-day inactive lists can change the outlook.
 
-[Open the issued forecasts, lines and probabilities](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n206/) · [Official NFL schedule changes](https://www.nfl.com/news/week-12-schedule-change)
+[Open the weekly pocket guide](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n206/field-notes/) · [Open the issued forecasts, lines and probabilities](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n206/) · [Official NFL schedule changes](https://www.nfl.com/news/week-12-schedule-change)
 
 [Official Circa Week 12 lines, November 25](https://www.circasports.com/wp-content/uploads/2026/11/Circa-Sports-Million-VIII-Contest-Point-Spreads-Week_12.pdf)
 
@@ -36,7 +36,7 @@ Kansas City ruled out Kenneth Walker III, Jaylon Moore and Omarr Norman-Lott. Bu
 
 Fri, Nov 27 · 12:00 p.m. PT
 
-Pittsburgh released Aaron Rodgers and named Mason Rudolph the starter. Denver ruled out Taylor Rapp and Sai’vion Jones. [steelers.com](https://www.steelers.com/news/urgency-high-for-a-time-to-push-through) · [denverbroncos.com](https://www.denverbroncos.com/news/injuryreport/injury-report-s-brandon-jones-among-broncos-to-remain-full-practice-participants-ahead-of-week-12-game-vs-steelers-2-players-ruled-out)
+Pittsburgh released Aaron Rodgers and named Mason Rudolph the starter. Denver RB J.K. Dobbins is suspended. Taylor Rapp and Sai’vion Jones are out. [steelers.com](https://www.steelers.com/news/urgency-high-for-a-time-to-push-through) · [denverbroncos.com](https://www.denverbroncos.com/news/injuryreport/injury-report-s-brandon-jones-among-broncos-to-remain-full-practice-participants-ahead-of-week-12-game-vs-steelers-2-players-ruled-out) · [denverbroncos.com](https://www.denverbroncos.com/team/rosters) · [reuters.com](https://www.reuters.com/sports/broncos-rb-jk-dobbins-suspended-detrimental-conduct--flm-2026-11-25/)
 
 ## BAL at HOU
 
