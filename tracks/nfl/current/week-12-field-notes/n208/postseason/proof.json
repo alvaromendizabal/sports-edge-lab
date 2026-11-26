@@ -447,17 +447,23 @@
     }
   },
   "n209_qualification": {
-    "status": "NATIVE_QUALIFICATION_UNDERWAY",
-    "status_as_of_utc": "2026-11-26T21:10:00Z",
+    "status": "VERIFIED_NATIVE_QUALIFICATION",
+    "verified_utc": "2026-11-26T21:31:48Z",
     "executable_sha256": "a6786abd469c9bf4e0560b4c7c84f0f2ed661fe48b4baa5fb71579d7a97af284",
     "executable_bytes": 106633603,
-    "local_regression_passes_by_release": {
-      "N209": 69,
-      "N208": 56,
-      "N207": 81
-    },
+    "certificate_sha256": "b07e43ed37b1f0421a241deda05919204766171cc1e3df2fd567d132b0918d20",
+    "independent_guard_sha256": "c6093b8fb6af7f2d778a7531da40380689ef6bd67c980c28fd286dd5cf6a9a2f",
+    "native_regression_passes": 69,
+    "bounded_units": 8,
+    "bounded_estimator_fits": 32,
+    "bounded_calibrator_fits": 72,
+    "candidates_scored": 6546,
+    "selection_game_count": 164,
+    "new_derived_columns": 8868,
+    "estimated_qualification_cost_usd": 1.84,
+    "full_owner_status": "ACTIVE_AT_CHECK",
+    "full_owner_status_as_of": "2026-11-26T21:32:00Z",
     "planned_full_fit_units": 304,
-    "planned_full_optimizer_completions": 3952,
-    "assistant_full_owner_launches": 0
+    "pr_receipt": "https://github.com/alvaromendizabal/sports-edge-lab/pull/451#issuecomment-7203835276"
   }
 }

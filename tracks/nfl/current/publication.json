@@ -6,14 +6,14 @@
   "thanksgiving_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n208/#slate",
   "dedicated_circa_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n208/#circa",
   "all_games_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n208/#slate",
-  "deployed_at": "2026-11-26T21:13:31.792339+00:00",
-  "site_version": 69,
-  "site_source_commit": "f16ee8eb40901413c58b6236b69edd27a93b1bb7",
-  "archive_sha256": "20cc8e4984f398308b0bacb2838fd7e983ff5bed5f44edbe111724481edc09f3",
-  "provider_saved_tar_sha256": "sha256:20cc8e4984f398308b0bacb2838fd7e983ff5bed5f44edbe111724481edc09f3",
+  "deployed_at": "2026-11-26T21:36:07.358929+00:00",
+  "site_version": 70,
+  "site_source_commit": "5443d29b575c597cb3e08bb8dde061ae1b4cc968",
+  "archive_sha256": "2e49b15aef3220393c23312c74b06df9adacd1d9f5fea46bb653885e3247a88c",
+  "provider_saved_tar_sha256": "sha256:2e49b15aef3220393c23312c74b06df9adacd1d9f5fea46bb653885e3247a88c",
   "audience": "public",
   "native_publication_receipt": "publication-n208.json",
-  "prior_publication_receipt": "publication-n208-v68.json",
+  "prior_publication_receipt": "publication-n208-v69.json",
   "github_source_provenance": "The exact-head GitHub Actions report verifies the committed release against the hosted bytes; immutable Site source commit is recorded above.",
   "scientific_scope": {
     "schema": "nfl.selected-public-results/2",
@@ -2762,21 +2762,27 @@
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
+        "path": "week-12-field-notes/n208/game-day-status.json",
+        "bytes": 1837,
+        "sha256": "0568ef58b6db870b683f1cadecdd9626c6965e45ed94591db4caa4cc499812ac",
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
         "path": "week-12-field-notes/n208/index.html",
-        "bytes": 102018,
-        "sha256": "7efa62045a29d41b7a3f8bc14aea8a8f6370c520dbbea1c769e0cc2bf28a4642",
+        "bytes": 105286,
+        "sha256": "da133ea0a3359e28f59de1ddf1cf47d7a3a7c7b5888d44c2d8d346234431cda4",
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
         "path": "week-12-field-notes/n208/postseason/index.html",
-        "bytes": 30906,
-        "sha256": "46d8a57a0b7458a0e02ebede1a82b870c23608058901defb11373da7b8b87ec0",
+        "bytes": 31048,
+        "sha256": "879af2f6c61277ec96da0c7d54514bf7caee84743e0ce38d125d263eef4dab79",
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
         "path": "week-12-field-notes/n208/postseason/proof.json",
-        "bytes": 11972,
-        "sha256": "2960ca4802e3bec39177219ec9099af968210845b2a1fca54818d069cd045720",
+        "bytes": 12447,
+        "sha256": "a3a81269b607656c934cacd7c961f9c79a220522760c0eef588dfdeedfc67e74",
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
@@ -2837,5 +2843,6 @@
     ]
   },
   "standing_results_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n207/standing-results/",
-  "postseason_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n208/postseason/"
+  "postseason_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n208/postseason/",
+  "game_day_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n208/#game-day"
 }

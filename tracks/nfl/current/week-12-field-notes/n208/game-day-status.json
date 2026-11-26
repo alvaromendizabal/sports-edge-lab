@@ -1,0 +1,72 @@
+{
+  "as_of_utc": "2026-11-26T21:33:17.239897+00:00",
+  "complete_selection_census": 164,
+  "original_pregame_issue_games": 14,
+  "week12_before_scheduled_kickoff_as_of": 13,
+  "source_game_url": "https://www.espn.com/nfl/game/_/gameId/401873081",
+  "source_file_sha256": "7406d5d9a987aec72a37cc56177aa11c736d207d1c45b0fb2d6d8360376f5de9",
+  "game_number": 165,
+  "forecast_release": "N207",
+  "issued_utc": "2026-11-26T08:37:00.790452+00:00",
+  "source_return_sha256": "cd738b607c250729fc840a79a92870dc2efc194487060fb3a76da92b8df4c55d",
+  "score": {
+    "DET": 35,
+    "CHI": 39
+  },
+  "settlements": [
+    {
+      "objective": "strict_wins",
+      "target": "margin",
+      "line": 1.5,
+      "selected_side": "DET",
+      "grade": "LOSS",
+      "p_side_no_push": 0.6342202796397718
+    },
+    {
+      "objective": "brier",
+      "target": "margin",
+      "line": -1.5,
+      "selected_side": "CHI",
+      "grade": "WIN",
+      "p_side_no_push": 0.5686620883914032
+    },
+    {
+      "objective": "logloss",
+      "target": "margin",
+      "line": -1.5,
+      "selected_side": "CHI",
+      "grade": "WIN",
+      "p_side_no_push": 0.5172932121877879
+    },
+    {
+      "objective": "strict_wins",
+      "target": "total",
+      "line": 55.5,
+      "selected_side": "over",
+      "grade": "WIN",
+      "p_side_no_push": 0.68427145550445
+    },
+    {
+      "objective": "brier",
+      "target": "total",
+      "line": 55.5,
+      "selected_side": "over",
+      "grade": "WIN",
+      "p_side_no_push": 0.5087840796803457
+    },
+    {
+      "objective": "logloss",
+      "target": "total",
+      "line": 55.5,
+      "selected_side": "over",
+      "grade": "WIN",
+      "p_side_no_push": 0.5087840796803457
+    }
+  ],
+  "circa": {
+    "selected_in_original_five": false,
+    "point_change": 0,
+    "CHI_PK": "WIN",
+    "DET_PK": "LOSS"
+  }
+}

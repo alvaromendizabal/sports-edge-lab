@@ -1,5 +1,11 @@
 # NFL game day and research dashboard
 
+## Thanksgiving game status
+
+Chicago won 39–35 in game 165. N207’s pregame Brier spread and total picks both won. Its most-wins spread pick lost and its total pick won. The original N208 evaluation retained all 164 games available when the models were selected. Philadelphia’s pregame prices closed at its scheduled 1:30 p.m. Pacific kickoff. The published schedule now limits the pregame filter on each visit. [Original issue and grading](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n208/#game-day)
+
+N209 passed native qualification with eight fit units, 32 estimator fits and 72 calibrations. Its separate 304-unit owner run was active at the 1:32 p.m. Pacific check. [Native verification](https://github.com/alvaromendizabal/sports-edge-lab/pull/451#issuecomment-7203835276)
+
 ## 2024 and 2025 playoff results
 
 [Open the postseason tables, confidence checks and market-price comparison](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n208/postseason/)
