@@ -136,64 +136,43 @@ function verifyHostedHtml(observed, source, context) {
     const text = selector => page.locator(selector).innerText();
     const count = (selector, expected) => page.locator(selector).count().then(actual => assert.equal(actual, expected, selector));
     const noOverflow = async () => { const layout = await page.evaluate(() => ({ width: window.innerWidth, scroll: document.documentElement.scrollWidth, outside: [...document.querySelectorAll("main *, header *")].filter(e => e.getBoundingClientRect().right > innerWidth + 1 && !e.closest(".scroll")).slice(0, 8).map(e => [e.tagName, e.id, e.className, e.getBoundingClientRect().right]) })); assert(layout.scroll <= layout.width + 1, JSON.stringify(layout)); };
-    await check(`${width}px: N201 field notes show all 16 roster forecasts, 319 public assets, all Circa roles and seven current share cards`, async () => {
-      await page.goto(new URL("week-12-field-notes/", base).href, {waitUntil: "domcontentloaded"});
-      assert.match(await text(".dateline"), /4:36 p.m. Pacific.*N201/);
-      assert.match(await text("#record"), /318 new estimators/);
-      assert.match(await text("#markets"), /1,611 exact pregame line observations/);
-      await count("article.game:visible", 16);
-      await page.selectOption("#day", "Thursday");
-      await count("article.game:visible", 3);
-      await page.selectOption("#day", "all");
-      assert.match(await text("article.game:has-text('DEN at PIT')"), /Rudolph/);
-      for (const role of ["0","1","2","3","4","5","6","7","8"]) {
-        await page.selectOption("#role", role);
-        await count(".objective:visible tbody tr", 32);
-        await count(".objective:visible .star", 5);
+    await check(`${width}px: N202 ordinary policy and V13 show all 16 matchups, 334 public assets, 11 phone graphics and independent record disclosures`, async () => {
+      await page.goto(new URL("week-12-field-notes/", base).href, {waitUntil:"domcontentloaded"});
+      assert.match(await text(".dateline"), /N202/);
+      await count("#ordinary .scroll:first-of-type tbody tr", 16);
+      await count("#latest-forecasts tbody tr",16);
+      assert.match(await text("#ordinary"), /84–66.*150 decisive/);
+      assert.match(await text("#ordinary"), /61–89.*150 decisive/);
+      assert.match(await text("#ordinary"), /82–70.*152 decisive/);
+      assert.match(await text("#ordinary"), /75–77.*152 decisive/);
+      assert.match(await text("#ordinary"), /Kickoff passed · no N202 pick/);
+      assert.match(await text("#ordinary"), /672 priced direct binary contracts/);
+      assert.match(await text("#latest-forecasts"), /N201 pregame archive/);
+      assert.match(await text("#latest-circa"), /V13 distribution · still-open games/);
+      assert.match(await text("#latest-circa"), /Availability-family research policy/);
+      assert.match(await text("#markets"), /1,598 pregame lines/);
+      await count("#latest-circa details",3);
+      await count("#latest-circa details:nth-of-type(2) tbody tr",30);
+
+      assert.match(await text("#ordinary"), /2026 games selected/);
+      assert.match(await text("#ordinary"), /earlier-week replay/i);
+      assert.match(await text("#ordinary"), /70% confidence subset/i);
+      assert.match(await text("#latest-circa"), /Standing contest policy/);
+      await count("#phone img[src^='N202-public-']",11);
+      await page.selectOption("#day","Thursday");
+      await count("article.game:visible",3);
+      await page.selectOption("#day","all");
+      await count("article.game:visible",16);
+      for(const venue of ["draftkings","kalshi","polymarket"]){
+        await page.selectOption("#venue",venue);
+        await count("[data-venue]:visible tbody tr",16);
       }
-      for (const venue of ["draftkings", "kalshi", "polymarket"]) {
-        await page.selectOption("#venue", venue);
-        await count("[data-venue]:visible tbody tr", 16);
-      }
-      await count("#availability details.health", 16);
-      await count("#availability .health-grid article", 32);
-      await count(".five .pick-alert", 2);
-      await page.locator('.rosterlink[href="#availability-NE-LAC"]').click();
-      assert(await page.locator("#availability-NE-LAC").evaluate(el => el.open));
-      assert.match(await text("#availability-NE-LAC"), /Tommy DeVito/);
-      assert.match(await text("#availability-NE-LAC"), /Justin Herbert/);
-      assert.match(await text("#availability"), /256 players across 26 of 32/);
-      await count("#worksheet-models tbody tr", 16);
-      assert.match(await text("#worksheet-models"), /6 of 16 games.*split in 10/);
-      await count("#roster-forecast tr[id^='roster-estimate-']",16);
-      await count("#roster-forecast details tbody tr",32);
-      assert.match(await text("#roster-forecast"), /208 laws/);
-      await count("#phone img[src^='N201-public-']",7);
-      await page.locator('.rosterlink[href="#availability-SEA-SF"]').click();
-      assert.match(await text("#availability-SEA-SF"), /Brock Purdy.*ankle/);
-      assert.match(await text("#availability-SEA-SF"), /Darnold.*practice/);
-      await page.locator('.rosterlink[href="#availability-GB-LAR"]').click();
-      assert.match(await text("#availability-GB-LAR"), /Puka Nacua/);
-      assert.match(await text("#availability"), /six inactive designations were verified.*3:51 p.m. Pacific/);
-      assert.match(await text("#availability-GB-LAR"), /Ty Simpson.*Darryl Peterson III.*Desjuan Johnson/);
-      assert.match(await text("#gameday-sensitivity"), /68\.68%/);
-      await count("#gameday-sensitivity tbody tr",3);
-      assert.match(await text("#availability-GB-LAR"), /Micah Parsons/);
-      assert.match(await text("#availability-GB-LAR"), /Inactive: Josh Jacobs/);
-      assert.match(await text("#availability-GB-LAR"), /Confirmed active: Micah Parsons/);
-      assert.match(await text("#availability"), /28 of 32 teams/);
-      assert.match(await text("#availability"), /30 club practice pages supplied 301 player rows/);
-      assert.match(await text("#record"), /10,754 named candidate columns/);
-      assert.match(await text("#record"), /44 one-hour cutoff observations and 264 model indications/);
-      assert.match(await text("#record"), /176 horizon-matched indications across 44 contracts/);
-      await count("#phone img", 7);
-      assert.match(await text("#circa"), /before Wednesday’s 5 p.m./);
-      assert.match(await text("#roster-estimate-GB-LAR"), /67\.5%/);
-      await page.locator('a[href="n201-weekly/"]').first().click();
-      await count(".grid article",16);
-      await count("article ol",3);
-      await count("article ol li",15);
-      assert.match(await text("main"), /N201/);
+      await count("#availability details.health",16);
+      await count("#availability .health-grid article",32);
+      await noOverflow();
+      await page.locator('a[href="n202-weekly/"]').first().click();
+      await count("#ordinary .grid article",16);
+      assert.match(await text("main"), /N202/);
       await noOverflow();
     });
     await check(`${width}px: N195 official research choices and source-matched comparisons`, async () => {
