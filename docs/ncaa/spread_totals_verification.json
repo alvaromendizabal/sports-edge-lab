@@ -1,68 +1,132 @@
 {
-  "schema": "sel.ncaa.r51.public_board_verification.v1",
-  "static_render": {
-    "schema": "sel.ncaa.r51.static_board_render.v1",
-    "renderer": "PyMuPDF Story 1.26.6",
-    "static_html_rendered": true,
-    "browser_screenshot_claimed": false,
-    "responsive_browser_qa_verified": false,
-    "browser_failure": "Cloud Chromium failed before page load: timezone override timeout; connection closed; target crashed.",
-    "source_board_sha256": "ab971b39f13d7fff0ab6b637945db53b1f6dbb0fb48e834368eaa2eef7cc2837",
-    "source_rows": 3910,
-    "source_native_contracts": 10347,
-    "new_model_forecasts": 0,
-    "deployment": false,
-    "artifacts": [
+  "actual_owner_findings_sha256": "be60dc4e0e648c315960f6f832ae1371ce4bee196783530401cce50e640c8f38",
+  "all_game_rows": 3910,
+  "all_workstream_fit_totals_not_inferred_from_typed_zeros": true,
+  "current_public_projection_sha256": "36250c3c903d32a4eb46055de10576ab3f8b7228746f5658580bca57b7baad0d",
+  "current_publication": {
+    "commit_identity_and_status": "REFER_TO_SEPARATE_PUBLICATION_RECEIPT",
+    "future_commit_identity_inferred": false,
+    "live_deployment_verified": false,
+    "receipt_scope": "Exact six-file source publication and remote readback; separate from this immutable review artifact"
+  },
+  "dated_game_rows_unchanged_from_previous_public_projection": true,
+  "deployed": null,
+  "deployment_performed_by_reporting_builder": false,
+  "deployment_status": "UNVERIFIED",
+  "embedded_dataset_roundtrip_verified": true,
+  "engineering_evidence": {
+    "acceptance": {
+      "bytes": 139373,
+      "name": "R52_ENGINEERING_ACCEPTANCE.json",
+      "sha256": "7ac18aeb7515f46f1034412ff72305355024a190bee5c6e200e47b7910237a57"
+    },
+    "distinct_observed_test_ids": 367,
+    "fresh_reports": [
       {
-        "name": "NCAA_SPREAD_TOTALS_PHONE.static.html",
-        "bytes": 3230,
-        "sha256": "7b40b02bc1a6f58b5101fa1fc479602d8cda9742e4175f9e4f8eff81fe36875d"
+        "completed_at": "2026-11-26T03:10:57Z",
+        "count": 362,
+        "reference": {
+          "bytes": 187940,
+          "name": "e2a1dc06f56208db_R52_NATIVE_STARTUP_REPORT.json",
+          "sha256": "e2a1dc06f56208dbc3074202dace482b136e5606c9198d6e81ee353a95560979"
+        },
+        "schema": "sel.ncaa.r52.observed_native_startup.v1"
       },
       {
-        "name": "NCAA_SPREAD_TOTALS_PHONE.pdf",
-        "bytes": 102948,
-        "sha256": "ac36a5fc1b68dacae7b3a122c8625da48f7877202e3ac86e3b3ad696a93f3c04"
-      },
-      {
-        "name": "NCAA_SPREAD_TOTALS_PHONE.png",
-        "bytes": 310348,
-        "sha256": "5a5195d48e1c8e9db18f78b5edbdf1530225423e4a5d45d263657b44c51e7485"
-      },
-      {
-        "name": "NCAA_SPREAD_TOTALS_DESKTOP.static.html",
-        "bytes": 3947,
-        "sha256": "7df3e7752334f701d5ed9387c7895f04e27b98f16143f21b71df90874aaff20f"
-      },
-      {
-        "name": "NCAA_SPREAD_TOTALS_DESKTOP.pdf",
-        "bytes": 105637,
-        "sha256": "a52eaf16dfd131be4df564f407d8fb14819268554661aa49aa939efa66467a71"
-      },
-      {
-        "name": "NCAA_SPREAD_TOTALS_DESKTOP.png",
-        "bytes": 298545,
-        "sha256": "24472ebbd547795bcad6f1713239b7716d62b719060878fe6db56572cc36cd4c"
+        "completed_at": "2026-11-26T03:11:40Z",
+        "count": 5,
+        "reference": {
+          "bytes": 19119,
+          "name": "a8a2ef14f745b036_R52_NATIVE_WITNESSES_REPORT.json",
+          "sha256": "a8a2ef14f745b036835d7fd498d73b4a8f1cab624bc038a44b0af6a05d96daae"
+        },
+        "schema": "sel.ncaa.r52.observed_native_engineering_witnesses.v1"
       }
     ],
-    "visual_review": "PASS",
-    "visual_reviewed_at": "2026-11-26T00:58:53.712770+00:00",
-    "visual_review_scope": "Both complete sanitized phone and desktop PNGs visually inspected: readable labels, complete cards and clocks, no clipped data or overlaps. Static HTML rendering only.",
-    "compressed_embedded_data_roundtrip_verified": true,
-    "javascript_syntax_check": {
-      "command": "node --check board_script.mjs",
-      "exit_code": 0,
-      "browser_execution_claimed": false
-    }
+    "full_import_consumer": {
+      "authentication_mocked": false,
+      "current_inputs_runtime_and_fresh_remote_readbacks_still_required": true,
+      "fitted_model_import_performed": false,
+      "full_method_completed": true,
+      "pinned_historical_fixtures_only": true,
+      "reference": {
+        "bytes": 6272941,
+        "name": "67c7d28d5052a3f0_R52_ACTUAL_STORE_PREPARE_IMPORT.json",
+        "sha256": "67c7d28d5052a3f07c48cb5aa74cc976c44680b8036c7c27830b719e12a17dd3"
+      }
+    },
+    "observed_pass_cases": 367,
+    "owner_research_executions": 0,
+    "owner_scientific_fit_credit": 0,
+    "production_fit_throughput_qualified": false,
+    "scientific_completion_certified": false,
+    "source": {
+      "bytes": 77508626,
+      "sha256": "68ad7f0d53bfb1e6fb83cf0a014e5959ac625d47e77e88933b29bde3d5ee18e3"
+    },
+    "status": "PASS_CURRENT_SOURCE_ENGINEERING_ONLY"
   },
-  "all_game_rows": 3910,
-  "men_rows": 1964,
-  "women_rows": 1946,
   "game_identities_unique": true,
-  "embedded_dataset_roundtrip_verified": true,
-  "raw_native_contract_rows_published": 0,
-  "private_native_contracts_count": 10347,
+  "git_mutation_performed_by_reporting_builder": false,
   "invented_forecasts": 0,
-  "new_fits": 0,
-  "public_boundary_review": "NCAA all-game publication extension; no source quote arrays, private grids, recipes, cloud addresses or execution archives",
-  "deployed": false
+  "javascript_syntax_check": {
+    "browser_execution_claimed": false,
+    "exit_code": 0
+  },
+  "men_rows": 1964,
+  "merge_performed_by_reporting_builder": false,
+  "new_fits_by_this_reporting_update": 0,
+  "previous_public_projection_sha256": "ab971b39f13d7fff0ab6b637945db53b1f6dbb0fb48e834368eaa2eef7cc2837",
+  "private_native_contracts_count": 10347,
+  "public_boundary_review": "Existing NCAA aggregate-only surface: no quote arrays, private grids, recipes, cloud addresses or execution archives",
+  "publication_status": "REVIEW_ARTIFACT_ENGINEERING_QUALIFIED_DEPLOYMENT_UNVERIFIED",
+  "r52_source_qualification_claimed": true,
+  "r52_source_qualification_scope": "CURRENT_SOURCE_ENGINEERING_ONLY",
+  "raw_native_contract_rows_published": 0,
+  "schema": "sel.ncaa.r52.public_board_verification.v1",
+  "scientific_data_and_qualification_pins_unchanged_from_final_snapshot": true,
+  "static_render": {
+    "artifacts": [
+      {
+        "bytes": 3359,
+        "name": "spread_totals_phone.static.html",
+        "sha256": "332bde38c51373285a36eb94b40f619258ed4898ef13fd5a6d0de608ea8084b9"
+      },
+      {
+        "bytes": 103490,
+        "name": "spread_totals_phone.pdf",
+        "sha256": "c77fb642c496e73a4ee063caf10a80b33e3a48dce489cd7bca2aafcdeafb06af"
+      },
+      {
+        "bytes": 326673,
+        "name": "spread_totals_phone.png",
+        "sha256": "858bf91824770a86969551bae9c73b0a5b67b29e84b64ea13d2d6e7f1096a65b"
+      },
+      {
+        "bytes": 4076,
+        "name": "spread_totals_desktop.static.html",
+        "sha256": "29845ab37e7abd3aa5df9055853123607e751ffacab663aefa46e30ad05602b9"
+      },
+      {
+        "bytes": 106176,
+        "name": "spread_totals_desktop.pdf",
+        "sha256": "e59b5a3784e639902dd577a6032f027eda3b9b1f4d8b657bf43ab3e5d0c8b906"
+      },
+      {
+        "bytes": 313335,
+        "name": "spread_totals_desktop.png",
+        "sha256": "a7ab75f65ec36d893da430a6bcc1de952a69ce7ff62457cc3d49b68ad021c701"
+      }
+    ],
+    "browser_interaction_tested_this_update": false,
+    "browser_screenshot_claimed": false,
+    "renderer": "PyMuPDF Story 1.26.6",
+    "responsive_browser_qa_verified": false,
+    "static_html_rendered": true,
+    "visual_review": "PASS_STATIC_HTML_RENDER",
+    "visual_review_scope": "Both exact phone and desktop PNGs viewed: complete content, legible status/footer, no clipped cards; static PyMuPDF render only, no browser or responsive interaction claim.",
+    "visual_reviewed_at_utc": "2026-11-26T03:29:16.605254+00:00"
+  },
+  "status": "REVIEW_ARTIFACT_RENDER_AND_ENGINEERING_EVIDENCE_VERIFIED",
+  "women_rows": 1946
 }
