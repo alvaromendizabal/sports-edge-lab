@@ -335,7 +335,7 @@ function verifyHostedHtml(observed, source, context) {
         const body=await page.locator('#games [data-game-id="2026_12_CHI_DET"]').innerText();
         const expected=objective==="strict_wins"?n206Snapshot.games.find(g=>g.id==="2026_12_CHI_DET").total:n206Snapshot.games.find(g=>g.id==="2026_12_CHI_DET").total.objective_options.find(r=>r.objective===objective);
         assert(body.includes(expected.side+" "+expected.line));
-        assert(body.includes("Own coherent score law"));
+        assert(body.includes(objective==="strict_wins"?"Own coherent score law":"Preserved coherent N205 score law"));
         await noOverflow();
       }
       for(const source of ["draftkings","kalshi","polymarket","all"]){

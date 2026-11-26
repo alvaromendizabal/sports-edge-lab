@@ -206,7 +206,7 @@
             "model_point": 57.0542,
             "probability_basis": "PRESERVED_N205_COHERENT_INTEGER_SCORE_LAW",
             "push_basis": "EXACT_ATOM_OF_PRESERVED_N205_PMF",
-            "coherent_selected_score_law": false
+            "coherent_selected_score_law": true
           },
           {
             "objective": "logloss",
@@ -218,7 +218,7 @@
             "model_point": 57.0542,
             "probability_basis": "PRESERVED_N205_COHERENT_INTEGER_SCORE_LAW",
             "push_basis": "EXACT_ATOM_OF_PRESERVED_N205_PMF",
-            "coherent_selected_score_law": false
+            "coherent_selected_score_law": true
           }
         ],
         "distribution_options": [
@@ -515,7 +515,7 @@
             "model_point": 53.2244,
             "probability_basis": "PRESERVED_N205_COHERENT_INTEGER_SCORE_LAW",
             "push_basis": "EXACT_ATOM_OF_PRESERVED_N205_PMF",
-            "coherent_selected_score_law": false
+            "coherent_selected_score_law": true
           },
           {
             "objective": "logloss",
@@ -527,7 +527,7 @@
             "model_point": 53.2244,
             "probability_basis": "PRESERVED_N205_COHERENT_INTEGER_SCORE_LAW",
             "push_basis": "EXACT_ATOM_OF_PRESERVED_N205_PMF",
-            "coherent_selected_score_law": false
+            "coherent_selected_score_law": true
           }
         ],
         "distribution_options": [
@@ -824,7 +824,7 @@
             "model_point": 46.0537,
             "probability_basis": "PRESERVED_N205_COHERENT_INTEGER_SCORE_LAW",
             "push_basis": "EXACT_ATOM_OF_PRESERVED_N205_PMF",
-            "coherent_selected_score_law": false
+            "coherent_selected_score_law": true
           },
           {
             "objective": "logloss",
@@ -836,7 +836,7 @@
             "model_point": 46.0537,
             "probability_basis": "PRESERVED_N205_COHERENT_INTEGER_SCORE_LAW",
             "push_basis": "EXACT_ATOM_OF_PRESERVED_N205_PMF",
-            "coherent_selected_score_law": false
+            "coherent_selected_score_law": true
           }
         ],
         "distribution_options": [
@@ -1133,7 +1133,7 @@
             "model_point": 40.239,
             "probability_basis": "PRESERVED_N205_COHERENT_INTEGER_SCORE_LAW",
             "push_basis": "EXACT_ATOM_OF_PRESERVED_N205_PMF",
-            "coherent_selected_score_law": false
+            "coherent_selected_score_law": true
           },
           {
             "objective": "logloss",
@@ -1145,7 +1145,7 @@
             "model_point": 40.239,
             "probability_basis": "PRESERVED_N205_COHERENT_INTEGER_SCORE_LAW",
             "push_basis": "EXACT_ATOM_OF_PRESERVED_N205_PMF",
-            "coherent_selected_score_law": false
+            "coherent_selected_score_law": true
           }
         ],
         "distribution_options": [
@@ -1442,7 +1442,7 @@
             "model_point": 43.3738,
             "probability_basis": "PRESERVED_N205_COHERENT_INTEGER_SCORE_LAW",
             "push_basis": "EXACT_ATOM_OF_PRESERVED_N205_PMF",
-            "coherent_selected_score_law": false
+            "coherent_selected_score_law": true
           },
           {
             "objective": "logloss",
@@ -1454,7 +1454,7 @@
             "model_point": 43.3738,
             "probability_basis": "PRESERVED_N205_COHERENT_INTEGER_SCORE_LAW",
             "push_basis": "EXACT_ATOM_OF_PRESERVED_N205_PMF",
-            "coherent_selected_score_law": false
+            "coherent_selected_score_law": true
           }
         ],
         "distribution_options": [
@@ -1751,7 +1751,7 @@
             "model_point": 47.7301,
             "probability_basis": "PRESERVED_N205_COHERENT_INTEGER_SCORE_LAW",
             "push_basis": "EXACT_ATOM_OF_PRESERVED_N205_PMF",
-            "coherent_selected_score_law": false
+            "coherent_selected_score_law": true
           },
           {
             "objective": "logloss",
@@ -1763,7 +1763,7 @@
             "model_point": 47.7301,
             "probability_basis": "PRESERVED_N205_COHERENT_INTEGER_SCORE_LAW",
             "push_basis": "EXACT_ATOM_OF_PRESERVED_N205_PMF",
-            "coherent_selected_score_law": false
+            "coherent_selected_score_law": true
           }
         ],
         "distribution_options": [
@@ -2060,7 +2060,7 @@
             "model_point": 56.2205,
             "probability_basis": "PRESERVED_N205_COHERENT_INTEGER_SCORE_LAW",
             "push_basis": "EXACT_ATOM_OF_PRESERVED_N205_PMF",
-            "coherent_selected_score_law": false
+            "coherent_selected_score_law": true
           },
           {
             "objective": "logloss",
@@ -2072,7 +2072,7 @@
             "model_point": 56.2205,
             "probability_basis": "PRESERVED_N205_COHERENT_INTEGER_SCORE_LAW",
             "push_basis": "EXACT_ATOM_OF_PRESERVED_N205_PMF",
-            "coherent_selected_score_law": false
+            "coherent_selected_score_law": true
           }
         ],
         "distribution_options": [
@@ -2369,7 +2369,7 @@
             "model_point": 46.4739,
             "probability_basis": "PRESERVED_N205_COHERENT_INTEGER_SCORE_LAW",
             "push_basis": "EXACT_ATOM_OF_PRESERVED_N205_PMF",
-            "coherent_selected_score_law": false
+            "coherent_selected_score_law": true
           },
           {
             "objective": "logloss",
@@ -2381,7 +2381,7 @@
             "model_point": 46.4739,
             "probability_basis": "PRESERVED_N205_COHERENT_INTEGER_SCORE_LAW",
             "push_basis": "EXACT_ATOM_OF_PRESERVED_N205_PMF",
-            "coherent_selected_score_law": false
+            "coherent_selected_score_law": true
           }
         ],
         "distribution_options": [
@@ -2678,7 +2678,7 @@
             "model_point": 40.7995,
             "probability_basis": "PRESERVED_N205_COHERENT_INTEGER_SCORE_LAW",
             "push_basis": "EXACT_ATOM_OF_PRESERVED_N205_PMF",
-            "coherent_selected_score_law": false
+            "coherent_selected_score_law": true
           },
           {
             "objective": "logloss",
@@ -2690,7 +2690,7 @@
             "model_point": 40.7995,
             "probability_basis": "PRESERVED_N205_COHERENT_INTEGER_SCORE_LAW",
             "push_basis": "EXACT_ATOM_OF_PRESERVED_N205_PMF",
-            "coherent_selected_score_law": false
+            "coherent_selected_score_law": true
           }
         ],
         "distribution_options": [
@@ -2987,7 +2987,7 @@
             "model_point": 50.9477,
             "probability_basis": "PRESERVED_N205_COHERENT_INTEGER_SCORE_LAW",
             "push_basis": "EXACT_ATOM_OF_PRESERVED_N205_PMF",
-            "coherent_selected_score_law": false
+            "coherent_selected_score_law": true
           },
           {
             "objective": "logloss",
@@ -2999,7 +2999,7 @@
             "model_point": 50.9477,
             "probability_basis": "PRESERVED_N205_COHERENT_INTEGER_SCORE_LAW",
             "push_basis": "EXACT_ATOM_OF_PRESERVED_N205_PMF",
-            "coherent_selected_score_law": false
+            "coherent_selected_score_law": true
           }
         ],
         "distribution_options": [
@@ -3296,7 +3296,7 @@
             "model_point": 40.3693,
             "probability_basis": "PRESERVED_N205_COHERENT_INTEGER_SCORE_LAW",
             "push_basis": "EXACT_ATOM_OF_PRESERVED_N205_PMF",
-            "coherent_selected_score_law": false
+            "coherent_selected_score_law": true
           },
           {
             "objective": "logloss",
@@ -3308,7 +3308,7 @@
             "model_point": 40.3693,
             "probability_basis": "PRESERVED_N205_COHERENT_INTEGER_SCORE_LAW",
             "push_basis": "EXACT_ATOM_OF_PRESERVED_N205_PMF",
-            "coherent_selected_score_law": false
+            "coherent_selected_score_law": true
           }
         ],
         "distribution_options": [
@@ -3605,7 +3605,7 @@
             "model_point": 46.1847,
             "probability_basis": "PRESERVED_N205_COHERENT_INTEGER_SCORE_LAW",
             "push_basis": "EXACT_ATOM_OF_PRESERVED_N205_PMF",
-            "coherent_selected_score_law": false
+            "coherent_selected_score_law": true
           },
           {
             "objective": "logloss",
@@ -3617,7 +3617,7 @@
             "model_point": 46.1847,
             "probability_basis": "PRESERVED_N205_COHERENT_INTEGER_SCORE_LAW",
             "push_basis": "EXACT_ATOM_OF_PRESERVED_N205_PMF",
-            "coherent_selected_score_law": false
+            "coherent_selected_score_law": true
           }
         ],
         "distribution_options": [
@@ -3914,7 +3914,7 @@
             "model_point": 45.9661,
             "probability_basis": "PRESERVED_N205_COHERENT_INTEGER_SCORE_LAW",
             "push_basis": "EXACT_ATOM_OF_PRESERVED_N205_PMF",
-            "coherent_selected_score_law": false
+            "coherent_selected_score_law": true
           },
           {
             "objective": "logloss",
@@ -3926,7 +3926,7 @@
             "model_point": 45.9661,
             "probability_basis": "PRESERVED_N205_COHERENT_INTEGER_SCORE_LAW",
             "push_basis": "EXACT_ATOM_OF_PRESERVED_N205_PMF",
-            "coherent_selected_score_law": false
+            "coherent_selected_score_law": true
           }
         ],
         "distribution_options": [
@@ -4223,7 +4223,7 @@
             "model_point": 41.0006,
             "probability_basis": "PRESERVED_N205_COHERENT_INTEGER_SCORE_LAW",
             "push_basis": "EXACT_ATOM_OF_PRESERVED_N205_PMF",
-            "coherent_selected_score_law": false
+            "coherent_selected_score_law": true
           },
           {
             "objective": "logloss",
@@ -4235,7 +4235,7 @@
             "model_point": 41.0006,
             "probability_basis": "PRESERVED_N205_COHERENT_INTEGER_SCORE_LAW",
             "push_basis": "EXACT_ATOM_OF_PRESERVED_N205_PMF",
-            "coherent_selected_score_law": false
+            "coherent_selected_score_law": true
           }
         ],
         "distribution_options": [
@@ -4532,7 +4532,7 @@
             "model_point": 41.8807,
             "probability_basis": "PRESERVED_N205_COHERENT_INTEGER_SCORE_LAW",
             "push_basis": "EXACT_ATOM_OF_PRESERVED_N205_PMF",
-            "coherent_selected_score_law": false
+            "coherent_selected_score_law": true
           },
           {
             "objective": "logloss",
@@ -4544,7 +4544,7 @@
             "model_point": 41.8807,
             "probability_basis": "PRESERVED_N205_COHERENT_INTEGER_SCORE_LAW",
             "push_basis": "EXACT_ATOM_OF_PRESERVED_N205_PMF",
-            "coherent_selected_score_law": false
+            "coherent_selected_score_law": true
           }
         ],
         "distribution_options": [

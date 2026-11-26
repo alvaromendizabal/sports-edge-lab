@@ -6,14 +6,14 @@
   "thanksgiving_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/thanksgiving/",
   "dedicated_circa_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa/",
   "all_games_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/all-games/",
-  "deployed_at": "2026-11-26T06:39:05.633590+00:00",
-  "site_version": 61,
-  "site_source_commit": "84121f073a15a9075db5dc8382fab2fe5df871eb",
-  "archive_sha256": "b91de27aba38f43559ed1546bb99f093796733605af6a5e07197abfe269b30d4",
-  "provider_saved_tar_sha256": "sha256:b91de27aba38f43559ed1546bb99f093796733605af6a5e07197abfe269b30d4",
+  "deployed_at": "2026-11-26T06:49:52.185344+00:00",
+  "site_version": 62,
+  "site_source_commit": "f860ec90e7403adb96ec13fc4da6b013ca3f803e",
+  "archive_sha256": "f00fa39c7e19eae78534571612d738d9b6b820aa68ed42fbee4fce3d9847fe8c",
+  "provider_saved_tar_sha256": "sha256:f00fa39c7e19eae78534571612d738d9b6b820aa68ed42fbee4fce3d9847fe8c",
   "audience": "public",
   "native_publication_receipt": "publication-n206.json",
-  "prior_publication_receipt": "publication-n205.json",
+  "prior_publication_receipt": "publication-n206-v61.json",
   "github_source_provenance": "The exact-head GitHub Actions report verifies the committed release against the hosted bytes; immutable Site source commit is recorded above.",
   "scientific_scope": {
     "release": "N206",
@@ -2637,8 +2637,8 @@
       },
       {
         "path": "week-12-field-notes/n206/board.js",
-        "sha256": "a8f63a1385c3a3e4ceae641a152cb4b2ea93e7e43f7bb962422382a545984ab4",
-        "bytes": 32792,
+        "sha256": "308f483866a5c310171edd6b9e9969a07aa8f4ce27e85c12397557168acefdd5",
+        "bytes": 32894,
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
@@ -2649,13 +2649,13 @@
       },
       {
         "path": "week-12-field-notes/n206/snapshot.json",
-        "sha256": "f12c7ce14426ed39cf65641e2d8a3c8c113fa35f0031f75fd3d25c19e1a00318",
-        "bytes": 4172537,
+        "sha256": "1ab42f3ead6a6fd02330bbf275e59f9e246ae4e04ff87ece76581b7e2145acb9",
+        "bytes": 4172507,
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
         "path": "week-12-field-notes/n206/verification.json",
-        "sha256": "8c210eb7f63f62ad5d6d31b173287125cbbac16141c99e0058473c1a53fd02f2",
+        "sha256": "dae7ab763050f2d058028429f272d4fa43fd2e1388c5af955d5489c2f9e772ac",
         "bytes": 700,
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
