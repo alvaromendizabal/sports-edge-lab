@@ -1,5 +1,17 @@
 # NFL game day and research dashboard
 
+## N208 owner execution
+
+The verified launcher is staged for 256 planned fit units. Native qualification and selection evidence are pending. [Read the launch preparation record](n208-execution-status.json).
+
+## N207 verified owner result — Thanksgiving 2026
+
+[Open the Thanksgiving forecast board](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n207/) · [Browse 656 Kalshi contracts](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n207/kalshi/) · [Browse 720 Polymarket Global markets](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n207/polymarket/) · [Eight phone cards](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n207/#phone) · [Read the verified owner result](n207-owner-result.json).
+
+The owner completed all registered N207 stages. The verified return contains 256 new fit units, 1,024 probability estimators, 1,536 calibrators and 2,560 optimizer completions with a peak of 42. The 2026 selection census covered 164 games. Strict-win totals retained the 95–69 record and improved Brier to 0.26090. The earlier N206 spread selection retained 97–64–3. The threshold, calibration and championship evidence is exposed to 2026 results. V13 closure remains incomplete.
+
+The 12:37 a.m. Pacific issue covered 15 upcoming games. The Thursday review preserves that issue, marks closed games and compares current markets for the 14 games still awaiting kickoff. The original five-game Circa policy remains dated. The eligible remaining-five worksheet ranks distinct still-open games at original scores.
+
 ## N207 private execution ready — November 26, 2026 UTC
 
 The guarded N207 owner command has been delivered. Native qualification passed **81 tests, eight bounded fit units and 80 optimizer completions**. It checked **4,234 qualification candidates on the full 164-game census**, rendered the private report and produced 216 private diagnostic forecast rows, with **zero admitted priced options**. These are qualification results; the public N206 forecasts remain the latest verified owner edition.

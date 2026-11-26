@@ -1,225 +1,154 @@
 {
-  "version": "NFL_N206_COHERENT_SCORE_LAWS_AND_FULL164_RESULTS",
+  "version": "NFL_N207_THANKSGIVING_FORECAST_AND_MARKET_REVIEW",
   "status": "DEPLOYED_AWAITING_HTTP_HASH_AUDIT",
   "public_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
-  "field_notes_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n206/",
-  "thanksgiving_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/thanksgiving/",
-  "dedicated_circa_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa/",
-  "all_games_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/all-games/",
-  "deployed_at": "2026-11-26T06:49:52.185344+00:00",
-  "site_version": 62,
-  "site_source_commit": "f860ec90e7403adb96ec13fc4da6b013ca3f803e",
-  "archive_sha256": "f00fa39c7e19eae78534571612d738d9b6b820aa68ed42fbee4fce3d9847fe8c",
-  "provider_saved_tar_sha256": "sha256:f00fa39c7e19eae78534571612d738d9b6b820aa68ed42fbee4fce3d9847fe8c",
+  "field_notes_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n207/",
+  "thanksgiving_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n207/#slate",
+  "dedicated_circa_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n207/#circa",
+  "all_games_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n207/#slate",
+  "deployed_at": "2026-11-26T18:30:34.505273+00:00",
+  "site_version": 65,
+  "site_source_commit": "fc5b0c7acfd7796a5cb54d091f3966984d6f0498",
+  "archive_sha256": "ecbaade81fbc336f19dce8ce39902a4da1179b0621f23bd757ac31ac5ce2193f",
+  "provider_saved_tar_sha256": "sha256:ecbaade81fbc336f19dce8ce39902a4da1179b0621f23bd757ac31ac5ce2193f",
   "audience": "public",
-  "native_publication_receipt": "publication-n206.json",
-  "prior_publication_receipt": "publication-n206-v61.json",
+  "native_publication_receipt": "publication-n207.json",
+  "prior_publication_receipt": "publication-n207-v64.json",
   "github_source_provenance": "The exact-head GitHub Actions report verifies the committed release against the hosted bytes; immutable Site source commit is recorded above.",
   "scientific_scope": {
-    "release": "N206",
-    "previous": "N205",
-    "owner_status": "COMPLETE_REGISTERED_STAGES",
-    "v13_status": "INCOMPLETE",
-    "selection_scope": "RECONSTRUCTED_PREVIOUSLY_EXPOSED_2026_VALIDATION",
-    "training": "Uniform historical rows through 2025; pre-2026 chronological training and calibration",
-    "completed_population": 164,
-    "completed_population_sha256": "1df47697316bd5a0b42744e749e07e0b418bccd7413d1dfc6bce318c0c475bde",
-    "forecast_issued_utc": "2026-11-26T06:06:09.488321+00:00",
-    "owner_return_sha256": "e7abf9c9a7dc051f1c673a6efaec2808a0584472562e5fb0ef7e8ac13a0a8601",
-    "week12_games": 16,
-    "current_n206_game_issues": 15,
-    "ordinary_performance": [
+    "schema": "sports-edge-lab.nfl.execution-delivery-status.v2",
+    "owner": "NFL",
+    "generation": "N207",
+    "delivery_status": "OWNER_RUN_COMPLETED_AND_RETURN_VERIFIED",
+    "owner_execution": {
+      "run_id": "20261126T074030Z-cd49d596eaa9",
+      "status": "COMPLETE_REGISTERED_STAGES",
+      "v13_status": "INCOMPLETE",
+      "scoped_acceptance_status": "SCOPED_SCIENCE_COMPLETE",
+      "throughput_acceptance": "PASS",
+      "native_tests": 81,
+      "owner_launches": 1
+    },
+    "return_logical_sha256": "cd738b607c250729fc840a79a92870dc2efc194487060fb3a76da92b8df4c55d",
+    "return_logical_bytes": 2861982411,
+    "execution": {
+      "planned_units": 256,
+      "completed_units": 256,
+      "failed_units": 0,
+      "blocked_units": 0,
+      "deferred_units": 0,
+      "new_probability_estimators": 1024,
+      "new_calibrators": 1536,
+      "optimizer_completions": 2560,
+      "peak_simultaneous_optimizers": 42,
+      "optimizer_cpu_seconds": 53438.120787477,
+      "elapsed_seconds": 2248.034621257997
+    },
+    "compared_policies": 5354,
+    "preserved_policies": 4202,
+    "completed_games": 164,
+    "model_issue_utc": "2026-11-26T08:37:00.790452+00:00",
+    "owner_issue_id": "b838a47ad1a34633ebe4c31ecb558e9b0eb7ba9819bcceb736de54adc2c538b7",
+    "market_options_at_issue": 3068,
+    "named_source_coverage_at_issue": {
+      "draftkings": {
+        "margin": 15,
+        "total": 15
+      },
+      "polymarket": {
+        "margin": 15,
+        "total": 15
+      }
+    },
+    "objective_results": [
       {
         "target": "margin",
-        "label": "Ordinary spread",
-        "family": "N206 TensorFlow score distribution",
-        "selected": {
-          "wins": 97,
-          "losses": 64,
-          "settlement_pushes": 3,
-          "unresolved": 0,
-          "completed": 164,
-          "eligible": 164,
-          "full_population_champion": true,
-          "full_population_win_rate": 0.5914634146341463,
-          "binary_scoring_denominator": 161,
-          "brier": 0.24735696176621635,
-          "logloss": 0.6885722378675939
-        },
-        "earlier_week_replay": {
-          "wins": 74,
-          "losses": 87,
-          "settlement_pushes": 3,
-          "unresolved": 0,
-          "completed": 164,
-          "eligible": 164,
-          "full_population_champion": true,
-          "full_population_win_rate": 0.45121951219512196,
-          "binary_scoring_denominator": 161,
-          "brier": 0.2612450154115291,
-          "logloss": 0.7166222182085431
-        },
-        "previous_policy_same_population": {
-          "wins": 96,
-          "losses": 65,
-          "settlement_pushes": 3,
-          "unresolved": 0,
-          "completed": 164,
-          "eligible": 164,
-          "full_population_champion": true,
-          "full_population_win_rate": 0.5853658536585366,
-          "binary_scoring_denominator": 161,
-          "brier": 0.24787518508383388,
-          "logloss": 0.6890577613563938
-        },
-        "previous_edition_record": {
-          "wins": 95,
-          "losses": 65,
-          "settlement_pushes": 3,
-          "unresolved": 0,
-          "completed": 163,
-          "eligible": 163,
-          "full_population_champion": true,
-          "full_population_win_rate": 0.5828220858895705,
-          "binary_scoring_denominator": 160,
-          "brier": 0.24793446047134854,
-          "logloss": 0.6891773399962144
-        },
-        "previous_edition": "N205",
-        "same_population_extra_wins": 1,
-        "selected_cdf_base_features": 128,
-        "selected_cdf_query_fields": 33,
-        "selected_cdf_learner_fields": 161,
-        "training_unique_games": 7017,
-        "training_threshold_examples": 105255,
-        "feature_count_scope": "NEW_CDF_COMPONENT_ONLY; FROZEN_BASELINE_COMPONENT_IS_ADDITIONAL",
-        "selection_scope": "RECONSTRUCTED_EXPOSED_2026_VALIDATION",
-        "selection_changed": true
+        "objective": "strict_wins",
+        "wins": 97,
+        "losses": 64,
+        "settlement_pushes": 3,
+        "unresolved": 0,
+        "brier": 0.24735696176621635,
+        "logloss": 0.6885722378675939,
+        "completed_population": 164,
+        "eligible": 164,
+        "decisive": 161
+      },
+      {
+        "target": "margin",
+        "objective": "brier",
+        "wins": 91,
+        "losses": 70,
+        "settlement_pushes": 3,
+        "unresolved": 0,
+        "brier": 0.24324941574789882,
+        "logloss": 0.6795247950938726,
+        "completed_population": 164,
+        "eligible": 164,
+        "decisive": 161
+      },
+      {
+        "target": "margin",
+        "objective": "logloss",
+        "wins": 85,
+        "losses": 76,
+        "settlement_pushes": 3,
+        "unresolved": 0,
+        "brier": 0.24341513952206736,
+        "logloss": 0.6788241365843224,
+        "completed_population": 164,
+        "eligible": 164,
+        "decisive": 161
       },
       {
         "target": "total",
-        "label": "Ordinary total",
-        "family": "N206 TensorFlow score distribution",
-        "selected": {
-          "wins": 95,
-          "losses": 69,
-          "settlement_pushes": 0,
-          "unresolved": 0,
-          "completed": 164,
-          "eligible": 164,
-          "full_population_champion": true,
-          "full_population_win_rate": 0.5792682926829268,
-          "binary_scoring_denominator": 164,
-          "brier": 0.2706471128006915,
-          "logloss": 0.743829219005229
-        },
-        "earlier_week_replay": {
-          "wins": 74,
-          "losses": 90,
-          "settlement_pushes": 0,
-          "unresolved": 0,
-          "completed": 164,
-          "eligible": 164,
-          "full_population_champion": true,
-          "full_population_win_rate": 0.45121951219512196,
-          "binary_scoring_denominator": 164,
-          "brier": 0.2762837859783869,
-          "logloss": 0.7516963481293354
-        },
-        "previous_policy_same_population": {
-          "wins": 94,
-          "losses": 70,
-          "settlement_pushes": 0,
-          "unresolved": 0,
-          "completed": 164,
-          "eligible": 164,
-          "full_population_champion": true,
-          "full_population_win_rate": 0.573170731707317,
-          "binary_scoring_denominator": 164,
-          "brier": 0.25244742931193515,
-          "logloss": 0.6999370373825097
-        },
-        "previous_edition_record": {
-          "wins": 94,
-          "losses": 69,
-          "settlement_pushes": 0,
-          "unresolved": 0,
-          "completed": 163,
-          "eligible": 163,
-          "full_population_champion": true,
-          "full_population_win_rate": 0.5766871165644172,
-          "binary_scoring_denominator": 163,
-          "brier": 0.25182511924753187,
-          "logloss": 0.6986877210386554
-        },
-        "previous_edition": "N205",
-        "same_population_extra_wins": 1,
-        "selected_cdf_base_features": 128,
-        "selected_cdf_query_fields": 33,
-        "selected_cdf_learner_fields": 161,
-        "training_unique_games": 7017,
-        "training_threshold_examples": 105255,
-        "feature_count_scope": "NEW_CDF_COMPONENT_ONLY; FROZEN_BASELINE_COMPONENT_IS_ADDITIONAL",
-        "selection_scope": "RECONSTRUCTED_EXPOSED_2026_VALIDATION",
-        "selection_changed": true
+        "objective": "strict_wins",
+        "wins": 95,
+        "losses": 69,
+        "settlement_pushes": 0,
+        "unresolved": 0,
+        "brier": 0.260903547720401,
+        "logloss": 0.7187111774893415,
+        "completed_population": 164,
+        "eligible": 164,
+        "decisive": 164
+      },
+      {
+        "target": "total",
+        "objective": "brier",
+        "wins": 88,
+        "losses": 76,
+        "settlement_pushes": 0,
+        "unresolved": 0,
+        "brier": 0.24534210763158046,
+        "logloss": 0.6835514624419713,
+        "completed_population": 164,
+        "eligible": 164,
+        "decisive": 164
+      },
+      {
+        "target": "total",
+        "objective": "logloss",
+        "wins": 88,
+        "losses": 76,
+        "settlement_pushes": 0,
+        "unresolved": 0,
+        "brier": 0.24534210763158046,
+        "logloss": 0.6835514624419713,
+        "completed_population": 164,
+        "eligible": 164,
+        "decisive": 164
       }
     ],
-    "objective_selections": 6,
-    "policy_replays": 28,
-    "execution": {
-      "blocked_units": 0,
-      "completed_units": 192,
-      "deferred_units": 0,
-      "elapsed_seconds": 1839.6238185820039,
-      "failed_units": 0,
-      "new_blend_optimizers": 0,
-      "new_calibrators": 1152,
-      "new_dispersion_estimators": 0,
-      "new_fixed_pmf_mixtures": 96,
-      "new_key_mass_estimators": 0,
-      "new_probability_estimators": 768,
-      "new_score_estimators": 0,
-      "new_units": 192,
-      "optimizer_completions": 1920,
-      "optimizer_cpu_sample_intervals": 30515,
-      "optimizer_cpu_seconds": 31968.270039441,
-      "optimizer_note": "Four chronological conditional-CDF fits and six pre2026 OOF proper-score shrink gates per unit. Fifteen correlated mathematical threshold examples per unique game are not independent games, new odds, or extra optimizer calls. No incumbent refits.",
-      "peak_simultaneous_optimizers": 42,
-      "planned_units": 192,
-      "restored_from_verified_return": 0,
-      "reused_units": 0,
-      "worker_ceiling": 42,
-      "worker_cpu_seconds": 33355.517999335,
-      "occupancy_gate": "PASS",
-      "occupancy_lower_bound": 0.8582068480325832,
-      "occupancy_threshold": 0.75,
-      "occupancy_minimum_seconds": 180.0,
-      "occupancy_qualifying_windows": 1,
-      "distinct_fit_pids": 90
-    },
-    "candidate_policies": 4202,
-    "preserved_policies": 3338,
-    "market_coverage": {
-      "usable_spread_total_bookmakers": 57,
-      "observed_provider_bookmakers": 80,
-      "named_coverage": {
-        "draftkings": {
-          "spreads": 15,
-          "totals": 15
-        },
-        "kalshi": {
-          "spreads": 14,
-          "totals": 14
-        },
-        "polymarket": {
-          "spreads": 15,
-          "totals": 15
-        }
-      },
-      "observed_utc": "2026-11-26T06:03:52.398083+00:00",
-      "open_games": 15,
-      "inventory_scope": "Verified N206 final source response; paired spread/total subset distinguished from all observed sources"
-    },
+    "model_selection": "Previously examined, completed 2026 games selected the ordinary spread and totals policies. Pre-2026 training includes the 2024 and 2025 seasons.",
+    "prepublication_estimated_compute_usd": 2.4388038355817327,
+    "prepublication_compute_is_billed_cost": false,
+    "market_review_utc": "2026-11-26T18:17:12.861400+00:00",
+    "practice_status_review_source": "Official club reports and national inactive lists, Nov 26.",
+    "scope": "Selected NFL research outputs; no automated entries or wagers.",
+    "release": "N207",
+    "current_n207_game_issues": 15,
+    "week12_games": 16,
     "markets": {
       "sources": 80,
       "records": 2894,
@@ -236,125 +165,25 @@
       "scope": "Preserved N195 league dashboard market section only",
       "observed_utc": "2026-11-25T21:27:16.332247+00:00"
     },
-    "preserved_circa": true,
-    "circa_timing_rule": {
-      "status": "DEADLINE_DEPENDS_ON_THE_SELECTED_FIVE",
-      "weekly_deadline_utc": "2026-11-29T00:00:00+00:00",
-      "inherited_return_status": "WHOLE_SLATE_DEADLINE_PASSED",
-      "inherited_whole_slate_cutoff_utc": "2026-11-26T01:00:00+00:00",
-      "inherited_status_authoritative": false,
-      "workflow_submission_actions": 0,
-      "account_submission_status": "NOT_QUERIED",
-      "rules_url": "https://www.circasports.com/wp-content/uploads/2026/05/CircaMillionVIIIContest.2026.pdf",
-      "support_url": "https://www.circasports.com/support",
-      "rules_revision": "2026-05-15",
-      "rules": [
-        7,
-        8
-      ],
-      "rules_checked_utc": "2026-11-26T01:39:52.203890+00:00",
-      "rule": "All five selections are due by Saturday 4 p.m. Pacific, or before the earliest selected game kicks off if earlier. The earlier game does not close every other possible five."
-    },
-    "workflow_submission_actions": 0,
-    "account_submission_activity": "NOT_QUERIED",
-    "new_phone_cards": 4,
-    "preserved_circa_phone_cards": 3,
-    "production_promotions": 0,
-    "independent_verification": {
-      "status": "PASS",
-      "verified_at_utc": "2026-11-26T06:27:00.634639+00:00",
-      "logical_return_sha256": "e7abf9c9a7dc051f1c673a6efaec2808a0584472562e5fb0ef7e8ac13a0a8601",
-      "prediction_file_sha256": "16e9712de0e2e62e47286382c6a69368d00f39f70dc1f2e8169a53cd607e8bb5",
-      "prediction_rows_checked": 689128,
-      "independent_policy_candidate_regrade": 4202,
-      "completed_population": 164,
-      "completed_population_sha256": "1df47697316bd5a0b42744e749e07e0b418bccd7413d1dfc6bce318c0c475bde",
-      "every_policy_full_population": 164,
-      "all_reported_metric_max_absolute_error": 0.0,
-      "all_objective_selections_match_independent_ranking": true,
-      "weekly_policy_decisions_checked": 336,
-      "replay_game_rows_checked": 4592,
-      "replay_probability_max_absolute_error": 1.3877787807814457e-17,
-      "independent_optimizer_updates": 0,
-      "disclosure": "Independent saved-output arithmetic and prior-week reconstruction checks. Candidate design and 2026 selection are exposed; no untouched future accuracy is established."
-    },
-    "point_and_push_provenance": "New N206 strict-win spread and total laws supply coherent point, outright, tie and push marginals. They are selected on exposed 2026 spread/total objectives; outright was not separately selected. Proper-loss objectives remain separate preserved policies.",
-    "source_delivery": {
-      "mode": "VERIFIED_OWNER_FINAL_SOURCE_REFRESH",
-      "final_provider_status": "VERIFIED_CURRENT_SNAPSHOT",
-      "forecast_issue_utc": "2026-11-26T06:06:09.488321+00:00",
-      "priced_issue_utc": "2026-11-26T06:06:09.488321+00:00",
-      "priced_issue_id": "789792faa62d8fce080a5b9072ba305715f4baba87cce32a351a45af96d383d3",
-      "priced_options": 3196,
-      "stale_priced_options": 0,
-      "latest_forecasts_and_priced_options_same_issue": true,
-      "maximum_observed_or_native_age_seconds_at_issue": 443.488321,
-      "initial_and_final_paid_snapshots_recorded": true,
-      "final_actual_credits": 18,
-      "all_future_rows": 216,
-      "all_future_games": 108,
-      "quote_basis_counts": {
-        "FRESH_OBSERVED_PREGAME_QUOTE": 30,
-        "CACHED_AUTHENTIC_PREGAME_QUOTE_NOT_CLAIMED_CURRENT": 28,
-        "NO_OBSERVED_QUOTE": 158
+    "current_morning_quote_scope": {
+      "open_games": 14,
+      "DraftKings": {
+        "spreads": 14,
+        "totals": 14
       },
-      "current_arithmetic_audit_sha256": "a080a9e4158a83590ac7867422a2ea92286c8dd8b9f3ac5b6b90e9f5774116f9"
-    },
-    "score_distribution_objectives": 6,
-    "strict_probability_tradeoff": {
-      "total_strict_brier": 0.2706471128006915,
-      "total_proper_brier": 0.24534210763158046,
-      "total_strict_logloss": 0.743829219005229,
-      "total_proper_logloss": 0.6835514624419713,
-      "constant_half_brier": 0.25,
-      "constant_half_logloss": 0.6931471805599453,
-      "proper_total_model_label": "Preserved N205 Histogram boosting score distribution"
-    },
-    "independent_current_verification": {
-      "status": "PASS",
-      "verified_utc": "2026-11-26T06:22:29.745020+00:00",
-      "logical_return_sha256": "e7abf9c9a7dc051f1c673a6efaec2808a0584472562e5fb0ef7e8ac13a0a8601",
-      "optimizer_calls": 0,
-      "issue_id": "789792faa62d8fce080a5b9072ba305715f4baba87cce32a351a45af96d383d3",
-      "issued_utc": "2026-11-26T06:06:09.488321+00:00",
-      "current_week_games": 15,
-      "priced_week_target_rows": 30,
-      "priced_options": 3196,
-      "all_selected_current_score_laws_coherent": true,
-      "minimum_observed_or_native_age_seconds_at_issue": 137.090238,
-      "maximum_observed_or_native_age_seconds_at_issue": 443.488321,
-      "latest_attempt_and_last_priced_issue_match": true,
-      "issues": [
-        {
-          "issue_id": "789792faa62d8fce080a5b9072ba305715f4baba87cce32a351a45af96d383d3",
-          "issued_utc": "2026-11-26T06:06:09.488321+00:00",
-          "forecast_rows": 216,
-          "priced_options": 3196,
-          "exact_reference_pmfs_checked": 216,
-          "selected_coherent_pmfs": 216,
-          "maximum_marginal_error": 2.220446049250313e-16,
-          "quoted_forecast_rows": 58,
-          "quote_age_seconds_min": 137.090238,
-          "quote_age_seconds_max": 99051.488321,
-          "forecast_rows_quotes_older_than_600_seconds": 28,
-          "quote_basis_counts": {
-            "FRESH_OBSERVED_PREGAME_QUOTE": 30,
-            "CACHED_AUTHENTIC_PREGAME_QUOTE_NOT_CLAIMED_CURRENT": 28,
-            "NO_OBSERVED_QUOTE": 158
-          },
-          "source_sha256": {
-            "ISSUE.json": "9ac75703265e541f35bff11b7dddb63c2cb96371916b23521f5ab190dded8d6b",
-            "UPCOMING_FORECASTS.json": "0a9f5f6258b0dd427985ce817f2f3614b3a254b648a995f9b4b98328f6ffef85",
-            "ALL_OBSERVED_BOOK_OPTIONS.json": "7c1afba2d80981491a904062aa953c723800f9d272fd339703ffc0361d7cc8cc"
-          }
-        }
-      ],
-      "source_sha256": {
-        "LATEST_FORECAST_ATTEMPT.json": "99e5c8565d29749a27ef793bd9fea23fa556d950cd205b9410568a290442249b",
-        "LAST_USABLE_PRICED_ISSUE.json": "4bd1399d0e495036f73994883bb6744113a7eb12ca27a9338b12ad3a716d0460",
-        "UPCOMING_FORECASTS.json": "0a9f5f6258b0dd427985ce817f2f3614b3a254b648a995f9b4b98328f6ffef85",
-        "ALL_OBSERVED_BOOK_OPTIONS.json": "7c1afba2d80981491a904062aa953c723800f9d272fd339703ffc0361d7cc8cc"
-      }
+      "Kalshi": {
+        "spreads": 13,
+        "totals": 13,
+        "direct_contracts": 656,
+        "direct_open_games": 14
+      },
+      "Polymarket": {
+        "spreads": 14,
+        "totals": 14,
+        "direct_global_markets": 720,
+        "direct_global_open_games": 14
+      },
+      "champion_selection_or_refits_from_morning_quotes": false
     }
   },
   "verification": {
@@ -380,15 +209,15 @@
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
-        "path": "archive/n186/assets/Barlow-LICENSE.txt",
-        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
-        "bytes": 4377,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
         "path": "archive/n186/assets/barlow-bold.ttf",
         "sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65",
         "bytes": 109912,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "archive/n186/assets/Barlow-LICENSE.txt",
+        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
+        "bytes": 4377,
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
@@ -452,15 +281,15 @@
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
-        "path": "archive/n187/assets/Barlow-LICENSE.txt",
-        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
-        "bytes": 4377,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
         "path": "archive/n187/assets/barlow-bold.ttf",
         "sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65",
         "bytes": 109912,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "archive/n187/assets/Barlow-LICENSE.txt",
+        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
+        "bytes": 4377,
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
@@ -530,15 +359,15 @@
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
-        "path": "archive/n188/assets/Barlow-LICENSE.txt",
-        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
-        "bytes": 4377,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
         "path": "archive/n188/assets/barlow-bold.ttf",
         "sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65",
         "bytes": 109912,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "archive/n188/assets/Barlow-LICENSE.txt",
+        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
+        "bytes": 4377,
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
@@ -626,15 +455,15 @@
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
-        "path": "archive/n189/assets/Barlow-LICENSE.txt",
-        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
-        "bytes": 4377,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
         "path": "archive/n189/assets/barlow-bold.ttf",
         "sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65",
         "bytes": 109912,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "archive/n189/assets/Barlow-LICENSE.txt",
+        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
+        "bytes": 4377,
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
@@ -710,15 +539,15 @@
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
-        "path": "archive/n190/assets/Barlow-LICENSE.txt",
-        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
-        "bytes": 4377,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
         "path": "archive/n190/assets/barlow-bold.ttf",
         "sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65",
         "bytes": 109912,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "archive/n190/assets/Barlow-LICENSE.txt",
+        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
+        "bytes": 4377,
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
@@ -818,15 +647,15 @@
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
-        "path": "archive/n191/assets/Barlow-LICENSE.txt",
-        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
-        "bytes": 4377,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
         "path": "archive/n191/assets/barlow-bold.ttf",
         "sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65",
         "bytes": 109912,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "archive/n191/assets/Barlow-LICENSE.txt",
+        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
+        "bytes": 4377,
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
@@ -926,15 +755,15 @@
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
-        "path": "archive/n192/assets/Barlow-LICENSE.txt",
-        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
-        "bytes": 4377,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
         "path": "archive/n192/assets/barlow-bold.ttf",
         "sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65",
         "bytes": 109912,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "archive/n192/assets/Barlow-LICENSE.txt",
+        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
+        "bytes": 4377,
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
@@ -1034,15 +863,15 @@
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
-        "path": "archive/n193/assets/Barlow-LICENSE.txt",
-        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
-        "bytes": 4377,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
         "path": "archive/n193/assets/barlow-bold.ttf",
         "sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65",
         "bytes": 109912,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "archive/n193/assets/Barlow-LICENSE.txt",
+        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
+        "bytes": 4377,
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
@@ -1148,15 +977,15 @@
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
-        "path": "archive/n194/assets/Barlow-LICENSE.txt",
-        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
-        "bytes": 4377,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
         "path": "archive/n194/assets/barlow-bold.ttf",
         "sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65",
         "bytes": 109912,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "archive/n194/assets/Barlow-LICENSE.txt",
+        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
+        "bytes": 4377,
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
@@ -1256,15 +1085,21 @@
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
+        "path": "assets/barlow-bold.ttf",
+        "sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65",
+        "bytes": 109912,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
         "path": "assets/Barlow-LICENSE.txt",
         "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
         "bytes": 4377,
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
-        "path": "assets/barlow-bold.ttf",
-        "sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65",
-        "bytes": 109912,
+        "path": "circa_evidence.json",
+        "sha256": "c289471d8d45bde905b2c037bd314f93368f8595ba361c1e933067ccaaf702dc",
+        "bytes": 29196,
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
@@ -1277,12 +1112,6 @@
         "path": "circa/index.html",
         "sha256": "1bffc79e6d8a43eb12a5645e5eb96f70c02ecca70257a08661e1f29ddf29e577",
         "bytes": 118908,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
-        "path": "circa_evidence.json",
-        "sha256": "c289471d8d45bde905b2c037bd314f93368f8595ba361c1e933067ccaaf702dc",
-        "bytes": 29196,
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
@@ -1323,8 +1152,8 @@
       },
       {
         "path": "index.html",
-        "sha256": "b2d40617d49ff4466f978907201e7e52a54e8a226dcd7c91cbc4f15b613ff81c",
-        "bytes": 570581,
+        "bytes": 570987,
+        "sha256": "bd21d091048c61c463ec5ec3b2c522ba4f05a3123749996dabaee5578c0f84f5",
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
@@ -1910,6 +1739,54 @@
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
+        "path": "week-12-field-notes/board.css",
+        "sha256": "427e6fab4a5b18ed9df70cf837e48bc40f37bd4f1d02082d23c579b931bf8089",
+        "bytes": 6591,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/board.js",
+        "sha256": "625236e76a2d1ce212964d6d4dd3ddf7d97b330b217fea7182c302463f4a2321",
+        "bytes": 637,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/index.html",
+        "bytes": 114197,
+        "sha256": "feeb57b6373ce0b394ba81f919861668188bb05469b33f70f2af333de21f3f5e",
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n196.html",
+        "sha256": "fa30648adcff1d18dcd1debba0add692b5536911988ce903e51acdc3a83f3ca2",
+        "bytes": 43079,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n197-1512.html",
+        "sha256": "f65f318941f63264f1ed7690630f37efba505b2c8c7c0072535287b824a4c07b",
+        "bytes": 65884,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n198-1533.html",
+        "sha256": "02054a7d8a67e188d32aad223827e920a14a26ae99dcf4120def61c34abd3ef0",
+        "bytes": 90026,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n198-1545.html",
+        "sha256": "a72645f5a71b5de7ed0882d4e41e123ee64011bb0e54ebb35204357615029af9",
+        "bytes": 91418,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n198-1554.html",
+        "sha256": "7e70e1d128a8712a03a32e8ee7436ee963cdc0f1b83f4a3c83e514569b9f68e8",
+        "bytes": 92985,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
         "path": "week-12-field-notes/N198-public-Circa-five.png",
         "sha256": "405eb0a7922a6ca86e57d6a3e3cee7495a659dc39341080f6c4e2a24f31a5666",
         "bytes": 168932,
@@ -1949,6 +1826,12 @@
         "path": "week-12-field-notes/N198-public-forecast-4.png",
         "sha256": "6c3c5200c032dbbdd7aed120a0a67ff99b164534ac1936ffaa44130ae25e5905",
         "bytes": 183171,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n199-1557.html",
+        "sha256": "20e2d83ca465ebef81d4f18a40fdceea59a85710bfa5fe61faf87f9070b7c60f",
+        "bytes": 93016,
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
@@ -1994,6 +1877,30 @@
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
+        "path": "week-12-field-notes/n199-weekly/index.html",
+        "sha256": "c7ba55eb7e427ed8ffdd0116057215a597d2b5e39aa25a018daf53972291866b",
+        "bytes": 12416,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n199-weekly/manifest.json",
+        "sha256": "b6896d213fd31383550492393760bf2d5ef710a3d0b91bc2155cc66630af55cc",
+        "bytes": 232,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n199-weekly/weekly.json",
+        "sha256": "ff7bb48a00d167b675807b12edb75970e13c03ff1493038fd1e81821abf9c82c",
+        "bytes": 32386,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n200-1618.html",
+        "sha256": "aa32977748b9fc08f85545d2823bd0a7b14a5749bcbbc92058e87f6dc3eb018f",
+        "bytes": 94940,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
         "path": "week-12-field-notes/N200-public-Circa-five.png",
         "sha256": "6863159f91ef18662de81384708480ea6212809d3cc932f455dbfc780db40a55",
         "bytes": 157952,
@@ -2036,6 +1943,30 @@
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
+        "path": "week-12-field-notes/n200-weekly/index.html",
+        "sha256": "d9ac5fc0e59130e8bdfbd0716a4828fe0b88de5a734e31fb06fdf2ccd0ad5138",
+        "bytes": 12435,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n200-weekly/manifest.json",
+        "sha256": "50a8b68ac3446dbf975efff0d70fd8c129df7c12f57555fc1349f579ac4ffb53",
+        "bytes": 232,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n200-weekly/weekly.json",
+        "sha256": "14bf937d8691e386a85e35e73d20369c4df7eb1626144d41aa02b1fc3a89c030",
+        "bytes": 32354,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n201-1636.html",
+        "sha256": "c0c007d3f8b21eca2714dd1f4891010c76c526e91c92420c5c4ac7cf71841c03",
+        "bytes": 95202,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
         "path": "week-12-field-notes/N201-public-Circa-five.png",
         "sha256": "56cc1dcab5a509141c8e16646d97deddd40d3799708ea00707bc44576c5cd640",
         "bytes": 167965,
@@ -2075,6 +2006,30 @@
         "path": "week-12-field-notes/N201-public-forecast-4.png",
         "sha256": "557958da4f4050a7be80d53acc234b4e084323940121ca8c10b6540a6118ac98",
         "bytes": 185220,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n201-weekly/index.html",
+        "sha256": "4b3b724791052c110addb884df0ffc51790503f69dd3555b6e45b84763c2281c",
+        "bytes": 12436,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n201-weekly/manifest.json",
+        "sha256": "a6118ec1e0cf640f1a601090918a124904b877ef635ba4c280c7772bb88ede78",
+        "bytes": 232,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n201-weekly/weekly.json",
+        "sha256": "b37df53bde08ef2520fe1d3658fccb7b767a777a59f18d7066a87d317c5316a5",
+        "bytes": 32517,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n202-incomplete-population-20261125-1704.html",
+        "sha256": "53e2e908267abc36e4a69c2e22081841b42375a390c7b4d939109ebc66ce41f6",
+        "bytes": 112619,
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
@@ -2144,174 +2099,6 @@
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
-        "path": "week-12-field-notes/NFL-W12-Circa-all-1.png",
-        "sha256": "3ab52ff6a4e4ecbdd6bd8c13d0fa10f8149d0380089239f38e180dab266af082",
-        "bytes": 153109,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
-        "path": "week-12-field-notes/NFL-W12-Circa-all-2.png",
-        "sha256": "f6527fb953186440db38469404380a3668aaacf6e12f192e4db9ad188381794f",
-        "bytes": 154966,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
-        "path": "week-12-field-notes/NFL-W12-Circa-five.png",
-        "sha256": "2777e29f8e3743d1c959a2b3394d13f0ef97acc2bc5c1e6a436415b99567ca12",
-        "bytes": 162339,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
-        "path": "week-12-field-notes/NFL-W12-games-1.png",
-        "sha256": "eebc9d86ce8b12c6202268895899679050a9578749fca3af007be0751b994479",
-        "bytes": 155824,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
-        "path": "week-12-field-notes/NFL-W12-games-2.png",
-        "sha256": "578cf0c06be9318b4b368dfa754cdc6f2cbb865719618cd7cda3005344347baf",
-        "bytes": 163948,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
-        "path": "week-12-field-notes/NFL-W12-games-3.png",
-        "sha256": "a60399219d97a76e209b2a7631811bb2ab424a77cb223bbae06ce634d5b75847",
-        "bytes": 157116,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
-        "path": "week-12-field-notes/NFL-W12-games-4.png",
-        "sha256": "fc72121463ae4de0d0064c59cb6c81324401d1707ede2179e63ba4c2b4003beb",
-        "bytes": 157917,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
-        "path": "week-12-field-notes/board.css",
-        "sha256": "427e6fab4a5b18ed9df70cf837e48bc40f37bd4f1d02082d23c579b931bf8089",
-        "bytes": 6591,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
-        "path": "week-12-field-notes/board.js",
-        "sha256": "625236e76a2d1ce212964d6d4dd3ddf7d97b330b217fea7182c302463f4a2321",
-        "bytes": 637,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
-        "path": "week-12-field-notes/index.html",
-        "sha256": "545cdd0e415c5748f7ad4d0cd369bb0a58af3e91538632129ef1e9b576ec714e",
-        "bytes": 113811,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
-        "path": "week-12-field-notes/n196.html",
-        "sha256": "fa30648adcff1d18dcd1debba0add692b5536911988ce903e51acdc3a83f3ca2",
-        "bytes": 43079,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
-        "path": "week-12-field-notes/n197-1512.html",
-        "sha256": "f65f318941f63264f1ed7690630f37efba505b2c8c7c0072535287b824a4c07b",
-        "bytes": 65884,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
-        "path": "week-12-field-notes/n198-1533.html",
-        "sha256": "02054a7d8a67e188d32aad223827e920a14a26ae99dcf4120def61c34abd3ef0",
-        "bytes": 90026,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
-        "path": "week-12-field-notes/n198-1545.html",
-        "sha256": "a72645f5a71b5de7ed0882d4e41e123ee64011bb0e54ebb35204357615029af9",
-        "bytes": 91418,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
-        "path": "week-12-field-notes/n198-1554.html",
-        "sha256": "7e70e1d128a8712a03a32e8ee7436ee963cdc0f1b83f4a3c83e514569b9f68e8",
-        "bytes": 92985,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
-        "path": "week-12-field-notes/n199-1557.html",
-        "sha256": "20e2d83ca465ebef81d4f18a40fdceea59a85710bfa5fe61faf87f9070b7c60f",
-        "bytes": 93016,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
-        "path": "week-12-field-notes/n199-weekly/index.html",
-        "sha256": "c7ba55eb7e427ed8ffdd0116057215a597d2b5e39aa25a018daf53972291866b",
-        "bytes": 12416,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
-        "path": "week-12-field-notes/n199-weekly/manifest.json",
-        "sha256": "b6896d213fd31383550492393760bf2d5ef710a3d0b91bc2155cc66630af55cc",
-        "bytes": 232,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
-        "path": "week-12-field-notes/n199-weekly/weekly.json",
-        "sha256": "ff7bb48a00d167b675807b12edb75970e13c03ff1493038fd1e81821abf9c82c",
-        "bytes": 32386,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
-        "path": "week-12-field-notes/n200-1618.html",
-        "sha256": "aa32977748b9fc08f85545d2823bd0a7b14a5749bcbbc92058e87f6dc3eb018f",
-        "bytes": 94940,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
-        "path": "week-12-field-notes/n200-weekly/index.html",
-        "sha256": "d9ac5fc0e59130e8bdfbd0716a4828fe0b88de5a734e31fb06fdf2ccd0ad5138",
-        "bytes": 12435,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
-        "path": "week-12-field-notes/n200-weekly/manifest.json",
-        "sha256": "50a8b68ac3446dbf975efff0d70fd8c129df7c12f57555fc1349f579ac4ffb53",
-        "bytes": 232,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
-        "path": "week-12-field-notes/n200-weekly/weekly.json",
-        "sha256": "14bf937d8691e386a85e35e73d20369c4df7eb1626144d41aa02b1fc3a89c030",
-        "bytes": 32354,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
-        "path": "week-12-field-notes/n201-1636.html",
-        "sha256": "c0c007d3f8b21eca2714dd1f4891010c76c526e91c92420c5c4ac7cf71841c03",
-        "bytes": 95202,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
-        "path": "week-12-field-notes/n201-weekly/index.html",
-        "sha256": "4b3b724791052c110addb884df0ffc51790503f69dd3555b6e45b84763c2281c",
-        "bytes": 12436,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
-        "path": "week-12-field-notes/n201-weekly/manifest.json",
-        "sha256": "a6118ec1e0cf640f1a601090918a124904b877ef635ba4c280c7772bb88ede78",
-        "bytes": 232,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
-        "path": "week-12-field-notes/n201-weekly/weekly.json",
-        "sha256": "b37df53bde08ef2520fe1d3658fccb7b767a777a59f18d7066a87d317c5316a5",
-        "bytes": 32517,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
-        "path": "week-12-field-notes/n202-incomplete-population-20261125-1704.html",
-        "sha256": "53e2e908267abc36e4a69c2e22081841b42375a390c7b4d939109ebc66ce41f6",
-        "bytes": 112619,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
         "path": "week-12-field-notes/n202-weekly/index.html",
         "sha256": "4426de4c9b557667bc2413e403eda4ad474bee2e94af7629fd7180e7649ba32e",
         "bytes": 656,
@@ -2333,6 +2120,24 @@
         "path": "week-12-field-notes/n202-weekly/weekly.json",
         "sha256": "4c15ac17aac837aa4d7131913cf7345401d8a23fa410a71b4763c8e59ac8bad1",
         "bytes": 34453,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n202/board.css",
+        "sha256": "2fb08699d5c99d188a516229b1e6c8504bb9c37d19c2c4b84c8857797611798d",
+        "bytes": 10431,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n202/board.js",
+        "sha256": "c08d2d69cdc846226d301eb91f5a8087e4525f934d572d814335c9d4410b573d",
+        "bytes": 12664,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n202/index.html",
+        "sha256": "cc7de812289d022d2c79108225a9255a90eb67677004ec0b44fadeeb9d327715",
+        "bytes": 10644,
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
@@ -2378,33 +2183,33 @@
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
+        "path": "week-12-field-notes/n202/snapshot.json",
+        "sha256": "951100a8f72c22210e1c10d75d166211443976960ff992d434f30e825b052ebd",
+        "bytes": 150754,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
         "path": "week-12-field-notes/n202/VERIFICATION.json",
         "sha256": "17a13732e13d5d693f0ab3ba3d9b75c34a2a14497307f3e6fdab374f15d3fb82",
         "bytes": 2824,
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
-        "path": "week-12-field-notes/n202/board.css",
-        "sha256": "2fb08699d5c99d188a516229b1e6c8504bb9c37d19c2c4b84c8857797611798d",
-        "bytes": 10431,
+        "path": "week-12-field-notes/n203/board.css",
+        "sha256": "38fc441e96c36e820bfefd05cec6005b80652ca6e0d07b48b6e5b8c2116db9c6",
+        "bytes": 11351,
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
-        "path": "week-12-field-notes/n202/board.js",
-        "sha256": "c08d2d69cdc846226d301eb91f5a8087e4525f934d572d814335c9d4410b573d",
-        "bytes": 12664,
+        "path": "week-12-field-notes/n203/board.js",
+        "sha256": "0f44caf1da8e28d02c2dc3886517422230937694881fd55fb18c68471ee11b29",
+        "bytes": 20112,
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
-        "path": "week-12-field-notes/n202/index.html",
-        "sha256": "cc7de812289d022d2c79108225a9255a90eb67677004ec0b44fadeeb9d327715",
-        "bytes": 10644,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
-        "path": "week-12-field-notes/n202/snapshot.json",
-        "sha256": "951100a8f72c22210e1c10d75d166211443976960ff992d434f30e825b052ebd",
-        "bytes": 150754,
+        "path": "week-12-field-notes/n203/index.html",
+        "sha256": "a72ea69dc64823e871c3b560f144da77573c86634956f1b33a2c9490cbc05427",
+        "bytes": 12434,
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
@@ -2450,57 +2255,15 @@
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
-        "path": "week-12-field-notes/n203/VERIFICATION.json",
-        "sha256": "45bf9754bb751e9e484dbd5c65f9efde7a158821436274dd14a60e65b3cebc91",
-        "bytes": 2338,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
-        "path": "week-12-field-notes/n203/board.css",
-        "sha256": "38fc441e96c36e820bfefd05cec6005b80652ca6e0d07b48b6e5b8c2116db9c6",
-        "bytes": 11351,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
-        "path": "week-12-field-notes/n203/board.js",
-        "sha256": "0f44caf1da8e28d02c2dc3886517422230937694881fd55fb18c68471ee11b29",
-        "bytes": 20112,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
-        "path": "week-12-field-notes/n203/index.html",
-        "sha256": "a72ea69dc64823e871c3b560f144da77573c86634956f1b33a2c9490cbc05427",
-        "bytes": 12434,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
         "path": "week-12-field-notes/n203/snapshot.json",
         "sha256": "5fcd468baff6f6d98a5d77eedab6a03144fe7cab96f3e3cde6640991790ad62e",
         "bytes": 3002981,
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
-        "path": "week-12-field-notes/n204/N204-games-1.png",
-        "sha256": "86ddee97b7e22f801cf7ad32947edda4b70aa13ef8cea54d75be22d24fa1d3bd",
-        "bytes": 282757,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
-        "path": "week-12-field-notes/n204/N204-games-2.png",
-        "sha256": "6fa78086af3c36b7cf5fb6837fe597680cbe37b8e05ed5cf3b35c7a2f79c5eeb",
-        "bytes": 294499,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
-        "path": "week-12-field-notes/n204/N204-games-3.png",
-        "sha256": "5c5c36391eacb14a171dd977afd7c755249cd935decc85f1951e15333e7bff89",
-        "bytes": 300386,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
-        "path": "week-12-field-notes/n204/N204-games-4.png",
-        "sha256": "2d2afa4cb70dfab22d39d87167bfbc668316aac3ab03e6e447d12da01dd421f7",
-        "bytes": 297299,
+        "path": "week-12-field-notes/n203/VERIFICATION.json",
+        "sha256": "45bf9754bb751e9e484dbd5c65f9efde7a158821436274dd14a60e65b3cebc91",
+        "bytes": 2338,
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
@@ -2528,6 +2291,30 @@
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
+        "path": "week-12-field-notes/n204/N204-games-1.png",
+        "sha256": "86ddee97b7e22f801cf7ad32947edda4b70aa13ef8cea54d75be22d24fa1d3bd",
+        "bytes": 282757,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n204/N204-games-2.png",
+        "sha256": "6fa78086af3c36b7cf5fb6837fe597680cbe37b8e05ed5cf3b35c7a2f79c5eeb",
+        "bytes": 294499,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n204/N204-games-3.png",
+        "sha256": "5c5c36391eacb14a171dd977afd7c755249cd935decc85f1951e15333e7bff89",
+        "bytes": 300386,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n204/N204-games-4.png",
+        "sha256": "2d2afa4cb70dfab22d39d87167bfbc668316aac3ab03e6e447d12da01dd421f7",
+        "bytes": 297299,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
         "path": "week-12-field-notes/n204/snapshot.json",
         "sha256": "506418f629ddb5b8e0ac664d5233e3c2307020a51ea78b8dd832f51e380ea094",
         "bytes": 3366449,
@@ -2537,30 +2324,6 @@
         "path": "week-12-field-notes/n204/verification.json",
         "sha256": "6db15f778790b64507fca10f9fa845a8ca3492f92b16359d21786ae0ac3ffcf3",
         "bytes": 613,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
-        "path": "week-12-field-notes/n205/N205-games-1.png",
-        "sha256": "e95adfa3f4350eb1c4b5540320f0f2e0d8e1cf2f96c1edf7fecf2fb41521277e",
-        "bytes": 304528,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
-        "path": "week-12-field-notes/n205/N205-games-2.png",
-        "sha256": "1dd581d98163aeb1a36c345a2dcf0745677d0ad7dbe2e593c003d521ace9bd87",
-        "bytes": 323705,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
-        "path": "week-12-field-notes/n205/N205-games-3.png",
-        "sha256": "0effb46a6814a3cda10180c2872b7cc8f87f73a7391da0baa1271365cfb19f38",
-        "bytes": 329344,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
-        "path": "week-12-field-notes/n205/N205-games-4.png",
-        "sha256": "695625b8fd2994021af7f2a8022ae5174fa04bbabd92474abfd572306ccb7f3d",
-        "bytes": 326177,
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
@@ -2588,6 +2351,30 @@
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
+        "path": "week-12-field-notes/n205/N205-games-1.png",
+        "sha256": "e95adfa3f4350eb1c4b5540320f0f2e0d8e1cf2f96c1edf7fecf2fb41521277e",
+        "bytes": 304528,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n205/N205-games-2.png",
+        "sha256": "1dd581d98163aeb1a36c345a2dcf0745677d0ad7dbe2e593c003d521ace9bd87",
+        "bytes": 323705,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n205/N205-games-3.png",
+        "sha256": "0effb46a6814a3cda10180c2872b7cc8f87f73a7391da0baa1271365cfb19f38",
+        "bytes": 329344,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n205/N205-games-4.png",
+        "sha256": "695625b8fd2994021af7f2a8022ae5174fa04bbabd92474abfd572306ccb7f3d",
+        "bytes": 326177,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
         "path": "week-12-field-notes/n205/snapshot.json",
         "sha256": "899bef112b2d5ba24a4ea7df42abbd7eb81e88bd67fff5f7fe1807cd6a64d7bf",
         "bytes": 4149006,
@@ -2597,6 +2384,78 @@
         "path": "week-12-field-notes/n205/verification.json",
         "sha256": "451e2e667c03097759c526dbbe25dae0eb9ba29c01b84760ed9dd1bd72da1776",
         "bytes": 699,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n206/audit.json",
+        "sha256": "467c6e198b9aba6a9910a286a3ca720fed02f9692f2f63ce666641f317548ba4",
+        "bytes": 3320,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n206/board.css",
+        "sha256": "5a1b7fcc0946676c313f50b4b89e1e26a5602394fb27d9e02c174cfa86eb0562",
+        "bytes": 13189,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n206/board.js",
+        "sha256": "308f483866a5c310171edd6b9e9969a07aa8f4ce27e85c12397557168acefdd5",
+        "bytes": 32894,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n206/field-notes/index.html",
+        "bytes": 15945,
+        "sha256": "25f48ce965aa4132db70456a87a323a0a59f773351ac4c2ab0751605eba06c23",
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n206/field-notes/NFL-Week12-1-Thanksgiving.png",
+        "bytes": 222813,
+        "sha256": "64cd3d25558abec0f349ced99f52221e00772f9f39a46eabf7dc1191176b7040",
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n206/field-notes/NFL-Week12-2-Friday-Sunday.png",
+        "bytes": 240855,
+        "sha256": "5c3652cdc026787a2afe0f82727df82153adaa618cfabc26d2c561d00cf28785",
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n206/field-notes/NFL-Week12-3-Sunday-slate.png",
+        "bytes": 241929,
+        "sha256": "c4599a21e77e2b3fc89ebd5f47ca3a0fb937521a793e0c3493e5b10f5e175525",
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n206/field-notes/NFL-Week12-4-Sunday-Monday.png",
+        "bytes": 245418,
+        "sha256": "db1f553d954aa72f5b3e2bb11ca83e02b1ac3df4517fa619f4fb5d9f9940db00",
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n206/field-notes/NFL-Week12-5-Circa-Selected-Five.png",
+        "bytes": 199039,
+        "sha256": "97513405694e91b66d73a7d73159c9d24c5fb8af9f462c78ec533ac204f54400",
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n206/field-notes/NFL-Week12-6-Circa-Alternatives.png",
+        "bytes": 245726,
+        "sha256": "654c3a3b9b3f3c08dc891bd6489bc3486d8d5cf832d6d4fc143903b5f447091b",
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n206/field-notes/NFL-Week12-7-Circa-Alternatives.png",
+        "bytes": 255525,
+        "sha256": "2671a3ce761a20b1d45c139df99b7f263854d27b94738986c7ffba5c29a1691a",
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n206/index.html",
+        "sha256": "231b198b3f316b85fa5f4db8a7a025eab7cc8f9172a39782d0ff9a5913d450cd",
+        "bytes": 15195,
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
@@ -2624,30 +2483,6 @@
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
-        "path": "week-12-field-notes/n206/audit.json",
-        "sha256": "467c6e198b9aba6a9910a286a3ca720fed02f9692f2f63ce666641f317548ba4",
-        "bytes": 3320,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
-        "path": "week-12-field-notes/n206/board.css",
-        "sha256": "5a1b7fcc0946676c313f50b4b89e1e26a5602394fb27d9e02c174cfa86eb0562",
-        "bytes": 13189,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
-        "path": "week-12-field-notes/n206/board.js",
-        "sha256": "308f483866a5c310171edd6b9e9969a07aa8f4ce27e85c12397557168acefdd5",
-        "bytes": 32894,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
-        "path": "week-12-field-notes/n206/index.html",
-        "sha256": "231b198b3f316b85fa5f4db8a7a025eab7cc8f9172a39782d0ff9a5913d450cd",
-        "bytes": 15195,
-        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
-      },
-      {
         "path": "week-12-field-notes/n206/snapshot.json",
         "sha256": "1ab42f3ead6a6fd02330bbf275e59f9e246ae4e04ff87ece76581b7e2145acb9",
         "bytes": 4172507,
@@ -2657,6 +2492,114 @@
         "path": "week-12-field-notes/n206/verification.json",
         "sha256": "dae7ab763050f2d058028429f272d4fa43fd2e1388c5af955d5489c2f9e772ac",
         "bytes": 700,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n207/01-N207-Week12-Games.png",
+        "bytes": 241130,
+        "sha256": "a8a2d9618c3f9cda4448445a52ca0cb3c84432313af3caaa91ecc4ec4d98815a",
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n207/02-N207-Week12-Games.png",
+        "bytes": 259559,
+        "sha256": "21c2b1e35202ab967ec5bcede45595454eeee3b80d5754a22daf01fe35674d2b",
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n207/03-N207-Week12-Games.png",
+        "bytes": 261796,
+        "sha256": "6fd88616e5cdd4b816eabf622aa58354fe13e207446d36a83569e122de820c49",
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n207/04-N207-Week12-Games.png",
+        "bytes": 262550,
+        "sha256": "60c9189f576e746d54396c233638f80103ce03feaea24e564ec3c550b8ccb3ee",
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n207/05-N207-Circa-Five.png",
+        "bytes": 198002,
+        "sha256": "8843b43d5b040090340ea72f0dead1e8db990c4d235430995ba6cea6f1f6d87e",
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n207/06-N207-Circa-Alternatives.png",
+        "bytes": 255912,
+        "sha256": "6efec1b64b270715ac2beb3e00a8c0695adff6c7fcd234de3308956f36fc6d70",
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n207/07-N207-Circa-Alternatives.png",
+        "bytes": 247693,
+        "sha256": "e7ef98c6619d465b5e919c59caf697a6afbc2df42059107310e24364d7369720",
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n207/08-N207-Thanksgiving-Side-Comparison.png",
+        "bytes": 186489,
+        "sha256": "e0e659f62c2426cf694207588fdcf5f6b2557bdb6bbeb01cb48af5c2ffb0fc25",
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n207/index.html",
+        "bytes": 80584,
+        "sha256": "59322ee2452e4203e7155a6000c473aa8732aa501f1b23e7b52979bcd03ac56c",
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n207/kalshi/index.html",
+        "bytes": 228924,
+        "sha256": "361ac9cdc0d2b8358dcd455cb558b724592d3658dc785474a8c1153df2889b76",
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n207/polymarket/index.html",
+        "bytes": 393457,
+        "sha256": "b6caf7da77b20e44984b91c88b365b8dcd99a89c0df230f9fd0c1a2884c9669a",
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/NFL-W12-Circa-all-1.png",
+        "sha256": "3ab52ff6a4e4ecbdd6bd8c13d0fa10f8149d0380089239f38e180dab266af082",
+        "bytes": 153109,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/NFL-W12-Circa-all-2.png",
+        "sha256": "f6527fb953186440db38469404380a3668aaacf6e12f192e4db9ad188381794f",
+        "bytes": 154966,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/NFL-W12-Circa-five.png",
+        "sha256": "2777e29f8e3743d1c959a2b3394d13f0ef97acc2bc5c1e6a436415b99567ca12",
+        "bytes": 162339,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/NFL-W12-games-1.png",
+        "sha256": "eebc9d86ce8b12c6202268895899679050a9578749fca3af007be0751b994479",
+        "bytes": 155824,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/NFL-W12-games-2.png",
+        "sha256": "578cf0c06be9318b4b368dfa754cdc6f2cbb865719618cd7cda3005344347baf",
+        "bytes": 163948,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/NFL-W12-games-3.png",
+        "sha256": "a60399219d97a76e209b2a7631811bb2ab424a77cb223bbae06ce634d5b75847",
+        "bytes": 157116,
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/NFL-W12-games-4.png",
+        "sha256": "fc72121463ae4de0d0064c59cb6c81324401d1707ede2179e63ba4c2b4003beb",
+        "bytes": 157917,
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
