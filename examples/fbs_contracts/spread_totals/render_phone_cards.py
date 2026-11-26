@@ -164,14 +164,13 @@ def release_status_page(data, directory, digest):
     page.header(data, "RESEARCH STATUS", 1, 1)
     blocks = [
         ("LATEST VERIFIED RUN · " + execution.get("release", "UNAVAILABLE"),
-         f"{execution.get('new_model_fits', 'Unmeasured')} new model fits · "
-         f"{execution.get('new_calibrator_fits', 'Unmeasured')} new calibrations",
+         f"Recorded: {execution.get('new_model_fits', 'Unmeasured')} model fits · "
+         f"{execution.get('new_calibrator_fits', 'Unmeasured')} calibrations",
          execution.get("summary", "See the verified owner return.")),
         ("NEXT CAMPAIGN · " + research["release"], "Prepared · awaiting owner launch",
          research["campaign_summary"]),
         ("EXPLICIT RESEARCH SPLIT", "2024–25 training · 2026 selection",
-         "Completed 2026 outcomes select the new spread and total models. "
-         "These are exposed validation results. Prospective evidence begins after the launch cutoff."),
+         "Late-2025 games are held out for calibration. Completed 2026 games select the new spread and total models and remain exposed validation. Prospective testing begins after the launch cutoff."),
         ("FORECASTS SHOWN NOW", "Prior frozen models · November 25 cutoff",
          "The inherited winner, margin and total forecasts retain their original identities, "
          "selection rules and source clocks. No new fit or fresh market quote is implied."),
@@ -190,7 +189,7 @@ def release_status_page(data, directory, digest):
                     "forecast_as_of": data["clocks"]["forecast_as_of"], "new_fits": 0})
     return {"file": "graphics/" + filename, "title": "V118 research and execution status",
             "caption": "Verified prior failure, pending owner campaign and unchanged forecast cutoff",
-            "alt": "V117 reported zero new model fits; V118 awaits owner launch. Existing forecasts retain their November 25 cutoff.",
+            "alt": "V117 recorded zero new fits but global fit accounting is incomplete; V118 awaits owner launch. Existing forecasts retain their November 25 cutoff.",
             "kind": "release_status", **info}
 
 

@@ -88,7 +88,7 @@ def validate(data):
         require(set(next_research) <= {"release", "status", "scope", "training_seasons", "selection_season",
                 "selection_regime", "prior_test_exposure_disclosed", "prospective_test", "forecast_snapshot_replaced",
                 "new_fits_reported", "new_calibrations_reported", "campaign_summary", "resource_policy",
-                "incumbent_comparison"}, "next research exceeds public status scope")
+                "incumbent_comparison", "calibration_protocol"}, "next research exceeds public status scope")
         require(next_research.get("status") == "PREPARED_AWAITING_OWNER_LAUNCH",
                 "prepared research cannot claim executed results")
         require(next_research.get("scope") == ["margin", "total"], "next research must remain FBS spread and total scoped")

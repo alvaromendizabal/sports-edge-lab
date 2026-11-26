@@ -233830,13 +233830,13 @@
   "graphics": {
     "pages": [
       {
-        "alt": "V117 reported zero new model fits; V118 awaits owner launch. Existing forecasts retain their November 25 cutoff.",
-        "bytes": 265122,
+        "alt": "V117 recorded zero new fits but global fit accounting is incomplete; V118 awaits owner launch. Existing forecasts retain their November 25 cutoff.",
+        "bytes": 285324,
         "caption": "Verified prior failure, pending owner campaign and unchanged forecast cutoff",
         "file": "graphics/fbs_release_status.png",
         "height": 2796,
         "kind": "release_status",
-        "sha256": "09576f04742ba25f8f6c58f3c65adb7c3bcf8d3a242e1eefd65ec91633a280b7",
+        "sha256": "b8bcf63de740bc755c74535f4cfca961834755f262e4610f55018ec9faeb3f20",
         "title": "V118 research and execution status",
         "width": 1290
       },
@@ -233854,7 +233854,7 @@
         ],
         "height": 2796,
         "kind": "all_games",
-        "sha256": "f47bc87d4346498e85146967b0c996e094775c6c07f58882d7b09a94c77b03a8",
+        "sha256": "b456a3c0987ebe9c5fa238cc158987f9c8187ad96dad57f3bbc539d1ba41a2d4",
         "title": "All games · page 1 of 14",
         "width": 1290
       },
@@ -233872,7 +233872,7 @@
         ],
         "height": 2796,
         "kind": "all_games",
-        "sha256": "22024d65fe52893143456c1e33ecff902d9a76612013018969d6b463dce7a7e4",
+        "sha256": "a605200454d5305febda9d16af403b95d9d8ea17b14c50805a1e4d1bd74775cd",
         "title": "All games · page 2 of 14",
         "width": 1290
       },
@@ -233890,7 +233890,7 @@
         ],
         "height": 2796,
         "kind": "all_games",
-        "sha256": "996ae93c91d74d2e9d7dd85526eecbd2484804c4458afe0349cbf257e9703e2e",
+        "sha256": "8c87fbd4993db7064eaede96a9ba540e157f415ce15e8326808f30892dd4b387",
         "title": "All games · page 3 of 14",
         "width": 1290
       },
@@ -233908,7 +233908,7 @@
         ],
         "height": 2796,
         "kind": "all_games",
-        "sha256": "1a41e81f3a321cda5a87990ea5ea178c09ef5b634a3c7ad40ded629c23443581",
+        "sha256": "5992f8de05aa95ad402c276b637108aa6f74a472cfdc2c3f2469f3459c53205d",
         "title": "All games · page 4 of 14",
         "width": 1290
       },
@@ -233926,7 +233926,7 @@
         ],
         "height": 2796,
         "kind": "all_games",
-        "sha256": "3a483e6d30586ae9a22b39a8e20e30a93070fb92d4de23e5812bb61fdaf72b20",
+        "sha256": "3c375ffda8e9adf8817627b277adcf6b4e220ecfa6d4edd2ccb6ed8b11f2043f",
         "title": "All games · page 5 of 14",
         "width": 1290
       },
@@ -233944,7 +233944,7 @@
         ],
         "height": 2796,
         "kind": "all_games",
-        "sha256": "dc370134300e7969fa0ee35c658b5e6880e8d6bf75cb9c7109e8d38a99ff8353",
+        "sha256": "bd9ba33148e422604f10837eaeab4e23f1ffad530f9ac8a50eb7900bea0b5045",
         "title": "All games · page 6 of 14",
         "width": 1290
       },
@@ -233962,7 +233962,7 @@
         ],
         "height": 2796,
         "kind": "all_games",
-        "sha256": "292066f87760f521b841c559b23d02188f70f6e269e3ef3f5e1e1e8a10fbcf6e",
+        "sha256": "8ade5d3a95c5f1a4f0fa660edd833e394810bec708ae83910037e8f187a43498",
         "title": "All games · page 7 of 14",
         "width": 1290
       },
@@ -233980,7 +233980,7 @@
         ],
         "height": 2796,
         "kind": "all_games",
-        "sha256": "0f12705b41a4d5f9706e2d9a141a8c7331666dc6545f05b2de1b79d74e834c7f",
+        "sha256": "917662f7a52925b005a06c937e9a62e008fa0cc3a715b179284d0f5d1ff5e7aa",
         "title": "All games · page 8 of 14",
         "width": 1290
       },
@@ -233998,7 +233998,7 @@
         ],
         "height": 2796,
         "kind": "all_games",
-        "sha256": "5032182b2881ed5c9f8604aad9f2aca60496161d20c61267e8b8b091b8aff0d8",
+        "sha256": "7799ca44944ea7a6783426afa7e1b83ce842233e62d4f940f26f2f8139d870dd",
         "title": "All games · page 9 of 14",
         "width": 1290
       },
@@ -234016,7 +234016,7 @@
         ],
         "height": 2796,
         "kind": "all_games",
-        "sha256": "55cced5f6c2c15fd2700d5d7f599385012dc358347cfa7ff04df564f40570565",
+        "sha256": "bb4d75a62305b7a059ae58149f6c584cf05cd33dba8841e9e8a6faa8afdf80ff",
         "title": "All games · page 10 of 14",
         "width": 1290
       },
@@ -234034,7 +234034,7 @@
         ],
         "height": 2796,
         "kind": "all_games",
-        "sha256": "f45a36f50ffeb6d40f8fd7d6fc0ee920c096ddd9f887e3d529ae15c0317e5bd5",
+        "sha256": "1d5b62e0029e9366be54cdf1dca4df1e48794fc34755021499c78f99d861af65",
         "title": "All games · page 11 of 14",
         "width": 1290
       },
@@ -234052,7 +234052,7 @@
         ],
         "height": 2796,
         "kind": "all_games",
-        "sha256": "9cd16a78f74b30223dcbfe79ec96e9716656d32bb5befaeb590922bd5a5fe2ef",
+        "sha256": "4f5b16be80df96c8cd698c8fbc0b747bcf420aeecb69f58d09b471453c66bcf4",
         "title": "All games · page 12 of 14",
         "width": 1290
       },
@@ -234070,7 +234070,7 @@
         ],
         "height": 2796,
         "kind": "all_games",
-        "sha256": "f2cfce0ed1eb577b1fcbe21126c57811c310d25cc2c285017a04ec82748ee1f2",
+        "sha256": "e8336179239698eaf2e00885a43ed6d23d5d68a82a19424e6f6202f0a4118db1",
         "title": "All games · page 13 of 14",
         "width": 1290
       },
@@ -234087,7 +234087,7 @@
         ],
         "height": 2796,
         "kind": "all_games",
-        "sha256": "8ee3a21c2d563a2d2405d6681cb6c9748ba99c3221756e8e8ac10bde42a19e58",
+        "sha256": "61557f97fdf00981d363f58a20e5b41f4cf579e7a59d0c7a3eea5479f1feee87",
         "title": "All games · page 14 of 14",
         "width": 1290
       },
@@ -234103,7 +234103,7 @@
         "file": "graphics/fbs_spread_point_baseline_001.png",
         "height": 2796,
         "kind": "spread_point_baseline",
-        "sha256": "46685163da2c43f558d6136cb34e39dd5361d8b6ff779e922c251af9042e9f1c",
+        "sha256": "b90f80e2b1c614be635d10b7266584106128b10cb2024288dfc8b662693e1a8a",
         "title": "Spreads · Point Baselines · page 1 of 22",
         "width": 1290
       },
@@ -234119,7 +234119,7 @@
         "file": "graphics/fbs_spread_point_baseline_002.png",
         "height": 2796,
         "kind": "spread_point_baseline",
-        "sha256": "4deb473aec96bc6b0dede6ab05195309ab63d0c9ad1552856bdcfb646cb6b6c3",
+        "sha256": "5470daaec5d34ad57ce75c8b8f21b69e133783dbe6aa0c3ee435d80858ac41fd",
         "title": "Spreads · Point Baselines · page 2 of 22",
         "width": 1290
       },
@@ -234135,7 +234135,7 @@
         "file": "graphics/fbs_spread_point_baseline_003.png",
         "height": 2796,
         "kind": "spread_point_baseline",
-        "sha256": "cc1d391e33958fd473d5aaa914272a5adf70e359ed6e1f208b58f3d87267142b",
+        "sha256": "0a8789d0c662be9eb9bc9ee33d7e26256f60c75726ec6636e236b442da6bc015",
         "title": "Spreads · Point Baselines · page 3 of 22",
         "width": 1290
       },
@@ -234151,7 +234151,7 @@
         "file": "graphics/fbs_spread_point_baseline_004.png",
         "height": 2796,
         "kind": "spread_point_baseline",
-        "sha256": "4d38eda5fa175c02d7630f2d928eb7f2f5873de06f460d1daac2473df61172e7",
+        "sha256": "7d59a55f48d578280aa629e67c7837d7304c7f4cc22dc4221b329006238ec284",
         "title": "Spreads · Point Baselines · page 4 of 22",
         "width": 1290
       },
@@ -234167,7 +234167,7 @@
         "file": "graphics/fbs_spread_point_baseline_005.png",
         "height": 2796,
         "kind": "spread_point_baseline",
-        "sha256": "e2ab618a14a4a0588dcbd8dd97ba80af618c4b87264facd3166e39ec1fe896cd",
+        "sha256": "a42e45b35b25b03d021884adc9b4d7148c6af00499cfe377cac78fb1dea4af8a",
         "title": "Spreads · Point Baselines · page 5 of 22",
         "width": 1290
       },
@@ -234183,7 +234183,7 @@
         "file": "graphics/fbs_spread_point_baseline_006.png",
         "height": 2796,
         "kind": "spread_point_baseline",
-        "sha256": "20d40785e266c118c1e52c00211718e730b5fca64708dd6e8925f5253e4ec16b",
+        "sha256": "b0b78f56bd652bf909f4abd46b170b03bb8c1589adaa0169a74abd578831fdf5",
         "title": "Spreads · Point Baselines · page 6 of 22",
         "width": 1290
       },
@@ -234199,7 +234199,7 @@
         "file": "graphics/fbs_spread_point_baseline_007.png",
         "height": 2796,
         "kind": "spread_point_baseline",
-        "sha256": "e0bc1533fc5bcd32f99ec4913ab1aba682960c4404079d0414ab7d760abe7ed5",
+        "sha256": "dced265cdd64488615a336746ce12fbc633808c6707cb5561f48e9c4298eb9d2",
         "title": "Spreads · Point Baselines · page 7 of 22",
         "width": 1290
       },
@@ -234215,7 +234215,7 @@
         "file": "graphics/fbs_spread_point_baseline_008.png",
         "height": 2796,
         "kind": "spread_point_baseline",
-        "sha256": "34a3db244e4cf7145da4d474886638093e737d1df62c5326239dd7b790bc0cf4",
+        "sha256": "2f139906e71dcd32d6a3e53e775ae014dc26bc999d64c05729df23f3bccbb748",
         "title": "Spreads · Point Baselines · page 8 of 22",
         "width": 1290
       },
@@ -234231,7 +234231,7 @@
         "file": "graphics/fbs_spread_point_baseline_009.png",
         "height": 2796,
         "kind": "spread_point_baseline",
-        "sha256": "10695ddf5ca3317b80100a2257486b14feb2148c38ec14e10c1c3cd180447848",
+        "sha256": "01447a350a3341bf011622cdddee463d5f206c32043dfb0f1f8afaa7ba59a0cc",
         "title": "Spreads · Point Baselines · page 9 of 22",
         "width": 1290
       },
@@ -234247,7 +234247,7 @@
         "file": "graphics/fbs_spread_point_baseline_010.png",
         "height": 2796,
         "kind": "spread_point_baseline",
-        "sha256": "8b7c341bbe079e8aba11fe8a061866dba6c8c4546c28603643c443124d9a7ae7",
+        "sha256": "eb0e6d20c894b842b57f23e99389305efe342cceb59b4c7d4c84478e1d9c1d79",
         "title": "Spreads · Point Baselines · page 10 of 22",
         "width": 1290
       },
@@ -234263,7 +234263,7 @@
         "file": "graphics/fbs_spread_point_baseline_011.png",
         "height": 2796,
         "kind": "spread_point_baseline",
-        "sha256": "1f36e80471a23ee2ba8ce011e73a1678deec55c152054f959dae5d0f17ad3fb7",
+        "sha256": "ea9dcea76801401eb2c98323beff249e2ae7e447052932a895955febf5eb706e",
         "title": "Spreads · Point Baselines · page 11 of 22",
         "width": 1290
       },
@@ -234279,7 +234279,7 @@
         "file": "graphics/fbs_spread_point_baseline_012.png",
         "height": 2796,
         "kind": "spread_point_baseline",
-        "sha256": "808ad32a38b351854f788272794b5c7e5fb887e30e08b8e7a6b77bd4639b820b",
+        "sha256": "87762e31d92b0ebb99d891459376a09a0ce667eb32df6c14905dcede3fd44fed",
         "title": "Spreads · Point Baselines · page 12 of 22",
         "width": 1290
       },
@@ -234295,7 +234295,7 @@
         "file": "graphics/fbs_spread_point_baseline_013.png",
         "height": 2796,
         "kind": "spread_point_baseline",
-        "sha256": "cad8d4e39d4192735529081075d05b7f5ef0aa82740f2cce1c06983da8b924f4",
+        "sha256": "967ca6338f8d68fc1cc2115279c2b3694a99a416545bc72aff8d8cd196a4f6ae",
         "title": "Spreads · Point Baselines · page 13 of 22",
         "width": 1290
       },
@@ -234311,7 +234311,7 @@
         "file": "graphics/fbs_spread_point_baseline_014.png",
         "height": 2796,
         "kind": "spread_point_baseline",
-        "sha256": "c7d9742229d3c966787521556c7ff04fc746f00f553deabb854d7056eda05d45",
+        "sha256": "bd2e4a64a2be3b3d57e08693afdbacfccf0c91ba89b5608ab9a25761ae35d751",
         "title": "Spreads · Point Baselines · page 14 of 22",
         "width": 1290
       },
@@ -234327,7 +234327,7 @@
         "file": "graphics/fbs_spread_point_baseline_015.png",
         "height": 2796,
         "kind": "spread_point_baseline",
-        "sha256": "26b9ecc99a1bac8248c8250509b858873cd93845807ad75c84588dc8ad7f9434",
+        "sha256": "7777589766e5690fe066486c58a0d9eb30e05766b16bad8cae32f71809e6ea09",
         "title": "Spreads · Point Baselines · page 15 of 22",
         "width": 1290
       },
@@ -234343,7 +234343,7 @@
         "file": "graphics/fbs_spread_point_baseline_016.png",
         "height": 2796,
         "kind": "spread_point_baseline",
-        "sha256": "6cf2f17b499d64ca451fc00e647967b045572924d753e279100c070d115e7f1b",
+        "sha256": "ed8b8f68bec599331f469e27b859c9d0414a6108717f62c032bc16f386c4de74",
         "title": "Spreads · Point Baselines · page 16 of 22",
         "width": 1290
       },
@@ -234359,7 +234359,7 @@
         "file": "graphics/fbs_spread_point_baseline_017.png",
         "height": 2796,
         "kind": "spread_point_baseline",
-        "sha256": "abe88fc0ca91f0a8366e3565d03630727f66c200da4120e25eadc9cd730030ee",
+        "sha256": "683d584d2dd30a31e12047646bc189bcac84817a214095eea5f5810f69007b97",
         "title": "Spreads · Point Baselines · page 17 of 22",
         "width": 1290
       },
@@ -234375,7 +234375,7 @@
         "file": "graphics/fbs_spread_point_baseline_018.png",
         "height": 2796,
         "kind": "spread_point_baseline",
-        "sha256": "22c413088adbe1eb43aa67e13e66e05af62de76fb26e0d5686b976afef76fc97",
+        "sha256": "efaf74b32818b1bb810e19583e42c260c8695a7a03fd84d0a2d9f16b3c1304c0",
         "title": "Spreads · Point Baselines · page 18 of 22",
         "width": 1290
       },
@@ -234391,7 +234391,7 @@
         "file": "graphics/fbs_spread_point_baseline_019.png",
         "height": 2796,
         "kind": "spread_point_baseline",
-        "sha256": "f4c6dbc97d9eb657f14ed048ad0f55c0ff39d79c96a1b61b647cea44ed0b2607",
+        "sha256": "c8345b6f5649fb3d054a89954ba129ae8e8ba7a728e9d28efebea4c3600fd3ef",
         "title": "Spreads · Point Baselines · page 19 of 22",
         "width": 1290
       },
@@ -234407,7 +234407,7 @@
         "file": "graphics/fbs_spread_point_baseline_020.png",
         "height": 2796,
         "kind": "spread_point_baseline",
-        "sha256": "710052c8831ef12f03da41c6c8e9d3e2d2196dc79377600aff120cff94848dd6",
+        "sha256": "8022b1adbf2dce2f328fe1feca8d8f64a643fcf4f13fba1118b82ce35a2b8d17",
         "title": "Spreads · Point Baselines · page 20 of 22",
         "width": 1290
       },
@@ -234423,7 +234423,7 @@
         "file": "graphics/fbs_spread_point_baseline_021.png",
         "height": 2796,
         "kind": "spread_point_baseline",
-        "sha256": "197c58afc86752dc326183e3d2a72fc4eadc38005c06999e89957bf19516a3b3",
+        "sha256": "75d79b1613d0019d4b86f91fdc95cdcc3b88e3b933150f96e06f6396a36c489f",
         "title": "Spreads · Point Baselines · page 21 of 22",
         "width": 1290
       },
@@ -234439,7 +234439,7 @@
         "file": "graphics/fbs_spread_point_baseline_022.png",
         "height": 2796,
         "kind": "spread_point_baseline",
-        "sha256": "0027781e46b87294ea04d6e6ae51289ae860d9b58829fbcdc1e485c9c62de92e",
+        "sha256": "7d68743e13368ef6de1e9e4b7e7cce9e108e92fb01b20727fcece55b5707b0e0",
         "title": "Spreads · Point Baselines · page 22 of 22",
         "width": 1290
       },
@@ -234455,7 +234455,7 @@
         "file": "graphics/fbs_total_point_baseline_001.png",
         "height": 2796,
         "kind": "total_point_baseline",
-        "sha256": "4cdfa61974b50f4bdbffc92470ece5a18719d85f5ee8b54a35dcc140deaf1fa8",
+        "sha256": "a6469c1e9773f405d79f0b7dbf61d0d7691f6305dc80b711b3a52ae9cf9ab432",
         "title": "Totals · Point Baselines · page 1 of 22",
         "width": 1290
       },
@@ -234471,7 +234471,7 @@
         "file": "graphics/fbs_total_point_baseline_002.png",
         "height": 2796,
         "kind": "total_point_baseline",
-        "sha256": "212f274158043196f5366c773c6ed20f9b3c70cae183efe7b9652e21addbf1ee",
+        "sha256": "b289b637becf2b837e9a5e85fdad2db0b495d1881b8197728b58d56132c2f72d",
         "title": "Totals · Point Baselines · page 2 of 22",
         "width": 1290
       },
@@ -234487,7 +234487,7 @@
         "file": "graphics/fbs_total_point_baseline_003.png",
         "height": 2796,
         "kind": "total_point_baseline",
-        "sha256": "dc677c12343d66f6accd8613c8024dca9838472bff563e464159b3fbcaa78e00",
+        "sha256": "41a109f0512aef190c2d12086cb5531c5718174333b65220d27750a7942e2f0f",
         "title": "Totals · Point Baselines · page 3 of 22",
         "width": 1290
       },
@@ -234503,7 +234503,7 @@
         "file": "graphics/fbs_total_point_baseline_004.png",
         "height": 2796,
         "kind": "total_point_baseline",
-        "sha256": "18e1e8b2ba66980b0d05f44e7e71e678f653753b645045cb3be33d21a0174fe2",
+        "sha256": "16b0f7089e3b34d5549ceeabd0bde2afa722189e2be99aa01418fb5de783739a",
         "title": "Totals · Point Baselines · page 4 of 22",
         "width": 1290
       },
@@ -234519,7 +234519,7 @@
         "file": "graphics/fbs_total_point_baseline_005.png",
         "height": 2796,
         "kind": "total_point_baseline",
-        "sha256": "017837f9b400b3830276a7d5abccda29aa186b3c1fe86d9e2a6413bd93577606",
+        "sha256": "e2b790086d43f91621bfe419aa54c292637bf24c9a620b64376e18c50ae25fc3",
         "title": "Totals · Point Baselines · page 5 of 22",
         "width": 1290
       },
@@ -234535,7 +234535,7 @@
         "file": "graphics/fbs_total_point_baseline_006.png",
         "height": 2796,
         "kind": "total_point_baseline",
-        "sha256": "4373a7d82c7d9b87ad859fc2c33531cb3231518e5542c577fcfdd8d3e9ad220f",
+        "sha256": "eaf1da4c95d4a87fc2c4d04e6783a1a8c231dae9a8825d844965393aaf76e4a8",
         "title": "Totals · Point Baselines · page 6 of 22",
         "width": 1290
       },
@@ -234551,7 +234551,7 @@
         "file": "graphics/fbs_total_point_baseline_007.png",
         "height": 2796,
         "kind": "total_point_baseline",
-        "sha256": "b61a5c5670fbd2cb5f16dfbd2319e864fb44a2f950cccf6ac7b20ac451d766a6",
+        "sha256": "584551372ff8a235cd9db79930964f2428d91ffbb46e6f4b1d2e8fdf1cd50595",
         "title": "Totals · Point Baselines · page 7 of 22",
         "width": 1290
       },
@@ -234567,7 +234567,7 @@
         "file": "graphics/fbs_total_point_baseline_008.png",
         "height": 2796,
         "kind": "total_point_baseline",
-        "sha256": "429916948b008555149bddf40398321c537006eecf07799670ae5320e4ecc003",
+        "sha256": "e435507ca329ae48230708c4ea07af6e96decd740fd0af52d01a8d04e9c80eba",
         "title": "Totals · Point Baselines · page 8 of 22",
         "width": 1290
       },
@@ -234583,7 +234583,7 @@
         "file": "graphics/fbs_total_point_baseline_009.png",
         "height": 2796,
         "kind": "total_point_baseline",
-        "sha256": "d7ebea9eb6d460d372cbd927a726bab4d2683c46c67022762a33a5f295f734ba",
+        "sha256": "abb5a358d44a82e13e4c87a8e997bca55a94193a66efebdf8799ec7408ab4cdc",
         "title": "Totals · Point Baselines · page 9 of 22",
         "width": 1290
       },
@@ -234599,7 +234599,7 @@
         "file": "graphics/fbs_total_point_baseline_010.png",
         "height": 2796,
         "kind": "total_point_baseline",
-        "sha256": "a54eb35058226539754a455eb65871c9a57d829289e61966421a9dcdf5923507",
+        "sha256": "b771e9835358aa9551322422a6c299420aa1e83fad04cf05ccb1c3b7ef25960c",
         "title": "Totals · Point Baselines · page 10 of 22",
         "width": 1290
       },
@@ -234615,7 +234615,7 @@
         "file": "graphics/fbs_total_point_baseline_011.png",
         "height": 2796,
         "kind": "total_point_baseline",
-        "sha256": "a5abe453fb876b3285ce4b18fdd913a45792d1edbbc4e7cf36c226bf25b7f22c",
+        "sha256": "3f96bf43a788a602070b8542fa383a6cdb02906391fda26d22fb5d445b71a3bc",
         "title": "Totals · Point Baselines · page 11 of 22",
         "width": 1290
       },
@@ -234631,7 +234631,7 @@
         "file": "graphics/fbs_total_point_baseline_012.png",
         "height": 2796,
         "kind": "total_point_baseline",
-        "sha256": "8824cb3124a07a6f423532e8641f8920b32e40e01555a04c217f0e183f8a75b9",
+        "sha256": "24d2676d1da731781f518bb4457a1f27c8564a4a0de1661a7040884cb846a3af",
         "title": "Totals · Point Baselines · page 12 of 22",
         "width": 1290
       },
@@ -234647,7 +234647,7 @@
         "file": "graphics/fbs_total_point_baseline_013.png",
         "height": 2796,
         "kind": "total_point_baseline",
-        "sha256": "a0b270064776c5e0fe496391a521e831e9c8cdec288187fcb5075aac3946d2a7",
+        "sha256": "d8f46e38b178405ea9fdacf0a06cdebc1867435d2847548aed519aa43c41c2a3",
         "title": "Totals · Point Baselines · page 13 of 22",
         "width": 1290
       },
@@ -234663,7 +234663,7 @@
         "file": "graphics/fbs_total_point_baseline_014.png",
         "height": 2796,
         "kind": "total_point_baseline",
-        "sha256": "9c8d8c2a4870f7dde69e2fdfe059c5534cf80d44bb5dbd845d8984c1a4f522c1",
+        "sha256": "6a931bc47d69fb4239fd144a02f96eac46ecf448c603f72f29e96947ee6d797f",
         "title": "Totals · Point Baselines · page 14 of 22",
         "width": 1290
       },
@@ -234679,7 +234679,7 @@
         "file": "graphics/fbs_total_point_baseline_015.png",
         "height": 2796,
         "kind": "total_point_baseline",
-        "sha256": "08192743966b01905c90c7b3ca18a0cce78d939fce3d9ee6f9b5bc42e98f1a80",
+        "sha256": "5d996b3482390fd0883065330d544a4ab2a21e2be817c0961bcf89f7a5212e4b",
         "title": "Totals · Point Baselines · page 15 of 22",
         "width": 1290
       },
@@ -234695,7 +234695,7 @@
         "file": "graphics/fbs_total_point_baseline_016.png",
         "height": 2796,
         "kind": "total_point_baseline",
-        "sha256": "8942f3c357723d53f06a1359b56729edcc2d9988c838bc41701fd9e6484c06bd",
+        "sha256": "a6a047ac52e6c2c59eb805242af3ecef9d5c07de9e3d491bbc1bf77f2021bf36",
         "title": "Totals · Point Baselines · page 16 of 22",
         "width": 1290
       },
@@ -234711,7 +234711,7 @@
         "file": "graphics/fbs_total_point_baseline_017.png",
         "height": 2796,
         "kind": "total_point_baseline",
-        "sha256": "b4c2e7cf874f661d0a4dac47e68b55a50c93429cc46048c64ca5772db0133547",
+        "sha256": "ae517d217d564f8f8b2bc9478a459e901b4c3ff923d7d0d723fccf92ae6f9f54",
         "title": "Totals · Point Baselines · page 17 of 22",
         "width": 1290
       },
@@ -234727,7 +234727,7 @@
         "file": "graphics/fbs_total_point_baseline_018.png",
         "height": 2796,
         "kind": "total_point_baseline",
-        "sha256": "691c679ed87e58d69fcdb64580c8c6e31b507bd307269916247f2839ed7b2b92",
+        "sha256": "818681272357b3404d823996221842ab8fca01a2e0fe0fbb55e757fecabcd375",
         "title": "Totals · Point Baselines · page 18 of 22",
         "width": 1290
       },
@@ -234743,7 +234743,7 @@
         "file": "graphics/fbs_total_point_baseline_019.png",
         "height": 2796,
         "kind": "total_point_baseline",
-        "sha256": "4da5ba9e8da51e57244e598cb4c7ed474243285f9fc7dda030b508daf33889c2",
+        "sha256": "e5860d399bc49f3c5a05d87ffa92208e6fce686b346001b5ef5d117178422ccb",
         "title": "Totals · Point Baselines · page 19 of 22",
         "width": 1290
       },
@@ -234759,7 +234759,7 @@
         "file": "graphics/fbs_total_point_baseline_020.png",
         "height": 2796,
         "kind": "total_point_baseline",
-        "sha256": "0c84caddccba87ae1151e200177328e6d4aad6347f6949636637974c181a1f60",
+        "sha256": "3525c57017b1a5e2fce34b1e92e6235c1d4b9bc5d036b0380d2e4c2a9bf6f864",
         "title": "Totals · Point Baselines · page 20 of 22",
         "width": 1290
       },
@@ -234775,7 +234775,7 @@
         "file": "graphics/fbs_total_point_baseline_021.png",
         "height": 2796,
         "kind": "total_point_baseline",
-        "sha256": "5708ffa142b6de364f8cbb901cd1f4834334d96d142c90763849154aabfef738",
+        "sha256": "7bad33e7c6d5f99e4c9a58586f8efaea3a096b7b87eef475130162b3c925ac4b",
         "title": "Totals · Point Baselines · page 21 of 22",
         "width": 1290
       },
@@ -234791,12 +234791,12 @@
         "file": "graphics/fbs_total_point_baseline_022.png",
         "height": 2796,
         "kind": "total_point_baseline",
-        "sha256": "074e0053de1f8b0c50718a8eecc3443a5fc9ad240ac7e49471a45bd0abaa87ac",
+        "sha256": "0e3c566e3447d7ece55e38347cbcd3c12d00d0a573e4d47a42d6202a20c5b6a2",
         "title": "Totals · Point Baselines · page 22 of 22",
         "width": 1290
       }
     ],
-    "science_sha256": "c587c1d3f9fda24b6fa2b53b19423fccb3d9da5311e0ec2e29ad83b95e2f845e",
+    "science_sha256": "6a5044666d42a15b31e570aaa483bc6f50bad18419de16f4aa09582ffc1f472f",
     "scope": "week"
   },
   "missing_inputs": [
@@ -246940,6 +246940,8 @@
     "label": "V118 preparation",
     "latest_owner_execution": {
       "finished_at": "2026-11-26T02:21:39.832795Z",
+      "fit_counter_scope": "RECORDED_COUNTERS; FAILED_BRANCH_PREVENTS_NEW_GLOBALLY_COMPLETE_AUDIT",
+      "global_fit_count_completeness": false,
       "guard_rejected_callbacks": 588,
       "new_calibrator_fits": 0,
       "new_model_fits": 0,
@@ -246953,11 +246955,13 @@
       "release": "V117",
       "reused_scoring_events": 31766,
       "reused_scoring_events_are_unique_tasks": false,
+      "spread_totals_failure": "Missing authenticated historical grid pins stopped the separate Spread & Totals branch before its 126 registered fits.",
       "status": "VERIFIED_PARTIAL_FAILURE",
-      "summary": "The input-identity guard rejected 588 raw-feature callbacks before fitting. Earlier work was retained; scoring tasks do not count as new fits."
+      "summary": "Global fit accounting is incomplete because a branch failed. The raw-input guard rejected 588 callbacks; missing authenticated grid pins also blocked Spread & Totals. Recorded zeros are not a new global fit audit."
     },
     "new_model_fits": 0,
     "next_research": {
+      "calibration_protocol": "Late-2025 games are held out for calibration, with a November 1, 2025 UTC boundary. Preparation qualification observed 1,510 training and 342 calibration rows; these are input counts, not completed fits.",
       "campaign_summary": "Prepared: 1,176 qualified base-fit jobs across seven families; 168 source-blocked jobs remain visible. The 5,254-column candidate catalog supports point/threshold heads, ablations and calibration. No owner fits completed.",
       "forecast_snapshot_replaced": false,
       "incumbent_comparison": "Compare new distribution forecasts with the retained point baselines on identical eligible observations. Keep full denominators, missing rows, sportsbook pushes and native contract settlement separate; report when the incumbent wins.",
@@ -246979,8 +246983,8 @@
         2025
       ]
     },
-    "notice": "The verified V117 execution reported zero new model or calibration fits and returned a resumable partial failure. V118 is prepared for the owner to launch. This edition preserves the November 25 frozen-model forecasts and dated market observations; new spread and total fits, probabilities and accuracy remain pending.",
-    "owner_execution_status": "V117: verified partial failure with zero new model and calibration fits. V118: prepared, awaiting owner launch.",
+    "notice": "The verified V117 partial return recorded zero new model or calibration fits. A failed branch left global fit accounting incomplete, so this preparation does not establish a new globally complete fit audit. V118 awaits the owner launch. This edition preserves the November 25 forecasts and dated market observations; new spread and total results remain pending.",
+    "owner_execution_status": "V117: verified partial failure; recorded 0 model and calibration fits, with global fit accounting incomplete. V118: prepared, awaiting owner launch.",
     "status": "Prior forecasts retained · new research pending"
   },
   "schema": "fbs.spread-totals.public-board.v1",
