@@ -1,0 +1,21 @@
+{
+  "schema": "sports-edge-lab.nfl.execution-delivery-status.v2",
+  "generation": "N208",
+  "owner": "NFL",
+  "delivery_status": "OWNER_LAUNCHER_STAGED",
+  "executable_sha256": "dac8e3bb94ebdc1b138515cbde579e1af4bf48ef4e047b3d60ca3de112d3b1fc",
+  "executable_bytes": 106526102,
+  "owner_slot_installed": true,
+  "private_s3_readback": "SHA256_VERIFIED",
+  "qualification_status": "PENDING_NATIVE_QUALIFICATION",
+  "local_tests": 56,
+  "inherited_tests": 81,
+  "planned_work": {
+    "fit_units": 256,
+    "probability_estimators": 1024,
+    "calibration_gates": 1536,
+    "total_optimizer_calls": 2560
+  },
+  "n208_science_runs_started_by_agent": 0,
+  "scientific_scores": "Use N207 until an independently verified successor owner return exists."
+}

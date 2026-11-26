@@ -1,0 +1,132 @@
+{
+  "schema": "sports-edge-lab.nfl.execution-delivery-status.v2",
+  "owner": "NFL",
+  "generation": "N207",
+  "delivery_status": "OWNER_RUN_COMPLETED_AND_RETURN_VERIFIED",
+  "owner_execution": {
+    "run_id": "20261126T074030Z-cd49d596eaa9",
+    "status": "COMPLETE_REGISTERED_STAGES",
+    "v13_status": "INCOMPLETE",
+    "scoped_acceptance_status": "SCOPED_SCIENCE_COMPLETE",
+    "throughput_acceptance": "PASS",
+    "native_tests": 81,
+    "owner_launches": 1
+  },
+  "return_logical_sha256": "cd738b607c250729fc840a79a92870dc2efc194487060fb3a76da92b8df4c55d",
+  "return_logical_bytes": 2861982411,
+  "execution": {
+    "planned_units": 256,
+    "completed_units": 256,
+    "failed_units": 0,
+    "blocked_units": 0,
+    "deferred_units": 0,
+    "new_probability_estimators": 1024,
+    "new_calibrators": 1536,
+    "optimizer_completions": 2560,
+    "peak_simultaneous_optimizers": 42,
+    "optimizer_cpu_seconds": 53438.120787477,
+    "elapsed_seconds": 2248.034621257997
+  },
+  "compared_policies": 5354,
+  "preserved_policies": 4202,
+  "completed_games": 164,
+  "model_issue_utc": "2026-11-26T08:37:00.790452+00:00",
+  "owner_issue_id": "b838a47ad1a34633ebe4c31ecb558e9b0eb7ba9819bcceb736de54adc2c538b7",
+  "market_options_at_issue": 3068,
+  "named_source_coverage_at_issue": {
+    "draftkings": {
+      "margin": 15,
+      "total": 15
+    },
+    "polymarket": {
+      "margin": 15,
+      "total": 15
+    }
+  },
+  "objective_results": [
+    {
+      "target": "margin",
+      "objective": "strict_wins",
+      "wins": 97,
+      "losses": 64,
+      "settlement_pushes": 3,
+      "unresolved": 0,
+      "brier": 0.24735696176621635,
+      "logloss": 0.6885722378675939,
+      "completed_population": 164,
+      "eligible": 164,
+      "decisive": 161
+    },
+    {
+      "target": "margin",
+      "objective": "brier",
+      "wins": 91,
+      "losses": 70,
+      "settlement_pushes": 3,
+      "unresolved": 0,
+      "brier": 0.24324941574789882,
+      "logloss": 0.6795247950938726,
+      "completed_population": 164,
+      "eligible": 164,
+      "decisive": 161
+    },
+    {
+      "target": "margin",
+      "objective": "logloss",
+      "wins": 85,
+      "losses": 76,
+      "settlement_pushes": 3,
+      "unresolved": 0,
+      "brier": 0.24341513952206736,
+      "logloss": 0.6788241365843224,
+      "completed_population": 164,
+      "eligible": 164,
+      "decisive": 161
+    },
+    {
+      "target": "total",
+      "objective": "strict_wins",
+      "wins": 95,
+      "losses": 69,
+      "settlement_pushes": 0,
+      "unresolved": 0,
+      "brier": 0.260903547720401,
+      "logloss": 0.7187111774893415,
+      "completed_population": 164,
+      "eligible": 164,
+      "decisive": 164
+    },
+    {
+      "target": "total",
+      "objective": "brier",
+      "wins": 88,
+      "losses": 76,
+      "settlement_pushes": 0,
+      "unresolved": 0,
+      "brier": 0.24534210763158046,
+      "logloss": 0.6835514624419713,
+      "completed_population": 164,
+      "eligible": 164,
+      "decisive": 164
+    },
+    {
+      "target": "total",
+      "objective": "logloss",
+      "wins": 88,
+      "losses": 76,
+      "settlement_pushes": 0,
+      "unresolved": 0,
+      "brier": 0.24534210763158046,
+      "logloss": 0.6835514624419713,
+      "completed_population": 164,
+      "eligible": 164,
+      "decisive": 164
+    }
+  ],
+  "model_selection": "Previously examined, completed 2026 games selected the ordinary spread and totals policies. Pre-2026 training includes the 2024 and 2025 seasons.",
+  "prepublication_estimated_compute_usd": 2.4388038355817327,
+  "prepublication_compute_is_billed_cost": false,
+  "market_review_utc": "2026-11-26T18:17:12.861400+00:00",
+  "practice_status_review_source": "Official club reports and national inactive lists, Nov 26.",
+  "scope": "Selected NFL research outputs; no automated entries or wagers."
+}
