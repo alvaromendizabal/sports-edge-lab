@@ -155,6 +155,59 @@ function verifyHostedHtml(observed, source, context) {
     assert(observed>=0&&observed<=600&&native>=0&&native<=600);assert(Math.abs(observed-q.quote_age_seconds_at_issue)<.001);assert(Math.abs(native-q.native_age_seconds_at_issue)<.001);
   }
   assert.equal(n205Snapshot.direct_source_options.length,3);
+  const n206Snapshot = JSON.parse(fs.readFileSync(path.join(root, "week-12-field-notes/n206/snapshot.json"), "utf8"));
+  const n206Completed = n206Snapshot.completed_population.completed;
+  const n206Ids = n206Snapshot.completed_population.games.map(g=>g.game_id).sort();
+  assert(Number.isInteger(n206Completed) && n206Completed>=n205Completed);
+  assert.equal(n206Ids.length,n206Completed);assert.equal(new Set(n206Ids).size,n206Completed);
+  assert.equal(digest(Buffer.from(n206Ids.join("\n"))),n206Snapshot.completed_population.manifest_sha256);
+  for(const row of n206Snapshot.ordinary_performance){
+    for(const [score,field] of [[row.selected,row.target],[row.earlier_week_replay,row.target+"_replay"]]){
+      const grades={WIN:0,LOSS:0,PUSH:0,UNRESOLVED:0};
+      for(const game of n206Snapshot.completed_population.games){assert(game[field] in grades);grades[game[field]]++;}
+      assert.equal(score.completed,n206Completed);
+      assert.equal(score.wins+score.losses+score.settlement_pushes+score.unresolved,n206Completed);
+      assert.deepEqual(grades,{WIN:score.wins,LOSS:score.losses,PUSH:score.settlement_pushes,UNRESOLVED:score.unresolved});
+      if(score.full_population_champion)assert.equal(score.unresolved,0);
+    }
+  }
+  for(const score of [...n206Snapshot.objective_performance,...n206Snapshot.policy_replay,...n206Snapshot.annual_metrics])assert.equal(score.wins+score.losses+score.settlement_pushes+score.unresolved,score.completed);
+  assert.doesNotMatch(JSON.stringify(n206Snapshot),/"(?:pmf|reference_pmf|calibrator|selected_features|calibration_parameters|configuration|learner)"/);
+  for(const game of n206Snapshot.games){
+    if(game.n206)assert(Math.abs(game.n206.away_probability+game.n206.home_probability+game.n206.tie_probability-1)<1e-9);
+    if(game.started_at_snapshot){assert.equal(game.n206,null);assert.equal(game.spread,null);assert.equal(game.total,null);}
+    const original=n205Snapshot.games.find(g=>g.id===game.id);
+    assert.deepEqual(game.v13,original.v13);assert.deepEqual(game.roster,original.roster);assert.deepEqual(game.n203,original.n203);assert.deepEqual(game.n204,original.n204);assert.deepEqual(game.n205,original.n205);
+  }
+  for(const quote of n206Snapshot.book_options){
+    assert(Math.abs(quote.p_win+quote.p_push+quote.p_loss-1)<1e-9);
+    assert(Math.abs(quote.expected_profit_per_unit-(quote.p_win*(quote.decimal_price-1)-quote.p_loss))<1e-6);
+  }
+  assert.deepEqual(n206Snapshot.cards,n205Snapshot.cards);assert.deepEqual(n206Snapshot.circa,n205Snapshot.circa);
+  assert.equal(n206Snapshot.independent_verification.status,"PASS");
+  assert.equal(n206Snapshot.independent_verification.prediction_rows_checked,n206Completed*n206Snapshot.campaign.candidate_policies);
+  assert.equal(n206Snapshot.source_delivery.mode,"VERIFIED_OWNER_FINAL_SOURCE_REFRESH");
+  assert.equal(n206Snapshot.source_delivery.stale_priced_options,0);
+  assert.equal(n206Snapshot.source_delivery.latest_forecasts_and_priced_options_same_issue,true);
+  assert.equal(n206Snapshot.independent_current_verification.status,"PASS");
+  assert.equal(n206Snapshot.source_delivery.quote_basis_counts.FRESH_OBSERVED_PREGAME_QUOTE,30);
+  assert.equal(n206Snapshot.independent_verification.replay_game_rows_checked,n206Completed*n206Snapshot.policy_replay.length);
+  for(const r of n206Snapshot.ordinary_performance){
+    const prior=r.previous_policy_same_population;
+    assert.equal(prior.completed,n206Completed);assert.equal(prior.wins+prior.losses+prior.settlement_pushes+prior.unresolved,n206Completed);
+    assert.equal(r.same_population_extra_wins,r.selected.wins-prior.wins);
+  }
+  for(const g of n206Snapshot.games)if(g.n206){
+    assert(g.n206.coherent_selected_score_law&&g.n206.total_coherent_selected_score_law);
+    assert.equal(g.n206.away_margin,g.spread.model_point);assert.equal(g.n206.total,g.total.model_point);
+  }
+  assert(n206Snapshot.strict_probability_tradeoff.total_strict_brier>.25);
+  assert(n206Snapshot.strict_probability_tradeoff.total_proper_brier<.25);
+  for(const q of n206Snapshot.book_options){
+    const observed=(Date.parse(q.issue_utc)-Date.parse(q.quote_clock_utc))/1000,native=(Date.parse(q.issue_utc)-Date.parse(q.native_clock_utc))/1000;
+    assert(observed>=0&&observed<=600&&native>=0&&native<=600);assert(Math.abs(observed-q.quote_age_seconds_at_issue)<.001);assert(Math.abs(native-q.native_age_seconds_at_issue)<.001);
+  }
+  assert.equal(n206Snapshot.direct_source_options.length,3);
   const population = snapshot.completed_population;
   const completed = population.completed;
   assert(Number.isInteger(completed) && completed >= 163, "Completed census cannot fall below its verified baseline");
@@ -258,6 +311,50 @@ function verifyHostedHtml(observed, source, context) {
     const text = selector => page.locator(selector).innerText();
     const count = (selector, expected) => page.locator(selector).count().then(actual => assert.equal(actual, expected, selector));
     const noOverflow = async () => { const layout = await page.evaluate(() => ({ width: window.innerWidth, scroll: document.documentElement.scrollWidth, outside: [...document.querySelectorAll("main *, header *")].filter(e => e.getBoundingClientRect().right > innerWidth + 1 && !e.closest(".scroll, .table-scroll")).slice(0, 8).map(e => [e.tagName, e.id, e.className, e.getBoundingClientRect().right]) })); assert(layout.scroll <= layout.width + 1, JSON.stringify(layout)); };
+    await check(`${width}px: N206 current forecasts, full population, authentic prices and coherent score provenance`,async()=>{
+      await page.goto(new URL("week-12-field-notes/n206/",base).href,{waitUntil:"domcontentloaded"});
+      await page.locator("#games .game").first().waitFor();
+      await count("#games .game",n206Snapshot.games.length);await count("#completed-games tr",n206Completed);
+      assert.deepEqual(await page.evaluate(()=>data.completed_population.games.map(g=>g.game_id).sort()),n206Ids);
+      assert.equal(await page.locator("#basis").inputValue(),"n206");assert.match(await text("#basis-note"),/new strict-win selections/);
+      assert.match(await text("#games"),/Own coherent score law/);assert.match(await text("#games"),/Final: GB 13/);
+      assert.match(await text("#source-status"),/VERIFIED FINAL SOURCE REFRESH/);assert.match(await text("#source-message"),/belong to that same issue/);
+      for(const row of n206Snapshot.ordinary_performance){
+        assert((await text("#performance")).includes(`${row.selected.wins} wins`));
+        assert((await text("#performance")).includes(`${row.earlier_week_replay.wins} wins`));
+        assert((await text("#performance")).includes(`of ${n206Completed} completed games`));
+      }
+      await page.selectOption("#scope","remaining");await count("#games .game",n206Snapshot.games.filter(g=>!g.started_at_snapshot).length);
+      await page.selectOption("#scope","thanksgiving");await count("#games .game",3);
+      await page.selectOption("#scope","all");await page.fill("#search","Bears");await count("#games .game",1);await page.fill("#search","");
+      for(const basis of ["v13","roster","n203","n204","n205","n206"]){await page.selectOption("#basis",basis);assert.doesNotMatch(await text("#games"),/NaN|undefined|Invalid Date/);}
+      for(const objective of ["brier","logloss","strict_wins"]){
+        await page.selectOption("#pick-objective",objective);
+        const actual=await page.locator('#games [data-game-id="2026_12_CHI_DET"]').count();
+        assert.equal(actual,1);
+        const body=await page.locator('#games [data-game-id="2026_12_CHI_DET"]').innerText();
+        const expected=objective==="strict_wins"?n206Snapshot.games.find(g=>g.id==="2026_12_CHI_DET").total:n206Snapshot.games.find(g=>g.id==="2026_12_CHI_DET").total.objective_options.find(r=>r.objective===objective);
+        assert(body.includes(expected.side+" "+expected.line));
+        assert(body.includes("Own coherent score law"));
+        await noOverflow();
+      }
+      for(const source of ["draftkings","kalshi","polymarket","all"]){
+        await page.selectOption("#book-source",source);
+        await count("#book-options tr",source==="all"?n206Snapshot.book_options.length:n206Snapshot.book_options.filter(q=>q.source===source).length);
+      }
+      await page.selectOption("#book-source","kalshi");await page.selectOption("#book-game","2026_12_NE_LAC");assert.match(await text("#book-options"),/No paired decimal offer/);
+      await page.locator("#direct-source").locator("xpath=ancestor::details[1]").locator("summary").click();assert.match(await text("#direct-source"),/exact settlement, push treatment and fees/);
+      await page.selectOption("#book-game","all");await page.selectOption("#book-source","draftkings");await page.selectOption("#book-target","total");
+      await count("#book-options tr",n206Snapshot.book_options.filter(q=>q.source==="draftkings"&&q.target==="total").length);
+      await page.selectOption("#book-target","all");await page.selectOption("#book-sort","value");
+      await count("#objective-metrics tr",n206Snapshot.objective_performance.length);await count("#replay-metrics tr",n206Snapshot.policy_replay.length);await count("#annual-metrics tr",n206Snapshot.annual_metrics.length);
+      await count("#distribution-metrics tr",n206Snapshot.score_distribution_performance.length);
+      for(const card of n206Snapshot.cards){await page.selectOption("#circa-basis",card.id);await count("#circa-five .pick",5);await count("#alternatives tr",card.alternatives.length);}
+      await page.selectOption("#circa-basis","circa_card_points");await count("#phone img",7);
+      for(const img of await page.locator("#phone img").all())await img.scrollIntoViewIfNeeded();
+      await page.waitForFunction(()=>[...document.querySelectorAll('#phone img')].every(img=>img.complete&&img.naturalWidth>0));
+      await noOverflow();await page.screenshot({path:path.join(output,`n206-${width}.png`),fullPage:true});
+    });
     await check(`${width}px: N205 current forecasts, full population, authentic prices and borrowed score provenance`,async()=>{
       await page.goto(new URL("week-12-field-notes/n205/",base).href,{waitUntil:"domcontentloaded"});
       await page.locator("#games .game").first().waitFor();
@@ -449,8 +546,8 @@ function verifyHostedHtml(observed, source, context) {
     await check(`${width}px: home opens the current release; older shared links still open the original dated slate`, async () => {
       await page.goto(base.href, { waitUntil: "domcontentloaded" });
       await noOverflow();
-      assert.match(await text("#n205-complete-population-notice"),/N205 completed/);
-      assert.equal(await page.locator('#n205-complete-population-notice a[href="week-12-field-notes/n205/"]').count(),1);
+      assert.match(await text("#n206-complete-population-notice"),/N206 completed/);
+      assert.equal(await page.locator('#n206-complete-population-notice a[href="week-12-field-notes/n206/"]').count(),1);
       assert.match(await page.locator("body").innerText(), /Week 12/i);
       assert(page.url().startsWith(base.href));
       assert.match(await text(".hero-stats"), /LAR by 4.66|Rams by 4.66/);
