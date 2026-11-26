@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="NFL Week 12: selected win probabilities, projected margins and totals, 2026 development selections and official Circa research comparisons from verified N202 evidence.">
+<meta name="theme-color" content="#0b1320">
+<title>NFL Week 12 · Spread & Totals · Sports Edge Lab</title>
+<link rel="stylesheet" href="board.css">
+<script src="board.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#slate">Skip to forecasts</a>
+<header class="mast"><a class="brand" href="/">SPORTS EDGE <span>LAB</span></a><nav aria-label="Primary"><a href="#slate">The slate</a><a href="#circa">Circa</a><a href="#evidence">Evidence</a><a href="#phone">Phone cards</a></nav></header>
+<main>
+<section class="hero">
+ <div class="eyebrow">NFL / WEEK 12 / N202 + FULL-163 REVIEW</div>
+ <div class="hero-grid"><div><h1>Spread <em>&</em> Totals.</h1><p class="intro">Every matchup. The selected forecasts.<br>The evidence behind each side.</p></div><div class="edition"><span class="tiny">VERIFIED OWNER SNAPSHOT</span><strong>November 25, 2026</strong><span>5:04 p.m. Pacific</span><p>These are saved research forecasts. Opening this page does not refresh its prices, availability reports or models.</p></div></div>
+ <div class="stats"><div><b>16</b><span>game outlooks</span></div><div><b>15</b><span>new roster issues</span></div><div><b>28<span>/32</span></b><span>club reports with rows</span></div><div><b>2026</b><span>spread & total selection</span></div></div>
+</section>
+<div class="notice"><span class="notice-mark">ALL 163 GAMES RESOLVED</span><p>Every ordinary policy now scores the same 163 completed games. A source-clock audit restored 11 games without changing their original timestamps. The spread selection changed; the total selection stayed the same. Training uses 2024–2025 and exposed validation uses 2026.</p></div>
+<section id="slate" class="section">
+ <div class="section-heading"><div><div class="eyebrow">THE MATCHUPS</div><h2>Your weekly board</h2></div><p>Win probability is an outright result. Spread probability is a different target.</p></div>
+ <div class="toolbar"><label>Forecast basis<select id="basis"><option value="v13">V13 selected objectives</option><option value="roster">Latest roster family</option></select></label><label>Games<select id="scope"><option value="all">All 16 games</option><option value="remaining">Remaining at snapshot</option><option value="thanksgiving">Thanksgiving Thursday</option></select></label><label>Sort<select id="sort"><option value="kickoff">Kickoff time</option><option value="spread">Spread confidence</option><option value="total">Total confidence</option></select></label><label class="search">Find a team<input id="search" type="search" placeholder="CHI, Bears, Detroit…"></label></div>
+ <p class="basis-note" id="basis-note">V13 winner uses the selected probability objective; margin and total use their selected MAE objectives. Different objectives can disagree. Issue times are shown per game.</p>
+ <p class="subtle">New ordinary side probabilities condition on a non-push result; push estimates are shown separately. Lines are saved DraftKings references via The Odds API, observed at 5:03 p.m. Pacific. No current executable price is implied.</p>
+ <p class="basis-note" id="correction-clock">Ordinary sides are reconstructed after the full-163 review using saved N202 inputs; the original forecast record remains preserved.</p>
+ <div id="game-count" class="count" aria-live="polite"></div><div id="games" class="game-grid"><p>Loading the verified snapshot…</p></div>
+</section>
+<section id="circa" class="section">
+ <div class="section-heading"><div><div class="eyebrow">OFFICIAL CONTEST LINES</div><h2>Circa picks & alternatives</h2></div><label>Saved policy<select id="circa-basis"><option value="standing">Standing original five</option><option value="circa_card_points">V13 expected card points</option><option value="circa_all_points">V13 all-game points</option><option value="circa_brier">V13 cover Brier</option><option value="roster">Roster research comparison</option></select></label></div>
+ <div class="notice amber"><p>The saved whole-slate cutoff was 5:00 p.m. Pacific on November 25. It had passed before N202 completed. The earlier standing five is preserved; the new roster card is a post-deadline research comparison. No contest entries were submitted.</p></div>
+ <p id="circa-description" class="subtle"></p><div id="circa-five" class="five-grid"></div>
+ <details open><summary>Every saved official side <span id="circa-count"></span></summary><div class="table-scroll"><table><thead><tr><th>Matchup</th><th>Side</th><th>Cover</th><th>Push</th><th>Expected points</th><th>Snapshot state</th></tr></thead><tbody id="alternatives"></tbody></table></div></details>
+ <p class="subtle">Expected contest points = P(cover) + 0.5 × P(push). The five contains five distinct games. Probability estimates do not guarantee a contest result.</p>
+</section>
+<section id="evidence" class="section">
+ <div class="section-heading"><div><div class="eyebrow">ALL 163 COMPLETED GAMES</div><h2>What the records say</h2></div><p>Same 163-game population. Selected results and earlier-week replay stay separate.</p></div>
+ <div id="performance" class="performance-grid"></div>
+ <p class="subtle">The full-163 audit separates the inclusive weekly query boundary from the actual input observation times. All 11 previously excluded games had strictly pregame observations. Original timestamps stay unchanged. All 96 saved policies were rescored without a new fit; this historical selection remains exposed to 2026 outcomes.</p>
+ <details><summary>All 163 completed games: selected-policy and earlier-week replay grades</summary><div class="table-scroll"><table><thead><tr><th>Week</th><th>Matchup</th><th>Spread selected</th><th>Total selected</th><th>Spread replay</th><th>Total replay</th></tr></thead><tbody id="completed-games"></tbody></table></div></details>
+ <details><summary>The 11 restored games and their observed market clocks</summary><div class="table-scroll"><table><thead><tr><th>Week</th><th>Matchup</th><th>Spread</th><th>Total</th><th>Market observation</th><th>Kickoff</th></tr></thead><tbody id="restored-games"></tbody></table></div><p class="subtle">The complete audit also checks football, schedule, quarterback, venue and available clinical source clocks. The observed market clock alone is not the eligibility test.</p></details>
+ <details><summary>Native Kalshi validation, reconciled to all 163 games</summary><div class="table-scroll"><table><thead><tr><th>Target</th><th>Horizon</th><th>Selected 2026 classifications</th><th>Earlier-week replay</th><th>Population</th></tr></thead><tbody id="kalshi-performance"></tbody></table></div><p class="subtle">Each horizon retains 163 completed games and labels missing source-qualified observations unresolved. No 2024 native spread/total history was available in the source bank. Selection was developed with prior 2026 exposure. No independent future resolutions have yet been recorded for these candidate policies.</p></details>
+ <div class="method-grid"><article><h3>Original V13</h3><p>Winner, point forecasts and original Circa policies retain the historical 2024/2025 selection protocol. Their 2026 monitoring remains exposed. Each view preserves the original forecast clock.</p></article><article><h3>Full-163 ordinary selection</h3><p>N202 made 144 score-estimator fits and 48 calibration fits. This correction rescored all 96 saved policies on 163 games with zero additional fits. The selected spread and total families use calibrated Extra Trees. The earlier-week replay provides the more cautious comparison.</p></article><article><h3>Availability has its own clock</h3><p>28 club reports supplied 273 player rows. Fifteen remaining games received roster-family issues at 5:04 p.m.; seven games had changed inputs. The ordinary models retain football inputs from November 24, 6:39 p.m. Pacific. Reselection does not refresh them.</p></article></div>
+ <details><summary>Source clocks and verification</summary><div id="provenance" class="provenance"></div></details>
+</section>
+<section id="phone" class="section">
+ <div class="section-heading"><div><div class="eyebrow">READY TO SHARE</div><h2>The phone edition</h2></div><p>Four forecast sheets, a preserved Circa five, and every remaining roster comparison.</p></div>
+ <div class="phone-grid">
+  <a href="N202-games-1.png"><img src="N202-games-1.png" alt="N202 first four game forecasts" loading="lazy"><span>Games 1–4</span></a>
+  <a href="N202-games-2.png"><img src="N202-games-2.png" alt="N202 game forecasts five through eight" loading="lazy"><span>Games 5–8</span></a>
+  <a href="N202-games-3.png"><img src="N202-games-3.png" alt="N202 game forecasts nine through twelve" loading="lazy"><span>Games 9–12</span></a>
+  <a href="N202-games-4.png"><img src="N202-games-4.png" alt="N202 game forecasts thirteen through sixteen" loading="lazy"><span>Games 13–16</span></a>
+  <a href="N202-Circa-five.png"><img src="N202-Circa-five.png" alt="Preserved standing Circa five selected before the saved cutoff" loading="lazy"><span>Original Circa five</span></a>
+  <a href="N202-Circa-options-1.png"><img src="N202-Circa-options-1.png" alt="First eight remaining games and both official sides, roster comparison" loading="lazy"><span>Circa alternatives 1</span></a>
+  <a href="N202-Circa-options-2.png"><img src="N202-Circa-options-2.png" alt="Last seven remaining games and both official sides, roster comparison" loading="lazy"><span>Circa alternatives 2</span></a>
+ </div>
+</section>
+<footer><a class="brand" href="/">SPORTS EDGE <span>LAB</span></a><p>NFL research · V13 / N202 · Snapshot, November 25, 2026</p><div><a href="../">Earlier field notes & injury detail</a><a href="snapshot.json">Selected public data</a><a href="https://github.com/alvaromendizabal/sports-edge-lab/tree/main/tracks/nfl/current">GitHub evidence</a></div></footer>
+</main>
+</body></html>
