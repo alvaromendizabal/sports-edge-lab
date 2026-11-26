@@ -24,6 +24,9 @@ def font(size, bold=False):
 
 
 def text(d, xy, value, size=30, color=INK, bold=False):
+    bounds = d.textbbox(xy, str(value), font=font(size, bold))
+    if bounds[0] < 0 or bounds[1] < 0 or bounds[2] > 1080 or bounds[3] > 1920:
+        raise ValueError("Text would clip the phone graphic: " + str(value))
     d.text(xy, str(value), font=font(size, bold), fill=color)
 
 
@@ -62,7 +65,7 @@ def canvas(subtitle, index=None):
     text(d, (60, 44), "SPORTS EDGE LAB  /  NBA", 29, "#9cd7c8", True)
     text(d, (60, 103), "Spread & Totals", 76, "#ffffff", True)
     text(d, (60, 210), subtitle, 35, "#e0e8ef", True)
-    text(d, (60, 273), "B119 partial · 0 new fits · B120 owner launch pending", 25, "#bbcad8")
+    text(d, (60, 273), "B119 saved outlooks · R1 preparation snapshot", 25, "#bbcad8")
     if index:
         text(d, (920, 46), index, 24, "#bbcad8")
     return img, d
@@ -115,13 +118,17 @@ def main():
             for g in selected:
                 draw_game(d, g, y)
                 y += 238
-            footer_y = 1635
+            footer_y = 1618
             d.line((60, footer_y - 22, 1020, footer_y - 22), fill=LINE, width=2)
-            text(d, (60, footer_y), "Saved issue clocks", 24, TEAL, True)
-            text(d, (60, footer_y + 40), "Winner / margin: " + issue_summary(selected, "winner"), 24, MUTED)
-            text(d, (60, footer_y + 78), "Totals: " + issue_summary(selected, "total"), 24, MUTED)
-            text(d, (60, footer_y + 116), "Source census: " + clock(data["source_observed_at_utc"]), 24, MUTED)
-            paragraph(d, (60, footer_y + 162), "No admitted Kalshi contracts, sides or prices. Historical PIT and calibration qualification remain incomplete. Nominal horizon is not issue time.", 960, 23, MUTED, 32)
+            text(d, (60, footer_y), "Saved issue clocks", 23, TEAL, True)
+            text(d, (60, footer_y + 34), "Winner / margin: " + issue_summary(selected, "winner"), 22, MUTED)
+            text(d, (60, footer_y + 66), "Totals: " + issue_summary(selected, "total"), 22, MUTED)
+            text(d, (60, footer_y + 98), "Source census: " + clock(data["source_observed_at_utc"]), 22, MUTED)
+            text(d, (60, footer_y + 134), "B120 recovery blocked · status " + clock(data["owner_execution_status_asof_utc"]), 22, INK, True)
+            text(d, (60, footer_y + 166), "No R1 owner results in this preparation snapshot.", 22, MUTED)
+            text(d, (60, footer_y + 202), "0 qualified contracts; PIT / calibration incomplete.", 21, MUTED)
+            text(d, (60, footer_y + 232), "Nominal horizon is not issue time. No source refresh.", 21, MUTED)
+            text(d, (60, footer_y + 262), "Repository assets only · public hosting unverified.", 21, MUTED)
             p = OUT / f"nba_{date}_page_{i+1:02d}.png"
             img.save(p, optimize=True)
             outputs.append({"file": p.name, "game_ids": [g["game_id"] for g in selected], "width": 1080, "height": 1920, "sha256": hashlib.sha256(p.read_bytes()).hexdigest()})
@@ -134,12 +141,17 @@ def main():
     paragraph(d,(60,1070),"Equal annual weights select the displayed log-loss winner and RMSE point roles. Previously inspected 2026–27 results are report-only; no production promotion is claimed.",960,29,MUTED,43)
     text(d,(60,1275),"Know the two clocks",35,INK,True)
     paragraph(d,(60,1330),"Nov 25 onward winner and margin issues were saved Nov 25 at 11:40 AM PST. Totals retain their Nov 19, 2:10 PM PST outlook. Miami at Cleveland on Nov 29 has no matching saved total issue.",960,29,MUTED,43)
-    paragraph(d,(60,1560),"Source census: Nov 25, 11:34 AM PST. B119 preserved a partial return after 2,140 publication-task failures (1,200 frontier + 940 legacy) and 0 new fits. B120 owner launch is pending. Historical PIT and calibration qualification remain incomplete.",960,27,MUTED,40)
-    text(d,(60,1818),"NBA Spread & Totals · analytical research",28,TEAL,True)
+    text(d,(60,1555),"B120 recovery blocked · recorded checkpoint",27,INK,True)
+    text(d,(60,1596),"Status as of " + clock(data["owner_execution_status_asof_utc"]),23,MUTED)
+    text(d,(60,1633),"No R1 owner results in this preparation snapshot.",25,TEAL,True)
+    paragraph(d,(60,1680),"B119 partial: 2,140 publication-task failures (1,200 frontier + 940 legacy); 0 new fits. Saved forecasts remain unchanged.",960,25,MUTED,35)
+    text(d,(60,1762),"Source census: " + clock(data["source_observed_at_utc"]),23,MUTED)
+    text(d,(60,1806),"PIT / calibration incomplete; no admitted sides or prices.",23,MUTED)
+    text(d,(60,1860),"Repository assets only · public hosting unverified.",23,TEAL,True)
     p=OUT/'nba_2026-11-23_week_overview.png';img.save(p,optimize=True)
     outputs.insert(0,{"file":p.name,"game_ids":[],"width":1080,"height":1920,"sha256":hashlib.sha256(p.read_bytes()).hexdigest()})
     assert sorted(gid for r in outputs for gid in r["game_ids"]) == sorted(g["game_id"] for g in week)
-    (OUT/'manifest.json').write_text(json.dumps({"schema":"public.nba.phone_graphics.v1","source_projection_sha256":hashlib.sha256(DATA.read_bytes()).hexdigest(),"games":48,"images":outputs},indent=2)+'\n')
+    (OUT/'manifest.json').write_text(json.dumps({"schema":"public.nba.phone_graphics.v1","source_projection_sha256":hashlib.sha256(DATA.read_bytes()).hexdigest(),"games":48,"images":outputs,"snapshot_label":"B119 saved outlooks · R1 preparation snapshot","owner_status_asof_utc":data["owner_execution_status_asof_utc"],"owner_status":"B120 recovery blocked at recorded checkpoint","R1_owner_results_included":False,"forecasts_changed_by_graphics_generation":False,"publication_status":"Repository assets only; public hosting unverified"},indent=2)+'\n')
     print(json.dumps({"images":len(outputs),"covered_games":48,"bytes":sum(p.stat().st_size for p in OUT.glob('*.png'))}))
 
 

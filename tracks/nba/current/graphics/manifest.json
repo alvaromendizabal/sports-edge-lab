@@ -1,6 +1,6 @@
 {
   "schema": "public.nba.phone_graphics.v1",
-  "source_projection_sha256": "731275468f869ac929be6c359194ecc179fa0f47616d2c52e70b645f4bfe545b",
+  "source_projection_sha256": "57e059b672227565c1dfe98c3ca169fdec4de980e33cab570de2e6b2d0bfe848",
   "games": 48,
   "images": [
     {
@@ -8,7 +8,7 @@
       "game_ids": [],
       "width": 1080,
       "height": 1920,
-      "sha256": "78ce48c0ba4f00b3caf5c533979a9bea68538802cb78d900d07d4d26855dd270"
+      "sha256": "931b6784e2431900ba78651ae966abaeaec7bc2dc22a9218c40ccdd5884b3eea"
     },
     {
       "file": "nba_2026-11-23_page_01.png",
@@ -21,7 +21,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "bf4c38b3a19feb8da93f5da3c76edbecc0345b9066e1f02285ff77f8daa02168"
+      "sha256": "54649b780dc46a75cefd2a0991d23c1856fdfe40332890d408a716a026f5e5e8"
     },
     {
       "file": "nba_2026-11-23_page_02.png",
@@ -34,7 +34,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "1bd2e04e16d88db57425ed1f6f38d5f08281fe6f4d93fca267f3c8f372a8a82b"
+      "sha256": "c293e9c12b95d9f335eb539c25b0031466cc3f9a26ffa2236fcb806bba67aab5"
     },
     {
       "file": "nba_2026-11-24_page_01.png",
@@ -45,7 +45,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "a999e2d4cc7b351ca8dc6b2e230354640c742d55e5c1cb7545bfb1dcbe997335"
+      "sha256": "4cf25b109b21399cf7db585a569f1ab3ceec05c194eb6a7e3763c21cb7e98055"
     },
     {
       "file": "nba_2026-11-25_page_01.png",
@@ -58,7 +58,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "a1f1707243d8d8b5d33123daadfffa34001895ca9392a70f10044ef0c7a86219"
+      "sha256": "052ccdc1128a7670615c3eae6a30202a43c334dd4b94c58d3be8b771f71a73e4"
     },
     {
       "file": "nba_2026-11-25_page_02.png",
@@ -70,7 +70,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "27dcc1a46f68b21abbe6f2e960414a2b54dacf9ab55958a2bb8e60d43717b1ee"
+      "sha256": "6a6fb493d119e4e66379448d4e8ec80afddd9c93919ec47f8f0ba17eb57d75a5"
     },
     {
       "file": "nba_2026-11-27_page_01.png",
@@ -83,7 +83,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "1510db26a9240baab9f1ca155a1f2634dd2bb176c4ec266fcb5919fbdab9eba3"
+      "sha256": "0a5c1734305a07a69e78055f56e9d00ec2c4256f50e5dff7ec26c6e9bc0415de"
     },
     {
       "file": "nba_2026-11-27_page_02.png",
@@ -96,7 +96,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "a4bc3ea28a68a2b4dfe2587f59050bf598212167e6459287baa530ded1c81503"
+      "sha256": "e885ab29208f357b4f01b44c95ad1f211ce01b9b7093db83a191a42b34fd29ce"
     },
     {
       "file": "nba_2026-11-27_page_03.png",
@@ -105,7 +105,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "5c0dbab6e51aa5c4b19f57a84bf18e42444cf322a90dadf442280f52c458c064"
+      "sha256": "0466306136b4b555409956c9e94625e61b6cab103ab624df04211f6f9d5d0cf7"
     },
     {
       "file": "nba_2026-11-28_page_01.png",
@@ -118,7 +118,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "51e45c5459a444c38e1de0ce4a131077a9c09eeaee7b862dc07a544bacbb06eb"
+      "sha256": "b5414cef453c346f0027d5875f77602f55625431b05a94e5e14f281d8b2695d8"
     },
     {
       "file": "nba_2026-11-29_page_01.png",
@@ -131,7 +131,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "5b3dd8fb35ff3f24acd4cc9fccc06c745a2429b0ef9e44b3e2d47117c26dcd91"
+      "sha256": "e05338d23bc5492e6f1797dace5e62305407779912f00adaf7be78bb339e2e60"
     },
     {
       "file": "nba_2026-11-29_page_02.png",
@@ -144,7 +144,13 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "6d9d9bb71e0fff4741b8d770ee92af2cf7ef6e55202f626f488bace5914f10be"
+      "sha256": "9d6bc5bf2dac717a67a61a4e033920f304aec3df732dd7a1db631fc3fafb3eae"
     }
-  ]
+  ],
+  "snapshot_label": "B119 saved outlooks \u00b7 R1 preparation snapshot",
+  "owner_status_asof_utc": "2026-11-26T00:26:23.282535Z",
+  "owner_status": "B120 recovery blocked at recorded checkpoint",
+  "R1_owner_results_included": false,
+  "forecasts_changed_by_graphics_generation": false,
+  "publication_status": "Repository assets only; public hosting unverified"
 }

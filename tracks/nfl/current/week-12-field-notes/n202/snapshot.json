@@ -1005,7 +1005,9 @@
           "team": "ATL",
           "p_cover": 0.4887,
           "p_push": 0.0344,
-          "expected_points": 0.506
+          "expected_points": 0.506,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_ATL_MIN",
@@ -1014,7 +1016,9 @@
           "team": "MIN",
           "p_cover": 0.4768,
           "p_push": 0.0344,
-          "expected_points": 0.494
+          "expected_points": 0.494,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_BAL_HOU",
@@ -1023,7 +1027,9 @@
           "team": "BAL",
           "p_cover": 0.5246,
           "p_push": 0.0,
-          "expected_points": 0.5246
+          "expected_points": 0.5246,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_BAL_HOU",
@@ -1032,7 +1038,9 @@
           "team": "HOU",
           "p_cover": 0.4754,
           "p_push": 0.0,
-          "expected_points": 0.4754
+          "expected_points": 0.4754,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_CAR_TB",
@@ -1041,7 +1049,9 @@
           "team": "CAR",
           "p_cover": 0.4852,
           "p_push": 0.0534,
-          "expected_points": 0.5119
+          "expected_points": 0.5119,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_CAR_TB",
@@ -1050,7 +1060,9 @@
           "team": "TB",
           "p_cover": 0.4614,
           "p_push": 0.0534,
-          "expected_points": 0.4881
+          "expected_points": 0.4881,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_CHI_DET",
@@ -1059,7 +1071,9 @@
           "team": "CHI",
           "p_cover": 0.4515,
           "p_push": 0.0331,
-          "expected_points": 0.4681
+          "expected_points": 0.4681,
+          "deadline_if_included_utc": "2026-11-26T18:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_CHI_DET",
@@ -1068,7 +1082,9 @@
           "team": "DET",
           "p_cover": 0.5154,
           "p_push": 0.0331,
-          "expected_points": 0.5319
+          "expected_points": 0.5319,
+          "deadline_if_included_utc": "2026-11-26T18:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_DEN_PIT",
@@ -1077,7 +1093,9 @@
           "team": "DEN",
           "p_cover": 0.4531,
           "p_push": 0.0,
-          "expected_points": 0.4531
+          "expected_points": 0.4531,
+          "deadline_if_included_utc": "2026-11-27T20:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_DEN_PIT",
@@ -1086,7 +1104,9 @@
           "team": "PIT",
           "p_cover": 0.5469,
           "p_push": 0.0,
-          "expected_points": 0.5469
+          "expected_points": 0.5469,
+          "deadline_if_included_utc": "2026-11-27T20:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_GB_LA",
@@ -1095,7 +1115,9 @@
           "team": "GB",
           "p_cover": 0.4391,
           "p_push": 0.0,
-          "expected_points": 0.4391
+          "expected_points": 0.4391,
+          "deadline_if_included_utc": "2026-11-26T01:00:00+00:00",
+          "timing_open_at_snapshot": false
         },
         {
           "game_id": "2026_12_GB_LA",
@@ -1104,7 +1126,9 @@
           "team": "LAR",
           "p_cover": 0.5609,
           "p_push": 0.0,
-          "expected_points": 0.5609
+          "expected_points": 0.5609,
+          "deadline_if_included_utc": "2026-11-26T01:00:00+00:00",
+          "timing_open_at_snapshot": false
         },
         {
           "game_id": "2026_12_KC_BUF",
@@ -1113,7 +1137,9 @@
           "team": "KC",
           "p_cover": 0.4644,
           "p_push": 0.0,
-          "expected_points": 0.4644
+          "expected_points": 0.4644,
+          "deadline_if_included_utc": "2026-11-27T01:20:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_KC_BUF",
@@ -1122,7 +1148,9 @@
           "team": "BUF",
           "p_cover": 0.5356,
           "p_push": 0.0,
-          "expected_points": 0.5356
+          "expected_points": 0.5356,
+          "deadline_if_included_utc": "2026-11-27T01:20:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_LV_CLE",
@@ -1131,7 +1159,9 @@
           "team": "LV",
           "p_cover": 0.5842,
           "p_push": 0.0,
-          "expected_points": 0.5842
+          "expected_points": 0.5842,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_LV_CLE",
@@ -1140,7 +1170,9 @@
           "team": "CLE",
           "p_cover": 0.4158,
           "p_push": 0.0,
-          "expected_points": 0.4158
+          "expected_points": 0.4158,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_NE_LAC",
@@ -1149,7 +1181,9 @@
           "team": "NE",
           "p_cover": 0.5743,
           "p_push": 0.0296,
-          "expected_points": 0.5891
+          "expected_points": 0.5891,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_NE_LAC",
@@ -1158,7 +1192,9 @@
           "team": "LAC",
           "p_cover": 0.3961,
           "p_push": 0.0296,
-          "expected_points": 0.4109
+          "expected_points": 0.4109,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_NO_CIN",
@@ -1167,7 +1203,9 @@
           "team": "NO",
           "p_cover": 0.4362,
           "p_push": 0.0314,
-          "expected_points": 0.4519
+          "expected_points": 0.4519,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_NO_CIN",
@@ -1176,7 +1214,9 @@
           "team": "CIN",
           "p_cover": 0.5324,
           "p_push": 0.0314,
-          "expected_points": 0.5481
+          "expected_points": 0.5481,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_NYG_IND",
@@ -1185,7 +1225,9 @@
           "team": "NYG",
           "p_cover": 0.4847,
           "p_push": 0.0,
-          "expected_points": 0.4847
+          "expected_points": 0.4847,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_NYG_IND",
@@ -1194,7 +1236,9 @@
           "team": "IND",
           "p_cover": 0.5153,
           "p_push": 0.0,
-          "expected_points": 0.5153
+          "expected_points": 0.5153,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_NYJ_MIA",
@@ -1203,7 +1247,9 @@
           "team": "NYJ",
           "p_cover": 0.466,
           "p_push": 0.0,
-          "expected_points": 0.466
+          "expected_points": 0.466,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_NYJ_MIA",
@@ -1212,7 +1258,9 @@
           "team": "MIA",
           "p_cover": 0.534,
           "p_push": 0.0,
-          "expected_points": 0.534
+          "expected_points": 0.534,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_PHI_DAL",
@@ -1221,7 +1269,9 @@
           "team": "PHI",
           "p_cover": 0.5445,
           "p_push": 0.0,
-          "expected_points": 0.5445
+          "expected_points": 0.5445,
+          "deadline_if_included_utc": "2026-11-26T21:30:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_PHI_DAL",
@@ -1230,7 +1280,9 @@
           "team": "DAL",
           "p_cover": 0.4555,
           "p_push": 0.0,
-          "expected_points": 0.4555
+          "expected_points": 0.4555,
+          "deadline_if_included_utc": "2026-11-26T21:30:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_SEA_SF",
@@ -1239,7 +1291,9 @@
           "team": "SEA",
           "p_cover": 0.4583,
           "p_push": 0.0479,
-          "expected_points": 0.4822
+          "expected_points": 0.4822,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_SEA_SF",
@@ -1248,7 +1302,9 @@
           "team": "SF",
           "p_cover": 0.4938,
           "p_push": 0.0479,
-          "expected_points": 0.5178
+          "expected_points": 0.5178,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_TEN_JAX",
@@ -1257,7 +1313,9 @@
           "team": "TEN",
           "p_cover": 0.4611,
           "p_push": 0.0,
-          "expected_points": 0.4611
+          "expected_points": 0.4611,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_TEN_JAX",
@@ -1266,7 +1324,9 @@
           "team": "JAX",
           "p_cover": 0.5389,
           "p_push": 0.0,
-          "expected_points": 0.5389
+          "expected_points": 0.5389,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_WAS_ARI",
@@ -1275,7 +1335,9 @@
           "team": "WAS",
           "p_cover": 0.4234,
           "p_push": 0.0352,
-          "expected_points": 0.4411
+          "expected_points": 0.4411,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_WAS_ARI",
@@ -1284,12 +1346,16 @@
           "team": "ARI",
           "p_cover": 0.5413,
           "p_push": 0.0352,
-          "expected_points": 0.5589
+          "expected_points": 0.5589,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         }
       ],
       "worksheet_sha256": "a285ad773fb87e15acdcf098474e1eab84d0a7bc4b5601ffb285cf5590e5701f",
-      "entries": 0,
-      "post_deadline": false
+      "deadline_utc": "2026-11-26T01:00:00+00:00",
+      "timing_open_at_snapshot": false,
+      "workflow_submission_actions": 0,
+      "forecast_custody": "PRESERVED_ORIGINAL_N195_FIVE"
     },
     {
       "id": "roster",
@@ -1350,7 +1416,9 @@
           "team": "ATL",
           "p_cover": 0.5262,
           "p_push": 0.0326,
-          "expected_points": 0.5425
+          "expected_points": 0.5425,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_ATL_MIN",
@@ -1359,7 +1427,9 @@
           "team": "MIN",
           "p_cover": 0.4412,
           "p_push": 0.0326,
-          "expected_points": 0.4575
+          "expected_points": 0.4575,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_BAL_HOU",
@@ -1368,7 +1438,9 @@
           "team": "BAL",
           "p_cover": 0.5533,
           "p_push": 0.0,
-          "expected_points": 0.5533
+          "expected_points": 0.5533,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_BAL_HOU",
@@ -1377,7 +1449,9 @@
           "team": "HOU",
           "p_cover": 0.4467,
           "p_push": 0.0,
-          "expected_points": 0.4467
+          "expected_points": 0.4467,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_CAR_TB",
@@ -1386,7 +1460,9 @@
           "team": "CAR",
           "p_cover": 0.4638,
           "p_push": 0.0434,
-          "expected_points": 0.4855
+          "expected_points": 0.4855,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_CAR_TB",
@@ -1395,7 +1471,9 @@
           "team": "TB",
           "p_cover": 0.4928,
           "p_push": 0.0434,
-          "expected_points": 0.5145
+          "expected_points": 0.5145,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_CHI_DET",
@@ -1404,7 +1482,9 @@
           "team": "CHI",
           "p_cover": 0.4099,
           "p_push": 0.0201,
-          "expected_points": 0.4199
+          "expected_points": 0.4199,
+          "deadline_if_included_utc": "2026-11-26T18:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_CHI_DET",
@@ -1413,7 +1493,9 @@
           "team": "DET",
           "p_cover": 0.57,
           "p_push": 0.0201,
-          "expected_points": 0.5801
+          "expected_points": 0.5801,
+          "deadline_if_included_utc": "2026-11-26T18:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_DEN_PIT",
@@ -1422,7 +1504,9 @@
           "team": "DEN",
           "p_cover": 0.3544,
           "p_push": 0.0,
-          "expected_points": 0.3544
+          "expected_points": 0.3544,
+          "deadline_if_included_utc": "2026-11-27T20:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_DEN_PIT",
@@ -1431,7 +1515,9 @@
           "team": "PIT",
           "p_cover": 0.6456,
           "p_push": 0.0,
-          "expected_points": 0.6456
+          "expected_points": 0.6456,
+          "deadline_if_included_utc": "2026-11-27T20:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_KC_BUF",
@@ -1440,7 +1526,9 @@
           "team": "KC",
           "p_cover": 0.4004,
           "p_push": 0.0,
-          "expected_points": 0.4004
+          "expected_points": 0.4004,
+          "deadline_if_included_utc": "2026-11-27T01:20:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_KC_BUF",
@@ -1449,7 +1537,9 @@
           "team": "BUF",
           "p_cover": 0.5996,
           "p_push": 0.0,
-          "expected_points": 0.5996
+          "expected_points": 0.5996,
+          "deadline_if_included_utc": "2026-11-27T01:20:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_LV_CLE",
@@ -1458,7 +1548,9 @@
           "team": "LV",
           "p_cover": 0.5399,
           "p_push": 0.0,
-          "expected_points": 0.5399
+          "expected_points": 0.5399,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_LV_CLE",
@@ -1467,7 +1559,9 @@
           "team": "CLE",
           "p_cover": 0.4601,
           "p_push": 0.0,
-          "expected_points": 0.4601
+          "expected_points": 0.4601,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_NE_LAC",
@@ -1476,7 +1570,9 @@
           "team": "NE",
           "p_cover": 0.6051,
           "p_push": 0.0442,
-          "expected_points": 0.6272
+          "expected_points": 0.6272,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_NE_LAC",
@@ -1485,7 +1581,9 @@
           "team": "LAC",
           "p_cover": 0.3507,
           "p_push": 0.0442,
-          "expected_points": 0.3728
+          "expected_points": 0.3728,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_NO_CIN",
@@ -1494,7 +1592,9 @@
           "team": "NO",
           "p_cover": 0.5551,
           "p_push": 0.0402,
-          "expected_points": 0.5752
+          "expected_points": 0.5752,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_NO_CIN",
@@ -1503,7 +1603,9 @@
           "team": "CIN",
           "p_cover": 0.4047,
           "p_push": 0.0402,
-          "expected_points": 0.4248
+          "expected_points": 0.4248,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_NYG_IND",
@@ -1512,7 +1614,9 @@
           "team": "NYG",
           "p_cover": 0.4066,
           "p_push": 0.0,
-          "expected_points": 0.4066
+          "expected_points": 0.4066,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_NYG_IND",
@@ -1521,7 +1625,9 @@
           "team": "IND",
           "p_cover": 0.5934,
           "p_push": 0.0,
-          "expected_points": 0.5934
+          "expected_points": 0.5934,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_NYJ_MIA",
@@ -1530,7 +1636,9 @@
           "team": "NYJ",
           "p_cover": 0.2777,
           "p_push": 0.0,
-          "expected_points": 0.2777
+          "expected_points": 0.2777,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_NYJ_MIA",
@@ -1539,7 +1647,9 @@
           "team": "MIA",
           "p_cover": 0.7223,
           "p_push": 0.0,
-          "expected_points": 0.7223
+          "expected_points": 0.7223,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_PHI_DAL",
@@ -1548,7 +1658,9 @@
           "team": "PHI",
           "p_cover": 0.6227,
           "p_push": 0.0,
-          "expected_points": 0.6227
+          "expected_points": 0.6227,
+          "deadline_if_included_utc": "2026-11-26T21:30:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_PHI_DAL",
@@ -1557,7 +1669,9 @@
           "team": "DAL",
           "p_cover": 0.3773,
           "p_push": 0.0,
-          "expected_points": 0.3773
+          "expected_points": 0.3773,
+          "deadline_if_included_utc": "2026-11-26T21:30:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_SEA_SF",
@@ -1566,7 +1680,9 @@
           "team": "SEA",
           "p_cover": 0.4904,
           "p_push": 0.0386,
-          "expected_points": 0.5097
+          "expected_points": 0.5097,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_SEA_SF",
@@ -1575,7 +1691,9 @@
           "team": "SF",
           "p_cover": 0.471,
           "p_push": 0.0386,
-          "expected_points": 0.4903
+          "expected_points": 0.4903,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_TEN_JAX",
@@ -1584,7 +1702,9 @@
           "team": "TEN",
           "p_cover": 0.5715,
           "p_push": 0.0,
-          "expected_points": 0.5715
+          "expected_points": 0.5715,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_TEN_JAX",
@@ -1593,7 +1713,9 @@
           "team": "JAX",
           "p_cover": 0.4285,
           "p_push": 0.0,
-          "expected_points": 0.4285
+          "expected_points": 0.4285,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_WAS_ARI",
@@ -1602,7 +1724,9 @@
           "team": "WAS",
           "p_cover": 0.4174,
           "p_push": 0.0344,
-          "expected_points": 0.4346
+          "expected_points": 0.4346,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_WAS_ARI",
@@ -1611,12 +1735,16 @@
           "team": "ARI",
           "p_cover": 0.5482,
           "p_push": 0.0344,
-          "expected_points": 0.5654
+          "expected_points": 0.5654,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         }
       ],
       "worksheet_sha256": "a285ad773fb87e15acdcf098474e1eab84d0a7bc4b5601ffb285cf5590e5701f",
-      "entries": 0,
-      "post_deadline": true
+      "deadline_utc": "2026-11-26T21:30:00+00:00",
+      "timing_open_at_snapshot": true,
+      "workflow_submission_actions": 0,
+      "forecast_custody": "SAVED_ROSTER_RESEARCH_ISSUE"
     },
     {
       "id": "circa_card_points",
@@ -1677,7 +1805,9 @@
           "team": "ATL",
           "p_cover": 0.463,
           "p_push": 0.0183,
-          "expected_points": 0.4721
+          "expected_points": 0.4721,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_ATL_MIN",
@@ -1686,7 +1816,9 @@
           "team": "MIN",
           "p_cover": 0.5188,
           "p_push": 0.0183,
-          "expected_points": 0.5279
+          "expected_points": 0.5279,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_BAL_HOU",
@@ -1695,7 +1827,9 @@
           "team": "BAL",
           "p_cover": 0.427,
           "p_push": 0.0,
-          "expected_points": 0.427
+          "expected_points": 0.427,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_BAL_HOU",
@@ -1704,7 +1838,9 @@
           "team": "HOU",
           "p_cover": 0.573,
           "p_push": 0.0,
-          "expected_points": 0.573
+          "expected_points": 0.573,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_CAR_TB",
@@ -1713,7 +1849,9 @@
           "team": "CAR",
           "p_cover": 0.4052,
           "p_push": 0.0342,
-          "expected_points": 0.4223
+          "expected_points": 0.4223,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_CAR_TB",
@@ -1722,7 +1860,9 @@
           "team": "TB",
           "p_cover": 0.5606,
           "p_push": 0.0342,
-          "expected_points": 0.5777
+          "expected_points": 0.5777,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_CHI_DET",
@@ -1731,7 +1871,9 @@
           "team": "CHI",
           "p_cover": 0.5442,
           "p_push": 0.0297,
-          "expected_points": 0.5591
+          "expected_points": 0.5591,
+          "deadline_if_included_utc": "2026-11-26T18:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_CHI_DET",
@@ -1740,7 +1882,9 @@
           "team": "DET",
           "p_cover": 0.4261,
           "p_push": 0.0297,
-          "expected_points": 0.4409
+          "expected_points": 0.4409,
+          "deadline_if_included_utc": "2026-11-26T18:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_DEN_PIT",
@@ -1749,7 +1893,9 @@
           "team": "DEN",
           "p_cover": 0.548,
           "p_push": 0.0,
-          "expected_points": 0.548
+          "expected_points": 0.548,
+          "deadline_if_included_utc": "2026-11-27T20:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_DEN_PIT",
@@ -1758,7 +1904,9 @@
           "team": "PIT",
           "p_cover": 0.452,
           "p_push": 0.0,
-          "expected_points": 0.452
+          "expected_points": 0.452,
+          "deadline_if_included_utc": "2026-11-27T20:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_KC_BUF",
@@ -1767,7 +1915,9 @@
           "team": "KC",
           "p_cover": 0.4093,
           "p_push": 0.0,
-          "expected_points": 0.4093
+          "expected_points": 0.4093,
+          "deadline_if_included_utc": "2026-11-27T01:20:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_KC_BUF",
@@ -1776,7 +1926,9 @@
           "team": "BUF",
           "p_cover": 0.5907,
           "p_push": 0.0,
-          "expected_points": 0.5907
+          "expected_points": 0.5907,
+          "deadline_if_included_utc": "2026-11-27T01:20:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_LV_CLE",
@@ -1785,7 +1937,9 @@
           "team": "LV",
           "p_cover": 0.4792,
           "p_push": 0.0,
-          "expected_points": 0.4792
+          "expected_points": 0.4792,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_LV_CLE",
@@ -1794,7 +1948,9 @@
           "team": "CLE",
           "p_cover": 0.5208,
           "p_push": 0.0,
-          "expected_points": 0.5208
+          "expected_points": 0.5208,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_NE_LAC",
@@ -1803,7 +1959,9 @@
           "team": "NE",
           "p_cover": 0.5407,
           "p_push": 0.0266,
-          "expected_points": 0.5541
+          "expected_points": 0.5541,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_NE_LAC",
@@ -1812,7 +1970,9 @@
           "team": "LAC",
           "p_cover": 0.4326,
           "p_push": 0.0266,
-          "expected_points": 0.4459
+          "expected_points": 0.4459,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_NO_CIN",
@@ -1821,7 +1981,9 @@
           "team": "NO",
           "p_cover": 0.4969,
           "p_push": 0.0147,
-          "expected_points": 0.5042
+          "expected_points": 0.5042,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_NO_CIN",
@@ -1830,7 +1992,9 @@
           "team": "CIN",
           "p_cover": 0.4885,
           "p_push": 0.0147,
-          "expected_points": 0.4958
+          "expected_points": 0.4958,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_NYG_IND",
@@ -1839,7 +2003,9 @@
           "team": "NYG",
           "p_cover": 0.525,
           "p_push": 0.0,
-          "expected_points": 0.525
+          "expected_points": 0.525,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_NYG_IND",
@@ -1848,7 +2014,9 @@
           "team": "IND",
           "p_cover": 0.475,
           "p_push": 0.0,
-          "expected_points": 0.475
+          "expected_points": 0.475,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_NYJ_MIA",
@@ -1857,7 +2025,9 @@
           "team": "NYJ",
           "p_cover": 0.3702,
           "p_push": 0.0,
-          "expected_points": 0.3702
+          "expected_points": 0.3702,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_NYJ_MIA",
@@ -1866,7 +2036,9 @@
           "team": "MIA",
           "p_cover": 0.6298,
           "p_push": 0.0,
-          "expected_points": 0.6298
+          "expected_points": 0.6298,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_PHI_DAL",
@@ -1875,7 +2047,9 @@
           "team": "PHI",
           "p_cover": 0.4985,
           "p_push": 0.0,
-          "expected_points": 0.4985
+          "expected_points": 0.4985,
+          "deadline_if_included_utc": "2026-11-26T21:30:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_PHI_DAL",
@@ -1884,7 +2058,9 @@
           "team": "DAL",
           "p_cover": 0.5015,
           "p_push": 0.0,
-          "expected_points": 0.5015
+          "expected_points": 0.5015,
+          "deadline_if_included_utc": "2026-11-26T21:30:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_SEA_SF",
@@ -1893,7 +2069,9 @@
           "team": "SEA",
           "p_cover": 0.3852,
           "p_push": 0.0319,
-          "expected_points": 0.4011
+          "expected_points": 0.4011,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_SEA_SF",
@@ -1902,7 +2080,9 @@
           "team": "SF",
           "p_cover": 0.5829,
           "p_push": 0.0319,
-          "expected_points": 0.5989
+          "expected_points": 0.5989,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_TEN_JAX",
@@ -1911,7 +2091,9 @@
           "team": "TEN",
           "p_cover": 0.5607,
           "p_push": 0.0,
-          "expected_points": 0.5607
+          "expected_points": 0.5607,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_TEN_JAX",
@@ -1920,7 +2102,9 @@
           "team": "JAX",
           "p_cover": 0.4393,
           "p_push": 0.0,
-          "expected_points": 0.4393
+          "expected_points": 0.4393,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_WAS_ARI",
@@ -1929,7 +2113,9 @@
           "team": "WAS",
           "p_cover": 0.525,
           "p_push": 0.0406,
-          "expected_points": 0.5453
+          "expected_points": 0.5453,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_WAS_ARI",
@@ -1938,11 +2124,15 @@
           "team": "ARI",
           "p_cover": 0.4344,
           "p_push": 0.0406,
-          "expected_points": 0.4547
+          "expected_points": 0.4547,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         }
       ],
-      "entries": 0,
-      "post_deadline": true
+      "deadline_utc": "2026-11-27T01:20:00+00:00",
+      "timing_open_at_snapshot": true,
+      "workflow_submission_actions": 0,
+      "forecast_custody": "CURRENT_COMPARISON_USING_ORIGINAL_V13_SELECTION"
     },
     {
       "id": "circa_all_points",
@@ -2003,7 +2193,9 @@
           "team": "ATL",
           "p_cover": 0.5631,
           "p_push": 0.0349,
-          "expected_points": 0.5805
+          "expected_points": 0.5805,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_ATL_MIN",
@@ -2012,7 +2204,9 @@
           "team": "MIN",
           "p_cover": 0.402,
           "p_push": 0.0349,
-          "expected_points": 0.4195
+          "expected_points": 0.4195,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_BAL_HOU",
@@ -2021,7 +2215,9 @@
           "team": "BAL",
           "p_cover": 0.5408,
           "p_push": 0.0,
-          "expected_points": 0.5408
+          "expected_points": 0.5408,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_BAL_HOU",
@@ -2030,7 +2226,9 @@
           "team": "HOU",
           "p_cover": 0.4592,
           "p_push": 0.0,
-          "expected_points": 0.4592
+          "expected_points": 0.4592,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_CAR_TB",
@@ -2039,7 +2237,9 @@
           "team": "CAR",
           "p_cover": 0.4134,
           "p_push": 0.068,
-          "expected_points": 0.4474
+          "expected_points": 0.4474,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_CAR_TB",
@@ -2048,7 +2248,9 @@
           "team": "TB",
           "p_cover": 0.5186,
           "p_push": 0.068,
-          "expected_points": 0.5526
+          "expected_points": 0.5526,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_CHI_DET",
@@ -2057,7 +2259,9 @@
           "team": "CHI",
           "p_cover": 0.5445,
           "p_push": 0.0,
-          "expected_points": 0.5445
+          "expected_points": 0.5445,
+          "deadline_if_included_utc": "2026-11-26T18:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_CHI_DET",
@@ -2066,7 +2270,9 @@
           "team": "DET",
           "p_cover": 0.4555,
           "p_push": 0.0,
-          "expected_points": 0.4555
+          "expected_points": 0.4555,
+          "deadline_if_included_utc": "2026-11-26T18:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_DEN_PIT",
@@ -2075,7 +2281,9 @@
           "team": "DEN",
           "p_cover": 0.4782,
           "p_push": 0.0,
-          "expected_points": 0.4782
+          "expected_points": 0.4782,
+          "deadline_if_included_utc": "2026-11-27T20:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_DEN_PIT",
@@ -2084,7 +2292,9 @@
           "team": "PIT",
           "p_cover": 0.5218,
           "p_push": 0.0,
-          "expected_points": 0.5218
+          "expected_points": 0.5218,
+          "deadline_if_included_utc": "2026-11-27T20:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_KC_BUF",
@@ -2093,7 +2303,9 @@
           "team": "KC",
           "p_cover": 0.425,
           "p_push": 0.0,
-          "expected_points": 0.425
+          "expected_points": 0.425,
+          "deadline_if_included_utc": "2026-11-27T01:20:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_KC_BUF",
@@ -2102,7 +2314,9 @@
           "team": "BUF",
           "p_cover": 0.575,
           "p_push": 0.0,
-          "expected_points": 0.575
+          "expected_points": 0.575,
+          "deadline_if_included_utc": "2026-11-27T01:20:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_LV_CLE",
@@ -2111,7 +2325,9 @@
           "team": "LV",
           "p_cover": 0.5305,
           "p_push": 0.0,
-          "expected_points": 0.5305
+          "expected_points": 0.5305,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_LV_CLE",
@@ -2120,7 +2336,9 @@
           "team": "CLE",
           "p_cover": 0.4695,
           "p_push": 0.0,
-          "expected_points": 0.4695
+          "expected_points": 0.4695,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_NE_LAC",
@@ -2129,7 +2347,9 @@
           "team": "NE",
           "p_cover": 0.5291,
           "p_push": 0.0,
-          "expected_points": 0.5291
+          "expected_points": 0.5291,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_NE_LAC",
@@ -2138,7 +2358,9 @@
           "team": "LAC",
           "p_cover": 0.4709,
           "p_push": 0.0,
-          "expected_points": 0.4709
+          "expected_points": 0.4709,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_NO_CIN",
@@ -2147,7 +2369,9 @@
           "team": "NO",
           "p_cover": 0.5684,
           "p_push": 0.0193,
-          "expected_points": 0.5781
+          "expected_points": 0.5781,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_NO_CIN",
@@ -2156,7 +2380,9 @@
           "team": "CIN",
           "p_cover": 0.4123,
           "p_push": 0.0193,
-          "expected_points": 0.4219
+          "expected_points": 0.4219,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_NYG_IND",
@@ -2165,7 +2391,9 @@
           "team": "NYG",
           "p_cover": 0.4203,
           "p_push": 0.0,
-          "expected_points": 0.4203
+          "expected_points": 0.4203,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_NYG_IND",
@@ -2174,7 +2402,9 @@
           "team": "IND",
           "p_cover": 0.5797,
           "p_push": 0.0,
-          "expected_points": 0.5797
+          "expected_points": 0.5797,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_NYJ_MIA",
@@ -2183,7 +2413,9 @@
           "team": "NYJ",
           "p_cover": 0.3746,
           "p_push": 0.0,
-          "expected_points": 0.3746
+          "expected_points": 0.3746,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_NYJ_MIA",
@@ -2192,7 +2424,9 @@
           "team": "MIA",
           "p_cover": 0.6254,
           "p_push": 0.0,
-          "expected_points": 0.6254
+          "expected_points": 0.6254,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_PHI_DAL",
@@ -2201,7 +2435,9 @@
           "team": "PHI",
           "p_cover": 0.6071,
           "p_push": 0.0,
-          "expected_points": 0.6071
+          "expected_points": 0.6071,
+          "deadline_if_included_utc": "2026-11-26T21:30:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_PHI_DAL",
@@ -2210,7 +2446,9 @@
           "team": "DAL",
           "p_cover": 0.3929,
           "p_push": 0.0,
-          "expected_points": 0.3929
+          "expected_points": 0.3929,
+          "deadline_if_included_utc": "2026-11-26T21:30:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_SEA_SF",
@@ -2219,7 +2457,9 @@
           "team": "SEA",
           "p_cover": 0.3883,
           "p_push": 0.0596,
-          "expected_points": 0.4181
+          "expected_points": 0.4181,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_SEA_SF",
@@ -2228,7 +2468,9 @@
           "team": "SF",
           "p_cover": 0.5521,
           "p_push": 0.0596,
-          "expected_points": 0.5819
+          "expected_points": 0.5819,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_TEN_JAX",
@@ -2237,7 +2479,9 @@
           "team": "TEN",
           "p_cover": 0.674,
           "p_push": 0.0,
-          "expected_points": 0.674
+          "expected_points": 0.674,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_TEN_JAX",
@@ -2246,7 +2490,9 @@
           "team": "JAX",
           "p_cover": 0.326,
           "p_push": 0.0,
-          "expected_points": 0.326
+          "expected_points": 0.326,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_WAS_ARI",
@@ -2255,7 +2501,9 @@
           "team": "WAS",
           "p_cover": 0.3545,
           "p_push": 0.0995,
-          "expected_points": 0.4043
+          "expected_points": 0.4043,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_WAS_ARI",
@@ -2264,11 +2512,15 @@
           "team": "ARI",
           "p_cover": 0.546,
           "p_push": 0.0995,
-          "expected_points": 0.5957
+          "expected_points": 0.5957,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         }
       ],
-      "entries": 0,
-      "post_deadline": true
+      "deadline_utc": "2026-11-26T21:30:00+00:00",
+      "timing_open_at_snapshot": true,
+      "workflow_submission_actions": 0,
+      "forecast_custody": "CURRENT_COMPARISON_USING_ORIGINAL_V13_SELECTION"
     },
     {
       "id": "circa_brier",
@@ -2329,7 +2581,9 @@
           "team": "ATL",
           "p_cover": 0.4924,
           "p_push": 0.0315,
-          "expected_points": 0.5081
+          "expected_points": 0.5081,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_ATL_MIN",
@@ -2338,7 +2592,9 @@
           "team": "MIN",
           "p_cover": 0.4762,
           "p_push": 0.0315,
-          "expected_points": 0.4919
+          "expected_points": 0.4919,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_BAL_HOU",
@@ -2347,7 +2603,9 @@
           "team": "BAL",
           "p_cover": 0.4598,
           "p_push": 0.0,
-          "expected_points": 0.4598
+          "expected_points": 0.4598,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_BAL_HOU",
@@ -2356,7 +2614,9 @@
           "team": "HOU",
           "p_cover": 0.5402,
           "p_push": 0.0,
-          "expected_points": 0.5402
+          "expected_points": 0.5402,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_CAR_TB",
@@ -2365,7 +2625,9 @@
           "team": "CAR",
           "p_cover": 0.4364,
           "p_push": 0.0309,
-          "expected_points": 0.4519
+          "expected_points": 0.4519,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_CAR_TB",
@@ -2374,7 +2636,9 @@
           "team": "TB",
           "p_cover": 0.5327,
           "p_push": 0.0309,
-          "expected_points": 0.5481
+          "expected_points": 0.5481,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_CHI_DET",
@@ -2383,7 +2647,9 @@
           "team": "CHI",
           "p_cover": 0.4804,
           "p_push": 0.0312,
-          "expected_points": 0.496
+          "expected_points": 0.496,
+          "deadline_if_included_utc": "2026-11-26T18:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_CHI_DET",
@@ -2392,7 +2658,9 @@
           "team": "DET",
           "p_cover": 0.4884,
           "p_push": 0.0312,
-          "expected_points": 0.504
+          "expected_points": 0.504,
+          "deadline_if_included_utc": "2026-11-26T18:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_DEN_PIT",
@@ -2401,7 +2669,9 @@
           "team": "DEN",
           "p_cover": 0.4295,
           "p_push": 0.0,
-          "expected_points": 0.4295
+          "expected_points": 0.4295,
+          "deadline_if_included_utc": "2026-11-27T20:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_DEN_PIT",
@@ -2410,7 +2680,9 @@
           "team": "PIT",
           "p_cover": 0.5705,
           "p_push": 0.0,
-          "expected_points": 0.5705
+          "expected_points": 0.5705,
+          "deadline_if_included_utc": "2026-11-27T20:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_KC_BUF",
@@ -2419,7 +2691,9 @@
           "team": "KC",
           "p_cover": 0.4063,
           "p_push": 0.0,
-          "expected_points": 0.4063
+          "expected_points": 0.4063,
+          "deadline_if_included_utc": "2026-11-27T01:20:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_KC_BUF",
@@ -2428,7 +2702,9 @@
           "team": "BUF",
           "p_cover": 0.5937,
           "p_push": 0.0,
-          "expected_points": 0.5937
+          "expected_points": 0.5937,
+          "deadline_if_included_utc": "2026-11-27T01:20:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_LV_CLE",
@@ -2437,7 +2713,9 @@
           "team": "LV",
           "p_cover": 0.4693,
           "p_push": 0.0,
-          "expected_points": 0.4693
+          "expected_points": 0.4693,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_LV_CLE",
@@ -2446,7 +2724,9 @@
           "team": "CLE",
           "p_cover": 0.5307,
           "p_push": 0.0,
-          "expected_points": 0.5307
+          "expected_points": 0.5307,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_NE_LAC",
@@ -2455,7 +2735,9 @@
           "team": "NE",
           "p_cover": 0.4185,
           "p_push": 0.0309,
-          "expected_points": 0.434
+          "expected_points": 0.434,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_NE_LAC",
@@ -2464,7 +2746,9 @@
           "team": "LAC",
           "p_cover": 0.5505,
           "p_push": 0.0309,
-          "expected_points": 0.566
+          "expected_points": 0.566,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_NO_CIN",
@@ -2473,7 +2757,9 @@
           "team": "NO",
           "p_cover": 0.4537,
           "p_push": 0.0325,
-          "expected_points": 0.4699
+          "expected_points": 0.4699,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_NO_CIN",
@@ -2482,7 +2768,9 @@
           "team": "CIN",
           "p_cover": 0.5139,
           "p_push": 0.0325,
-          "expected_points": 0.5301
+          "expected_points": 0.5301,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_NYG_IND",
@@ -2491,7 +2779,9 @@
           "team": "NYG",
           "p_cover": 0.4167,
           "p_push": 0.0,
-          "expected_points": 0.4167
+          "expected_points": 0.4167,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_NYG_IND",
@@ -2500,7 +2790,9 @@
           "team": "IND",
           "p_cover": 0.5833,
           "p_push": 0.0,
-          "expected_points": 0.5833
+          "expected_points": 0.5833,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_NYJ_MIA",
@@ -2509,7 +2801,9 @@
           "team": "NYJ",
           "p_cover": 0.4646,
           "p_push": 0.0,
-          "expected_points": 0.4646
+          "expected_points": 0.4646,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_NYJ_MIA",
@@ -2518,7 +2812,9 @@
           "team": "MIA",
           "p_cover": 0.5354,
           "p_push": 0.0,
-          "expected_points": 0.5354
+          "expected_points": 0.5354,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_PHI_DAL",
@@ -2527,7 +2823,9 @@
           "team": "PHI",
           "p_cover": 0.4817,
           "p_push": 0.0,
-          "expected_points": 0.4817
+          "expected_points": 0.4817,
+          "deadline_if_included_utc": "2026-11-26T21:30:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_PHI_DAL",
@@ -2536,7 +2834,9 @@
           "team": "DAL",
           "p_cover": 0.5183,
           "p_push": 0.0,
-          "expected_points": 0.5183
+          "expected_points": 0.5183,
+          "deadline_if_included_utc": "2026-11-26T21:30:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_SEA_SF",
@@ -2545,7 +2845,9 @@
           "team": "SEA",
           "p_cover": 0.4534,
           "p_push": 0.0311,
-          "expected_points": 0.4689
+          "expected_points": 0.4689,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_SEA_SF",
@@ -2554,7 +2856,9 @@
           "team": "SF",
           "p_cover": 0.5156,
           "p_push": 0.0311,
-          "expected_points": 0.5311
+          "expected_points": 0.5311,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_TEN_JAX",
@@ -2563,7 +2867,9 @@
           "team": "TEN",
           "p_cover": 0.4564,
           "p_push": 0.0,
-          "expected_points": 0.4564
+          "expected_points": 0.4564,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_TEN_JAX",
@@ -2572,7 +2878,9 @@
           "team": "JAX",
           "p_cover": 0.5436,
           "p_push": 0.0,
-          "expected_points": 0.5436
+          "expected_points": 0.5436,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_WAS_ARI",
@@ -2581,7 +2889,9 @@
           "team": "WAS",
           "p_cover": 0.4112,
           "p_push": 0.0301,
-          "expected_points": 0.4263
+          "expected_points": 0.4263,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         },
         {
           "game_id": "2026_12_WAS_ARI",
@@ -2590,11 +2900,15 @@
           "team": "ARI",
           "p_cover": 0.5587,
           "p_push": 0.0301,
-          "expected_points": 0.5737
+          "expected_points": 0.5737,
+          "deadline_if_included_utc": "2026-11-29T00:00:00+00:00",
+          "timing_open_at_snapshot": true
         }
       ],
-      "entries": 0,
-      "post_deadline": true
+      "deadline_utc": "2026-11-27T01:20:00+00:00",
+      "timing_open_at_snapshot": true,
+      "workflow_submission_actions": 0,
+      "forecast_custody": "CURRENT_COMPARISON_USING_ORIGINAL_V13_SELECTION"
     }
   ],
   "ordinary_performance": [
@@ -4649,9 +4963,22 @@
     "custody": "Historical records are reconstructed and 2026-exposed. Current ordinary sides are reselected using saved N202 inputs and prices. They are not original N202 issues."
   },
   "circa": {
-    "status": "WHOLE_SLATE_DEADLINE_PASSED",
-    "whole_slate_cutoff_utc": "2026-11-26T01:00:00+00:00",
-    "entries": 0
+    "status": "DEADLINE_DEPENDS_ON_THE_SELECTED_FIVE",
+    "weekly_deadline_utc": "2026-11-29T00:00:00+00:00",
+    "inherited_return_status": "WHOLE_SLATE_DEADLINE_PASSED",
+    "inherited_whole_slate_cutoff_utc": "2026-11-26T01:00:00+00:00",
+    "inherited_status_authoritative": false,
+    "workflow_submission_actions": 0,
+    "account_submission_status": "NOT_QUERIED",
+    "rules_url": "https://www.circasports.com/wp-content/uploads/2026/05/CircaMillionVIIIContest.2026.pdf",
+    "support_url": "https://www.circasports.com/support",
+    "rules_revision": "2026-05-15",
+    "rules": [
+      7,
+      8
+    ],
+    "rules_checked_utc": "2026-11-26T01:39:52.203890+00:00",
+    "rule": "All five selections are due by Saturday 4 p.m. Pacific, or before the earliest selected game kicks off if earlier. The earlier game does not close every other possible five."
   },
   "availability": {
     "as_of_utc": "2026-11-26T01:04:02.882089+00:00",
@@ -4697,6 +5024,10 @@
     {
       "label": "Circa Sports official contest lines",
       "url": "https://www.circasports.com/circa-million"
+    },
+    {
+      "label": "Circa Million VIII official rules 7–8, revised May 15, 2026",
+      "url": "https://www.circasports.com/wp-content/uploads/2026/05/CircaMillionVIIIContest.2026.pdf"
     }
   ]
 }
