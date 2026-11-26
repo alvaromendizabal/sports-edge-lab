@@ -1,154 +1,255 @@
 {
-  "version": "NFL_N207_THANKSGIVING_FORECAST_AND_MARKET_REVIEW",
+  "version": "NFL_N208_THANKSGIVING_OWNER_RESULTS",
   "status": "DEPLOYED_AWAITING_HTTP_HASH_AUDIT",
   "public_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
-  "field_notes_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n207/",
-  "thanksgiving_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n207/#slate",
-  "dedicated_circa_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n207/#circa",
-  "all_games_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n207/#slate",
-  "deployed_at": "2026-11-26T19:04:48.007203+00:00",
-  "site_version": 67,
-  "site_source_commit": "431899a03a8b75de08d9c1b97965697f5219d002",
-  "archive_sha256": "9581cb15508361e0009bf83f60dade2cb9117e82c45a01f8e2879b23645fa355",
-  "provider_saved_tar_sha256": "sha256:9581cb15508361e0009bf83f60dade2cb9117e82c45a01f8e2879b23645fa355",
+  "field_notes_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n208/",
+  "thanksgiving_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n208/#slate",
+  "dedicated_circa_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n208/#circa",
+  "all_games_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n208/#slate",
+  "deployed_at": "2026-11-26T20:46:35.447739+00:00",
+  "site_version": 68,
+  "site_source_commit": "acbcf8bb5db97598e8ee267e2c7b631748ef2c03",
+  "archive_sha256": "fe61956cdfb0889e21eae9db6cec9e7157d78d626dd6192880264e1c98e7bd8e",
+  "provider_saved_tar_sha256": "sha256:fe61956cdfb0889e21eae9db6cec9e7157d78d626dd6192880264e1c98e7bd8e",
   "audience": "public",
-  "native_publication_receipt": "publication-n207.json",
-  "prior_publication_receipt": "publication-n207-v66.json",
+  "native_publication_receipt": "publication-n208.json",
+  "prior_publication_receipt": "publication-n207.json",
   "github_source_provenance": "The exact-head GitHub Actions report verifies the committed release against the hosted bytes; immutable Site source commit is recorded above.",
   "scientific_scope": {
-    "schema": "sports-edge-lab.nfl.execution-delivery-status.v2",
+    "schema": "nfl.selected-public-results/2",
     "owner": "NFL",
-    "generation": "N207",
-    "delivery_status": "OWNER_RUN_COMPLETED_AND_RETURN_VERIFIED",
-    "owner_execution": {
-      "run_id": "20261126T074030Z-cd49d596eaa9",
-      "status": "COMPLETE_REGISTERED_STAGES",
-      "v13_status": "INCOMPLETE",
-      "scoped_acceptance_status": "SCOPED_SCIENCE_COMPLETE",
-      "throughput_acceptance": "PASS",
-      "native_tests": 81,
-      "owner_launches": 1
-    },
-    "return_logical_sha256": "cd738b607c250729fc840a79a92870dc2efc194487060fb3a76da92b8df4c55d",
-    "return_logical_bytes": 2861982411,
+    "release": "N208",
+    "scope": "Exposed ordinary 2026 selection; standing V13 evaluated separately.",
+    "return_sha256": "ef89d027f5399ec19b8c84665c5402c221389a926b0bc08b55da7db80d4cd016",
+    "issue_id": "54498d12a12000dfc72bffa05d9589b1fe5c7169218e8df129ad70e312612301",
+    "issued_utc": "2026-11-26T20:30:24.657315+00:00",
+    "prospective_status_utc": "2026-11-26T20:41:23.338843+00:00",
+    "weekly_games": 16,
+    "issued_game_count": 14,
+    "open_games": 14,
+    "census": 164,
+    "candidate_count": 6506,
+    "retained_candidates": 5354,
+    "new_generated_feature_columns": 5061,
+    "new_recipe_columns": 5061,
+    "new_raw_columns": 0,
+    "display_point_source": "N208 lowest point MAE for margin and total",
+    "display_spread_and_total_source": "N208 minimum Brier, conditional on no push",
+    "winner_probability_source": "Standing V13 minimum Brier at its original issue",
+    "point_errors": [
+      [
+        "Spread point MAE",
+        "N208 TensorFlow · 3ea2d5ffca",
+        "164",
+        "9.4238 points"
+      ],
+      [
+        "Total point MAE",
+        "N208 ridge regression · cb1dc9ec71",
+        "164",
+        "10.4499 points"
+      ]
+    ],
+    "incompatible_raw_strict_point_pairs": [
+      "2026_12_DEN_PIT",
+      "2026_12_NO_CIN",
+      "2026_12_NYG_IND",
+      "2026_12_NYJ_MIA"
+    ],
+    "strict_moneyline_vs_mean_disagreements": [
+      "2026_12_ATL_MIN",
+      "2026_12_TEN_JAX",
+      "2026_12_WAS_ARI",
+      "2026_12_LV_CLE"
+    ],
     "execution": {
       "planned_units": 256,
       "completed_units": 256,
+      "reused_units": 0,
       "failed_units": 0,
-      "blocked_units": 0,
       "deferred_units": 0,
+      "blocked_units": 0,
+      "optimizer_completions": 2560,
       "new_probability_estimators": 1024,
       "new_calibrators": 1536,
-      "optimizer_completions": 2560,
+      "optimizer_cpu_seconds": 78518.402076766,
       "peak_simultaneous_optimizers": 42,
-      "optimizer_cpu_seconds": 53438.120787477,
-      "elapsed_seconds": 2248.034621257997
+      "elapsed_seconds": 3317.2184661579995
     },
-    "compared_policies": 5354,
-    "preserved_policies": 4202,
-    "completed_games": 164,
-    "model_issue_utc": "2026-11-26T08:37:00.790452+00:00",
-    "owner_issue_id": "b838a47ad1a34633ebe4c31ecb558e9b0eb7ba9819bcceb736de54adc2c538b7",
-    "market_options_at_issue": 3068,
-    "named_source_coverage_at_issue": {
-      "draftkings": {
-        "margin": 15,
-        "total": 15
-      },
-      "polymarket": {
-        "margin": 15,
-        "total": 15
-      }
-    },
-    "objective_results": [
+    "champions": [
       {
         "target": "margin",
         "objective": "strict_wins",
-        "wins": 97,
-        "losses": 64,
+        "family": "N208 PyTorch",
+        "wins": 98,
+        "losses": 63,
         "settlement_pushes": 3,
         "unresolved": 0,
-        "brier": 0.24735696176621635,
-        "logloss": 0.6885722378675939,
-        "completed_population": 164,
         "eligible": 164,
-        "decisive": 161
+        "completed_population": 164,
+        "brier": 0.2753775943068028,
+        "logloss": 0.8340191694828418
       },
       {
         "target": "margin",
         "objective": "brier",
+        "family": "N204 probability blend",
         "wins": 91,
         "losses": 70,
         "settlement_pushes": 3,
         "unresolved": 0,
-        "brier": 0.24324941574789882,
-        "logloss": 0.6795247950938726,
-        "completed_population": 164,
         "eligible": 164,
-        "decisive": 161
+        "completed_population": 164,
+        "brier": 0.24324941574789882,
+        "logloss": 0.6795247950938726
       },
       {
         "target": "margin",
         "objective": "logloss",
+        "family": "N204 XGBoost",
         "wins": 85,
         "losses": 76,
         "settlement_pushes": 3,
         "unresolved": 0,
-        "brier": 0.24341513952206736,
-        "logloss": 0.6788241365843224,
-        "completed_population": 164,
         "eligible": 164,
-        "decisive": 161
+        "completed_population": 164,
+        "brier": 0.24341513952206736,
+        "logloss": 0.6788241365843224
       },
       {
         "target": "total",
         "objective": "strict_wins",
-        "wins": 95,
-        "losses": 69,
+        "family": "N208 LightGBM",
+        "wins": 98,
+        "losses": 66,
         "settlement_pushes": 0,
         "unresolved": 0,
-        "brier": 0.260903547720401,
-        "logloss": 0.7187111774893415,
-        "completed_population": 164,
         "eligible": 164,
-        "decisive": 164
+        "completed_population": 164,
+        "brier": 0.24588200518707704,
+        "logloss": 0.6846215762189627
       },
       {
         "target": "total",
         "objective": "brier",
-        "wins": 88,
-        "losses": 76,
+        "family": "N208 LightGBM",
+        "wins": 92,
+        "losses": 72,
         "settlement_pushes": 0,
         "unresolved": 0,
-        "brier": 0.24534210763158046,
-        "logloss": 0.6835514624419713,
-        "completed_population": 164,
         "eligible": 164,
-        "decisive": 164
+        "completed_population": 164,
+        "brier": 0.24416796499334673,
+        "logloss": 0.6811182323563132
       },
       {
         "target": "total",
         "objective": "logloss",
-        "wins": 88,
-        "losses": 76,
+        "family": "N208 LightGBM",
+        "wins": 92,
+        "losses": 72,
         "settlement_pushes": 0,
         "unresolved": 0,
-        "brier": 0.24534210763158046,
-        "logloss": 0.6835514624419713,
-        "completed_population": 164,
         "eligible": 164,
-        "decisive": 164
+        "completed_population": 164,
+        "brier": 0.24416796499334673,
+        "logloss": 0.6811182323563132
       }
     ],
-    "model_selection": "Previously examined, completed 2026 games selected the ordinary spread and totals policies. Pre-2026 training includes the 2024 and 2025 seasons.",
-    "prepublication_estimated_compute_usd": 2.4388038355817327,
-    "prepublication_compute_is_billed_cost": false,
-    "market_review_utc": "2026-11-26T18:17:12.861400+00:00",
-    "practice_status_review_source": "Official club reports and national inactive lists, Nov 26.",
-    "scope": "Selected NFL research outputs; no automated entries or wagers.",
-    "release": "N207",
-    "current_n207_game_issues": 15,
-    "week12_games": 16,
+    "replay": [
+      [
+        "Spread",
+        "Most wins",
+        "84–77–3",
+        164,
+        "0.2506",
+        "0.6943"
+      ],
+      [
+        "Spread",
+        "Lowest Brier",
+        "78–83–3",
+        164,
+        "0.2503",
+        "0.6937"
+      ],
+      [
+        "Total",
+        "Most wins",
+        "91–73–0",
+        164,
+        "0.2497",
+        "0.6926"
+      ],
+      [
+        "Total",
+        "Lowest Brier",
+        "91–73–0",
+        164,
+        "0.2497",
+        "0.6926"
+      ]
+    ],
+    "circa": {
+      "original": 5,
+      "official_sides": 32,
+      "open_games_at_circa_check": 14,
+      "remaining_five": 5,
+      "as_of_utc": "2026-11-26T20:26:57.477680+00:00"
+    },
+    "cards": 11,
+    "forward_lock": {
+      "at_utc": "2026-11-26T20:43:08.995508+00:00",
+      "sha256": "2b249f5933da433cef3511d6220dc72b7339b86d9b375c36846d5f818759450f",
+      "games": 14,
+      "market_rows": 28,
+      "model_decisions": 56
+    },
+    "high_confidence_rows": [
+      [
+        "Spread",
+        "Most wins",
+        51,
+        38,
+        89,
+        "57.3%",
+        "84.0%"
+      ],
+      [
+        "Spread",
+        "Brier",
+        2,
+        1,
+        3,
+        "66.7%",
+        "71.1%"
+      ],
+      [
+        "Total",
+        "Most wins",
+        2,
+        0,
+        2,
+        "100.0%",
+        "72.6%"
+      ],
+      [
+        "Total",
+        "Brier",
+        1,
+        0,
+        1,
+        "100.0%",
+        "73.8%"
+      ]
+    ],
+    "named_sources": {
+      "DraftKings": 56,
+      "Kalshi": 52,
+      "Polymarket": 56
+    },
+    "v13": "INCOMPLETE",
+    "owner_execution_status": "COMPLETE_REGISTERED_STAGES",
     "markets": {
       "sources": 80,
       "records": 2894,
@@ -164,43 +265,6 @@
       "games": 16,
       "scope": "Preserved N195 league dashboard market section only",
       "observed_utc": "2026-11-25T21:27:16.332247+00:00"
-    },
-    "current_morning_quote_scope": {
-      "open_games": 14,
-      "DraftKings": {
-        "spreads": 14,
-        "totals": 14
-      },
-      "Kalshi": {
-        "spreads": 13,
-        "totals": 13,
-        "direct_contracts": 656,
-        "direct_open_games": 14
-      },
-      "Polymarket": {
-        "spreads": 14,
-        "totals": 14,
-        "direct_global_markets": 720,
-        "direct_global_open_games": 14
-      },
-      "champion_selection_or_refits_from_morning_quotes": false
-    },
-    "standing_primary_and_prospective": {
-      "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n207/standing-results/",
-      "sha256": "d8d614bb8716ffbc78c48afa4068b338c61fc73accfb42b2ce6c0ca6fd98bc16",
-      "proof_sha256": "9fdc2a7d656d598ba3b61e70fae699705bf12ff66c5380822320dc98d4c17cbe",
-      "all_primary_objectives": 9,
-      "standing_2026_games": 164,
-      "annual_validation_counts": [
-        285,
-        285
-      ],
-      "number_of_ratios": 5,
-      "prospective_games": 14,
-      "scorecard_locked_utc": "2026-11-26T18:32:15.940836+00:00",
-      "original_scorecard_sha256": "dd6f9704a7ca3255cad11478b18c99bb752ad917fbaeb0a00debea25ad64bcb8",
-      "retrospectively_recovered_playoff_game_markets": 52,
-      "edition_status": "Current"
     }
   },
   "verification": {
@@ -1169,8 +1233,8 @@
       },
       {
         "path": "index.html",
-        "bytes": 570987,
-        "sha256": "bd21d091048c61c463ec5ec3b2c522ba4f05a3123749996dabaee5578c0f84f5",
+        "bytes": 571377,
+        "sha256": "c0516ccc92d75581e2db23fe469c26538d57772ccb237d0527a9ed260aeaafde",
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
@@ -1769,8 +1833,8 @@
       },
       {
         "path": "week-12-field-notes/index.html",
-        "bytes": 114197,
-        "sha256": "feeb57b6373ce0b394ba81f919861668188bb05469b33f70f2af333de21f3f5e",
+        "bytes": 114567,
+        "sha256": "05515127091f660e64f288ea6f0969c931cf661aef5a96e9aedd4f5323aaf46d",
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
@@ -2587,6 +2651,84 @@
         "path": "week-12-field-notes/n207/standing-results/proof.json",
         "bytes": 18153,
         "sha256": "9fdc2a7d656d598ba3b61e70fae699705bf12ff66c5380822320dc98d4c17cbe",
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n208/01-N208-Week12-Games.png",
+        "bytes": 285851,
+        "sha256": "0f4a0a26191fad1442896478f31393ba07989d9dc62be3baff14160eade0c2bc",
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n208/02-N208-Week12-Games.png",
+        "bytes": 315253,
+        "sha256": "f71dfe811e3a9f192f5d7018bb67cac1b94aab6588b2dab87bc693978214c3c5",
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n208/03-N208-Week12-Games.png",
+        "bytes": 316860,
+        "sha256": "e884d47f22e4b74e6d372728913a473dc61b5ba192ef32f6d150fbd899104e1b",
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n208/04-N208-Week12-Games.png",
+        "bytes": 320689,
+        "sha256": "94a6cd29d495a36a9fe048c2a7b40b85081e15e203e86f306f431e06e2240bca",
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n208/05-N208-Circa-Five.png",
+        "bytes": 198366,
+        "sha256": "7af86fb13b3a061d1b3dd51729b1204b920ed1073cc158f8b6f7ebfb88d2d533",
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n208/06-N208-Circa-Alternatives.png",
+        "bytes": 249190,
+        "sha256": "84c96e4af3e43b3873da0be9b095db4cbb4865dce21ea8cb3b6268ba35e48d32",
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n208/07-N208-Circa-Alternatives.png",
+        "bytes": 249994,
+        "sha256": "a4dcce8d8dff145048a23bdcd4c6afffae8e9eb6246adb54468908851a40f27b",
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n208/08-N208-Thanksgiving-Side-Comparison.png",
+        "bytes": 192020,
+        "sha256": "9f37f7c1e4a163d1beb6db3f500a3211f2742927e4ec6b83097eb096e6257919",
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n208/09-N208-Circa-Original-Five.png",
+        "bytes": 197482,
+        "sha256": "0dcb43f906617f4f3d2760ee75816450719ec63bd44c1e476f13d914126863ff",
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n208/10-N208-Morning-Comparison.png",
+        "bytes": 156699,
+        "sha256": "2e2a2341af8c66562bce406d1ff22b73e4bf945a82a16de636e2655a6d93dc26",
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n208/11-N208-Margin-Model-Check.png",
+        "bytes": 208628,
+        "sha256": "3e864434b31fe11b1677a3aa5559d53f65dc3cf21409df617733bc192adb26a8",
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n208/index.html",
+        "bytes": 101783,
+        "sha256": "8bb62c6a7a6ed936f6d275b65ef7eafe0e38b573caa8dba3c5bf7336f25e2e5d",
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n208/results.json",
+        "bytes": 5301,
+        "sha256": "46a359ca4b5f782f738178da3c4ab91fe229051537d64607eec346b7b70df186",
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {

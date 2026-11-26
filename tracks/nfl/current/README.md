@@ -1,8 +1,14 @@
 # NFL game day and research dashboard
 
-## N208 owner execution
+## N208 verified owner results
 
-The verified launcher is staged for 256 planned fit units. Native qualification and selection evidence are pending. [Read the launch preparation record](n208-execution-status.json).
+**[Open the N208 Thanksgiving forecasts](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n208/)** · [All 16 games](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n208/#slate) · [Model comparison](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n208/#performance) · [Sportsbook and exchange comparisons](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n208/#markets) · [Original Circa five, remaining five and all 32 sides](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n208/#circa) · [Eleven phone cards](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n208/#phone)
+
+The November 26 issue at **12:30 p.m. Pacific** covers 14 pregame matchups. Green Bay–Los Angeles and Chicago–Detroit retain their earlier forecasts. The displayed outright probabilities come from the dated V13 winner specialist, point forecasts use the two N208 models with the lowest point error, and the featured spread and total selections use the lowest-Brier models at the observed strikes. Market prices and availability carry later, separate time checks.
+
+N208 completed **256 fit units and 2,560 optimizer calls**, with 42 simultaneous optimizers and 5,061 added feature columns. Across the exposed 164-game 2026 evaluation, the highest-win spread policy was **98–63–3**, and totals **98–66**. The high-win spread model’s Brier error rose to 0.27538 versus 0.24325 for the probability leader. Its 89 picks above or at 70% confidence went 51–38. Four of its raw point combinations imply a negative team score. The board explains those results and shows the original values alongside the point-MAE projections.
+
+The 14-game prospective scorecard fixed its spread and total lines at 12:43 p.m. Pacific. [N208 result and verification](week-12-field-notes/n208/results.json) · [Earlier N207 forecasts](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n207/) · [Standing V13 champions](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n207/standing-results/)
 
 ## N207 verified owner result — Thanksgiving 2026
 
