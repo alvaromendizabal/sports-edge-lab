@@ -1,23 +1,23 @@
 {
-  "version": "NFL_WEEK12_V13_N198_BOTH_GAMEDAY_LISTS",
-  "status": "DEPLOYED_HTTP_VERIFIED",
+  "version": "NFL_WEEK12_V13_N199_OFFICIAL_ROSTERS",
+  "status": "DEPLOYED_AWAITING_HTTP_HASH_AUDIT",
   "public_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
   "field_notes_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/",
   "thanksgiving_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/thanksgiving/",
   "dedicated_circa_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa/",
   "all_games_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/all-games/",
-  "deployed_at": "2026-11-25T23:54:08.917612+00:00",
-  "site_version": 50,
-  "site_source_commit": "f10e92c503d095d7725eb5f830a03bbd517b2725",
-  "github_application_source_commit": "73e3b7c391135ee781188548fa576aa1ac3177af",
-  "archive_sha256": "b204695078791b323e4e4ec417bb9fb22a56d7f5a956501a1ac34a4e024fea22",
-  "provider_saved_tar_sha256": "sha256:48a8018f24db98f1208b0d56887d6e2a31143827c6ed5e6de58e1cf34b476417",
+  "deployed_at": "2026-11-26T00:01:50.518000+00:00",
+  "site_version": 51,
+  "site_source_commit": "6f133e69c675284dbea88eeade317084f8674148",
+  "github_application_source_commit": "20a640a573039690838fbe9a0f9867f2bbfcd21c",
+  "archive_sha256": "821935405369f88c58cfd572b5331d980fa4afe7f2d653ffa7d89a400012eb06",
+  "provider_saved_tar_sha256": "sha256:303961f58dfdbd6e27a09e0191b09535bffb0565d9a97c2ce153c34599a4ba16",
   "audience": "public",
   "scientific_scope": {
-    "release": "N198",
-    "previous": "N197",
+    "release": "N199",
+    "previous": "N198",
     "outcome": "All 33 registered stages complete; V13 incomplete",
-    "prior_edition_receipt": "publication-n198-v49.json",
+    "prior_edition_receipt": "publication-n198-v50.json",
     "original_pregame_forecasts": 109,
     "week12_games": 16,
     "existing_league_issues_retained": true,
@@ -28,17 +28,18 @@
     "original_contest_entries": 0,
     "production_promotions": 0,
     "n196_cumulative_new_estimators": 120,
-    "matched_market_observations": 1672,
+    "matched_market_observations": 1675,
     "three_named_venue_model_rows": 96,
     "underlying_channel_counts": {
       "The Odds API": 94,
       "Direct Kalshi": 2
     },
-    "assessment_utc": "2026-11-25T23:33:12.809090+00:00",
+    "assessment_utc": "2026-11-25T23:57:29.209594+00:00",
     "official_issued_at_utc": {
       "N195": "2026-11-25T21:54:35.795171+00:00",
       "N196": "2026-11-25T22:17:22.199940+00:00",
-      "N198": "2026-11-25T23:33:00.369012+00:00"
+      "N198": "2026-11-25T23:33:00.369012+00:00",
+      "N199": "2026-11-25T23:57:17.132720+00:00"
     },
     "full_league_denominators": [
       285,
@@ -50,7 +51,7 @@
       272,
       163
     ],
-    "original_return_sha256": "b1e87c6e1f27fbf32da50bc3a386b6120ad1e2eee98c83dd4e4f59844b011d9e",
+    "original_return_sha256": "ce7c14d776ecdb3d2f87db4c7515ac8d7f97c81a7b369cb53e1d7b42401e85a9",
     "markets": {
       "sources": 80,
       "records": 2894,
@@ -67,13 +68,13 @@
       "scope": "Preserved N195 league dashboard market section only",
       "observed_utc": "2026-11-25T21:27:16.332247+00:00"
     },
-    "new_estimators": 227,
-    "validation_estimators": 216,
-    "postlock_estimators": 11,
-    "calibration_transformations": 454,
-    "primary_selection_wins": 4,
+    "new_estimators": 166,
+    "validation_estimators": 144,
+    "postlock_estimators": 22,
+    "calibration_transformations": 332,
+    "primary_selection_wins": 1,
     "primary_decisions": 13,
-    "selection_wins_all_weights": 19,
+    "selection_wins_all_weights": 1,
     "decisions_all_weights": 65,
     "ordinary_spread_points_50_50": {
       "eligibles": [
@@ -86,11 +87,10 @@
         144.5,
         71.5
       ],
-      "incumbent_weighted_validation": 145,
       "selected_weighted_validation": 147.5,
-      "incumbent_2026_points": 72.5
+      "retained_from": "N198"
     },
-    "distinct_spread_terms": 41,
+    "distinct_spread_terms": 42,
     "distinct_total_terms": 42,
     "direct_kalshi_contract_census": 716,
     "availability": {
@@ -111,10 +111,10 @@
         "DEN",
         "LAR"
       ],
-      "prospective_roster_reissue_utc": "2026-11-25T23:32:56.309872+00:00",
+      "prospective_roster_reissue_utc": "2026-11-25T23:57:12.418761+00:00",
       "prospective_roster_inputs_utc": "2026-11-25T23:32:55.205369+00:00",
       "games_with_input_changes": 8,
-      "recomputed_forecast_laws": 272,
+      "recomputed_forecast_laws": 384,
       "published_roster_forecasts": 16,
       "published_roster_circa_sides": 32,
       "roster_family_five": 5,
@@ -143,3176 +143,1814 @@
           45
         ],
         "original_issue_preserved": true
-      }
+      },
+      "n198_historical_roster_issue_utc": "2026-11-25T23:32:56.309872+00:00",
+      "registered_teams": 32,
+      "official_team_practice_pages_with_rows": 25,
+      "official_team_practice_rows": 241,
+      "game_day_lists_included_in_issued_forecast": true,
+      "n199_rams_win": 0.6757,
+      "n199_rams_median_margin": 6,
+      "n199_median_total": 45
     },
-    "distinct_term_scope": "Distinct signed numeric terms across all matched venue rows"
+    "distinct_term_scope": "Distinct signed numeric terms across all matched venue rows",
+    "portable_public_weekly": {
+      "page": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n199-weekly/",
+      "json": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n199-weekly/weekly.json",
+      "sha256": "ff7bb48a00d167b675807b12edb75970e13c03ff1493038fd1e81821abf9c82c",
+      "source": "Signed owner return, weekly-public export",
+      "games": 16,
+      "cards": 3,
+      "options_per_card": 32
+    }
   },
   "verification": {
     "base_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
-    "all_match": true,
+    "all_match": false,
     "assets": [
       {
         "path": "against-the-spread/index.html",
-        "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/against-the-spread/",
-        "status": 200,
-        "sha256": "0cc16f5647524ec35d21c613d7e43fc480d56f139832df65504f47b6839a29db",
+        "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/against-the-spread/index.html",
         "bytes": 41921,
-        "received_sha256": "25e02e7b45866a465b97ef775d5340a73b9327189b336cbdebeef70c4c585845",
-        "received_bytes": 43035,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "d663e42150fa3f4a8cc1401bd565bf8e27e0f2242c488344fe8c355599fa0c7a"
       },
       {
         "path": "all-games/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/all-games/",
-        "status": 200,
-        "sha256": "247cd936fe1b6368ee2f664278169f9ce4bd7d2898b1988bc4b42cec07e6d120",
         "bytes": 42914,
-        "received_sha256": "432c694c695c5e3ae7848769c46d94ec7f90d062fd7d12e087e99b3490ee198f",
-        "received_bytes": 44028,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "247cd936fe1b6368ee2f664278169f9ce4bd7d2898b1988bc4b42cec07e6d120"
       },
       {
         "path": "app.js",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/app.js",
-        "status": 200,
-        "sha256": "493376db6674be2e3b1baca34c2c1ed536a5e6fa7ed0f1f7ab9387f08a3707e3",
         "bytes": 47150,
-        "received_sha256": "493376db6674be2e3b1baca34c2c1ed536a5e6fa7ed0f1f7ab9387f08a3707e3",
-        "received_bytes": 47150,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "493376db6674be2e3b1baca34c2c1ed536a5e6fa7ed0f1f7ab9387f08a3707e3"
       },
       {
         "path": "archive/n186/assets/barlow-bold.ttf",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n186/assets/barlow-bold.ttf",
-        "status": 200,
-        "sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65",
         "bytes": 109912,
-        "received_sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65",
-        "received_bytes": 109912,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65"
       },
       {
         "path": "archive/n186/assets/Barlow-LICENSE.txt",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n186/assets/Barlow-LICENSE.txt",
-        "status": 200,
-        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
         "bytes": 4377,
-        "received_sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
-        "received_bytes": 4377,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f"
       },
       {
         "path": "archive/n186/gameday.css",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n186/gameday.css",
-        "status": 200,
-        "sha256": "4e1f69fd2d4df9105bae4753e94c49bfa87a8deb368fb1ff563f494019c19722",
         "bytes": 12778,
-        "received_sha256": "4e1f69fd2d4df9105bae4753e94c49bfa87a8deb368fb1ff563f494019c19722",
-        "received_bytes": 12778,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "4e1f69fd2d4df9105bae4753e94c49bfa87a8deb368fb1ff563f494019c19722"
       },
       {
         "path": "archive/n186/gameday.js",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n186/gameday.js",
-        "status": 200,
-        "sha256": "9b77b31ff3a6ce9dad39c094b76c308cebf2d6a3d358e7a91ea73945a56e992a",
         "bytes": 2182,
-        "received_sha256": "9b77b31ff3a6ce9dad39c094b76c308cebf2d6a3d358e7a91ea73945a56e992a",
-        "received_bytes": 2182,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "9b77b31ff3a6ce9dad39c094b76c308cebf2d6a3d358e7a91ea73945a56e992a"
       },
       {
         "path": "archive/n186/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n186/",
-        "status": 200,
-        "sha256": "19c58c9225d27de51fb59a1f5e7bf6e0b7634908c4f26862ca2f1daaab985b86",
         "bytes": 41690,
-        "received_sha256": "c7b8a10d43dd7b8611b9394db15eab51e3ae6948d48f538397f64298834ed63d",
-        "received_bytes": 42804,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "19c58c9225d27de51fb59a1f5e7bf6e0b7634908c4f26862ca2f1daaab985b86"
       },
       {
         "path": "archive/n186/legacy-route.js",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n186/legacy-route.js",
-        "status": 200,
-        "sha256": "c180d2af2c08d4d56a868594cc7d1a9c0ac7d681ee9862ece603ce9f9917901a",
         "bytes": 1017,
-        "received_sha256": "c180d2af2c08d4d56a868594cc7d1a9c0ac7d681ee9862ece603ce9f9917901a",
-        "received_bytes": 1017,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "c180d2af2c08d4d56a868594cc7d1a9c0ac7d681ee9862ece603ce9f9917901a"
       },
       {
         "path": "archive/n186/research-history.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n186/research-history",
-        "status": 200,
-        "sha256": "e6920e73f0f8396e333ba2bb8f1e548d95e8653387f9e5998d36fd1ea43fc9d2",
         "bytes": 330,
-        "received_sha256": "afeb5d3ee001b5666442da059c99dbd2872043eef5d362bbdcabcbff7dffb9da",
-        "received_bytes": 1444,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "e6920e73f0f8396e333ba2bb8f1e548d95e8653387f9e5998d36fd1ea43fc9d2"
       },
       {
         "path": "archive/n186/share/circa-options-1.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n186/share/circa-options-1.png",
-        "status": 200,
-        "sha256": "ee3d4fafafe104b83ca4ca9fb7c6d5c19b4dac79c52b935b8207d1c0c3439235",
         "bytes": 172358,
-        "received_sha256": "ee3d4fafafe104b83ca4ca9fb7c6d5c19b4dac79c52b935b8207d1c0c3439235",
-        "received_bytes": 172358,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "ee3d4fafafe104b83ca4ca9fb7c6d5c19b4dac79c52b935b8207d1c0c3439235"
       },
       {
         "path": "archive/n186/share/circa-options-2.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n186/share/circa-options-2.png",
-        "status": 200,
-        "sha256": "2ae1a3d5fa62e2a61c36bade1c485ba48b798b4209f627698284af555e1ba338",
         "bytes": 174360,
-        "received_sha256": "2ae1a3d5fa62e2a61c36bade1c485ba48b798b4209f627698284af555e1ba338",
-        "received_bytes": 174360,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "2ae1a3d5fa62e2a61c36bade1c485ba48b798b4209f627698284af555e1ba338"
       },
       {
         "path": "archive/n186/share/circa-options-3.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n186/share/circa-options-3.png",
-        "status": 200,
-        "sha256": "adaa89b5a9b912802b8df5ef8acbe482d8d7200871065f7202a5147ae9f8f4c1",
         "bytes": 195784,
-        "received_sha256": "adaa89b5a9b912802b8df5ef8acbe482d8d7200871065f7202a5147ae9f8f4c1",
-        "received_bytes": 195784,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "adaa89b5a9b912802b8df5ef8acbe482d8d7200871065f7202a5147ae9f8f4c1"
       },
       {
         "path": "archive/n186/share/packers-rams.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n186/share/packers-rams.png",
-        "status": 200,
-        "sha256": "9ab09919f11bba02c859785f027bc968571df0aa4a781741998c050e6b39d7aa",
         "bytes": 151339,
-        "received_sha256": "9ab09919f11bba02c859785f027bc968571df0aa4a781741998c050e6b39d7aa",
-        "received_bytes": 151339,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "9ab09919f11bba02c859785f027bc968571df0aa4a781741998c050e6b39d7aa"
       },
       {
         "path": "archive/n187/archive/n186/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n187/archive/n186/",
-        "status": 200,
-        "sha256": "038306be8d13bc97fb68486e6f1f938e1ab574bc342ee3cae63cbf9867356fa7",
         "bytes": 330,
-        "received_sha256": "c8c2665266dfe716a94c290c01f629e953201ee19cf7fa777cdbcf7751ae1a9e",
-        "received_bytes": 1444,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "038306be8d13bc97fb68486e6f1f938e1ab574bc342ee3cae63cbf9867356fa7"
       },
       {
         "path": "archive/n187/assets/barlow-bold.ttf",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n187/assets/barlow-bold.ttf",
-        "status": 200,
-        "sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65",
         "bytes": 109912,
-        "received_sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65",
-        "received_bytes": 109912,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65"
       },
       {
         "path": "archive/n187/assets/Barlow-LICENSE.txt",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n187/assets/Barlow-LICENSE.txt",
-        "status": 200,
-        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
         "bytes": 4377,
-        "received_sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
-        "received_bytes": 4377,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f"
       },
       {
         "path": "archive/n187/gameday.css",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n187/gameday.css",
-        "status": 200,
-        "sha256": "1e32810c0867e58d567ed836603d5f2b5e20a62cadff34f3fbb61cbad5483cef",
         "bytes": 13281,
-        "received_sha256": "1e32810c0867e58d567ed836603d5f2b5e20a62cadff34f3fbb61cbad5483cef",
-        "received_bytes": 13281,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "1e32810c0867e58d567ed836603d5f2b5e20a62cadff34f3fbb61cbad5483cef"
       },
       {
         "path": "archive/n187/gameday.js",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n187/gameday.js",
-        "status": 200,
-        "sha256": "9bfc59ee022cd96ac5dfeaba72a356f79d15fca59584f608e4e81835aaed859a",
         "bytes": 2605,
-        "received_sha256": "9bfc59ee022cd96ac5dfeaba72a356f79d15fca59584f608e4e81835aaed859a",
-        "received_bytes": 2605,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "9bfc59ee022cd96ac5dfeaba72a356f79d15fca59584f608e4e81835aaed859a"
       },
       {
         "path": "archive/n187/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n187/",
-        "status": 200,
-        "sha256": "81df8bdc012459553d90b3143dbd7e9e7242b83acc3dee6ddd64b34b6ae99700",
         "bytes": 94155,
-        "received_sha256": "15b88e72851bfeb129d0056334ff86552ff6a5423b0fa701ea119a3f61f36877",
-        "received_bytes": 95269,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "81df8bdc012459553d90b3143dbd7e9e7242b83acc3dee6ddd64b34b6ae99700"
       },
       {
         "path": "archive/n187/legacy-route.js",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n187/legacy-route.js",
-        "status": 200,
-        "sha256": "c180d2af2c08d4d56a868594cc7d1a9c0ac7d681ee9862ece603ce9f9917901a",
         "bytes": 1017,
-        "received_sha256": "c180d2af2c08d4d56a868594cc7d1a9c0ac7d681ee9862ece603ce9f9917901a",
-        "received_bytes": 1017,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "c180d2af2c08d4d56a868594cc7d1a9c0ac7d681ee9862ece603ce9f9917901a"
       },
       {
         "path": "archive/n187/research-history.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n187/research-history",
-        "status": 200,
-        "sha256": "df44f15ef7e34799193ce87ee623b039fb05601f1fb1bfb5b8aa7fc9a0ed11aa",
         "bytes": 336,
-        "received_sha256": "cde669e89ff94336bdc5d4178f002a61c375edd73f4794ff432e797d2b2356ed",
-        "received_bytes": 1450,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "df44f15ef7e34799193ce87ee623b039fb05601f1fb1bfb5b8aa7fc9a0ed11aa"
       },
       {
         "path": "archive/n187/share/circa-options-1.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n187/share/circa-options-1.png",
-        "status": 200,
-        "sha256": "b7f1c93065008e0f6158c94f333c303d4346a4aaee56d5831f360262bd70e44b",
         "bytes": 172473,
-        "received_sha256": "b7f1c93065008e0f6158c94f333c303d4346a4aaee56d5831f360262bd70e44b",
-        "received_bytes": 172473,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "b7f1c93065008e0f6158c94f333c303d4346a4aaee56d5831f360262bd70e44b"
       },
       {
         "path": "archive/n187/share/circa-options-2.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n187/share/circa-options-2.png",
-        "status": 200,
-        "sha256": "7ed824a8e56228075d64d3c99835e0d1e7245d194af859903423e85bef8ff169",
         "bytes": 174935,
-        "received_sha256": "7ed824a8e56228075d64d3c99835e0d1e7245d194af859903423e85bef8ff169",
-        "received_bytes": 174935,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "7ed824a8e56228075d64d3c99835e0d1e7245d194af859903423e85bef8ff169"
       },
       {
         "path": "archive/n187/share/circa-options-3.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n187/share/circa-options-3.png",
-        "status": 200,
-        "sha256": "9aea192f91bfecbf85b509fbc1628205f8fa658a51eea694c7116a75d66ff5e9",
         "bytes": 196378,
-        "received_sha256": "9aea192f91bfecbf85b509fbc1628205f8fa658a51eea694c7116a75d66ff5e9",
-        "received_bytes": 196378,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "9aea192f91bfecbf85b509fbc1628205f8fa658a51eea694c7116a75d66ff5e9"
       },
       {
         "path": "archive/n187/share/packers-rams.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n187/share/packers-rams.png",
-        "status": 200,
-        "sha256": "3bf4f3f90732b49f166e26c889837de359b471b9eaf1d0a94d89a074346786d0",
         "bytes": 151538,
-        "received_sha256": "3bf4f3f90732b49f166e26c889837de359b471b9eaf1d0a94d89a074346786d0",
-        "received_bytes": 151538,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "3bf4f3f90732b49f166e26c889837de359b471b9eaf1d0a94d89a074346786d0"
       },
       {
         "path": "archive/n188/archive/n186/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n188/archive/n186/",
-        "status": 200,
-        "sha256": "038306be8d13bc97fb68486e6f1f938e1ab574bc342ee3cae63cbf9867356fa7",
         "bytes": 330,
-        "received_sha256": "343eb7a45173b674adb481392cb7e9c48ccfa65c636a7f37da703b50cf406a80",
-        "received_bytes": 1444,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "038306be8d13bc97fb68486e6f1f938e1ab574bc342ee3cae63cbf9867356fa7"
       },
       {
         "path": "archive/n188/archive/n187/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n188/archive/n187/",
-        "status": 200,
-        "sha256": "5e5abbb396a7d1a372dec74f7121bff7514eda695477899aa8c7038f580e23b0",
         "bytes": 330,
-        "received_sha256": "49140b1ac66618204ec8ed0a81541bfa27e1220dd50ce61b08d552e9f2e3f542",
-        "received_bytes": 1444,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "5e5abbb396a7d1a372dec74f7121bff7514eda695477899aa8c7038f580e23b0"
       },
       {
         "path": "archive/n188/assets/barlow-bold.ttf",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n188/assets/barlow-bold.ttf",
-        "status": 200,
-        "sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65",
         "bytes": 109912,
-        "received_sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65",
-        "received_bytes": 109912,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65"
       },
       {
         "path": "archive/n188/assets/Barlow-LICENSE.txt",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n188/assets/Barlow-LICENSE.txt",
-        "status": 200,
-        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
         "bytes": 4377,
-        "received_sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
-        "received_bytes": 4377,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f"
       },
       {
         "path": "archive/n188/circa/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n188/circa/",
-        "status": 200,
-        "sha256": "a27ebbb817628bec27259f9580393c20608b2b5aec94d8ae0cd026a32fb42d8c",
         "bytes": 21549,
-        "received_sha256": "e5158543d683ea3d5ded972e63facb50806d2f440b081fcb31dcaae26a76e8cb",
-        "received_bytes": 22663,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "a27ebbb817628bec27259f9580393c20608b2b5aec94d8ae0cd026a32fb42d8c"
       },
       {
         "path": "archive/n188/gameday.css",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n188/gameday.css",
-        "status": 200,
-        "sha256": "1e32810c0867e58d567ed836603d5f2b5e20a62cadff34f3fbb61cbad5483cef",
         "bytes": 13281,
-        "received_sha256": "1e32810c0867e58d567ed836603d5f2b5e20a62cadff34f3fbb61cbad5483cef",
-        "received_bytes": 13281,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "1e32810c0867e58d567ed836603d5f2b5e20a62cadff34f3fbb61cbad5483cef"
       },
       {
         "path": "archive/n188/gameday.js",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n188/gameday.js",
-        "status": 200,
-        "sha256": "9bfc59ee022cd96ac5dfeaba72a356f79d15fca59584f608e4e81835aaed859a",
         "bytes": 2605,
-        "received_sha256": "9bfc59ee022cd96ac5dfeaba72a356f79d15fca59584f608e4e81835aaed859a",
-        "received_bytes": 2605,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "9bfc59ee022cd96ac5dfeaba72a356f79d15fca59584f608e4e81835aaed859a"
       },
       {
         "path": "archive/n188/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n188/",
-        "status": 200,
-        "sha256": "1a013a8097bfcc6ba1ef8a5e168de0a9f7c2e85637180d43bf9bdfe246b22ecd",
         "bytes": 128572,
-        "received_sha256": "9e6c9a4fc039837a5ee576cae92f7aaf27166f6b6b78fddb09ebeee0059f1464",
-        "received_bytes": 129686,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "1a013a8097bfcc6ba1ef8a5e168de0a9f7c2e85637180d43bf9bdfe246b22ecd"
       },
       {
         "path": "archive/n188/legacy-route.js",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n188/legacy-route.js",
-        "status": 200,
-        "sha256": "c180d2af2c08d4d56a868594cc7d1a9c0ac7d681ee9862ece603ce9f9917901a",
         "bytes": 1017,
-        "received_sha256": "c180d2af2c08d4d56a868594cc7d1a9c0ac7d681ee9862ece603ce9f9917901a",
-        "received_bytes": 1017,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "c180d2af2c08d4d56a868594cc7d1a9c0ac7d681ee9862ece603ce9f9917901a"
       },
       {
         "path": "archive/n188/research-history.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n188/research-history",
-        "status": 200,
-        "sha256": "df44f15ef7e34799193ce87ee623b039fb05601f1fb1bfb5b8aa7fc9a0ed11aa",
         "bytes": 336,
-        "received_sha256": "e1c7240d3ff782c1a40e324546d7a95f165a7f69df2708150552d9688e031389",
-        "received_bytes": 1450,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "df44f15ef7e34799193ce87ee623b039fb05601f1fb1bfb5b8aa7fc9a0ed11aa"
       },
       {
         "path": "archive/n188/share/circa-options-1.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n188/share/circa-options-1.png",
-        "status": 200,
-        "sha256": "fc0c3acedf29c7f09e45a98232e9759425674c902fd282ed8452bad8681e6a09",
         "bytes": 172922,
-        "received_sha256": "fc0c3acedf29c7f09e45a98232e9759425674c902fd282ed8452bad8681e6a09",
-        "received_bytes": 172922,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "fc0c3acedf29c7f09e45a98232e9759425674c902fd282ed8452bad8681e6a09"
       },
       {
         "path": "archive/n188/share/circa-options-2.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n188/share/circa-options-2.png",
-        "status": 200,
-        "sha256": "564dff0355466d3f142e83dff27146170f989a26291e356b660d287591b55e76",
         "bytes": 175407,
-        "received_sha256": "564dff0355466d3f142e83dff27146170f989a26291e356b660d287591b55e76",
-        "received_bytes": 175407,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "564dff0355466d3f142e83dff27146170f989a26291e356b660d287591b55e76"
       },
       {
         "path": "archive/n188/share/circa-options-3.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n188/share/circa-options-3.png",
-        "status": 200,
-        "sha256": "5b9b1c6d46ce51700e797ec7341c86f45b2cfc2ea73ee85dde26f58b7d5f8947",
         "bytes": 197203,
-        "received_sha256": "5b9b1c6d46ce51700e797ec7341c86f45b2cfc2ea73ee85dde26f58b7d5f8947",
-        "received_bytes": 197203,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "5b9b1c6d46ce51700e797ec7341c86f45b2cfc2ea73ee85dde26f58b7d5f8947"
       },
       {
         "path": "archive/n188/share/model-performance.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n188/share/model-performance.png",
-        "status": 200,
-        "sha256": "473576f1852fafb006e765c435dd71831e55b20c7a064c695329ad3152c5f7a8",
         "bytes": 162669,
-        "received_sha256": "473576f1852fafb006e765c435dd71831e55b20c7a064c695329ad3152c5f7a8",
-        "received_bytes": 162669,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "473576f1852fafb006e765c435dd71831e55b20c7a064c695329ad3152c5f7a8"
       },
       {
         "path": "archive/n188/share/packers-rams.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n188/share/packers-rams.png",
-        "status": 200,
-        "sha256": "6ef5aa9877b7afb46ec8df7802d121464063285da412b53767b046cc79d5bf2e",
         "bytes": 149285,
-        "received_sha256": "6ef5aa9877b7afb46ec8df7802d121464063285da412b53767b046cc79d5bf2e",
-        "received_bytes": 149285,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "6ef5aa9877b7afb46ec8df7802d121464063285da412b53767b046cc79d5bf2e"
       },
       {
         "path": "archive/n189/archive/n186/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n189/archive/n186/",
-        "status": 200,
-        "sha256": "7e4d9ad0c281756b5aa47df0ed5eb929104da190ca6d114728fd3ddb20ec421d",
         "bytes": 352,
-        "received_sha256": "05ebf84ce1d4bb657e6b2ebfc49accee4548b467e4f2aaeef9e64ad545582723",
-        "received_bytes": 1466,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "7e4d9ad0c281756b5aa47df0ed5eb929104da190ca6d114728fd3ddb20ec421d"
       },
       {
         "path": "archive/n189/archive/n187/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n189/archive/n187/",
-        "status": 200,
-        "sha256": "452888cbad36406c309179928e71e2255607529061345d9c64e769600497c090",
         "bytes": 352,
-        "received_sha256": "67d06de42de55d01981ba7cf93425ea70b75435d0019703202ba6f3fc7fd2122",
-        "received_bytes": 1466,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "452888cbad36406c309179928e71e2255607529061345d9c64e769600497c090"
       },
       {
         "path": "archive/n189/archive/n188/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n189/archive/n188/",
-        "status": 200,
-        "sha256": "bc560a5e32e7b4ea6c1beceff9a3df62afd29e7295b59a764f5a34bc10aba81e",
         "bytes": 352,
-        "received_sha256": "439f18bc83033486e24b48dfcacae06931afb5fbd5e9e059c8a5937ea9e100d7",
-        "received_bytes": 1466,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "bc560a5e32e7b4ea6c1beceff9a3df62afd29e7295b59a764f5a34bc10aba81e"
       },
       {
         "path": "archive/n189/assets/barlow-bold.ttf",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n189/assets/barlow-bold.ttf",
-        "status": 200,
-        "sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65",
         "bytes": 109912,
-        "received_sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65",
-        "received_bytes": 109912,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65"
       },
       {
         "path": "archive/n189/assets/Barlow-LICENSE.txt",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n189/assets/Barlow-LICENSE.txt",
-        "status": 200,
-        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
         "bytes": 4377,
-        "received_sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
-        "received_bytes": 4377,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f"
       },
       {
         "path": "archive/n189/circa/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n189/circa/",
-        "status": 200,
-        "sha256": "b31952e7fc7d7a3472801ab37e133a0d72daa0a08ebafb25d5e24ea799d9c0e3",
         "bytes": 30291,
-        "received_sha256": "f9813a8eed1b675aacc46b761e767b773bf19c2aba3c628e2045877de9c0053a",
-        "received_bytes": 31405,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "b31952e7fc7d7a3472801ab37e133a0d72daa0a08ebafb25d5e24ea799d9c0e3"
       },
       {
         "path": "archive/n189/gameday.css",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n189/gameday.css",
-        "status": 200,
-        "sha256": "1e32810c0867e58d567ed836603d5f2b5e20a62cadff34f3fbb61cbad5483cef",
         "bytes": 13281,
-        "received_sha256": "1e32810c0867e58d567ed836603d5f2b5e20a62cadff34f3fbb61cbad5483cef",
-        "received_bytes": 13281,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "1e32810c0867e58d567ed836603d5f2b5e20a62cadff34f3fbb61cbad5483cef"
       },
       {
         "path": "archive/n189/gameday.js",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n189/gameday.js",
-        "status": 200,
-        "sha256": "9bfc59ee022cd96ac5dfeaba72a356f79d15fca59584f608e4e81835aaed859a",
         "bytes": 2605,
-        "received_sha256": "9bfc59ee022cd96ac5dfeaba72a356f79d15fca59584f608e4e81835aaed859a",
-        "received_bytes": 2605,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "9bfc59ee022cd96ac5dfeaba72a356f79d15fca59584f608e4e81835aaed859a"
       },
       {
         "path": "archive/n189/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n189/",
-        "status": 200,
-        "sha256": "5a50ce9a7a21eadb927169764c6153541fb05fcfa1e73a4ce6bfc114b2682956",
         "bytes": 171581,
-        "received_sha256": "275b48e68fb5c9ddc700d09e248cb8a3bf684dba86bbe97293c62f03845ee00e",
-        "received_bytes": 172695,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "5a50ce9a7a21eadb927169764c6153541fb05fcfa1e73a4ce6bfc114b2682956"
       },
       {
         "path": "archive/n189/legacy-route.js",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n189/legacy-route.js",
-        "status": 200,
-        "sha256": "c180d2af2c08d4d56a868594cc7d1a9c0ac7d681ee9862ece603ce9f9917901a",
         "bytes": 1017,
-        "received_sha256": "c180d2af2c08d4d56a868594cc7d1a9c0ac7d681ee9862ece603ce9f9917901a",
-        "received_bytes": 1017,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "c180d2af2c08d4d56a868594cc7d1a9c0ac7d681ee9862ece603ce9f9917901a"
       },
       {
         "path": "archive/n189/research-history.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n189/research-history",
-        "status": 200,
-        "sha256": "d05d6aaf878915c64d77efe80e47dfb7b7b5889047abb6afa2c7f1bee9de66a5",
         "bytes": 358,
-        "received_sha256": "341db81c6b2aab1edab6ff871f2d1524d007aef67bada17a9a5e7687ff1f93b4",
-        "received_bytes": 1472,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "d05d6aaf878915c64d77efe80e47dfb7b7b5889047abb6afa2c7f1bee9de66a5"
       },
       {
         "path": "archive/n189/share/circa-options-1.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n189/share/circa-options-1.png",
-        "status": 200,
-        "sha256": "d7bba593b1285b1ac49890cc78b6369e9ee70399ec53dfea60b79f2cf23e1bed",
         "bytes": 172472,
-        "received_sha256": "d7bba593b1285b1ac49890cc78b6369e9ee70399ec53dfea60b79f2cf23e1bed",
-        "received_bytes": 172472,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "d7bba593b1285b1ac49890cc78b6369e9ee70399ec53dfea60b79f2cf23e1bed"
       },
       {
         "path": "archive/n189/share/circa-options-2.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n189/share/circa-options-2.png",
-        "status": 200,
-        "sha256": "fdd00972fb886d0b91e4a07f861017ee6893b6f9c36be0cff7f1b8e5d739e130",
         "bytes": 174958,
-        "received_sha256": "fdd00972fb886d0b91e4a07f861017ee6893b6f9c36be0cff7f1b8e5d739e130",
-        "received_bytes": 174958,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "fdd00972fb886d0b91e4a07f861017ee6893b6f9c36be0cff7f1b8e5d739e130"
       },
       {
         "path": "archive/n189/share/circa-options-3.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n189/share/circa-options-3.png",
-        "status": 200,
-        "sha256": "3db1b0689b65940116249e50365ec102261c497fde702c0583d5598ff96ef617",
         "bytes": 196716,
-        "received_sha256": "3db1b0689b65940116249e50365ec102261c497fde702c0583d5598ff96ef617",
-        "received_bytes": 196716,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "3db1b0689b65940116249e50365ec102261c497fde702c0583d5598ff96ef617"
       },
       {
         "path": "archive/n189/share/joint-team-scores.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n189/share/joint-team-scores.png",
-        "status": 200,
-        "sha256": "14ddcb68515cb77b85dc213253d8fedfcab5fb93b3c177247aad169ec040d32b",
         "bytes": 186754,
-        "received_sha256": "14ddcb68515cb77b85dc213253d8fedfcab5fb93b3c177247aad169ec040d32b",
-        "received_bytes": 186754,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "14ddcb68515cb77b85dc213253d8fedfcab5fb93b3c177247aad169ec040d32b"
       },
       {
         "path": "archive/n189/share/model-performance.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n189/share/model-performance.png",
-        "status": 200,
-        "sha256": "4a64ae19a4669cf681a866ac4a39d900e47f28ce84c6cb4910303cd81614f80a",
         "bytes": 163691,
-        "received_sha256": "4a64ae19a4669cf681a866ac4a39d900e47f28ce84c6cb4910303cd81614f80a",
-        "received_bytes": 163691,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "4a64ae19a4669cf681a866ac4a39d900e47f28ce84c6cb4910303cd81614f80a"
       },
       {
         "path": "archive/n189/share/packers-rams.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n189/share/packers-rams.png",
-        "status": 200,
-        "sha256": "a54e5a858e0c08e2889f3257f076233cb869a68de5ca80734b7ee498e513ebef",
         "bytes": 149361,
-        "received_sha256": "a54e5a858e0c08e2889f3257f076233cb869a68de5ca80734b7ee498e513ebef",
-        "received_bytes": 149361,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "a54e5a858e0c08e2889f3257f076233cb869a68de5ca80734b7ee498e513ebef"
       },
       {
         "path": "archive/n190/assets/barlow-bold.ttf",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n190/assets/barlow-bold.ttf",
-        "status": 200,
-        "sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65",
         "bytes": 109912,
-        "received_sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65",
-        "received_bytes": 109912,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65"
       },
       {
         "path": "archive/n190/assets/Barlow-LICENSE.txt",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n190/assets/Barlow-LICENSE.txt",
-        "status": 200,
-        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
         "bytes": 4377,
-        "received_sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
-        "received_bytes": 4377,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f"
       },
       {
         "path": "archive/n190/circa/draftkings-1003.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n190/circa/draftkings-1003",
-        "status": 200,
-        "sha256": "22d7254a48dcb591f57ea9cf719b187950aeb97f14e4c240b6402ca9a6f5fac6",
         "bytes": 29837,
-        "received_sha256": "1ba2b1242c052216a72dedfd14283c38766a58fd31d62c8e175d2e14fe8e561f",
-        "received_bytes": 30951,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "22d7254a48dcb591f57ea9cf719b187950aeb97f14e4c240b6402ca9a6f5fac6"
       },
       {
         "path": "archive/n190/circa/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n190/circa/",
-        "status": 200,
-        "sha256": "e03e50b148ddae83e24073aa53829b0545b0d7222459987d065a3f2ddf283350",
         "bytes": 32104,
-        "received_sha256": "6b822cbe6ba07b48fdf720ca76a2b76623177e0e6a50292c677f9755f43d3d04",
-        "received_bytes": 33218,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "e03e50b148ddae83e24073aa53829b0545b0d7222459987d065a3f2ddf283350"
       },
       {
         "path": "archive/n190/gameday.css",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n190/gameday.css",
-        "status": 200,
-        "sha256": "1e32810c0867e58d567ed836603d5f2b5e20a62cadff34f3fbb61cbad5483cef",
         "bytes": 13281,
-        "received_sha256": "1e32810c0867e58d567ed836603d5f2b5e20a62cadff34f3fbb61cbad5483cef",
-        "received_bytes": 13281,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "1e32810c0867e58d567ed836603d5f2b5e20a62cadff34f3fbb61cbad5483cef"
       },
       {
         "path": "archive/n190/gameday.js",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n190/gameday.js",
-        "status": 200,
-        "sha256": "9bfc59ee022cd96ac5dfeaba72a356f79d15fca59584f608e4e81835aaed859a",
         "bytes": 2605,
-        "received_sha256": "9bfc59ee022cd96ac5dfeaba72a356f79d15fca59584f608e4e81835aaed859a",
-        "received_bytes": 2605,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "9bfc59ee022cd96ac5dfeaba72a356f79d15fca59584f608e4e81835aaed859a"
       },
       {
         "path": "archive/n190/holiday.css",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n190/holiday.css",
-        "status": 200,
-        "sha256": "1bf5805f062dc40fe35df2480c8a328adb2b0dc990b41c65bfc00dc319070bf4",
         "bytes": 2770,
-        "received_sha256": "1bf5805f062dc40fe35df2480c8a328adb2b0dc990b41c65bfc00dc319070bf4",
-        "received_bytes": 2770,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "1bf5805f062dc40fe35df2480c8a328adb2b0dc990b41c65bfc00dc319070bf4"
       },
       {
         "path": "archive/n190/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n190/",
-        "status": 200,
-        "sha256": "7c04c6afa5d1fcd9fc660c460828287ae02e3f716753fcc995fb1f2c4fab4e7c",
         "bytes": 209997,
-        "received_sha256": "4581c41195bf11e775a9f35e3474e2f1b8c1f30065a9a3998dca9d7fcf2cf278",
-        "received_bytes": 211111,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "7c04c6afa5d1fcd9fc660c460828287ae02e3f716753fcc995fb1f2c4fab4e7c"
       },
       {
         "path": "archive/n190/legacy-route.js",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n190/legacy-route.js",
-        "status": 200,
-        "sha256": "c180d2af2c08d4d56a868594cc7d1a9c0ac7d681ee9862ece603ce9f9917901a",
         "bytes": 1017,
-        "received_sha256": "c180d2af2c08d4d56a868594cc7d1a9c0ac7d681ee9862ece603ce9f9917901a",
-        "received_bytes": 1017,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "c180d2af2c08d4d56a868594cc7d1a9c0ac7d681ee9862ece603ce9f9917901a"
       },
       {
         "path": "archive/n190/research-history.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n190/research-history",
-        "status": 200,
-        "sha256": "992c3d8c356793b1ee4a3a79a0017daddb33ea71df43c629f365343fae91a861",
         "bytes": 273,
-        "received_sha256": "5ad81008a853666a7083267adb80f694ea918508fd92862d0db6a9b2fb363fe5",
-        "received_bytes": 1387,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "992c3d8c356793b1ee4a3a79a0017daddb33ea71df43c629f365343fae91a861"
       },
       {
         "path": "archive/n190/thanksgiving/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n190/thanksgiving/",
-        "status": 200,
-        "sha256": "fc8187e36a49d869fdb5b6b20eec44977f5a8182fd7add1c6305dd2a3c8014e1",
         "bytes": 7961,
-        "received_sha256": "2b565f6796c33c4fbf491547ff9911640f48b2d237fe94061ec49b8358b5f838",
-        "received_bytes": 9075,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "fc8187e36a49d869fdb5b6b20eec44977f5a8182fd7add1c6305dd2a3c8014e1"
       },
       {
         "path": "archive/n190/weeks/12/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n190/weeks/12/",
-        "status": 200,
-        "sha256": "0eda4d9ac31ac484fe7d10db3de7f0c83f4fc1b84211f446fa74236bc8bc1cd8",
         "bytes": 17267,
-        "received_sha256": "2d082e6537bfcf61706ec57ff5b303eb1e17dfda9c48e508707afb5e580f523a",
-        "received_bytes": 18381,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "0eda4d9ac31ac484fe7d10db3de7f0c83f4fc1b84211f446fa74236bc8bc1cd8"
       },
       {
         "path": "archive/n190/weeks/13/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n190/weeks/13/",
-        "status": 200,
-        "sha256": "a6b858d18469882b6d6b63b5d51a5a30a72e4694b8ed724208a83515d2613243",
         "bytes": 11799,
-        "received_sha256": "bd67dd4da593105d70931b521737c9afa7fee4e2c4c49cb1b744d71a3c2658ed",
-        "received_bytes": 12913,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "a6b858d18469882b6d6b63b5d51a5a30a72e4694b8ed724208a83515d2613243"
       },
       {
         "path": "archive/n190/weeks/14/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n190/weeks/14/",
-        "status": 200,
-        "sha256": "64f5ec6865d533aa8d5f439492a196f86631c7964c9e65d7cf1f61eb3a41ddb0",
         "bytes": 12548,
-        "received_sha256": "07e3ed1bd93cc2131a3a0ede1e68f4bbcf3f8e578d7ee87ccb4bfa4edd843779",
-        "received_bytes": 13662,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "64f5ec6865d533aa8d5f439492a196f86631c7964c9e65d7cf1f61eb3a41ddb0"
       },
       {
         "path": "archive/n190/weeks/15/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n190/weeks/15/",
-        "status": 200,
-        "sha256": "fc09ddca9a412ac88981fb51723a0629fa9a64a01be5ad39da7d844831d4db33",
         "bytes": 13277,
-        "received_sha256": "6e7ae9c65ad8bbdec045b9cb64f48701830ee3bb241332ee1103a651ca5f76a3",
-        "received_bytes": 14391,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "fc09ddca9a412ac88981fb51723a0629fa9a64a01be5ad39da7d844831d4db33"
       },
       {
         "path": "archive/n190/weeks/16/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n190/weeks/16/",
-        "status": 200,
-        "sha256": "987300814a1fbac0bb780046ee2281be8b28b57c5042df3c8948b18e5af19326",
         "bytes": 13276,
-        "received_sha256": "c9abc64b5c3e1f665caa1c83c7c574e66ef8ab2c46982cdce8d92937653d768a",
-        "received_bytes": 14390,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "987300814a1fbac0bb780046ee2281be8b28b57c5042df3c8948b18e5af19326"
       },
       {
         "path": "archive/n190/weeks/17/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n190/weeks/17/",
-        "status": 200,
-        "sha256": "0fa6c324352e9ffcf78120bde09803abe8ecd016f724944f987dd66c1923dc9e",
         "bytes": 13272,
-        "received_sha256": "2ac7690f78ab7da57aca039d29e95f101fcb8bc17dc68b801ff029516dc6f9a2",
-        "received_bytes": 14386,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "0fa6c324352e9ffcf78120bde09803abe8ecd016f724944f987dd66c1923dc9e"
       },
       {
         "path": "archive/n190/weeks/18/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n190/weeks/18/",
-        "status": 200,
-        "sha256": "efb4ee45e5919d4df8e69fcf49e10c4abdcd2e26ba1bad6e25c5bd9eb26a2c86",
         "bytes": 13292,
-        "received_sha256": "0687f38302fef12d516036b821b59d0ae1c9f0c48d63a6e3e7eb604eb6efeec9",
-        "received_bytes": 14406,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "efb4ee45e5919d4df8e69fcf49e10c4abdcd2e26ba1bad6e25c5bd9eb26a2c86"
       },
       {
         "path": "archive/n191/assets/barlow-bold.ttf",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n191/assets/barlow-bold.ttf",
-        "status": 200,
-        "sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65",
         "bytes": 109912,
-        "received_sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65",
-        "received_bytes": 109912,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65"
       },
       {
         "path": "archive/n191/assets/Barlow-LICENSE.txt",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n191/assets/Barlow-LICENSE.txt",
-        "status": 200,
-        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
         "bytes": 4377,
-        "received_sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
-        "received_bytes": 4377,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f"
       },
       {
         "path": "archive/n191/circa/draftkings-1003.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n191/circa/draftkings-1003",
-        "status": 200,
-        "sha256": "22d7254a48dcb591f57ea9cf719b187950aeb97f14e4c240b6402ca9a6f5fac6",
         "bytes": 29837,
-        "received_sha256": "0ab71e514de4a7c83e49974370d4360795a99a94e18c393ea8380d4cf9a397c1",
-        "received_bytes": 30951,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "22d7254a48dcb591f57ea9cf719b187950aeb97f14e4c240b6402ca9a6f5fac6"
       },
       {
         "path": "archive/n191/circa/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n191/circa/",
-        "status": 200,
-        "sha256": "4d7b89985160b00af9764fb3cb2b7ac46680813c78b1e5785b2ec0045b19fa1d",
         "bytes": 43307,
-        "received_sha256": "151f146b0c894160dea95a093bbd0378b4e2deb1b6483466d3f7a3aa12892a91",
-        "received_bytes": 44421,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "4d7b89985160b00af9764fb3cb2b7ac46680813c78b1e5785b2ec0045b19fa1d"
       },
       {
         "path": "archive/n191/gameday.css",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n191/gameday.css",
-        "status": 200,
-        "sha256": "1e32810c0867e58d567ed836603d5f2b5e20a62cadff34f3fbb61cbad5483cef",
         "bytes": 13281,
-        "received_sha256": "1e32810c0867e58d567ed836603d5f2b5e20a62cadff34f3fbb61cbad5483cef",
-        "received_bytes": 13281,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "1e32810c0867e58d567ed836603d5f2b5e20a62cadff34f3fbb61cbad5483cef"
       },
       {
         "path": "archive/n191/gameday.js",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n191/gameday.js",
-        "status": 200,
-        "sha256": "9bfc59ee022cd96ac5dfeaba72a356f79d15fca59584f608e4e81835aaed859a",
         "bytes": 2605,
-        "received_sha256": "9bfc59ee022cd96ac5dfeaba72a356f79d15fca59584f608e4e81835aaed859a",
-        "received_bytes": 2605,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "9bfc59ee022cd96ac5dfeaba72a356f79d15fca59584f608e4e81835aaed859a"
       },
       {
         "path": "archive/n191/holiday.css",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n191/holiday.css",
-        "status": 200,
-        "sha256": "1b6ed29d480c43a76987f9a130f2be1e2fc513babb35ed5e858af4a6a91d0317",
         "bytes": 3464,
-        "received_sha256": "1b6ed29d480c43a76987f9a130f2be1e2fc513babb35ed5e858af4a6a91d0317",
-        "received_bytes": 3464,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "1b6ed29d480c43a76987f9a130f2be1e2fc513babb35ed5e858af4a6a91d0317"
       },
       {
         "path": "archive/n191/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n191/",
-        "status": 200,
-        "sha256": "ecc49b2cf458a17c9077d49256065c9007beca24dabc5781e3a2efab6930014b",
         "bytes": 287629,
-        "received_sha256": "4c5e930e8499ddc89f4bc40375cc458f4a3005a3325ade3640cdc98bad4948b2",
-        "received_bytes": 288743,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "ecc49b2cf458a17c9077d49256065c9007beca24dabc5781e3a2efab6930014b"
       },
       {
         "path": "archive/n191/legacy-route.js",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n191/legacy-route.js",
-        "status": 200,
-        "sha256": "c180d2af2c08d4d56a868594cc7d1a9c0ac7d681ee9862ece603ce9f9917901a",
         "bytes": 1017,
-        "received_sha256": "c180d2af2c08d4d56a868594cc7d1a9c0ac7d681ee9862ece603ce9f9917901a",
-        "received_bytes": 1017,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "c180d2af2c08d4d56a868594cc7d1a9c0ac7d681ee9862ece603ce9f9917901a"
       },
       {
         "path": "archive/n191/research-history.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n191/research-history",
-        "status": 200,
-        "sha256": "992c3d8c356793b1ee4a3a79a0017daddb33ea71df43c629f365343fae91a861",
         "bytes": 273,
-        "received_sha256": "5eca879685aa7c290ce18f83f8546c2af788d513c5e74e8587f1637fd0fb63b0",
-        "received_bytes": 1387,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "992c3d8c356793b1ee4a3a79a0017daddb33ea71df43c629f365343fae91a861"
       },
       {
         "path": "archive/n191/thanksgiving/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n191/thanksgiving/",
-        "status": 200,
-        "sha256": "7718564ad6c5fde84329dd0b4e293be5e8a3a1f752870a9cc998cb1e7352b78f",
         "bytes": 10092,
-        "received_sha256": "16c2059b96ff935c6c7391029f8f2d54dea94e74658cd15177ae53aed281b49d",
-        "received_bytes": 11206,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "7718564ad6c5fde84329dd0b4e293be5e8a3a1f752870a9cc998cb1e7352b78f"
       },
       {
         "path": "archive/n191/weeks/12/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n191/weeks/12/",
-        "status": 200,
-        "sha256": "eceaec9c65dd15e0fc044f8b5341c7a0d30d9eaa3269cce172913818067a628b",
         "bytes": 28424,
-        "received_sha256": "6229e10a4d51f9aef4541734861619766bfecc3ae1513a4e5f2266be8c78bb23",
-        "received_bytes": 29538,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "eceaec9c65dd15e0fc044f8b5341c7a0d30d9eaa3269cce172913818067a628b"
       },
       {
         "path": "archive/n191/weeks/13/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n191/weeks/13/",
-        "status": 200,
-        "sha256": "4b5a97cedc6dc735696a9455e2e89f22b977ce753882cf7ae9c8d0928d6501d8",
         "bytes": 21483,
-        "received_sha256": "9b685049438c508d27a77f93dc94a4716431cde4eed419d6f9b09abccdc16908",
-        "received_bytes": 22597,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "4b5a97cedc6dc735696a9455e2e89f22b977ce753882cf7ae9c8d0928d6501d8"
       },
       {
         "path": "archive/n191/weeks/14/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n191/weeks/14/",
-        "status": 200,
-        "sha256": "cb6f2cbfcbcc4a4e351954e45932d45b1105de681ab58b0bc2a8ae26c579fc70",
         "bytes": 22928,
-        "received_sha256": "17b3688707ad4226443f2ec7bb044c45ea3c284a6a1543bd18ecbbfae37a425a",
-        "received_bytes": 24042,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "cb6f2cbfcbcc4a4e351954e45932d45b1105de681ab58b0bc2a8ae26c579fc70"
       },
       {
         "path": "archive/n191/weeks/15/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n191/weeks/15/",
-        "status": 200,
-        "sha256": "33afd6f75a491cae7d2579896eefc927f98c59e5b900ccd3e12907d879303b42",
         "bytes": 24337,
-        "received_sha256": "10a0f1a3a8769c723122b5728ba977b901c474dc80bcae7495ebecd04abb7f4a",
-        "received_bytes": 25451,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "33afd6f75a491cae7d2579896eefc927f98c59e5b900ccd3e12907d879303b42"
       },
       {
         "path": "archive/n191/weeks/16/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n191/weeks/16/",
-        "status": 200,
-        "sha256": "3a9c08f6ef554fc024701bf6c5c8f64cab9103cb39533abfe0a34f2e6b0f5b18",
         "bytes": 24344,
-        "received_sha256": "327be4abeed825680db4c7ce50cacb6b04661c8082582cab3080c5797f1641a8",
-        "received_bytes": 25458,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "3a9c08f6ef554fc024701bf6c5c8f64cab9103cb39533abfe0a34f2e6b0f5b18"
       },
       {
         "path": "archive/n191/weeks/17/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n191/weeks/17/",
-        "status": 200,
-        "sha256": "1dfafc398d54c52bb6884286949585446c418c99cc6dda4d28c72616fce1c313",
         "bytes": 24337,
-        "received_sha256": "53463af84800e082333143a65d3ec94fe63e62ba682b4db19fb0cc7bf0c69f6a",
-        "received_bytes": 25451,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "1dfafc398d54c52bb6884286949585446c418c99cc6dda4d28c72616fce1c313"
       },
       {
         "path": "archive/n191/weeks/18/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n191/weeks/18/",
-        "status": 200,
-        "sha256": "ce333281f67dabf56789b2724f0add9551f87d1cfa45be07ad96d2afd741a853",
         "bytes": 24358,
-        "received_sha256": "f6b68b06a8ff3b26eb5e93491b5efd78a0b37bbcbba6ee007adf37fe168607f9",
-        "received_bytes": 25472,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "ce333281f67dabf56789b2724f0add9551f87d1cfa45be07ad96d2afd741a853"
       },
       {
         "path": "archive/n192/assets/barlow-bold.ttf",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n192/assets/barlow-bold.ttf",
-        "status": 200,
-        "sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65",
         "bytes": 109912,
-        "received_sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65",
-        "received_bytes": 109912,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65"
       },
       {
         "path": "archive/n192/assets/Barlow-LICENSE.txt",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n192/assets/Barlow-LICENSE.txt",
-        "status": 200,
-        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
         "bytes": 4377,
-        "received_sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
-        "received_bytes": 4377,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f"
       },
       {
         "path": "archive/n192/circa/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n192/circa/",
-        "status": 200,
-        "sha256": "11a537556468d0c40641d77fe4c0c15584847be21301cb1c4e2f6028c6bb75ea",
         "bytes": 63625,
-        "received_sha256": "d57bcb778ee85c0ba55c1710251b3161d608566f3ad2a13f27f6ce93ce3890d2",
-        "received_bytes": 64739,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "11a537556468d0c40641d77fe4c0c15584847be21301cb1c4e2f6028c6bb75ea"
       },
       {
         "path": "archive/n192/gameday.css",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n192/gameday.css",
-        "status": 200,
-        "sha256": "1e32810c0867e58d567ed836603d5f2b5e20a62cadff34f3fbb61cbad5483cef",
         "bytes": 13281,
-        "received_sha256": "1e32810c0867e58d567ed836603d5f2b5e20a62cadff34f3fbb61cbad5483cef",
-        "received_bytes": 13281,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "1e32810c0867e58d567ed836603d5f2b5e20a62cadff34f3fbb61cbad5483cef"
       },
       {
         "path": "archive/n192/gameday.js",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n192/gameday.js",
-        "status": 200,
-        "sha256": "9bfc59ee022cd96ac5dfeaba72a356f79d15fca59584f608e4e81835aaed859a",
         "bytes": 2605,
-        "received_sha256": "9bfc59ee022cd96ac5dfeaba72a356f79d15fca59584f608e4e81835aaed859a",
-        "received_bytes": 2605,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "9bfc59ee022cd96ac5dfeaba72a356f79d15fca59584f608e4e81835aaed859a"
       },
       {
         "path": "archive/n192/holiday.css",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n192/holiday.css",
-        "status": 200,
-        "sha256": "f0d42aff7c3fab78b5a231e1df87c580a6e71c23015dcfc17d443ccda8ab459f",
         "bytes": 4040,
-        "received_sha256": "f0d42aff7c3fab78b5a231e1df87c580a6e71c23015dcfc17d443ccda8ab459f",
-        "received_bytes": 4040,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "f0d42aff7c3fab78b5a231e1df87c580a6e71c23015dcfc17d443ccda8ab459f"
       },
       {
         "path": "archive/n192/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n192/",
-        "status": 200,
-        "sha256": "e471287626a86b10cb70a54c6c91bf359e0df891b1c60a9ffb6f5eb01dd8e860",
         "bytes": 407932,
-        "received_sha256": "3edf75f006eaf2f199e5202e24ce9b5b85e92cfa1aaca2081ec708bab06720c3",
-        "received_bytes": 409046,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "e471287626a86b10cb70a54c6c91bf359e0df891b1c60a9ffb6f5eb01dd8e860"
       },
       {
         "path": "archive/n192/legacy-route.js",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n192/legacy-route.js",
-        "status": 200,
-        "sha256": "c180d2af2c08d4d56a868594cc7d1a9c0ac7d681ee9862ece603ce9f9917901a",
         "bytes": 1017,
-        "received_sha256": "c180d2af2c08d4d56a868594cc7d1a9c0ac7d681ee9862ece603ce9f9917901a",
-        "received_bytes": 1017,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "c180d2af2c08d4d56a868594cc7d1a9c0ac7d681ee9862ece603ce9f9917901a"
       },
       {
         "path": "archive/n192/research-history.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n192/research-history",
-        "status": 200,
-        "sha256": "992c3d8c356793b1ee4a3a79a0017daddb33ea71df43c629f365343fae91a861",
         "bytes": 273,
-        "received_sha256": "db1321c372ddc7a94d0a91113f31efa34d0a36c6861595be632eccc9acdcdb99",
-        "received_bytes": 1387,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "992c3d8c356793b1ee4a3a79a0017daddb33ea71df43c629f365343fae91a861"
       },
       {
         "path": "archive/n192/thanksgiving/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n192/thanksgiving/",
-        "status": 200,
-        "sha256": "1d62cf6f2d093afba5a1dd9b660d990fce78350474049538277e812945b80e81",
         "bytes": 15624,
-        "received_sha256": "d147e9069532846e16ed9c14319776b3fc2569b4fd3100624bc43404f56f7f91",
-        "received_bytes": 16738,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "1d62cf6f2d093afba5a1dd9b660d990fce78350474049538277e812945b80e81"
       },
       {
         "path": "archive/n192/weeks/12/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n192/weeks/12/",
-        "status": 200,
-        "sha256": "7912f25f78d502f43cfbfa137898b55173c488ff8a8098a5f0022948cec8dd84",
         "bytes": 57160,
-        "received_sha256": "6b8afa220c7642a80ec85dc87af844df5d0b20cc4c42f34af674d2c73e2188e8",
-        "received_bytes": 58274,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "7912f25f78d502f43cfbfa137898b55173c488ff8a8098a5f0022948cec8dd84"
       },
       {
         "path": "archive/n192/weeks/13/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n192/weeks/13/",
-        "status": 200,
-        "sha256": "1d0519c3ae421ceb5def6639735d6b457256fe31b1bf3cf6b3cc1a8106e91ba3",
         "bytes": 46529,
-        "received_sha256": "dfba08896e9763999ca07efccac20ab9f24240405b1deaae606672c9d82ec94f",
-        "received_bytes": 47643,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "1d0519c3ae421ceb5def6639735d6b457256fe31b1bf3cf6b3cc1a8106e91ba3"
       },
       {
         "path": "archive/n192/weeks/14/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n192/weeks/14/",
-        "status": 200,
-        "sha256": "5d5d9a983e66ded7196ac231188f9c10a65e1365213084be8adee693c8fe271d",
         "bytes": 49768,
-        "received_sha256": "51a84ff988e633667b933aa3d0b843ae307342ec10a77ac6b8dc22a9c00407e3",
-        "received_bytes": 50882,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "5d5d9a983e66ded7196ac231188f9c10a65e1365213084be8adee693c8fe271d"
       },
       {
         "path": "archive/n192/weeks/15/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n192/weeks/15/",
-        "status": 200,
-        "sha256": "ba722724251635df31d7447ffadf41ea49d69f3e66089af99566ca8ed061daed",
         "bytes": 52965,
-        "received_sha256": "cb38fd8e974fd6eee9210f41e4ca86cfafdcec6a2925e08e22dd1d66965cddf3",
-        "received_bytes": 54079,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "ba722724251635df31d7447ffadf41ea49d69f3e66089af99566ca8ed061daed"
       },
       {
         "path": "archive/n192/weeks/16/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n192/weeks/16/",
-        "status": 200,
-        "sha256": "b1d358535c2171a36265b5ab351d54c2de44eff13606ff9a13916fd9efb3ba97",
         "bytes": 52976,
-        "received_sha256": "19077dc515dd075ca1bce508e6e2cd96241152c92612fc730ebf4891ddc696ca",
-        "received_bytes": 54090,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "b1d358535c2171a36265b5ab351d54c2de44eff13606ff9a13916fd9efb3ba97"
       },
       {
         "path": "archive/n192/weeks/17/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n192/weeks/17/",
-        "status": 200,
-        "sha256": "82cfebd853fe1ed7a460b60570ae59fb1893e748b0003ce99196f7533e2850ec",
         "bytes": 52969,
-        "received_sha256": "f29cf751676cdc3d6d15f53727a23c841a333ea2abe0fed7731805e7fec900dc",
-        "received_bytes": 54083,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "82cfebd853fe1ed7a460b60570ae59fb1893e748b0003ce99196f7533e2850ec"
       },
       {
         "path": "archive/n192/weeks/18/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n192/weeks/18/",
-        "status": 200,
-        "sha256": "34d69f3c65122d319daf088c85fe2594e4e5c9039cf2107dad189ba57201e11b",
         "bytes": 52987,
-        "received_sha256": "d97222915320a454b7a3014f84c54409ea71801e16362c824500352b713e6800",
-        "received_bytes": 54101,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "34d69f3c65122d319daf088c85fe2594e4e5c9039cf2107dad189ba57201e11b"
       },
       {
         "path": "archive/n193/all-games/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n193/all-games/",
-        "status": 200,
-        "sha256": "4dbd7efd5aa87a304b17c4b103655354271ca3089fac808de525c3f0916bf5ab",
         "bytes": 40523,
-        "received_sha256": "e5d5e5c2ec3372efca6dabbbfc782c44090c344facd3883055e5f4d666f81e22",
-        "received_bytes": 41637,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "4dbd7efd5aa87a304b17c4b103655354271ca3089fac808de525c3f0916bf5ab"
       },
       {
         "path": "archive/n193/assets/barlow-bold.ttf",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n193/assets/barlow-bold.ttf",
-        "status": 200,
-        "sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65",
         "bytes": 109912,
-        "received_sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65",
-        "received_bytes": 109912,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65"
       },
       {
         "path": "archive/n193/assets/Barlow-LICENSE.txt",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n193/assets/Barlow-LICENSE.txt",
-        "status": 200,
-        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
         "bytes": 4377,
-        "received_sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
-        "received_bytes": 4377,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f"
       },
       {
         "path": "archive/n193/circa/draftkings-1003.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n193/circa/draftkings-1003",
-        "status": 200,
-        "sha256": "22d7254a48dcb591f57ea9cf719b187950aeb97f14e4c240b6402ca9a6f5fac6",
         "bytes": 29837,
-        "received_sha256": "a7e600d79c49cbc9c9352209f83bae92ba81ae5b671e27b6a1735e7d6d8285b3",
-        "received_bytes": 30951,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "22d7254a48dcb591f57ea9cf719b187950aeb97f14e4c240b6402ca9a6f5fac6"
       },
       {
         "path": "archive/n193/circa/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n193/circa/",
-        "status": 200,
-        "sha256": "20c25a3675a07bccd5132ee77c4bb61d58a3f9798c7d4c0213b91cfaa2234481",
         "bytes": 89845,
-        "received_sha256": "41866895b3dd958c3d738bd394823f19a5cdcfba598fd5ed14df06abba0ff8ae",
-        "received_bytes": 90959,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "20c25a3675a07bccd5132ee77c4bb61d58a3f9798c7d4c0213b91cfaa2234481"
       },
       {
         "path": "archive/n193/gameday.css",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n193/gameday.css",
-        "status": 200,
-        "sha256": "1e32810c0867e58d567ed836603d5f2b5e20a62cadff34f3fbb61cbad5483cef",
         "bytes": 13281,
-        "received_sha256": "1e32810c0867e58d567ed836603d5f2b5e20a62cadff34f3fbb61cbad5483cef",
-        "received_bytes": 13281,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "1e32810c0867e58d567ed836603d5f2b5e20a62cadff34f3fbb61cbad5483cef"
       },
       {
         "path": "archive/n193/gameday.js",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n193/gameday.js",
-        "status": 200,
-        "sha256": "9bfc59ee022cd96ac5dfeaba72a356f79d15fca59584f608e4e81835aaed859a",
         "bytes": 2605,
-        "received_sha256": "9bfc59ee022cd96ac5dfeaba72a356f79d15fca59584f608e4e81835aaed859a",
-        "received_bytes": 2605,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "9bfc59ee022cd96ac5dfeaba72a356f79d15fca59584f608e4e81835aaed859a"
       },
       {
         "path": "archive/n193/holiday.css",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n193/holiday.css",
-        "status": 200,
-        "sha256": "b3bb42d2c69173f99dc4d578288ab16967a78062c846a13d66b2bb7c7b3bfef8",
         "bytes": 4364,
-        "received_sha256": "b3bb42d2c69173f99dc4d578288ab16967a78062c846a13d66b2bb7c7b3bfef8",
-        "received_bytes": 4364,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "b3bb42d2c69173f99dc4d578288ab16967a78062c846a13d66b2bb7c7b3bfef8"
       },
       {
         "path": "archive/n193/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n193/",
-        "status": 200,
-        "sha256": "12f48e10fa6ae81663bbc4d61019a823a7e6b922f5ab2dc6b8abf152db1b03c9",
         "bytes": 488808,
-        "received_sha256": "cab5f33f6d784c132665a5331b606ff261fbf548af6ec1d2e15a96c12715930d",
-        "received_bytes": 489922,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "12f48e10fa6ae81663bbc4d61019a823a7e6b922f5ab2dc6b8abf152db1b03c9"
       },
       {
         "path": "archive/n193/legacy-route.js",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n193/legacy-route.js",
-        "status": 200,
-        "sha256": "c180d2af2c08d4d56a868594cc7d1a9c0ac7d681ee9862ece603ce9f9917901a",
         "bytes": 1017,
-        "received_sha256": "c180d2af2c08d4d56a868594cc7d1a9c0ac7d681ee9862ece603ce9f9917901a",
-        "received_bytes": 1017,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "c180d2af2c08d4d56a868594cc7d1a9c0ac7d681ee9862ece603ce9f9917901a"
       },
       {
         "path": "archive/n193/research-history.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n193/research-history",
-        "status": 200,
-        "sha256": "992c3d8c356793b1ee4a3a79a0017daddb33ea71df43c629f365343fae91a861",
         "bytes": 273,
-        "received_sha256": "d963c32c0240bb891ebccdcdc9ba5c9edaa7b74a59fde83aa820f5495d6495bd",
-        "received_bytes": 1387,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "992c3d8c356793b1ee4a3a79a0017daddb33ea71df43c629f365343fae91a861"
       },
       {
         "path": "archive/n193/thanksgiving/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n193/thanksgiving/",
-        "status": 200,
-        "sha256": "3e304c9e37f814c39f31c36d697aca792d6391b125ccdb6fff99854fc66246c4",
         "bytes": 22044,
-        "received_sha256": "6dc1939838be88318f318d9e8af60e088246c364990b7a3bb5046cb02e42e2e8",
-        "received_bytes": 23158,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "3e304c9e37f814c39f31c36d697aca792d6391b125ccdb6fff99854fc66246c4"
       },
       {
         "path": "archive/n193/weeks/12/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n193/weeks/12/",
-        "status": 200,
-        "sha256": "e1a708ab315523278194e55be45da37f9ce1659ec17fa4788d535ba625866344",
         "bytes": 91389,
-        "received_sha256": "538d364d5438a766a3306d4a52e27cff239fd5f60a5e7deffa30d0470fcc0d4f",
-        "received_bytes": 92503,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "e1a708ab315523278194e55be45da37f9ce1659ec17fa4788d535ba625866344"
       },
       {
         "path": "archive/n193/weeks/13/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n193/weeks/13/",
-        "status": 200,
-        "sha256": "7371f782dcdce798578d24ab7799a94e589767bcf3667adb50f13d88b5a23443",
         "bytes": 69738,
-        "received_sha256": "50e2bbc5149a65f32fe961b090afdd50992dea70d0c9e3a6bc8b80dfd890f3b5",
-        "received_bytes": 70852,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "7371f782dcdce798578d24ab7799a94e589767bcf3667adb50f13d88b5a23443"
       },
       {
         "path": "archive/n193/weeks/14/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n193/weeks/14/",
-        "status": 200,
-        "sha256": "85d10b12166f170c8abb5d5c2fb97ed6edf7588a73e7b43173b035d4f0818a21",
         "bytes": 74647,
-        "received_sha256": "fbd3929d5210c7c2f115285e1e6961880867ebc440d6cc5731ef2a1ff8f0f8fc",
-        "received_bytes": 75761,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "85d10b12166f170c8abb5d5c2fb97ed6edf7588a73e7b43173b035d4f0818a21"
       },
       {
         "path": "archive/n193/weeks/15/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n193/weeks/15/",
-        "status": 200,
-        "sha256": "68fb7b75e3aaa46c33b31e6111d931ae06b36a2781b5fa00d6bf199d55e2d700",
         "bytes": 79494,
-        "received_sha256": "d3fd322f803e1b9981c4309f17c9f615298f2197833f299e7baa3913742e2aa8",
-        "received_bytes": 80608,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "68fb7b75e3aaa46c33b31e6111d931ae06b36a2781b5fa00d6bf199d55e2d700"
       },
       {
         "path": "archive/n193/weeks/16/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n193/weeks/16/",
-        "status": 200,
-        "sha256": "ef2b0269291dd9c409e7e978698e92a9f76260920e7672056477c384f41f9c00",
         "bytes": 79509,
-        "received_sha256": "7a74fcf72a1afe995a64106f31f0842c6925b66c95ee5ba7f89b4fb1ca4768e0",
-        "received_bytes": 80623,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "ef2b0269291dd9c409e7e978698e92a9f76260920e7672056477c384f41f9c00"
       },
       {
         "path": "archive/n193/weeks/17/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n193/weeks/17/",
-        "status": 200,
-        "sha256": "b8c01c0ef60550b7ddd93a6a7ee1d61fe65c4ff3951a30f074dbd672e5474bab",
         "bytes": 79494,
-        "received_sha256": "7f31dbd32f8e5862b20609861fdcbfb8621d5dcb8daea970bc78767a34808d7d",
-        "received_bytes": 80608,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "b8c01c0ef60550b7ddd93a6a7ee1d61fe65c4ff3951a30f074dbd672e5474bab"
       },
       {
         "path": "archive/n193/weeks/18/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n193/weeks/18/",
-        "status": 200,
-        "sha256": "256eb88d999b37662cc33265bfbb78e1231e1714c2cc54417f0f96cc0b25952a",
         "bytes": 79525,
-        "received_sha256": "dda3f07b80089ebd2af529599424deb524d992910664e744824064b40b4f9c93",
-        "received_bytes": 80639,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "256eb88d999b37662cc33265bfbb78e1231e1714c2cc54417f0f96cc0b25952a"
       },
       {
         "path": "archive/n194/all-games/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n194/all-games/",
-        "status": 200,
-        "sha256": "1e24802fde88c3bc352c96238d951e2f14a3a401a088c48c087d9cc6a2f53739",
         "bytes": 42458,
-        "received_sha256": "ed0bbee6bbaf8b2c72595248ba9b32e71b96db9f50282490fd2454211a78119f",
-        "received_bytes": 43572,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "1e24802fde88c3bc352c96238d951e2f14a3a401a088c48c087d9cc6a2f53739"
       },
       {
         "path": "archive/n194/assets/barlow-bold.ttf",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n194/assets/barlow-bold.ttf",
-        "status": 200,
-        "sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65",
         "bytes": 109912,
-        "received_sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65",
-        "received_bytes": 109912,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65"
       },
       {
         "path": "archive/n194/assets/Barlow-LICENSE.txt",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n194/assets/Barlow-LICENSE.txt",
-        "status": 200,
-        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
         "bytes": 4377,
-        "received_sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
-        "received_bytes": 4377,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f"
       },
       {
         "path": "archive/n194/circa/draftkings-1003.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n194/circa/draftkings-1003",
-        "status": 200,
-        "sha256": "22d7254a48dcb591f57ea9cf719b187950aeb97f14e4c240b6402ca9a6f5fac6",
         "bytes": 29837,
-        "received_sha256": "d9d18a154aed7bd876cf6d863b50a268fc39ebc51c4d3c30cfab1073d28a181d",
-        "received_bytes": 30951,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "22d7254a48dcb591f57ea9cf719b187950aeb97f14e4c240b6402ca9a6f5fac6"
       },
       {
         "path": "archive/n194/circa/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n194/circa/",
-        "status": 200,
-        "sha256": "19ef28b1811390b2a853303809f5d988044b35ca9bae6c50fac5dfa715f69466",
         "bytes": 118082,
-        "received_sha256": "f546c76cc0fd0c0b7bc13fcad44f00d3495bcd0d7a721d6ebfffb2593decb15b",
-        "received_bytes": 119196,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "19ef28b1811390b2a853303809f5d988044b35ca9bae6c50fac5dfa715f69466"
       },
       {
         "path": "archive/n194/gameday.css",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n194/gameday.css",
-        "status": 200,
-        "sha256": "1e32810c0867e58d567ed836603d5f2b5e20a62cadff34f3fbb61cbad5483cef",
         "bytes": 13281,
-        "received_sha256": "1e32810c0867e58d567ed836603d5f2b5e20a62cadff34f3fbb61cbad5483cef",
-        "received_bytes": 13281,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "1e32810c0867e58d567ed836603d5f2b5e20a62cadff34f3fbb61cbad5483cef"
       },
       {
         "path": "archive/n194/gameday.js",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n194/gameday.js",
-        "status": 200,
-        "sha256": "9bfc59ee022cd96ac5dfeaba72a356f79d15fca59584f608e4e81835aaed859a",
         "bytes": 2605,
-        "received_sha256": "9bfc59ee022cd96ac5dfeaba72a356f79d15fca59584f608e4e81835aaed859a",
-        "received_bytes": 2605,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "9bfc59ee022cd96ac5dfeaba72a356f79d15fca59584f608e4e81835aaed859a"
       },
       {
         "path": "archive/n194/holiday.css",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n194/holiday.css",
-        "status": 200,
-        "sha256": "b3bb42d2c69173f99dc4d578288ab16967a78062c846a13d66b2bb7c7b3bfef8",
         "bytes": 4364,
-        "received_sha256": "b3bb42d2c69173f99dc4d578288ab16967a78062c846a13d66b2bb7c7b3bfef8",
-        "received_bytes": 4364,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "b3bb42d2c69173f99dc4d578288ab16967a78062c846a13d66b2bb7c7b3bfef8"
       },
       {
         "path": "archive/n194/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n194/",
-        "status": 200,
-        "sha256": "cc2b729d9162b54c2449f91c92e136d58341ab6aa7d0d80913ffbc0edb8a1899",
         "bytes": 569179,
-        "received_sha256": "ebe29d0877ccc42a95ad80cb90affb3375f816934fcd2c48cf8d0c620cbaedd2",
-        "received_bytes": 570293,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "cc2b729d9162b54c2449f91c92e136d58341ab6aa7d0d80913ffbc0edb8a1899"
       },
       {
         "path": "archive/n194/legacy-route.js",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n194/legacy-route.js",
-        "status": 200,
-        "sha256": "c180d2af2c08d4d56a868594cc7d1a9c0ac7d681ee9862ece603ce9f9917901a",
         "bytes": 1017,
-        "received_sha256": "c180d2af2c08d4d56a868594cc7d1a9c0ac7d681ee9862ece603ce9f9917901a",
-        "received_bytes": 1017,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "c180d2af2c08d4d56a868594cc7d1a9c0ac7d681ee9862ece603ce9f9917901a"
       },
       {
         "path": "archive/n194/research-history.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n194/research-history",
-        "status": 200,
-        "sha256": "992c3d8c356793b1ee4a3a79a0017daddb33ea71df43c629f365343fae91a861",
         "bytes": 273,
-        "received_sha256": "d67407080e4666821bc981c196a732252bf672a7bac9ea72069024173dc842ca",
-        "received_bytes": 1387,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "992c3d8c356793b1ee4a3a79a0017daddb33ea71df43c629f365343fae91a861"
       },
       {
         "path": "archive/n194/thanksgiving/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n194/thanksgiving/",
-        "status": 200,
-        "sha256": "aa8cfa3d901515b00ec1fcba86da13cb30e98645dc9d3ee32ec938b3583a2bcd",
         "bytes": 27506,
-        "received_sha256": "0ae48c0f39b6beaaac978ecccc3b0b670953e3d48ce4a63ef5986393a587c273",
-        "received_bytes": 28620,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "aa8cfa3d901515b00ec1fcba86da13cb30e98645dc9d3ee32ec938b3583a2bcd"
       },
       {
         "path": "archive/n194/weeks/12/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n194/weeks/12/",
-        "status": 200,
-        "sha256": "d21a300ba09195604ef077e767ccecaa7b48c29c18510724352be195d04d417f",
         "bytes": 121348,
-        "received_sha256": "44f4a68d8f74927087b17047744a3057822c803ef0fc93f1bfc16ab2a55e8db5",
-        "received_bytes": 122462,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "d21a300ba09195604ef077e767ccecaa7b48c29c18510724352be195d04d417f"
       },
       {
         "path": "archive/n194/weeks/13/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n194/weeks/13/",
-        "status": 200,
-        "sha256": "fdc546733a5545e384378dc455adf1725f712fe4c027de0784d967038f2cb540",
         "bytes": 90618,
-        "received_sha256": "417a91f2b4ec59870aa6a59b086727676dd1f9196d04fd5bd3062856d25ec296",
-        "received_bytes": 91732,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "fdc546733a5545e384378dc455adf1725f712fe4c027de0784d967038f2cb540"
       },
       {
         "path": "archive/n194/weeks/14/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n194/weeks/14/",
-        "status": 200,
-        "sha256": "a2f6509bf1ab2d642686d41c5ea6a5ff320717e74d53f0aa254bc148634ce3b7",
         "bytes": 97044,
-        "received_sha256": "52ac69df904c52d6d7c9f7fd997a37278dc4f37c1244d020cdcb7a7d29da8664",
-        "received_bytes": 98158,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "a2f6509bf1ab2d642686d41c5ea6a5ff320717e74d53f0aa254bc148634ce3b7"
       },
       {
         "path": "archive/n194/weeks/15/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n194/weeks/15/",
-        "status": 200,
-        "sha256": "46fddd3bab3bea52e21a0febe06aa96786bc360da95b9ca2eabfe5701640b735",
         "bytes": 103386,
-        "received_sha256": "ea5145f9e0c408e6a968d2c63444096606bf56a57b6421c5edf4de41cc4352ad",
-        "received_bytes": 104500,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "46fddd3bab3bea52e21a0febe06aa96786bc360da95b9ca2eabfe5701640b735"
       },
       {
         "path": "archive/n194/weeks/16/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n194/weeks/16/",
-        "status": 200,
-        "sha256": "76056257197aec31d941e0bbdadfdbb28c0e135484a87041c2d55969d95067f0",
         "bytes": 103405,
-        "received_sha256": "fbad914e06b2642d105e7300ae63d823d9b6a627b23f325ae9e23aef30948f41",
-        "received_bytes": 104519,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "76056257197aec31d941e0bbdadfdbb28c0e135484a87041c2d55969d95067f0"
       },
       {
         "path": "archive/n194/weeks/17/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n194/weeks/17/",
-        "status": 200,
-        "sha256": "f523364c9c0aafb16f1790cff70350729e8782a5f9bafdaf61a704202bd11ebb",
         "bytes": 103386,
-        "received_sha256": "d8a461f29c03d978d2e7accbda40f8b4ef7039f7cb44b8ef2bdaf0d8b50ba282",
-        "received_bytes": 104500,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "f523364c9c0aafb16f1790cff70350729e8782a5f9bafdaf61a704202bd11ebb"
       },
       {
         "path": "archive/n194/weeks/18/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n194/weeks/18/",
-        "status": 200,
-        "sha256": "0a0388b8170d2de550089d82ce5f0ee351d25c02dc48e367b242e37706beaa28",
         "bytes": 103430,
-        "received_sha256": "6f729834df3938722de476832a208f33f1929692759fe4ba3bf8cb6925de8c53",
-        "received_bytes": 104544,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "0a0388b8170d2de550089d82ce5f0ee351d25c02dc48e367b242e37706beaa28"
       },
       {
         "path": "assets/barlow-bold.ttf",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/assets/barlow-bold.ttf",
-        "status": 200,
-        "sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65",
         "bytes": 109912,
-        "received_sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65",
-        "received_bytes": 109912,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65"
       },
       {
         "path": "assets/Barlow-LICENSE.txt",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/assets/Barlow-LICENSE.txt",
-        "status": 200,
-        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
         "bytes": 4377,
-        "received_sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
-        "received_bytes": 4377,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f"
       },
       {
         "path": "circa_evidence.json",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa_evidence.json",
-        "status": 200,
-        "sha256": "c289471d8d45bde905b2c037bd314f93368f8595ba361c1e933067ccaaf702dc",
         "bytes": 29196,
-        "received_sha256": "c289471d8d45bde905b2c037bd314f93368f8595ba361c1e933067ccaaf702dc",
-        "received_bytes": 29196,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "c289471d8d45bde905b2c037bd314f93368f8595ba361c1e933067ccaaf702dc"
       },
       {
         "path": "circa/draftkings-1003.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa/draftkings-1003",
-        "status": 200,
-        "sha256": "22d7254a48dcb591f57ea9cf719b187950aeb97f14e4c240b6402ca9a6f5fac6",
         "bytes": 29837,
-        "received_sha256": "2c465caaa3d79abbfa6294b466d6e11b56551546114ab85af9b1d1a75b354e1f",
-        "received_bytes": 30951,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "22d7254a48dcb591f57ea9cf719b187950aeb97f14e4c240b6402ca9a6f5fac6"
       },
       {
         "path": "circa/index.html",
-        "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa/",
-        "status": 200,
-        "sha256": "4e5a49d2f880590a25a4b21e3f7f8e213e8cf112ef917759884dd84a3a57204b",
+        "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa/index.html",
         "bytes": 118908,
-        "received_sha256": "6926f8f3bc5de228d0d1d65576617405d294402abfe0881dbd9ccfb804c38124",
-        "received_bytes": 120022,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "6e34a32b49d4c6b513bf48db58a2e245ee367f435fbef914a084d00d73c6058d"
       },
       {
         "path": "data.json",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/data.json",
-        "status": 200,
-        "sha256": "5815e9c27bdca24dae4124daea44d056bae8973deca0f261afde9892f5e12cb7",
         "bytes": 97247,
-        "received_sha256": "5815e9c27bdca24dae4124daea44d056bae8973deca0f261afde9892f5e12cb7",
-        "received_bytes": 97247,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "5815e9c27bdca24dae4124daea44d056bae8973deca0f261afde9892f5e12cb7"
       },
       {
         "path": "evidence.json",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/evidence.json",
-        "status": 200,
-        "sha256": "66a149027c8a84d871cf8824ba33489d2fc2270f41947e8b0504b3d205dde2e7",
         "bytes": 2363,
-        "received_sha256": "66a149027c8a84d871cf8824ba33489d2fc2270f41947e8b0504b3d205dde2e7",
-        "received_bytes": 2363,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "66a149027c8a84d871cf8824ba33489d2fc2270f41947e8b0504b3d205dde2e7"
       },
       {
         "path": "execution_status.json",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/execution_status.json",
-        "status": 200,
-        "sha256": "d9f0a36f97ab14403264e018a500f4bc53d536052ca42aa506bab5f76201db74",
         "bytes": 1310529,
-        "received_sha256": "d9f0a36f97ab14403264e018a500f4bc53d536052ca42aa506bab5f76201db74",
-        "received_bytes": 1310529,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "d9f0a36f97ab14403264e018a500f4bc53d536052ca42aa506bab5f76201db74"
       },
       {
         "path": "gameday.css",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/gameday.css",
-        "status": 200,
-        "sha256": "1e32810c0867e58d567ed836603d5f2b5e20a62cadff34f3fbb61cbad5483cef",
         "bytes": 13281,
-        "received_sha256": "1e32810c0867e58d567ed836603d5f2b5e20a62cadff34f3fbb61cbad5483cef",
-        "received_bytes": 13281,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "1e32810c0867e58d567ed836603d5f2b5e20a62cadff34f3fbb61cbad5483cef"
       },
       {
         "path": "gameday.js",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/gameday.js",
-        "status": 200,
-        "sha256": "9bfc59ee022cd96ac5dfeaba72a356f79d15fca59584f608e4e81835aaed859a",
         "bytes": 2605,
-        "received_sha256": "9bfc59ee022cd96ac5dfeaba72a356f79d15fca59584f608e4e81835aaed859a",
-        "received_bytes": 2605,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "9bfc59ee022cd96ac5dfeaba72a356f79d15fca59584f608e4e81835aaed859a"
       },
       {
         "path": "holiday.css",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/holiday.css",
-        "status": 200,
-        "sha256": "b3bb42d2c69173f99dc4d578288ab16967a78062c846a13d66b2bb7c7b3bfef8",
         "bytes": 4364,
-        "received_sha256": "b3bb42d2c69173f99dc4d578288ab16967a78062c846a13d66b2bb7c7b3bfef8",
-        "received_bytes": 4364,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "b3bb42d2c69173f99dc4d578288ab16967a78062c846a13d66b2bb7c7b3bfef8"
       },
       {
         "path": "index.html",
-        "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
-        "status": 200,
-        "sha256": "42ff4cb36d0d2b7f42204b075656f8a370e5465bb96ca2471bb7526ef31e6929",
+        "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/index.html",
         "bytes": 569820,
-        "received_sha256": "d644601eef5bacf4eb9ee515c8a128e7e331f84428faa710129311c6934bd6c4",
-        "received_bytes": 570934,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "ebb4540ef071c9323e374835360974e19ad6c06a3a05ea15105e934d5d2ed261"
       },
       {
         "path": "legacy-route.js",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/legacy-route.js",
-        "status": 200,
-        "sha256": "c180d2af2c08d4d56a868594cc7d1a9c0ac7d681ee9862ece603ce9f9917901a",
         "bytes": 1017,
-        "received_sha256": "c180d2af2c08d4d56a868594cc7d1a9c0ac7d681ee9862ece603ce9f9917901a",
-        "received_bytes": 1017,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "c180d2af2c08d4d56a868594cc7d1a9c0ac7d681ee9862ece603ce9f9917901a"
       },
       {
         "path": "newest_model_comparison.json",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/newest_model_comparison.json",
-        "status": 200,
-        "sha256": "97f501f0cd40bde3e54cc80821744558602db916a9f883cc93480777fa66a442",
         "bytes": 8860,
-        "received_sha256": "97f501f0cd40bde3e54cc80821744558602db916a9f883cc93480777fa66a442",
-        "received_bytes": 8860,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "97f501f0cd40bde3e54cc80821744558602db916a9f883cc93480777fa66a442"
       },
       {
         "path": "research-history.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/research-history",
-        "status": 200,
-        "sha256": "80bf439ad4567d16edc600195785b202c14524c8fd03d0cca5a7502fb1453aba",
         "bytes": 229463,
-        "received_sha256": "1aa2cb01174cb906d3785dff1e1aee5609aa24ecd36d5507074841d4f609878e",
-        "received_bytes": 230577,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "80bf439ad4567d16edc600195785b202c14524c8fd03d0cca5a7502fb1453aba"
       },
       {
         "path": "share/circa-official-five.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/circa-official-five.png",
-        "status": 200,
-        "sha256": "23f79eb14f157444e37d94bd4eca96aaa15c17b1f0016f43f8284e7b98022902",
         "bytes": 150573,
-        "received_sha256": "23f79eb14f157444e37d94bd4eca96aaa15c17b1f0016f43f8284e7b98022902",
-        "received_bytes": 150573,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "23f79eb14f157444e37d94bd4eca96aaa15c17b1f0016f43f8284e7b98022902"
       },
       {
         "path": "share/circa-official-week12-1.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/circa-official-week12-1.png",
-        "status": 200,
-        "sha256": "262622f67a6773961cb60b64ac7992c2f9204c03aa81196a578e6ca73ab234c3",
         "bytes": 167735,
-        "received_sha256": "262622f67a6773961cb60b64ac7992c2f9204c03aa81196a578e6ca73ab234c3",
-        "received_bytes": 167735,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "262622f67a6773961cb60b64ac7992c2f9204c03aa81196a578e6ca73ab234c3"
       },
       {
         "path": "share/circa-official-week12-2.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/circa-official-week12-2.png",
-        "status": 200,
-        "sha256": "9483af594e427ddb90315cea438c3386b0b91ee4c16361c725af56c748ce6672",
         "bytes": 160049,
-        "received_sha256": "9483af594e427ddb90315cea438c3386b0b91ee4c16361c725af56c748ce6672",
-        "received_bytes": 160049,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "9483af594e427ddb90315cea438c3386b0b91ee4c16361c725af56c748ce6672"
       },
       {
         "path": "share/circa-official-week12-3.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/circa-official-week12-3.png",
-        "status": 200,
-        "sha256": "39cd862051e9a8690b55beb8c27ee103b98874decc9096bb18257aeb86cd8c2b",
         "bytes": 159771,
-        "received_sha256": "39cd862051e9a8690b55beb8c27ee103b98874decc9096bb18257aeb86cd8c2b",
-        "received_bytes": 159771,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "39cd862051e9a8690b55beb8c27ee103b98874decc9096bb18257aeb86cd8c2b"
       },
       {
         "path": "share/circa-official-week12-4.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/circa-official-week12-4.png",
-        "status": 200,
-        "sha256": "1090b12699a04bcf2068b067ebe760ea42b3eecdd5461a0e2e51df20b4a1b6e7",
         "bytes": 155090,
-        "received_sha256": "1090b12699a04bcf2068b067ebe760ea42b3eecdd5461a0e2e51df20b4a1b6e7",
-        "received_bytes": 155090,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "1090b12699a04bcf2068b067ebe760ea42b3eecdd5461a0e2e51df20b4a1b6e7"
       },
       {
         "path": "share/circa-options-1.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/circa-options-1.png",
-        "status": 200,
-        "sha256": "d7bba593b1285b1ac49890cc78b6369e9ee70399ec53dfea60b79f2cf23e1bed",
         "bytes": 172472,
-        "received_sha256": "d7bba593b1285b1ac49890cc78b6369e9ee70399ec53dfea60b79f2cf23e1bed",
-        "received_bytes": 172472,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "d7bba593b1285b1ac49890cc78b6369e9ee70399ec53dfea60b79f2cf23e1bed"
       },
       {
         "path": "share/circa-options-2.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/circa-options-2.png",
-        "status": 200,
-        "sha256": "fdd00972fb886d0b91e4a07f861017ee6893b6f9c36be0cff7f1b8e5d739e130",
         "bytes": 174958,
-        "received_sha256": "fdd00972fb886d0b91e4a07f861017ee6893b6f9c36be0cff7f1b8e5d739e130",
-        "received_bytes": 174958,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "fdd00972fb886d0b91e4a07f861017ee6893b6f9c36be0cff7f1b8e5d739e130"
       },
       {
         "path": "share/circa-options-3.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/circa-options-3.png",
-        "status": 200,
-        "sha256": "3db1b0689b65940116249e50365ec102261c497fde702c0583d5598ff96ef617",
         "bytes": 196716,
-        "received_sha256": "3db1b0689b65940116249e50365ec102261c497fde702c0583d5598ff96ef617",
-        "received_bytes": 196716,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "3db1b0689b65940116249e50365ec102261c497fde702c0583d5598ff96ef617"
       },
       {
         "path": "share/circa-week12-1.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/circa-week12-1.png",
-        "status": 200,
-        "sha256": "55820bae320e4399d1f9adcbb9eb10123bf90d72ddf303250c51267c8c72ebe7",
         "bytes": 166501,
-        "received_sha256": "55820bae320e4399d1f9adcbb9eb10123bf90d72ddf303250c51267c8c72ebe7",
-        "received_bytes": 166501,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "55820bae320e4399d1f9adcbb9eb10123bf90d72ddf303250c51267c8c72ebe7"
       },
       {
         "path": "share/circa-week12-2.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/circa-week12-2.png",
-        "status": 200,
-        "sha256": "1ac708ac8754417f05c748cab74c688a34e396d42ee7d4f1c924c601895ef230",
         "bytes": 154281,
-        "received_sha256": "1ac708ac8754417f05c748cab74c688a34e396d42ee7d4f1c924c601895ef230",
-        "received_bytes": 154281,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "1ac708ac8754417f05c748cab74c688a34e396d42ee7d4f1c924c601895ef230"
       },
       {
         "path": "share/circa-week12-3.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/circa-week12-3.png",
-        "status": 200,
-        "sha256": "5b4d59b858a8f3d52ac149e120aa412830c790a2cf1283ff6917da9046dca22b",
         "bytes": 157505,
-        "received_sha256": "5b4d59b858a8f3d52ac149e120aa412830c790a2cf1283ff6917da9046dca22b",
-        "received_bytes": 157505,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "5b4d59b858a8f3d52ac149e120aa412830c790a2cf1283ff6917da9046dca22b"
       },
       {
         "path": "share/circa-week12-4.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/circa-week12-4.png",
-        "status": 200,
-        "sha256": "aa0265fea8bcbc1b06ebb2def5e1c653446962607e0f199f8ad2243ae74fab6c",
         "bytes": 155441,
-        "received_sha256": "aa0265fea8bcbc1b06ebb2def5e1c653446962607e0f199f8ad2243ae74fab6c",
-        "received_bytes": 155441,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "aa0265fea8bcbc1b06ebb2def5e1c653446962607e0f199f8ad2243ae74fab6c"
       },
       {
         "path": "share/joint-team-scores.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/joint-team-scores.png",
-        "status": 200,
-        "sha256": "14ddcb68515cb77b85dc213253d8fedfcab5fb93b3c177247aad169ec040d32b",
         "bytes": 186754,
-        "received_sha256": "14ddcb68515cb77b85dc213253d8fedfcab5fb93b3c177247aad169ec040d32b",
-        "received_bytes": 186754,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "14ddcb68515cb77b85dc213253d8fedfcab5fb93b3c177247aad169ec040d32b"
       },
       {
         "path": "share/model-performance.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/model-performance.png",
-        "status": 200,
-        "sha256": "4a64ae19a4669cf681a866ac4a39d900e47f28ce84c6cb4910303cd81614f80a",
         "bytes": 163691,
-        "received_sha256": "4a64ae19a4669cf681a866ac4a39d900e47f28ce84c6cb4910303cd81614f80a",
-        "received_bytes": 163691,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "4a64ae19a4669cf681a866ac4a39d900e47f28ce84c6cb4910303cd81614f80a"
       },
       {
         "path": "share/n191-circa-five.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n191-circa-five.png",
-        "status": 200,
-        "sha256": "53b3bfe092e973b5b92c850e0c1f61fd4727a1383ec042867c0799095d6393b8",
         "bytes": 150648,
-        "received_sha256": "53b3bfe092e973b5b92c850e0c1f61fd4727a1383ec042867c0799095d6393b8",
-        "received_bytes": 150648,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "53b3bfe092e973b5b92c850e0c1f61fd4727a1383ec042867c0799095d6393b8"
       },
       {
         "path": "share/n191-circa-week12-1.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n191-circa-week12-1.png",
-        "status": 200,
-        "sha256": "b7a1acbd712d77378277cb257f0322ba0ed6fcc570f33027321c0bc290b9a8be",
         "bytes": 166360,
-        "received_sha256": "b7a1acbd712d77378277cb257f0322ba0ed6fcc570f33027321c0bc290b9a8be",
-        "received_bytes": 166360,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "b7a1acbd712d77378277cb257f0322ba0ed6fcc570f33027321c0bc290b9a8be"
       },
       {
         "path": "share/n191-circa-week12-2.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n191-circa-week12-2.png",
-        "status": 200,
-        "sha256": "b0f0a204d590224bbf9ffd8cae3fc1daa9a4ad2aaa9273ae61e5b7b7fdb95670",
         "bytes": 164423,
-        "received_sha256": "b0f0a204d590224bbf9ffd8cae3fc1daa9a4ad2aaa9273ae61e5b7b7fdb95670",
-        "received_bytes": 164423,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "b0f0a204d590224bbf9ffd8cae3fc1daa9a4ad2aaa9273ae61e5b7b7fdb95670"
       },
       {
         "path": "share/n191-circa-week12-3.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n191-circa-week12-3.png",
-        "status": 200,
-        "sha256": "a05c9c6689cfb66cb9d0b1584c97ba9735cef151b03f9764bd8252a53545fd0f",
         "bytes": 158711,
-        "received_sha256": "a05c9c6689cfb66cb9d0b1584c97ba9735cef151b03f9764bd8252a53545fd0f",
-        "received_bytes": 158711,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "a05c9c6689cfb66cb9d0b1584c97ba9735cef151b03f9764bd8252a53545fd0f"
       },
       {
         "path": "share/n191-circa-week12-4.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n191-circa-week12-4.png",
-        "status": 200,
-        "sha256": "aa0f899e6f9eaf19fca7491db81831ba3e83befcca7db164431d881f60dc189b",
         "bytes": 154532,
-        "received_sha256": "aa0f899e6f9eaf19fca7491db81831ba3e83befcca7db164431d881f60dc189b",
-        "received_bytes": 154532,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "aa0f899e6f9eaf19fca7491db81831ba3e83befcca7db164431d881f60dc189b"
       },
       {
         "path": "share/n191-thanksgiving-chi-det.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n191-thanksgiving-chi-det.png",
-        "status": 200,
-        "sha256": "9933a96df62c90ad4eebf2099833de7c16f037595677eeba7c46b3fb31098283",
         "bytes": 121683,
-        "received_sha256": "9933a96df62c90ad4eebf2099833de7c16f037595677eeba7c46b3fb31098283",
-        "received_bytes": 121683,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "9933a96df62c90ad4eebf2099833de7c16f037595677eeba7c46b3fb31098283"
       },
       {
         "path": "share/n191-thanksgiving-kc-buf.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n191-thanksgiving-kc-buf.png",
-        "status": 200,
-        "sha256": "20626f6166924fdec238c832181de0a36344ce01a6525560bf5ca33668bbe258",
         "bytes": 130235,
-        "received_sha256": "20626f6166924fdec238c832181de0a36344ce01a6525560bf5ca33668bbe258",
-        "received_bytes": 130235,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "20626f6166924fdec238c832181de0a36344ce01a6525560bf5ca33668bbe258"
       },
       {
         "path": "share/n191-thanksgiving-phi-dal.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n191-thanksgiving-phi-dal.png",
-        "status": 200,
-        "sha256": "27ed95fd570428875f2eb50dbbc9686dd39e25b1ab5f941214a89da17c2e40ca",
         "bytes": 130848,
-        "received_sha256": "27ed95fd570428875f2eb50dbbc9686dd39e25b1ab5f941214a89da17c2e40ca",
-        "received_bytes": 130848,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "27ed95fd570428875f2eb50dbbc9686dd39e25b1ab5f941214a89da17c2e40ca"
       },
       {
         "path": "share/n191-thanksgiving.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n191-thanksgiving.png",
-        "status": 200,
-        "sha256": "36ee4fae71d519a3730d75bb2bdcac939597b195d009c7b6933c7e262d336e50",
         "bytes": 151589,
-        "received_sha256": "36ee4fae71d519a3730d75bb2bdcac939597b195d009c7b6933c7e262d336e50",
-        "received_bytes": 151589,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "36ee4fae71d519a3730d75bb2bdcac939597b195d009c7b6933c7e262d336e50"
       },
       {
         "path": "share/n191-week12-1.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n191-week12-1.png",
-        "status": 200,
-        "sha256": "84fe9ccec55382ee90479c28e9b0979918f6d742f6ef8a6839c8afa830aaa9d2",
         "bytes": 178240,
-        "received_sha256": "84fe9ccec55382ee90479c28e9b0979918f6d742f6ef8a6839c8afa830aaa9d2",
-        "received_bytes": 178240,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "84fe9ccec55382ee90479c28e9b0979918f6d742f6ef8a6839c8afa830aaa9d2"
       },
       {
         "path": "share/n191-week12-2.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n191-week12-2.png",
-        "status": 200,
-        "sha256": "6d4f018f81fe8fe09f275a02ded8c1352aeef05091f0b1bcfe517777d33cfb15",
         "bytes": 182823,
-        "received_sha256": "6d4f018f81fe8fe09f275a02ded8c1352aeef05091f0b1bcfe517777d33cfb15",
-        "received_bytes": 182823,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "6d4f018f81fe8fe09f275a02ded8c1352aeef05091f0b1bcfe517777d33cfb15"
       },
       {
         "path": "share/n191-week12-3.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n191-week12-3.png",
-        "status": 200,
-        "sha256": "4c573b441f6b98d89e12ba230149d8780a7cabb5c339a9762d84104d29577bb1",
         "bytes": 179058,
-        "received_sha256": "4c573b441f6b98d89e12ba230149d8780a7cabb5c339a9762d84104d29577bb1",
-        "received_bytes": 179058,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "4c573b441f6b98d89e12ba230149d8780a7cabb5c339a9762d84104d29577bb1"
       },
       {
         "path": "share/n191-week12-4.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n191-week12-4.png",
-        "status": 200,
-        "sha256": "768b2e0b44295e1592528a33a2f21650a85ad96c7267b5ddb10ad7b3fae4667e",
         "bytes": 183742,
-        "received_sha256": "768b2e0b44295e1592528a33a2f21650a85ad96c7267b5ddb10ad7b3fae4667e",
-        "received_bytes": 183742,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "768b2e0b44295e1592528a33a2f21650a85ad96c7267b5ddb10ad7b3fae4667e"
       },
       {
         "path": "share/n192-circa-five.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n192-circa-five.png",
-        "status": 200,
-        "sha256": "210d801ec87260094e696fbaf4f30396fbbf4fffe62206abb6c0c0b0fd022a5f",
         "bytes": 150339,
-        "received_sha256": "210d801ec87260094e696fbaf4f30396fbbf4fffe62206abb6c0c0b0fd022a5f",
-        "received_bytes": 150339,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "210d801ec87260094e696fbaf4f30396fbbf4fffe62206abb6c0c0b0fd022a5f"
       },
       {
         "path": "share/n192-circa-four-points.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n192-circa-four-points.png",
-        "status": 200,
-        "sha256": "066f7a17b06b30bcd2736c843aafa07cbe8dc84fbffcdaf1dcc832bd9ac7930d",
         "bytes": 151532,
-        "received_sha256": "066f7a17b06b30bcd2736c843aafa07cbe8dc84fbffcdaf1dcc832bd9ac7930d",
-        "received_bytes": 151532,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "066f7a17b06b30bcd2736c843aafa07cbe8dc84fbffcdaf1dcc832bd9ac7930d"
       },
       {
         "path": "share/n192-circa-four-wins.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n192-circa-four-wins.png",
-        "status": 200,
-        "sha256": "750d604aed9dd2baf535014809c96eaaf335ade3646e60846c32108c4de92cf4",
         "bytes": 151787,
-        "received_sha256": "750d604aed9dd2baf535014809c96eaaf335ade3646e60846c32108c4de92cf4",
-        "received_bytes": 151787,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "750d604aed9dd2baf535014809c96eaaf335ade3646e60846c32108c4de92cf4"
       },
       {
         "path": "share/n192-circa-perfect-weeks.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n192-circa-perfect-weeks.png",
-        "status": 200,
-        "sha256": "b879c6096f0457c6cc919e6c10c7a8a273c71da4104ee8ac0efe39ccd4acb20b",
         "bytes": 149562,
-        "received_sha256": "b879c6096f0457c6cc919e6c10c7a8a273c71da4104ee8ac0efe39ccd4acb20b",
-        "received_bytes": 149562,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "b879c6096f0457c6cc919e6c10c7a8a273c71da4104ee8ac0efe39ccd4acb20b"
       },
       {
         "path": "share/n192-circa-week12-1.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n192-circa-week12-1.png",
-        "status": 200,
-        "sha256": "d97472fd8170e8f17d0bdb88d28a5001b6594360552d6c7d6c7f076e19abcf1c",
         "bytes": 166048,
-        "received_sha256": "d97472fd8170e8f17d0bdb88d28a5001b6594360552d6c7d6c7f076e19abcf1c",
-        "received_bytes": 166048,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "d97472fd8170e8f17d0bdb88d28a5001b6594360552d6c7d6c7f076e19abcf1c"
       },
       {
         "path": "share/n192-circa-week12-2.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n192-circa-week12-2.png",
-        "status": 200,
-        "sha256": "9e3fd83b62ff716ecb61184e8c51c94284967aeb7daacf97537769da0a9f52f6",
         "bytes": 164106,
-        "received_sha256": "9e3fd83b62ff716ecb61184e8c51c94284967aeb7daacf97537769da0a9f52f6",
-        "received_bytes": 164106,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "9e3fd83b62ff716ecb61184e8c51c94284967aeb7daacf97537769da0a9f52f6"
       },
       {
         "path": "share/n192-circa-week12-3.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n192-circa-week12-3.png",
-        "status": 200,
-        "sha256": "8bfda7213c065bf7cab4bdf4da82983a6ef16238b13be3ef32b8bf65aa7cfcdf",
         "bytes": 158393,
-        "received_sha256": "8bfda7213c065bf7cab4bdf4da82983a6ef16238b13be3ef32b8bf65aa7cfcdf",
-        "received_bytes": 158393,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "8bfda7213c065bf7cab4bdf4da82983a6ef16238b13be3ef32b8bf65aa7cfcdf"
       },
       {
         "path": "share/n192-circa-week12-4.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n192-circa-week12-4.png",
-        "status": 200,
-        "sha256": "f5f63f22125d5b949ae501524afc87b7146b761b471057b4c48f9a85600dedeb",
         "bytes": 154216,
-        "received_sha256": "f5f63f22125d5b949ae501524afc87b7146b761b471057b4c48f9a85600dedeb",
-        "received_bytes": 154216,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "f5f63f22125d5b949ae501524afc87b7146b761b471057b4c48f9a85600dedeb"
       },
       {
         "path": "share/n192-thanksgiving-chi-det.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n192-thanksgiving-chi-det.png",
-        "status": 200,
-        "sha256": "c5d9b05f55c127709612d52f7e0d5df24db873459314f50760061d7f06a4765a",
         "bytes": 129668,
-        "received_sha256": "c5d9b05f55c127709612d52f7e0d5df24db873459314f50760061d7f06a4765a",
-        "received_bytes": 129668,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "c5d9b05f55c127709612d52f7e0d5df24db873459314f50760061d7f06a4765a"
       },
       {
         "path": "share/n192-thanksgiving-kc-buf.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n192-thanksgiving-kc-buf.png",
-        "status": 200,
-        "sha256": "62622391355a59e73798c076b2067b38b141e024f22fb0c0a2184a4a023073fb",
         "bytes": 132455,
-        "received_sha256": "62622391355a59e73798c076b2067b38b141e024f22fb0c0a2184a4a023073fb",
-        "received_bytes": 132455,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "62622391355a59e73798c076b2067b38b141e024f22fb0c0a2184a4a023073fb"
       },
       {
         "path": "share/n192-thanksgiving-phi-dal.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n192-thanksgiving-phi-dal.png",
-        "status": 200,
-        "sha256": "9cf57d1d8a2b8a33fbbdcc784957309a187a59ef730883714577e2b940f91df0",
         "bytes": 134487,
-        "received_sha256": "9cf57d1d8a2b8a33fbbdcc784957309a187a59ef730883714577e2b940f91df0",
-        "received_bytes": 134487,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "9cf57d1d8a2b8a33fbbdcc784957309a187a59ef730883714577e2b940f91df0"
       },
       {
         "path": "share/n192-thanksgiving.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n192-thanksgiving.png",
-        "status": 200,
-        "sha256": "7bfe1232e4367eff3d360f166e409ca68d6b7c7782efa4ae70450287633799d6",
         "bytes": 143180,
-        "received_sha256": "7bfe1232e4367eff3d360f166e409ca68d6b7c7782efa4ae70450287633799d6",
-        "received_bytes": 143180,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "7bfe1232e4367eff3d360f166e409ca68d6b7c7782efa4ae70450287633799d6"
       },
       {
         "path": "share/n192-week12-1.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n192-week12-1.png",
-        "status": 200,
-        "sha256": "a0ad8e3d531ec61f9688228347599a46b7ae354acb7521225f73fd7ed819e87d",
         "bytes": 161697,
-        "received_sha256": "a0ad8e3d531ec61f9688228347599a46b7ae354acb7521225f73fd7ed819e87d",
-        "received_bytes": 161697,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "a0ad8e3d531ec61f9688228347599a46b7ae354acb7521225f73fd7ed819e87d"
       },
       {
         "path": "share/n192-week12-2.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n192-week12-2.png",
-        "status": 200,
-        "sha256": "9ce4a00fd4b941679511b6e2a7241f6eeb9a863ed5475911d03912a25a615426",
         "bytes": 166231,
-        "received_sha256": "9ce4a00fd4b941679511b6e2a7241f6eeb9a863ed5475911d03912a25a615426",
-        "received_bytes": 166231,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "9ce4a00fd4b941679511b6e2a7241f6eeb9a863ed5475911d03912a25a615426"
       },
       {
         "path": "share/n192-week12-3.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n192-week12-3.png",
-        "status": 200,
-        "sha256": "83d3ad0d49f65214470ae824a5ae8528690f0d38ebd6b61936234f2277cebd67",
         "bytes": 160946,
-        "received_sha256": "83d3ad0d49f65214470ae824a5ae8528690f0d38ebd6b61936234f2277cebd67",
-        "received_bytes": 160946,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "83d3ad0d49f65214470ae824a5ae8528690f0d38ebd6b61936234f2277cebd67"
       },
       {
         "path": "share/n192-week12-4.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n192-week12-4.png",
-        "status": 200,
-        "sha256": "dcd2d5c63cbf226be3a23a87484937d0a6b3fbe1d9abc8b7509d23f4fc7a208f",
         "bytes": 165464,
-        "received_sha256": "dcd2d5c63cbf226be3a23a87484937d0a6b3fbe1d9abc8b7509d23f4fc7a208f",
-        "received_bytes": 165464,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "dcd2d5c63cbf226be3a23a87484937d0a6b3fbe1d9abc8b7509d23f4fc7a208f"
       },
       {
         "path": "share/n193-circa-five.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n193-circa-five.png",
-        "status": 200,
-        "sha256": "d25b6952480117b04626f393eb3d4c4699768c3ef36ef506a2610e3b038f2a43",
         "bytes": 149998,
-        "received_sha256": "d25b6952480117b04626f393eb3d4c4699768c3ef36ef506a2610e3b038f2a43",
-        "received_bytes": 149998,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "d25b6952480117b04626f393eb3d4c4699768c3ef36ef506a2610e3b038f2a43"
       },
       {
         "path": "share/n193-circa-four-wins.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n193-circa-four-wins.png",
-        "status": 200,
-        "sha256": "3d6d7719b6776e97e1286a66e725ae9f42667c4533ed0aca54ebd0866a990218",
         "bytes": 151744,
-        "received_sha256": "3d6d7719b6776e97e1286a66e725ae9f42667c4533ed0aca54ebd0866a990218",
-        "received_bytes": 151744,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "3d6d7719b6776e97e1286a66e725ae9f42667c4533ed0aca54ebd0866a990218"
       },
       {
         "path": "share/n193-circa-perfect-weeks.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n193-circa-perfect-weeks.png",
-        "status": 200,
-        "sha256": "0914c0c0f2b58dc8e930f97283f8d368d899d9cf7450eb942cb5fae3128d8cce",
         "bytes": 149556,
-        "received_sha256": "0914c0c0f2b58dc8e930f97283f8d368d899d9cf7450eb942cb5fae3128d8cce",
-        "received_bytes": 149556,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "0914c0c0f2b58dc8e930f97283f8d368d899d9cf7450eb942cb5fae3128d8cce"
       },
       {
         "path": "share/n193-circa-side-brier.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n193-circa-side-brier.png",
-        "status": 200,
-        "sha256": "35abcdbc0ed04f162ed7213f1f50c045ce1a8af80fc21fb8016ae6b0a044fe9e",
         "bytes": 153797,
-        "received_sha256": "35abcdbc0ed04f162ed7213f1f50c045ce1a8af80fc21fb8016ae6b0a044fe9e",
-        "received_bytes": 153797,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "35abcdbc0ed04f162ed7213f1f50c045ce1a8af80fc21fb8016ae6b0a044fe9e"
       },
       {
         "path": "share/n193-circa-week12-1.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n193-circa-week12-1.png",
-        "status": 200,
-        "sha256": "eced6a9971978f2ea150e26709ae68666a666bb795436a8809cb6d16bbe709ab",
         "bytes": 165681,
-        "received_sha256": "eced6a9971978f2ea150e26709ae68666a666bb795436a8809cb6d16bbe709ab",
-        "received_bytes": 165681,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "eced6a9971978f2ea150e26709ae68666a666bb795436a8809cb6d16bbe709ab"
       },
       {
         "path": "share/n193-circa-week12-2.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n193-circa-week12-2.png",
-        "status": 200,
-        "sha256": "44eea6c19c4bb37d5b5733d78864393da8a56168f33cf14348ce6777e29cb911",
         "bytes": 163744,
-        "received_sha256": "44eea6c19c4bb37d5b5733d78864393da8a56168f33cf14348ce6777e29cb911",
-        "received_bytes": 163744,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "44eea6c19c4bb37d5b5733d78864393da8a56168f33cf14348ce6777e29cb911"
       },
       {
         "path": "share/n193-circa-week12-3.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n193-circa-week12-3.png",
-        "status": 200,
-        "sha256": "014d06e8120e82da2ed74b506093e8b6303fdfba605fd9f22167ae9d1490f00f",
         "bytes": 158027,
-        "received_sha256": "014d06e8120e82da2ed74b506093e8b6303fdfba605fd9f22167ae9d1490f00f",
-        "received_bytes": 158027,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "014d06e8120e82da2ed74b506093e8b6303fdfba605fd9f22167ae9d1490f00f"
       },
       {
         "path": "share/n193-circa-week12-4.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n193-circa-week12-4.png",
-        "status": 200,
-        "sha256": "3e2995ed50d62cb924a0924ec55f8a9f82cf2f539923d371234fac8a25336d12",
         "bytes": 153854,
-        "received_sha256": "3e2995ed50d62cb924a0924ec55f8a9f82cf2f539923d371234fac8a25336d12",
-        "received_bytes": 153854,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "3e2995ed50d62cb924a0924ec55f8a9f82cf2f539923d371234fac8a25336d12"
       },
       {
         "path": "share/n193-packers-rams.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n193-packers-rams.png",
-        "status": 200,
-        "sha256": "fe4be10f9ea002819c07a557062b1792420d6038ca73bfa94666767956dbfb12",
         "bytes": 123613,
-        "received_sha256": "fe4be10f9ea002819c07a557062b1792420d6038ca73bfa94666767956dbfb12",
-        "received_bytes": 123613,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "fe4be10f9ea002819c07a557062b1792420d6038ca73bfa94666767956dbfb12"
       },
       {
         "path": "share/n193-thanksgiving-chi-det.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n193-thanksgiving-chi-det.png",
-        "status": 200,
-        "sha256": "1b411e2e77b761db8de84a8e681b71a4bdc0b144d0a5321332fc15dc6cbfb4a8",
         "bytes": 119727,
-        "received_sha256": "1b411e2e77b761db8de84a8e681b71a4bdc0b144d0a5321332fc15dc6cbfb4a8",
-        "received_bytes": 119727,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "1b411e2e77b761db8de84a8e681b71a4bdc0b144d0a5321332fc15dc6cbfb4a8"
       },
       {
         "path": "share/n193-thanksgiving-kc-buf.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n193-thanksgiving-kc-buf.png",
-        "status": 200,
-        "sha256": "4eb4fd58fa11cd9545f817523eb946116d9869815718e0b435ebeda297a0a57d",
         "bytes": 121153,
-        "received_sha256": "4eb4fd58fa11cd9545f817523eb946116d9869815718e0b435ebeda297a0a57d",
-        "received_bytes": 121153,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "4eb4fd58fa11cd9545f817523eb946116d9869815718e0b435ebeda297a0a57d"
       },
       {
         "path": "share/n193-thanksgiving-phi-dal.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n193-thanksgiving-phi-dal.png",
-        "status": 200,
-        "sha256": "7c7c023414176b3507b17280c4fa6bf89e5cee87df7e3c2a79ba6d21d18c0699",
         "bytes": 124775,
-        "received_sha256": "7c7c023414176b3507b17280c4fa6bf89e5cee87df7e3c2a79ba6d21d18c0699",
-        "received_bytes": 124775,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "7c7c023414176b3507b17280c4fa6bf89e5cee87df7e3c2a79ba6d21d18c0699"
       },
       {
         "path": "share/n193-thanksgiving.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n193-thanksgiving.png",
-        "status": 200,
-        "sha256": "743c4aa60521c675e5e953187bf58005a58a93c751dc16200234b917dda4bfdf",
         "bytes": 122065,
-        "received_sha256": "743c4aa60521c675e5e953187bf58005a58a93c751dc16200234b917dda4bfdf",
-        "received_bytes": 122065,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "743c4aa60521c675e5e953187bf58005a58a93c751dc16200234b917dda4bfdf"
       },
       {
         "path": "share/n193-week12-1.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n193-week12-1.png",
-        "status": 200,
-        "sha256": "1c046263dbf02b1a7952bca96824cc40f4c9c8897425625a7e8b70c0a9564841",
         "bytes": 135540,
-        "received_sha256": "1c046263dbf02b1a7952bca96824cc40f4c9c8897425625a7e8b70c0a9564841",
-        "received_bytes": 135540,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "1c046263dbf02b1a7952bca96824cc40f4c9c8897425625a7e8b70c0a9564841"
       },
       {
         "path": "share/n193-week12-2.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n193-week12-2.png",
-        "status": 200,
-        "sha256": "6bf4c556438e1be000498725abb5ca914908994d12c3ede8cfdd1ea9a3ec3690",
         "bytes": 138193,
-        "received_sha256": "6bf4c556438e1be000498725abb5ca914908994d12c3ede8cfdd1ea9a3ec3690",
-        "received_bytes": 138193,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "6bf4c556438e1be000498725abb5ca914908994d12c3ede8cfdd1ea9a3ec3690"
       },
       {
         "path": "share/n193-week12-3.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n193-week12-3.png",
-        "status": 200,
-        "sha256": "f28afc7db5d641cff7e8f8c7af39386d387a0004a576106a312e17a58bf1ad48",
         "bytes": 136856,
-        "received_sha256": "f28afc7db5d641cff7e8f8c7af39386d387a0004a576106a312e17a58bf1ad48",
-        "received_bytes": 136856,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "f28afc7db5d641cff7e8f8c7af39386d387a0004a576106a312e17a58bf1ad48"
       },
       {
         "path": "share/n193-week12-4.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n193-week12-4.png",
-        "status": 200,
-        "sha256": "750af3186a62c2a9d53f9ff1f4eb509bf162c18882c89f5012e9d717ebaeb789",
         "bytes": 139101,
-        "received_sha256": "750af3186a62c2a9d53f9ff1f4eb509bf162c18882c89f5012e9d717ebaeb789",
-        "received_bytes": 139101,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "750af3186a62c2a9d53f9ff1f4eb509bf162c18882c89f5012e9d717ebaeb789"
       },
       {
         "path": "share/n194-circa-five.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n194-circa-five.png",
-        "status": 200,
-        "sha256": "b1b80cd48319e5975b8e9d98f03f2c608bd0325e6e549971989b91155dfa9f9c",
         "bytes": 150209,
-        "received_sha256": "b1b80cd48319e5975b8e9d98f03f2c608bd0325e6e549971989b91155dfa9f9c",
-        "received_bytes": 150209,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "b1b80cd48319e5975b8e9d98f03f2c608bd0325e6e549971989b91155dfa9f9c"
       },
       {
         "path": "share/n194-circa-four-wins.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n194-circa-four-wins.png",
-        "status": 200,
-        "sha256": "ef1c3cfdc57e558e2b2a4362ed5ae4d811943beed0c8ae56be7cbb4121b871dd",
         "bytes": 151982,
-        "received_sha256": "ef1c3cfdc57e558e2b2a4362ed5ae4d811943beed0c8ae56be7cbb4121b871dd",
-        "received_bytes": 151982,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "ef1c3cfdc57e558e2b2a4362ed5ae4d811943beed0c8ae56be7cbb4121b871dd"
       },
       {
         "path": "share/n194-circa-perfect-weeks.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n194-circa-perfect-weeks.png",
-        "status": 200,
-        "sha256": "e4414fee6705adea3408f4e461abf4309c4ca16a82679a542b582cca1a80256f",
         "bytes": 149794,
-        "received_sha256": "e4414fee6705adea3408f4e461abf4309c4ca16a82679a542b582cca1a80256f",
-        "received_bytes": 149794,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "e4414fee6705adea3408f4e461abf4309c4ca16a82679a542b582cca1a80256f"
       },
       {
         "path": "share/n194-circa-side-brier.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n194-circa-side-brier.png",
-        "status": 200,
-        "sha256": "629c1f45659a56d337ba0de5f486af85cfd4a314b2aa3a9716d3df6181b8a864",
         "bytes": 154217,
-        "received_sha256": "629c1f45659a56d337ba0de5f486af85cfd4a314b2aa3a9716d3df6181b8a864",
-        "received_bytes": 154217,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "629c1f45659a56d337ba0de5f486af85cfd4a314b2aa3a9716d3df6181b8a864"
       },
       {
         "path": "share/n194-circa-side-logloss.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n194-circa-side-logloss.png",
-        "status": 200,
-        "sha256": "547b6c3bc0d6d51e231fad75d5ef332e8824aa0a50e19f95821040e5edbe616b",
         "bytes": 156542,
-        "received_sha256": "547b6c3bc0d6d51e231fad75d5ef332e8824aa0a50e19f95821040e5edbe616b",
-        "received_bytes": 156542,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "547b6c3bc0d6d51e231fad75d5ef332e8824aa0a50e19f95821040e5edbe616b"
       },
       {
         "path": "share/n194-circa-week12-1.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n194-circa-week12-1.png",
-        "status": 200,
-        "sha256": "5bea15338d94247969f1d763598e7af79e4fe464a1d47ce1208f58fc18fa0a43",
         "bytes": 165921,
-        "received_sha256": "5bea15338d94247969f1d763598e7af79e4fe464a1d47ce1208f58fc18fa0a43",
-        "received_bytes": 165921,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "5bea15338d94247969f1d763598e7af79e4fe464a1d47ce1208f58fc18fa0a43"
       },
       {
         "path": "share/n194-circa-week12-2.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n194-circa-week12-2.png",
-        "status": 200,
-        "sha256": "c468b94a04eddbeeadcc39e8675af3bbb2faeaf0e5a0aac35dbae880358342f0",
         "bytes": 163977,
-        "received_sha256": "c468b94a04eddbeeadcc39e8675af3bbb2faeaf0e5a0aac35dbae880358342f0",
-        "received_bytes": 163977,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "c468b94a04eddbeeadcc39e8675af3bbb2faeaf0e5a0aac35dbae880358342f0"
       },
       {
         "path": "share/n194-circa-week12-3.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n194-circa-week12-3.png",
-        "status": 200,
-        "sha256": "99373955114096a8ca053eaa41eb5d7104b8252ff17c2675cb233de960a53350",
         "bytes": 158270,
-        "received_sha256": "99373955114096a8ca053eaa41eb5d7104b8252ff17c2675cb233de960a53350",
-        "received_bytes": 158270,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "99373955114096a8ca053eaa41eb5d7104b8252ff17c2675cb233de960a53350"
       },
       {
         "path": "share/n194-circa-week12-4.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n194-circa-week12-4.png",
-        "status": 200,
-        "sha256": "4f82d477a91593faac067ceebaf9a3b6ae40ad6271873030cf8dc5383b723827",
         "bytes": 154095,
-        "received_sha256": "4f82d477a91593faac067ceebaf9a3b6ae40ad6271873030cf8dc5383b723827",
-        "received_bytes": 154095,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "4f82d477a91593faac067ceebaf9a3b6ae40ad6271873030cf8dc5383b723827"
       },
       {
         "path": "share/n194-packers-rams.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n194-packers-rams.png",
-        "status": 200,
-        "sha256": "699f55bf5b11a93fcf4b855a1a480e9b8752aa40fff0f5dba084eff31a9cc34e",
         "bytes": 124340,
-        "received_sha256": "699f55bf5b11a93fcf4b855a1a480e9b8752aa40fff0f5dba084eff31a9cc34e",
-        "received_bytes": 124340,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "699f55bf5b11a93fcf4b855a1a480e9b8752aa40fff0f5dba084eff31a9cc34e"
       },
       {
         "path": "share/n194-thanksgiving-chi-det.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n194-thanksgiving-chi-det.png",
-        "status": 200,
-        "sha256": "d1f61dc29544496ebd32bc90d94da64ee23fb88a9bcdef10be4e3bdf0c245e36",
         "bytes": 120527,
-        "received_sha256": "d1f61dc29544496ebd32bc90d94da64ee23fb88a9bcdef10be4e3bdf0c245e36",
-        "received_bytes": 120527,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "d1f61dc29544496ebd32bc90d94da64ee23fb88a9bcdef10be4e3bdf0c245e36"
       },
       {
         "path": "share/n194-thanksgiving-kc-buf.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n194-thanksgiving-kc-buf.png",
-        "status": 200,
-        "sha256": "1258cce644605d13d7f0c1b94e97a690aaebc29e152039601d29d0ae7847d325",
         "bytes": 122001,
-        "received_sha256": "1258cce644605d13d7f0c1b94e97a690aaebc29e152039601d29d0ae7847d325",
-        "received_bytes": 122001,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "1258cce644605d13d7f0c1b94e97a690aaebc29e152039601d29d0ae7847d325"
       },
       {
         "path": "share/n194-thanksgiving-phi-dal.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n194-thanksgiving-phi-dal.png",
-        "status": 200,
-        "sha256": "6fc565703ccd11b2c774616e68463bcd69d934d7ee02311cde60e86aa057354f",
         "bytes": 125620,
-        "received_sha256": "6fc565703ccd11b2c774616e68463bcd69d934d7ee02311cde60e86aa057354f",
-        "received_bytes": 125620,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "6fc565703ccd11b2c774616e68463bcd69d934d7ee02311cde60e86aa057354f"
       },
       {
         "path": "share/n194-thanksgiving.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n194-thanksgiving.png",
-        "status": 200,
-        "sha256": "34e490a897f1fa4cc47ae2c22faa3175956dcd217804e4340cbf48c6a4370aad",
         "bytes": 123018,
-        "received_sha256": "34e490a897f1fa4cc47ae2c22faa3175956dcd217804e4340cbf48c6a4370aad",
-        "received_bytes": 123018,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "34e490a897f1fa4cc47ae2c22faa3175956dcd217804e4340cbf48c6a4370aad"
       },
       {
         "path": "share/n194-week12-1.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n194-week12-1.png",
-        "status": 200,
-        "sha256": "cbce43b5c0b74ec0420817783002e65ee5b65eea91de6c40acde2cdde2771ad5",
         "bytes": 136550,
-        "received_sha256": "cbce43b5c0b74ec0420817783002e65ee5b65eea91de6c40acde2cdde2771ad5",
-        "received_bytes": 136550,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "cbce43b5c0b74ec0420817783002e65ee5b65eea91de6c40acde2cdde2771ad5"
       },
       {
         "path": "share/n194-week12-2.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n194-week12-2.png",
-        "status": 200,
-        "sha256": "1be0f4880b67c443d74e3649d91b65e8147efec493bb27593bdf19d6eb721155",
         "bytes": 139162,
-        "received_sha256": "1be0f4880b67c443d74e3649d91b65e8147efec493bb27593bdf19d6eb721155",
-        "received_bytes": 139162,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "1be0f4880b67c443d74e3649d91b65e8147efec493bb27593bdf19d6eb721155"
       },
       {
         "path": "share/n194-week12-3.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n194-week12-3.png",
-        "status": 200,
-        "sha256": "76acdc6bd454e7263eb6d0a26751cb882b47d481291f72022a1c472667c0cacc",
         "bytes": 137811,
-        "received_sha256": "76acdc6bd454e7263eb6d0a26751cb882b47d481291f72022a1c472667c0cacc",
-        "received_bytes": 137811,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "76acdc6bd454e7263eb6d0a26751cb882b47d481291f72022a1c472667c0cacc"
       },
       {
         "path": "share/n194-week12-4.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n194-week12-4.png",
-        "status": 200,
-        "sha256": "f8197955afa8b865e7f2683bf81965dc65ebc8256b526e6746ef5398b3e7b18f",
         "bytes": 139959,
-        "received_sha256": "f8197955afa8b865e7f2683bf81965dc65ebc8256b526e6746ef5398b3e7b18f",
-        "received_bytes": 139959,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "f8197955afa8b865e7f2683bf81965dc65ebc8256b526e6746ef5398b3e7b18f"
       },
       {
         "path": "share/n195-five.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n195-five.png",
-        "status": 200,
-        "sha256": "53e98d2bf26e64a612004b9e38b2dd2e6ec2fc47bf7153a6cdf295c9205a479a",
         "bytes": 149959,
-        "received_sha256": "53e98d2bf26e64a612004b9e38b2dd2e6ec2fc47bf7153a6cdf295c9205a479a",
-        "received_bytes": 149959,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "53e98d2bf26e64a612004b9e38b2dd2e6ec2fc47bf7153a6cdf295c9205a479a"
       },
       {
         "path": "share/n195-week12-1.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n195-week12-1.png",
-        "status": 200,
-        "sha256": "304f0b3b42df88ed7f2e46b883b71cf8e7ee88dbe45a3055e411218458b256da",
         "bytes": 163640,
-        "received_sha256": "304f0b3b42df88ed7f2e46b883b71cf8e7ee88dbe45a3055e411218458b256da",
-        "received_bytes": 163640,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "304f0b3b42df88ed7f2e46b883b71cf8e7ee88dbe45a3055e411218458b256da"
       },
       {
         "path": "share/n195-week12-2.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n195-week12-2.png",
-        "status": 200,
-        "sha256": "b274f86820e0a81ac91b39d06495801a26cb5a17bbd2ee7385c331b7f19d2cb7",
         "bytes": 169062,
-        "received_sha256": "b274f86820e0a81ac91b39d06495801a26cb5a17bbd2ee7385c331b7f19d2cb7",
-        "received_bytes": 169062,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "b274f86820e0a81ac91b39d06495801a26cb5a17bbd2ee7385c331b7f19d2cb7"
       },
       {
         "path": "share/n195-week12-3.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n195-week12-3.png",
-        "status": 200,
-        "sha256": "e58a50889eab6dc05e3fdc0d369d9c259f3dd5830ffd46465f18177082b5a23a",
         "bytes": 171397,
-        "received_sha256": "e58a50889eab6dc05e3fdc0d369d9c259f3dd5830ffd46465f18177082b5a23a",
-        "received_bytes": 171397,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "e58a50889eab6dc05e3fdc0d369d9c259f3dd5830ffd46465f18177082b5a23a"
       },
       {
         "path": "share/n195-week12-4.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n195-week12-4.png",
-        "status": 200,
-        "sha256": "5201d00501d4aa9d1ff337882954e29684f913fe6fda27fa203cda811e82f950",
         "bytes": 170522,
-        "received_sha256": "5201d00501d4aa9d1ff337882954e29684f913fe6fda27fa203cda811e82f950",
-        "received_bytes": 170522,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "5201d00501d4aa9d1ff337882954e29684f913fe6fda27fa203cda811e82f950"
       },
       {
         "path": "share/packers-rams.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/packers-rams.png",
-        "status": 200,
-        "sha256": "a54e5a858e0c08e2889f3257f076233cb869a68de5ca80734b7ee498e513ebef",
         "bytes": 149361,
-        "received_sha256": "a54e5a858e0c08e2889f3257f076233cb869a68de5ca80734b7ee498e513ebef",
-        "received_bytes": 149361,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "a54e5a858e0c08e2889f3257f076233cb869a68de5ca80734b7ee498e513ebef"
       },
       {
         "path": "share/thanksgiving-bears-lions.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/thanksgiving-bears-lions.png",
-        "status": 200,
-        "sha256": "c882ce91929ecfb8d0be9811e0cd52d03c8c10563f12ae2c0cd825b746db5508",
         "bytes": 148825,
-        "received_sha256": "c882ce91929ecfb8d0be9811e0cd52d03c8c10563f12ae2c0cd825b746db5508",
-        "received_bytes": 148825,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "c882ce91929ecfb8d0be9811e0cd52d03c8c10563f12ae2c0cd825b746db5508"
       },
       {
         "path": "share/thanksgiving-chiefs-bills.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/thanksgiving-chiefs-bills.png",
-        "status": 200,
-        "sha256": "b47d0f48ea8c38dd4b7933267b84d60cafdaf68dbdfd7fb0680fa6b3e1484352",
         "bytes": 155689,
-        "received_sha256": "b47d0f48ea8c38dd4b7933267b84d60cafdaf68dbdfd7fb0680fa6b3e1484352",
-        "received_bytes": 155689,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "b47d0f48ea8c38dd4b7933267b84d60cafdaf68dbdfd7fb0680fa6b3e1484352"
       },
       {
         "path": "share/thanksgiving-eagles-cowboys.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/thanksgiving-eagles-cowboys.png",
-        "status": 200,
-        "sha256": "cf5ab5c57da361faf83136c955f0f15a47b0825dcae18e27e717c74028da67c5",
         "bytes": 162680,
-        "received_sha256": "cf5ab5c57da361faf83136c955f0f15a47b0825dcae18e27e717c74028da67c5",
-        "received_bytes": 162680,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "cf5ab5c57da361faf83136c955f0f15a47b0825dcae18e27e717c74028da67c5"
       },
       {
         "path": "share/thanksgiving-tripleheader.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/thanksgiving-tripleheader.png",
-        "status": 200,
-        "sha256": "0df9091e9209905c64d36be89c1772d4a7aca910815eb5494798885a27dec147",
         "bytes": 130100,
-        "received_sha256": "0df9091e9209905c64d36be89c1772d4a7aca910815eb5494798885a27dec147",
-        "received_bytes": 130100,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "0df9091e9209905c64d36be89c1772d4a7aca910815eb5494798885a27dec147"
       },
       {
         "path": "share/week12-1.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/week12-1.png",
-        "status": 200,
-        "sha256": "cdbd6f86731448a1ac9b215bd3adf24f10f7435185486f8d41c804a6afbf50d7",
         "bytes": 147933,
-        "received_sha256": "cdbd6f86731448a1ac9b215bd3adf24f10f7435185486f8d41c804a6afbf50d7",
-        "received_bytes": 147933,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "cdbd6f86731448a1ac9b215bd3adf24f10f7435185486f8d41c804a6afbf50d7"
       },
       {
         "path": "share/week12-2.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/week12-2.png",
-        "status": 200,
-        "sha256": "c81925ddb6efc3498f5f730964958206002ecd49055fead75e0877cb077ad0fb",
         "bytes": 152267,
-        "received_sha256": "c81925ddb6efc3498f5f730964958206002ecd49055fead75e0877cb077ad0fb",
-        "received_bytes": 152267,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "c81925ddb6efc3498f5f730964958206002ecd49055fead75e0877cb077ad0fb"
       },
       {
         "path": "share/week12-3.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/week12-3.png",
-        "status": 200,
-        "sha256": "f720c6bcdc7a02d09440ce892e831d483839acf8e3042a70eb75072b7cbab023",
         "bytes": 148866,
-        "received_sha256": "f720c6bcdc7a02d09440ce892e831d483839acf8e3042a70eb75072b7cbab023",
-        "received_bytes": 148866,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "f720c6bcdc7a02d09440ce892e831d483839acf8e3042a70eb75072b7cbab023"
       },
       {
         "path": "share/week12-4.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/week12-4.png",
-        "status": 200,
-        "sha256": "025a70af46a5694808000f67a998d854347035620281d3814d1879c2484f2ce8",
         "bytes": 153256,
-        "received_sha256": "025a70af46a5694808000f67a998d854347035620281d3814d1879c2484f2ce8",
-        "received_bytes": 153256,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "025a70af46a5694808000f67a998d854347035620281d3814d1879c2484f2ce8"
       },
       {
         "path": "styles.css",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/styles.css",
-        "status": 200,
-        "sha256": "b5d96c7ab1ee471e50dd804dbf9e080e9ee2d66f5b09d901a73d8cd356670920",
         "bytes": 40562,
-        "received_sha256": "b5d96c7ab1ee471e50dd804dbf9e080e9ee2d66f5b09d901a73d8cd356670920",
-        "received_bytes": 40562,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "b5d96c7ab1ee471e50dd804dbf9e080e9ee2d66f5b09d901a73d8cd356670920"
       },
       {
         "path": "thanksgiving/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/thanksgiving/",
-        "status": 200,
-        "sha256": "722946357f6eb03e38a99232cbbaccbf247d204c01ecaff38647d21dfd839dcf",
         "bytes": 27907,
-        "received_sha256": "c2665fded0366edf26f3b3ed396de4ede7c73f40a7f1b2303ea8728d393641a8",
-        "received_bytes": 29021,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "722946357f6eb03e38a99232cbbaccbf247d204c01ecaff38647d21dfd839dcf"
       },
       {
         "path": "week-12-field-notes/board.css",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/board.css",
-        "status": 200,
-        "sha256": "427e6fab4a5b18ed9df70cf837e48bc40f37bd4f1d02082d23c579b931bf8089",
         "bytes": 6591,
-        "received_sha256": "427e6fab4a5b18ed9df70cf837e48bc40f37bd4f1d02082d23c579b931bf8089",
-        "received_bytes": 6591,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "427e6fab4a5b18ed9df70cf837e48bc40f37bd4f1d02082d23c579b931bf8089"
       },
       {
         "path": "week-12-field-notes/board.js",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/board.js",
-        "status": 200,
-        "sha256": "625236e76a2d1ce212964d6d4dd3ddf7d97b330b217fea7182c302463f4a2321",
         "bytes": 637,
-        "received_sha256": "625236e76a2d1ce212964d6d4dd3ddf7d97b330b217fea7182c302463f4a2321",
-        "received_bytes": 637,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "625236e76a2d1ce212964d6d4dd3ddf7d97b330b217fea7182c302463f4a2321"
       },
       {
         "path": "week-12-field-notes/index.html",
-        "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/",
-        "status": 200,
-        "sha256": "7e70e1d128a8712a03a32e8ee7436ee963cdc0f1b83f4a3c83e514569b9f68e8",
-        "bytes": 92985,
-        "received_sha256": "b8eb9c21b51456ecfdaab88c1ea05c34dd4b4922055a8d4306da646505b61c2a",
-        "received_bytes": 94099,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/index.html",
+        "bytes": 93016,
+        "sha256": "20e2d83ca465ebef81d4f18a40fdceea59a85710bfa5fe61faf87f9070b7c60f"
       },
       {
         "path": "week-12-field-notes/n196.html",
-        "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n196",
-        "status": 200,
-        "sha256": "fa30648adcff1d18dcd1debba0add692b5536911988ce903e51acdc3a83f3ca2",
+        "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n196.html",
         "bytes": 43079,
-        "received_sha256": "1ed40778a6ebbd7e082226f7d333d99aca2e7a4d9183ce9d3af1eb0ea8c9f4fb",
-        "received_bytes": 44193,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "fa30648adcff1d18dcd1debba0add692b5536911988ce903e51acdc3a83f3ca2"
       },
       {
         "path": "week-12-field-notes/n197-1512.html",
-        "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n197-1512",
-        "status": 200,
-        "sha256": "f65f318941f63264f1ed7690630f37efba505b2c8c7c0072535287b824a4c07b",
+        "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n197-1512.html",
         "bytes": 65884,
-        "received_sha256": "cc8bb3fe6f1cbf0259205e4ad60c000f5a1dd32943f51ac3c561ef37bdf25743",
-        "received_bytes": 66998,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "f65f318941f63264f1ed7690630f37efba505b2c8c7c0072535287b824a4c07b"
       },
       {
         "path": "week-12-field-notes/n198-1533.html",
-        "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n198-1533",
-        "status": 200,
-        "sha256": "02054a7d8a67e188d32aad223827e920a14a26ae99dcf4120def61c34abd3ef0",
+        "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n198-1533.html",
         "bytes": 90026,
-        "received_sha256": "48a82aa4e37325c00c8fa56cfba7bf0262eb41addb5ae26f6d7ca351be1995e4",
-        "received_bytes": 91140,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "02054a7d8a67e188d32aad223827e920a14a26ae99dcf4120def61c34abd3ef0"
       },
       {
         "path": "week-12-field-notes/n198-1545.html",
-        "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n198-1545",
-        "status": 200,
-        "sha256": "a72645f5a71b5de7ed0882d4e41e123ee64011bb0e54ebb35204357615029af9",
+        "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n198-1545.html",
         "bytes": 91418,
-        "received_sha256": "fb57cce6d3665aa65fb06cfcd40f3f8a149325017af4dc0dc8b2843faad36171",
-        "received_bytes": 92532,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "a72645f5a71b5de7ed0882d4e41e123ee64011bb0e54ebb35204357615029af9"
+      },
+      {
+        "path": "week-12-field-notes/n198-1554.html",
+        "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n198-1554.html",
+        "bytes": 92985,
+        "sha256": "7e70e1d128a8712a03a32e8ee7436ee963cdc0f1b83f4a3c83e514569b9f68e8"
       },
       {
         "path": "week-12-field-notes/N198-public-Circa-five.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/N198-public-Circa-five.png",
-        "status": 200,
-        "sha256": "405eb0a7922a6ca86e57d6a3e3cee7495a659dc39341080f6c4e2a24f31a5666",
         "bytes": 168932,
-        "received_sha256": "405eb0a7922a6ca86e57d6a3e3cee7495a659dc39341080f6c4e2a24f31a5666",
-        "received_bytes": 168932,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "405eb0a7922a6ca86e57d6a3e3cee7495a659dc39341080f6c4e2a24f31a5666"
       },
       {
         "path": "week-12-field-notes/N198-public-Circa-options-1.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/N198-public-Circa-options-1.png",
-        "status": 200,
-        "sha256": "7362ee5f44f53de4d171ef913ec1cd09b98006ed6467c7aaedaaec51295942a1",
         "bytes": 298023,
-        "received_sha256": "7362ee5f44f53de4d171ef913ec1cd09b98006ed6467c7aaedaaec51295942a1",
-        "received_bytes": 298023,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "7362ee5f44f53de4d171ef913ec1cd09b98006ed6467c7aaedaaec51295942a1"
       },
       {
         "path": "week-12-field-notes/N198-public-Circa-options-2.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/N198-public-Circa-options-2.png",
-        "status": 200,
-        "sha256": "a713f18149915cb9497f4c12a84595d5bed145d815080662bcce12f96153967c",
         "bytes": 302048,
-        "received_sha256": "a713f18149915cb9497f4c12a84595d5bed145d815080662bcce12f96153967c",
-        "received_bytes": 302048,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "a713f18149915cb9497f4c12a84595d5bed145d815080662bcce12f96153967c"
       },
       {
         "path": "week-12-field-notes/N198-public-forecast-1.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/N198-public-forecast-1.png",
-        "status": 200,
-        "sha256": "eb8ab5e7403f94c18818dfbe12bbe6f57e55a7ef72d7cca725be5ebef3561bb3",
         "bytes": 178680,
-        "received_sha256": "eb8ab5e7403f94c18818dfbe12bbe6f57e55a7ef72d7cca725be5ebef3561bb3",
-        "received_bytes": 178680,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "eb8ab5e7403f94c18818dfbe12bbe6f57e55a7ef72d7cca725be5ebef3561bb3"
       },
       {
         "path": "week-12-field-notes/N198-public-forecast-2.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/N198-public-forecast-2.png",
-        "status": 200,
-        "sha256": "b96bfae6cf1700d4513b559e87006db52b7747da3ace0bc9f1f354957a48254d",
         "bytes": 185184,
-        "received_sha256": "b96bfae6cf1700d4513b559e87006db52b7747da3ace0bc9f1f354957a48254d",
-        "received_bytes": 185184,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "b96bfae6cf1700d4513b559e87006db52b7747da3ace0bc9f1f354957a48254d"
       },
       {
         "path": "week-12-field-notes/N198-public-forecast-3.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/N198-public-forecast-3.png",
-        "status": 200,
-        "sha256": "e5c6574552d978618c114372aaa39a77fdcfab32386773cfc1846fa12589ad0c",
         "bytes": 183539,
-        "received_sha256": "e5c6574552d978618c114372aaa39a77fdcfab32386773cfc1846fa12589ad0c",
-        "received_bytes": 183539,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "e5c6574552d978618c114372aaa39a77fdcfab32386773cfc1846fa12589ad0c"
       },
       {
         "path": "week-12-field-notes/N198-public-forecast-4.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/N198-public-forecast-4.png",
-        "status": 200,
-        "sha256": "6c3c5200c032dbbdd7aed120a0a67ff99b164534ac1936ffaa44130ae25e5905",
         "bytes": 183171,
-        "received_sha256": "6c3c5200c032dbbdd7aed120a0a67ff99b164534ac1936ffaa44130ae25e5905",
-        "received_bytes": 183171,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "6c3c5200c032dbbdd7aed120a0a67ff99b164534ac1936ffaa44130ae25e5905"
+      },
+      {
+        "path": "week-12-field-notes/N199-public-Circa-five.png",
+        "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/N199-public-Circa-five.png",
+        "bytes": 157048,
+        "sha256": "0f8add0c92a7650b358985caa6953df9a1ba2b3501ce62107788b5c1344491b2"
+      },
+      {
+        "path": "week-12-field-notes/N199-public-Circa-options-1.png",
+        "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/N199-public-Circa-options-1.png",
+        "bytes": 244901,
+        "sha256": "43bf8a60ba089afb84d7592df73bc10d8e203e473cd909ad5bbbeea8ea371d69"
+      },
+      {
+        "path": "week-12-field-notes/N199-public-Circa-options-2.png",
+        "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/N199-public-Circa-options-2.png",
+        "bytes": 249794,
+        "sha256": "cf85fa96f9c2129fbd783d2750fcd1e9f48ef14d9bbd9b7c9d4b209fe1afb03b"
+      },
+      {
+        "path": "week-12-field-notes/N199-public-forecast-1.png",
+        "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/N199-public-forecast-1.png",
+        "bytes": 180775,
+        "sha256": "f2bb758315231ebf224bd3b560224e8e873b792c9e06151315f21107f19479b9"
+      },
+      {
+        "path": "week-12-field-notes/N199-public-forecast-2.png",
+        "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/N199-public-forecast-2.png",
+        "bytes": 183461,
+        "sha256": "4024262209129b204e7ecf2e2bb106977aa4ab1cebceb22c9ececb3f59a996ce"
+      },
+      {
+        "path": "week-12-field-notes/N199-public-forecast-3.png",
+        "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/N199-public-forecast-3.png",
+        "bytes": 182420,
+        "sha256": "6367dc4df110ceda207a74a68e63ebb6ed002ec1d6417779a5e78bacc967f4cf"
+      },
+      {
+        "path": "week-12-field-notes/N199-public-forecast-4.png",
+        "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/N199-public-forecast-4.png",
+        "bytes": 183132,
+        "sha256": "9b5ef6e262a581f2a0a30e78b4f98034cae501a7ce6e572fbed069ee7128921c"
+      },
+      {
+        "path": "week-12-field-notes/n199-weekly/index.html",
+        "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n199-weekly/index.html",
+        "bytes": 12416,
+        "sha256": "c7ba55eb7e427ed8ffdd0116057215a597d2b5e39aa25a018daf53972291866b"
+      },
+      {
+        "path": "week-12-field-notes/n199-weekly/manifest.json",
+        "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n199-weekly/manifest.json",
+        "bytes": 232,
+        "sha256": "b6896d213fd31383550492393760bf2d5ef710a3d0b91bc2155cc66630af55cc"
+      },
+      {
+        "path": "week-12-field-notes/n199-weekly/weekly.json",
+        "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n199-weekly/weekly.json",
+        "bytes": 32386,
+        "sha256": "ff7bb48a00d167b675807b12edb75970e13c03ff1493038fd1e81821abf9c82c"
       },
       {
         "path": "week-12-field-notes/NFL-W12-Circa-all-1.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/NFL-W12-Circa-all-1.png",
-        "status": 200,
-        "sha256": "3ab52ff6a4e4ecbdd6bd8c13d0fa10f8149d0380089239f38e180dab266af082",
         "bytes": 153109,
-        "received_sha256": "3ab52ff6a4e4ecbdd6bd8c13d0fa10f8149d0380089239f38e180dab266af082",
-        "received_bytes": 153109,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "3ab52ff6a4e4ecbdd6bd8c13d0fa10f8149d0380089239f38e180dab266af082"
       },
       {
         "path": "week-12-field-notes/NFL-W12-Circa-all-2.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/NFL-W12-Circa-all-2.png",
-        "status": 200,
-        "sha256": "f6527fb953186440db38469404380a3668aaacf6e12f192e4db9ad188381794f",
         "bytes": 154966,
-        "received_sha256": "f6527fb953186440db38469404380a3668aaacf6e12f192e4db9ad188381794f",
-        "received_bytes": 154966,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "f6527fb953186440db38469404380a3668aaacf6e12f192e4db9ad188381794f"
       },
       {
         "path": "week-12-field-notes/NFL-W12-Circa-five.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/NFL-W12-Circa-five.png",
-        "status": 200,
-        "sha256": "2777e29f8e3743d1c959a2b3394d13f0ef97acc2bc5c1e6a436415b99567ca12",
         "bytes": 162339,
-        "received_sha256": "2777e29f8e3743d1c959a2b3394d13f0ef97acc2bc5c1e6a436415b99567ca12",
-        "received_bytes": 162339,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "2777e29f8e3743d1c959a2b3394d13f0ef97acc2bc5c1e6a436415b99567ca12"
       },
       {
         "path": "week-12-field-notes/NFL-W12-games-1.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/NFL-W12-games-1.png",
-        "status": 200,
-        "sha256": "eebc9d86ce8b12c6202268895899679050a9578749fca3af007be0751b994479",
         "bytes": 155824,
-        "received_sha256": "eebc9d86ce8b12c6202268895899679050a9578749fca3af007be0751b994479",
-        "received_bytes": 155824,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "eebc9d86ce8b12c6202268895899679050a9578749fca3af007be0751b994479"
       },
       {
         "path": "week-12-field-notes/NFL-W12-games-2.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/NFL-W12-games-2.png",
-        "status": 200,
-        "sha256": "578cf0c06be9318b4b368dfa754cdc6f2cbb865719618cd7cda3005344347baf",
         "bytes": 163948,
-        "received_sha256": "578cf0c06be9318b4b368dfa754cdc6f2cbb865719618cd7cda3005344347baf",
-        "received_bytes": 163948,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "578cf0c06be9318b4b368dfa754cdc6f2cbb865719618cd7cda3005344347baf"
       },
       {
         "path": "week-12-field-notes/NFL-W12-games-3.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/NFL-W12-games-3.png",
-        "status": 200,
-        "sha256": "a60399219d97a76e209b2a7631811bb2ab424a77cb223bbae06ce634d5b75847",
         "bytes": 157116,
-        "received_sha256": "a60399219d97a76e209b2a7631811bb2ab424a77cb223bbae06ce634d5b75847",
-        "received_bytes": 157116,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "a60399219d97a76e209b2a7631811bb2ab424a77cb223bbae06ce634d5b75847"
       },
       {
         "path": "week-12-field-notes/NFL-W12-games-4.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/NFL-W12-games-4.png",
-        "status": 200,
-        "sha256": "fc72121463ae4de0d0064c59cb6c81324401d1707ede2179e63ba4c2b4003beb",
         "bytes": 157917,
-        "received_sha256": "fc72121463ae4de0d0064c59cb6c81324401d1707ede2179e63ba4c2b4003beb",
-        "received_bytes": 157917,
-        "matches_pushed_source": true,
-        "verification": "EXACT_ORIGINAL_BYTES"
+        "sha256": "fc72121463ae4de0d0064c59cb6c81324401d1707ede2179e63ba4c2b4003beb"
       },
       {
         "path": "weeks/12/index.html",
-        "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/weeks/12/",
-        "status": 200,
-        "sha256": "6f32dc1b6727c986497c495e38d82b4327e6f0e72aa09b87a66c0a9046df5de0",
+        "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/weeks/12/index.html",
         "bytes": 124467,
-        "received_sha256": "d754a590eea0b1021aba1cf050847a41161a3ed470cf455b121a5ff6bc225fb6",
-        "received_bytes": 125581,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "1a22a1ac1dd64914297e4fd27bc1425bc2f817a26c74e5dfcee2d1218635769e"
       },
       {
         "path": "weeks/13/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/weeks/13/",
-        "status": 200,
-        "sha256": "636e04ae4af81c47f8769e7095df30779d46aa9a528ede812a9bae6d9289585f",
         "bytes": 90623,
-        "received_sha256": "578e1a558254d3888d32018e2a8db4baf565f1347c154dccfbc12820129e4ecc",
-        "received_bytes": 91737,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "636e04ae4af81c47f8769e7095df30779d46aa9a528ede812a9bae6d9289585f"
       },
       {
         "path": "weeks/14/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/weeks/14/",
-        "status": 200,
-        "sha256": "ad3fbd9004a9131bf2e681fdb1372fe9664f5214c9c0d0650cb10af0c256f4d8",
         "bytes": 97049,
-        "received_sha256": "1b6c8ddd283589c540d7c93981935839b68521d7b2b5a16cdd9580ce6eb749f6",
-        "received_bytes": 98163,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "ad3fbd9004a9131bf2e681fdb1372fe9664f5214c9c0d0650cb10af0c256f4d8"
       },
       {
         "path": "weeks/15/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/weeks/15/",
-        "status": 200,
-        "sha256": "ac8c8486cdd23099bd818af299ced5822f74e5e8ac6667097d0fabb2dc634c1d",
         "bytes": 103391,
-        "received_sha256": "0c512b38e99fa6f20b87459645da39b4668c4f4e51d333285a97b671c2b70a9b",
-        "received_bytes": 104505,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "ac8c8486cdd23099bd818af299ced5822f74e5e8ac6667097d0fabb2dc634c1d"
       },
       {
         "path": "weeks/16/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/weeks/16/",
-        "status": 200,
-        "sha256": "3b9e6f65f96f88e7b4554de0d550e79eb20c624f2f9b92be57a12969e416122c",
         "bytes": 103410,
-        "received_sha256": "1aebde14f472da24a929aef74a9b897f55bd41d3c7d823483e1df88a88adb026",
-        "received_bytes": 104524,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "3b9e6f65f96f88e7b4554de0d550e79eb20c624f2f9b92be57a12969e416122c"
       },
       {
         "path": "weeks/17/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/weeks/17/",
-        "status": 200,
-        "sha256": "9a9fcf0d9d1e8cd0e0543e309c2d9258451287c40ab57892217c035ac3c6dd1a",
         "bytes": 103391,
-        "received_sha256": "f1745b6fdb95f220ca4d964508bf632f8f93afa9168a83b998dd97b1789ade11",
-        "received_bytes": 104505,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "9a9fcf0d9d1e8cd0e0543e309c2d9258451287c40ab57892217c035ac3c6dd1a"
       },
       {
         "path": "weeks/18/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/weeks/18/",
-        "status": 200,
-        "sha256": "6de87da2fb775f0026118916c3e3c001c9c5e267a458a1e483d2d1d3894a8676",
         "bytes": 103435,
-        "received_sha256": "e85b6e53b83cca3ed078d83e02bf597642353f6d81c480a2c4f34d86e323d471",
-        "received_bytes": 104549,
-        "matches_pushed_source": true,
-        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+        "sha256": "6de87da2fb775f0026118916c3e3c001c9c5e267a458a1e483d2d1d3894a8676"
       }
     ],
-    "method": "Anonymous deployed asset hashes and live Chromium interactions",
-    "checked_at": "2026-11-26T00:00:44.778Z",
-    "viewports": [
-      1440,
-      390
-    ],
-    "field_notes_browser_checks": [
-      "1440px: N198 field notes show all 16 roster forecasts, 286 public assets, all Circa roles and seven current share cards",
-      "390px: N198 field notes show all 16 roster forecasts, 286 public assets, all Circa roles and seven current share cards"
-    ],
-    "uncaught_page_errors": [],
-    "workflow_url": "https://github.com/alvaromendizabal/sports-edge-lab/actions/runs/45724930871",
-    "run_id": 45724930871,
-    "job_id": 139592391974,
-    "artifact_id": 15073423698,
-    "artifact_sha256": "8dc28cb3c238b85129c81c716b2904697d2f9ec62d1fb3111624cfe9381d1e7a"
+    "method": "Expected source hashes for live release. The anonymous browser workflow checks desktop, phone and every asset."
   }
 }
