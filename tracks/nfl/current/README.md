@@ -1,5 +1,20 @@
 # NFL game day and research dashboard
 
+## N204 verified owner execution — November 25, 2026
+
+**[Open the N204 weekly board](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n204/)** · [Observed bookmaker options](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n204/#markets) · [Preserved V13/Circa](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n204/#circa)
+
+The owner completed N204 run `20261126T025146Z-e5ec79536aea`. Native Site publication succeeded as **version 59**; [the native receipt](publication-n204.json) records its exact source, archive and snapshot. Build-time browser availability remains separate from the exact-head hosted GitHub checks. The verified 408,975,087-byte return has SHA-256 `f207a66afd9e909bc0ab8aa869934416a3914a910e1ae7ec2db4aa7530dec601`.
+
+The strict-win spread selection is **95W / 65L / 3P / 0 unresolved across all 163 completed games**; the total winner remains **94W / 69L / 0P / 0 unresolved**. The corresponding all-candidate prior-week wins replay records 76 spread wins and 78 total wins. All 2,042 policies retain the same completed population; independent arithmetic review checked all 332,846 candidate-game rows, all six objective selections, 88 weekly decisions and 1,304 replay rows. These are exposed 2026 selections/reconstructions, not an untouched future test.
+
+The completed campaign made 768 direct probability-estimator fits, 1,152 calibration fits and 432 blend optimizer calls. It recovered all 1,248 previous policies without fitting them again. The new direct spread classifier supplies conditional cover probability; point, outright-win and spread-push quantities are explicitly preserved N203 references. No new point model is claimed.
+
+The 6:56 p.m. Pacific forecast edition contains 15 new pregame game views across the 16-game weekly slate. Authentic prices were observed at 6:52 p.m.; availability was compiled at 6:55 p.m. The actual N204 response has 57 usable spread/total sources and 79 observed sources overall, with 3,196 priced side options. DraftKings and Polymarket each cover 15 games; Kalshi's paired feed covers 14. Earlier direct NE–LAC Kalshi observations retain their older N203 clocks.
+
+The N203 archive, original V13 forecasts, Circa policies, exact card deadlines and existing Circa graphics remain unchanged. Four new 1080×2340 phone cards use the same sanitized N204 snapshot. The public data excludes PMFs, feature lists, calibration parameters, fitted states and private source recipes. The NFL-specific live contract verifies both old and new editions and requires every completed ID to reconcile.
+
+
 ## N203 verified owner execution — November 25, 2026
 
 **[Open the current N203 board](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n203/)** · [Refreshed book options](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n203/#markets) · [Circa alternatives](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n203/#circa) · [Seven phone graphics](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n203/#phone)
