@@ -7,7 +7,7 @@
   "executable_bytes": 106526102,
   "owner_slot_installed": true,
   "private_s3_readback": "SHA256_VERIFIED",
-  "qualification_status": "PENDING_NATIVE_QUALIFICATION",
+  "qualification_status": "EIGHT_BOUNDED_UNITS_COMPLETE_SEPARATE_NUMERICAL_CERTIFICATE_PENDING",
   "local_tests": 56,
   "inherited_tests": 81,
   "planned_work": {
@@ -17,5 +17,13 @@
     "total_optimizer_calls": 2560
   },
   "n208_science_runs_started_by_agent": 0,
-  "scientific_scores": "Use N207 until an independently verified successor owner return exists."
+  "scientific_scores": "Use N207 until an independently verified successor owner return exists.",
+  "owner_guard_sha256": "4ce4ab7427698d591a0d578dd2875cc58d95a156335d5155f5180ff4ae02ca25",
+  "native_regressions_passed": 56,
+  "bounded_native_qualification": {
+    "as_of_utc": "2026-11-26T19:02:59Z",
+    "completed_fit_units": 8,
+    "scheduled_fit_units": 8,
+    "scope": "Prelaunch qualification; scientific owner-run forecasts remain N207."
+  }
 }

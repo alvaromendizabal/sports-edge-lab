@@ -354,6 +354,24 @@ function verifyHostedHtml(observed, source, context) {
       await page.getByRole("link",{name:"Return to game board",exact:true}).click();
       await page.getByRole("heading",{name:"Thanksgiving game board",exact:true}).waitFor();
       await page.screenshot({path:path.join(output,`n207-board-${width}.png`)});
+      await page.getByRole("link",{name:"Standing V13 champions on all 164 games and the prospective scorecard"}).click();
+      await page.getByRole("heading",{name:"Frozen champions, 164 games",exact:true}).waitFor();
+      await count("#champions > .tablewrap tbody tr",9);
+      await page.getByText("Champions under all five validation weights",{exact:true}).click();
+      await count("#sensitivity tbody tr:visible",9);
+      await count("#sensitivity tbody td:visible",54);
+      await page.getByText("Compare all 56 locked model picks",{exact:true}).click();
+      await count("#prospective tbody tr:visible",14);
+      assert.match(await text("#prospective"),/dd6f9704a7ca3255cad11478b18c99bb752ad917fbaeb0a00debea25ad64bcb8/);
+      const proof=await (await page.request.get(new URL("week-12-field-notes/n207/standing-results/proof.json",base).href)).json();
+      assert.deepEqual([proof.objectives.length,proof.evaluation.completed,proof.evaluation.winner_correct],[9,164,108]);
+      assert(proof.objectives.every(r=>r.scored_2026_games===164 && Object.keys(r.weights).length===5));
+      assert.equal(proof.prospective_scorecard.rows.length,28);
+      assert.equal(proof.playoff_price_reconstruction.covered_game_targets,52);
+      await noOverflow();
+      await page.goto(new URL("week-12-field-notes/n207/standing-results/",base).href, {waitUntil:"domcontentloaded"});
+      await page.screenshot({path:path.join(output,`n207-standing-${width}.png`)});
+
     });
     await check(`${width}px: N206 current forecasts, full population, authentic prices and coherent score provenance`,async()=>{
       await page.goto(new URL("week-12-field-notes/n206/",base).href,{waitUntil:"domcontentloaded"});

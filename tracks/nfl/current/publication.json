@@ -6,14 +6,14 @@
   "thanksgiving_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n207/#slate",
   "dedicated_circa_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n207/#circa",
   "all_games_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n207/#slate",
-  "deployed_at": "2026-11-26T18:30:34.505273+00:00",
-  "site_version": 65,
-  "site_source_commit": "fc5b0c7acfd7796a5cb54d091f3966984d6f0498",
-  "archive_sha256": "ecbaade81fbc336f19dce8ce39902a4da1179b0621f23bd757ac31ac5ce2193f",
-  "provider_saved_tar_sha256": "sha256:ecbaade81fbc336f19dce8ce39902a4da1179b0621f23bd757ac31ac5ce2193f",
+  "deployed_at": "2026-11-26T19:04:48.007203+00:00",
+  "site_version": 67,
+  "site_source_commit": "431899a03a8b75de08d9c1b97965697f5219d002",
+  "archive_sha256": "9581cb15508361e0009bf83f60dade2cb9117e82c45a01f8e2879b23645fa355",
+  "provider_saved_tar_sha256": "sha256:9581cb15508361e0009bf83f60dade2cb9117e82c45a01f8e2879b23645fa355",
   "audience": "public",
   "native_publication_receipt": "publication-n207.json",
-  "prior_publication_receipt": "publication-n207-v64.json",
+  "prior_publication_receipt": "publication-n207-v66.json",
   "github_source_provenance": "The exact-head GitHub Actions report verifies the committed release against the hosted bytes; immutable Site source commit is recorded above.",
   "scientific_scope": {
     "schema": "sports-edge-lab.nfl.execution-delivery-status.v2",
@@ -184,6 +184,23 @@
         "direct_global_open_games": 14
       },
       "champion_selection_or_refits_from_morning_quotes": false
+    },
+    "standing_primary_and_prospective": {
+      "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n207/standing-results/",
+      "sha256": "d8d614bb8716ffbc78c48afa4068b338c61fc73accfb42b2ce6c0ca6fd98bc16",
+      "proof_sha256": "9fdc2a7d656d598ba3b61e70fae699705bf12ff66c5380822320dc98d4c17cbe",
+      "all_primary_objectives": 9,
+      "standing_2026_games": 164,
+      "annual_validation_counts": [
+        285,
+        285
+      ],
+      "number_of_ratios": 5,
+      "prospective_games": 14,
+      "scorecard_locked_utc": "2026-11-26T18:32:15.940836+00:00",
+      "original_scorecard_sha256": "dd6f9704a7ca3255cad11478b18c99bb752ad917fbaeb0a00debea25ad64bcb8",
+      "retrospectively_recovered_playoff_game_markets": 52,
+      "edition_status": "Current"
     }
   },
   "verification": {
@@ -2544,8 +2561,8 @@
       },
       {
         "path": "week-12-field-notes/n207/index.html",
-        "bytes": 80584,
-        "sha256": "59322ee2452e4203e7155a6000c473aa8732aa501f1b23e7b52979bcd03ac56c",
+        "bytes": 80692,
+        "sha256": "e0400a692b0d0f68012a1e2a5e2bc9605aac9f60bed474caa52705fe800d7168",
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
@@ -2558,6 +2575,18 @@
         "path": "week-12-field-notes/n207/polymarket/index.html",
         "bytes": 393457,
         "sha256": "b6caf7da77b20e44984b91c88b365b8dcd99a89c0df230f9fd0c1a2884c9669a",
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n207/standing-results/index.html",
+        "bytes": 12715,
+        "sha256": "d8d614bb8716ffbc78c48afa4068b338c61fc73accfb42b2ce6c0ca6fd98bc16",
+        "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
+      },
+      {
+        "path": "week-12-field-notes/n207/standing-results/proof.json",
+        "bytes": 18153,
+        "sha256": "9fdc2a7d656d598ba3b61e70fae699705bf12ff66c5380822320dc98d4c17cbe",
         "verification": "EXPECTED_SOURCE_AWAITING_ANONYMOUS_HTTP_AUDIT"
       },
       {
@@ -2652,5 +2681,6 @@
       1440,
       390
     ]
-  }
+  },
+  "standing_results_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n207/standing-results/"
 }

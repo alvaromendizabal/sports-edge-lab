@@ -6,6 +6,8 @@ The verified launcher is staged for 256 planned fit units. Native qualification 
 
 ## N207 verified owner result — Thanksgiving 2026
 
+The nine V13 primary champions now share a 164-game evaluation, including the original forecast for Green Bay at Los Angeles. The outright champion scored 108/164. The prospective scorecard fixes the next 14 pregame matchups. [Standing champions, annual selections and locked picks](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n207/standing-results/).
+
 [Open the Thanksgiving forecast board](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n207/) · [Browse 656 Kalshi contracts](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n207/kalshi/) · [Browse 720 Polymarket Global markets](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n207/polymarket/) · [Eight phone cards](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n207/#phone) · [Read the verified owner result](n207-owner-result.json).
 
 The owner completed all registered N207 stages. The verified return contains 256 new fit units, 1,024 probability estimators, 1,536 calibrators and 2,560 optimizer completions with a peak of 42. The 2026 selection census covered 164 games. Strict-win totals retained the 95–69 record and improved Brier to 0.26090. The earlier N206 spread selection retained 97–64–3. The threshold, calibration and championship evidence is exposed to 2026 results. V13 closure remains incomplete.

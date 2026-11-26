@@ -1,0 +1,584 @@
+{
+  "edition": "N207",
+  "standing_selection_sha256": "f8818af9c56638eb7568fb8751510bb0d60caa10a51f1d55433ec266b190e462",
+  "supplement_sha256": "70486516f33ebaa6e971e85489429db851276f733852a96988c35dfe20b71728",
+  "validation_n_by_year": {
+    "2024": 285,
+    "2025": 285
+  },
+  "evaluation": {
+    "season": 2026,
+    "completed": 164,
+    "reconstructed": 163,
+    "original_pregame": 1,
+    "original_game": "GB 13, LAR 26",
+    "winner_correct": 108
+  },
+  "objectives": [
+    {
+      "objective": "winner_accuracy",
+      "primary_model_id": "22a84d507de7993afec110047faf2e78d60ced30e60b26453a25bae27c8060ec",
+      "annual_validation": {
+        "2024": {
+          "games": 285,
+          "score": 0.743859649122807
+        },
+        "2025": {
+          "games": 285,
+          "score": 0.6631578947368421
+        }
+      },
+      "reconstructed_163_score": 0.656441717791411,
+      "completed_164_score": 0.6585365853658537,
+      "scored_2026_games": 164,
+      "weights": {
+        "50/50": {
+          "model_id": "22a84d507de7993afec110047faf2e78d60ced30e60b26453a25bae27c8060ec",
+          "weighted_score": 0.7035087719298245
+        },
+        "40/60": {
+          "model_id": "22a84d507de7993afec110047faf2e78d60ced30e60b26453a25bae27c8060ec",
+          "weighted_score": 0.695438596491228
+        },
+        "30/70": {
+          "model_id": "fbaead215a8e3f8ec7cc924cb05348155929c4403f50d4390df185b5d5215d03",
+          "weighted_score": 0.6898245614035088
+        },
+        "20/80": {
+          "model_id": "fbaead215a8e3f8ec7cc924cb05348155929c4403f50d4390df185b5d5215d03",
+          "weighted_score": 0.6891228070175438
+        },
+        "10/90": {
+          "model_id": "fbaead215a8e3f8ec7cc924cb05348155929c4403f50d4390df185b5d5215d03",
+          "weighted_score": 0.688421052631579
+        }
+      }
+    },
+    {
+      "objective": "winner_brier",
+      "primary_model_id": "2f5a9d7c8b0358914aa2474a2e8d63ddd7a280960379b117f22d385c73e3395d",
+      "annual_validation": {
+        "2024": {
+          "games": 285,
+          "score": 0.40435938135981975
+        },
+        "2025": {
+          "games": 285,
+          "score": 0.4300858870449993
+        }
+      },
+      "reconstructed_163_score": 0.43609227472388484,
+      "completed_164_score": 0.43544292559063363,
+      "scored_2026_games": 164,
+      "weights": {
+        "50/50": {
+          "model_id": "2f5a9d7c8b0358914aa2474a2e8d63ddd7a280960379b117f22d385c73e3395d",
+          "weighted_score": 0.4172226342024095
+        },
+        "40/60": {
+          "model_id": "2f5a9d7c8b0358914aa2474a2e8d63ddd7a280960379b117f22d385c73e3395d",
+          "weighted_score": 0.4197952847709274
+        },
+        "30/70": {
+          "model_id": "bf4bb5e13be31fd8044f62d1f84f63fb217172cb7e9453fe21a0ff24ec407304",
+          "weighted_score": 0.42173910594571035
+        },
+        "20/80": {
+          "model_id": "bf4bb5e13be31fd8044f62d1f84f63fb217172cb7e9453fe21a0ff24ec407304",
+          "weighted_score": 0.42346415919294733
+        },
+        "10/90": {
+          "model_id": "bf4bb5e13be31fd8044f62d1f84f63fb217172cb7e9453fe21a0ff24ec407304",
+          "weighted_score": 0.4251892124401844
+        }
+      }
+    },
+    {
+      "objective": "winner_log_loss",
+      "primary_model_id": "6fe7b91d682e6daab520aeab92efc1b0ab1b5530305a0dc0a97256f6e2edc0bf",
+      "annual_validation": {
+        "2024": {
+          "games": 285,
+          "score": 0.614267071628686
+        },
+        "2025": {
+          "games": 285,
+          "score": 0.6417373672493741
+        }
+      },
+      "reconstructed_163_score": 0.6655305529129878,
+      "completed_164_score": 0.6646472462232839,
+      "scored_2026_games": 164,
+      "weights": {
+        "50/50": {
+          "model_id": "6fe7b91d682e6daab520aeab92efc1b0ab1b5530305a0dc0a97256f6e2edc0bf",
+          "weighted_score": 0.62800221943903
+        },
+        "40/60": {
+          "model_id": "6fe7b91d682e6daab520aeab92efc1b0ab1b5530305a0dc0a97256f6e2edc0bf",
+          "weighted_score": 0.6307492490010989
+        },
+        "30/70": {
+          "model_id": "6fe7b91d682e6daab520aeab92efc1b0ab1b5530305a0dc0a97256f6e2edc0bf",
+          "weighted_score": 0.6334962785631677
+        },
+        "20/80": {
+          "model_id": "6fe7b91d682e6daab520aeab92efc1b0ab1b5530305a0dc0a97256f6e2edc0bf",
+          "weighted_score": 0.6362433081252366
+        },
+        "10/90": {
+          "model_id": "6fe7b91d682e6daab520aeab92efc1b0ab1b5530305a0dc0a97256f6e2edc0bf",
+          "weighted_score": 0.6389903376873053
+        }
+      }
+    },
+    {
+      "objective": "margin_mae",
+      "primary_model_id": "3057456705644c192a79fcdbe0d998d90c83fa59fb1047b1d744a6c55e2d59fd",
+      "annual_validation": {
+        "2024": {
+          "games": 285,
+          "score": 9.723384035968143
+        },
+        "2025": {
+          "games": 285,
+          "score": 9.708043408156055
+        }
+      },
+      "reconstructed_163_score": 9.591205610840545,
+      "completed_164_score": 9.583606023357488,
+      "scored_2026_games": 164,
+      "weights": {
+        "50/50": {
+          "model_id": "3057456705644c192a79fcdbe0d998d90c83fa59fb1047b1d744a6c55e2d59fd",
+          "weighted_score": 9.715713722062098
+        },
+        "40/60": {
+          "model_id": "3057456705644c192a79fcdbe0d998d90c83fa59fb1047b1d744a6c55e2d59fd",
+          "weighted_score": 9.714179659280891
+        },
+        "30/70": {
+          "model_id": "3057456705644c192a79fcdbe0d998d90c83fa59fb1047b1d744a6c55e2d59fd",
+          "weighted_score": 9.71264559649968
+        },
+        "20/80": {
+          "model_id": "7d6eda2924352bde009d630b832639d79da590d9036854fe3a4f490edcd67dcc",
+          "weighted_score": 9.703314065700573
+        },
+        "10/90": {
+          "model_id": "7d6eda2924352bde009d630b832639d79da590d9036854fe3a4f490edcd67dcc",
+          "weighted_score": 9.69370290585068
+        }
+      }
+    },
+    {
+      "objective": "margin_rmse",
+      "primary_model_id": "43f08eb0cdc93e4d6de8edaad1dce4ba962a23ffef1ff46741a792aa0c11615c",
+      "annual_validation": {
+        "2024": {
+          "games": 285,
+          "score": 12.648161308101054
+        },
+        "2025": {
+          "games": 285,
+          "score": 12.306361602757105
+        }
+      },
+      "reconstructed_163_score": 12.131696736304727,
+      "completed_164_score": 12.119514917025239,
+      "scored_2026_games": 164,
+      "weights": {
+        "50/50": {
+          "model_id": "43f08eb0cdc93e4d6de8edaad1dce4ba962a23ffef1ff46741a792aa0c11615c",
+          "weighted_score": 12.47726145542908
+        },
+        "40/60": {
+          "model_id": "2a001504800f575e241d9e1fd9e81d85d8fd347c29bccfd2bc4369e38a8e39e0",
+          "weighted_score": 12.439958633234497
+        },
+        "30/70": {
+          "model_id": "2a001504800f575e241d9e1fd9e81d85d8fd347c29bccfd2bc4369e38a8e39e0",
+          "weighted_score": 12.400855033235407
+        },
+        "20/80": {
+          "model_id": "2a001504800f575e241d9e1fd9e81d85d8fd347c29bccfd2bc4369e38a8e39e0",
+          "weighted_score": 12.361751433236318
+        },
+        "10/90": {
+          "model_id": "2a001504800f575e241d9e1fd9e81d85d8fd347c29bccfd2bc4369e38a8e39e0",
+          "weighted_score": 12.322647833237228
+        }
+      }
+    },
+    {
+      "objective": "margin_crps",
+      "primary_model_id": "43f08eb0cdc93e4d6de8edaad1dce4ba962a23ffef1ff46741a792aa0c11615c",
+      "annual_validation": {
+        "2024": {
+          "games": 285,
+          "score": 7.0917740974747225
+        },
+        "2025": {
+          "games": 285,
+          "score": 6.926699425598421
+        }
+      },
+      "reconstructed_163_score": 6.8516776344408115,
+      "completed_164_score": 6.8463209318066856,
+      "scored_2026_games": 164,
+      "weights": {
+        "50/50": {
+          "model_id": "43f08eb0cdc93e4d6de8edaad1dce4ba962a23ffef1ff46741a792aa0c11615c",
+          "weighted_score": 7.009236761536572
+        },
+        "40/60": {
+          "model_id": "952f8076e975fb6209c5abf5dc91dbecf46cc2a6ec39a4ce04205fdbdaa0c0f1",
+          "weighted_score": 6.9920279692047504
+        },
+        "30/70": {
+          "model_id": "952f8076e975fb6209c5abf5dc91dbecf46cc2a6ec39a4ce04205fdbdaa0c0f1",
+          "weighted_score": 6.972624266392597
+        },
+        "20/80": {
+          "model_id": "952f8076e975fb6209c5abf5dc91dbecf46cc2a6ec39a4ce04205fdbdaa0c0f1",
+          "weighted_score": 6.953220563580443
+        },
+        "10/90": {
+          "model_id": "952f8076e975fb6209c5abf5dc91dbecf46cc2a6ec39a4ce04205fdbdaa0c0f1",
+          "weighted_score": 6.93381686076829
+        }
+      }
+    },
+    {
+      "objective": "total_mae",
+      "primary_model_id": "1818222cb1ff3d1664ef867bfc32e9230c4f2396688799b5d8362bc39afe4445",
+      "annual_validation": {
+        "2024": {
+          "games": 285,
+          "score": 9.730207034696253
+        },
+        "2025": {
+          "games": 285,
+          "score": 10.463873186856874
+        }
+      },
+      "reconstructed_163_score": 10.705210252001665,
+      "completed_164_score": 10.690052673856252,
+      "scored_2026_games": 164,
+      "weights": {
+        "50/50": {
+          "model_id": "1818222cb1ff3d1664ef867bfc32e9230c4f2396688799b5d8362bc39afe4445",
+          "weighted_score": 10.097040110776563
+        },
+        "40/60": {
+          "model_id": "1818222cb1ff3d1664ef867bfc32e9230c4f2396688799b5d8362bc39afe4445",
+          "weighted_score": 10.170406725992626
+        },
+        "30/70": {
+          "model_id": "a36fdfbb8c1d45f8079f027e1d99aabea4bcdc187ac23c79eae29eed0fd5beee",
+          "weighted_score": 10.234940506207625
+        },
+        "20/80": {
+          "model_id": "9086104546ce404d6fe8dd70c1933da58c582bfae49f0f42d60859ba9ac5ed74",
+          "weighted_score": 10.277684061145333
+        },
+        "10/90": {
+          "model_id": "9086104546ce404d6fe8dd70c1933da58c582bfae49f0f42d60859ba9ac5ed74",
+          "weighted_score": 10.300385806336543
+        }
+      }
+    },
+    {
+      "objective": "total_rmse",
+      "primary_model_id": "61d9922a28b0d85280d94fe0d24188949203b45968cea53a791aa030512a3868",
+      "annual_validation": {
+        "2024": {
+          "games": 285,
+          "score": 12.596460315694236
+        },
+        "2025": {
+          "games": 285,
+          "score": 13.097767282942119
+        }
+      },
+      "reconstructed_163_score": 13.34173864835482,
+      "completed_164_score": 13.316359339357248,
+      "scored_2026_games": 164,
+      "weights": {
+        "50/50": {
+          "model_id": "61d9922a28b0d85280d94fe0d24188949203b45968cea53a791aa030512a3868",
+          "weighted_score": 12.847113799318176
+        },
+        "40/60": {
+          "model_id": "61d9922a28b0d85280d94fe0d24188949203b45968cea53a791aa030512a3868",
+          "weighted_score": 12.897244496042966
+        },
+        "30/70": {
+          "model_id": "7c0821b24c6566774daabf0a41ab0b2c14a961b1fd7afcc402f4d6e735cbbbcc",
+          "weighted_score": 12.946144499011439
+        },
+        "20/80": {
+          "model_id": "7c0821b24c6566774daabf0a41ab0b2c14a961b1fd7afcc402f4d6e735cbbbcc",
+          "weighted_score": 12.9933290688525
+        },
+        "10/90": {
+          "model_id": "7c0821b24c6566774daabf0a41ab0b2c14a961b1fd7afcc402f4d6e735cbbbcc",
+          "weighted_score": 13.040513638693563
+        }
+      }
+    },
+    {
+      "objective": "total_crps",
+      "primary_model_id": "7c0821b24c6566774daabf0a41ab0b2c14a961b1fd7afcc402f4d6e735cbbbcc",
+      "annual_validation": {
+        "2024": {
+          "games": 285,
+          "score": 7.036704765153586
+        },
+        "2025": {
+          "games": 285,
+          "score": 7.415551276928027
+        }
+      },
+      "reconstructed_163_score": 7.471269954900585,
+      "completed_164_score": 7.454013291272522,
+      "scored_2026_games": 164,
+      "weights": {
+        "50/50": {
+          "model_id": "7c0821b24c6566774daabf0a41ab0b2c14a961b1fd7afcc402f4d6e735cbbbcc",
+          "weighted_score": 7.2261280210408065
+        },
+        "40/60": {
+          "model_id": "7c0821b24c6566774daabf0a41ab0b2c14a961b1fd7afcc402f4d6e735cbbbcc",
+          "weighted_score": 7.26401267221825
+        },
+        "30/70": {
+          "model_id": "7c0821b24c6566774daabf0a41ab0b2c14a961b1fd7afcc402f4d6e735cbbbcc",
+          "weighted_score": 7.3018973233956945
+        },
+        "20/80": {
+          "model_id": "7c0821b24c6566774daabf0a41ab0b2c14a961b1fd7afcc402f4d6e735cbbbcc",
+          "weighted_score": 7.339781974573139
+        },
+        "10/90": {
+          "model_id": "dda6d6545511e01bc4c330398661c8497c2f41113b73b528696df4386c7508c0",
+          "weighted_score": 7.377058215142463
+        }
+      }
+    }
+  ],
+  "ordinary_exposed_2026": {
+    "spread": {
+      "wins": 97,
+      "losses": 64,
+      "pushes": 3
+    },
+    "total": {
+      "wins": 95,
+      "losses": 69,
+      "pushes": 0
+    }
+  },
+  "playoff_price_reconstruction": {
+    "cohorts_by_year": {
+      "2024": {
+        "spreads": 13,
+        "totals": 13
+      },
+      "2025": {
+        "spreads": 13,
+        "totals": 13
+      }
+    },
+    "fixed_game_targets": 52,
+    "covered_game_targets": 52,
+    "book_pairs": 352,
+    "existing_plan_credits": 40,
+    "round_lock": "60 minutes before first kickoff of each round",
+    "status": "RECONSTRUCTED_ARCHIVE",
+    "n207_published_annual_scores_revised": false
+  },
+  "prospective_scorecard": {
+    "locked_utc": "2026-11-26T18:32:15.940836+00:00",
+    "original_issue_utc": "2026-11-26T08:37:00.790452+00:00",
+    "immutable_scorecard_sha256": "dd6f9704a7ca3255cad11478b18c99bb752ad917fbaeb0a00debea25ad64bcb8",
+    "eligible_games": 14,
+    "target_rows": 28,
+    "model_decisions": 56,
+    "excluded_past_kickoff": [
+      "2026_12_CHI_DET",
+      "2026_12_GB_LA"
+    ],
+    "grade_status_at_lock": "PENDING",
+    "rows": [
+      {
+        "game": "2026_12_PHI_DAL",
+        "target": "margin",
+        "strict_pick": "PHI +8.5",
+        "minimum_brier_pick": "PHI +8.5"
+      },
+      {
+        "game": "2026_12_PHI_DAL",
+        "target": "total",
+        "strict_pick": "Over 48.5",
+        "minimum_brier_pick": "Over 48.5"
+      },
+      {
+        "game": "2026_12_KC_BUF",
+        "target": "margin",
+        "strict_pick": "BUF -3",
+        "minimum_brier_pick": "BUF -3"
+      },
+      {
+        "game": "2026_12_KC_BUF",
+        "target": "total",
+        "strict_pick": "Under 45.5",
+        "minimum_brier_pick": "Under 45.5"
+      },
+      {
+        "game": "2026_12_DEN_PIT",
+        "target": "margin",
+        "strict_pick": "DEN -3.5",
+        "minimum_brier_pick": "DEN -3.5"
+      },
+      {
+        "game": "2026_12_DEN_PIT",
+        "target": "total",
+        "strict_pick": "Over 36.5",
+        "minimum_brier_pick": "Over 36.5"
+      },
+      {
+        "game": "2026_12_ATL_MIN",
+        "target": "margin",
+        "strict_pick": "MIN -7",
+        "minimum_brier_pick": "ATL +7"
+      },
+      {
+        "game": "2026_12_ATL_MIN",
+        "target": "total",
+        "strict_pick": "Over 41.5",
+        "minimum_brier_pick": "Over 41.5"
+      },
+      {
+        "game": "2026_12_BAL_HOU",
+        "target": "margin",
+        "strict_pick": "BAL +6.5",
+        "minimum_brier_pick": "HOU -6.5"
+      },
+      {
+        "game": "2026_12_BAL_HOU",
+        "target": "total",
+        "strict_pick": "Over 47.5",
+        "minimum_brier_pick": "Under 47.5"
+      },
+      {
+        "game": "2026_12_NO_CIN",
+        "target": "margin",
+        "strict_pick": "CIN -10",
+        "minimum_brier_pick": "CIN -10"
+      },
+      {
+        "game": "2026_12_NO_CIN",
+        "target": "total",
+        "strict_pick": "Under 49.5",
+        "minimum_brier_pick": "Over 49.5"
+      },
+      {
+        "game": "2026_12_NYG_IND",
+        "target": "margin",
+        "strict_pick": "IND +6",
+        "minimum_brier_pick": "IND +6"
+      },
+      {
+        "game": "2026_12_NYG_IND",
+        "target": "total",
+        "strict_pick": "Over 41.5",
+        "minimum_brier_pick": "Over 41.5"
+      },
+      {
+        "game": "2026_12_NYJ_MIA",
+        "target": "margin",
+        "strict_pick": "NYJ -4.5",
+        "minimum_brier_pick": "MIA +4.5"
+      },
+      {
+        "game": "2026_12_NYJ_MIA",
+        "target": "total",
+        "strict_pick": "Over 40.5",
+        "minimum_brier_pick": "Under 40.5"
+      },
+      {
+        "game": "2026_12_TEN_JAX",
+        "target": "margin",
+        "strict_pick": "TEN +14.5",
+        "minimum_brier_pick": "JAX -14.5"
+      },
+      {
+        "game": "2026_12_TEN_JAX",
+        "target": "total",
+        "strict_pick": "Under 49.5",
+        "minimum_brier_pick": "Over 49.5"
+      },
+      {
+        "game": "2026_12_NE_LAC",
+        "target": "margin",
+        "strict_pick": "NE -1.5",
+        "minimum_brier_pick": "LAC +1.5"
+      },
+      {
+        "game": "2026_12_NE_LAC",
+        "target": "total",
+        "strict_pick": "Over 35.5",
+        "minimum_brier_pick": "Over 35.5"
+      },
+      {
+        "game": "2026_12_SEA_SF",
+        "target": "margin",
+        "strict_pick": "SF -2.5",
+        "minimum_brier_pick": "SEA +2.5"
+      },
+      {
+        "game": "2026_12_SEA_SF",
+        "target": "total",
+        "strict_pick": "Over 44.5",
+        "minimum_brier_pick": "Under 44.5"
+      },
+      {
+        "game": "2026_12_WAS_ARI",
+        "target": "margin",
+        "strict_pick": "ARI +7",
+        "minimum_brier_pick": "ARI +7"
+      },
+      {
+        "game": "2026_12_WAS_ARI",
+        "target": "total",
+        "strict_pick": "Over 41.5",
+        "minimum_brier_pick": "Over 41.5"
+      },
+      {
+        "game": "2026_12_LV_CLE",
+        "target": "margin",
+        "strict_pick": "CLE -4.5",
+        "minimum_brier_pick": "CLE -4.5"
+      },
+      {
+        "game": "2026_12_LV_CLE",
+        "target": "total",
+        "strict_pick": "Under 40.5",
+        "minimum_brier_pick": "Over 40.5"
+      },
+      {
+        "game": "2026_12_CAR_TB",
+        "target": "margin",
+        "strict_pick": "CAR +3",
+        "minimum_brier_pick": "CAR +3"
+      },
+      {
+        "game": "2026_12_CAR_TB",
+        "target": "total",
+        "strict_pick": "Over 43.5",
+        "minimum_brier_pick": "Under 43.5"
+      }
+    ]
+  }
+}
