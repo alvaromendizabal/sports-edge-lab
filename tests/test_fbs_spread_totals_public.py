@@ -78,6 +78,12 @@ class PublicBoardTests(unittest.TestCase):
         self.assertEqual(len(probability_rank(d, "spread")), 1)
         self.assertEqual(len(d["contracts"]), 2)
 
+    def test_negative_zero_cannot_break_exact_json_download(self):
+        self.rejected(lambda d: d["games"][0]["margin"].update(home_minus_away=-0.0), "negative zero")
+        d = fixture()
+        d["games"][0]["margin"]["home_minus_away"] = 0.0
+        validate(d)
+
     def test_no_manifest_shrink(self):
         self.rejected(lambda d: d["games"].pop(), "manifest denominator")
 

@@ -1,6 +1,6 @@
 {
   "schema": "fbs.spread-totals.phone-graphics.v1",
-  "science_sha256": "ec1481d5d3075accd6e7ea485deeca000a049fcc8976597eee0eb0d521ad4c7f",
+  "science_sha256": "a463685d80e776cbfe1a730fd8c32ee6e7a16ce6e8e2bf407916d7a45dbf59c2",
   "scope": "week",
   "games_rendered": 69,
   "pages": [
@@ -18,7 +18,7 @@
         "401858536"
       ],
       "bytes": 329513,
-      "sha256": "d46122b93d38559ab8ec309e4e1234661b65a80b115aa5a624906d79f686c84b",
+      "sha256": "91595021daf51bbfe920a6dbdd41ebcf80f9dac80c481e3f24994c24fa9108b1",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -718,7 +718,7 @@
         "401856759"
       ],
       "bytes": 310415,
-      "sha256": "251a209e0765b7dace0af9eb8791a93b52fe973f04dff5a52087a9448cf343de",
+      "sha256": "abc850ba9e1de4d5ea901d175ccf663af2d512cb5039e314c0533b56d5c0522a",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -1418,7 +1418,7 @@
         "401858544"
       ],
       "bytes": 332592,
-      "sha256": "479a41efee49407c6fd2eef9c12a2153bb00cca52e846b3e36736616fa111bad",
+      "sha256": "4dfaabb5ad2761f3dbd1fc275261412d389266aa9eeefdfa993d92cc59d6077a",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -2118,7 +2118,7 @@
         "401858314"
       ],
       "bytes": 322352,
-      "sha256": "770b109d6a52b7a1c4e3537266afd171145fb434231c1dab54f2ad966f15ff7c",
+      "sha256": "a302d3454320cbbf22ce0ebc89070c97b572b98217976209f1274fa50afc7c69",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -2818,7 +2818,7 @@
         "401869954"
       ],
       "bytes": 328437,
-      "sha256": "658ddb4cb447a48df231a34b96c51d205776cca0026fea717e7b1c4ce8b7dd4b",
+      "sha256": "db29db24e497e89ad1aff3541ae3f0de50564203b97fef41ee67a41b69dcd52a",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -3518,7 +3518,7 @@
         "401871102"
       ],
       "bytes": 328197,
-      "sha256": "ec30927f13326977d55640408065e17b32aa9aa3028fa2f2f22759f1145f92f9",
+      "sha256": "fe4e0afebc93eb91d6b94ea7448664d4b7cd6150d662beaa7203c93063decf57",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -4218,7 +4218,7 @@
         "401869947"
       ],
       "bytes": 320965,
-      "sha256": "299114a80111961e7bd753c86304caf8baede8f4a5cdf148f2a1269e4658dcf2",
+      "sha256": "ed4706df5c17df4ebb208e1ffc02b940fc22a6f795555a538cbedaa5b045e20d",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -4918,7 +4918,7 @@
         "401856764"
       ],
       "bytes": 325564,
-      "sha256": "f2cb8bfaf9b8a598cdfa0024a07c58fc6e1af3c0cb12e243094d00507d499dc5",
+      "sha256": "00c128a01335803465656f12577dfacfe4b0491a76d1b3654a81bb489d4555d9",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -5618,7 +5618,7 @@
         "401858312"
       ],
       "bytes": 326991,
-      "sha256": "c5cba9e4285b061cf124a0df1435e3365a982825824a155bcd6df986dd438ae3",
+      "sha256": "6ea4e048872b79e6cf6f4dcb62bee5b25b3c1bfc201eeb73e15275486bc43098",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -6318,7 +6318,7 @@
         "401864550"
       ],
       "bytes": 308076,
-      "sha256": "29f325dbe9fa80530f3c310c962ac4c72288992614985a4d0e12e7b144853027",
+      "sha256": "deead2dc8be35c733d7758800d0864842f378e1a880045fbec5e98da5673f860",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -7018,7 +7018,7 @@
         "401858542"
       ],
       "bytes": 327248,
-      "sha256": "14ea7ca254f98d913ed1c5e40060b1c831d524920447a2f29206033e3db7c494",
+      "sha256": "ac7e2477e0862192b5c92a76653472eb57b60eb099f569d00f9fc35906de2f31",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -7718,7 +7718,7 @@
         "401858538"
       ],
       "bytes": 334339,
-      "sha256": "dcf946572f5d4bc7d650301b7df34deee1556d5faa3e182c01ec3fce14326383",
+      "sha256": "68b8dfe0b971fa081e6bfe19ddb8f0965ccae4546bf24ca1bcb9a0e89a2bf3df",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -8418,7 +8418,7 @@
         "401864548"
       ],
       "bytes": 316925,
-      "sha256": "ab229f583a6a998b3deb8728a6315aff937f09abdcad018c94415b21ad269a11",
+      "sha256": "7cec8bfef1a59fb187988b0c71a17116c84b1086d7b3cfd8766babbe466eba81",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -9117,7 +9117,7 @@
         "401864547"
       ],
       "bytes": 274533,
-      "sha256": "d39542da4bed253a0d78e0d1eaaf5e0711dfbd2b0f9e697a95fb781bcc29e530",
+      "sha256": "f7e72b940c7b09ef4db26e15259201a2e5e32429f7ed38dad151078f75ecfe20",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -9695,7 +9695,7 @@
         "KXNCAAFSPREAD-26NOV27MSSTMISS-MISS14"
       ],
       "bytes": 294851,
-      "sha256": "78c54fc48fbaffb8c9bb8264842023f01613557e04e51306b7afcb96d71357cc",
+      "sha256": "49cd47a65a1160e188cb3ac0cef2257dd856ae61a1728f32cb9af23384747d51",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -10083,7 +10083,7 @@
         "KXNCAAFSPREAD-26NOV27TOLOHIO-TOL2"
       ],
       "bytes": 279735,
-      "sha256": "d18ca4577eea9d9fadb067850f1453ece2b68ac250ec245ed06f4142259e4751",
+      "sha256": "d0993a3b1a41378ec7180e49facf5b1d64857a69985d32a28433b363dd3d7971",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -10451,7 +10451,7 @@
         "KXNCAAFSPREAD-26NOV27NDSUSJSU-NDSU6"
       ],
       "bytes": 301578,
-      "sha256": "6a05486dd68992c2628f71db71851c0c8dc4c710b029df5af5077509e4e92759",
+      "sha256": "4761a046b4adff89db61ffda8a355ad6647ef12590930bd3822938bee73c93e5",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -10839,7 +10839,7 @@
         "KXNCAAFSPREAD-26NOV27MINNWIS-WIS2"
       ],
       "bytes": 296424,
-      "sha256": "08344db8596dcd1d734330a331bac83d25b57b34a79e601cb878244080bf7ddf",
+      "sha256": "f33e8740283a9e90b07ccbb153da1221b5b6f19e1d2de528e8a1d4716a8be61d",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -11227,7 +11227,7 @@
         "KXNCAAFSPREAD-26NOV28BCMIA-MIA18"
       ],
       "bytes": 300998,
-      "sha256": "473acd336c7cf0bf9424a9cfb6a773ef8479eb617f4acf80112e5ed4f2aa7490",
+      "sha256": "3a8622a3e4ddd59908fd459daa238c97218c9b41ae6c5518c42399c877eddbe5",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -11615,7 +11615,7 @@
         "KXNCAAFSPREAD-26NOV28LOUUK-LOU2"
       ],
       "bytes": 301408,
-      "sha256": "0c2ae2bce6d18d3bf566a7a4ecc66d03d6a704ef8cb3bb4f613569c205eb8bce",
+      "sha256": "2f5097d07d17c105817a99100117035be131573576c440e32ada57dead8a40cb",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -12003,7 +12003,7 @@
         "KXNCAAFSPREAD-26NOV28NAVYCHAR-NAVY10"
       ],
       "bytes": 300376,
-      "sha256": "1d25b7039a97afdb015e2f7e6c7405c75918a5a410f0482f55a65a862d8ce428",
+      "sha256": "78d8cfbf9d4bff871667b290c5725e41d374d1555782c53198a360affe3b523e",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -12391,7 +12391,7 @@
         "KXNCAAFSPREAD-26NOV28ILLNW-NW2"
       ],
       "bytes": 300234,
-      "sha256": "0f45bda11f7a5b075d5e3daba482ae2c07c7a571bb482aa8599b3e56c8ed3bfa",
+      "sha256": "2cb6b0cd35988ee297ec4ee5056f4a38acccd29b136347a5a2f8cafb19e4fb39",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -12779,7 +12779,7 @@
         "KXNCAAFSPREAD-26NOV28KENNWKU-KENN2"
       ],
       "bytes": 302660,
-      "sha256": "6fbd399809151c598bd9d265a65b2254447de931537de7d316108a9a8329237d",
+      "sha256": "fb3aebe2e23bb9603d5edd9eec2159dd0d89920f3dd107d60ab9481f0f53a1de",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -13167,7 +13167,7 @@
         "KXNCAAFSPREAD-26NOV28CCARJMU-JMU8"
       ],
       "bytes": 301633,
-      "sha256": "72c77d10f1145f4b97296e7e649179fe586bef0452fb14d06c535a04eb4a306c",
+      "sha256": "1c00fdb91d0f80fcf48fcadce944499cc2d4d5e1ad89672c4480be2a05ef4e01",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -13545,7 +13545,7 @@
         "KXNCAAFSPREAD-26NOV28NMSUMTU-MTU2"
       ],
       "bytes": 305513,
-      "sha256": "b3e8c90410bf025bdea4c0a666734aff7a80ae8c2c3c97cd190797b86110db01",
+      "sha256": "2865914534892959707841ba60ea44f5ab43aada774fcbc818dc503e294f503b",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -13933,7 +13933,7 @@
         "KXNCAAFSPREAD-26NOV28ULLGAST-ULL2"
       ],
       "bytes": 290709,
-      "sha256": "d4e596f17d84529ec45633e11aa6d6fe26e6067da454fc05834b294bd1ff40d4",
+      "sha256": "fb8726db4a21d30a784dc1ea1aa4bbf06dc20df54c76a07d9df8daac845f3b80",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -14311,7 +14311,7 @@
         "KXNCAAFSPREAD-26NOV28UVAVT-VT2"
       ],
       "bytes": 303314,
-      "sha256": "fd20feb2e55fea220c9176d79a7888b73bbaa31b6adf34eb21c5d45ffc2e8b2f",
+      "sha256": "265120112f266de02751487d0a645fb55b499bcde39a1a2a800fa5a6282fbb36",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -14699,7 +14699,7 @@
         "KXNCAAFSPREAD-26NOV28GTUGA-UGA34"
       ],
       "bytes": 297788,
-      "sha256": "2e12fc0bfb1115b9f2ba2402e6974938689773a778a96e727283ece60b2d0dfc",
+      "sha256": "548cad97348affcf9bbce23913a1393672c8a4f4e0a0405c7f5cebbd2f2e4512",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -15087,7 +15087,7 @@
         "KXNCAAFSPREAD-26NOV28PSUMD-PSU5"
       ],
       "bytes": 302476,
-      "sha256": "05436706d31cb893eb00beb715be4ee13ac8af9e0b4fda152ebb5839cfb998e1",
+      "sha256": "ee4bdc36a8dbbc29d2508f60b3c78372f087048f4f6d93941bc371d2d1411ff5",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -15475,7 +15475,7 @@
         "KXNCAAFSPREAD-26NOV28USCUCLA-USC5"
       ],
       "bytes": 286519,
-      "sha256": "116e3764fa00ee1d399acb46769f2d68f795a0747f2f79bd665256190f5a0b9d",
+      "sha256": "c05f94961a96d0d9a73516e857261a18414340ee6ea03ec4ce734ca212aab08f",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -15843,7 +15843,7 @@
         "KXNCAAFSPREAD-26NOV28MSURUTG-MSU2"
       ],
       "bytes": 299430,
-      "sha256": "5d17efa1777dd47aa7ab1bf90aefaec6a0cea86ad518cd8bf320098bff0209c4",
+      "sha256": "6d8e7e0c0a10466ff0f1870cb0a10aefaf49c25495194a39ee847417fd6ee628",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -16231,7 +16231,7 @@
         "KXNCAAFSPREAD-26NOV28KUOKST-OKST5"
       ],
       "bytes": 304543,
-      "sha256": "a7fb7deb6c42a9f6b21fe9e2083f6f4b523e33d9d95c77e3a4b5a062e2163f62",
+      "sha256": "9fbdfad9317125021287f259426b2c1bdb65e34f2f1826f0bb301dc55865c33d",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -16619,7 +16619,7 @@
         "KXNCAAFSPREAD-26NOV28TENNVAN-TENN6"
       ],
       "bytes": 297955,
-      "sha256": "497a58fae0db1ace793d56ca44aecb33c742c505d669271a9b2af623c615459a",
+      "sha256": "df3498924128b122e33612a5be58635da0639e3b061f0651f5f7f7cb8bec5546",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -17007,7 +17007,7 @@
         "KXNCAAFSPREAD-26NOV28WASHORE-ORE6"
       ],
       "bytes": 297430,
-      "sha256": "b707eccc6f1d3c13d4a9c6a8b212a27cc866b5aa4ef9905099ca8ee8c0e09d3a",
+      "sha256": "396d8b20fb6a47c171bb7f2315e9653dd85094f057993af8e1d3c9a8c2a15a24",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -17395,7 +17395,7 @@
         "KXNCAAFSPREAD-26NOV28BAYHOU-HOU2"
       ],
       "bytes": 289061,
-      "sha256": "fa7ecfb9fee23c7acb88b99af1df99fa1db012b5ade0fcbf34cd3fdaeeab6fa5",
+      "sha256": "78dbcdb482eae6a27dce0f5344551d5571ba8ba8bcf658ae0a4ee6821f46e3b3",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -17773,7 +17773,7 @@
         "KXNCAAFSPREAD-26NOV28SACHAW-HAW6"
       ],
       "bytes": 297636,
-      "sha256": "55bdbde846e217ea7a93a5449be98ff7fb9ef33dcb3136163c59aff2eca1d7a1",
+      "sha256": "94cc8fcf6ccb2457470f7e8cd4974fd4c528eaf2ea5fbd9652e07602e3f79c55",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -18161,7 +18161,7 @@
         "KXNCAAFTOTAL-26NOV27MSSTMISS-58"
       ],
       "bytes": 295256,
-      "sha256": "efdc004490a6ac517349142b63fa3c8cfa93be1ecc70f006be671d976ba62d7e",
+      "sha256": "e94cec312300d0c51d17c40884c56ba0db30513c7ca1b60ccd0505ad2c11013d",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -18549,7 +18549,7 @@
         "KXNCAAFTOTAL-26NOV27TOLOHIO-51"
       ],
       "bytes": 292045,
-      "sha256": "f6d01a03d5fe8f7960bcf17b3afbcaaa15de3ab080bb1be8794243e35d7463ca",
+      "sha256": "51f71fbaf8980f598d035aa90bb94d1e1acc9f886147cb9697b19e1a0cd10263",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -18937,7 +18937,7 @@
         "KXNCAAFTOTAL-26NOV27NDSUSJSU-41"
       ],
       "bytes": 294839,
-      "sha256": "8555ab74d0613065f15c1157bbfff32c9b3dcaf64b70bfa9414228413b1235d9",
+      "sha256": "d28d8ab8aa70f0cc6f769e7fe202e20dfbb0824e7b373c57e572bceba8974da9",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -19325,7 +19325,7 @@
         "KXNCAAFTOTAL-26NOV27MINNWIS-38"
       ],
       "bytes": 296064,
-      "sha256": "2003dbb305a3c0d8f07db7fdc5e62346a63ee724c3a254f61d095393b3059d88",
+      "sha256": "bcb8285cefcccc291da9837b5208a8e2ea949a27e76a9fed740a5f1e1d9fc108",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -19713,7 +19713,7 @@
         "KXNCAAFTOTAL-26NOV28BCMIA-55"
       ],
       "bytes": 299525,
-      "sha256": "6b027b0fff6e133de28a553d6036e36cec99e56ae8432179a538228f07fed623",
+      "sha256": "b623519296efbdc71f32f223e45f381c270bc5ca3502530550d2e5673edced93",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -20101,7 +20101,7 @@
         "KXNCAAFTOTAL-26NOV28LOUUK-55"
       ],
       "bytes": 304060,
-      "sha256": "ee63fe458141c2286ce6286818b779d0095eda6d307a50d4f0ebf614fb7579ce",
+      "sha256": "8632ee609c1039639dafc8e3a4739a9b7113cc02b32aa89d025e808cb5d4b977",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -20489,7 +20489,7 @@
         "KXNCAAFTOTAL-26NOV28NAVYCHAR-58"
       ],
       "bytes": 301054,
-      "sha256": "1e7014a94c31af6188777a6a5d094fdf76feebd3a8313e612d00b5a92bf5c8b7",
+      "sha256": "64ad57cd5273f9e85cf1f96aa83f549018cfe17f7cb645a26f9d74c93193dd61",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -20877,7 +20877,7 @@
         "KXNCAAFTOTAL-26NOV28ILLNW-51"
       ],
       "bytes": 300788,
-      "sha256": "a861b9d91dea239bbfda2c8427b1e2cfdb975c5b419c8e0f3647fbd8faa92ef6",
+      "sha256": "ee3224d33b117fbdfc081f4ba70dcd94eb9b3e985bf944f6a8036af7bfc7a931",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -21265,7 +21265,7 @@
         "KXNCAAFTOTAL-26NOV28KENNWKU-56"
       ],
       "bytes": 303043,
-      "sha256": "9e6ce7b85f9581c0bb757d547bd20576f2a102ec9b40fd159943c4fc146e5b46",
+      "sha256": "47d145f172cff993f0b21707739473337c6e2477e0fa6fd4544f96c1e392bef2",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -21653,7 +21653,7 @@
         "KXNCAAFTOTAL-26NOV28CCARJMU-57"
       ],
       "bytes": 301790,
-      "sha256": "ea122136a5f9e5b2c90020ec49a43b5ae14ac8d78beb7f456357a6222a908bc2",
+      "sha256": "afe9886047e754724ad46b1e7f8a03d71fa6a8d0e15a951ff9c682ad8323716f",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -22041,7 +22041,7 @@
         "KXNCAAFTOTAL-26NOV28NMSUMTU-54"
       ],
       "bytes": 302576,
-      "sha256": "d695337964ca9bf8e4972e9f8f791a494826ca6440a6054c531badda0e05a8dc",
+      "sha256": "937a5d43f726e1006543b1967f53cc858c05dadbfd9d5524af5e24ed838a2438",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -22429,7 +22429,7 @@
         "KXNCAAFTOTAL-26NOV28ULLGAST-58"
       ],
       "bytes": 296738,
-      "sha256": "f44a75ea4e46df78921ad99590d4d99a1ee72e8fcbc52d319d292dc0286b799d",
+      "sha256": "7d0af392bfd9dd83e992ac72f90f6c50d9bf7d07b7b3f1e96230348aab2f6ffe",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -22817,7 +22817,7 @@
         "KXNCAAFTOTAL-26NOV28UVAVT-55"
       ],
       "bytes": 300197,
-      "sha256": "d608b60bf9ec95f4670f29f8df575b6d39763cd4da901125b150784a0bce2b27",
+      "sha256": "175f373c868344e70404ca6ec0eaddf8069ed4ca4c81f33e6341b70dd62d5141",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -23205,7 +23205,7 @@
         "KXNCAAFTOTAL-26NOV28GTUGA-56"
       ],
       "bytes": 296225,
-      "sha256": "f78eabc4d30e14c8668883b5966ddb1ec07e8ea79a88d1622783509e2ccde05d",
+      "sha256": "2d117da720f18ada653635b40000df5feaba63c88ba9090b73283f91fc2f26a6",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -23593,7 +23593,7 @@
         "KXNCAAFTOTAL-26NOV28PSUMD-52"
       ],
       "bytes": 307458,
-      "sha256": "a31b1351066c808de409c902e3d8c1daf85e303948c446124fc9a1d5754c791c",
+      "sha256": "dfef09a6df6b8d4d2b8e06ea1d8fcef7cc19447e90ebfb96ee81469df521ae7e",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -23981,7 +23981,7 @@
         "KXNCAAFTOTAL-26NOV28USCUCLA-49"
       ],
       "bytes": 296455,
-      "sha256": "42b354de968e98ca836a13b684e9869ec13b05d2bf93518cc499f8c42cf0aa3e",
+      "sha256": "755530e37d4299c9fee7d08939249969d8e458de07f43c1b3d1f230fcc3c72de",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -24369,7 +24369,7 @@
         "KXNCAAFTOTAL-26NOV28MSURUTG-50"
       ],
       "bytes": 302098,
-      "sha256": "9281136f129e1338cc0599c226531baddeebccd3a1f551468cdbe93faaa77848",
+      "sha256": "fa0af591fa19f1572e875fd29e527b61c3bfe6d70618fcf1ae23db49c6d87ade",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -24757,7 +24757,7 @@
         "KXNCAAFTOTAL-26NOV28KUOKST-70"
       ],
       "bytes": 304831,
-      "sha256": "b0c38925918b394c4cb75bdbddeb4c971d72b43ac1081105bc5ee3b9d3399ff7",
+      "sha256": "ea27626fe0361f199a37e0ed6ba799bb4bcb7698eec24cdc5f1232a4adc3b5ac",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -25145,7 +25145,7 @@
         "KXNCAAFTOTAL-26NOV28TENNVAN-46"
       ],
       "bytes": 298688,
-      "sha256": "0d7d001ed94365163f80636ed106f8a119d495aae2604bf403e6d402de724ce8",
+      "sha256": "e8ff28c88447cdbd87f4256f0735c0e88ef38bd599f659b9402f76ae9b6e7bb6",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -25533,7 +25533,7 @@
         "KXNCAAFTOTAL-26NOV28WASHORE-51"
       ],
       "bytes": 298460,
-      "sha256": "d37bcc0e52059e9f35cfd79b65a9b29a30cdd26a3f62ebe46070808b20ca190e",
+      "sha256": "e0626840c818a521a93a0609bf27dd94f974a6cf9e563a883bf6726b89736ebc",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -25921,7 +25921,7 @@
         "KXNCAAFTOTAL-26NOV28BAYHOU-57"
       ],
       "bytes": 295437,
-      "sha256": "e9c50acf7b5ec4d079b5d0dbbc55cd86dd887ba2c4b0775bb9a4d78b085aeac1",
+      "sha256": "86729a32f6a6c0e1d4738c0e1bacb01199ac242ff9195e5ae77cc5478c9aaac2",
       "width": 1290,
       "height": 2796,
       "text_runs": [
@@ -26309,7 +26309,7 @@
         "KXNCAAFTOTAL-26NOV28SACHAW-40"
       ],
       "bytes": 300790,
-      "sha256": "2905dac02ac508670018985b443660266992a2cd8e9ca7bd3f3beea0f40cadd1",
+      "sha256": "1830238e1adb2e0ce608618b5d283951a3b966dc029003346f00d46fa0b7d4c0",
       "width": 1290,
       "height": 2796,
       "text_runs": [

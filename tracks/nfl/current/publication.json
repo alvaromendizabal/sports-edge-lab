@@ -1,23 +1,23 @@
 {
-  "version": "NFL_WEEK12_V13_N198_ROSTER_FORECASTS",
+  "version": "NFL_WEEK12_V13_N198_BOTH_GAMEDAY_LISTS",
   "status": "DEPLOYED_HTTP_VERIFIED",
   "public_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
   "field_notes_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/",
   "thanksgiving_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/thanksgiving/",
   "dedicated_circa_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa/",
   "all_games_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/all-games/",
-  "deployed_at": "2026-11-25T23:40:05.821196+00:00",
-  "site_version": 48,
-  "site_source_commit": "dff7a0f42a51abed5217c85db1a573d63f4d0292",
-  "github_application_source_commit": "46e1805d91eaa87b03c341694b6f9ea7bdca45b6",
-  "archive_sha256": "cfc0451353d115525d3d514bedfabf5f076e5eb0790cade0f3cd0858f5d40c6f",
-  "provider_saved_tar_sha256": "sha256:a41fc4190fd980e90a9652b9065f9bef572bae2ee3d14fba1ec7382785912a62",
+  "deployed_at": "2026-11-25T23:54:08.917612+00:00",
+  "site_version": 50,
+  "site_source_commit": "f10e92c503d095d7725eb5f830a03bbd517b2725",
+  "github_application_source_commit": "73e3b7c391135ee781188548fa576aa1ac3177af",
+  "archive_sha256": "b204695078791b323e4e4ec417bb9fb22a56d7f5a956501a1ac34a4e024fea22",
+  "provider_saved_tar_sha256": "sha256:48a8018f24db98f1208b0d56887d6e2a31143827c6ed5e6de58e1cf34b476417",
   "audience": "public",
   "scientific_scope": {
     "release": "N198",
     "previous": "N197",
     "outcome": "All 33 registered stages complete; V13 incomplete",
-    "prior_edition_receipt": "publication-n197-v47.json",
+    "prior_edition_receipt": "publication-n198-v49.json",
     "original_pregame_forecasts": 109,
     "week12_games": 16,
     "existing_league_issues_retained": true,
@@ -102,8 +102,8 @@
       "player_rows": 256,
       "published_league_designations": 40,
       "final_designation_reports": 8,
-      "game_day_inactive_cutoff_utc": "2026-11-25T23:34:55.550113+00:00",
-      "game_day_lists": "AWAITING_OFFICIAL_VERIFICATION_AT_CUTOFF",
+      "game_day_inactive_cutoff_utc": "2026-11-25T23:51:03.827850+00:00",
+      "game_day_lists": "BOTH_CONFIRMED",
       "later_club_notes": [
         "SEA",
         "SF",
@@ -117,7 +117,33 @@
       "recomputed_forecast_laws": 272,
       "published_roster_forecasts": 16,
       "published_roster_circa_sides": 32,
-      "roster_family_five": 5
+      "roster_family_five": 5,
+      "combined_team_player_coverage": 28,
+      "club_practice_checked_utc": "2026-11-25T23:37:57+00:00",
+      "green_bay_official_source_sha256": "b82103a19694cbc36183c18c6604ad884f9b7150b8c363194bec191939bfc6fa",
+      "green_bay_confirmed_active": 3,
+      "green_bay_inactive": 5,
+      "prior_forecasts_preserved": true,
+      "both_official_source_sha256": "c996f32f7292d57dac8dc34495d96419623064dc643aa33354973b0351f4f5af",
+      "los_angeles_inactive": 6,
+      "emergency_third_quarterback": "Ty Simpson",
+      "bounded_sensitivity": {
+        "observed_utc": "2026-11-25T23:52:33.100244+00:00",
+        "evidence_sha256": "a156b4ca76534ef32a2ab1bfaadc3e7e0524084d648a897bfbbf51e07c47ea8d",
+        "rams_win": [
+          0.6446030261721042,
+          0.6867743937095836
+        ],
+        "median_margin_rams": [
+          4,
+          6
+        ],
+        "median_total": [
+          44,
+          45
+        ],
+        "original_issue_preserved": true
+      }
     },
     "distinct_term_scope": "Distinct signed numeric terms across all matched venue rows"
   },
@@ -131,7 +157,7 @@
         "status": 200,
         "sha256": "0cc16f5647524ec35d21c613d7e43fc480d56f139832df65504f47b6839a29db",
         "bytes": 41921,
-        "received_sha256": "dc48b8758bfe369b9513b9962c4827e160edaeeeaa0f25e30ceb156a2894934f",
+        "received_sha256": "25e02e7b45866a465b97ef775d5340a73b9327189b336cbdebeef70c4c585845",
         "received_bytes": 43035,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -142,7 +168,7 @@
         "status": 200,
         "sha256": "247cd936fe1b6368ee2f664278169f9ce4bd7d2898b1988bc4b42cec07e6d120",
         "bytes": 42914,
-        "received_sha256": "7ce9b757816e5e9edaee39fe94765895edafaccc1770ce37608e31ca840bb432",
+        "received_sha256": "432c694c695c5e3ae7848769c46d94ec7f90d062fd7d12e087e99b3490ee198f",
         "received_bytes": 44028,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -208,7 +234,7 @@
         "status": 200,
         "sha256": "19c58c9225d27de51fb59a1f5e7bf6e0b7634908c4f26862ca2f1daaab985b86",
         "bytes": 41690,
-        "received_sha256": "9e281ad9d77d26ec805c52bb170f59c74903b381f9d3c054a8443f68efe4a07b",
+        "received_sha256": "c7b8a10d43dd7b8611b9394db15eab51e3ae6948d48f538397f64298834ed63d",
         "received_bytes": 42804,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -230,7 +256,7 @@
         "status": 200,
         "sha256": "e6920e73f0f8396e333ba2bb8f1e548d95e8653387f9e5998d36fd1ea43fc9d2",
         "bytes": 330,
-        "received_sha256": "ef2a243d9d57b1439f1b12690ba36dbc7f8fba12d4b0972c7009c94dede24c01",
+        "received_sha256": "afeb5d3ee001b5666442da059c99dbd2872043eef5d362bbdcabcbff7dffb9da",
         "received_bytes": 1444,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -285,7 +311,7 @@
         "status": 200,
         "sha256": "038306be8d13bc97fb68486e6f1f938e1ab574bc342ee3cae63cbf9867356fa7",
         "bytes": 330,
-        "received_sha256": "b2ff15458429284eacb6dfb27bb70a77b8d1d7442541be6a2a6415bfd56e44ff",
+        "received_sha256": "c8c2665266dfe716a94c290c01f629e953201ee19cf7fa777cdbcf7751ae1a9e",
         "received_bytes": 1444,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -340,7 +366,7 @@
         "status": 200,
         "sha256": "81df8bdc012459553d90b3143dbd7e9e7242b83acc3dee6ddd64b34b6ae99700",
         "bytes": 94155,
-        "received_sha256": "b5bf06409174325c9f41126d6d00b77ca1cdb25952628fdb12708fa69c249534",
+        "received_sha256": "15b88e72851bfeb129d0056334ff86552ff6a5423b0fa701ea119a3f61f36877",
         "received_bytes": 95269,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -362,7 +388,7 @@
         "status": 200,
         "sha256": "df44f15ef7e34799193ce87ee623b039fb05601f1fb1bfb5b8aa7fc9a0ed11aa",
         "bytes": 336,
-        "received_sha256": "c66e0c94aa70053eceb4804b39d6da2678a4572b3dfbbf9d2914aec1b9fedcd6",
+        "received_sha256": "cde669e89ff94336bdc5d4178f002a61c375edd73f4794ff432e797d2b2356ed",
         "received_bytes": 1450,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -417,7 +443,7 @@
         "status": 200,
         "sha256": "038306be8d13bc97fb68486e6f1f938e1ab574bc342ee3cae63cbf9867356fa7",
         "bytes": 330,
-        "received_sha256": "46ac68ae058d819f39efc60a30b60e18432f578c7e72e236d2ea5f17448011e3",
+        "received_sha256": "343eb7a45173b674adb481392cb7e9c48ccfa65c636a7f37da703b50cf406a80",
         "received_bytes": 1444,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -428,7 +454,7 @@
         "status": 200,
         "sha256": "5e5abbb396a7d1a372dec74f7121bff7514eda695477899aa8c7038f580e23b0",
         "bytes": 330,
-        "received_sha256": "c4eb8e3533358152552e43fcb219dd2b0aa6066c8292fdd728a4e9614a1d9d6e",
+        "received_sha256": "49140b1ac66618204ec8ed0a81541bfa27e1220dd50ce61b08d552e9f2e3f542",
         "received_bytes": 1444,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -461,7 +487,7 @@
         "status": 200,
         "sha256": "a27ebbb817628bec27259f9580393c20608b2b5aec94d8ae0cd026a32fb42d8c",
         "bytes": 21549,
-        "received_sha256": "e1c9bc69631737fdfc9a37c8375441e4056c03b295e13f9ebc2e6dfe424e7b69",
+        "received_sha256": "e5158543d683ea3d5ded972e63facb50806d2f440b081fcb31dcaae26a76e8cb",
         "received_bytes": 22663,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -494,7 +520,7 @@
         "status": 200,
         "sha256": "1a013a8097bfcc6ba1ef8a5e168de0a9f7c2e85637180d43bf9bdfe246b22ecd",
         "bytes": 128572,
-        "received_sha256": "a9a4bb6a50a1c5bcb1198052633367488779b4abe942d3ca214749919e1dbf2e",
+        "received_sha256": "9e6c9a4fc039837a5ee576cae92f7aaf27166f6b6b78fddb09ebeee0059f1464",
         "received_bytes": 129686,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -516,7 +542,7 @@
         "status": 200,
         "sha256": "df44f15ef7e34799193ce87ee623b039fb05601f1fb1bfb5b8aa7fc9a0ed11aa",
         "bytes": 336,
-        "received_sha256": "015663cf67adb067eed13c488c3cda33cefd80af35005ecb78cbcc0178014ee6",
+        "received_sha256": "e1c7240d3ff782c1a40e324546d7a95f165a7f69df2708150552d9688e031389",
         "received_bytes": 1450,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -582,7 +608,7 @@
         "status": 200,
         "sha256": "7e4d9ad0c281756b5aa47df0ed5eb929104da190ca6d114728fd3ddb20ec421d",
         "bytes": 352,
-        "received_sha256": "9d2ad7f2f9cf819ba63d4e7a97b088ef0b630e7dbda6e70e27d07b9ff74d96f1",
+        "received_sha256": "05ebf84ce1d4bb657e6b2ebfc49accee4548b467e4f2aaeef9e64ad545582723",
         "received_bytes": 1466,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -593,7 +619,7 @@
         "status": 200,
         "sha256": "452888cbad36406c309179928e71e2255607529061345d9c64e769600497c090",
         "bytes": 352,
-        "received_sha256": "98c6b4e44047f244bced2de73736030c7826b353730af9147e81c094f9bd02eb",
+        "received_sha256": "67d06de42de55d01981ba7cf93425ea70b75435d0019703202ba6f3fc7fd2122",
         "received_bytes": 1466,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -604,7 +630,7 @@
         "status": 200,
         "sha256": "bc560a5e32e7b4ea6c1beceff9a3df62afd29e7295b59a764f5a34bc10aba81e",
         "bytes": 352,
-        "received_sha256": "aeb857b34e6ca1a7cad154e7f0184a58985d80e931cd8a6b56b96e71299e7c1b",
+        "received_sha256": "439f18bc83033486e24b48dfcacae06931afb5fbd5e9e059c8a5937ea9e100d7",
         "received_bytes": 1466,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -637,7 +663,7 @@
         "status": 200,
         "sha256": "b31952e7fc7d7a3472801ab37e133a0d72daa0a08ebafb25d5e24ea799d9c0e3",
         "bytes": 30291,
-        "received_sha256": "a7ae03eae62e33ccdc601f8d87bae3e8b6115fae12c78cd3b4d69e3f836b9121",
+        "received_sha256": "f9813a8eed1b675aacc46b761e767b773bf19c2aba3c628e2045877de9c0053a",
         "received_bytes": 31405,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -670,7 +696,7 @@
         "status": 200,
         "sha256": "5a50ce9a7a21eadb927169764c6153541fb05fcfa1e73a4ce6bfc114b2682956",
         "bytes": 171581,
-        "received_sha256": "90130a14f5f3f54b2c12721f29d81397cb419663f18541661445b1c10793c0b5",
+        "received_sha256": "275b48e68fb5c9ddc700d09e248cb8a3bf684dba86bbe97293c62f03845ee00e",
         "received_bytes": 172695,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -692,7 +718,7 @@
         "status": 200,
         "sha256": "d05d6aaf878915c64d77efe80e47dfb7b7b5889047abb6afa2c7f1bee9de66a5",
         "bytes": 358,
-        "received_sha256": "02857712fb7ac71a1b88266f919ea35c1cef6feec606b86417b5e0dc998b8aa5",
+        "received_sha256": "341db81c6b2aab1edab6ff871f2d1524d007aef67bada17a9a5e7687ff1f93b4",
         "received_bytes": 1472,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -791,7 +817,7 @@
         "status": 200,
         "sha256": "22d7254a48dcb591f57ea9cf719b187950aeb97f14e4c240b6402ca9a6f5fac6",
         "bytes": 29837,
-        "received_sha256": "33a0f67f9e16d94c42c523da698e9638f6b9d71dffb62f1ac9a0250c7f835a8c",
+        "received_sha256": "1ba2b1242c052216a72dedfd14283c38766a58fd31d62c8e175d2e14fe8e561f",
         "received_bytes": 30951,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -802,7 +828,7 @@
         "status": 200,
         "sha256": "e03e50b148ddae83e24073aa53829b0545b0d7222459987d065a3f2ddf283350",
         "bytes": 32104,
-        "received_sha256": "098900e2b3d8a8bd9f5c296caf4a50229e1708eebaefdb90be88a1fc3f76a3de",
+        "received_sha256": "6b822cbe6ba07b48fdf720ca76a2b76623177e0e6a50292c677f9755f43d3d04",
         "received_bytes": 33218,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -846,7 +872,7 @@
         "status": 200,
         "sha256": "7c04c6afa5d1fcd9fc660c460828287ae02e3f716753fcc995fb1f2c4fab4e7c",
         "bytes": 209997,
-        "received_sha256": "4e1bda4ac8540c810bdd8e992124ba3024a5acedace4e9886265731d9953634f",
+        "received_sha256": "4581c41195bf11e775a9f35e3474e2f1b8c1f30065a9a3998dca9d7fcf2cf278",
         "received_bytes": 211111,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -868,7 +894,7 @@
         "status": 200,
         "sha256": "992c3d8c356793b1ee4a3a79a0017daddb33ea71df43c629f365343fae91a861",
         "bytes": 273,
-        "received_sha256": "196c1d532ee8e8077406a4a5feacd46ddc961e440490692862819c581bf92c17",
+        "received_sha256": "5ad81008a853666a7083267adb80f694ea918508fd92862d0db6a9b2fb363fe5",
         "received_bytes": 1387,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -879,7 +905,7 @@
         "status": 200,
         "sha256": "fc8187e36a49d869fdb5b6b20eec44977f5a8182fd7add1c6305dd2a3c8014e1",
         "bytes": 7961,
-        "received_sha256": "2ee882e71d58c7f1c404b9fe5e3f8242da496c94da82e6e06f045a1fb09a0866",
+        "received_sha256": "2b565f6796c33c4fbf491547ff9911640f48b2d237fe94061ec49b8358b5f838",
         "received_bytes": 9075,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -890,7 +916,7 @@
         "status": 200,
         "sha256": "0eda4d9ac31ac484fe7d10db3de7f0c83f4fc1b84211f446fa74236bc8bc1cd8",
         "bytes": 17267,
-        "received_sha256": "2c1214c87c1c77afc2be4e3f2f8fd6dd6cc5abd6b1caf9d7230d11f0907de5db",
+        "received_sha256": "2d082e6537bfcf61706ec57ff5b303eb1e17dfda9c48e508707afb5e580f523a",
         "received_bytes": 18381,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -901,7 +927,7 @@
         "status": 200,
         "sha256": "a6b858d18469882b6d6b63b5d51a5a30a72e4694b8ed724208a83515d2613243",
         "bytes": 11799,
-        "received_sha256": "578b549367e02b73fa4e0524a154934fcec2e4e6cd73b1d70ffd225d898a286e",
+        "received_sha256": "bd67dd4da593105d70931b521737c9afa7fee4e2c4c49cb1b744d71a3c2658ed",
         "received_bytes": 12913,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -912,7 +938,7 @@
         "status": 200,
         "sha256": "64f5ec6865d533aa8d5f439492a196f86631c7964c9e65d7cf1f61eb3a41ddb0",
         "bytes": 12548,
-        "received_sha256": "c1f82ae0e3bba6e09a7ca3896242d18421fecf03f8c35a92d9d4a00a694fd306",
+        "received_sha256": "07e3ed1bd93cc2131a3a0ede1e68f4bbcf3f8e578d7ee87ccb4bfa4edd843779",
         "received_bytes": 13662,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -923,7 +949,7 @@
         "status": 200,
         "sha256": "fc09ddca9a412ac88981fb51723a0629fa9a64a01be5ad39da7d844831d4db33",
         "bytes": 13277,
-        "received_sha256": "0c17048b79c59193fe6e92d2f36d822578a7eaff6d58afda4cc088405d7795b4",
+        "received_sha256": "6e7ae9c65ad8bbdec045b9cb64f48701830ee3bb241332ee1103a651ca5f76a3",
         "received_bytes": 14391,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -934,7 +960,7 @@
         "status": 200,
         "sha256": "987300814a1fbac0bb780046ee2281be8b28b57c5042df3c8948b18e5af19326",
         "bytes": 13276,
-        "received_sha256": "135b982725d9c680c6057eca23629dc6cbc16598452c2ff5cb347264d3acd09d",
+        "received_sha256": "c9abc64b5c3e1f665caa1c83c7c574e66ef8ab2c46982cdce8d92937653d768a",
         "received_bytes": 14390,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -945,7 +971,7 @@
         "status": 200,
         "sha256": "0fa6c324352e9ffcf78120bde09803abe8ecd016f724944f987dd66c1923dc9e",
         "bytes": 13272,
-        "received_sha256": "be2a148be9ae7171fd768ce290c0677f06c9bd3e86fc2c9674b69fbf6fd8f477",
+        "received_sha256": "2ac7690f78ab7da57aca039d29e95f101fcb8bc17dc68b801ff029516dc6f9a2",
         "received_bytes": 14386,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -956,7 +982,7 @@
         "status": 200,
         "sha256": "efb4ee45e5919d4df8e69fcf49e10c4abdcd2e26ba1bad6e25c5bd9eb26a2c86",
         "bytes": 13292,
-        "received_sha256": "20cb73f406a879b98bf3e6b5086c46840b39b5a9e18c47bacde811ded66ff43b",
+        "received_sha256": "0687f38302fef12d516036b821b59d0ae1c9f0c48d63a6e3e7eb604eb6efeec9",
         "received_bytes": 14406,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -989,7 +1015,7 @@
         "status": 200,
         "sha256": "22d7254a48dcb591f57ea9cf719b187950aeb97f14e4c240b6402ca9a6f5fac6",
         "bytes": 29837,
-        "received_sha256": "0483d63b4ea38ed5c9486a51136c135f88a90a322eee8005d858ed5cceabbcc1",
+        "received_sha256": "0ab71e514de4a7c83e49974370d4360795a99a94e18c393ea8380d4cf9a397c1",
         "received_bytes": 30951,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1000,7 +1026,7 @@
         "status": 200,
         "sha256": "4d7b89985160b00af9764fb3cb2b7ac46680813c78b1e5785b2ec0045b19fa1d",
         "bytes": 43307,
-        "received_sha256": "bf1c444442d43350b2ad1e88f8494993eaffedfb32f55469798fb9e4b345df97",
+        "received_sha256": "151f146b0c894160dea95a093bbd0378b4e2deb1b6483466d3f7a3aa12892a91",
         "received_bytes": 44421,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1044,7 +1070,7 @@
         "status": 200,
         "sha256": "ecc49b2cf458a17c9077d49256065c9007beca24dabc5781e3a2efab6930014b",
         "bytes": 287629,
-        "received_sha256": "ec6f84b9fc6738ee6e82fa7043cd5dc1661c887ccb2dd858d6f80de2ea2ca642",
+        "received_sha256": "4c5e930e8499ddc89f4bc40375cc458f4a3005a3325ade3640cdc98bad4948b2",
         "received_bytes": 288743,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1066,7 +1092,7 @@
         "status": 200,
         "sha256": "992c3d8c356793b1ee4a3a79a0017daddb33ea71df43c629f365343fae91a861",
         "bytes": 273,
-        "received_sha256": "78b960ec2ade8cadef9a39d27b2923201e6baff2b2acaeaf79cb14c917fc27a3",
+        "received_sha256": "5eca879685aa7c290ce18f83f8546c2af788d513c5e74e8587f1637fd0fb63b0",
         "received_bytes": 1387,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1077,7 +1103,7 @@
         "status": 200,
         "sha256": "7718564ad6c5fde84329dd0b4e293be5e8a3a1f752870a9cc998cb1e7352b78f",
         "bytes": 10092,
-        "received_sha256": "89ff4364480f23a6493101f7894830eee87135c2cb17fae49bbafaedf6d8c3fd",
+        "received_sha256": "16c2059b96ff935c6c7391029f8f2d54dea94e74658cd15177ae53aed281b49d",
         "received_bytes": 11206,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1088,7 +1114,7 @@
         "status": 200,
         "sha256": "eceaec9c65dd15e0fc044f8b5341c7a0d30d9eaa3269cce172913818067a628b",
         "bytes": 28424,
-        "received_sha256": "5fe8d0d522a8124edbf840c1f65c19e36b2cb9a4c8035eb2086b459998c2a80f",
+        "received_sha256": "6229e10a4d51f9aef4541734861619766bfecc3ae1513a4e5f2266be8c78bb23",
         "received_bytes": 29538,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1099,7 +1125,7 @@
         "status": 200,
         "sha256": "4b5a97cedc6dc735696a9455e2e89f22b977ce753882cf7ae9c8d0928d6501d8",
         "bytes": 21483,
-        "received_sha256": "79b420a051a5fc4d053271733c97448a82f24c69ab4d87adaa7c1aa54bc6ce20",
+        "received_sha256": "9b685049438c508d27a77f93dc94a4716431cde4eed419d6f9b09abccdc16908",
         "received_bytes": 22597,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1110,7 +1136,7 @@
         "status": 200,
         "sha256": "cb6f2cbfcbcc4a4e351954e45932d45b1105de681ab58b0bc2a8ae26c579fc70",
         "bytes": 22928,
-        "received_sha256": "471d3c4fa382801214516d8c1c7cf5fbb75e03c8ed43b17e8d4b941d439ec612",
+        "received_sha256": "17b3688707ad4226443f2ec7bb044c45ea3c284a6a1543bd18ecbbfae37a425a",
         "received_bytes": 24042,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1121,7 +1147,7 @@
         "status": 200,
         "sha256": "33afd6f75a491cae7d2579896eefc927f98c59e5b900ccd3e12907d879303b42",
         "bytes": 24337,
-        "received_sha256": "7135ec880cd2900647047a1b434bd32ca8465fa6d1ed14ade6206e88fbee2942",
+        "received_sha256": "10a0f1a3a8769c723122b5728ba977b901c474dc80bcae7495ebecd04abb7f4a",
         "received_bytes": 25451,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1132,7 +1158,7 @@
         "status": 200,
         "sha256": "3a9c08f6ef554fc024701bf6c5c8f64cab9103cb39533abfe0a34f2e6b0f5b18",
         "bytes": 24344,
-        "received_sha256": "cea10266f6765428022e1cee700b7c45510bcd911e6d9beef56949d29158b99e",
+        "received_sha256": "327be4abeed825680db4c7ce50cacb6b04661c8082582cab3080c5797f1641a8",
         "received_bytes": 25458,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1143,7 +1169,7 @@
         "status": 200,
         "sha256": "1dfafc398d54c52bb6884286949585446c418c99cc6dda4d28c72616fce1c313",
         "bytes": 24337,
-        "received_sha256": "76590ddd265adf26aa6eaac1283411a2f6bd4dea5e4c847ff95259c71f8aecc6",
+        "received_sha256": "53463af84800e082333143a65d3ec94fe63e62ba682b4db19fb0cc7bf0c69f6a",
         "received_bytes": 25451,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1154,7 +1180,7 @@
         "status": 200,
         "sha256": "ce333281f67dabf56789b2724f0add9551f87d1cfa45be07ad96d2afd741a853",
         "bytes": 24358,
-        "received_sha256": "541298df95ef7fae1a87101961efa6fc7a365dd48a1f0a3d59632e52a6e1f4bb",
+        "received_sha256": "f6b68b06a8ff3b26eb5e93491b5efd78a0b37bbcbba6ee007adf37fe168607f9",
         "received_bytes": 25472,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1187,7 +1213,7 @@
         "status": 200,
         "sha256": "11a537556468d0c40641d77fe4c0c15584847be21301cb1c4e2f6028c6bb75ea",
         "bytes": 63625,
-        "received_sha256": "6da495c84519f30dfcf3b53868d52d1478d6fc3da041c8801d7416ca89fe0135",
+        "received_sha256": "d57bcb778ee85c0ba55c1710251b3161d608566f3ad2a13f27f6ce93ce3890d2",
         "received_bytes": 64739,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1231,7 +1257,7 @@
         "status": 200,
         "sha256": "e471287626a86b10cb70a54c6c91bf359e0df891b1c60a9ffb6f5eb01dd8e860",
         "bytes": 407932,
-        "received_sha256": "67e89ae436d68f2893001835412d044fcc1ea8063409a089dc472866132b62f2",
+        "received_sha256": "3edf75f006eaf2f199e5202e24ce9b5b85e92cfa1aaca2081ec708bab06720c3",
         "received_bytes": 409046,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1253,7 +1279,7 @@
         "status": 200,
         "sha256": "992c3d8c356793b1ee4a3a79a0017daddb33ea71df43c629f365343fae91a861",
         "bytes": 273,
-        "received_sha256": "f4f249fa85f59123098a1c7d80ba32e18a0871adc8bca5e1db0509ec5fb93458",
+        "received_sha256": "db1321c372ddc7a94d0a91113f31efa34d0a36c6861595be632eccc9acdcdb99",
         "received_bytes": 1387,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1264,7 +1290,7 @@
         "status": 200,
         "sha256": "1d62cf6f2d093afba5a1dd9b660d990fce78350474049538277e812945b80e81",
         "bytes": 15624,
-        "received_sha256": "e25daa969f2cd131447cdf00e0acd5d828eadd9432a79e865c6e540bf3d0533c",
+        "received_sha256": "d147e9069532846e16ed9c14319776b3fc2569b4fd3100624bc43404f56f7f91",
         "received_bytes": 16738,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1275,7 +1301,7 @@
         "status": 200,
         "sha256": "7912f25f78d502f43cfbfa137898b55173c488ff8a8098a5f0022948cec8dd84",
         "bytes": 57160,
-        "received_sha256": "9c6cb41fad3c221fd3c6991ad4e7981c7f290c1206b9488773162a28668bc545",
+        "received_sha256": "6b8afa220c7642a80ec85dc87af844df5d0b20cc4c42f34af674d2c73e2188e8",
         "received_bytes": 58274,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1286,7 +1312,7 @@
         "status": 200,
         "sha256": "1d0519c3ae421ceb5def6639735d6b457256fe31b1bf3cf6b3cc1a8106e91ba3",
         "bytes": 46529,
-        "received_sha256": "01059737683709922fa5b48ec65b950ca03bc89150afcc2a7a8827f2c82b4372",
+        "received_sha256": "dfba08896e9763999ca07efccac20ab9f24240405b1deaae606672c9d82ec94f",
         "received_bytes": 47643,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1297,7 +1323,7 @@
         "status": 200,
         "sha256": "5d5d9a983e66ded7196ac231188f9c10a65e1365213084be8adee693c8fe271d",
         "bytes": 49768,
-        "received_sha256": "44de0d9cfb060ea71d7ebb9413be2e8bea82b8c22fe6101f80daa6f7597c6697",
+        "received_sha256": "51a84ff988e633667b933aa3d0b843ae307342ec10a77ac6b8dc22a9c00407e3",
         "received_bytes": 50882,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1308,7 +1334,7 @@
         "status": 200,
         "sha256": "ba722724251635df31d7447ffadf41ea49d69f3e66089af99566ca8ed061daed",
         "bytes": 52965,
-        "received_sha256": "f1808dffd81339acb96de42ef465d784b16d317936080e815abcb683179a2945",
+        "received_sha256": "cb38fd8e974fd6eee9210f41e4ca86cfafdcec6a2925e08e22dd1d66965cddf3",
         "received_bytes": 54079,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1319,7 +1345,7 @@
         "status": 200,
         "sha256": "b1d358535c2171a36265b5ab351d54c2de44eff13606ff9a13916fd9efb3ba97",
         "bytes": 52976,
-        "received_sha256": "22f8ef86187fc5bbe52732777eec0b8bcf9c30518e06ef27f7d34587eb7fb60d",
+        "received_sha256": "19077dc515dd075ca1bce508e6e2cd96241152c92612fc730ebf4891ddc696ca",
         "received_bytes": 54090,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1330,7 +1356,7 @@
         "status": 200,
         "sha256": "82cfebd853fe1ed7a460b60570ae59fb1893e748b0003ce99196f7533e2850ec",
         "bytes": 52969,
-        "received_sha256": "c57740ebf60ddc1404679045495536b6ffe8b48b86f850672a525642baeb566f",
+        "received_sha256": "f29cf751676cdc3d6d15f53727a23c841a333ea2abe0fed7731805e7fec900dc",
         "received_bytes": 54083,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1341,7 +1367,7 @@
         "status": 200,
         "sha256": "34d69f3c65122d319daf088c85fe2594e4e5c9039cf2107dad189ba57201e11b",
         "bytes": 52987,
-        "received_sha256": "d82ccbfb5de5991a3bdebba8aaf6c740886df0cbe09e98472877ab5c7a934ba1",
+        "received_sha256": "d97222915320a454b7a3014f84c54409ea71801e16362c824500352b713e6800",
         "received_bytes": 54101,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1352,7 +1378,7 @@
         "status": 200,
         "sha256": "4dbd7efd5aa87a304b17c4b103655354271ca3089fac808de525c3f0916bf5ab",
         "bytes": 40523,
-        "received_sha256": "b1fe7cf75d3c1dd392e1723ff56fc1bde67aa72f2f9a6713b0367c5fe8446b36",
+        "received_sha256": "e5d5e5c2ec3372efca6dabbbfc782c44090c344facd3883055e5f4d666f81e22",
         "received_bytes": 41637,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1385,7 +1411,7 @@
         "status": 200,
         "sha256": "22d7254a48dcb591f57ea9cf719b187950aeb97f14e4c240b6402ca9a6f5fac6",
         "bytes": 29837,
-        "received_sha256": "49e93833654244778d03c50c49b5b315af869a0938e594da9212f3f326670acc",
+        "received_sha256": "a7e600d79c49cbc9c9352209f83bae92ba81ae5b671e27b6a1735e7d6d8285b3",
         "received_bytes": 30951,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1396,7 +1422,7 @@
         "status": 200,
         "sha256": "20c25a3675a07bccd5132ee77c4bb61d58a3f9798c7d4c0213b91cfaa2234481",
         "bytes": 89845,
-        "received_sha256": "5afbb8cdf5af6fac080953a9928fc9d968f7310faf04cdfcd51d6bdaf6711f70",
+        "received_sha256": "41866895b3dd958c3d738bd394823f19a5cdcfba598fd5ed14df06abba0ff8ae",
         "received_bytes": 90959,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1440,7 +1466,7 @@
         "status": 200,
         "sha256": "12f48e10fa6ae81663bbc4d61019a823a7e6b922f5ab2dc6b8abf152db1b03c9",
         "bytes": 488808,
-        "received_sha256": "9879187e7d36e3a710996d2dfeacc98f33117cff099c37fe2b42c7d55fc4479d",
+        "received_sha256": "cab5f33f6d784c132665a5331b606ff261fbf548af6ec1d2e15a96c12715930d",
         "received_bytes": 489922,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1462,7 +1488,7 @@
         "status": 200,
         "sha256": "992c3d8c356793b1ee4a3a79a0017daddb33ea71df43c629f365343fae91a861",
         "bytes": 273,
-        "received_sha256": "25881d76471eaf767dfb7c248d7fa9716ff52de016d56f293112be86d7ed1ce6",
+        "received_sha256": "d963c32c0240bb891ebccdcdc9ba5c9edaa7b74a59fde83aa820f5495d6495bd",
         "received_bytes": 1387,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1473,7 +1499,7 @@
         "status": 200,
         "sha256": "3e304c9e37f814c39f31c36d697aca792d6391b125ccdb6fff99854fc66246c4",
         "bytes": 22044,
-        "received_sha256": "f6effa909e3889b6ed301004f2113a42c3af36546075c9e6e074be3a52249d41",
+        "received_sha256": "6dc1939838be88318f318d9e8af60e088246c364990b7a3bb5046cb02e42e2e8",
         "received_bytes": 23158,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1484,7 +1510,7 @@
         "status": 200,
         "sha256": "e1a708ab315523278194e55be45da37f9ce1659ec17fa4788d535ba625866344",
         "bytes": 91389,
-        "received_sha256": "90119e383323c67710e67a892ecd1f90db93ecb49eaa1bce1631e2ca06332838",
+        "received_sha256": "538d364d5438a766a3306d4a52e27cff239fd5f60a5e7deffa30d0470fcc0d4f",
         "received_bytes": 92503,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1495,7 +1521,7 @@
         "status": 200,
         "sha256": "7371f782dcdce798578d24ab7799a94e589767bcf3667adb50f13d88b5a23443",
         "bytes": 69738,
-        "received_sha256": "492a31bc8fe7363f0eb54ab48f96f91b19e427f680bd359332efe3d219444537",
+        "received_sha256": "50e2bbc5149a65f32fe961b090afdd50992dea70d0c9e3a6bc8b80dfd890f3b5",
         "received_bytes": 70852,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1506,7 +1532,7 @@
         "status": 200,
         "sha256": "85d10b12166f170c8abb5d5c2fb97ed6edf7588a73e7b43173b035d4f0818a21",
         "bytes": 74647,
-        "received_sha256": "9cf2c09a8cde2fb653fdfcf0c0a458776fbabbc2f22693e2228c7fdc09bafaf8",
+        "received_sha256": "fbd3929d5210c7c2f115285e1e6961880867ebc440d6cc5731ef2a1ff8f0f8fc",
         "received_bytes": 75761,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1517,7 +1543,7 @@
         "status": 200,
         "sha256": "68fb7b75e3aaa46c33b31e6111d931ae06b36a2781b5fa00d6bf199d55e2d700",
         "bytes": 79494,
-        "received_sha256": "807455980f1f840a77d939930508cfe8bbc5aa578fc2c8b1aa286e9eee3c4005",
+        "received_sha256": "d3fd322f803e1b9981c4309f17c9f615298f2197833f299e7baa3913742e2aa8",
         "received_bytes": 80608,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1528,7 +1554,7 @@
         "status": 200,
         "sha256": "ef2b0269291dd9c409e7e978698e92a9f76260920e7672056477c384f41f9c00",
         "bytes": 79509,
-        "received_sha256": "0ff95c5f8d7a8b622a013b23836f2a66491124094c21b8964acd4251f43bcf1c",
+        "received_sha256": "7a74fcf72a1afe995a64106f31f0842c6925b66c95ee5ba7f89b4fb1ca4768e0",
         "received_bytes": 80623,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1539,7 +1565,7 @@
         "status": 200,
         "sha256": "b8c01c0ef60550b7ddd93a6a7ee1d61fe65c4ff3951a30f074dbd672e5474bab",
         "bytes": 79494,
-        "received_sha256": "444a2c4ec8793e5ac70ba67bea64b2db5783874fbc40fe1c172e1b0133db7d49",
+        "received_sha256": "7f31dbd32f8e5862b20609861fdcbfb8621d5dcb8daea970bc78767a34808d7d",
         "received_bytes": 80608,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1550,7 +1576,7 @@
         "status": 200,
         "sha256": "256eb88d999b37662cc33265bfbb78e1231e1714c2cc54417f0f96cc0b25952a",
         "bytes": 79525,
-        "received_sha256": "d0974911e885bd71993e33bd9e67c4ceea95fad2e53d1aa6339ba477ab4aa304",
+        "received_sha256": "dda3f07b80089ebd2af529599424deb524d992910664e744824064b40b4f9c93",
         "received_bytes": 80639,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1561,7 +1587,7 @@
         "status": 200,
         "sha256": "1e24802fde88c3bc352c96238d951e2f14a3a401a088c48c087d9cc6a2f53739",
         "bytes": 42458,
-        "received_sha256": "2e76f6311f7c825cf521bbc422d567a1ead62b4ddf7696502984f5d9ee5b00e5",
+        "received_sha256": "ed0bbee6bbaf8b2c72595248ba9b32e71b96db9f50282490fd2454211a78119f",
         "received_bytes": 43572,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1594,7 +1620,7 @@
         "status": 200,
         "sha256": "22d7254a48dcb591f57ea9cf719b187950aeb97f14e4c240b6402ca9a6f5fac6",
         "bytes": 29837,
-        "received_sha256": "73c0c313714df81ec894bc938eb87c5651e28bb74a85608264c5d2eecdf0df79",
+        "received_sha256": "d9d18a154aed7bd876cf6d863b50a268fc39ebc51c4d3c30cfab1073d28a181d",
         "received_bytes": 30951,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1605,7 +1631,7 @@
         "status": 200,
         "sha256": "19ef28b1811390b2a853303809f5d988044b35ca9bae6c50fac5dfa715f69466",
         "bytes": 118082,
-        "received_sha256": "7583cfdccae1d4642dd7da90f5eeceb2abe948d7edc2afc0198e3364895b908e",
+        "received_sha256": "f546c76cc0fd0c0b7bc13fcad44f00d3495bcd0d7a721d6ebfffb2593decb15b",
         "received_bytes": 119196,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1649,7 +1675,7 @@
         "status": 200,
         "sha256": "cc2b729d9162b54c2449f91c92e136d58341ab6aa7d0d80913ffbc0edb8a1899",
         "bytes": 569179,
-        "received_sha256": "6c6d7ce238870daedfd68b9d04c5e0a5f380223c122b9845c0fe59b56681776e",
+        "received_sha256": "ebe29d0877ccc42a95ad80cb90affb3375f816934fcd2c48cf8d0c620cbaedd2",
         "received_bytes": 570293,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1671,7 +1697,7 @@
         "status": 200,
         "sha256": "992c3d8c356793b1ee4a3a79a0017daddb33ea71df43c629f365343fae91a861",
         "bytes": 273,
-        "received_sha256": "c3bb33b63478ef7551b9e36929d9c483f2d7374c2358e8d7eaa591a230f638a2",
+        "received_sha256": "d67407080e4666821bc981c196a732252bf672a7bac9ea72069024173dc842ca",
         "received_bytes": 1387,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1682,7 +1708,7 @@
         "status": 200,
         "sha256": "aa8cfa3d901515b00ec1fcba86da13cb30e98645dc9d3ee32ec938b3583a2bcd",
         "bytes": 27506,
-        "received_sha256": "bb33d04d0413f224bea8cab3ca4c97122cb197c8c9fd519fd135e2010eea5b4a",
+        "received_sha256": "0ae48c0f39b6beaaac978ecccc3b0b670953e3d48ce4a63ef5986393a587c273",
         "received_bytes": 28620,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1693,7 +1719,7 @@
         "status": 200,
         "sha256": "d21a300ba09195604ef077e767ccecaa7b48c29c18510724352be195d04d417f",
         "bytes": 121348,
-        "received_sha256": "ea8cabfb219655159eaa5965d4a7706d58851bbef7a03eadfd92aad791270662",
+        "received_sha256": "44f4a68d8f74927087b17047744a3057822c803ef0fc93f1bfc16ab2a55e8db5",
         "received_bytes": 122462,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1704,7 +1730,7 @@
         "status": 200,
         "sha256": "fdc546733a5545e384378dc455adf1725f712fe4c027de0784d967038f2cb540",
         "bytes": 90618,
-        "received_sha256": "1f5db496bcc4b839276386c86db9dec8116b023b3b785088bd9c9de7c0db844b",
+        "received_sha256": "417a91f2b4ec59870aa6a59b086727676dd1f9196d04fd5bd3062856d25ec296",
         "received_bytes": 91732,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1715,7 +1741,7 @@
         "status": 200,
         "sha256": "a2f6509bf1ab2d642686d41c5ea6a5ff320717e74d53f0aa254bc148634ce3b7",
         "bytes": 97044,
-        "received_sha256": "922c7b09cc679158bc61a33cd0643fa24a6c48f5e9bdba6b6db6cd4f4d1ae534",
+        "received_sha256": "52ac69df904c52d6d7c9f7fd997a37278dc4f37c1244d020cdcb7a7d29da8664",
         "received_bytes": 98158,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1726,7 +1752,7 @@
         "status": 200,
         "sha256": "46fddd3bab3bea52e21a0febe06aa96786bc360da95b9ca2eabfe5701640b735",
         "bytes": 103386,
-        "received_sha256": "27898c115c4242f7072e0afc3515b5da2bc7b77dae328683e0caa37eb61e1cbe",
+        "received_sha256": "ea5145f9e0c408e6a968d2c63444096606bf56a57b6421c5edf4de41cc4352ad",
         "received_bytes": 104500,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1737,7 +1763,7 @@
         "status": 200,
         "sha256": "76056257197aec31d941e0bbdadfdbb28c0e135484a87041c2d55969d95067f0",
         "bytes": 103405,
-        "received_sha256": "7fd1ebd4054b1ab3b218ec6c7aa054b6e86b9c5b68070a795314100a5d450e3b",
+        "received_sha256": "fbad914e06b2642d105e7300ae63d823d9b6a627b23f325ae9e23aef30948f41",
         "received_bytes": 104519,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1748,7 +1774,7 @@
         "status": 200,
         "sha256": "f523364c9c0aafb16f1790cff70350729e8782a5f9bafdaf61a704202bd11ebb",
         "bytes": 103386,
-        "received_sha256": "22645d072d305961e71250b8d11c9e22b4f7a78518334eba59c068793622cb08",
+        "received_sha256": "d8a461f29c03d978d2e7accbda40f8b4ef7039f7cb44b8ef2bdaf0d8b50ba282",
         "received_bytes": 104500,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1759,7 +1785,7 @@
         "status": 200,
         "sha256": "0a0388b8170d2de550089d82ce5f0ee351d25c02dc48e367b242e37706beaa28",
         "bytes": 103430,
-        "received_sha256": "23526dd09feb75ddffaca31d5c015fb76d0c9fd5799061707d6577f003a6a222",
+        "received_sha256": "6f729834df3938722de476832a208f33f1929692759fe4ba3bf8cb6925de8c53",
         "received_bytes": 104544,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1803,7 +1829,7 @@
         "status": 200,
         "sha256": "22d7254a48dcb591f57ea9cf719b187950aeb97f14e4c240b6402ca9a6f5fac6",
         "bytes": 29837,
-        "received_sha256": "d631649d7c45b83ca452e0539b38a43359a9266f7300e844ac3eb57907a1cdf7",
+        "received_sha256": "2c465caaa3d79abbfa6294b466d6e11b56551546114ab85af9b1d1a75b354e1f",
         "received_bytes": 30951,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1814,7 +1840,7 @@
         "status": 200,
         "sha256": "4e5a49d2f880590a25a4b21e3f7f8e213e8cf112ef917759884dd84a3a57204b",
         "bytes": 118908,
-        "received_sha256": "2e2b0323acef3d6202c17f3fde5b6ccdab98cf24335117073c13a6275b822706",
+        "received_sha256": "6926f8f3bc5de228d0d1d65576617405d294402abfe0881dbd9ccfb804c38124",
         "received_bytes": 120022,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1891,7 +1917,7 @@
         "status": 200,
         "sha256": "42ff4cb36d0d2b7f42204b075656f8a370e5465bb96ca2471bb7526ef31e6929",
         "bytes": 569820,
-        "received_sha256": "5a46e25e05a90cdbedda27af63a757459315f225b76fffe18dc038a925f73b3e",
+        "received_sha256": "d644601eef5bacf4eb9ee515c8a128e7e331f84428faa710129311c6934bd6c4",
         "received_bytes": 570934,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -1924,7 +1950,7 @@
         "status": 200,
         "sha256": "80bf439ad4567d16edc600195785b202c14524c8fd03d0cca5a7502fb1453aba",
         "bytes": 229463,
-        "received_sha256": "00cb6759315dadbfa091aaeb6f6e3220605a12610ac69986eb82abd085dcc6c8",
+        "received_sha256": "1aa2cb01174cb906d3785dff1e1aee5609aa24ecd36d5507074841d4f609878e",
         "received_bytes": 230577,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -2958,7 +2984,7 @@
         "status": 200,
         "sha256": "722946357f6eb03e38a99232cbbaccbf247d204c01ecaff38647d21dfd839dcf",
         "bytes": 27907,
-        "received_sha256": "f6f0bc92981b39648a3da37f3b8da6edb36441036bf0604f15a01114ff4de2f3",
+        "received_sha256": "c2665fded0366edf26f3b3ed396de4ede7c73f40a7f1b2303ea8728d393641a8",
         "received_bytes": 29021,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -2989,10 +3015,10 @@
         "path": "week-12-field-notes/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/",
         "status": 200,
-        "sha256": "02054a7d8a67e188d32aad223827e920a14a26ae99dcf4120def61c34abd3ef0",
-        "bytes": 90026,
-        "received_sha256": "063bc691a03cc3b9694a616bad9cbf7b232eeb892b1bb04c75d4a9b47bfcd0db",
-        "received_bytes": 91140,
+        "sha256": "7e70e1d128a8712a03a32e8ee7436ee963cdc0f1b83f4a3c83e514569b9f68e8",
+        "bytes": 92985,
+        "received_sha256": "b8eb9c21b51456ecfdaab88c1ea05c34dd4b4922055a8d4306da646505b61c2a",
+        "received_bytes": 94099,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
       },
@@ -3002,7 +3028,7 @@
         "status": 200,
         "sha256": "fa30648adcff1d18dcd1debba0add692b5536911988ce903e51acdc3a83f3ca2",
         "bytes": 43079,
-        "received_sha256": "f7bd23a1006548bf7dd59c33ab5a75365ab3abc2819d97c6592762bf2421df6c",
+        "received_sha256": "1ed40778a6ebbd7e082226f7d333d99aca2e7a4d9183ce9d3af1eb0ea8c9f4fb",
         "received_bytes": 44193,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -3013,8 +3039,30 @@
         "status": 200,
         "sha256": "f65f318941f63264f1ed7690630f37efba505b2c8c7c0072535287b824a4c07b",
         "bytes": 65884,
-        "received_sha256": "2b7cfc56f7ad8cf45211c083e6e8dc4325ea13b3dcd4a34594688a1348f6b32a",
+        "received_sha256": "cc8bb3fe6f1cbf0259205e4ad60c000f5a1dd32943f51ac3c561ef37bdf25743",
         "received_bytes": 66998,
+        "matches_pushed_source": true,
+        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+      },
+      {
+        "path": "week-12-field-notes/n198-1533.html",
+        "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n198-1533",
+        "status": 200,
+        "sha256": "02054a7d8a67e188d32aad223827e920a14a26ae99dcf4120def61c34abd3ef0",
+        "bytes": 90026,
+        "received_sha256": "48a82aa4e37325c00c8fa56cfba7bf0262eb41addb5ae26f6d7ca351be1995e4",
+        "received_bytes": 91140,
+        "matches_pushed_source": true,
+        "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
+      },
+      {
+        "path": "week-12-field-notes/n198-1545.html",
+        "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n198-1545",
+        "status": 200,
+        "sha256": "a72645f5a71b5de7ed0882d4e41e123ee64011bb0e54ebb35204357615029af9",
+        "bytes": 91418,
+        "received_sha256": "fb57cce6d3665aa65fb06cfcd40f3f8a149325017af4dc0dc8b2843faad36171",
+        "received_bytes": 92532,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
       },
@@ -3178,7 +3226,7 @@
         "status": 200,
         "sha256": "6f32dc1b6727c986497c495e38d82b4327e6f0e72aa09b87a66c0a9046df5de0",
         "bytes": 124467,
-        "received_sha256": "7c51ae7fda9235f04d915905f63c8581e1bd5a7434082f67f18f7f82a0059ff9",
+        "received_sha256": "d754a590eea0b1021aba1cf050847a41161a3ed470cf455b121a5ff6bc225fb6",
         "received_bytes": 125581,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -3189,7 +3237,7 @@
         "status": 200,
         "sha256": "636e04ae4af81c47f8769e7095df30779d46aa9a528ede812a9bae6d9289585f",
         "bytes": 90623,
-        "received_sha256": "99c2f5240740494d7c30369cbe1722e6629911c8b87621327704932afb2884c8",
+        "received_sha256": "578e1a558254d3888d32018e2a8db4baf565f1347c154dccfbc12820129e4ecc",
         "received_bytes": 91737,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -3200,7 +3248,7 @@
         "status": 200,
         "sha256": "ad3fbd9004a9131bf2e681fdb1372fe9664f5214c9c0d0650cb10af0c256f4d8",
         "bytes": 97049,
-        "received_sha256": "e0001a342da4f0d36841842879ebd873216e637b91e514610f23e5d0c8e8eccb",
+        "received_sha256": "1b6c8ddd283589c540d7c93981935839b68521d7b2b5a16cdd9580ce6eb749f6",
         "received_bytes": 98163,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -3211,7 +3259,7 @@
         "status": 200,
         "sha256": "ac8c8486cdd23099bd818af299ced5822f74e5e8ac6667097d0fabb2dc634c1d",
         "bytes": 103391,
-        "received_sha256": "59562061716305fe28c59a0a976d9f1c64e7f69bff46aad71c057d600d3e058f",
+        "received_sha256": "0c512b38e99fa6f20b87459645da39b4668c4f4e51d333285a97b671c2b70a9b",
         "received_bytes": 104505,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -3222,7 +3270,7 @@
         "status": 200,
         "sha256": "3b9e6f65f96f88e7b4554de0d550e79eb20c624f2f9b92be57a12969e416122c",
         "bytes": 103410,
-        "received_sha256": "82d6d393e3b2dc8b19fa4d7a05965d92af75f263ce9e5ed9898b2d7bc1c71e26",
+        "received_sha256": "1aebde14f472da24a929aef74a9b897f55bd41d3c7d823483e1df88a88adb026",
         "received_bytes": 104524,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -3233,7 +3281,7 @@
         "status": 200,
         "sha256": "9a9fcf0d9d1e8cd0e0543e309c2d9258451287c40ab57892217c035ac3c6dd1a",
         "bytes": 103391,
-        "received_sha256": "73a6372c19b4fcae4baeade78ecc8e1ef7931666542e0da13a3706919067d3fd",
+        "received_sha256": "f1745b6fdb95f220ca4d964508bf632f8f93afa9168a83b998dd97b1789ade11",
         "received_bytes": 104505,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
@@ -3244,27 +3292,27 @@
         "status": 200,
         "sha256": "6de87da2fb775f0026118916c3e3c001c9c5e267a458a1e483d2d1d3894a8676",
         "bytes": 103435,
-        "received_sha256": "6968713ef7fee7ecfb47dbcd625abec6b9fcfd3fcfe899519bd80ec54f5adb23",
+        "received_sha256": "e85b6e53b83cca3ed078d83e02bf597642353f6d81c480a2c4f34d86e323d471",
         "received_bytes": 104549,
         "matches_pushed_source": true,
         "verification": "EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"
       }
     ],
     "method": "Anonymous deployed asset hashes and live Chromium interactions",
-    "checked_at": "2026-11-25T23:49:09.016Z",
+    "checked_at": "2026-11-26T00:00:44.778Z",
     "viewports": [
       1440,
       390
     ],
     "field_notes_browser_checks": [
-      "1440px: N198 field notes show all 16 roster forecasts, 284 public assets, all Circa roles and seven current share cards",
-      "390px: N198 field notes show all 16 roster forecasts, 284 public assets, all Circa roles and seven current share cards"
+      "1440px: N198 field notes show all 16 roster forecasts, 286 public assets, all Circa roles and seven current share cards",
+      "390px: N198 field notes show all 16 roster forecasts, 286 public assets, all Circa roles and seven current share cards"
     ],
     "uncaught_page_errors": [],
-    "workflow_url": "https://github.com/alvaromendizabal/sports-edge-lab/actions/runs/45723235794",
-    "run_id": 45723235794,
-    "job_id": 139588574825,
-    "artifact_id": 15074145511,
-    "artifact_sha256": "901b584175adebbdd91253c704ef7fbcc3d9f55747f4bc19e3c444fb50e65cb4"
+    "workflow_url": "https://github.com/alvaromendizabal/sports-edge-lab/actions/runs/45724930871",
+    "run_id": 45724930871,
+    "job_id": 139592391974,
+    "artifact_id": 15073423698,
+    "artifact_sha256": "8dc28cb3c238b85129c81c716b2904697d2f9ec62d1fb3111624cfe9381d1e7a"
   }
 }

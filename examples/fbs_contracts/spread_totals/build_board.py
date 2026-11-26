@@ -104,6 +104,8 @@ def validate(data):
                     "forecast export exceeds public scope")
             value = v.get(value_key)
             require(value is None or finite(value), f"{key}: invalid prediction")
+            require(value is None or value != 0 or math.copysign(1.0, value) > 0,
+                    "negative zero must be canonicalized at the public rounding boundary")
             require(value is not None or v.get("gap_reason"), f"{key}: missing input needs a reason")
             if key == "winner" and value is not None:
                 require(0 <= value <= 1, "winner probability outside [0,1]")
