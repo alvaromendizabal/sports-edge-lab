@@ -1,5 +1,13 @@
 # NFL game day and research dashboard
 
+## N207 private execution ready — November 26, 2026 UTC
+
+The guarded N207 owner command has been delivered. Native qualification passed **81 tests, eight bounded fit units and 80 optimizer completions**. It checked **4,234 qualification candidates on the full 164-game census**, rendered the private report and produced 216 private diagnostic forecast rows, with **zero admitted priced options**. These are qualification results; the public N206 forecasts remain the latest verified owner edition.
+
+The canonical executable is **106,409,287 bytes**, SHA-256 `8b4bc742ce6ce491ffb8fd03523723a9c96a619ba5c7589ab6ec38b03b84b102`. Full-byte installation/readback and native guarded-launch authorization passed. The launcher was verified by capturing its exact arguments without invoking the owner campaign. [The sanitized readiness receipt](n207-execution-status.json) binds the qualification certificate and launch-verification hashes.
+
+The registered owner campaign **plans** 256 fit units, 2,560 optimizer completions and 5,354 policy candidates, retaining 4,202 previous policies. Its planned feature bank adds 10,482 columns for 32,259 total. These counts do **not** describe completed owner work. The configured ceiling is 42 workers with a USD 200 compute guard. An earlier candidate was rejected before any fit because of a source/kickoff-clock conflict; the corrected eligibility join retains the discrepancy and preserves frozen inputs and issued outputs. No N207 owner result or performance gain is claimed, and no private executable, coefficient or feature recipe is published.
+
 ## N206 verified owner execution — November 25, 2026
 
 **[Open the N206 weekly board](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n206/)** · [Actual bookmaker options](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n206/#markets) · [Full scientific evidence](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n206/#evidence) · [Phone graphics](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n206/#phone)
@@ -18,7 +26,7 @@ N206 adds **zero football feature columns**. It reuses the 21,777-column bank an
 
 The final owner issue at **10:06 p.m. Pacific** contains **15 new pregame game views and 3,196 authentic priced side options**. An independent zero-fit audit verified all 216 future target PMFs, primary side/push calculations and all priced options. Week 12 quotes were observed at 10:03 p.m.; their observed/native ages were 137.09–443.49 seconds at issuance. The response has **57 usable spread/total bookmakers**, with 80 bookmakers observed overall. DraftKings and Polymarket cover 15 games each; Kalshi's paired feed covers 14 plus three separately labeled direct NE–LAC bid/ask observations. Exact contract settlement and fees are not inferred. Beyond Week 12, 28 quoted future rows are explicitly cached and 158 have no quote. Opening the page performs no refresh.
 
-Four new 1080×2340 phone sheets use exactly the displayed snapshot. All N205/N204/N203/V13 archives, official Circa lines, all five preserved selection policies and game-specific contest deadlines remain unchanged. No wager, contest entry or production promotion was made. V13 closure remains incomplete. N207 is being prepared separately; no completed N207 result is represented here.
+Four new 1080×2340 phone sheets use exactly the displayed snapshot. All N205/N204/N203/V13 archives, official Circa lines, all five preserved selection policies and game-specific contest deadlines remain unchanged. No wager, contest entry or production promotion was made. V13 closure remains incomplete. Qualified N207 execution readiness is recorded above; no completed N207 owner result is represented here.
 
 The release qualification, rejected first build and successful owner run are recorded separately in [the sanitized N206 execution-status note](n206-execution-status.json). The corrected canonical executable remains bound by SHA-256 `f4492c6043d19beeef54e6a169cfeee92797f6113a971a12988a036ed6a9506d`; no executable or private recipe is published in this repository.
 

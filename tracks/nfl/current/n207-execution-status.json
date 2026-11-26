@@ -1,0 +1,76 @@
+{
+  "schema": "sports-edge-lab.nfl.execution-delivery-status.v1",
+  "owner": "NFL",
+  "generation": "N207",
+  "role": "QUALIFIED_PRIVATE_OWNER_EXECUTION_RELEASE",
+  "recorded_utc": "2026-11-26T07:25:53.280227+00:00",
+  "canonical_release_sha256": "8b4bc742ce6ce491ffb8fd03523723a9c96a619ba5c7589ab6ec38b03b84b102",
+  "canonical_release_bytes": 106409287,
+  "parent_verified_owner_return_sha256": "e7abf9c9a7dc051f1c673a6efaec2808a0584472562e5fb0ef7e8ac13a0a8601",
+  "delivery_status": "READY_FOR_OWNER_EXECUTION_COMMAND_DELIVERED",
+  "artifact_readback": {
+    "status": "PASS",
+    "complete_bytes_verified": true,
+    "native_rebuild_exact_match": true
+  },
+  "native_qualification": {
+    "status": "PASS",
+    "created_utc": "2026-11-26T07:22:14.407756+00:00",
+    "qualification_only": true,
+    "unit_tests_passed": 81,
+    "bounded_units_completed": 8,
+    "total_optimizer_completions": 80,
+    "worker_ceiling": 4,
+    "compared_policies": 4234,
+    "completed_game_census": 164,
+    "forecast_rows": 216,
+    "future_games": 108,
+    "forecast_quote_options": 0,
+    "qualification_forecasts_private": true,
+    "rendered_report_status": "COMPLETE",
+    "report_publication_status": "LOCAL_NOT_PUBLISHED",
+    "throughput_occupancy_gate": "NOT_APPLICABLE",
+    "main_owner_run": false,
+    "compute_estimate_usd": 0.7290678586190257,
+    "actual_bill_claimed": false
+  },
+  "qualification_certificate_sha256": "439e735d1cbf8e9027d985f5a87fd1f1c154efad999efe2a1ef4fc9319e828ef",
+  "native_guarded_launcher_verification": {
+    "status": "PASS",
+    "verification_sha256": "8e33a30e6476ba5257b3d79849e926006f6e95b2a3c057834f9f92913a3db53d",
+    "native_runtime_authorization": "PASS",
+    "exact_source_and_runtime_bound": true,
+    "execv_replaced_with_capture": true,
+    "owner_main_invocations": 0
+  },
+  "registered_plan": {
+    "new_fit_units": 256,
+    "new_optimizer_completions": 2560,
+    "total_candidate_policies": 5354,
+    "previous_policies_to_reuse": 4202,
+    "new_feature_columns": 10482,
+    "full_feature_matrix_columns": 32259,
+    "counts_are_planned_not_completed_owner_work": true,
+    "configured_worker_ceiling": 42,
+    "compute_cost_guard_usd": 200,
+    "unlimited_wall_time_waives_cost_guard": false
+  },
+  "qualification_history": [
+    {
+      "canonical_release_sha256": "6f3f9a568a840cedf8db56667d79f6277c99a385f334daa370b4c3b8e3542682",
+      "canonical_release_bytes": 106406752,
+      "status": "REJECTED_NATIVE_SOURCE_CLOCK_CONFLICT",
+      "diagnostic_fits": 0,
+      "failure_before_any_fit": true,
+      "owner_main_run_launched": false,
+      "certificate_issued": false
+    }
+  ],
+  "correction": "The new-source eligibility join uses authenticated canonical kickoff clocks and records discrepancies. Frozen inputs and previously issued outputs remain unchanged.",
+  "assistant_main_owner_launches": 0,
+  "owner_execution_claimed": false,
+  "production_promotions": 0,
+  "latest_completed_public_science": "N206",
+  "private_code_weights_and_source_recipes_published": false,
+  "scientific_interpretation": "This is bounded engineering qualification and verified launch readiness, not a completed N207 owner campaign, a new public forecast, or evidence of improved predictive performance. The public N206 forecast edition remains unchanged."
+}
