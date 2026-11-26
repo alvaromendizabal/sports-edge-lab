@@ -1,0 +1,56 @@
+{
+  "schema": "nfl.native-publication/1",
+  "scope": "NFL_ONLY",
+  "project_id": "appgprj_6b00eaef66108191a50d8b77fa03ba36",
+  "status": "succeeded",
+  "version_number": 66,
+  "version_id": "appgprj_6b00eaef66108191a50d8b77fa03ba36~appgver_43d72e739bc081919d4df43624b7a1cf",
+  "deployment_id": "appgdep_6b08828e94708191b374748ec6092130",
+  "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n207/",
+  "base_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site",
+  "updated_at": "2026-11-26T19:03:49.605422+00:00",
+  "source_commit_sha": "7dd9cca2a3155a4de9f2c29f29a1100947b26def",
+  "archive_sha256": "sha256:d66f6578ef58025d5e01bc9fba502c46da4f2c0d8f86029b66e20b873044e846",
+  "archive_size_bytes": 68454400,
+  "archive_file_count": 423,
+  "transport_archive_sha256": "87786f821bfff911e49daffe00f28c95b943389cb7239712cc1b6a1d16819877",
+  "transport_archive_size_bytes": 37235044,
+  "public_board_sha256": "e0400a692b0d0f68012a1e2a5e2bc9605aac9f60bed474caa52705fe800d7168",
+  "owner_return_sha256": "cd738b607c250729fc840a79a92870dc2efc194487060fb3a76da92b8df4c55d",
+  "completed_games": 164,
+  "current_games": 15,
+  "weekly_games": 16,
+  "games_at_morning_status": {
+    "pregame": 14,
+    "started": 1,
+    "final": 1,
+    "checked_utc": "2026-11-26T18:08:13Z"
+  },
+  "owner_registered_status": "COMPLETE_REGISTERED_STAGES",
+  "v13_status": "INCOMPLETE",
+  "model_issue_utc": "2026-11-26T08:37:00.790452+00:00",
+  "preserved_circa_selection": true,
+  "private_fitted_states_published": false,
+  "direct_exchange_markets": {
+    "kalshi": 656,
+    "polymarket_global": 720
+  },
+  "browser_status": "Separate commit-specific live audit at 390 and 1440 CSS pixels.",
+  "appendix": {
+    "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n207/standing-results/",
+    "sha256": "388aa608efd2a35519a204e414922e9706584014df99f561313a4b220d0317ab",
+    "proof_sha256": "9fdc2a7d656d598ba3b61e70fae699705bf12ff66c5380822320dc98d4c17cbe",
+    "all_primary_objectives": 9,
+    "standing_2026_games": 164,
+    "annual_validation_counts": [
+      285,
+      285
+    ],
+    "number_of_ratios": 5,
+    "prospective_games": 14,
+    "scorecard_locked_utc": "2026-11-26T18:32:15.940836+00:00",
+    "original_scorecard_sha256": "dd6f9704a7ca3255cad11478b18c99bb752ad917fbaeb0a00debea25ad64bcb8",
+    "retrospectively_recovered_playoff_game_markets": 52,
+    "edition_status": "Superseded by the corrected description of prior 2026 exposure."
+  }
+}

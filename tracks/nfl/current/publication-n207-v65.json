@@ -1,0 +1,39 @@
+{
+  "schema": "nfl.native-publication/1",
+  "scope": "NFL_ONLY",
+  "project_id": "appgprj_6b00eaef66108191a50d8b77fa03ba36",
+  "status": "succeeded",
+  "version_number": 65,
+  "version_id": "appgprj_6b00eaef66108191a50d8b77fa03ba36~appgver_67914dbed7b88191bd5012390a9dfb08",
+  "deployment_id": "appgdep_6b087ac3210481919abd347e4b6a4ebf",
+  "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n207/",
+  "base_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site",
+  "updated_at": "2026-11-26T18:30:34.505273+00:00",
+  "source_commit_sha": "fc5b0c7acfd7796a5cb54d091f3966984d6f0498",
+  "archive_sha256": "sha256:ecbaade81fbc336f19dce8ce39902a4da1179b0621f23bd757ac31ac5ce2193f",
+  "archive_size_bytes": 68423680,
+  "archive_file_count": 421,
+  "transport_archive_sha256": "b8a157e52199de315755a478f02dbbc19fc9c714a7764521273f7af3b4ff9f07",
+  "transport_archive_size_bytes": 37229412,
+  "public_board_sha256": "59322ee2452e4203e7155a6000c473aa8732aa501f1b23e7b52979bcd03ac56c",
+  "owner_return_sha256": "cd738b607c250729fc840a79a92870dc2efc194487060fb3a76da92b8df4c55d",
+  "completed_games": 164,
+  "current_games": 15,
+  "weekly_games": 16,
+  "games_at_morning_status": {
+    "pregame": 14,
+    "started": 1,
+    "final": 1,
+    "checked_utc": "2026-11-26T18:08:13Z"
+  },
+  "owner_registered_status": "COMPLETE_REGISTERED_STAGES",
+  "v13_status": "INCOMPLETE",
+  "model_issue_utc": "2026-11-26T08:37:00.790452+00:00",
+  "preserved_circa_selection": true,
+  "private_fitted_states_published": false,
+  "direct_exchange_markets": {
+    "kalshi": 656,
+    "polymarket_global": 720
+  },
+  "browser_status": "Separate commit-specific live audit at 390 and 1440 CSS pixels."
+}
