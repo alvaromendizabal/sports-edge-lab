@@ -1,5 +1,28 @@
 # NFL game day and research dashboard
 
+## N203 verified owner execution — November 25, 2026
+
+**[Open the current N203 board](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n203/)** · [Refreshed book options](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n203/#markets) · [Circa alternatives](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n203/#circa) · [Seven phone graphics](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n203/#phone)
+
+The owner completed the registered N203 stages. The new edition uses 15 pregame forecasts issued at **5:42 p.m. Pacific** plus the already-started GB–LAR game with preserved earlier V13 forecasts. Native Site publication succeeded as **version 58**; [the native receipt](publication-n203.json) records the exact source, archive and snapshot hashes. The page’s build-time receipt remains separate from the subsequent exact-head hosted CI result.
+
+| Ordinary objective | Exposed 2026 selected policy | Earlier-week replay | Full completed population |
+|---|---|---|---|
+| Spread | 93 W / 67 L / 3 P / 0 unresolved | 74 W / 86 L / 3 P / 0 unresolved | 163 |
+| Total | 94 W / 69 L / 0 P / 0 unresolved | 75 W / 88 L / 0 P / 0 unresolved | 163 |
+
+All **1,248 policies** were compared on identical game IDs; an independent audit reproduced all **203,424 candidate-game grades and proper scores**. The completed population is derived from a verified manifest, with a 163-game baseline and explicit W+L+P+U reconciliation. Every completed identity must appear in the public record. Future growth changes the denominator from the census rather than a fixed display constant.
+
+The selected spread model is market-input Ridge with calibration; the selected total model is historical-feature XGBoost with an empirical residual distribution. They select from previously exposed 2026 outcomes. Their 93/163 and 94/163 strict wins are not independent future accuracy. The prior-week replay remains visible and does not establish profitable future performance. The total model’s selected Brier and log loss are worse than constant 50% baselines despite its higher correct-pick count.
+
+The actual run completed **288 fit units** across eight families: **864 score estimators, 288 calibrators and 288 dispersion estimators**, with no failed units and a peak of 23 simultaneous optimizers. The largest context contained 12,108 columns including 2,700 new features. Matched ablation showed that the new block reduced mean wins by 1.99 for spreads and 5.07 for totals; neither selected champion uses it. New N203 fits used 7,017 historical rows from 2000–2025 with uniform weights. Annual 2024/2025 score tables for these candidates, new blend comparisons and full V13 closure remain incomplete. The three-minute occupancy gate was not applicable, not passed.
+
+The current market table preserves **3,196 observed side options** from 1,598 authentic paired quotes across 57 usable spread/total sources. DraftKings and Polymarket cover 15/15 games; Kalshi’s paired decimal feed covers 14/15. Two separate direct Kalshi NE–LAC bid/ask observations remain visible without fabricated model repricing. Current quote clocks are separate from older market feature clocks. All-book probabilities use unconditional win/push/loss; primary side cards use probability conditional on no push. Modeled quote return excludes fees and execution constraints.
+
+Outright probabilities come from the selected spread model’s raw margin distribution and were not independently selected for the winner objective. Point projections are fitted model locations; raw-distribution expectations are separately labeled. New availability has 28 of 30 open team-game practice reports, 6 final designations and 26 projected/announced quarterbacks; missing reports are not healthy designations.
+
+V13 objective forecasts and the five original Circa policies remain unchanged, with their issue clocks, authentic lines and official five-specific deadlines. The workflow submitted no contest entry and did not query account submission activity. The N202 public edition remains an immutable dated comparison below. Private code, exact feature recipes, fitted states, PMF arrays and calibration parameters are not published.
+
 ## N202 full-population correction — November 25, 2026
 
 Native Site publication succeeded as **version 57**. [Publication receipt](publication-n202-full163.json) records the exact deployed source and archive. Browser inspection remains unverified in this session; the embedded build-time verification record remains separate. Version57 includes the official Circa rules correction, equivalent relative navigation links and mobile-safe ordinary result tables. Exact-head GitHub Actions independently checks deployed bytes and desktop/mobile behavior.

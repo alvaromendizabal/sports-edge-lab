@@ -1,0 +1,71 @@
+{
+  "schema": "sports-edge-lab.nfl.n203.public-verification.v1",
+  "created_utc": "2026-11-26T02:00:23.736424+00:00",
+  "source_return_sha256": "60162889623520ff12b62f98bfee7e65cdc75aef8253af6d50c03685d17d8f7c",
+  "build_time_publication_status": "PENDING_NATIVE_PUBLICATION",
+  "browser_rendering": "UNVERIFIED_NO_CUA_TOOL",
+  "semantic_checks": {
+    "status": "PASS",
+    "completed_population": 163,
+    "current_games": 16,
+    "current_n203_issues": 15,
+    "book_options": 3196,
+    "usable_sources": 57,
+    "named_source_options": {
+      "draftkings": 60,
+      "kalshi": 56,
+      "polymarket": 60
+    },
+    "direct_kalshi_quotes": 2,
+    "negative_semantic_cases": 5,
+    "controls": "PASS",
+    "circa_five_specific_deadlines": "PASS",
+    "private_parameter_exclusion": "PASS"
+  },
+  "assets": {
+    "N203-Circa-five.png": {
+      "bytes": 195800,
+      "sha256": "3d86a66b471a1349af74097ca3601ab235d2ad564058081a2f99fa7be81f5868"
+    },
+    "N203-Circa-options-1.png": {
+      "bytes": 245763,
+      "sha256": "82b84ff459f117fa4b92cff232e238ccee8a0b33045398da78e3a954403ae253"
+    },
+    "N203-Circa-options-2.png": {
+      "bytes": 224484,
+      "sha256": "e0e34bb21306eb2dbf58cfad6341323b754035affcd3fb6d13d2fb4e244a610b"
+    },
+    "N203-games-1.png": {
+      "bytes": 269940,
+      "sha256": "591195cb7dc4701e897bbf2d8ef43053a1265d99ff6ef25753f564de6660a104"
+    },
+    "N203-games-2.png": {
+      "bytes": 276749,
+      "sha256": "52a7eff1b0d497d5cc2d145e507b5b558c59effb2b2668c249b025320feefb8d"
+    },
+    "N203-games-3.png": {
+      "bytes": 285878,
+      "sha256": "09b3ebb45e62100ff690bf34955896425841882be260237d75e44b8b5b8d6d39"
+    },
+    "N203-games-4.png": {
+      "bytes": 279863,
+      "sha256": "dd0224e3aaf6730cc528967c7502c1f44bc8462f0ba80d858847357bf530079d"
+    },
+    "board.css": {
+      "bytes": 11351,
+      "sha256": "38fc441e96c36e820bfefd05cec6005b80652ca6e0d07b48b6e5b8c2116db9c6"
+    },
+    "board.js": {
+      "bytes": 20112,
+      "sha256": "0f44caf1da8e28d02c2dc3886517422230937694881fd55fb18c68471ee11b29"
+    },
+    "index.html": {
+      "bytes": 12434,
+      "sha256": "a72ea69dc64823e871c3b560f144da77573c86634956f1b33a2c9490cbc05427"
+    },
+    "snapshot.json": {
+      "bytes": 3002981,
+      "sha256": "5fcd468baff6f6d98a5d77eedab6a03144fe7cab96f3e3cde6640991790ad62e"
+    }
+  }
+}
