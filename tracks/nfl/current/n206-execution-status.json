@@ -1,0 +1,62 @@
+{
+  "schema": "sports-edge-lab.nfl.execution-delivery-status.v1",
+  "owner": "NFL",
+  "generation": "N206",
+  "role": "EXECUTION_DELIVERY_NOT_COMPLETED_RESEARCH_RESULT",
+  "recorded_utc": "2026-11-26T05:02:16.365996+00:00",
+  "canonical_release_sha256": "f4492c6043d19beeef54e6a169cfeee92797f6113a971a12988a036ed6a9506d",
+  "canonical_release_bytes": 106284938,
+  "parent_verified_owner_return_sha256": "f7de44203eb065d945c590736637f0fc972589856c8e1346665bc26ae07ad220",
+  "delivery_status": "SHA_GUARDED_OWNER_COMMAND_DELIVERED_NATIVE_QUALIFICATION_PASS",
+  "native_qualification": {
+    "status": "PASS",
+    "created_utc": "2026-11-26T04:59:28.613851+00:00",
+    "qualification_only": true,
+    "unit_tests_passed": 54,
+    "bounded_units_completed": 8,
+    "cdf_optimizer_completions": 32,
+    "gate_optimizer_completions": 48,
+    "total_optimizer_completions": 80,
+    "compared_policies": 3378,
+    "completed_game_census": 163,
+    "forecast_rows": 216,
+    "future_games": 108,
+    "forecast_quote_options": 0,
+    "rendered_report_present": true,
+    "main_owner_run": false
+  },
+  "registered_plan": {
+    "new_fit_units": 192,
+    "new_optimizer_completions": 1920,
+    "total_candidate_policies": 4202,
+    "previous_policies_to_reuse": 3338,
+    "counts_are_planned_not_completed": true
+  },
+  "assistant_main_owner_launches": 0,
+  "production_promotions": 0,
+  "latest_completed_public_science": "N205",
+  "private_code_weights_and_source_recipes_published": false,
+  "qualification_history": [
+    {
+      "canonical_release_sha256": "ac50447643c9c1750a1401c08ef868b781745b47ae16bbbd81008c64b8f8cbe4",
+      "canonical_release_bytes": 106283250,
+      "status": "REJECTED_NO_CERTIFICATE",
+      "completed_bounded_units": 8,
+      "completed_bounded_optimizer_calls": 80,
+      "failure_stage": "MIXED_POLICY_CSV_EXPORT",
+      "owner_main_run_launched": false,
+      "production_promoted": false
+    }
+  ],
+  "correction": "A deterministic union-schema CSV writer handles mixed policy records; two regression tests were added.",
+  "qualification_certificate_sha256": "9b5b191bc9ae450d5a2b6ddea73be50d1591cedc9c1d4b73d4c29832db8f17cf",
+  "native_guarded_launcher_verification": {
+    "status": "PASS",
+    "verification_sha256": "ce54e82a59e21c68af64242902e9841d410ba891c8b7d8091e5b0f0e49c57832",
+    "native_runtime_authorization": "PASS",
+    "exact_source_and_runtime_bound": true,
+    "execv_replaced_with_capture": true,
+    "owner_main_invocations": 0
+  },
+  "scientific_interpretation": "The bounded qualification proves execution and export behavior. Its reduced settings are not the planned owner campaign, a new selected production result, or a new public market forecast."
+}
