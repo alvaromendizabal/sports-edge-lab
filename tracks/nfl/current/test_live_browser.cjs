@@ -322,8 +322,9 @@ function verifyHostedHtml(observed, source, context) {
       await count("#annual details tbody tr:visible",56);
       const proof=await (await page.request.get(new URL("week-12-field-notes/n208/postseason/proof.json",base).href)).json();
       assert.deepEqual([proof.unique_games,proof.policy_target_components,proof.game_component_scores],[26,14,364]);
-      assert.equal(proof.n209_qualification.status,"NATIVE_QUALIFICATION_UNDERWAY");
-      assert.match(await text("#qualification"),/bounded native qualification/);
+      assert.equal(proof.n209_qualification.status,"VERIFIED_NATIVE_QUALIFICATION");
+      assert.equal(proof.n209_qualification.bounded_estimator_fits+proof.n209_qualification.bounded_calibrator_fits,104);
+      assert.match(await text("#qualification"),/passed bounded native qualification/);
       assert(proof.pooled.every(r=>r.games===26 && r.wins+r.losses+r.pushes===26 && r.decisive===r.wins+r.losses));
       await page.getByText("Seven confidence thresholds for the original fixed policy",{exact:true}).click();
       await count("#confidence tbody tr:visible",14);
@@ -341,10 +342,15 @@ function verifyHostedHtml(observed, source, context) {
       await page.getByRole("heading",{name:"Thanksgiving forecasts",exact:true}).waitFor();
       await count("[data-game]",16);
       await page.getByRole("button",{name:"Pregame",exact:true}).click();
-      await count("[data-game]:visible",14);
+      const scheduled=await page.locator("[data-game]").evaluateAll(rows=>rows.filter(row=>Date.parse(row.dataset.kickoff)>Math.max(Date.now(),Date.parse("2026-11-26T21:33:17Z"))).length);
+      await count("[data-game]:visible",scheduled);
+      assert.match(await text("#game-day"),/Chicago 39, Detroit 35/);
+      assert.match(await text("#game-day"),/13 remained before kickoff at 1:33/);
+      await page.getByRole("button",{name:"All games",exact:true}).click();
       await page.locator("#team-search").fill("Eagles");
       await count("[data-game]:visible",1);
       const card=page.locator("[data-game]:visible");
+      assert.match(await card.innerText(),/ARCHIVED PREGAME PRICES/);
       assert.match(await card.innerText(),/DAL by 5\.9/);
       assert.match(await card.innerText(),/PHI \+8\.5/);
       await card.getByText("Most-wins model diagnostics",{exact:true}).click();
@@ -352,7 +358,11 @@ function verifyHostedHtml(observed, source, context) {
       await page.locator("#team-search").fill("");
       await count(".caution:visible",4);
       await page.getByRole("button",{name:"Kickoff passed",exact:true}).click();
-      await count("[data-game]:visible",2);
+      await count("[data-game]:visible",16-scheduled);
+      const final=await (await page.request.get(new URL("week-12-field-notes/n208/game-day-status.json",base).href)).json();
+      assert.deepEqual([final.game_number,final.complete_selection_census,final.week12_before_scheduled_kickoff_as_of,final.score.CHI,final.score.DET],[165,164,13,39,35]);
+      const grades=final.settlements.filter(r=>r.objective!=="logloss").map(r=>r.grade);
+      assert.deepEqual(grades,["LOSS","WIN","WIN","WIN"]);
       await count("#latest-venue-prices details",14);
       const dk=page.locator("#latest-venue-prices details").filter({hasText:"PHI at DAL"}).first();
       await dk.locator("summary").click();
@@ -373,6 +383,16 @@ function verifyHostedHtml(observed, source, context) {
       const n208=await (await page.request.get(new URL("week-12-field-notes/n208/results.json",base).href)).json();
       assert.deepEqual([n208.census,n208.candidate_count,n208.issued_game_count,n208.execution.completed_units],[164,6506,14,256]);
       assert.deepEqual([n208.champions.length,n208.incompatible_raw_strict_point_pairs.length,n208.forward_lock.model_decisions],[6,4,56]);
+      const future=await context.newPage();
+      try {
+        await future.addInitScript(()=>{Date.now=()=>Date.parse("2026-12-01T06:00:00Z");});
+        await future.goto(new URL("week-12-field-notes/n208/",base).href,{waitUntil:"domcontentloaded"});
+        await future.getByRole("button",{name:"Pregame",exact:true}).click();
+        assert.equal(await future.locator("[data-game]:visible").count(),0);
+        await future.getByRole("button",{name:"Kickoff passed",exact:true}).click();
+        assert.equal(await future.locator("[data-game]:visible").count(),16);
+        assert.equal(await future.locator("[data-game] small").filter({hasText:"FINAL"}).count(),2);
+      } finally {await future.close();}
     });
     await check(`${width}px: N207 Thanksgiving forecast coverage and phone navigation`, async () => {
       await page.goto(new URL("week-12-field-notes/n207/", base).href, { waitUntil: "domcontentloaded" });
