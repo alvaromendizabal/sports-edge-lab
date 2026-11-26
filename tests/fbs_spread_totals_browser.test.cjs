@@ -38,6 +38,15 @@ const qualified=market=>data.contracts.filter(c=>c.market===market&&c.primary_fo
    }
    await page.locator('[data-tab="gaps"]').click();eq(await page.locator('#content tbody tr').count(),data.missing_inputs.filter(x=>weekly.some(g=>g.game_id===x.game_id)).length,'Full weekly input ledger');
    await page.locator('[data-tab="evidence"]').click();eq(await page.locator('.performance-table tbody tr').count(),data.performance.length,'Every reported metric and denominator retained');eq(await page.locator('details .source-coverage tbody tr').count(),data.source_coverage?.length||0,'Every source target cell retained separately');
+   if(data.release.recovery_audit){
+    const a=data.release.recovery_audit,text=await page.locator('.research-update').innerText();
+    check(text.includes(`${a.saved_base_fit_states} saved base fits`),'Saved fits separately labeled');
+    check(text.includes(`${a.completed_prediction_partitions} completed prediction partitions`),'Prediction partitions not relabeled as scoring completions');
+    check(text.includes(`${a.remaining_base_fits_if_unchanged} base fits`),'Conditional remaining denominator visible');
+    check(text.includes('Previous verified return'),'Older return counters remain separately labeled');
+    const reconstructed=data.contracts.find(c=>data.games.some(g=>g.game_id===c.game_id&&g.status==='completed'&&!g.original_issued));
+    if(reconstructed)check((await page.evaluate(c=>contractHorizon(c),reconstructed)).startsWith('Completed-game reconstruction'),'Resolved historical contract display cannot claim early issuance');
+   }
    await page.locator('[data-tab="graphics"]').click();eq(await page.locator('.graphic-card').count(),data.graphics?.pages?.length||0,'All phone graphics exposed');
    await page.locator('[data-tab="games"]').click();
    const jsonWait=page.waitForEvent('download');await page.locator('#download-json').click();const jd=await jsonWait,jp=path.join(shots,`FBS_SPREAD_TOTALS_${width}_board.json`);await jd.saveAs(jp);eq(JSON.parse(fs.readFileSync(jp,'utf8')),data,'Complete public JSON download');

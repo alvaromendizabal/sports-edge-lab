@@ -14,6 +14,10 @@ The source is `fbs.spread-totals.public-board.v1`. The builder validates a quali
 
 `release.latest_owner_execution` can summarize a verified return with measured fit, calibration, scoring and rejected-callback counts kept separate. Its evidence fingerprint belongs in `provenance`. A partial failure stays partial even when earlier commits or scoring work were preserved.
 
+`release.latest_owner_execution` may also describe an observed failed execution whose final return was not created, provided the status says so and saved-work claims have independent physical integrity evidence. `release.previous_verified_return` keeps the earlier verified return separate; its counters must never be rendered as the newer run’s work.
+
+`release.recovery_audit` carries only aggregate counts and generic repair descriptions. Completed prediction partitions plus saved states still needing export must equal the saved base-fit count. Saved base fits plus conditionally remaining fits must equal qualified jobs; qualified plus source-blocked jobs must equal the registered budget. The condition must disclose exact identity matching and launch-time reconciliation. Native readiness requires verified executable and self-test evidence. Preparation cannot claim an executed owner run, changed scientific callbacks or newly selected champions. Private model identities, artifact locations and recipes remain excluded.
+
 `models` maps public aliases such as `P06` to only `name`, `family`, `role`, `calibration_status` and `selection_objective`. Exact private feature transforms, parameters and model recipes are excluded.
 
 ## Game rows

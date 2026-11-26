@@ -160,15 +160,22 @@ def release_status_page(data, directory, digest):
     if not research:
         return None
     execution = data["release"].get("latest_owner_execution", {})
+    recovery = data["release"].get("recovery_audit")
     page = Page()
     page.header(data, "RESEARCH STATUS", 1, 1)
     blocks = [
-        ("LATEST VERIFIED RUN · " + execution.get("release", "UNAVAILABLE"),
-         f"Recorded: {execution.get('new_model_fits', 'Unmeasured')} model fits · "
-         f"{execution.get('new_calibrator_fits', 'Unmeasured')} calibrations",
-         execution.get("summary", "See the verified owner return.")),
-        ("NEXT CAMPAIGN · " + research["release"], "Prepared · awaiting owner launch",
-         research["campaign_summary"]),
+        ("LATEST OBSERVED RUN · " + execution.get("release", "UNAVAILABLE"),
+         (f"{recovery['saved_base_fit_states']} saved fits · {recovery['saved_calibration_components']} calibrations"
+          if recovery else f"Recorded: {execution.get('new_model_fits', 'Unmeasured')} model fits · "
+         f"{execution.get('new_calibrator_fits', 'Unmeasured')} calibrations"),
+         (f"{recovery['completed_prediction_partitions']} prediction partitions completed; "
+          f"{recovery['saved_states_requiring_prediction_export']} further fits were saved. "
+          "Scorecards and champion selection did not finish." if recovery else
+          execution.get("summary", "See the verified owner return."))),
+        ("NATIVE VERIFIED · " + research["release"] if recovery else "NEXT CAMPAIGN · " + research["release"],
+         f"{recovery['remaining_base_fits_if_unchanged']} remaining fits if unchanged" if recovery else "Prepared · awaiting owner launch",
+         ("Resume the latest exact saved states at launch. The fixed-time worker stop and mixed-phase "
+          "progress failures are repaired. Forecast refresh remains pending." if recovery else research["campaign_summary"])),
         ("EXPLICIT RESEARCH SPLIT", "2024–25 training · 2026 selection",
          "Late-2025 games are held out for calibration. Completed 2026 games select the new spread and total models and remain exposed validation. Prospective testing begins after the launch cutoff."),
         ("FORECASTS SHOWN NOW", "Prior frozen models · November 25 cutoff",
@@ -187,9 +194,12 @@ def release_status_page(data, directory, digest):
     info = page.save(directory / filename, {"product": "Spread & Totals", "owner": "fbs",
                     "release": data["release"]["label"], "science_sha256": digest,
                     "forecast_as_of": data["clocks"]["forecast_as_of"], "new_fits": 0})
-    return {"file": "graphics/" + filename, "title": "V118 research and execution status",
-            "caption": "Verified prior failure, pending owner campaign and unchanged forecast cutoff",
-            "alt": "V117 recorded zero new fits but global fit accounting is incomplete; V118 awaits owner launch. Existing forecasts retain their November 25 cutoff.",
+    return {"file": "graphics/" + filename, "title": research["release"] + " research and execution status",
+            "caption": "Verified saved work, pending owner campaign and unchanged forecast cutoff",
+            "alt": (f"{execution.get('release', 'Prior run')} saved {recovery['saved_base_fit_states']} fits and "
+                    f"{recovery['saved_calibration_components']} calibration components; "
+                    f"{research['release']} is native verified. Forecasts retain their November 25 cutoff."
+                    if recovery else "Prepared campaign; existing forecasts retain their original cutoff."),
             "kind": "release_status", **info}
 
 

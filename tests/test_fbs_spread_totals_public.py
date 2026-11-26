@@ -3,6 +3,8 @@ from copy import deepcopy
 import importlib.util
 import json
 from pathlib import Path
+import re
+import subprocess
 import sys
 import tempfile
 import unittest
@@ -217,6 +219,30 @@ class PublicBoardTests(unittest.TestCase):
         self.rejected(lambda d: d["provenance"].append({"label": "s3://private/bucket"}), "private material")
         self.rejected(lambda d: d["models"]["P06"].update(feature_names=["private_transform"]), "public scope")
 
+    def test_saved_recovery_counts_cannot_claim_finished_science(self):
+        d = fixture()
+        d["release"]["recovery_audit"] = {
+            "qualified_base_jobs": 10, "source_blocked_base_jobs": 2, "registered_base_jobs": 12,
+            "saved_base_fit_states": 4, "saved_calibration_components": 8,
+            "completed_prediction_partitions": 3, "saved_states_requiring_prediction_export": 1,
+            "unfinished_attempts_without_commit": 1, "remaining_base_fits_if_unchanged": 6,
+            "remaining_calibrations_if_unchanged": 12, "condition": "Invented fixture; identities must match.",
+            "native_release_verified": True, "native_self_test_passed": True,
+            "owner_run_launched_by_preparation": False, "scientific_callbacks_changed": False,
+            "new_champions_selected": False, "fixes": ["Invented operational fixture."]}
+        validate(d)
+        for key, value, message in [
+            ("completed_prediction_partitions", 4, "prediction partitions disagree"),
+            ("remaining_base_fits_if_unchanged", 7, "remaining fit denominator"),
+            ("source_blocked_base_jobs", 3, "blocked and qualified budgets"),
+            ("new_champions_selected", True, "cannot imply a new execution or champion"),
+            ("native_self_test_passed", False, "native readiness"),
+        ]:
+            changed = deepcopy(d)
+            changed["release"]["recovery_audit"][key] = value
+            with self.assertRaisesRegex(ValueError, message):
+                validate(changed)
+
     def test_script_payload_is_escaped_and_no_runtime_fetch_exists(self):
         d = fixture()
         d["games"][0]["home"] = "</script><script>bad()</script>"
@@ -224,6 +250,21 @@ class PublicBoardTests(unittest.TestCase):
         self.assertNotIn("<script>bad()", rendered)
         self.assertIn("\\u003c/script>", rendered)
         self.assertNotIn("fetch(", rendered)
+
+    def test_served_status_requires_exact_https_site_origin(self):
+        template = (MODULE / "board.html.in").read_text()
+        helper = re.search(r"function publicationDisplay\(\).*?(?=\nfunction model)", template, re.S).group()
+        script = "const D={publication:{site_url:'https://fbs.example.test',deployment_state:'Source preparation only'}};let window={location:{}};" + helper + "\n" + """
+const cases=[
+ [{protocol:'http:',origin:'http://localhost:8000'},false],
+ [{protocol:'https:',origin:'https://localhost'},false],
+ [{protocol:'https:',origin:'https://fbs.example.test.attacker.invalid'},false],
+ [{protocol:'http:',origin:'http://fbs.example.test'},false],
+ [{protocol:'https:',origin:'https://fbs.example.test'},true]
+];
+for(const [location,served] of cases){window.location=location;const value=publicationDisplay();if(value.includes('being served here')!==served)throw new Error('Origin status mismatch');if(value.includes('version 49'))throw new Error('Invented deployment version');}
+"""
+        subprocess.run(["node", "-e", script], check=True, capture_output=True, text=True)
 
     def test_deterministic_phone_graphics_keep_all_game_ids(self):
         d = fixture()

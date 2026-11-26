@@ -104,6 +104,30 @@ def validate(data):
                 and next_research.get("new_calibrations_reported") == 0,
                 "prepared campaign cannot credit unexecuted fits")
         require(bool(next_research.get("prospective_test")), "future test boundary must be disclosed")
+    recovery = data["release"].get("recovery_audit")
+    if recovery is not None:
+        require(isinstance(recovery, dict), "recovery audit object required")
+        counts = ("qualified_base_jobs", "source_blocked_base_jobs", "registered_base_jobs",
+                  "saved_base_fit_states", "saved_calibration_components", "completed_prediction_partitions",
+                  "saved_states_requiring_prediction_export", "unfinished_attempts_without_commit",
+                  "remaining_base_fits_if_unchanged", "remaining_calibrations_if_unchanged")
+        require(set(recovery) <= set(counts) | {"condition", "native_release_verified", "native_self_test_passed",
+                "owner_run_launched_by_preparation", "scientific_callbacks_changed", "new_champions_selected", "fixes"},
+                "recovery audit exceeds public status scope")
+        require(all(type(recovery.get(k)) is int and recovery[k] >= 0 for k in counts),
+                "recovery counts must be nonnegative integers")
+        require(recovery["completed_prediction_partitions"] + recovery["saved_states_requiring_prediction_export"]
+                == recovery["saved_base_fit_states"], "saved fits and prediction partitions disagree")
+        require(recovery["saved_base_fit_states"] + recovery["remaining_base_fits_if_unchanged"]
+                == recovery["qualified_base_jobs"], "remaining fit denominator disagrees")
+        require(recovery["qualified_base_jobs"] + recovery["source_blocked_base_jobs"]
+                == recovery["registered_base_jobs"], "blocked and qualified budgets disagree")
+        require(recovery.get("condition") and recovery.get("owner_run_launched_by_preparation") is False
+                and recovery.get("scientific_callbacks_changed") is False
+                and recovery.get("new_champions_selected") is False,
+                "prepared recovery cannot imply a new execution or champion")
+        require(recovery.get("native_release_verified") is True and recovery.get("native_self_test_passed") is True,
+                "native readiness requires verified executable and self-test")
     models = data["models"]
     for alias, model in models.items():
         require(re.fullmatch(r"[A-Z][0-9]{2}", alias) is not None, "public model aliases required")
