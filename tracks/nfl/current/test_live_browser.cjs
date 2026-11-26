@@ -134,11 +134,11 @@ function verifyHostedHtml(observed, source, context) {
     const text = selector => page.locator(selector).innerText();
     const count = (selector, expected) => page.locator(selector).count().then(actual => assert.equal(actual, expected, selector));
     const noOverflow = async () => { const layout = await page.evaluate(() => ({ width: window.innerWidth, scroll: document.documentElement.scrollWidth, outside: [...document.querySelectorAll("main *, header *")].filter(e => e.getBoundingClientRect().right > innerWidth + 1 && !e.closest(".scroll")).slice(0, 8).map(e => [e.tagName, e.id, e.className, e.getBoundingClientRect().right]) })); assert(layout.scroll <= layout.width + 1, JSON.stringify(layout)); };
-    await check(`${width}px: N198 field notes show all 16 roster forecasts, 286 public assets, all Circa roles and seven current share cards`, async () => {
+    await check(`${width}px: N199 field notes show all 16 roster forecasts, 297 public assets, all Circa roles and seven current share cards`, async () => {
       await page.goto(new URL("week-12-field-notes/", base).href, {waitUntil: "domcontentloaded"});
-      assert.match(await text(".dateline"), /3:33 p.m. Pacific.*N198/);
-      assert.match(await text("#record"), /227 new estimators/);
-      assert.match(await text("#markets"), /1,672 exact pregame line observations/);
+      assert.match(await text(".dateline"), /3:57 p.m. Pacific.*N199/);
+      assert.match(await text("#record"), /166 new estimators/);
+      assert.match(await text("#markets"), /1,675 exact pregame line observations/);
       await count("article.game:visible", 16);
       await page.selectOption("#day", "Thursday");
       await count("article.game:visible", 3);
@@ -165,8 +165,8 @@ function verifyHostedHtml(observed, source, context) {
       assert.match(await text("#worksheet-models"), /7 of 16 games.*split in 9/);
       await count("#roster-forecast tr[id^='roster-estimate-']",16);
       await count("#roster-forecast details tbody tr",32);
-      assert.match(await text("#roster-forecast"), /272 forecast distributions/);
-      await count("#phone img[src^='N198-public-']",7);
+      assert.match(await text("#roster-forecast"), /384 laws/);
+      await count("#phone img[src^='N199-public-']",7);
       await page.locator('.rosterlink[href="#availability-SEA-SF"]').click();
       assert.match(await text("#availability-SEA-SF"), /Brock Purdy.*ankle/);
       assert.match(await text("#availability-SEA-SF"), /Darnold.*practice/);
@@ -182,6 +182,12 @@ function verifyHostedHtml(observed, source, context) {
       assert.match(await text("#availability"), /28 of 32 teams/);
       await count("#phone img", 7);
       assert.match(await text("#circa"), /before Wednesday’s 5 p.m./);
+      assert.match(await text("#roster-estimate-GB-LAR"), /67\.6%/);
+      await page.locator('a[href="n199-weekly/"]').first().click();
+      await count(".grid article",16);
+      await count("article ol",3);
+      await count("article ol li",15);
+      assert.match(await text("main"), /N199/);
       await noOverflow();
     });
     await check(`${width}px: N195 official research choices and source-matched comparisons`, async () => {
