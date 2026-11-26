@@ -112,7 +112,7 @@
         "LAR"
       ],
       "prospective_roster_reissue_utc": "2026-11-25T23:57:12.418761+00:00",
-      "prospective_roster_inputs_utc": "2026-11-25T23:32:55.205369+00:00",
+      "prospective_roster_inputs_utc": "2026-11-25T23:57:10.786114+00:00",
       "games_with_input_changes": 8,
       "recomputed_forecast_laws": 384,
       "published_roster_forecasts": 16,
@@ -149,9 +149,10 @@
       "official_team_practice_pages_with_rows": 25,
       "official_team_practice_rows": 241,
       "game_day_lists_included_in_issued_forecast": true,
-      "n199_rams_win": 0.6757,
+      "n199_rams_win": 0.6757185500296741,
       "n199_rams_median_margin": 6,
-      "n199_median_total": 45
+      "n199_median_total": 45,
+      "n198_historical_roster_inputs_utc": "2026-11-25T23:32:55.205369+00:00"
     },
     "distinct_term_scope": "Distinct signed numeric terms across all matched venue rows",
     "portable_public_weekly": {

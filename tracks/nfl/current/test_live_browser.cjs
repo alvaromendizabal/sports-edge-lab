@@ -27,9 +27,11 @@ function verifyHostedHtml(observed, source, context) {
     return record;
   }
   const text = observed.toString("utf8");
-  // The archived redirect ends without an explicit body tag. On this one artifact Cloudflare appends
-  // its known script at EOF. Exact recovery of all of the pinned original bytes still applies.
-  const change = context === "current-archive-n186-research-history.html"
+  // The two byte-pinned documents without an explicit body tag receive this script after EOF.
+  // The captured response must still recover every original source byte.
+  const appendedAtEnd = ["current-archive-n186-research-history.html",
+    "current-week-12-field-notes-n199-weekly-index.html"].includes(context);
+  const change = appendedAtEnd
     ? /<script>\(function\(\)\{function c\(\)\{var b=a\.contentDocument[\s\S]*?<\/script>$/g
     : /<script>\(function\(\)\{function c\(\)\{var b=a\.contentDocument[\s\S]*?<\/script>(?=<\/body>\s*<\/html>\s*$)/g;
   const matches = [...text.matchAll(change)];
