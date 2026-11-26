@@ -56,6 +56,33 @@ function verifyHostedHtml(observed, source, context) {
   const historyReceipt = JSON.parse(fs.readFileSync(path.join(root, "publication-n175.json"), "utf8"));
   const data = JSON.parse(fs.readFileSync(path.join(root, "data.json"), "utf8"));
   const snapshot = JSON.parse(fs.readFileSync(path.join(root, "week-12-field-notes/n202/snapshot.json"), "utf8"));
+  const currentSnapshot = JSON.parse(fs.readFileSync(path.join(root, "week-12-field-notes/n203/snapshot.json"), "utf8"));
+  const currentCompleted = currentSnapshot.completed_population.completed;
+  const currentIds = currentSnapshot.completed_population.games.map(g=>g.game_id).sort();
+  assert(Number.isInteger(currentCompleted) && currentCompleted >= 163);
+  assert.equal(currentIds.length,currentCompleted);assert.equal(new Set(currentIds).size,currentCompleted);
+  assert.equal(digest(Buffer.from(currentIds.join("\n"))),currentSnapshot.completed_population.manifest_sha256);
+  for(const row of currentSnapshot.ordinary_performance){
+    for(const [score,field] of [[row.selected,row.target],[row.earlier_week_replay,row.target+"_replay"]]){
+      const grades={WIN:0,LOSS:0,PUSH:0,UNRESOLVED:0};
+      for(const game of currentSnapshot.completed_population.games){assert(game[field] in grades);grades[game[field]]++;}
+      assert.equal(score.completed,currentCompleted);
+      assert.equal(score.wins+score.losses+score.settlement_pushes+score.unresolved,currentCompleted);
+      assert.deepEqual(grades,{WIN:score.wins,LOSS:score.losses,PUSH:score.settlement_pushes,UNRESOLVED:score.unresolved});
+      if(score.full_population_champion)assert.equal(score.unresolved,0);
+    }
+  }
+  assert.doesNotMatch(JSON.stringify(currentSnapshot),/"(?:pmf|calibrator|selected_features|calibration_parameters|configuration)"/);
+  for(const g of currentSnapshot.games){
+    if(g.n203)assert(Math.abs(g.n203.away_probability+g.n203.home_probability+g.n203.tie_probability-1)<1e-9);
+    if(g.started_at_snapshot){assert.equal(g.n203,null);assert.equal(g.spread,null);assert.equal(g.total,null);}
+  }
+  for(const q of currentSnapshot.book_options){
+    assert(Math.abs(q.p_win+q.p_push+q.p_loss-1)<1e-9);
+    assert(Math.abs(q.expected_profit_per_unit-(q.p_win*(q.decimal_price-1)-q.p_loss))<1e-9);
+  }
+  assert.deepEqual(currentSnapshot.cards,snapshot.cards,"Preserve the V13/Circa issue and official deadline evidence");
+  assert.deepEqual(currentSnapshot.circa,snapshot.circa);
   const population = snapshot.completed_population;
   const completed = population.completed;
   assert(Number.isInteger(completed) && completed >= 163, "Completed census cannot fall below its verified baseline");
@@ -159,6 +186,42 @@ function verifyHostedHtml(observed, source, context) {
     const text = selector => page.locator(selector).innerText();
     const count = (selector, expected) => page.locator(selector).count().then(actual => assert.equal(actual, expected, selector));
     const noOverflow = async () => { const layout = await page.evaluate(() => ({ width: window.innerWidth, scroll: document.documentElement.scrollWidth, outside: [...document.querySelectorAll("main *, header *")].filter(e => e.getBoundingClientRect().right > innerWidth + 1 && !e.closest(".scroll, .table-scroll")).slice(0, 8).map(e => [e.tagName, e.id, e.className, e.getBoundingClientRect().right]) })); assert(layout.scroll <= layout.width + 1, JSON.stringify(layout)); };
+    await check(`${width}px: N203 current forecasts, full census, bookmaker terms and preserved Circa`,async()=>{
+      await page.goto(new URL("week-12-field-notes/n203/",base).href,{waitUntil:"domcontentloaded"});
+      await page.locator("#games .game").first().waitFor();
+      await count("#games .game",currentSnapshot.games.length);
+      await count("#completed-games tr",currentCompleted);
+      assert.deepEqual(await page.evaluate(()=>data.completed_population.games.map(g=>g.game_id).sort()),currentIds);
+      assert.equal(await page.locator("#basis").inputValue(),"n203");
+      assert.match(await text("#basis-note"),/not a separately selected winner model/);
+      for(const row of currentSnapshot.ordinary_performance){
+        assert((await text("#performance")).includes(`${row.selected.wins} wins`));
+        assert((await text("#performance")).includes(`${row.earlier_week_replay.wins} wins`));
+        assert((await text("#performance")).includes(`of ${currentCompleted} completed games`));
+      }
+      await page.selectOption("#scope","remaining");await count("#games .game",currentSnapshot.games.filter(g=>!g.started_at_snapshot).length);
+      await page.selectOption("#scope","thanksgiving");await count("#games .game",3);
+      await page.selectOption("#scope","all");await page.fill("#search","Bears");await count("#games .game",1);
+      await page.fill("#search","");
+      for(const basis of ["v13","roster","n203"]){await page.selectOption("#basis",basis);assert.doesNotMatch(await text("#games"),/NaN|undefined|Invalid Date/);}
+      for(const source of ["draftkings","kalshi","polymarket"]){
+        await page.selectOption("#book-source",source);
+        await count("#book-options tr",currentSnapshot.book_options.filter(q=>q.source===source).length);
+      }
+      await page.selectOption("#book-source","kalshi");await page.selectOption("#book-game","2026_12_NE_LAC");
+      assert.match(await text("#book-options"),/No paired decimal offer/);
+      await page.locator("#direct-source").locator("xpath=ancestor::details[1]").locator("summary").click();
+      assert.match(await text("#direct-source"),/KXNFLSPREAD-26NOV29NELAC-NE2/);
+      assert.match(await text("#direct-source"),/yes bid 0.48 \/ ask 0.5/);
+      await page.selectOption("#book-game","all");await page.selectOption("#book-source","draftkings");
+      await page.selectOption("#book-target","total");await count("#book-options tr",currentSnapshot.book_options.filter(q=>q.source==="draftkings"&&q.target==="total").length);
+      await page.selectOption("#book-target","all");await page.selectOption("#book-sort","value");
+      assert.equal(new Set(currentSnapshot.book_options.map(q=>q.source)).size,currentSnapshot.market_coverage.usable_spread_total_bookmakers);
+      await count("#ablations tr",currentSnapshot.campaign.ablations.length);
+      for(const card of currentSnapshot.cards){await page.selectOption("#circa-basis",card.id);await count("#circa-five .pick",5);await count("#alternatives tr",card.alternatives.length);}
+      await page.selectOption("#circa-basis","circa_card_points");await count("#phone img",7);
+      await noOverflow();await page.screenshot({path:path.join(output,`n203-${width}.png`),fullPage:true});
+    });
     await check(`${width}px: full completed population, every current outlook, Circa rules and phone cards`, async () => {
       await page.goto(new URL("week-12-field-notes/n202/",base).href,{waitUntil:"domcontentloaded"});
       await page.locator("#games .game").first().waitFor();
@@ -238,6 +301,8 @@ function verifyHostedHtml(observed, source, context) {
     await check(`${width}px: home opens the current release; older shared links still open the original dated slate`, async () => {
       await page.goto(base.href, { waitUntil: "domcontentloaded" });
       await noOverflow();
+      assert.match(await text("#n203-complete-population-notice"),/N203 completed/);
+      assert.equal(await page.locator('#n203-complete-population-notice a[href="week-12-field-notes/n203/"]').count(),1);
       assert.match(await page.locator("body").innerText(), /Week 12/i);
       assert(page.url().startsWith(base.href));
       assert.match(await text(".hero-stats"), /LAR by 4.66|Rams by 4.66/);
