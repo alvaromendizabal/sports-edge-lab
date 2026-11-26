@@ -2,6 +2,8 @@
 
 ## N202 full-population correction — November 25, 2026
 
+Native Site publication succeeded as **version 55**. [Publication receipt](publication-n202-full163.json) records the exact deployed source and archive. Browser inspection remains unverified in this session; the embedded build-time verification record remains separate. Repository navigation links were normalized to equivalent relative paths after publication, without changing forecasts or redeploying the Site.
+
 **[Open the latest interactive board](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n202/)** · [All 16 game outlooks](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n202/#slate) · [Every Circa alternative](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n202/#circa) · [Phone graphics](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n202/#phone)
 
 The completed-game universe is **163**, retained in every comparison. A strict source-clock audit restored all eleven previously excluded games while retaining original timestamps. Rescoring all 96 saved policies changed the spread selection to **90 wins, 70 losses, 3 pushes and 0 unresolved**. The selected total policy stayed the same and scores **87 wins, 76 losses, 0 pushes and 0 unresolved**. Earlier-week selection replay is **68 wins, 92 losses, 3 pushes** for spreads and **78 wins, 85 losses, 0 pushes** for totals, on the same 163 games. These are reconstructed, previously exposed 2026 results, not independent test performance.

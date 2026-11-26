@@ -51,12 +51,19 @@
       "sha256": "6ed7c58b70d001dee99ce6d53c5fb80635f19596ebed5e0170e65d203fb921e1"
     },
     "index.html": {
-      "bytes": 10137,
-      "sha256": "71ff6da36f69e2a54aff3b1e9592f9e1b396858a22e36f36a7e1c9b0b11f5cdb"
+      "bytes": 10147,
+      "sha256": "1d1911a64c12a765cb8e9cdf82a7bef0e7c9be80dca7825a4fd03f017ffcde65"
     },
     "snapshot.json": {
       "bytes": 132343,
       "sha256": "5e068ce5daf4b435377cc10abb7d642a920c2b25a7e457bf97d12f1d26f375a5"
     }
+  },
+  "repository_portability_note": {
+    "change": "Three root-relative navigation links normalized to equivalent relative links for repository navigation checks. No forecast, style, or numerical changes. No new Site deployment.",
+    "published_version": 55,
+    "published_index_sha256": "71ff6da36f69e2a54aff3b1e9592f9e1b396858a22e36f36a7e1c9b0b11f5cdb",
+    "native_receipt": "publication-n202-full163.json",
+    "hosted_verification_field": "Original build-time status retained; native publication is recorded separately."
   }
 }
