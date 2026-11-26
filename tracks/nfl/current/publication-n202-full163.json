@@ -1,0 +1,20 @@
+{
+  "schema": "sports-edge-lab.nfl.full163.native-publication.v1",
+  "status": "succeeded",
+  "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n202/",
+  "version_number": 57,
+  "source_commit_sha": "d0c1c1c4c5e865d0a1da781119c605465b3b59fd",
+  "deployment_id": "appgdep_6b078f74dcc88191b9c8a9e7d3497891",
+  "version_id": "appgprj_6b00eaef66108191a50d8b77fa03ba36~appgver_0ac2a146e27c81918087e82af2f6ae8e",
+  "updated_at": "2026-11-26T01:46:35.406683+00:00",
+  "asset_count": 360,
+  "archive_sha256": "sha256:98e4531db363b82599242ca1d518df4df700d359f38a2d712fd5a33fedfdc80e",
+  "public_snapshot_sha256": "951100a8f72c22210e1c10d75d166211443976960ff992d434f30e825b052ebd",
+  "browser_verification": "UNVERIFIED_NO_CUA_TOOL",
+  "verification_basis": "Native Sites publication succeeded. Build-time verification file remains the original prepublication receipt. Existing repository hosted-browser checks are tracked separately.",
+  "corrections": [
+    "All completed-game records reconcile to 163",
+    "Circa timing depends on the five selected games under official Rules 7–8",
+    "Mobile table wrappers scroll within the viewport"
+  ]
+}

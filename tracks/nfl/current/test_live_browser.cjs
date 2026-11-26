@@ -55,6 +55,29 @@ function verifyHostedHtml(observed, source, context) {
   const receipt = JSON.parse(fs.readFileSync(path.join(root, "publication.json"), "utf8"));
   const historyReceipt = JSON.parse(fs.readFileSync(path.join(root, "publication-n175.json"), "utf8"));
   const data = JSON.parse(fs.readFileSync(path.join(root, "data.json"), "utf8"));
+  const snapshot = JSON.parse(fs.readFileSync(path.join(root, "week-12-field-notes/n202/snapshot.json"), "utf8"));
+  const population = snapshot.completed_population;
+  const completed = population.completed;
+  assert(Number.isInteger(completed) && completed >= 163, "Completed census cannot fall below its verified baseline");
+  const completedIds = population.games.map(g=>g.game_id).sort();
+  assert.equal(completedIds.length,completed); assert.equal(new Set(completedIds).size,completed);
+  assert.equal(digest(Buffer.from(JSON.stringify(completedIds))),population.manifest_sha256,"Immutable completed-game manifest changed");
+  for(const row of snapshot.ordinary_performance){
+    for(const [score,field] of [[row.selected,row.target],[row.earlier_week_replay,row.target+"_replay"]]){
+      const grades={WIN:0,LOSS:0,PUSH:0,UNRESOLVED:0};
+      for(const game of population.games){assert(game[field] in grades,"Missing completed-game grade");grades[game[field]]++;}
+      assert.equal(score.completed,completed);
+      assert.equal(score.wins+score.losses+score.settlement_pushes+score.unresolved,completed);
+      assert.deepEqual(grades,{WIN:score.wins,LOSS:score.losses,PUSH:score.settlement_pushes,UNRESOLVED:score.unresolved});
+      if(score.full_population_champion)assert.equal(score.unresolved,0);
+    }
+  }
+  assert.equal(snapshot.circa.inherited_status_authoritative,false);
+  for(const card of snapshot.cards){
+    assert.equal(new Set(card.picks.map(p=>p.game_id)).size,5);
+    const deadline=[snapshot.circa.weekly_deadline_utc,...card.picks.map(p=>snapshot.games.find(g=>g.id===p.game_id).kickoff_utc)].sort()[0];
+    assert.equal(card.deadline_utc,deadline,"Circa deadline must use the earliest selected kickoff and weekly cap");
+  }
   const base = new URL(receipt.public_url);
   assert.equal(base.protocol, "https:");
   assert(base.hostname.endsWith(".alv-mendizabal.chatgpt.site"), "Publication must use the owner's public Site origin");
@@ -135,45 +158,60 @@ function verifyHostedHtml(observed, source, context) {
     page.on("console", message => { if (message.type() === "error") report.console_errors.push({ width, text: message.text(), location: message.location() }); });
     const text = selector => page.locator(selector).innerText();
     const count = (selector, expected) => page.locator(selector).count().then(actual => assert.equal(actual, expected, selector));
-    const noOverflow = async () => { const layout = await page.evaluate(() => ({ width: window.innerWidth, scroll: document.documentElement.scrollWidth, outside: [...document.querySelectorAll("main *, header *")].filter(e => e.getBoundingClientRect().right > innerWidth + 1 && !e.closest(".scroll")).slice(0, 8).map(e => [e.tagName, e.id, e.className, e.getBoundingClientRect().right]) })); assert(layout.scroll <= layout.width + 1, JSON.stringify(layout)); };
-    await check(`${width}px: N202 ordinary policy and V13 show all 16 matchups, 334 public assets, 11 phone graphics and independent record disclosures`, async () => {
-      await page.goto(new URL("week-12-field-notes/", base).href, {waitUntil:"domcontentloaded"});
-      assert.match(await text(".dateline"), /N202/);
-      await count("#ordinary .scroll:first-of-type tbody tr", 16);
-      await count("#latest-forecasts tbody tr",16);
-      assert.match(await text("#ordinary"), /84–66.*150 decisive/);
-      assert.match(await text("#ordinary"), /61–89.*150 decisive/);
-      assert.match(await text("#ordinary"), /82–70.*152 decisive/);
-      assert.match(await text("#ordinary"), /75–77.*152 decisive/);
-      assert.match(await text("#ordinary"), /Kickoff passed · no N202 pick/);
-      assert.match(await text("#ordinary"), /672 priced direct binary contracts/);
-      assert.match(await text("#latest-forecasts"), /N201 pregame archive/);
-      assert.match(await text("#latest-circa"), /V13 distribution · still-open games/);
-      assert.match(await text("#latest-circa"), /Availability-family research policy/);
-      assert.match(await text("#markets"), /1,598 pregame lines/);
-      await count("#latest-circa details",3);
-      await count("#latest-circa details:nth-of-type(2) tbody tr",30);
-
-      assert.match(await text("#ordinary"), /2026 games selected/);
-      assert.match(await text("#ordinary"), /earlier-week replay/i);
-      assert.match(await text("#ordinary"), /70% confidence subset/i);
-      assert.match(await text("#latest-circa"), /Standing contest policy/);
-      await count("#phone img[src^='N202-public-']",11);
-      await page.selectOption("#day","Thursday");
-      await count("article.game:visible",3);
-      await page.selectOption("#day","all");
-      await count("article.game:visible",16);
-      for(const venue of ["draftkings","kalshi","polymarket"]){
-        await page.selectOption("#venue",venue);
-        await count("[data-venue]:visible tbody tr",16);
+    const noOverflow = async () => { const layout = await page.evaluate(() => ({ width: window.innerWidth, scroll: document.documentElement.scrollWidth, outside: [...document.querySelectorAll("main *, header *")].filter(e => e.getBoundingClientRect().right > innerWidth + 1 && !e.closest(".scroll, .table-scroll")).slice(0, 8).map(e => [e.tagName, e.id, e.className, e.getBoundingClientRect().right]) })); assert(layout.scroll <= layout.width + 1, JSON.stringify(layout)); };
+    await check(`${width}px: full completed population, every current outlook, Circa rules and phone cards`, async () => {
+      await page.goto(new URL("week-12-field-notes/n202/",base).href,{waitUntil:"domcontentloaded"});
+      await page.locator("#games .game").first().waitFor();
+      await count("#games .game",snapshot.games.length);
+      await count("#completed-games tr",completed);
+      const actualIds=await page.evaluate(()=>data.completed_population.games.map(g=>g.game_id).sort());
+      assert.deepEqual(actualIds,completedIds,"Every completed identity must reach the rendered page");
+      for(const row of snapshot.ordinary_performance){
+        assert((await text("#performance")).includes(`${row.selected.wins} wins`));
+        assert((await text("#performance")).includes(`of ${completed} completed games`));
+        assert((await text("#performance")).includes(`${row.earlier_week_replay.wins} wins`));
       }
-      await count("#availability details.health",16);
-      await count("#availability .health-grid article",32);
-      await noOverflow();
-      await page.locator('a[href="n202-weekly/"]').first().click();
-      await count("#ordinary .grid article",16);
-      assert.match(await text("main"), /N202/);
-      await noOverflow();
+      assert.doesNotMatch(await text("#performance"), /150 decisive|152 decisive|full-population champion withheld/i);
+      await page.selectOption("#basis","roster");
+      assert.match(await text("#games"),/No new pregame roster issue after kickoff/);
+      await page.selectOption("#scope","remaining");
+      await count("#games .game",snapshot.games.filter(g=>!g.started_at_snapshot).length);
+      await page.selectOption("#scope","thanksgiving");
+      await count("#games .game",snapshot.games.filter(g=>g.kickoff_utc>="2026-11-26T08:00:00"&&g.kickoff_utc<"2026-11-27T08:00:00").length);
+      await page.selectOption("#scope","all");await page.fill("#search","Bears");await count("#games .game",1);
+      await page.fill("#search","");await page.selectOption("#sort","spread");await count("#games .game",snapshot.games.length);
+      await page.selectOption("#sort","kickoff");
+      const displayTime=x=>new Intl.DateTimeFormat('en-US',{timeZone:'America/Los_Angeles',month:'short',day:'numeric',hour:'numeric',minute:'2-digit',timeZoneName:'short'}).format(new Date(x));
+      for(const card of snapshot.cards){
+        await page.selectOption("#circa-basis",card.id);
+        await count("#circa-five .pick",5);await count("#alternatives tr",card.alternatives.length);
+        assert((await text("#circa-description")).includes(displayTime(card.deadline_utc)));
+        assert.match(await text("#circa-description"),/account activity was not queried/);
+      }
+      await page.selectOption("#circa-basis","circa_card_points");
+      await count("#phone img",7);await noOverflow();
+      await page.screenshot({path:path.join(output,`full163-${width}.png`),fullPage:true});
+    });
+    await check(`${width}px: retained fieldnotes, availability, venue controls and corrected ordinary record`,async()=>{
+      await page.goto(new URL("week-12-field-notes/",base).href,{waitUntil:"domcontentloaded"});
+      assert.match(await text(".dateline"),/N202/);
+      assert.equal(await page.locator("#ordinary table").first().locator("tbody tr").count(),snapshot.games.length);
+      assert((await text("#ordinary")).toLowerCase().includes(`all ${completed} completed games`));
+      assert.match(await text("#ordinary"),/reconstructed.*saved N202/i);
+      await count("#latest-forecasts tbody tr",snapshot.games.length);
+      assert.match(await text("#latest-forecasts"),/N201 pregame archive/);
+      assert.match(await text("#latest-circa"),/Official Circa Million VIII rules 7–8/);
+      assert.match(await text("#latest-circa"),/Availability-family research policy/);
+      assert.match(await text("#markets"),/1,598 pregame lines/);
+      await count("#latest-circa details",3);await count("#latest-circa details:nth-of-type(2) tbody tr",30);
+      await count("#phone img[src^='N202-public-']",11);
+      await page.selectOption("#day","Thursday");await count("article.game:visible",3);
+      await page.selectOption("#day","all");await count("article.game:visible",snapshot.games.length);
+      for(const venue of ["draftkings","kalshi","polymarket"]){await page.selectOption("#venue",venue);await count("[data-venue]:visible tbody tr",snapshot.games.length);}
+      await count("#availability details.health",16);await count("#availability .health-grid article",32);await noOverflow();
+      await page.goto(new URL("week-12-field-notes/n202-weekly/",base).href,{waitUntil:"domcontentloaded"});
+      await page.locator("#games .game").first().waitFor();await count("#games .game",snapshot.games.length);
+      assert.match(await text("main"),/FULL-163 REVIEW/);await noOverflow();
     });
     await check(`${width}px: N195 official research choices and source-matched comparisons`, async () => {
       await page.goto(new URL('against-the-spread/', base).href, {waitUntil:'domcontentloaded'});
@@ -694,4 +732,5 @@ function verifyHostedHtml(observed, source, context) {
   save();
   console.log(JSON.stringify(report));
 });
+
 

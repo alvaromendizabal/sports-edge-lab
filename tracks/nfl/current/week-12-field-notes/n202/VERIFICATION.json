@@ -1,0 +1,70 @@
+{
+  "release": "N202_PUBLIC_FULL163_OFFICIAL_CIRCA_RULES_REVIEW",
+  "source_return_sha256": "0cfd5c93ba7eabaa95beba35fdc21c52974ce64635ed6a4ca902b5aae0fbde21",
+  "correction_report_sha256": "a73729890dfb34ce79198ec2cd22d85b83c50d483150214023e5791035c03dfe",
+  "correction_integrity_sha256": "986cafb2648e7a82afe8045caa97ed3a2c8e05c0bbcc216d1651e225ad714d4a",
+  "completed_population": 163,
+  "ordinary_unresolved": 0,
+  "restored_games": 11,
+  "selection_status": "FULL_POPULATION_EXPOSED_2026_SELECTION",
+  "source_member_checks": 13,
+  "correction_member_checks": 9,
+  "data_and_control_checks": "PASS",
+  "phone_graphics": "7 generated; representative game, original five and alternatives sheets visually inspected",
+  "browser_rendering": "UNVERIFIED_NO_CUA_TOOL",
+  "hosted_verification": "PENDING",
+  "files": {
+    "N202-Circa-five.png": {
+      "bytes": 191867,
+      "sha256": "75046d8f040eec5cb990a9ac45a0ffb0631da9d48df24abbf3043d5e08debd90"
+    },
+    "N202-Circa-options-1.png": {
+      "bytes": 235697,
+      "sha256": "e7a2929f6adddc2dd5ccaa386acf986448711ff33b68860e8184a79c9f79b103"
+    },
+    "N202-Circa-options-2.png": {
+      "bytes": 219495,
+      "sha256": "966c626240568ae5b78113c4ed696443d910d7f373d3aae44652842c3ccb6832"
+    },
+    "N202-games-1.png": {
+      "bytes": 259958,
+      "sha256": "12c5da872a8b5a4bd7fc76577f8bedadcf5601198e4e8ae0b1643c0fc7cc489a"
+    },
+    "N202-games-2.png": {
+      "bytes": 260133,
+      "sha256": "10f0ffae07b6d13193bbd46fcc0ebb768cebabe79a55fa6c9ad702b3b91d858a"
+    },
+    "N202-games-3.png": {
+      "bytes": 260222,
+      "sha256": "d36d0dc36db57c673ff8cb37a87fd5bcbf3e5ae4acd51d597d2e568c2187c2ff"
+    },
+    "N202-games-4.png": {
+      "bytes": 265504,
+      "sha256": "9fe3188cb94ada2993177f5fda0235675831fc813250e7bde7fe7980ef88c332"
+    },
+    "board.css": {
+      "bytes": 10431,
+      "sha256": "2fb08699d5c99d188a516229b1e6c8504bb9c37d19c2c4b84c8857797611798d"
+    },
+    "board.js": {
+      "bytes": 12664,
+      "sha256": "c08d2d69cdc846226d301eb91f5a8087e4525f934d572d814335c9d4410b573d"
+    },
+    "index.html": {
+      "bytes": 10644,
+      "sha256": "cc7de812289d022d2c79108225a9255a90eb67677004ec0b44fadeeb9d327715"
+    },
+    "snapshot.json": {
+      "bytes": 150754,
+      "sha256": "951100a8f72c22210e1c10d75d166211443976960ff992d434f30e825b052ebd"
+    }
+  },
+  "rules_correction": {
+    "authority": "Circa Million VIII official rules 7\u20138, revised May15 2026",
+    "url": "https://www.circasports.com/wp-content/uploads/2026/05/CircaMillionVIIIContest.2026.pdf",
+    "tests": "Each five deadline equals min(Saturday4pmPT,earliestselectedkickoff); inherited whole-slate status is non-authoritative.",
+    "numerical_forecasts_changed": false,
+    "account_submission_activity": "NOT_QUERIED",
+    "workflow_submission_actions": 0
+  }
+}
