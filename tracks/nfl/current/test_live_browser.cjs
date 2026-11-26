@@ -185,7 +185,7 @@ function verifyHostedHtml(observed, source, context) {
       assert.match(await text("#availability"), /30 club practice pages supplied 301 player rows/);
       assert.match(await text("#record"), /10,754 named candidate columns/);
       assert.match(await text("#record"), /44 one-hour cutoff observations and 264 model indications/);
-      assert.match(await text("#record"), /176 horizon-matched indications across 44 Kansas City–Buffalo contracts/);
+      assert.match(await text("#record"), /176 horizon-matched indications across 44 contracts/);
       await count("#phone img", 7);
       assert.match(await text("#circa"), /before Wednesday’s 5 p.m./);
       assert.match(await text("#roster-estimate-GB-LAR"), /67\.5%/);
