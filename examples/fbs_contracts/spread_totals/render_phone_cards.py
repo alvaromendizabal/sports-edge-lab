@@ -154,6 +154,45 @@ def ranked_card(page, contract, game, rank, y, mode):
     page.text((73, y + 620), f"{alias} · Equality settles {contract['equality_settles']} · {contract['period']}", 32, MUTED, width=1120)
 
 
+def release_status_page(data, directory, digest):
+    """Explain a new research edition without issuing any new forecast."""
+    research = data["release"].get("next_research")
+    if not research:
+        return None
+    execution = data["release"].get("latest_owner_execution", {})
+    page = Page()
+    page.header(data, "RESEARCH STATUS", 1, 1)
+    blocks = [
+        ("LATEST VERIFIED RUN · " + execution.get("release", "UNAVAILABLE"),
+         f"Recorded: {execution.get('new_model_fits', 'Unmeasured')} model fits · "
+         f"{execution.get('new_calibrator_fits', 'Unmeasured')} calibrations",
+         execution.get("summary", "See the verified owner return.")),
+        ("NEXT CAMPAIGN · " + research["release"], "Prepared · awaiting owner launch",
+         research["campaign_summary"]),
+        ("EXPLICIT RESEARCH SPLIT", "2024–25 training · 2026 selection",
+         "Late-2025 games are held out for calibration. Completed 2026 games select the new spread and total models and remain exposed validation. Prospective testing begins after the launch cutoff."),
+        ("FORECASTS SHOWN NOW", "Prior frozen models · November 25 cutoff",
+         "The inherited winner, margin and total forecasts retain their original identities, "
+         "selection rules and source clocks. No new fit or fresh market quote is implied."),
+    ]
+    for index, (label, title, detail) in enumerate(blocks):
+        y = 400 + index * 520
+        page.draw.rounded_rectangle((48, y, 1242, y + 490), radius=22, fill=PANEL, outline=LINE, width=2)
+        page.text((75, y + 30), label, 36, MUTED, True, width=1130)
+        page.text((75, y + 97), title, 48, MINT, True, width=1130, max_lines=2)
+        page.text((75, y + 242), detail, 40, INK, width=1110, max_lines=5, line_gap=11)
+    page.footer(data, f"{data['population']['current_week_games']} weekly games · full forecasts retained",
+                "70% is a research target. No new spread or total accuracy is claimed.")
+    filename = "fbs_release_status.png"
+    info = page.save(directory / filename, {"product": "Spread & Totals", "owner": "fbs",
+                    "release": data["release"]["label"], "science_sha256": digest,
+                    "forecast_as_of": data["clocks"]["forecast_as_of"], "new_fits": 0})
+    return {"file": "graphics/" + filename, "title": "V118 research and execution status",
+            "caption": "Verified prior failure, pending owner campaign and unchanged forecast cutoff",
+            "alt": "V117 recorded zero new fits but global fit accounting is incomplete; V118 awaits owner launch. Existing forecasts retain their November 25 cutoff.",
+            "kind": "release_status", **info}
+
+
 def render(data, directory, scope="week"):
     validate(data)
     directory = Path(directory)
@@ -163,6 +202,9 @@ def render(data, directory, scope="week"):
                    key=lambda g: (g.get("kickoff_utc") or "9999", g["game_id"]))
     by_id = {g["game_id"]: g for g in data["games"]}
     records = []
+    status_page = release_status_page(data, directory, digest)
+    if status_page is not None:
+        records.append(status_page)
     count = max(1, (len(games) + 4) // 5)
     for n in range(count):
         group = games[n * 5:(n + 1) * 5]
