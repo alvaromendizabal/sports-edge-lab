@@ -1,0 +1,463 @@
+{
+  "release": "N208",
+  "scope": "Retrospective playoff replay of 14 preserved held-season components, no refits",
+  "years": [
+    2024,
+    2025
+  ],
+  "unique_games": 26,
+  "policy_target_components": 14,
+  "game_component_scores": 364,
+  "component_rows_per_year": 182,
+  "books": {
+    "settlement": "DraftKings",
+    "price_coverage_targets": 52,
+    "original_model_market_inputs_present": 0,
+    "historical_retrieval_credits": 40
+  },
+  "retrospective_champions_selected_from_this_replay": false,
+  "source_table_sha256": {
+    "POSTSEASON_REPLAY.csv": "e88f58ea1e35b944f2d1f0a96f8c4acfb04e0bec7bccbeca86ef75e1033164b5",
+    "SEASON_DENOMINATORS.csv": "009e42060bed7e11eb2da5760e1f6bbb1188accebd52f44d696ee68fac7dec18",
+    "POINT_ERROR.csv": "15bd28c812e3b99f3a939c3b6321184606e8196b29c2fd3f2c86971c07ef9322",
+    "N204_ATS_POSTSEASON_REPLAY.csv": "eb54a66c7ce7ba7f864630c40a73f3bbd397a14fc3f79fc3f874acaf7e1b3dc0",
+    "N204_ATS_SEASON_DENOMINATORS.csv": "440be8a2ed932117674992a5fed182bc037c0df75f5d414cfa8fead5ef4057b1"
+  },
+  "pooled": [
+    {
+      "target": "Spread",
+      "objective": "Most wins",
+      "public_model_alias": "N208 PyTorch \u00b7 166e8c2e26",
+      "games": 26,
+      "decisive": 25,
+      "wins": 8,
+      "losses": 17,
+      "pushes": 1,
+      "brier": 0.40952879194307484,
+      "book_brier": 0.24752167734406894,
+      "log_loss": 1.1855210532151537
+    },
+    {
+      "target": "Spread",
+      "objective": "Lowest Brier",
+      "public_model_alias": "N204 probability blend \u00b7 df56af898c",
+      "games": 26,
+      "decisive": 25,
+      "wins": 5,
+      "losses": 20,
+      "pushes": 1,
+      "brier": 0.35368302432622456,
+      "book_brier": 0.24752167734406894,
+      "log_loss": 0.9160797941177193
+    },
+    {
+      "target": "Spread",
+      "objective": "Lowest log loss",
+      "public_model_alias": "N204 XGBoost \u00b7 881bd69cdc",
+      "games": 26,
+      "decisive": 25,
+      "wins": 10,
+      "losses": 15,
+      "pushes": 1,
+      "brier": 0.3094943272377791,
+      "book_brier": 0.24752167734406894,
+      "log_loss": 0.9392045488765197
+    },
+    {
+      "target": "Spread",
+      "objective": "Lowest point MAE",
+      "public_model_alias": "N208 TensorFlow \u00b7 3ea2d5ffca",
+      "games": 26,
+      "decisive": 25,
+      "wins": 16,
+      "losses": 9,
+      "pushes": 1,
+      "brier": 0.23348436504409065,
+      "book_brier": 0.24752167734406894,
+      "log_loss": 0.663378778611887
+    },
+    {
+      "target": "Spread",
+      "objective": "Lowest CRPS",
+      "public_model_alias": "N208 Extra Trees \u00b7 9aa7bdd4b5",
+      "games": 26,
+      "decisive": 25,
+      "wins": 15,
+      "losses": 10,
+      "pushes": 1,
+      "brier": 0.24204557354599637,
+      "book_brier": 0.24752167734406894,
+      "log_loss": 0.677013369899181
+    },
+    {
+      "target": "Spread",
+      "objective": "Matched legacy baseline",
+      "public_model_alias": "N205 Extra Trees \u00b7 637123f43b",
+      "games": 26,
+      "decisive": 25,
+      "wins": 15,
+      "losses": 10,
+      "pushes": 1,
+      "brier": 0.2271714947080279,
+      "book_brier": 0.24752167734406894,
+      "log_loss": 0.6462564195551123
+    },
+    {
+      "target": "Spread",
+      "objective": "Matched legacy baseline",
+      "public_model_alias": "N205 TensorFlow \u00b7 585dff8fba",
+      "games": 26,
+      "decisive": 25,
+      "wins": 10,
+      "losses": 15,
+      "pushes": 1,
+      "brier": 0.2991331726208733,
+      "book_brier": 0.24752167734406894,
+      "log_loss": 0.820540786421608
+    },
+    {
+      "target": "Totals",
+      "objective": "Most wins",
+      "public_model_alias": "N208 LightGBM \u00b7 9746e083eb",
+      "games": 26,
+      "decisive": 26,
+      "wins": 11,
+      "losses": 15,
+      "pushes": 0,
+      "brier": 0.2661739609090136,
+      "book_brier": 0.2482678178426876,
+      "log_loss": 0.7274688811768082
+    },
+    {
+      "target": "Totals",
+      "objective": "Brier and log loss",
+      "public_model_alias": "N208 LightGBM \u00b7 b3b2354a73",
+      "games": 26,
+      "decisive": 26,
+      "wins": 12,
+      "losses": 14,
+      "pushes": 0,
+      "brier": 0.26317484136503644,
+      "book_brier": 0.2482678178426876,
+      "log_loss": 0.72154517006814
+    },
+    {
+      "target": "Totals",
+      "objective": "Lowest point MAE",
+      "public_model_alias": "N208 ridge regression \u00b7 cb1dc9ec71",
+      "games": 26,
+      "decisive": 26,
+      "wins": 12,
+      "losses": 14,
+      "pushes": 0,
+      "brier": 0.29925434073893276,
+      "book_brier": 0.2482678178426876,
+      "log_loss": 0.8057332606613354
+    },
+    {
+      "target": "Totals",
+      "objective": "Lowest CRPS",
+      "public_model_alias": "N208 histogram boosting \u00b7 59b217b280",
+      "games": 26,
+      "decisive": 26,
+      "wins": 15,
+      "losses": 11,
+      "pushes": 0,
+      "brier": 0.2559383397227339,
+      "book_brier": 0.2482678178426876,
+      "log_loss": 0.7053126350078822
+    },
+    {
+      "target": "Totals",
+      "objective": "Matched legacy baseline",
+      "public_model_alias": "N205 histogram boosting \u00b7 94a84d58bf",
+      "games": 26,
+      "decisive": 26,
+      "wins": 15,
+      "losses": 11,
+      "pushes": 0,
+      "brier": 0.26794427677118665,
+      "book_brier": 0.2482678178426876,
+      "log_loss": 0.7333476397512199
+    },
+    {
+      "target": "Totals",
+      "objective": "Matched legacy baseline",
+      "public_model_alias": "N205 LightGBM \u00b7 a8ebcd7857",
+      "games": 26,
+      "decisive": 26,
+      "wins": 11,
+      "losses": 15,
+      "pushes": 0,
+      "brier": 0.29187101160196594,
+      "book_brier": 0.2482678178426876,
+      "log_loss": 0.7821716869774495
+    },
+    {
+      "target": "Totals",
+      "objective": "Matched legacy baseline",
+      "public_model_alias": "N205 histogram boosting \u00b7 c88e586d7a",
+      "games": 26,
+      "decisive": 26,
+      "wins": 12,
+      "losses": 14,
+      "pushes": 0,
+      "brier": 0.3241371483943063,
+      "book_brier": 0.2482678178426876,
+      "log_loss": 0.8611059875071473
+    }
+  ],
+  "point_mae": [
+    [
+      "Margin",
+      "N208 TensorFlow \u00b7 3ea2d5ffca",
+      "7.911",
+      "10.995",
+      "9.453"
+    ],
+    [
+      "Total",
+      "N208 ridge regression \u00b7 cb1dc9ec71",
+      "12.759",
+      "13.508",
+      "13.133"
+    ]
+  ],
+  "strict_point_integrity": {
+    "source_sha256": "2c4c2e99be2d40e63374c8c63fb16bd6fcdd5fd0c9a045ff439b4791b2f7b116",
+    "issued_forecasts": 107,
+    "incompatible_raw_point_pairs": 17,
+    "incompatible_point_mae_pairs": 0
+  },
+  "inherited_spread_reproduction": {
+    "checks": 72,
+    "maximum_absolute_error": 3.3306690738754696e-16
+  },
+  "confidence_reconstruction": {
+    "games": 164,
+    "registered_policies": 18,
+    "cutoffs": [
+      0.5,
+      0.525,
+      0.55,
+      0.575,
+      0.6,
+      0.65,
+      0.7
+    ],
+    "comparisons": 252,
+    "source_sha256": "82a84e44e9afff41dee96e637e84bfce2127fb659d21b471ff396794e5db7699",
+    "fixed_equal_family": [
+      {
+        "target": "margin",
+        "cutoff": "0.5",
+        "census": "164",
+        "picks": "164",
+        "wins": "76",
+        "losses": "85",
+        "pushes": "3"
+      },
+      {
+        "target": "margin",
+        "cutoff": "0.525",
+        "census": "164",
+        "picks": "106",
+        "wins": "49",
+        "losses": "54",
+        "pushes": "3"
+      },
+      {
+        "target": "margin",
+        "cutoff": "0.55",
+        "census": "164",
+        "picks": "73",
+        "wins": "35",
+        "losses": "35",
+        "pushes": "3"
+      },
+      {
+        "target": "margin",
+        "cutoff": "0.575",
+        "census": "164",
+        "picks": "31",
+        "wins": "15",
+        "losses": "15",
+        "pushes": "1"
+      },
+      {
+        "target": "margin",
+        "cutoff": "0.6",
+        "census": "164",
+        "picks": "11",
+        "wins": "6",
+        "losses": "4",
+        "pushes": "1"
+      },
+      {
+        "target": "margin",
+        "cutoff": "0.65",
+        "census": "164",
+        "picks": "1",
+        "wins": "1",
+        "losses": "0",
+        "pushes": "0"
+      },
+      {
+        "target": "margin",
+        "cutoff": "0.7",
+        "census": "164",
+        "picks": "0",
+        "wins": "0",
+        "losses": "0",
+        "pushes": "0"
+      },
+      {
+        "target": "total",
+        "cutoff": "0.5",
+        "census": "164",
+        "picks": "164",
+        "wins": "83",
+        "losses": "81",
+        "pushes": "0"
+      },
+      {
+        "target": "total",
+        "cutoff": "0.525",
+        "census": "164",
+        "picks": "77",
+        "wins": "38",
+        "losses": "39",
+        "pushes": "0"
+      },
+      {
+        "target": "total",
+        "cutoff": "0.55",
+        "census": "164",
+        "picks": "26",
+        "wins": "8",
+        "losses": "18",
+        "pushes": "0"
+      },
+      {
+        "target": "total",
+        "cutoff": "0.575",
+        "census": "164",
+        "picks": "3",
+        "wins": "0",
+        "losses": "3",
+        "pushes": "0"
+      },
+      {
+        "target": "total",
+        "cutoff": "0.6",
+        "census": "164",
+        "picks": "1",
+        "wins": "0",
+        "losses": "1",
+        "pushes": "0"
+      },
+      {
+        "target": "total",
+        "cutoff": "0.65",
+        "census": "164",
+        "picks": "0",
+        "wins": "0",
+        "losses": "0",
+        "pushes": "0"
+      },
+      {
+        "target": "total",
+        "cutoff": "0.7",
+        "census": "164",
+        "picks": "0",
+        "wins": "0",
+        "losses": "0",
+        "pushes": "0"
+      }
+    ],
+    "largest_samples_at_70_percent": {
+      "margin": {
+        "picks": "16",
+        "wins": "4",
+        "losses": "12",
+        "pushes": "0"
+      },
+      "total": {
+        "picks": "34",
+        "wins": "20",
+        "losses": "14",
+        "pushes": "0"
+      }
+    }
+  },
+  "week12_quote_check": {
+    "model_issue_utc": "2026-11-26T20:30:24.657315+00:00",
+    "quote_observed_utc": "2026-11-26T20:40:25.097432+00:00",
+    "games": 14,
+    "source_sha256": "ee30c979b9334c1bda73de732233ed7c7540796186a1e36540905b42b99e9d2a",
+    "priced_targets": 28,
+    "paired_history": {
+      "margin": {
+        "full_game_count": 164,
+        "decisive": 161,
+        "paired_outcomes": {
+          "n208_wins": 98,
+          "incumbent_wins": 97,
+          "gained": 39,
+          "lost": 38,
+          "both_right": 59,
+          "both_wrong": 25,
+          "push": 3
+        },
+        "decisive_winrate_delta": 0.006211180124223602,
+        "winrate_percentile95": [
+          -0.08024804001081373,
+          0.08620689655172414
+        ],
+        "brier_delta_new_minus_old": 0.028020632540586468,
+        "brier_percentile95": [
+          -0.004660038368952472,
+          0.06336721609283105
+        ],
+        "bootstrap_replicates": 20000
+      },
+      "total": {
+        "full_game_count": 164,
+        "decisive": 164,
+        "paired_outcomes": {
+          "n208_wins": 98,
+          "incumbent_wins": 95,
+          "gained": 37,
+          "lost": 34,
+          "both_right": 61,
+          "both_wrong": 32
+        },
+        "decisive_winrate_delta": 0.018292682926829267,
+        "winrate_percentile95": [
+          -0.07647058823529412,
+          0.1069182389937107
+        ],
+        "brier_delta_new_minus_old": -0.015021542533323932,
+        "brier_percentile95": [
+          -0.02995275271618402,
+          -0.0003741675469902082
+        ],
+        "bootstrap_replicates": 20000
+      }
+    }
+  },
+  "n209_qualification": {
+    "status": "NATIVE_QUALIFICATION_UNDERWAY",
+    "status_as_of_utc": "2026-11-26T21:10:00Z",
+    "executable_sha256": "a6786abd469c9bf4e0560b4c7c84f0f2ed661fe48b4baa5fb71579d7a97af284",
+    "executable_bytes": 106633603,
+    "local_regression_passes_by_release": {
+      "N209": 69,
+      "N208": 56,
+      "N207": 81
+    },
+    "planned_full_fit_units": 304,
+    "planned_full_optimizer_completions": 3952,
+    "assistant_full_owner_launches": 0
+  }
+}

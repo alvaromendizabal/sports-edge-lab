@@ -1,5 +1,13 @@
 # NFL game day and research dashboard
 
+## 2024 and 2025 playoff results
+
+[Open the postseason tables, confidence checks and market-price comparison](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n208/postseason/)
+
+The independent reconstruction graded 14 frozen model components on every playoff game in both seasons, 364 grades across 26 games. The spread model selected for the most wins went **8–17–1** and the spread probability model with the lowest Brier error went **5–20–1**. The corresponding totals models went **11–15** and **12–14**. The original 272-game regular-season and reconstructed 285-game full-season results are available per season. These forecasts used the original model inputs. Recovered DraftKings spreads and totals supplied the evaluation strikes.
+
+The fixed pre-2026 reference policy made zero calls at 70% probability. The two exposed 2026 highest-win successors gained one spread win and three total wins over their predecessors; both paired week-level win-rate intervals included zero. The public table retains the original 12:40 p.m. Pacific quote for each of 28 Week 12 sides and totals.
+
 ## N208 verified owner results
 
 **[Open the N208 Thanksgiving forecasts](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n208/)** · [All 16 games](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n208/#slate) · [Model comparison](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n208/#performance) · [Sportsbook and exchange comparisons](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n208/#markets) · [Original Circa five, remaining five and all 32 sides](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n208/#circa) · [Eleven phone cards](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n208/#phone)

@@ -311,6 +311,30 @@ function verifyHostedHtml(observed, source, context) {
     const text = selector => page.locator(selector).innerText();
     const count = (selector, expected) => page.locator(selector).count().then(actual => assert.equal(actual, expected, selector));
     const noOverflow = async () => { const layout = await page.evaluate(() => ({ width: window.innerWidth, scroll: document.documentElement.scrollWidth, outside: [...document.querySelectorAll("main *, header *")].filter(e => e.getBoundingClientRect().right > innerWidth + 1 && !e.closest(".scroll, .table-scroll")).slice(0, 8).map(e => [e.tagName, e.id, e.className, e.getBoundingClientRect().right]) })); assert(layout.scroll <= layout.width + 1, JSON.stringify(layout)); };
+    await check(`${width}px: retrospective NFL postseason results and complete annual denominators`,async()=>{
+      await page.goto(new URL("week-12-field-notes/n208/",base).href,{waitUntil:"domcontentloaded"});
+      await page.getByRole("link",{name:"How N208 performed in the 2024 and 2025 playoffs",exact:true}).click();
+      await page.getByRole("heading",{name:"How the models graded in the playoffs",exact:true}).waitFor();
+      await count("#results tbody tr",14);
+      assert.match(await text("main"),/5–20–1/);
+      await page.getByText("Each postseason separately · 13 games per year",{exact:true}).click();
+      await page.getByText("Regular season and playoffs · 285 games per year",{exact:true}).click();
+      await count("#annual details tbody tr:visible",56);
+      const proof=await (await page.request.get(new URL("week-12-field-notes/n208/postseason/proof.json",base).href)).json();
+      assert.deepEqual([proof.unique_games,proof.policy_target_components,proof.game_component_scores],[26,14,364]);
+      assert.equal(proof.n209_qualification.status,"NATIVE_QUALIFICATION_UNDERWAY");
+      assert.match(await text("#qualification"),/bounded native qualification/);
+      assert(proof.pooled.every(r=>r.games===26 && r.wins+r.losses+r.pushes===26 && r.decisive===r.wins+r.losses));
+      await page.getByText("Seven confidence thresholds for the original fixed policy",{exact:true}).click();
+      await count("#confidence tbody tr:visible",14);
+      await page.getByText("All 28 prices at 12:40 p.m. and their break-even points",{exact:true}).click();
+      await count("#price tbody tr:visible",28);
+      assert.deepEqual([proof.confidence_reconstruction.comparisons,proof.week12_quote_check.priced_targets],[252,28]);
+      assert.deepEqual([proof.strict_point_integrity.issued_forecasts,proof.strict_point_integrity.incompatible_raw_point_pairs],[107,17]);
+      await noOverflow();
+      await page.goto(new URL("week-12-field-notes/n208/postseason/",base).href,{waitUntil:"domcontentloaded"});
+      await page.screenshot({path:path.join(output,`n208-playoffs-${width}.png`)});
+    });
     await check(`${width}px: N208 Thursday publication, specialist roles and full official Circa worksheet`, async () => {
       const res=await page.goto(new URL("week-12-field-notes/n208/",base).href,{waitUntil:"domcontentloaded"});
       assert.equal(res.status(),200);
