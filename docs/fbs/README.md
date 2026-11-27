@@ -1,3 +1,15 @@
+<!-- FBS_V120_SPREAD_TOTALS_START -->
+## November 27 — V120 prepared; weather research pending
+
+[Open Spread & Totals](spread-totals/index.html) · [Full release evidence](spread-totals/README.md) · [All 69 dated weekly games](spread-totals/weekly_games.md) · [iPhone graphics](spread-totals/graphics/)
+
+**V120 is verified and prepared, not executed.** The latest observed V119 Spread & Totals branch reports 1,176 completed qualified jobs, including 808 new base fits and 1,616 new calibrations. The overall owner return remained unfinished during legacy frontier validation and recovery work. The earlier audit below keeps its own historical date.
+
+The prepared next run adopts completed work, refreshes a finite set of selected model roles, and registers **up to 48 weather-and-venue fit jobs**. It does not restart the full 1,176-job campaign. Weather forecasts require source and availability clocks; a stadium dome flag does not prove a retractable roof's position for a specific game. Weather results and refreshed predictions remain pending.
+
+Every displayed forecast, original model, performance metric and market observation retains the **November 25 cutoff**. The public snapshot still has **895 season games and 69 games in the November 23–29 Pacific week**. The pre-update hosting check verified the November 26 version 49 deployment; the current hosting receipt governs the latest publication. This source preparation does not refresh forecasts or promote a scientific model.
+<!-- FBS_V120_SPREAD_TOTALS_END -->
+
 <!-- FBS_V119_SPREAD_TOTALS_START -->
 ## November 26 — V119 native verified; November 25 forecasts retained
 

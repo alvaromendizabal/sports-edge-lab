@@ -161,6 +161,7 @@ def release_status_page(data, directory, digest):
         return None
     execution = data["release"].get("latest_owner_execution", {})
     recovery = data["release"].get("recovery_audit")
+    weather = research.get("weather_campaign")
     page = Page()
     page.header(data, "RESEARCH STATUS", 1, 1)
     blocks = [
@@ -182,6 +183,18 @@ def release_status_page(data, directory, digest):
          "The inherited winner, margin and total forecasts retain their original identities, "
          "selection rules and source clocks. No new fit or fresh market quote is implied."),
     ]
+    if weather:
+        blocks[0] = (
+            "LATEST OBSERVED RUN · " + execution.get("release", "UNAVAILABLE"),
+            f"{execution.get('completed_qualified_jobs', 'Unmeasured')} qualified fit jobs completed",
+            f"{execution.get('new_model_fits', 'Unmeasured')} new base fits and "
+            f"{execution.get('new_calibrator_fits', 'Unmeasured')} calibrations were recorded in the branch. "
+            "The overall return remained unfinished. This page publishes no refreshed forecast.")
+        blocks[1] = (
+            "PREPARED · NOT EXECUTED · " + research["release"],
+            f"{weather['registered_base_fit_jobs']} weather fit jobs registered",
+            "Weather and dome/open-roof context require source clocks. Saved selected models "
+            "are reused; the full earlier campaign is not restarted. Weather results remain pending.")
     for index, (label, title, detail) in enumerate(blocks):
         y = 400 + index * 520
         page.draw.rounded_rectangle((48, y, 1242, y + 490), radius=22, fill=PANEL, outline=LINE, width=2)
@@ -196,7 +209,8 @@ def release_status_page(data, directory, digest):
                     "forecast_as_of": data["clocks"]["forecast_as_of"], "new_fits": 0})
     return {"file": "graphics/" + filename, "title": research["release"] + " research and execution status",
             "caption": "Verified saved work, pending owner campaign and unchanged forecast cutoff",
-            "alt": (f"{execution.get('release', 'Prior run')} saved {recovery['saved_base_fit_states']} fits and "
+            "alt": (f"{research['release']} prepared, not executed; {weather['registered_base_fit_jobs']} weather fit jobs registered. Existing forecasts keep their November 25 cutoff."
+                    if weather else f"{execution.get('release', 'Prior run')} saved {recovery['saved_base_fit_states']} fits and "
                     f"{recovery['saved_calibration_components']} calibration components; "
                     f"{research['release']} is native verified. Forecasts retain their November 25 cutoff."
                     if recovery else "Prepared campaign; existing forecasts retain their original cutoff."),

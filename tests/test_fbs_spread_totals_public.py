@@ -224,6 +224,36 @@ class PublicBoardTests(unittest.TestCase):
         self.rejected(lambda d: d["provenance"].append({"label": "s3://private/bucket"}), "private material")
         self.rejected(lambda d: d["models"]["P06"].update(feature_names=["private_transform"]), "public scope")
 
+    def test_prepared_weather_cannot_claim_execution_or_roof_certainty(self):
+        d = fixture()
+        d["release"]["next_research"] = {
+            "release": "V120", "status": "PREPARED_AWAITING_OWNER_LAUNCH", "scope": ["margin", "total"],
+            "training_seasons": [2024, 2025], "selection_season": 2026,
+            "selection_regime": "2026_EXPOSED_VALIDATION", "prior_test_exposure_disclosed": True,
+            "prospective_test": "Invented future cutoff.", "forecast_snapshot_replaced": False,
+            "new_fits_reported": 0, "new_calibrations_reported": 0,
+            "campaign_summary": "Invented prepared weather branch.",
+            "weather_campaign": {"status": "REGISTERED_NOT_EXECUTED", "registered_base_fit_jobs": 48,
+                "completed_base_fit_jobs": 0, "new_calibration_fits": 0, "forecast_rows_published": 0,
+                "source_summary": "Archived forecasts keep their availability assumptions.",
+                "roof_semantics": "Structural roof metadata does not prove actual retractable-roof position.",
+                "comparison_scope": "Finite comparison on identical rows."}}
+        validate(d)
+        rendered = build(d)
+        self.assertIn("Weather and stadium research", rendered)
+        for key, value, message in (
+            ("completed_base_fit_jobs", 1, "cannot claim fits or forecasts"),
+            ("new_calibration_fits", 1, "cannot claim fits or forecasts"),
+            ("forecast_rows_published", 1, "cannot claim fits or forecasts"),
+            ("registered_base_fit_jobs", True, "finite job count"),
+            ("roof_semantics", "", "qualifications required"),
+            ("status", "COMPLETED", "must remain unexecuted"),
+        ):
+            changed = deepcopy(d)
+            changed["release"]["next_research"]["weather_campaign"][key] = value
+            with self.subTest(key=key), self.assertRaisesRegex(ValueError, message):
+                validate(changed)
+
     def test_saved_recovery_counts_cannot_claim_finished_science(self):
         d = fixture()
         d["release"]["recovery_audit"] = {
