@@ -2,7 +2,7 @@
 
 **[Open the Week 12 dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n209/)** · [All 16 matchups](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n209/#slate) · [Model records](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n209/#performance) · [Seven phone graphics](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n209/#phone) · [Circa card and all 32 sides](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n209/#circa)
 
-The November 26 N209 issue at **3:58 p.m. Pacific** covers 13 games before kickoff. The other three retain their original pregame picks. The dashboard shows each available model's winner, spread and total selections alongside the projected margin, combined score, lines and issue times. Later reconstructions have separate labels.
+The November 26 N209 issue at **3:58 p.m. Pacific** covers 13 games before kickoff. The other three retain their original pregame picks. The dashboard shows the winner model's probability, both spread and total models’ picks, the projected margin and combined score, and the original lines and issue times. Later reconstructions have separate labels.
 
 On the 165 completed 2026 games used for ordinary spread and total selection, the most-wins spread model went **98–64–3** and the totals model **99–66**. Both tied their predecessors in wins when rescored on the same games. Spread Brier error fell from 0.27928 to 0.24725. When model selection used only earlier weeks, the best replay went **84–78–3** on spreads and **91–74** on totals. Thirteen upcoming games were locked for prospective grading.
 
