@@ -1,0 +1,339 @@
+{
+  "all_game_rows_included": 3910,
+  "browser_render_status": "TO_BE_VERIFIED_IN_CURRENT_REVIEW",
+  "captured_native_contract_count_retained_privately": 10347,
+  "cohorts": {
+    "ncaam": {
+      "qualified_spread_totals_champions": 0,
+      "source_rows": 1964,
+      "verified_current_forecasts": 0
+    },
+    "ncaaw": {
+      "qualified_spread_totals_champions": 0,
+      "source_rows": 1946,
+      "verified_current_forecasts": 0
+    }
+  },
+  "current_publication": {
+    "github_source_review": "NCAA_ONLY_FOLLOWUP_TO_PR_385",
+    "historical_pr_385_head": "e9bb6ebff05e27060f713f74c861c42e3ff7e9aa",
+    "page_deployment_label": "DERIVED_FROM_CURRENT_PAGE_ORIGIN_ONLY",
+    "scientific_completion_claimed": false,
+    "source_commit_and_hosting_receipt": "RECORDED_AFTER_SOURCE_VERIFICATION"
+  },
+  "current_review": {
+    "current_AWS_state": "LIVE_OWNER_RETURN_POINTER_AND_STATUS_READ",
+    "latest_fully_verified_owner_return": "R52",
+    "live_owner_observed_at": "2026-11-27T19:16:32.116554+00:00",
+    "newer_failure_cause": "COMPATIBLE_COORDINATOR_LOCK_TIMEOUT",
+    "no_new_source_retrieval_or_model_fitting_by_this_review": true,
+    "prior_qualification_asof": "2026-11-26T03:25:46.951523+00:00",
+    "reported_execution": "B063R52_FAILURE_CONFIRMED_IN_LIVE_OWNER_EVIDENCE",
+    "reported_execution_date_pacific": "2026-11-27",
+    "reported_execution_release": "B063R52",
+    "reviewed_at_utc": "2026-11-27T19:21:31.710081+00:00",
+    "week_captured_men_rows": 363,
+    "week_captured_rows": 735,
+    "week_captured_women_rows": 372,
+    "week_current_forecasts_verified": 0,
+    "week_end_pacific": "2026-11-29",
+    "week_official_completeness": false,
+    "week_start_pacific": "2026-11-23",
+    "week_timezone": "America/Los_Angeles"
+  },
+  "deployed": null,
+  "deployment_performed_by_reporting_builder": false,
+  "deployment_status": "CURRENT_DELIVERY_VERIFIED_SEPARATELY",
+  "market_snapshot": {
+    "contracts": 10347,
+    "events": 697,
+    "fresh_market_retrieval_by_this_update": false,
+    "historical_requested_seasons_coverage_proved": false,
+    "observation_max": "2026-11-26T00:29:38.621815+00:00",
+    "observation_min": "2026-11-26T00:29:38.435442+00:00",
+    "qualified_model_contract_probabilities": 0,
+    "reused_unchanged_for_this_update": true
+  },
+  "native_coverage": [
+    {
+      "cursor_present": true,
+      "events": 200,
+      "full_census_claimed": false,
+      "observed_at": "2026-11-26T00:29:38.614010+00:00",
+      "series": "KXNCAAMBSPREAD",
+      "source_sha256": "187d9ef312fcb92dbe11ed03c96a0d3e741f92ee864611fc55efff8f4e72e6d1"
+    },
+    {
+      "cursor_present": true,
+      "events": 200,
+      "full_census_claimed": false,
+      "observed_at": "2026-11-26T00:29:38.621815+00:00",
+      "series": "KXNCAAMBTOTAL",
+      "source_sha256": "36dae11ce21e5686280583f06e2d293facaf2fc52ce234949c9b2449a93028e5"
+    },
+    {
+      "cursor_present": false,
+      "events": 145,
+      "full_census_claimed": false,
+      "observed_at": "2026-11-26T00:29:38.435442+00:00",
+      "series": "KXNCAAWBSPREAD",
+      "source_sha256": "8c3b73141c2f6ec4abda607066c8d1fd47eff540d88f5ae2c04e4a4f0268bfeb"
+    },
+    {
+      "cursor_present": false,
+      "events": 152,
+      "full_census_claimed": false,
+      "observed_at": "2026-11-26T00:29:38.609170+00:00",
+      "series": "KXNCAAWBTOTAL",
+      "source_sha256": "664c9754ed7c37354558745c59a38003c871f85a886a01818324648ca5d8b192"
+    }
+  ],
+  "owner_return": {
+    "archive_members_crc_verified": 427,
+    "bytes": 160531287,
+    "completed_at": "2026-11-27T03:18:21.582431+00:00",
+    "current_physical_fit_reuses": 0,
+    "elapsed_seconds": 15463.508455767002,
+    "failed_stage": "04b_incremental_model_source_refresh",
+    "failure": {
+      "message": "COMPATIBLE_COORDINATOR_LOCK_TIMEOUT",
+      "type": null
+    },
+    "historical_reuse_scope": "HISTORICAL_RESULTS_RECOVERED_OR_REUSED_AT_STAGE_LEVEL; NOT_NEW_OPTIMIZATIONS_OR_CURRENT_PHYSICAL_FIT_REUSES",
+    "independent_archive_verified_at": "2026-11-27T19:18:46.217923+00:00",
+    "independent_full_integrity_verified_at": "2026-11-27T19:22:40.308973+00:00",
+    "independent_payloads_verified": 427,
+    "latest_local_and_s3_controls_agree": true,
+    "new_owner_fits": 0,
+    "new_owner_fits_scope": "NEW_VERIFIED_FITS_AS_RECORDED_IN_OWNER_POINTER",
+    "new_qualified_current_forecasts_in_this_review": 0,
+    "new_science_stages_completed": 0,
+    "observed_at": "2026-11-27T19:16:32.116554+00:00",
+    "other_fit_types": {
+      "new_residual_calibration_fits": null,
+      "new_scalar_calibration_fits": null,
+      "new_target_fits": null
+    },
+    "previously_completed_stages_reused": 4,
+    "release": "B063R52",
+    "retained_return_integrity_verified": true,
+    "reused_historical_target_fits": 108,
+    "run_id": "20261126T230000Z_d6159a0f",
+    "science_stages_completed": 4,
+    "science_stages_registered": 21,
+    "scientific_completeness": "FAILED_RESUMABLE",
+    "sha256": "987b853e807a598dd53a7472f72f647953d9abf381b6ea67b519c17fc087e9fc",
+    "source_sha256": "68ad7f0d53bfb1e6fb83cf0a014e5959ac625d47e77e88933b29bde3d5ee18e3",
+    "started_at": "2026-11-26T23:00:38.073810+00:00",
+    "status": "FAILED_PARTIAL_WORK_PRESERVED",
+    "unlisted_archive_members": 0,
+    "verification_scope": "INDEPENDENT_FULL_ARCHIVE_SHA256_CRC_AND_ALL_427_PAYLOAD_SIZE_SHA256_PINS_VERIFIED"
+  },
+  "prepared_at": "2026-11-26T03:25:46.951523+00:00",
+  "preserved_prior_science": {
+    "current_qualified_forecast_established": false,
+    "historical_target_fits_in_prior_R50_return": 108,
+    "new_R51_fit_or_reuse_credit": 0,
+    "same_historical_fits_not_added_across_attempts": true
+  },
+  "previous_verified_return": {
+    "archive_integrity": "FULL_PART_LOGICAL_AND_EVERY_MEMBER_SHA256_CRC_VERIFIED",
+    "completed_at": "2026-11-26T02:31:03.448396+00:00",
+    "failure": {
+      "message": "V112_HISTORICAL_OPERATIONAL_BRIDGE_REQUIRED",
+      "type": "ValueError"
+    },
+    "new_full_population_forecasts": 0,
+    "new_owner_fits": 0,
+    "new_owner_fits_scope": "NEWLY_COMMITTED_TYPED_MODEL_ARTIFACTS_ONLY",
+    "newly_committed_typed_fit_counts": {
+      "empirical_residual_fits": 0,
+      "scalar_calibration_fits": 0,
+      "target_estimator_fits": 0,
+      "unclassified_committed_model_artifacts": 0
+    },
+    "population_status": "SOURCE_POPULATION_NOT_REACHED",
+    "reused_historical_target_fits": 0,
+    "reused_historical_target_fits_scope": "VERIFIED_REUSE_IN_THIS_R51_INVOCATION",
+    "run_id": "20261126T022510Z_7102f6e2",
+    "science_stages_completed": 0,
+    "science_stages_registered": 21,
+    "scientific_completeness": "FAILED_RESUMABLE",
+    "sha256": "5ddcffad4e92a6ddea183c3e6e339ca9820d5ca9a84cb290e4bc7b34d9b6f9b7",
+    "source_sha256": "d71b7344b888c7fcd9f4d68b5f8495ca995b86d57a09d6d4296224e15492c325",
+    "started_at": "2026-11-26T02:25:15.531832+00:00",
+    "status": "FAILED_PARTIAL_WORK_PRESERVED",
+    "uncommitted_estimation": "UNKNOWN_NOT_ASSERTED_ZERO",
+    "unreported_all_workstream_totals": {
+      "failed_model_fits": null,
+      "new_model_fits": null,
+      "registered_context_count": null,
+      "remaining_registered_context_count": null,
+      "strict_refits": null
+    },
+    "verified_archive_members": 327
+  },
+  "private_credentials_included": false,
+  "product": "Spread & Totals",
+  "public_native_contract_rows": 0,
+  "public_projection": true,
+  "public_projection_sha256": "dfbab8e6ed0441dd397c354e11b3acc618f2d5b9cde85cd0b73406fec7dd8cb7",
+  "publication_boundary": "NCAA selected all-game research outputs; no raw native quotes, provider arrays or candidate grids",
+  "publication_history": [
+    {
+      "head_sha": "a716a16cfb4fb62be1ed7740f228bc5a277bbf0c",
+      "historical_observation_only": true,
+      "observed_at_utc": "2026-11-26T01:01:00Z",
+      "scope": "EARLIER_SOURCE_PUBLICATION_OBSERVATION_ONLY"
+    },
+    {
+      "current_commit_identity_and_status": "REFER_TO_SEPARATE_PUBLICATION_RECEIPT",
+      "draft": true,
+      "head_sha": "a716a16cfb4fb62be1ed7740f228bc5a277bbf0c",
+      "historical_observation_only": true,
+      "mergeable": false,
+      "merged": false,
+      "metadata_recorded_at_utc": "2026-11-26T03:09:41.114Z",
+      "number": 385,
+      "scope": "DATED_PREPUBLICATION_BRANCH_OBSERVATION_ONLY",
+      "state": "open",
+      "url": "https://github.com/alvaromendizabal/sports-edge-lab/pull/385"
+    }
+  ],
+  "publication_status": "REVIEW_SOURCE_PUBLICATION_SEPARATE_FROM_RESEARCH",
+  "r52_preparation": {
+    "engineering_evidence": {
+      "acceptance": {
+        "bytes": 139373,
+        "name": "R52_ENGINEERING_ACCEPTANCE.json",
+        "sha256": "7ac18aeb7515f46f1034412ff72305355024a190bee5c6e200e47b7910237a57"
+      },
+      "distinct_observed_test_ids": 367,
+      "fresh_reports": [
+        {
+          "completed_at": "2026-11-26T03:10:57Z",
+          "count": 362,
+          "reference": {
+            "bytes": 187940,
+            "name": "e2a1dc06f56208db_R52_NATIVE_STARTUP_REPORT.json",
+            "sha256": "e2a1dc06f56208dbc3074202dace482b136e5606c9198d6e81ee353a95560979"
+          },
+          "schema": "sel.ncaa.r52.observed_native_startup.v1"
+        },
+        {
+          "completed_at": "2026-11-26T03:11:40Z",
+          "count": 5,
+          "reference": {
+            "bytes": 19119,
+            "name": "a8a2ef14f745b036_R52_NATIVE_WITNESSES_REPORT.json",
+            "sha256": "a8a2ef14f745b036835d7fd498d73b4a8f1cab624bc038a44b0af6a05d96daae"
+          },
+          "schema": "sel.ncaa.r52.observed_native_engineering_witnesses.v1"
+        }
+      ],
+      "full_import_consumer": {
+        "authentication_mocked": false,
+        "current_inputs_runtime_and_fresh_remote_readbacks_still_required": true,
+        "fitted_model_import_performed": false,
+        "full_method_completed": true,
+        "pinned_historical_fixtures_only": true,
+        "reference": {
+          "bytes": 6272941,
+          "name": "67c7d28d5052a3f0_R52_ACTUAL_STORE_PREPARE_IMPORT.json",
+          "sha256": "67c7d28d5052a3f07c48cb5aa74cc976c44680b8036c7c27830b719e12a17dd3"
+        }
+      },
+      "observed_pass_cases": 367,
+      "owner_research_executions": 0,
+      "owner_scientific_fit_credit": 0,
+      "production_fit_throughput_qualified": false,
+      "scientific_completion_certified": false,
+      "source": {
+        "bytes": 77508626,
+        "sha256": "68ad7f0d53bfb1e6fb83cf0a014e5959ac625d47e77e88933b29bde3d5ee18e3"
+      },
+      "status": "PASS_CURRENT_SOURCE_ENGINEERING_ONLY"
+    },
+    "evidence_asof": "2026-11-26T03:25:46.951523+00:00",
+    "main_owner_run_launched_at_preparation": false,
+    "native_source_qualification": "PASS_CURRENT_SOURCE_ENGINEERING_ONLY",
+    "new_forecasts": 0,
+    "new_scientific_fits": 0,
+    "planned_base_validation_context_admission_ceiling": 384,
+    "planned_contexts_are_completed_fits": false,
+    "prospective_v10_extra_stages": "EXPLICITLY_DEFERRED",
+    "prospective_v10_extra_work_admitted_by_registration": 0,
+    "source_sha256": "68ad7f0d53bfb1e6fb83cf0a014e5959ac625d47e77e88933b29bde3d5ee18e3",
+    "status": "ENGINEERING_QUALIFIED_AS_OF_PREPARATION",
+    "subsequent_execution_report": "B063R52_FAILURE_CONFIRMED_IN_LIVE_OWNER_EVIDENCE"
+  },
+  "release": "V13 Spread & Totals review \u00b7 November 27, 2026",
+  "render_kind": "CURRENT_REVIEW_PENDING_RENDER",
+  "rendered": true,
+  "responsive_browser_qa_verified": false,
+  "schedule_snapshot": {
+    "all_available_source_rows_preserved": true,
+    "date_max": "2026-12-08T03:30:00Z",
+    "date_min": "2026-11-01T14:30:00Z",
+    "fresh_schedule_retrieval_by_this_update": false,
+    "logical_sha256": "8f9097708c6311ec1fab5975b09cc51a1b1f9142fd15e22491c2abc857f49c38",
+    "newest_row_observation": "2026-11-25T04:21:26.822412+00:00",
+    "official_complete_census_proved": false,
+    "postseason_completeness_proved": false,
+    "reused_unchanged_for_this_update": true,
+    "rows": 3910,
+    "source_status_counts": {
+      "completed": 1911,
+      "in_progress": 8,
+      "scheduled": 1982,
+      "source_status_unqualified": 9
+    },
+    "status_is_dated_source_status": true
+  },
+  "schema": "sel.ncaa.v13.public_spread_totals_review.v1",
+  "scientific_state": {
+    "accuracy_target": 0.7,
+    "current_R51_population_stage_reached": false,
+    "current_R51_qualified_input_status": "BLOCKED_NO_PINNED_QUALIFICATION_INPUTS",
+    "frozen_test_season": "2026-27",
+    "primary_weights": [
+      0.5,
+      0.5
+    ],
+    "prior_test_exposure_preserved": true,
+    "qualified_spread_totals_metrics": null,
+    "required_missing": [
+      "Official complete game populations and postseason reconciliation",
+      "Historical rights and as-of source qualification for both validation seasons",
+      "Chronological model, residual and calibration fits",
+      "Exact contract terms, both orientations and quote menus at each horizon",
+      "Validation-selected per-objective champions and frozen test scores"
+    ],
+    "selection_weights_refit_models": false,
+    "sensitivity_weights": [
+      [
+        0.4,
+        0.6
+      ],
+      [
+        0.3,
+        0.7
+      ],
+      [
+        0.2,
+        0.8
+      ],
+      [
+        0.1,
+        0.9
+      ]
+    ],
+    "target_achieved": false,
+    "target_achievement_evidence": "NOT_ESTABLISHED",
+    "validation_seasons": [
+      "2024-25",
+      "2025-26"
+    ]
+  },
+  "static_rendered": true
+}
