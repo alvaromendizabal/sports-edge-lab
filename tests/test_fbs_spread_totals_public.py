@@ -301,25 +301,41 @@ for(const [location,served] of cases){window.location=location;const value=publi
 """
         subprocess.run(["node", "-e", script], check=True, capture_output=True, text=True)
 
-    def test_v119_preface_does_not_weaken_historical_readme_guard(self):
-        # Exercise the actual pinned historical check, not a duplicate of its parser.
-        prior = runpy.run_path(str(ROOT / "tests/test_fbs_v071_public.py"))
-        case = prior["ActualV070Publication"](
-            "test_prior_landing_content_preserved_outside_latest_link")
-        check = case.test_prior_landing_content_preserved_outside_latest_link
-        check()
-        read_text = Path.read_text
+    def test_prepared_preface_does_not_weaken_historical_readme_guards(self):
+        # Execute the real pinned historical guards, including their byte checks.
+        guards = [
+            ("071", "test_prior_landing_content_preserved_outside_latest_link"),
+            ("072", "test_prior_landing_and_numerical_assets_remain_preserved"),
+            ("090", "test_entire_pre_v090_readme_suffix_is_byte_preserved"),
+            ("098", "test_complete_previous_landing_and_v097_assets_are_unchanged"),
+            ("099", "test_previous_landing_and_all_v098_assets_are_byte_preserved"),
+            ("101", "test_complete_preexisting_readme_is_preserved"),
+            ("116", "test_entire_previous_fbs_readme_is_preserved"),
+        ]
+        read_text, read_bytes = Path.read_text, Path.read_bytes
         landing = ROOT / "docs/fbs/README.md"
-        for mutation in (
-            lambda text: text + "\nUnexpected edit to historical owner evidence.\n",
-            lambda text: "<!-- UNRECOGNIZED_PREFACE -->\n" + text,
-        ):
-            def altered(path, *args, **kwargs):
-                text = read_text(path, *args, **kwargs)
-                return mutation(text) if path == landing else text
-            with self.subTest(mutation=mutation), patch.object(Path, "read_text", altered):
-                with self.assertRaises(AssertionError):
-                    check()
+        for version, method in guards:
+            prior = runpy.run_path(str(ROOT / f"tests/test_fbs_v{version}_public.py"))
+            classes = [value for value in prior.values() if isinstance(value, type)
+                       and issubclass(value, unittest.TestCase) and hasattr(value, method)]
+            self.assertEqual(len(classes), 1)
+            check = getattr(classes[0](method), method)
+            check()
+            for mutation in (
+                lambda raw: raw + b"\nUnexpected edit to historical owner evidence.\n",
+                lambda raw: b"<!-- UNRECOGNIZED_PREFACE -->\n" + raw,
+            ):
+                def altered_text(path, *args, **kwargs):
+                    text = read_text(path, *args, **kwargs)
+                    return mutation(text.encode()).decode() if path == landing else text
+                def altered_bytes(path, *args, **kwargs):
+                    raw = read_bytes(path, *args, **kwargs)
+                    return mutation(raw) if path == landing else raw
+                with self.subTest(version=version, mutation=mutation), \
+                        patch.object(Path, "read_text", altered_text), \
+                        patch.object(Path, "read_bytes", altered_bytes):
+                    with self.assertRaises(AssertionError):
+                        check()
 
     def test_deterministic_phone_graphics_keep_all_game_ids(self):
         d = fixture()
