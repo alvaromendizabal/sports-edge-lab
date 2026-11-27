@@ -1,6 +1,6 @@
 {
   "schema": "public.nba.phone_graphics.v1",
-  "source_projection_sha256": "f4df6adf0504d46281206d9d37123ea64872b0531ae71005cb3fb426aedecdb9",
+  "source_projection_sha256": "9b35fe0ad0961d7b52097925b80cf47c07843839741decf7f7f0748ef71f912a",
   "games": 48,
   "images": [
     {
@@ -8,7 +8,7 @@
       "game_ids": [],
       "width": 1080,
       "height": 1920,
-      "sha256": "5bf46662f4dc840d826dd8264be236d3ebafd68f4adbe62147a0b7862483eda5"
+      "sha256": "757f1e9ae3be7f08664f567857701ecf89a284dcf64bb8dcaae1a1d90f7b6794"
     },
     {
       "file": "nba_2026-11-23_page_01.png",
@@ -21,7 +21,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "7d99f4a039803001863c516414e0e517315ea4fcf32e3b0ba2a06fbaa1ed183f"
+      "sha256": "a30cd0efcbd5cb960a933e036500e4b0a47534fe182acb479d8eb313919d6ec2"
     },
     {
       "file": "nba_2026-11-23_page_02.png",
@@ -34,7 +34,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "ba6da4502bba81d8165fc3a200c796f382041c313280bc19774d2b820f1ced71"
+      "sha256": "2ce3bc1d7e4f0d584d65e5bf93621ee1009f8a0bb755b13c13b10e259dc05f3a"
     },
     {
       "file": "nba_2026-11-24_page_01.png",
@@ -45,7 +45,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "eb8a78404f788cf7d0ac667d90d893888549eaf05ab0cb055b7173eba58e1beb"
+      "sha256": "8bdc261d7b5544060aeb8acfe0c9682d18da57f77d64d0ddafd2a24be977cefd"
     },
     {
       "file": "nba_2026-11-25_page_01.png",
@@ -58,7 +58,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "410795c32a9ffca453d2caddf19cbd9cfcbdd7b745720ebcbbe9846b6f475c90"
+      "sha256": "b6bf16356669d55e0b69151464df52499d70e26e076986dfcc25ace934229fd8"
     },
     {
       "file": "nba_2026-11-25_page_02.png",
@@ -70,7 +70,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "574c82a08da852a7887519d1788ce27b7309f97ffe3f0d8e9ff9b9109529c330"
+      "sha256": "6c899c48d0c76f38dfba67d7e2753e6d8099c7b9f5ef48455f07c2a174be5273"
     },
     {
       "file": "nba_2026-11-27_page_01.png",
@@ -83,7 +83,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "dc126f0d6599fae6f893a4db23ab95a37f1e1cd9383f173b036cdf8bab04f833"
+      "sha256": "bf23ed7118b42a446ccd48e8fb98664c1105012c6acc3a22ad13eaa0a114bf19"
     },
     {
       "file": "nba_2026-11-27_page_02.png",
@@ -96,7 +96,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "b03783105b08ea2352b602bb6c25ccb37fd249c860046c6df9eaef268bfb8250"
+      "sha256": "6ed593d2d7d0bb2739019c450abdb4bc3ab6976be6dae17267dc3d3d6da77ea7"
     },
     {
       "file": "nba_2026-11-27_page_03.png",
@@ -105,7 +105,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "5f4b662a78d5befb75de50aa5c64eaa8284396a93a9d40f9b9aacca20328a6f0"
+      "sha256": "ee4cc2ecea11f5d226cced636fdf589cce7487359bc3506f82429b5a635daa65"
     },
     {
       "file": "nba_2026-11-28_page_01.png",
@@ -118,7 +118,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "3c1c0c8534d214a92972e004856af5274e34c4b5e3791860e20fb2888fa21e44"
+      "sha256": "28950eb710331be5dade3f3edca668d637544d511b8df2dc02158041ebdb1fce"
     },
     {
       "file": "nba_2026-11-29_page_01.png",
@@ -131,7 +131,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "8c14d56900963bd77c3b60dcd46e332f69ba29b094d095430ad539ea5fcb6250"
+      "sha256": "f6c0e21cadf3126e2419d1c1fd0e11e60c623fde1abc18697c6fca57def74b0e"
     },
     {
       "file": "nba_2026-11-29_page_02.png",
@@ -144,20 +144,49 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "209a1d21bd05f3f640131c87a88e5ce64d58e23ce58092295f1eecf2df1a93ac"
+      "sha256": "019e538ef80723f640d8d72179574bcd4410dfc5c2dfc5740b2add0a5f51ea68"
     }
   ],
-  "snapshot_label": "B119 saved outlooks \u00b7 R1 partial run",
+  "snapshot_label": "B119 saved outlooks \u00b7 R2 prepared",
   "owner_status_asof_utc": "2026-11-26T21:42:11.563504Z",
   "owner_status": "R1 partial after all 2,140 saved publication tasks recovered",
-  "prepared_execution_status": "B121_IN_PREPARATION_NOT_QUALIFIED_FOR_LAUNCH",
-  "prepared_execution_status_asof_utc": "2026-11-26T23:54:00.610302+00:00",
+  "prepared_execution_status": "B120_R2_PREPARED_VERIFIED",
+  "prepared_execution_status_asof_utc": "2026-11-27T01:27:42.870128+00:00",
   "R1_owner_results_included": false,
   "R1_operational_status_included": true,
   "R1_new_forecasts_included": false,
   "prior_publication_tasks_recovered": 2140,
-  "new_model_fits": 0,
+  "new_owner_campaign_fits": 0,
   "new_provider_requests": 0,
+  "r2_preparation": {
+    "release": "B120",
+    "revision": "R2",
+    "status": "PREPARED_VERIFIED",
+    "verified_at_utc": "2026-11-27T01:27:42.870128+00:00",
+    "final_preparation_scopes_passed": 6,
+    "final_engineering_tests_passed": 1264,
+    "engineering_test_count_scope": "FINAL_ENGINEERING_CHECK_NOT_CUMULATIVE_ATTEMPTS",
+    "exact_launch_prepare_only_rehearsal_status": "PASS",
+    "exact_launch_prepare_only_elapsed_seconds": 80.6089748259983,
+    "exact_launch_prepare_only_exit_code": 0,
+    "exact_launch_prepare_only_new_fits": 0,
+    "control_pointers_updated": false,
+    "main_owner_research_execution": "NOT_OBSERVED",
+    "main_owner_research_started_by_preparer": false,
+    "owner_runs_launched_by_preparer": 0,
+    "canonical_owner_entry_reused_publication_tasks": 2140,
+    "canonical_owner_entry_new_fits": 0,
+    "diagnostic_estimator_fits": 23,
+    "diagnostic_calibration_fits": 23,
+    "diagnostic_residual_distribution_fits": 23,
+    "diagnostic_count_scope": "UNIQUE_COMMITTED_DIAGNOSTIC_COMPONENT_ORIGINS_ACROSS_PREPARATION_ATTEMPTS",
+    "diagnostic_component_cpu_seconds": 101.45082542399999,
+    "diagnostic_fits_are_main_owner_campaign_fits": false,
+    "test_game_predictions_scored": 0,
+    "champion_selection_performed": false,
+    "scientific_owner_occupancy_gate_qualified": false,
+    "new_forecast_values_published": false
+  },
   "forecasts_changed_by_graphics_generation": false,
   "calendar_checked_at_utc": "2026-11-26T23:43:54.021302+00:00",
   "calendar_final_games": 22,

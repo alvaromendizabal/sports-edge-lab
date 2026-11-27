@@ -1,14 +1,18 @@
 # Sports Edge Lab · NBA
 
-<!-- NBA NOVEMBER 26 R1 STATUS BEGIN -->
-## November 26: R1 recovered saved publications, then stopped; B121 in preparation
+<!-- NBA NOVEMBER 26 R2 STATUS BEGIN -->
+## November 26: B120 R2 prepared and verified; main owner run not observed
 
 [Open the current Spread & Totals board](../../docs/nba/spread-totals/index.html) · [Read the status and saved forecast clocks](current/README.md) · [iPhone graphics](current/graphics/).
 
-The latest R1 run preserved a **resumable partial report at 21:42 UTC**. It recovered **all 2,140 prior publication tasks** without inference or new forecast generation, then stopped while adopting a missing authenticated saved frontier-input reference. It recorded **zero new model fits and zero provider requests**. Its terminal exit code is unverified; checkpoints remain preserved. **B121 is being prepared, with qualification pending.**
+**B120 R2 preparation was verified at November 26, 5:27 PM Pacific.** All six final preparation scopes and the final 1,264-test engineering check passed. The exact launch preparation rehearsal exited 0 in 80.61 seconds, made zero new fits, and left control pointers unchanged. The main owner research run has not been observed.
 
-A separate official weekly calendar check at November 26, 3:43 PM Pacific confirms the same 48 game IDs, teams and tip times, now 22 final and 26 scheduled. Nine November 25 final scores are newly visible; this did not rerun models or reissue forecasts. The board retains the B119 saved forecast values and original November 19 / November 25 issue clocks. The observed 1,200-game census, 261 completed games, 26 selected roles, and explicit source/contract gaps are unchanged. Repository publication, current research completion, and website deployment are separate; current hosting is unverified. Earlier reviews below remain dated historical records.
-<!-- NBA NOVEMBER 26 R1 STATUS END -->
+The latest actual R1 run remains a **resumable partial report at 21:42 UTC**. It recovered **all 2,140 prior publication tasks** without inference or new forecasts, then stopped while adopting a missing authenticated saved frontier-input reference. It recorded **zero new model fits and zero provider requests**. Its terminal exit code remains unverified. R2 qualification reused those saved publications; it does not retroactively make R1 a successful campaign.
+
+Preparation diagnostics committed 23 estimators, 23 calibrators and 23 residual distributions across their separate diagnostic origins, totaling 101.45 component CPU seconds. They are not counted as main-owner campaign fits. No test-game predictions or champion selection were performed, and sustained scientific owner occupancy remains unqualified.
+
+A separate official weekly calendar check at November 26, 3:43 PM Pacific confirms the same 48 game IDs, teams and tip times, now 22 final and 26 scheduled. The board retains the B119 saved forecast values and original November 19 / November 25 issue clocks. The observed 1,200-game census, 261 completed games, 26 selected roles, and source/contract gaps are unchanged. Repository publication, current research completion, and website deployment are separate; hosting remains unverified. Earlier reviews below remain dated historical records.
+<!-- NBA NOVEMBER 26 R2 STATUS END -->
 
 
 

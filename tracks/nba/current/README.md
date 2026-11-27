@@ -1,11 +1,17 @@
-# NBA Spread & Totals — R1 partial run, saved B119 outlooks
+# NBA Spread & Totals — B120 R2 prepared and verified, saved B119 outlooks
 
 [Open the board source](../../../docs/nba/spread-totals/index.html) · [Public data](board.json) · [iPhone graphics](graphics/)
 
-The latest observed **B120 R1 owner run ended in a resumable partial report on November 26, 2026 at 21:42:11 UTC** after 53 minutes 21 seconds. It **recovered all 2,140 saved publication tasks**: 1,200 frontier, 240 box, 160 original-model, and 540 stack tasks. This recovery reused saved outputs with **zero inference calls and zero new prediction ledgers**. The run then stopped during continuation because an authenticated saved frontier-input reference was missing. It reported **zero new estimator, residual-distribution, calibration, or meta-model fits and zero provider requests**. The terminal exit code remains unverified. Checkpoints were preserved. **B121 is in preparation; replacement qualification and owner execution are pending.**
+The latest observed **B120 R1 owner run ended in a resumable partial report on November 26, 2026 at 21:42:11 UTC** after 53 minutes 21 seconds. It **recovered all 2,140 saved publication tasks**: 1,200 frontier, 240 box, 160 original-model, and 540 stack tasks. This recovery reused saved outputs with **zero inference calls and zero new prediction ledgers**. The run then stopped during continuation because an authenticated saved frontier-input reference was missing. It reported **zero new estimator, residual-distribution, calibration, or meta-model fits and zero provider requests**. The terminal exit code remains unverified. Checkpoints were preserved. **B120 R2 preparation is now verified; the main replacement owner run has not been observed.**
 
 The 2,140 publication failures originally recorded by B119 remain dated history, not a new R1 failure count. Their successful recovery does not establish completed current-season research. This board keeps the same selected-role projection, game identities and tip times, research metrics, missingness, and forecast source/issue clocks from the verified B119 partial evidence. It includes the new operational status, **no new R1 forecast values**, and no production model deployment. Publishing these files does not refresh sources or qualify market contracts.
 
+
+## B120 R2 preparation — November 26, 5:27 PM Pacific
+
+All six final preparation scopes passed, along with the final 1,264-test engineering check. The exact launch preparation rehearsal completed at **2026-11-27 01:27:42 UTC**, exited 0 after **80.61 seconds**, made **zero new fits**, and left control pointers unchanged. This is **PREPARED_VERIFIED**; the main owner research run has not been observed.
+
+Across preparation attempts, **23 estimators, 23 calibrators, and 23 residual distributions** were newly committed with diagnostic origins, using **101.45 component CPU seconds**. These are separately counted diagnostics, with zero test-game predictions and no champion selection; sustained scientific owner occupancy remains unqualified. The canonical owner-entry qualification reused all 2,140 saved publication tasks with zero new fits. No new game forecast values, annual metrics, source clocks, or model promotion are published by this preparation update.
 
 ## Latest weekly calendar — November 26, 3:43 PM Pacific
 
@@ -27,7 +33,7 @@ For November 25 onward week games, the displayed winner and margin issues were s
 
 Winner probabilities use the validation-selected **log-loss role**; point margins and totals use their respective **RMSE roles**, independently for each horizon. Those are declared display roles, not a new selection. The signed margin is away score minus home score. Winner and margin roles can disagree.
 
-Primary selection is the equal average of the 2024–25 and 2025–26 annual validation metrics. The saved validation manifests contain 1,321 and 1,322 games, including postseason and Cup finals. The board provides all 26 saved objective/horizon selections and the original annual metric denominators. Current winner/margin reports cover 261 games; retained total and other reports may cover 210 of 261. A 210-game score is never relabeled as full current-season coverage.
+Primary selection is the equal average of the 2024–25 and 2025–26 annual validation metrics. The saved validation manifests contain 1,321 and 1,322 games, including postseason and Cup finals. The board provides all 26 saved objective/horizon selections and the original annual metric denominators. Current winner/margin reports score 261 games; retained total and other reports may score 210 games. Comparable population membership is unproven: the 210-game cohort is not established as a subset of the 261-game census. These counts do not establish a coverage fraction or a missing-game count, and metrics from the two populations are not directly comparable.
 
 Historical point-in-time and full-season champion qualification remain incomplete. Calibration qualification is incomplete. Previously inspected 2026–27 results remain exposed report-only evidence and do not select these roles. No production champion promotion is claimed.
 
@@ -52,7 +58,7 @@ python -m examples.nba_branch.build_review --check
 
 The graphics generator requires Pillow and DejaVu fonts. It produces 12 PNGs at 1080 × 1920: one overview plus 11 date pages covering all 48 week games exactly once. Its manifest records each image's hash and game membership.
 
-Earlier board rendering was inspected on desktop and a 375-pixel content-width mobile viewport. The present status patch is awaiting its own browser review before publication. Search, horizon switching, full-season coverage, missing-role details, and card overflow were checked. Automated regression probes reject private recipe fields, post-tip issues, missing manifest games, and test metrics substituted for validation selection. Local checks and hosted CI are separate evidence.
+Earlier board rendering was inspected on desktop and a 375-pixel content-width mobile viewport. The current preparation status update has separate validation from the earlier owner result; local generation and boundary checks are recorded with its pull request. Search, horizon switching, full-season coverage, missing-role details, and card overflow were checked. Automated regression probes reject private recipe fields, post-tip issues, missing manifest games, and test metrics substituted for validation selection. Local checks and hosted CI are separate evidence.
 
 **Publication state:** static public source snapshot; production website deployment unverified. The optional hosting registration did not complete. Public source publication does not imply website deployment or a provider refresh. Historical NBA pages remain dated archives; no other owner's files are changed.
 

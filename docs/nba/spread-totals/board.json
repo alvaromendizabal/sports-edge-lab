@@ -1,7 +1,7 @@
 {
   "schema": "public.nba.spread_totals.v1",
   "owner": "NBA",
-  "release": "R1 partial run · B121 in preparation · B119 saved outlooks",
+  "release": "B120 R2 prepared and verified · B119 saved outlooks",
   "source_observed_at_utc": "2026-11-25T19:34:47.323874+00:00",
   "market_comparison_asof_utc": "2026-11-25T19:33:33.256583Z",
   "publication_status": "Static public source snapshot · website deployment unverified",
@@ -155698,7 +155698,7 @@
   "b119_durable_publication_failed_tasks": 2140,
   "b120_owner_execution": "R1_PARTIAL_RESUMABLE_AFTER_PUBLICATION_RECOVERY",
   "owner_execution_status_asof_utc": "2026-11-26T21:42:11.563504Z",
-  "prepared_execution_status": "B121_IN_PREPARATION_NOT_QUALIFIED_FOR_LAUNCH",
+  "prepared_execution_status": "B120_R2_PREPARED_VERIFIED",
   "b119_frontier_publication_failed_tasks": 1200,
   "b119_legacy_publication_failed_tasks": 940,
   "b119_legacy_failure_branches": {
@@ -155707,8 +155707,8 @@
     "stacks": 540
   },
   "branch_failure_summary_is_not_additional_tasks": true,
-  "prepared_execution_status_asof_utc": "2026-11-26T23:54:00.610302+00:00",
-  "prepared_execution_scope": "A replacement is being prepared after the observed R1 failure. No B121 launch qualification or owner result is claimed.",
+  "prepared_execution_status_asof_utc": "2026-11-27T01:27:42.870128+00:00",
+  "prepared_execution_scope": "B120 R2 preparation is verified. The exact launch preparation rehearsal passed; the main owner research run has not been observed. Saved B119 forecast values and issue clocks are unchanged.",
   "r1_owner_results_included": false,
   "r1_operational_status_included": true,
   "r1_new_forecasts_included": false,
@@ -155842,5 +155842,39 @@
     "full_season_census_refreshed": false,
     "new_fits": 0,
     "model_inference_calls": 0
+  },
+  "earlier_b121_preparation_status": {
+    "asof_utc": "2026-11-26T23:54:00.610302+00:00",
+    "status": "B121_IN_PREPARATION_NOT_QUALIFIED_FOR_LAUNCH",
+    "scope": "Historical preparation label before the verified B120 R2 release; retained as history."
+  },
+  "r2_preparation": {
+    "release": "B120",
+    "revision": "R2",
+    "status": "PREPARED_VERIFIED",
+    "verified_at_utc": "2026-11-27T01:27:42.870128+00:00",
+    "final_preparation_scopes_passed": 6,
+    "final_engineering_tests_passed": 1264,
+    "engineering_test_count_scope": "FINAL_ENGINEERING_CHECK_NOT_CUMULATIVE_ATTEMPTS",
+    "exact_launch_prepare_only_rehearsal_status": "PASS",
+    "exact_launch_prepare_only_elapsed_seconds": 80.6089748259983,
+    "exact_launch_prepare_only_exit_code": 0,
+    "exact_launch_prepare_only_new_fits": 0,
+    "control_pointers_updated": false,
+    "main_owner_research_execution": "NOT_OBSERVED",
+    "main_owner_research_started_by_preparer": false,
+    "owner_runs_launched_by_preparer": 0,
+    "canonical_owner_entry_reused_publication_tasks": 2140,
+    "canonical_owner_entry_new_fits": 0,
+    "diagnostic_estimator_fits": 23,
+    "diagnostic_calibration_fits": 23,
+    "diagnostic_residual_distribution_fits": 23,
+    "diagnostic_count_scope": "UNIQUE_COMMITTED_DIAGNOSTIC_COMPONENT_ORIGINS_ACROSS_PREPARATION_ATTEMPTS",
+    "diagnostic_component_cpu_seconds": 101.45082542399999,
+    "diagnostic_fits_are_main_owner_campaign_fits": false,
+    "test_game_predictions_scored": 0,
+    "champion_selection_performed": false,
+    "scientific_owner_occupancy_gate_qualified": false,
+    "new_forecast_values_published": false
   }
 }
