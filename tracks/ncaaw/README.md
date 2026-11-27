@@ -5,6 +5,8 @@
 
 R52 failed during source refresh with a coordinator-lock timeout. Four prior stages were reused; no new stage completed and zero new verified fits are recorded. The board preserves 3,910 dated source rows across separate men's and women's research. The November 23–29 Pacific view contains 735 captured rows (363 men, 372 women); this is not a proven complete official week. The newest retained schedule observation is November 24 at 8:21 p.m. Pacific. Current model forecasts remain unavailable. Publication is separate from a source refresh, successful model run, or deployment verification.
 
+**R53 engineering verified; owner launch pending.** All 393 distinct native engineering cases passed; canonical warm reuse executed no additional cases. The next research run remains for the user to launch; current forecasts remain unavailable. The prior public review is deployed as Site version 55; this follow-up source revision requires its own publication receipt.
+
 <!-- NCAA_SPREAD_TOTALS_CURRENT_END -->
 
 ## Women’s NCAA basketball: B060 actual / B061 prepared — November 11, 2026 UTC
