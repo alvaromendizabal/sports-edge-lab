@@ -1,0 +1,47 @@
+{
+  "all_3910_game_rows_unchanged": true,
+  "base_main": "2ae7f40b3e58ede345be486c070765744f08e177",
+  "browser_verification": "NOT_RUN_MANAGED_PREVIEW_ALREADY_OWNED_BY_ANOTHER_TASK",
+  "engineering_checks": {
+    "passed": 5,
+    "scope": "Full dated population preservation, Pacific date-window semantics, null forecast handling, failure ledger and private boundary",
+    "unittest_cases": 5
+  },
+  "graphics": {
+    "artifacts": {
+      "spread_totals_desktop.png": {
+        "bytes": 134002,
+        "sha256": "508d147c322f638526928a2a9c1b7ccaf0c7c2849acf2aa8f21a815dccbbf285"
+      },
+      "spread_totals_phone.png": {
+        "bytes": 180311,
+        "sha256": "a2b248177dd5549a5ee992094ed934df577c98096e399e187866d5e76a940a7d"
+      }
+    },
+    "method": "Pillow deterministic data infographic; not a browser screenshot",
+    "visual_review": "PASS_PHONE_AND_DESKTOP_INDEPENDENTLY_VIEWED"
+  },
+  "hosting_verification": "SEPARATE_PUBLICATION_RECEIPT",
+  "invented_forecasts": 0,
+  "latest_owner_return_sha256": "987b853e807a598dd53a7472f72f647953d9abf381b6ea67b519c17fc087e9fc",
+  "live_owner_evidence_observed_at": "2026-11-27T19:16:32.116554+00:00",
+  "new_fits_by_this_review": 0,
+  "newer_failure_basis": "LIVE_OWNER_METADATA_AND_ROOT_REVIEW",
+  "prior_owner_return_preserved_and_market_snapshot_unchanged": true,
+  "private_credentials_raw_provider_arrays_or_model_bodies_included": false,
+  "public_projection_sha256": "e4a2ca501a66f8f456aff85faf7a0935a2b1d1e686a9aa9f66ae2ae37a5c9346",
+  "reviewed_at_utc": "2026-11-27T19:21:31.710081+00:00",
+  "schema": "sel.ncaa.v13.public_review_verification.v1",
+  "source_pr_head": "e9bb6ebff05e27060f713f74c861c42e3ff7e9aa",
+  "source_retrievals_by_this_review": 0,
+  "week_counts": {
+    "week_captured_men_rows": 363,
+    "week_captured_rows": 735,
+    "week_captured_women_rows": 372,
+    "week_current_forecasts_verified": 0,
+    "week_end_pacific": "2026-11-29",
+    "week_official_completeness": false,
+    "week_start_pacific": "2026-11-23",
+    "week_timezone": "America/Los_Angeles"
+  }
+}

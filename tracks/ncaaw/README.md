@@ -1,3 +1,12 @@
+<!-- NCAA_SPREAD_TOTALS_CURRENT_START -->
+## Spread & Totals · current review, November 27, 2026
+
+[Current NCAA repository board](../../docs/ncaa/spread_totals.html) · [Existing hosted NCAA site](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site) · [Verified R52 failure and current limits](../../docs/ncaa/STATUS_REVIEW_2026-11-27.md)
+
+R52 failed during source refresh with a coordinator-lock timeout. Four prior stages were reused; no new stage completed and zero new verified fits are recorded. The board preserves 3,910 dated source rows across separate men's and women's research. The November 23–29 Pacific view contains 735 captured rows (363 men, 372 women); this is not a proven complete official week. The newest retained schedule observation is November 24 at 8:21 p.m. Pacific. Current model forecasts remain unavailable. Publication is separate from a source refresh, successful model run, or deployment verification.
+
+<!-- NCAA_SPREAD_TOTALS_CURRENT_END -->
+
 ## Women’s NCAA basketball: B060 actual / B061 prepared — November 11, 2026 UTC
 
 The preserved original frozen reference has now been rescored from the exact saved B060 predictions: **399 completed games, 340 correct winners and .3180153076 log loss**. Margin MAE/RMSE is **12.582280 / 16.350504**; total-points MAE/RMSE is **14.420401 / 18.010009**. Original weights are unchanged. These are exposed retrospective results, with independent official-final and historical source-vintage qualification unresolved; they do not receive original-issue credit or automatic promotion.
