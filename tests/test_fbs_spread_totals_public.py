@@ -224,6 +224,36 @@ class PublicBoardTests(unittest.TestCase):
         self.rejected(lambda d: d["provenance"].append({"label": "s3://private/bucket"}), "private material")
         self.rejected(lambda d: d["models"]["P06"].update(feature_names=["private_transform"]), "public scope")
 
+    def test_prepared_weather_cannot_claim_execution_or_roof_certainty(self):
+        d = fixture()
+        d["release"]["next_research"] = {
+            "release": "V120", "status": "PREPARED_AWAITING_OWNER_LAUNCH", "scope": ["margin", "total"],
+            "training_seasons": [2024, 2025], "selection_season": 2026,
+            "selection_regime": "2026_EXPOSED_VALIDATION", "prior_test_exposure_disclosed": True,
+            "prospective_test": "Invented future cutoff.", "forecast_snapshot_replaced": False,
+            "new_fits_reported": 0, "new_calibrations_reported": 0,
+            "campaign_summary": "Invented prepared weather branch.",
+            "weather_campaign": {"status": "REGISTERED_NOT_EXECUTED", "registered_base_fit_jobs": 48,
+                "completed_base_fit_jobs": 0, "new_calibration_fits": 0, "forecast_rows_published": 0,
+                "source_summary": "Archived forecasts keep their availability assumptions.",
+                "roof_semantics": "Structural roof metadata does not prove actual retractable-roof position.",
+                "comparison_scope": "Finite comparison on identical rows."}}
+        validate(d)
+        rendered = build(d)
+        self.assertIn("Weather and stadium research", rendered)
+        for key, value, message in (
+            ("completed_base_fit_jobs", 1, "cannot claim fits or forecasts"),
+            ("new_calibration_fits", 1, "cannot claim fits or forecasts"),
+            ("forecast_rows_published", 1, "cannot claim fits or forecasts"),
+            ("registered_base_fit_jobs", True, "finite job count"),
+            ("roof_semantics", "", "qualifications required"),
+            ("status", "COMPLETED", "must remain unexecuted"),
+        ):
+            changed = deepcopy(d)
+            changed["release"]["next_research"]["weather_campaign"][key] = value
+            with self.subTest(key=key), self.assertRaisesRegex(ValueError, message):
+                validate(changed)
+
     def test_saved_recovery_counts_cannot_claim_finished_science(self):
         d = fixture()
         d["release"]["recovery_audit"] = {
@@ -271,25 +301,41 @@ for(const [location,served] of cases){window.location=location;const value=publi
 """
         subprocess.run(["node", "-e", script], check=True, capture_output=True, text=True)
 
-    def test_v119_preface_does_not_weaken_historical_readme_guard(self):
-        # Exercise the actual pinned historical check, not a duplicate of its parser.
-        prior = runpy.run_path(str(ROOT / "tests/test_fbs_v071_public.py"))
-        case = prior["ActualV070Publication"](
-            "test_prior_landing_content_preserved_outside_latest_link")
-        check = case.test_prior_landing_content_preserved_outside_latest_link
-        check()
-        read_text = Path.read_text
+    def test_prepared_preface_does_not_weaken_historical_readme_guards(self):
+        # Execute the real pinned historical guards, including their byte checks.
+        guards = [
+            ("071", "test_prior_landing_content_preserved_outside_latest_link"),
+            ("072", "test_prior_landing_and_numerical_assets_remain_preserved"),
+            ("090", "test_entire_pre_v090_readme_suffix_is_byte_preserved"),
+            ("098", "test_complete_previous_landing_and_v097_assets_are_unchanged"),
+            ("099", "test_previous_landing_and_all_v098_assets_are_byte_preserved"),
+            ("101", "test_complete_preexisting_readme_is_preserved"),
+            ("116", "test_entire_previous_fbs_readme_is_preserved"),
+        ]
+        read_text, read_bytes = Path.read_text, Path.read_bytes
         landing = ROOT / "docs/fbs/README.md"
-        for mutation in (
-            lambda text: text + "\nUnexpected edit to historical owner evidence.\n",
-            lambda text: "<!-- UNRECOGNIZED_PREFACE -->\n" + text,
-        ):
-            def altered(path, *args, **kwargs):
-                text = read_text(path, *args, **kwargs)
-                return mutation(text) if path == landing else text
-            with self.subTest(mutation=mutation), patch.object(Path, "read_text", altered):
-                with self.assertRaises(AssertionError):
-                    check()
+        for version, method in guards:
+            prior = runpy.run_path(str(ROOT / f"tests/test_fbs_v{version}_public.py"))
+            classes = [value for value in prior.values() if isinstance(value, type)
+                       and issubclass(value, unittest.TestCase) and hasattr(value, method)]
+            self.assertEqual(len(classes), 1)
+            check = getattr(classes[0](method), method)
+            check()
+            for mutation in (
+                lambda raw: raw + b"\nUnexpected edit to historical owner evidence.\n",
+                lambda raw: b"<!-- UNRECOGNIZED_PREFACE -->\n" + raw,
+            ):
+                def altered_text(path, *args, **kwargs):
+                    text = read_text(path, *args, **kwargs)
+                    return mutation(text.encode()).decode() if path == landing else text
+                def altered_bytes(path, *args, **kwargs):
+                    raw = read_bytes(path, *args, **kwargs)
+                    return mutation(raw) if path == landing else raw
+                with self.subTest(version=version, mutation=mutation), \
+                        patch.object(Path, "read_text", altered_text), \
+                        patch.object(Path, "read_bytes", altered_bytes):
+                    with self.assertRaises(AssertionError):
+                        check()
 
     def test_deterministic_phone_graphics_keep_all_game_ids(self):
         d = fixture()

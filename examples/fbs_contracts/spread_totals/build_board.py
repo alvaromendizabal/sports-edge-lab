@@ -88,7 +88,7 @@ def validate(data):
         require(set(next_research) <= {"release", "status", "scope", "training_seasons", "selection_season",
                 "selection_regime", "prior_test_exposure_disclosed", "prospective_test", "forecast_snapshot_replaced",
                 "new_fits_reported", "new_calibrations_reported", "campaign_summary", "resource_policy",
-                "incumbent_comparison", "calibration_protocol"}, "next research exceeds public status scope")
+                "incumbent_comparison", "calibration_protocol", "weather_campaign"}, "next research exceeds public status scope")
         require(next_research.get("status") == "PREPARED_AWAITING_OWNER_LAUNCH",
                 "prepared research cannot claim executed results")
         require(next_research.get("scope") == ["margin", "total"], "next research must remain FBS spread and total scoped")
@@ -104,6 +104,23 @@ def validate(data):
                 and next_research.get("new_calibrations_reported") == 0,
                 "prepared campaign cannot credit unexecuted fits")
         require(bool(next_research.get("prospective_test")), "future test boundary must be disclosed")
+        weather = next_research.get("weather_campaign")
+        if weather is not None:
+            require(isinstance(weather, dict) and set(weather) <= {
+                "status", "registered_base_fit_jobs", "completed_base_fit_jobs",
+                "new_calibration_fits", "forecast_rows_published", "source_summary",
+                "roof_semantics", "comparison_scope"}, "weather preparation exceeds public scope")
+            require(weather.get("status") == "REGISTERED_NOT_EXECUTED",
+                    "prepared weather must remain unexecuted")
+            require(type(weather.get("registered_base_fit_jobs")) is int
+                    and weather["registered_base_fit_jobs"] > 0,
+                    "weather registration needs a finite job count")
+            require(all(type(weather.get(k)) is int and weather[k] == 0 for k in (
+                "completed_base_fit_jobs", "new_calibration_fits", "forecast_rows_published")),
+                    "prepared weather cannot claim fits or forecasts")
+            require(all(isinstance(weather.get(k), str) and weather[k] for k in (
+                "source_summary", "roof_semantics", "comparison_scope")),
+                    "weather source, roof and comparison qualifications required")
     recovery = data["release"].get("recovery_audit")
     if recovery is not None:
         require(isinstance(recovery, dict), "recovery audit object required")
