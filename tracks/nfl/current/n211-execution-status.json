@@ -1,0 +1,180 @@
+{
+  "schema": "public.nfl.n211.execution.v1",
+  "release": "N211",
+  "owner_status": "COMPLETE_REGISTERED_STAGES",
+  "owner_exit_code": 0,
+  "completed_at_utc": "2026-11-27T23:15:41.757105+00:00",
+  "registered_stages": 10,
+  "v13_status": "INCOMPLETE",
+  "evaluation": "EXPOSED_2026_SELECTION",
+  "selection_note": "2024 and 2025 can train ordinary spreads and totals; 2026 is exposed selection, not an untouched test. Standing V13 and Circa selection remain separate.",
+  "completed_population": 167,
+  "new_fitting_units": 160,
+  "completed_fitting_units": 160,
+  "preserved_prior_fitting_units": 304,
+  "new_cdf_estimators": 640,
+  "new_calibration_gates": 1920,
+  "optimizer_completions": 2560,
+  "failed_units": 0,
+  "blocked_units": 0,
+  "deferred_units": 0,
+  "candidate_comparisons": 11348,
+  "new_feature_columns": 4308,
+  "feature_columns_are_new_raw_observations": false,
+  "peak_simultaneous_optimizers": 41,
+  "throughput_gate": {
+    "status": "BELOW_THRESHOLD",
+    "occupancy_lower_bound": 0.477410621669846,
+    "threshold": 0.75
+  },
+  "champions": [
+    {
+      "target": "margin",
+      "objective": "strict_wins",
+      "wins": 99,
+      "losses": 64,
+      "settlement_pushes": 4,
+      "completed_population": 167,
+      "conditional_decisive_accuracy": 0.6073619631901841,
+      "wins_per_completed_game": 0.592814371257485,
+      "brier": 0.2469343188604152,
+      "logloss": 0.6896424865782597,
+      "unresolved": 0,
+      "model_family": "neural network"
+    },
+    {
+      "target": "margin",
+      "objective": "brier",
+      "wins": 92,
+      "losses": 71,
+      "settlement_pushes": 4,
+      "completed_population": 167,
+      "conditional_decisive_accuracy": 0.5644171779141104,
+      "wins_per_completed_game": 0.5508982035928144,
+      "brier": 0.24290189968262652,
+      "logloss": 0.6788245132576847,
+      "unresolved": 0,
+      "model_family": "probability blend"
+    },
+    {
+      "target": "margin",
+      "objective": "logloss",
+      "wins": 92,
+      "losses": 71,
+      "settlement_pushes": 4,
+      "completed_population": 167,
+      "conditional_decisive_accuracy": 0.5644171779141104,
+      "wins_per_completed_game": 0.5508982035928144,
+      "brier": 0.24290189968262652,
+      "logloss": 0.6788245132576847,
+      "unresolved": 0,
+      "model_family": "probability blend"
+    },
+    {
+      "target": "total",
+      "objective": "strict_wins",
+      "wins": 101,
+      "losses": 66,
+      "settlement_pushes": 0,
+      "completed_population": 167,
+      "conditional_decisive_accuracy": 0.6047904191616766,
+      "wins_per_completed_game": 0.6047904191616766,
+      "brier": 0.24473616291700317,
+      "logloss": 0.6826490219146051,
+      "unresolved": 0,
+      "model_family": "equal-family distribution mixture"
+    },
+    {
+      "target": "total",
+      "objective": "brier",
+      "wins": 97,
+      "losses": 70,
+      "settlement_pushes": 0,
+      "completed_population": 167,
+      "conditional_decisive_accuracy": 0.5808383233532934,
+      "wins_per_completed_game": 0.5808383233532934,
+      "brier": 0.24376819122739213,
+      "logloss": 0.6807171008879326,
+      "unresolved": 0,
+      "model_family": "boosted trees"
+    },
+    {
+      "target": "total",
+      "objective": "logloss",
+      "wins": 97,
+      "losses": 70,
+      "settlement_pushes": 0,
+      "completed_population": 167,
+      "conditional_decisive_accuracy": 0.5808383233532934,
+      "wins_per_completed_game": 0.5808383233532934,
+      "brier": 0.24376819122739213,
+      "logloss": 0.6807171008879326,
+      "unresolved": 0,
+      "model_family": "boosted trees"
+    }
+  ],
+  "same_cohort_totals_comparison": {
+    "new_wins": 101,
+    "preserved_wins": 100,
+    "population": 167,
+    "wins_added": 1,
+    "prospective_improvement_established": false
+  },
+  "best_forward_week_replay": [
+    {
+      "target": "margin",
+      "wins": 84,
+      "losses": 79,
+      "pushes": 4,
+      "population": 167
+    },
+    {
+      "target": "total",
+      "wins": 90,
+      "losses": 77,
+      "pushes": 0,
+      "population": 167
+    }
+  ],
+  "forward_replay_note": "Retrospectively compared reconstruction with prior exposure; not originally issued and not prospective performance.",
+  "fresh_forecast_games": 11,
+  "fresh_target_rows": 22,
+  "retained_target_rows": 186,
+  "all_forecast_rows": 208,
+  "priced_option_rows_at_issue": 2314,
+  "forecast_issued_utc": "2026-11-27T23:06:11.996730+00:00",
+  "market_captured_utc": "2026-11-27T23:05:21.627018+00:00",
+  "availability_as_of_utc": "2026-11-27T23:04:31.286409+00:00",
+  "prices_are_live": false,
+  "prices_note": "Captured observations were admitted at original issuance. Publication is a snapshot and does not establish a current fill.",
+  "named_venue_game_coverage": {
+    "draftkings": 11,
+    "kalshi": 10,
+    "polymarket": 11,
+    "week_games_awaiting_kickoff": 11
+  },
+  "kalshi_missing_game": "2026_12_NE_LAC",
+  "point_publication_adjustment_backtested": false,
+  "point_publication_note": "Displayed point and win layer conditions independently selected margin and total distributions on feasible integer scores. It has no separate historical validation. Pick probabilities use separate selected spread and total heads.",
+  "annual_full_manifests": {
+    "2024": 285,
+    "2025": 285
+  },
+  "annual_quote_missing_games": {
+    "2024": 13,
+    "2025": 13
+  },
+  "return": {
+    "logical_sha256": "f8d4292eaf05df322521971a596bd44d6308c8fe15684d8292c1847e350e4d17",
+    "logical_bytes": 9134677388,
+    "verified_parts": 18,
+    "status": "VERIFIED"
+  },
+  "estimated_compute_cost_usd": 9.024898587833189,
+  "actual_bill_claimed": false,
+  "production_promotion": false,
+  "publication": {
+    "status": "PREPARED_NOT_YET_DEPLOYED",
+    "source_publication_separate_from_owner_execution": true
+  }
+}

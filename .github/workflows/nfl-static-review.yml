@@ -156,6 +156,11 @@ jobs:
           NFL_CURRENT_EVIDENCE: ${{ runner.temp }}/nfl-static-evidence/n210-source
           NFL_N210_VERIFY_HOSTED: "1"
         run: node tracks/nfl/current/test_n210_browser.cjs
+      - name: Verify N211 preserved issues, comparisons and phone board
+        env:
+          PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/nfl-static-browser/node_modules/playwright
+          NFL_CURRENT_EVIDENCE: ${{ runner.temp }}/nfl-static-evidence/n211-source
+        run: node tracks/nfl/current/test_n211_browser.cjs
       - name: Preserve exact public bundle and browser evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02

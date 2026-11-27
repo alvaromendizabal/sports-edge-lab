@@ -1,0 +1,1632 @@
+{
+  "edition": "N211",
+  "forecast_issued_utc": "2026-11-27T23:06:11.996730+00:00",
+  "rendered_utc": "2026-11-27T23:52:14.929250+00:00",
+  "forecast_scope": "11 newly issued upcoming games; 4 finals and Denver\u2013Pittsburgh retain original pregame issues.",
+  "selection": "Exposed 2026 selection; pre-2026 history including 2024 and 2025 trains this lane. V13 and Circa remain separate.",
+  "games": [
+    {
+      "id": "2026_12_GB_LA",
+      "away": "GB",
+      "home": "LAR",
+      "kickoff_utc": "2026-11-26T01:00:00+00:00",
+      "score": {
+        "GB": 13,
+        "LAR": 26
+      },
+      "state": "final",
+      "edition": "V13",
+      "issue": "2026-11-25T22:17:05.323662+00:00",
+      "winner": "LAR",
+      "win_probability": 0.58,
+      "margin": -4.7,
+      "total": 47.2,
+      "tie_probability": 0.0298,
+      "picks": {
+        "points": {
+          "margin": {
+            "side": "LAR",
+            "line": -2.5,
+            "probability": 0.618,
+            "p_push": 0.0,
+            "issued_utc": "2026-11-26T00:18:05.076303+00:00",
+            "role": "points",
+            "quote_utc": "2026-11-26T00:35:22.995550+00:00",
+            "result": "Won"
+          },
+          "total": {
+            "side": "over",
+            "line": 43.5,
+            "probability": 0.607,
+            "p_push": 0.0,
+            "issued_utc": "2026-11-26T00:35:17.356461+00:00",
+            "role": "points",
+            "quote_utc": "2026-11-26T00:35:22.995550+00:00",
+            "result": "Lost"
+          }
+        },
+        "probability": {
+          "margin": {
+            "side": "LAR",
+            "line": -2.5,
+            "probability": 0.554,
+            "p_push": 0.0,
+            "issued_utc": "2026-11-25T22:17:05.323662+00:00",
+            "role": "probability",
+            "quote_utc": "2026-11-26T00:35:22.995550+00:00",
+            "result": "Won"
+          },
+          "total": {
+            "side": "over",
+            "line": 43.5,
+            "probability": 0.606,
+            "p_push": 0.0,
+            "issued_utc": "2026-11-25T22:17:05.323662+00:00",
+            "role": "probability",
+            "quote_utc": "2026-11-26T00:35:22.995550+00:00",
+            "result": "Lost"
+          }
+        }
+      },
+      "display_role": "points",
+      "retained_original": true,
+      "status_label": "FINAL",
+      "provenance_note": "Original issued picks and their individual timestamps are retained."
+    },
+    {
+      "id": "2026_12_CHI_DET",
+      "away": "CHI",
+      "home": "DET",
+      "kickoff_utc": "2026-11-26T18:00:00+00:00",
+      "score": {
+        "CHI": 39,
+        "DET": 35
+      },
+      "state": "final",
+      "edition": "N207",
+      "issue": "2026-11-26T08:37:00.790452+00:00",
+      "winner": "CHI",
+      "win_probability": 0.5366,
+      "margin": 1.0,
+      "total": 62.8,
+      "tie_probability": 0.0301,
+      "picks": {
+        "probability": {
+          "margin": {
+            "side": "CHI",
+            "line": -1.5,
+            "probability": 0.5687,
+            "p_push": 0.0,
+            "role": "probability",
+            "issued_utc": "2026-11-26T08:37:00.790452+00:00",
+            "quote_utc": "2026-11-26T08:32:32.979536+00:00",
+            "result": "Won"
+          },
+          "total": {
+            "side": "over",
+            "line": 55.5,
+            "probability": 0.5088,
+            "p_push": 0.0,
+            "role": "probability",
+            "issued_utc": "2026-11-26T08:37:00.790452+00:00",
+            "quote_utc": "2026-11-26T08:32:32.979536+00:00",
+            "result": "Won"
+          }
+        },
+        "wins": {
+          "margin": {
+            "side": "DET",
+            "line": 1.5,
+            "probability": 0.6342,
+            "p_push": 0.0,
+            "role": "wins",
+            "issued_utc": "2026-11-26T08:37:00.790452+00:00",
+            "quote_utc": "2026-11-26T08:32:32.979536+00:00",
+            "result": "Lost"
+          },
+          "total": {
+            "side": "over",
+            "line": 55.5,
+            "probability": 0.6843,
+            "p_push": 0.0,
+            "role": "wins",
+            "issued_utc": "2026-11-26T08:37:00.790452+00:00",
+            "quote_utc": "2026-11-26T08:32:32.979536+00:00",
+            "result": "Won"
+          }
+        }
+      },
+      "display_role": "wins",
+      "retained_original": true,
+      "status_label": "FINAL",
+      "provenance_note": "Original issued picks and their individual timestamps are retained."
+    },
+    {
+      "id": "2026_12_PHI_DAL",
+      "away": "PHI",
+      "home": "DAL",
+      "kickoff_utc": "2026-11-26T21:30:00+00:00",
+      "score": {
+        "PHI": 39,
+        "DAL": 38
+      },
+      "state": "final",
+      "edition": "N208",
+      "issue": "2026-11-26T20:30:24.657315+00:00",
+      "winner": "DAL",
+      "win_probability": 0.7856,
+      "margin": -5.9,
+      "total": 48.0,
+      "tie_probability": 0.0153,
+      "picks": {
+        "probability": {
+          "margin": {
+            "side": "PHI",
+            "line": 8.5,
+            "probability": 0.5043,
+            "p_push": 0.0,
+            "role": "probability",
+            "issued_utc": "2026-11-26T20:30:24.657315+00:00",
+            "quote_utc": "2026-11-26T20:26:34.667737+00:00",
+            "result": "Won"
+          },
+          "total": {
+            "side": "over",
+            "line": 49.5,
+            "probability": 0.5695,
+            "p_push": 0.0,
+            "role": "probability",
+            "issued_utc": "2026-11-26T20:30:24.657315+00:00",
+            "quote_utc": "2026-11-26T20:26:34.667737+00:00",
+            "result": "Won"
+          }
+        },
+        "wins": {
+          "margin": {
+            "side": "PHI",
+            "line": 8.5,
+            "probability": 0.7908,
+            "p_push": 0.0,
+            "role": "wins",
+            "issued_utc": "2026-11-26T20:30:24.657315+00:00",
+            "quote_utc": "2026-11-26T20:26:34.667737+00:00",
+            "result": "Won"
+          },
+          "total": {
+            "side": "over",
+            "line": 49.5,
+            "probability": 0.5624,
+            "p_push": 0.0,
+            "role": "wins",
+            "issued_utc": "2026-11-26T20:30:24.657315+00:00",
+            "quote_utc": "2026-11-26T20:26:34.667737+00:00",
+            "result": "Won"
+          }
+        }
+      },
+      "display_role": "wins",
+      "retained_original": true,
+      "status_label": "FINAL",
+      "provenance_note": "Original issued picks and their individual timestamps are retained."
+    },
+    {
+      "id": "2026_12_KC_BUF",
+      "away": "KC",
+      "home": "BUF",
+      "kickoff_utc": "2026-11-27T01:20:00+00:00",
+      "score": {
+        "KC": 10,
+        "BUF": 13
+      },
+      "state": "final",
+      "edition": "N209",
+      "issue": "2026-11-26T23:58:08.258376+00:00",
+      "winner": "BUF",
+      "win_probability": 0.6452,
+      "margin": -9.0,
+      "total": 48.9,
+      "tie_probability": 0.0271,
+      "picks": {
+        "probability": {
+          "margin": {
+            "side": "BUF",
+            "line": -3.0,
+            "probability": 0.6289,
+            "p_push": 0.0404,
+            "role": "probability",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00",
+            "result": "Push"
+          },
+          "total": {
+            "side": "over",
+            "line": 45.5,
+            "probability": 0.6144,
+            "p_push": 0.0,
+            "role": "probability",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00",
+            "result": "Lost"
+          }
+        },
+        "wins": {
+          "margin": {
+            "side": "BUF",
+            "line": -3.0,
+            "probability": 0.6868,
+            "p_push": 0.0328,
+            "role": "wins",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00",
+            "result": "Push"
+          },
+          "total": {
+            "side": "over",
+            "line": 45.5,
+            "probability": 0.6,
+            "p_push": 0.0,
+            "role": "wins",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00",
+            "result": "Lost"
+          }
+        }
+      },
+      "display_role": "wins",
+      "retained_original": true,
+      "status_label": "FINAL",
+      "provenance_note": "Original issued picks and their individual timestamps are retained."
+    },
+    {
+      "id": "2026_12_DEN_PIT",
+      "away": "DEN",
+      "home": "PIT",
+      "kickoff_utc": "2026-11-27T20:00:00+00:00",
+      "score": null,
+      "state": "started",
+      "edition": "N210",
+      "issue": "2026-11-27T04:46:48.395449+00:00",
+      "winner": "DEN",
+      "win_probability": 0.7129,
+      "margin": 6.9,
+      "total": 38.3,
+      "tie_probability": 0.0308,
+      "quote_clock": "2026-11-27T04:34:59.046170+00:00",
+      "quote_status": "Archived observation; current price unavailable",
+      "picks": {
+        "wins": {
+          "margin": {
+            "side": "DEN",
+            "line": -4.5,
+            "probability": 0.6013,
+            "p_push": 0,
+            "issued_utc": "2026-11-27T04:46:48.395449+00:00",
+            "quote_utc": "2026-11-27T04:34:59.046170+00:00"
+          },
+          "total": {
+            "side": "Over",
+            "line": 36.5,
+            "probability": 0.5891,
+            "p_push": 0,
+            "issued_utc": "2026-11-27T04:46:48.395449+00:00",
+            "quote_utc": "2026-11-27T04:34:59.046170+00:00"
+          }
+        },
+        "probability": {
+          "margin": {
+            "side": "DEN",
+            "line": -4.5,
+            "probability": 0.5014,
+            "p_push": 0,
+            "issued_utc": "2026-11-27T04:46:48.395449+00:00",
+            "quote_utc": "2026-11-27T04:34:59.046170+00:00"
+          },
+          "total": {
+            "side": "Over",
+            "line": 36.5,
+            "probability": 0.5798,
+            "p_push": 0,
+            "issued_utc": "2026-11-27T04:46:48.395449+00:00",
+            "quote_utc": "2026-11-27T04:34:59.046170+00:00"
+          }
+        }
+      },
+      "display_role": "wins",
+      "point_probability_status": "Projection from the coherent point-display layer; this adjustment has no separate historical validation.",
+      "retained_original": true,
+      "status_label": "KICKOFF PASSED \u00b7 FINAL NOT IN SAVED CENSUS",
+      "provenance_note": "Original issued picks and their individual timestamps are retained."
+    },
+    {
+      "id": "2026_12_ATL_MIN",
+      "away": "ATL",
+      "home": "MIN",
+      "kickoff_utc": "2026-11-29T18:00:00+00:00",
+      "score": null,
+      "state": "upcoming",
+      "edition": "N211",
+      "issue": "2026-11-27T23:06:11.996730+00:00",
+      "display_role": "wins",
+      "retained_original": false,
+      "status_label": "PREGAME MODEL SNAPSHOT",
+      "picks": {
+        "wins": {
+          "margin": {
+            "side": "MIN",
+            "line": -7.0,
+            "probability": 0.5559,
+            "p_push": 0.0147,
+            "p_win": 0.5477,
+            "model_family": "TensorFlow",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          },
+          "total": {
+            "side": "Over",
+            "line": 41.5,
+            "probability": 0.5257,
+            "p_push": 0.0,
+            "p_win": 0.5257,
+            "model_family": "equal model mixture",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          }
+        },
+        "probability": {
+          "margin": {
+            "side": "ATL",
+            "line": 7.0,
+            "probability": 0.5617,
+            "p_push": 0.0378,
+            "p_win": 0.5404,
+            "model_family": "probability blend",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          },
+          "total": {
+            "side": "Over",
+            "line": 41.5,
+            "probability": 0.5377,
+            "p_push": 0.0,
+            "p_win": 0.5377,
+            "model_family": "LightGBM",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          }
+        },
+        "points": {
+          "margin": {
+            "side": "MIN",
+            "line": -7.0,
+            "probability": 0.5732,
+            "p_push": 0.0322,
+            "p_win": 0.5548,
+            "model_family": "Extra Trees",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          },
+          "total": {
+            "side": "Under",
+            "line": 41.5,
+            "probability": 0.5458,
+            "p_push": 0.0,
+            "p_win": 0.5458,
+            "model_family": "Extra Trees",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          }
+        }
+      },
+      "winner": "MIN",
+      "win_probability": 0.7466,
+      "tie_probability": 0.0251,
+      "margin": -8.8,
+      "total": 42.4,
+      "quote_clock": "2026-11-27T23:05:21.627018+00:00",
+      "availability_clock": "2026-11-27T23:04:31.286409+00:00",
+      "football_history_clock": "2026-11-25T02:35:18+00:00",
+      "point_probability_status": "Winner and point projections use the point-accuracy distributions conditioned on feasible score pairs. This display adjustment has not been historically validated.",
+      "provenance_note": "N211 saved issue \u00b7 Fri 11/27 \u00b7 3:06 PM PT \u00b7 DraftKings reference lines"
+    },
+    {
+      "id": "2026_12_BAL_HOU",
+      "away": "BAL",
+      "home": "HOU",
+      "kickoff_utc": "2026-11-29T18:00:00+00:00",
+      "score": null,
+      "state": "upcoming",
+      "edition": "N211",
+      "issue": "2026-11-27T23:06:11.996730+00:00",
+      "display_role": "wins",
+      "retained_original": false,
+      "status_label": "PREGAME MODEL SNAPSHOT",
+      "picks": {
+        "wins": {
+          "margin": {
+            "side": "BAL",
+            "line": 6.5,
+            "probability": 0.5141,
+            "p_push": 0.0,
+            "p_win": 0.5141,
+            "model_family": "TensorFlow",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          },
+          "total": {
+            "side": "Over",
+            "line": 47.5,
+            "probability": 0.5924,
+            "p_push": 0.0,
+            "p_win": 0.5924,
+            "model_family": "equal model mixture",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          }
+        },
+        "probability": {
+          "margin": {
+            "side": "HOU",
+            "line": -6.5,
+            "probability": 0.5938,
+            "p_push": 0.0,
+            "p_win": 0.5938,
+            "model_family": "probability blend",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          },
+          "total": {
+            "side": "Over",
+            "line": 47.5,
+            "probability": 0.552,
+            "p_push": 0.0,
+            "p_win": 0.552,
+            "model_family": "LightGBM",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          }
+        },
+        "points": {
+          "margin": {
+            "side": "HOU",
+            "line": -6.5,
+            "probability": 0.595,
+            "p_push": 0.0,
+            "p_win": 0.595,
+            "model_family": "Extra Trees",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          },
+          "total": {
+            "side": "Over",
+            "line": 47.5,
+            "probability": 0.5108,
+            "p_push": 0.0,
+            "p_win": 0.5108,
+            "model_family": "Extra Trees",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          }
+        }
+      },
+      "winner": "HOU",
+      "win_probability": 0.7673,
+      "tie_probability": 0.0193,
+      "margin": -9.6,
+      "total": 50.4,
+      "quote_clock": "2026-11-27T23:05:21.627018+00:00",
+      "availability_clock": "2026-11-27T23:04:31.286409+00:00",
+      "football_history_clock": "2026-11-25T02:35:18+00:00",
+      "point_probability_status": "Winner and point projections use the point-accuracy distributions conditioned on feasible score pairs. This display adjustment has not been historically validated.",
+      "provenance_note": "N211 saved issue \u00b7 Fri 11/27 \u00b7 3:06 PM PT \u00b7 DraftKings reference lines"
+    },
+    {
+      "id": "2026_12_NO_CIN",
+      "away": "NO",
+      "home": "CIN",
+      "kickoff_utc": "2026-11-29T18:00:00+00:00",
+      "score": null,
+      "state": "upcoming",
+      "edition": "N211",
+      "issue": "2026-11-27T23:06:11.996730+00:00",
+      "display_role": "wins",
+      "retained_original": false,
+      "status_label": "PREGAME MODEL SNAPSHOT",
+      "picks": {
+        "wins": {
+          "margin": {
+            "side": "NO",
+            "line": 9.5,
+            "probability": 0.5089,
+            "p_push": 0.0,
+            "p_win": 0.5089,
+            "model_family": "TensorFlow",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          },
+          "total": {
+            "side": "Over",
+            "line": 48.5,
+            "probability": 0.5636,
+            "p_push": 0.0,
+            "p_win": 0.5636,
+            "model_family": "equal model mixture",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          }
+        },
+        "probability": {
+          "margin": {
+            "side": "CIN",
+            "line": -9.5,
+            "probability": 0.5763,
+            "p_push": 0.0,
+            "p_win": 0.5763,
+            "model_family": "probability blend",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          },
+          "total": {
+            "side": "Over",
+            "line": 48.5,
+            "probability": 0.5003,
+            "p_push": 0.0,
+            "p_win": 0.5003,
+            "model_family": "LightGBM",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          }
+        },
+        "points": {
+          "margin": {
+            "side": "CIN",
+            "line": -9.5,
+            "probability": 0.5993,
+            "p_push": 0.0,
+            "p_win": 0.5993,
+            "model_family": "Extra Trees",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          },
+          "total": {
+            "side": "Over",
+            "line": 48.5,
+            "probability": 0.5685,
+            "p_push": 0.0,
+            "p_win": 0.5685,
+            "model_family": "Extra Trees",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          }
+        }
+      },
+      "winner": "CIN",
+      "win_probability": 0.8263,
+      "tie_probability": 0.0145,
+      "margin": -12.8,
+      "total": 53.7,
+      "quote_clock": "2026-11-27T23:05:21.627018+00:00",
+      "availability_clock": "2026-11-27T23:04:31.286409+00:00",
+      "football_history_clock": "2026-11-25T02:35:18+00:00",
+      "point_probability_status": "Winner and point projections use the point-accuracy distributions conditioned on feasible score pairs. This display adjustment has not been historically validated.",
+      "provenance_note": "N211 saved issue \u00b7 Fri 11/27 \u00b7 3:06 PM PT \u00b7 DraftKings reference lines"
+    },
+    {
+      "id": "2026_12_NYG_IND",
+      "away": "NYG",
+      "home": "IND",
+      "kickoff_utc": "2026-11-29T18:00:00+00:00",
+      "score": null,
+      "state": "upcoming",
+      "edition": "N211",
+      "issue": "2026-11-27T23:06:11.996730+00:00",
+      "display_role": "wins",
+      "retained_original": false,
+      "status_label": "PREGAME MODEL SNAPSHOT",
+      "picks": {
+        "wins": {
+          "margin": {
+            "side": "IND",
+            "line": 5.5,
+            "probability": 0.5939,
+            "p_push": 0.0,
+            "p_win": 0.5939,
+            "model_family": "TensorFlow",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          },
+          "total": {
+            "side": "Over",
+            "line": 41.5,
+            "probability": 0.5448,
+            "p_push": 0.0,
+            "p_win": 0.5448,
+            "model_family": "equal model mixture",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          }
+        },
+        "probability": {
+          "margin": {
+            "side": "IND",
+            "line": 5.5,
+            "probability": 0.5634,
+            "p_push": 0.0,
+            "p_win": 0.5634,
+            "model_family": "probability blend",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          },
+          "total": {
+            "side": "Over",
+            "line": 41.5,
+            "probability": 0.5468,
+            "p_push": 0.0,
+            "p_win": 0.5468,
+            "model_family": "LightGBM",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          }
+        },
+        "points": {
+          "margin": {
+            "side": "NYG",
+            "line": -5.5,
+            "probability": 0.532,
+            "p_push": 0.0,
+            "p_win": 0.532,
+            "model_family": "Extra Trees",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          },
+          "total": {
+            "side": "Under",
+            "line": 41.5,
+            "probability": 0.5383,
+            "p_push": 0.0,
+            "p_win": 0.5383,
+            "model_family": "Extra Trees",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          }
+        }
+      },
+      "winner": "NYG",
+      "win_probability": 0.6824,
+      "tie_probability": 0.0299,
+      "margin": 6.4,
+      "total": 43.0,
+      "quote_clock": "2026-11-27T23:05:21.627018+00:00",
+      "availability_clock": "2026-11-27T23:04:31.286409+00:00",
+      "football_history_clock": "2026-11-25T02:35:18+00:00",
+      "point_probability_status": "Winner and point projections use the point-accuracy distributions conditioned on feasible score pairs. This display adjustment has not been historically validated.",
+      "provenance_note": "N211 saved issue \u00b7 Fri 11/27 \u00b7 3:06 PM PT \u00b7 DraftKings reference lines"
+    },
+    {
+      "id": "2026_12_NYJ_MIA",
+      "away": "NYJ",
+      "home": "MIA",
+      "kickoff_utc": "2026-11-29T18:00:00+00:00",
+      "score": null,
+      "state": "upcoming",
+      "edition": "N211",
+      "issue": "2026-11-27T23:06:11.996730+00:00",
+      "display_role": "wins",
+      "retained_original": false,
+      "status_label": "PREGAME MODEL SNAPSHOT",
+      "picks": {
+        "wins": {
+          "margin": {
+            "side": "NYJ",
+            "line": -5.5,
+            "probability": 0.684,
+            "p_push": 0.0,
+            "p_win": 0.684,
+            "model_family": "TensorFlow",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          },
+          "total": {
+            "side": "Over",
+            "line": 39.5,
+            "probability": 0.5335,
+            "p_push": 0.0,
+            "p_win": 0.5335,
+            "model_family": "equal model mixture",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          }
+        },
+        "probability": {
+          "margin": {
+            "side": "MIA",
+            "line": 5.5,
+            "probability": 0.5552,
+            "p_push": 0.0,
+            "p_win": 0.5552,
+            "model_family": "probability blend",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          },
+          "total": {
+            "side": "Under",
+            "line": 39.5,
+            "probability": 0.5703,
+            "p_push": 0.0,
+            "p_win": 0.5703,
+            "model_family": "LightGBM",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          }
+        },
+        "points": {
+          "margin": {
+            "side": "MIA",
+            "line": 5.5,
+            "probability": 0.5182,
+            "p_push": 0.0,
+            "p_win": 0.5182,
+            "model_family": "Extra Trees",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          },
+          "total": {
+            "side": "Under",
+            "line": 39.5,
+            "probability": 0.5201,
+            "p_push": 0.0,
+            "p_win": 0.5201,
+            "model_family": "Extra Trees",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          }
+        }
+      },
+      "winner": "NYJ",
+      "win_probability": 0.6123,
+      "tie_probability": 0.0296,
+      "margin": 4.2,
+      "total": 41.2,
+      "quote_clock": "2026-11-27T23:05:21.627018+00:00",
+      "availability_clock": "2026-11-27T23:04:31.286409+00:00",
+      "football_history_clock": "2026-11-25T02:35:18+00:00",
+      "point_probability_status": "Winner and point projections use the point-accuracy distributions conditioned on feasible score pairs. This display adjustment has not been historically validated.",
+      "provenance_note": "N211 saved issue \u00b7 Fri 11/27 \u00b7 3:06 PM PT \u00b7 DraftKings reference lines"
+    },
+    {
+      "id": "2026_12_TEN_JAX",
+      "away": "TEN",
+      "home": "JAX",
+      "kickoff_utc": "2026-11-29T18:00:00+00:00",
+      "score": null,
+      "state": "upcoming",
+      "edition": "N211",
+      "issue": "2026-11-27T23:06:11.996730+00:00",
+      "display_role": "wins",
+      "retained_original": false,
+      "status_label": "PREGAME MODEL SNAPSHOT",
+      "picks": {
+        "wins": {
+          "margin": {
+            "side": "TEN",
+            "line": 14.0,
+            "probability": 0.553,
+            "p_push": 0.0201,
+            "p_win": 0.5419,
+            "model_family": "TensorFlow",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          },
+          "total": {
+            "side": "Over",
+            "line": 48.5,
+            "probability": 0.6046,
+            "p_push": 0.0,
+            "p_win": 0.6046,
+            "model_family": "equal model mixture",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          }
+        },
+        "probability": {
+          "margin": {
+            "side": "JAX",
+            "line": -14.0,
+            "probability": 0.5596,
+            "p_push": 0.0431,
+            "p_win": 0.5355,
+            "model_family": "probability blend",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          },
+          "total": {
+            "side": "Over",
+            "line": 48.5,
+            "probability": 0.571,
+            "p_push": 0.0,
+            "p_win": 0.571,
+            "model_family": "LightGBM",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          }
+        },
+        "points": {
+          "margin": {
+            "side": "JAX",
+            "line": -14.0,
+            "probability": 0.6414,
+            "p_push": 0.0319,
+            "p_win": 0.6209,
+            "model_family": "Extra Trees",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          },
+          "total": {
+            "side": "Over",
+            "line": 48.5,
+            "probability": 0.5523,
+            "p_push": 0.0,
+            "p_win": 0.5523,
+            "model_family": "Extra Trees",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          }
+        }
+      },
+      "winner": "JAX",
+      "win_probability": 0.9062,
+      "tie_probability": 0.011,
+      "margin": -17.8,
+      "total": 53.8,
+      "quote_clock": "2026-11-27T23:05:21.627018+00:00",
+      "availability_clock": "2026-11-27T23:04:31.286409+00:00",
+      "football_history_clock": "2026-11-25T02:35:18+00:00",
+      "point_probability_status": "Winner and point projections use the point-accuracy distributions conditioned on feasible score pairs. This display adjustment has not been historically validated.",
+      "provenance_note": "N211 saved issue \u00b7 Fri 11/27 \u00b7 3:06 PM PT \u00b7 DraftKings reference lines"
+    },
+    {
+      "id": "2026_12_NE_LAC",
+      "away": "NE",
+      "home": "LAC",
+      "kickoff_utc": "2026-11-29T21:05:00+00:00",
+      "score": null,
+      "state": "upcoming",
+      "edition": "N211",
+      "issue": "2026-11-27T23:06:11.996730+00:00",
+      "display_role": "wins",
+      "retained_original": false,
+      "status_label": "PREGAME MODEL SNAPSHOT",
+      "picks": {
+        "wins": {
+          "margin": {
+            "side": "NE",
+            "line": -3.0,
+            "probability": 0.5493,
+            "p_push": 0.0413,
+            "p_win": 0.5266,
+            "model_family": "TensorFlow",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          },
+          "total": {
+            "side": "Over",
+            "line": 34.5,
+            "probability": 0.5458,
+            "p_push": 0.0,
+            "p_win": 0.5458,
+            "model_family": "equal model mixture",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          }
+        },
+        "probability": {
+          "margin": {
+            "side": "LAC",
+            "line": 3.0,
+            "probability": 0.6553,
+            "p_push": 0.0192,
+            "p_win": 0.6427,
+            "model_family": "probability blend",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          },
+          "total": {
+            "side": "Over",
+            "line": 34.5,
+            "probability": 0.6218,
+            "p_push": 0.0,
+            "p_win": 0.6218,
+            "model_family": "LightGBM",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          }
+        },
+        "points": {
+          "margin": {
+            "side": "NE",
+            "line": -3.0,
+            "probability": 0.5538,
+            "p_push": 0.0284,
+            "p_win": 0.5381,
+            "model_family": "Extra Trees",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          },
+          "total": {
+            "side": "Under",
+            "line": 34.5,
+            "probability": 0.5248,
+            "p_push": 0.0,
+            "p_win": 0.5248,
+            "model_family": "Extra Trees",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          }
+        }
+      },
+      "winner": "NE",
+      "win_probability": 0.628,
+      "tie_probability": 0.0267,
+      "margin": 4.5,
+      "total": 36.4,
+      "quote_clock": "2026-11-27T23:05:21.627018+00:00",
+      "availability_clock": "2026-11-27T23:04:31.286409+00:00",
+      "football_history_clock": "2026-11-25T02:35:18+00:00",
+      "point_probability_status": "Winner and point projections use the point-accuracy distributions conditioned on feasible score pairs. This display adjustment has not been historically validated.",
+      "provenance_note": "N211 saved issue \u00b7 Fri 11/27 \u00b7 3:06 PM PT \u00b7 DraftKings reference lines"
+    },
+    {
+      "id": "2026_12_SEA_SF",
+      "away": "SEA",
+      "home": "SF",
+      "kickoff_utc": "2026-11-29T21:25:00+00:00",
+      "score": null,
+      "state": "upcoming",
+      "edition": "N211",
+      "issue": "2026-11-27T23:06:11.996730+00:00",
+      "display_role": "wins",
+      "retained_original": false,
+      "status_label": "PREGAME MODEL SNAPSHOT",
+      "picks": {
+        "wins": {
+          "margin": {
+            "side": "SF",
+            "line": 1.5,
+            "probability": 0.5114,
+            "p_push": 0.0,
+            "p_win": 0.5114,
+            "model_family": "TensorFlow",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          },
+          "total": {
+            "side": "Over",
+            "line": 42.5,
+            "probability": 0.6323,
+            "p_push": 0.0,
+            "p_win": 0.6323,
+            "model_family": "equal model mixture",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          }
+        },
+        "probability": {
+          "margin": {
+            "side": "SEA",
+            "line": -1.5,
+            "probability": 0.5514,
+            "p_push": 0.0,
+            "p_win": 0.5514,
+            "model_family": "probability blend",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          },
+          "total": {
+            "side": "Over",
+            "line": 42.5,
+            "probability": 0.5629,
+            "p_push": 0.0,
+            "p_win": 0.5629,
+            "model_family": "LightGBM",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          }
+        },
+        "points": {
+          "margin": {
+            "side": "SF",
+            "line": 1.5,
+            "probability": 0.5197,
+            "p_push": 0.0,
+            "p_win": 0.5197,
+            "model_family": "Extra Trees",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          },
+          "total": {
+            "side": "Over",
+            "line": 42.5,
+            "probability": 0.5331,
+            "p_push": 0.0,
+            "p_win": 0.5331,
+            "model_family": "Extra Trees",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          }
+        }
+      },
+      "winner": "SEA",
+      "win_probability": 0.508,
+      "tie_probability": 0.0282,
+      "margin": 0.7,
+      "total": 45.7,
+      "quote_clock": "2026-11-27T23:05:21.627018+00:00",
+      "availability_clock": "2026-11-27T23:04:31.286409+00:00",
+      "football_history_clock": "2026-11-25T02:35:18+00:00",
+      "point_probability_status": "Winner and point projections use the point-accuracy distributions conditioned on feasible score pairs. This display adjustment has not been historically validated.",
+      "provenance_note": "N211 saved issue \u00b7 Fri 11/27 \u00b7 3:06 PM PT \u00b7 DraftKings reference lines"
+    },
+    {
+      "id": "2026_12_WAS_ARI",
+      "away": "WAS",
+      "home": "ARI",
+      "kickoff_utc": "2026-11-29T21:25:00+00:00",
+      "score": null,
+      "state": "upcoming",
+      "edition": "N211",
+      "issue": "2026-11-27T23:06:11.996730+00:00",
+      "display_role": "wins",
+      "retained_original": false,
+      "status_label": "PREGAME MODEL SNAPSHOT",
+      "picks": {
+        "wins": {
+          "margin": {
+            "side": "WAS",
+            "line": -6.5,
+            "probability": 0.5518,
+            "p_push": 0.0,
+            "p_win": 0.5518,
+            "model_family": "TensorFlow",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          },
+          "total": {
+            "side": "Over",
+            "line": 41.5,
+            "probability": 0.5356,
+            "p_push": 0.0,
+            "p_win": 0.5356,
+            "model_family": "equal model mixture",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          }
+        },
+        "probability": {
+          "margin": {
+            "side": "ARI",
+            "line": 6.5,
+            "probability": 0.5778,
+            "p_push": 0.0,
+            "p_win": 0.5778,
+            "model_family": "probability blend",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          },
+          "total": {
+            "side": "Over",
+            "line": 41.5,
+            "probability": 0.6186,
+            "p_push": 0.0,
+            "p_win": 0.6186,
+            "model_family": "LightGBM",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          }
+        },
+        "points": {
+          "margin": {
+            "side": "WAS",
+            "line": -6.5,
+            "probability": 0.5514,
+            "p_push": 0.0,
+            "p_win": 0.5514,
+            "model_family": "Extra Trees",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          },
+          "total": {
+            "side": "Under",
+            "line": 41.5,
+            "probability": 0.5436,
+            "p_push": 0.0,
+            "p_win": 0.5436,
+            "model_family": "Extra Trees",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          }
+        }
+      },
+      "winner": "WAS",
+      "win_probability": 0.7423,
+      "tie_probability": 0.0332,
+      "margin": 8.0,
+      "total": 42.8,
+      "quote_clock": "2026-11-27T23:05:21.627018+00:00",
+      "availability_clock": "2026-11-27T23:04:31.286409+00:00",
+      "football_history_clock": "2026-11-25T02:35:18+00:00",
+      "point_probability_status": "Winner and point projections use the point-accuracy distributions conditioned on feasible score pairs. This display adjustment has not been historically validated.",
+      "provenance_note": "N211 saved issue \u00b7 Fri 11/27 \u00b7 3:06 PM PT \u00b7 DraftKings reference lines"
+    },
+    {
+      "id": "2026_12_LV_CLE",
+      "away": "LV",
+      "home": "CLE",
+      "kickoff_utc": "2026-11-30T01:20:00+00:00",
+      "score": null,
+      "state": "upcoming",
+      "edition": "N211",
+      "issue": "2026-11-27T23:06:11.996730+00:00",
+      "display_role": "wins",
+      "retained_original": false,
+      "status_label": "PREGAME MODEL SNAPSHOT",
+      "picks": {
+        "wins": {
+          "margin": {
+            "side": "LV",
+            "line": 4.5,
+            "probability": 0.5053,
+            "p_push": 0.0,
+            "p_win": 0.5053,
+            "model_family": "TensorFlow",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          },
+          "total": {
+            "side": "Over",
+            "line": 39.5,
+            "probability": 0.5402,
+            "p_push": 0.0,
+            "p_win": 0.5402,
+            "model_family": "equal model mixture",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          }
+        },
+        "probability": {
+          "margin": {
+            "side": "CLE",
+            "line": -4.5,
+            "probability": 0.6101,
+            "p_push": 0.0,
+            "p_win": 0.6101,
+            "model_family": "probability blend",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          },
+          "total": {
+            "side": "Over",
+            "line": 39.5,
+            "probability": 0.5428,
+            "p_push": 0.0,
+            "p_win": 0.5428,
+            "model_family": "LightGBM",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          }
+        },
+        "points": {
+          "margin": {
+            "side": "CLE",
+            "line": -4.5,
+            "probability": 0.52,
+            "p_push": 0.0,
+            "p_win": 0.52,
+            "model_family": "Extra Trees",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          },
+          "total": {
+            "side": "Under",
+            "line": 39.5,
+            "probability": 0.503,
+            "p_push": 0.0,
+            "p_win": 0.503,
+            "model_family": "Extra Trees",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          }
+        }
+      },
+      "winner": "CLE",
+      "win_probability": 0.6286,
+      "tie_probability": 0.0314,
+      "margin": -5.1,
+      "total": 41.7,
+      "quote_clock": "2026-11-27T23:05:21.627018+00:00",
+      "availability_clock": "2026-11-27T23:04:31.286409+00:00",
+      "football_history_clock": "2026-11-25T02:35:18+00:00",
+      "point_probability_status": "Winner and point projections use the point-accuracy distributions conditioned on feasible score pairs. This display adjustment has not been historically validated.",
+      "provenance_note": "N211 saved issue \u00b7 Fri 11/27 \u00b7 3:06 PM PT \u00b7 DraftKings reference lines"
+    },
+    {
+      "id": "2026_12_CAR_TB",
+      "away": "CAR",
+      "home": "TB",
+      "kickoff_utc": "2026-12-01T01:15:00+00:00",
+      "score": null,
+      "state": "upcoming",
+      "edition": "N211",
+      "issue": "2026-11-27T23:06:11.996730+00:00",
+      "display_role": "wins",
+      "retained_original": false,
+      "status_label": "PREGAME MODEL SNAPSHOT",
+      "picks": {
+        "wins": {
+          "margin": {
+            "side": "CAR",
+            "line": 3.0,
+            "probability": 0.6093,
+            "p_push": 0.0403,
+            "p_win": 0.5847,
+            "model_family": "TensorFlow",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          },
+          "total": {
+            "side": "Over",
+            "line": 43.5,
+            "probability": 0.5055,
+            "p_push": 0.0,
+            "p_win": 0.5055,
+            "model_family": "equal model mixture",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          }
+        },
+        "probability": {
+          "margin": {
+            "side": "CAR",
+            "line": 3.0,
+            "probability": 0.6661,
+            "p_push": 0.0393,
+            "p_win": 0.6399,
+            "model_family": "probability blend",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          },
+          "total": {
+            "side": "Under",
+            "line": 43.5,
+            "probability": 0.5497,
+            "p_push": 0.0,
+            "p_win": 0.5497,
+            "model_family": "LightGBM",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          }
+        },
+        "points": {
+          "margin": {
+            "side": "TB",
+            "line": -3.0,
+            "probability": 0.5318,
+            "p_push": 0.0356,
+            "p_win": 0.5129,
+            "model_family": "Extra Trees",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          },
+          "total": {
+            "side": "Under",
+            "line": 43.5,
+            "probability": 0.5086,
+            "p_push": 0.0,
+            "p_win": 0.5086,
+            "model_family": "Extra Trees",
+            "issued_utc": "2026-11-27T23:06:11.996730+00:00",
+            "quote_utc": "2026-11-27T23:05:21.627018+00:00",
+            "quote_native_utc": "2026-11-27T23:05:09Z",
+            "source": "draftkings via The Odds API"
+          }
+        }
+      },
+      "winner": "TB",
+      "win_probability": 0.5994,
+      "tie_probability": 0.0228,
+      "margin": -4.1,
+      "total": 45.4,
+      "quote_clock": "2026-11-27T23:05:21.627018+00:00",
+      "availability_clock": "2026-11-27T23:04:31.286409+00:00",
+      "football_history_clock": "2026-11-25T02:35:18+00:00",
+      "point_probability_status": "Winner and point projections use the point-accuracy distributions conditioned on feasible score pairs. This display adjustment has not been historically validated.",
+      "provenance_note": "N211 saved issue \u00b7 Fri 11/27 \u00b7 3:06 PM PT \u00b7 DraftKings reference lines"
+    }
+  ],
+  "champions": [
+    {
+      "target": "margin",
+      "objective": "strict_wins",
+      "wins": 99,
+      "losses": 64,
+      "settlement_pushes": 4,
+      "completed_population": 167,
+      "conditional_decisive_accuracy": 0.6073619631901841,
+      "brier": 0.2469343188604152,
+      "logloss": 0.6896424865782597,
+      "family": "TensorFlow"
+    },
+    {
+      "target": "margin",
+      "objective": "brier",
+      "wins": 92,
+      "losses": 71,
+      "settlement_pushes": 4,
+      "completed_population": 167,
+      "conditional_decisive_accuracy": 0.5644171779141104,
+      "brier": 0.24290189968262652,
+      "logloss": 0.6788245132576847,
+      "family": "probability blend"
+    },
+    {
+      "target": "margin",
+      "objective": "logloss",
+      "wins": 92,
+      "losses": 71,
+      "settlement_pushes": 4,
+      "completed_population": 167,
+      "conditional_decisive_accuracy": 0.5644171779141104,
+      "brier": 0.24290189968262652,
+      "logloss": 0.6788245132576847,
+      "family": "probability blend"
+    },
+    {
+      "target": "total",
+      "objective": "strict_wins",
+      "wins": 101,
+      "losses": 66,
+      "settlement_pushes": 0,
+      "completed_population": 167,
+      "conditional_decisive_accuracy": 0.6047904191616766,
+      "brier": 0.24473616291700317,
+      "logloss": 0.6826490219146051,
+      "family": "equal model mixture"
+    },
+    {
+      "target": "total",
+      "objective": "brier",
+      "wins": 97,
+      "losses": 70,
+      "settlement_pushes": 0,
+      "completed_population": 167,
+      "conditional_decisive_accuracy": 0.5808383233532934,
+      "brier": 0.24376819122739213,
+      "logloss": 0.6807171008879326,
+      "family": "LightGBM"
+    },
+    {
+      "target": "total",
+      "objective": "logloss",
+      "wins": 97,
+      "losses": 70,
+      "settlement_pushes": 0,
+      "completed_population": 167,
+      "conditional_decisive_accuracy": 0.5808383233532934,
+      "brier": 0.24376819122739213,
+      "logloss": 0.6807171008879326,
+      "family": "LightGBM"
+    }
+  ],
+  "execution": {
+    "completed_units": 160,
+    "failed_units": 0,
+    "new_units": 160,
+    "optimizer_completions": 2560,
+    "new_probability_estimators": 640,
+    "new_calibrators": 1920,
+    "peak_simultaneous_optimizers": 41,
+    "optimizer_cpu_seconds": 36883.839074628,
+    "elapsed_seconds": 2876.3437014179945
+  },
+  "candidate_count": 11348,
+  "new_derived_features": 4308,
+  "campaign_status": "COMPLETE_REGISTERED_STAGES",
+  "v13_status": "INCOMPLETE",
+  "fit_occupancy_gate": "BELOW_THRESHOLD",
+  "source_option_rows": {
+    "draftkings": 44,
+    "kalshi": 40,
+    "polymarket": 44
+  },
+  "option_rows": 128,
+  "research_source_option_counts": {
+    "ballybet": 44,
+    "betanysports": 44,
+    "betmgm": 44,
+    "betonlineag": 44,
+    "betopenly": 44,
+    "betparx": 44,
+    "betrivers": 44,
+    "betsson": 44,
+    "betus": 36,
+    "betwhale": 44,
+    "bovada": 42,
+    "casumo": 44,
+    "circasports": 44,
+    "coolbet": 44,
+    "coral": 44,
+    "courtside": 44,
+    "dabble_au": 42,
+    "draftkings": 44,
+    "espnbet": 44,
+    "everygame": 36,
+    "fanatics": 44,
+    "fanduel": 44,
+    "fliff": 44,
+    "gtbets": 40,
+    "hardrockbet": 44,
+    "hardrockbet_fl": 44,
+    "hardrockbet_oh": 44,
+    "kalshi": 40,
+    "ladbrokes_uk": 44,
+    "leovegas": 44,
+    "leovegas_se": 22,
+    "lowvig": 44,
+    "marathonbet": 44,
+    "matchbook": 36,
+    "mybookieag": 40,
+    "nordicbet": 44,
+    "novig": 44,
+    "onexbet": 44,
+    "pinnacle": 44,
+    "playup": 44,
+    "pmu_fr": 44,
+    "pointsbetau": 44,
+    "polymarket": 44,
+    "prophetx": 44,
+    "sport888": 44,
+    "sportsbet": 44,
+    "tab": 44,
+    "tabtouch": 44,
+    "tipico_de": 44,
+    "unibet": 22,
+    "unibet_nl": 44,
+    "unibet_se": 22,
+    "williamhill_us": 44,
+    "grosvenor": 22,
+    "livescorebet": 22,
+    "rebet": 22,
+    "virginbet": 22
+  },
+  "research_option_rows": 2314,
+  "quote_status": "OBSERVED_AT_ISSUANCE_NOT_LIVE",
+  "publication_status": "PREPARED_NOT_DEPLOYED"
+}
