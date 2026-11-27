@@ -10,6 +10,10 @@ The ledger records **four previously completed stages reused**, **zero newly com
 
 The retained return is **160,531,287 bytes**, SHA-256 `987b853e807a598dd53a7472f72f647953d9abf381b6ea67b519c17fc087e9fc`; its source SHA-256 is `68ad7f0d53bfb1e6fb83cf0a014e5959ac625d47e77e88933b29bde3d5ee18e3`. Live owner metadata was read on November 27 at 11:16:32 a.m. Pacific. All 427 archive members passed CRC and individual size/SHA-256 verification; no unlisted member was found. The current local and S3 latest/partial controls agree on this return. Archive integrity is separate from scientific success. The earlier [R51 failure and R52 preparation](https://github.com/alvaromendizabal/sports-edge-lab/blob/e9bb6ebff05e27060f713f74c861c42e3ff7e9aa/docs/ncaa/SPREAD_TOTALS_R51_PREPARATION_20261126.md) remains a dated record; its statement that R52 had not run applied only at that preparation time.
 
+## Replacement executable preparation
+
+**R53 engineering verified; owner launch pending.** All **393 distinct native engineering cases passed**, comprising 388 startup cases and five separate witnesses. The full historical import consumer passed. Canonical warm startup reuse also passed and executed zero additional cases. The exact executable source, SHA-256 `9e6f06324e44fa36bc0de0ca6171324a19aa47e2de4ba103bb1359213faa1c83`, remains unchanged; its source build verified 3,441 native members. Startup cases completed at 19:59:29 UTC and the separate witnesses at 20:00:10 UTC on November 27. The independently verified native acceptance report is 147,769 bytes, SHA-256 `e34d9aa72566b36f6527190ac3c2ff8c365fb132a23cd6d0c3fb7c4620a5cbfa`. Final delivery and launch-command verification are separate. The owner research run remains for the user to launch; this preparation produces no new research fits, production CPU acceptance or qualified current forecasts and does not replace R52 as the latest actual owner return.
+
 ## What the board can show this week
 
 The existing public projection contains **3,910 dated captured rows**, separately identified as **1,964 men's** and **1,946 women's** rows. Filtering their scheduled start times to **November 23–29 in America/Los_Angeles** yields **735 rows: 363 men's and 372 women's**. These are captured schedule rows, not a certified complete official slate or postseason census.
@@ -27,6 +31,8 @@ The same 3,910 schedule rows and dated aggregate market coverage are preserved. 
 Men's and women's evaluation and champion identities remain separate. Validation seasons are 2024–25 and 2025–26; 2026–27 is the exposed frozen test/monitoring season with zero selection weight. The 70% spread and totals accuracy target remains unestablished.
 
 ## Publication and verification scope
+
+The previously reviewed public board was deployed as **Site version 55**, source commit `cac86593aa8206c869862d1859549a8b7e97adc1`, at November 27, 19:39:22 UTC. [PR #457](https://github.com/alvaromendizabal/sports-edge-lab/pull/457) merged at `03a91d618256edfc40329de0e177dd951fd96f51` after 23 successful checks on its final reviewed head. This follow-up R53 preparation metadata is a new source revision and requires its own verified publication receipt.
 
 The stale repository main and hosted site last carried November 16 NCAA evidence. Newer reporting existed only in draft PR #385. This update brings the bounded public Spread & Totals review onto a current NCAA-only branch while preserving earlier evidence.
 

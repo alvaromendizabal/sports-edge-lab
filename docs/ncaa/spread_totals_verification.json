@@ -1,7 +1,7 @@
 {
   "all_3910_game_rows_unchanged": true,
   "all_payload_size_sha256_pins_verified": true,
-  "base_main": "2ae7f40b3e58ede345be486c070765744f08e177",
+  "base_main": "e64001a73c46e2380199e6d2317e5bc5ca514c5a",
   "browser_verification": "NOT_RUN_MANAGED_PREVIEW_ALREADY_OWNED_BY_ANOTHER_TASK",
   "current_physical_fit_reuses": 0,
   "engineering_checks": {
@@ -23,6 +23,7 @@
     "method": "Pillow deterministic data infographic; not a browser screenshot",
     "visual_review": "PASS_PHONE_AND_DESKTOP_INDEPENDENTLY_VIEWED"
   },
+  "historical_champions_preserved": true,
   "historical_results_recovered_or_reused_at_stage_level": 108,
   "hosting_verification": "SEPARATE_PUBLICATION_RECEIPT",
   "independent_archive_member_crc_count": 427,
@@ -30,6 +31,15 @@
   "independent_full_integrity_verified_at": "2026-11-27T19:22:40.308973+00:00",
   "independent_payloads_verified": 427,
   "invented_forecasts": 0,
+  "last_verified_public_deployment": {
+    "completed_at": "2026-11-27T19:39:22.674534+00:00",
+    "deployment_id": "appgdep_6b09dc6143288191ae8a25f63f5b72b9",
+    "scope": "Previously published R52 status review; this preparation revision requires its own publication receipt",
+    "source_commit_sha": "cac86593aa8206c869862d1859549a8b7e97adc1",
+    "status": "succeeded",
+    "url": "https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site",
+    "version_number": 55
+  },
   "latest_local_and_s3_controls_agree": true,
   "latest_owner_return_sha256": "987b853e807a598dd53a7472f72f647953d9abf381b6ea67b519c17fc087e9fc",
   "live_owner_evidence_observed_at": "2026-11-27T19:16:32.116554+00:00",
@@ -37,7 +47,27 @@
   "newer_failure_basis": "LIVE_OWNER_METADATA_AND_ROOT_REVIEW",
   "prior_owner_return_preserved_and_market_snapshot_unchanged": true,
   "private_credentials_raw_provider_arrays_or_model_bodies_included": false,
-  "public_projection_sha256": "dfbab8e6ed0441dd397c354e11b3acc618f2d5b9cde85cd0b73406fec7dd8cb7",
+  "public_projection_sha256": "e4b1e37233ad3d5cdc326f3697bb8b8474fd365b1b56c1e8eb7fc4b3c3117d9e",
+  "r53_engineering_case_counts": {
+    "distinct": 393,
+    "passed": 393,
+    "separate_witnesses": 5,
+    "startup": 388,
+    "warm_promotion_new_cases": 0
+  },
+  "r53_engineering_qualification_claimed": true,
+  "r53_engineering_report_bytes": 147769,
+  "r53_engineering_report_full_bytes_verified": true,
+  "r53_engineering_report_observed_sha256": "e34d9aa72566b36f6527190ac3c2ff8c365fb132a23cd6d0c3fb7c4620a5cbfa",
+  "r53_native_reports_completed_at": {
+    "startup": "2026-11-27T19:59:29Z",
+    "witness": "2026-11-27T20:00:10Z"
+  },
+  "r53_owner_execution_credit": 0,
+  "r53_preparation_source_sha256": "9e6f06324e44fa36bc0de0ca6171324a19aa47e2de4ba103bb1359213faa1c83",
+  "r53_preparation_status": "R53 engineering verified; owner launch pending",
+  "r53_production_cpu_acceptance_credit": 0,
+  "review_updated_at": "2026-11-27T20:04:29.097901+00:00",
   "reviewed_at_utc": "2026-11-27T19:21:31.710081+00:00",
   "schema": "sel.ncaa.v13.public_review_verification.v1",
   "source_pr_head": "e9bb6ebff05e27060f713f74c861c42e3ff7e9aa",

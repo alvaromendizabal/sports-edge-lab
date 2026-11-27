@@ -24,7 +24,9 @@ N209 completed all 304 registered fit units, with 1,216 new estimators, 2,736 ca
 
 [Current NCAA repository board](docs/ncaa/spread_totals.html) · [Verified R52 failure and scope](docs/ncaa/STATUS_REVIEW_2026-11-27.md) · [Men](tracks/ncaam/README.md) · [Women](tracks/ncaaw/README.md)
 
-**R52 failed during source refresh; zero new verified fits are recorded.** Four previously completed stages were reused, with no new stage completed. The board preserves all 3,910 dated captured schedule rows and opens to November 23–29 Pacific: 363 men's and 372 women's rows. The latest retained schedule observation is November 24 at 8:21 p.m. Pacific. Current forecasts remain unavailable; these are not refreshed or certified complete-week counts. Repository publication and the [existing hosted NCAA site](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site) have separate deployment status. Earlier dated evidence follows.
+**R52 failed during source refresh; zero new verified fits are recorded.** Four previously completed stages were reused, with no new stage completed. The board preserves all 3,910 dated captured schedule rows and opens to November 23–29 Pacific: 363 men's and 372 women's rows. The latest retained schedule observation is November 24 at 8:21 p.m. Pacific. Current forecasts remain unavailable; these are not refreshed or certified complete-week counts. Repository publication and the [existing hosted NCAA site](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site) have separate deployment status.
+
+**R53 engineering verified; owner launch pending.** All 393 distinct native engineering cases passed; canonical warm reuse executed no additional cases. The next research run remains for the user to launch; current forecasts remain unavailable. The prior public review is deployed as Site version 55; this follow-up source revision requires its own publication receipt. Earlier dated evidence follows.
 
 ---
 

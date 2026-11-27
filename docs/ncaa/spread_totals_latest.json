@@ -1,5 +1,4 @@
 {
-  "all_game_rows_included": 3910,
   "browser_render_status": "TO_BE_VERIFIED_IN_CURRENT_REVIEW",
   "captured_native_contract_count_retained_privately": 10347,
   "cohorts": {
@@ -17,7 +16,23 @@
   "current_publication": {
     "github_source_review": "NCAA_ONLY_FOLLOWUP_TO_PR_385",
     "historical_pr_385_head": "e9bb6ebff05e27060f713f74c861c42e3ff7e9aa",
+    "last_verified_deployment": {
+      "completed_at": "2026-11-27T19:39:22.674534+00:00",
+      "deployment_id": "appgdep_6b09dc6143288191ae8a25f63f5b72b9",
+      "scope": "Previously published R52 status review; this preparation revision requires its own publication receipt",
+      "source_commit_sha": "cac86593aa8206c869862d1859549a8b7e97adc1",
+      "status": "succeeded",
+      "url": "https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site",
+      "version_number": 55
+    },
     "page_deployment_label": "DERIVED_FROM_CURRENT_PAGE_ORIGIN_ONLY",
+    "previous_merged_source": {
+      "merge_commit_sha": "03a91d618256edfc40329de0e177dd951fd96f51",
+      "merged_at": "2026-11-27T19:35:52Z",
+      "pull_request": "https://github.com/alvaromendizabal/sports-edge-lab/pull/457",
+      "reviewed_head_sha": "58b18578d03d483b7d200937692a043969f46ec7",
+      "successful_checks": 23
+    },
     "scientific_completion_claimed": false,
     "source_commit_and_hosting_receipt": "RECORDED_AFTER_SOURCE_VERIFICATION"
   },
@@ -27,6 +42,8 @@
     "live_owner_observed_at": "2026-11-27T19:16:32.116554+00:00",
     "newer_failure_cause": "COMPATIBLE_COORDINATOR_LOCK_TIMEOUT",
     "no_new_source_retrieval_or_model_fitting_by_this_review": true,
+    "prepared_executable_release": "B063R53",
+    "prepared_executable_state": "R53 engineering verified; owner launch pending",
     "prior_qualification_asof": "2026-11-26T03:25:46.951523+00:00",
     "reported_execution": "B063R52_FAILURE_CONFIRMED_IN_LIVE_OWNER_EVIDENCE",
     "reported_execution_date_pacific": "2026-11-27",
@@ -88,6 +105,7 @@
       "source_sha256": "664c9754ed7c37354558745c59a38003c871f85a886a01818324648ca5d8b192"
     }
   ],
+  "native_menus": [],
   "owner_return": {
     "archive_members_crc_verified": 427,
     "bytes": 160531287,
@@ -177,7 +195,7 @@
   "product": "Spread & Totals",
   "public_native_contract_rows": 0,
   "public_projection": true,
-  "public_projection_sha256": "dfbab8e6ed0441dd397c354e11b3acc618f2d5b9cde85cd0b73406fec7dd8cb7",
+  "public_projection_sha256": "e4b1e37233ad3d5cdc326f3697bb8b8474fd365b1b56c1e8eb7fc4b3c3117d9e",
   "publication_boundary": "NCAA selected all-game research outputs; no raw native quotes, provider arrays or candidate grids",
   "publication_history": [
     {
@@ -267,10 +285,54 @@
     "status": "ENGINEERING_QUALIFIED_AS_OF_PREPARATION",
     "subsequent_execution_report": "B063R52_FAILURE_CONFIRMED_IN_LIVE_OWNER_EVIDENCE"
   },
+  "r53_preparation": {
+    "canonical_warm_promotion": {
+      "new_cases_executed": 0,
+      "seconds": 3.95285148,
+      "status": "PASS"
+    },
+    "engineering_evidence": {
+      "distinct_cases": 393,
+      "evidence_attribution": "ACTUAL_NATIVE_REPORT_FULL_BYTES_SIZE_SHA256_INDEPENDENTLY_VERIFIED",
+      "evidence_observation_sha256": "0199dd49619f17a20aa055bf6df70da1ea435686f1de72ec70a8622367944422",
+      "failed": 0,
+      "independent_local_receipt_capture_complete": true,
+      "local_receipt_verified_at": "2026-11-27T20:06:17.555856+00:00",
+      "observed_date_utc": "2026-11-27",
+      "observed_reports_completed_at": {
+        "startup": "2026-11-27T19:59:29Z",
+        "witness": "2026-11-27T20:00:10Z"
+      },
+      "passed": 393,
+      "receipt_bytes": 147769,
+      "receipt_sha256": "e34d9aa72566b36f6527190ac3c2ff8c365fb132a23cd6d0c3fb7c4620a5cbfa",
+      "scope": "Native qualification for the exact source; source-bound historical full import consumer and five separate witnesses passed",
+      "separate_witness_cases": 5,
+      "skipped": 0,
+      "startup_cases": 388,
+      "status": "PASS_NATIVE_393_DISTINCT_CASES"
+    },
+    "final_delivery_launcher_verification": "PENDING_SEPARATE_DELIVERY_VERIFICATION",
+    "latest_owner_return_release": "B063R52",
+    "main_owner_run_launched": false,
+    "native_source_members_verified": 3441,
+    "new_current_qualified_forecasts": 0,
+    "new_owner_research_fits": 0,
+    "production_cpu_acceptance_credit": 0,
+    "release": "B063R53",
+    "source_build_is_engineering_acceptance": false,
+    "source_build_receipt_sha256": "1d3c04b59bfe742b9dcf073c23f4de66cc702a08d2cdd8d261958498539adcb8",
+    "source_bytes": 78478011,
+    "source_sha256": "9e6f06324e44fa36bc0de0ca6171324a19aa47e2de4ba103bb1359213faa1c83",
+    "source_verification_status": "VERIFIED_CANONICAL_SOURCE_AND_TOOLING_NATIVE_AND_S3",
+    "source_verified_at": "2026-11-27T19:42:58Z",
+    "status": "R53 engineering verified; owner launch pending"
+  },
   "release": "V13 Spread & Totals review \u00b7 November 27, 2026",
   "render_kind": "CURRENT_REVIEW_PENDING_RENDER",
   "rendered": true,
   "responsive_browser_qa_verified": false,
+  "review_updated_at": "2026-11-27T20:04:29.097901+00:00",
   "schedule_snapshot": {
     "all_available_source_rows_preserved": true,
     "date_max": "2026-12-08T03:30:00Z",
