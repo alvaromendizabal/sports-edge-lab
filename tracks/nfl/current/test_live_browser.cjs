@@ -336,33 +336,11 @@ function verifyHostedHtml(observed, source, context) {
       await page.goto(new URL("week-12-field-notes/n208/postseason/",base).href,{waitUntil:"domcontentloaded"});
       await page.screenshot({path:path.join(output,`n208-playoffs-${width}.png`)});
     });
-    await check(`${width}px: N208 Thursday publication, specialist roles and full official Circa worksheet`, async () => {
-      const res=await page.goto(new URL("week-12-field-notes/n208/",base).href,{waitUntil:"domcontentloaded"});
-      assert.equal(res.status(),200);
-      await page.getByRole("heading",{name:"Thanksgiving forecasts",exact:true}).waitFor();
+    await check(`${width}px: N208 issued grades, authentic market worksheet and link to the current JMac edition`, async () => {
+      const response=await page.goto(new URL("week-12-field-notes/n208/",base).href,{waitUntil:"domcontentloaded"});
+      assert.equal(response.status(),200);
       await count("[data-game]",16);
-      await page.getByRole("button",{name:"Pregame",exact:true}).click();
-      const scheduled=await page.locator("[data-game]").evaluateAll(rows=>rows.filter(row=>Date.parse(row.dataset.kickoff)>Math.max(Date.now(),Date.parse("2026-11-26T21:33:17Z"))).length);
-      await count("[data-game]:visible",scheduled);
-      assert.match(await text("#game-day"),/Chicago 39, Detroit 35/);
-      assert.match(await text("#game-day"),/13 remained before kickoff at 1:33/);
-      await page.getByRole("button",{name:"All games",exact:true}).click();
-      await page.locator("#team-search").fill("Eagles");
-      await count("[data-game]:visible",1);
-      const card=page.locator("[data-game]:visible");
-      assert.match(await card.innerText(),/ARCHIVED PREGAME PRICES/);
-      assert.match(await card.innerText(),/DAL by 5\.9/);
-      assert.match(await card.innerText(),/PHI \+8\.5/);
-      await card.getByText("Most-wins model diagnostics",{exact:true}).click();
-      assert.match(await card.innerText(),/\+14\.6/);
-      await page.locator("#team-search").fill("");
-      await count(".caution:visible",4);
-      await page.getByRole("button",{name:"Kickoff passed",exact:true}).click();
-      await count("[data-game]:visible",16-scheduled);
-      const final=await (await page.request.get(new URL("week-12-field-notes/n208/game-day-status.json",base).href)).json();
-      assert.deepEqual([final.game_number,final.complete_selection_census,final.week12_before_scheduled_kickoff_as_of,final.score.CHI,final.score.DET],[165,164,13,39,35]);
-      const grades=final.settlements.filter(r=>r.objective!=="logloss").map(r=>r.grade);
-      assert.deepEqual(grades,["LOSS","WIN","WIN","WIN"]);
+      assert((await page.locator('a[href*="n209/"]').count())>0);
       await count("#latest-venue-prices details",14);
       const dk=page.locator("#latest-venue-prices details").filter({hasText:"PHI at DAL"}).first();
       await dk.locator("summary").click();
@@ -371,28 +349,166 @@ function verifyHostedHtml(observed, source, context) {
       await page.locator("#circa").getByText("All 32 authentic Circa sides",{exact:true}).click();
       await count("#circa details tbody tr:visible",32);
       await count("#circa > .tablewrap",2);
-      assert.equal(await page.locator("#circa > .tablewrap").nth(0).locator("tbody tr").count(),5);
-      assert.equal(await page.locator("#circa > .tablewrap").nth(1).locator("tbody tr").count(),5);
-      await noOverflow();
-      await count("#phone img",11);
-      for(const img of await page.locator("#phone img").all())await img.scrollIntoViewIfNeeded();
-      await page.waitForFunction(()=>[...document.querySelectorAll("#phone img")].every(img=>img.complete&&img.naturalWidth>0));
-      await page.screenshot({path:path.join(output,`n208-gallery-${width}.png`)});
-      await page.goto(new URL("week-12-field-notes/n208/",base).href,{waitUntil:"domcontentloaded"});
-      await page.screenshot({path:path.join(output,`n208-board-${width}.png`)});
+      const final=await (await page.request.get(new URL("week-12-field-notes/n208/game-day-status.json",base).href)).json();
+      assert.deepEqual([final.game_number,final.complete_selection_census,final.week12_before_scheduled_kickoff_as_of,final.score.CHI,final.score.DET],[165,164,13,39,35]);
+      assert.deepEqual(final.settlements.filter(r=>r.objective!=="logloss").map(r=>r.grade),["LOSS","WIN","WIN","WIN"]);
       const n208=await (await page.request.get(new URL("week-12-field-notes/n208/results.json",base).href)).json();
       assert.deepEqual([n208.census,n208.candidate_count,n208.issued_game_count,n208.execution.completed_units],[164,6506,14,256]);
       assert.deepEqual([n208.champions.length,n208.incompatible_raw_strict_point_pairs.length,n208.forward_lock.model_decisions],[6,4,56]);
-      const future=await context.newPage();
-      try {
-        await future.addInitScript(()=>{Date.now=()=>Date.parse("2026-12-01T06:00:00Z");});
-        await future.goto(new URL("week-12-field-notes/n208/",base).href,{waitUntil:"domcontentloaded"});
-        await future.getByRole("button",{name:"Pregame",exact:true}).click();
-        assert.equal(await future.locator("[data-game]:visible").count(),0);
-        await future.getByRole("button",{name:"Kickoff passed",exact:true}).click();
-        assert.equal(await future.locator("[data-game]:visible").count(),16);
-        assert.equal(await future.locator("[data-game] small").filter({hasText:"FINAL"}).count(),2);
-      } finally {await future.close();}
+    });
+    await check(`${width}px: full-season N209 replay for six selected objectives`, async () => {
+      const week = new URL("week-12-field-notes/n209/", base);
+      await page.goto(week.href, {waitUntil:"domcontentloaded"});
+      await page.getByRole("link", {name:"2024 and 2025 playoff replay", exact:true}).click();
+      await page.getByRole("heading", {name:"Playoff replay", exact:true}).waitFor();
+      const data = await (await page.request.get(new URL("postseason/proof.json", week).href)).json();
+      assert.deepEqual([data.roles, data.unique_candidates, data.optimizer_updates, data.originally_issued], [6, 5, 0, false]);
+      assert.equal(data.annual.length, 12);
+      for (const row of data.annual) {
+        assert.equal(row.regular.eligible, 272);
+        assert.equal(row.postseason.eligible, 13);
+        assert.equal(row.combined.eligible, 285);
+        assert.equal(row.combined.wins + row.combined.losses + row.combined.settlement_pushes, 285);
+      }
+      await page.getByText("2025 season · all six roles", {exact:true}).click();
+      await noOverflow();
+    });
+    await check(`${width}px: all sixteen JMac games match issued sources and preserve the clock for Rams and Packers`, async () => {
+      const board=new URL("week-12-field-notes/n209/",base);
+      const response=await page.goto(board.href,{waitUntil:"domcontentloaded"});
+      assert.equal(response.status(),200);
+      await page.getByRole("heading",{name:"Week 12 picks",exact:true}).waitFor();
+      const read=async name=>{
+        const asset=await page.request.get(new URL(name,board).href);
+        assert.equal(asset.status(),200,name);
+        return asset.json();
+      };
+      const ledger=await read("week-12-picks.json");
+      const result=await read("results.json");
+      assert.equal(ledger.edition,"N209");
+      assert.equal(ledger.new_issue,result.issue_id);
+      assert.deepEqual([result.weekly_games,result.issued_games,result.completed_population,result.candidate_count],[16,13,165,8216]);
+      assert.deepEqual([ledger.games.length,new Set(ledger.games.map(g=>g.id)).size],[16,16]);
+      assert.equal(ledger.games.filter(g=>g.edition==="N209").length,13);
+      await count("article.game[data-game-id]",16);
+      const onPage=await page.locator("article.game[data-game-id]").evaluateAll(rows=>rows.map(r=>r.dataset.gameId));
+      assert.deepEqual(onPage,ledger.games.map(g=>g.id));
+      const percent=(value,expected)=>{
+        if(value.startsWith(">"))assert(expected>.999 && expected<1);
+        else assert(Math.abs(parseFloat(value)-100*expected)<=.051,`${value} vs ${expected}`);
+      };
+      const displayedLine=n=>n===0?"PK":n>0?"+"+n:"−"+Math.abs(n);
+      for(const g of ledger.games){
+        const cutoff=Date.parse(g.kickoff_utc);
+        assert(Date.parse(g.issue)<cutoff && Date.parse(g.outright_issue)<cutoff,g.id);
+        assert(Object.values(g.point_issues).every(t=>Date.parse(t)<cutoff),g.id);
+        const card=page.locator(`[data-game-id="${g.id}"]`);
+        const [away,home]=(await card.locator("h3").first().textContent()).split(" at ");
+        assert(away && home,g.id);
+        const top=card.locator(":scope > .metrics .metric");
+        assert.equal(await top.count(),3,g.id);
+        assert.equal(await top.nth(0).locator("b").textContent(),g.winner===g.home?home:away);
+        percent(await top.nth(0).locator(".winner-prob").textContent(),g.win_probability);
+        const margin=await top.nth(1).locator("b").textContent();
+        assert.equal(margin,g.points.margin===0?"Even":`${g.points.margin>0?away:home} by ${Math.abs(g.points.margin).toFixed(1)}`,g.id);
+        assert.equal(await top.nth(2).locator("b").textContent(),g.points.total.toFixed(1),g.id);
+        assert(g.points.total>=Math.abs(g.points.margin),g.id);
+        assert(Math.abs(Object.values(g.outright_probabilities).reduce((sum,v)=>sum+v,0)-1)<1e-6,g.id);
+        const roles=g.edition==="V13"?["probability"]:["probability","wins"];
+        for(const role of roles){
+          const line=card.locator(`:scope > [data-version="pregame"][data-role="${role}"]`);
+          assert.equal(await line.count(),1,`${g.id} ${role} original`);
+          for(const target of ["margin","total"]){
+            const issued=g.pregame[role][target];
+            assert(Date.parse(issued.issued_utc)<cutoff && Date.parse(issued.quote_utc)<cutoff,g.id);
+            if(g.edition==="N209")assert(Date.parse(issued.quote_utc)<=Date.parse(issued.issued_utc),g.id);
+            assert(issued.model && Number.isFinite(issued.line) && issued.probability>=.5 && issued.probability<=1,g.id);
+            const cell=line.locator(`[data-target="${target}"]`);
+            const pick=target==="margin" ? `${issued.side===g.away?away:home} ${displayedLine(issued.line)}` :
+              `${issued.side==="over"?"Over":"Under"} ${issued.line}`;
+            assert.equal(await cell.locator("strong").textContent(),pick,g.id);
+            percent(await cell.locator(".confidence").textContent(),issued.probability);
+            if(issued.result)assert.equal(await cell.locator(".outcome").textContent(),issued.result,g.id);
+          }
+        }
+      }
+      const rams=page.locator("#packers-rams");
+      assert.match(await rams.locator(":scope > [data-version=pregame]").innerText(),/Rams −2\.5/);
+      assert.match(await rams.locator(":scope > [data-version=pregame]").innerText(),/Over 43\.5/);
+      assert.equal(await rams.locator(':scope > [data-version=pregame][data-role=wins]').count(),0);
+      for(const id of ["packers-rams","bears-lions"]){
+        const card=page.locator("#"+id);
+        for(const role of ["probability","wins"]){
+          const replay=card.locator(`[data-version="replay_n209"][data-role="${role}"]`);
+          assert.equal(await replay.locator("[data-target] strong").count(),2,id+" replay "+role);
+        }
+      }
+      assert.doesNotMatch(await text("main"),/Most-wins raw point estimates imply a negative team score/);
+      await page.getByRole("button",{name:"Pregame",exact:true}).click();
+      const scheduled=await page.locator("article.game").evaluateAll(rows=>rows.filter(r=>r.dataset.state==="pregame").length);
+      await count("article.game:visible",scheduled);
+      await page.getByRole("button",{name:"Kickoff passed",exact:true}).click();
+      await count("article.game:visible",16-scheduled);
+      await page.getByRole("button",{name:"All games",exact:true}).click();
+      await page.locator("#team-search").fill("Packers");
+      await count("article.game:visible",1);
+      assert(await rams.isVisible());
+      await page.locator("#team-search").fill("");
+      await count("article.game:visible",16);
+      await count("#performance > .tablewrap tbody tr",6);
+      for(const name of ["DraftKings","Kalshi","Polymarket"]){
+        const table=page.locator("#fresh-venue-benchmarks details").filter({has:page.locator("summary",{hasText:name})});
+        assert.equal(await table.count(),1,name);
+        await table.locator("summary").click();
+        assert((await table.locator("tbody tr:visible").count())>0,name);
+        await table.locator("summary").click();
+      }
+      await noOverflow();
+      await page.screenshot({path:path.join(output,`n209-board-${width}.png`)});
+      const phone=page.locator("#phone > .jmac-gallery img");
+      assert.equal(await phone.count(),4);
+      for(let i=0;i<4;i++){
+        const image=phone.nth(i);
+        assert.equal(await image.getAttribute("src"),`week-12-picks-${i+1}.png`);
+        const alt=await image.getAttribute("alt");
+        for(const g of ledger.games.slice(i*4,i*4+4)){
+          const heading=await page.locator(`[data-game-id="${g.id}"] > h3`).textContent();
+          assert(alt.includes(heading),g.id+" phone card");
+        }
+      }
+      const circa=page.locator("#circa");
+      await count("#circa > .tablewrap",2);
+      const rows=circa.locator(":scope > .tablewrap").first().locator("tbody tr");
+      assert.equal(await rows.count(),5);
+      assert.equal(await circa.locator(":scope > .tablewrap").nth(1).locator("tbody tr").count(),5);
+      await circa.getByText("All 32 official sides",{exact:true}).click();
+      const all=circa.locator("details tbody tr");
+      assert.equal(await all.count(),32);
+      const names=new Set();
+      let previous=Infinity;
+      for(const row of await all.all()){
+        const [side,cover,push,points]=await row.locator("td").allTextContents();
+        assert(!names.has(side)); names.add(side);
+        const calculated=parseFloat(cover)/100+.5*parseFloat(push)/100;
+        assert(Math.abs(calculated-Number(points))<.00081,side);
+        assert(Number(points)<=previous,side); previous=Number(points);
+      }
+      const teams=new Set();
+      for(const row of await rows.all()){
+        const name=await row.locator("td").first().textContent();
+        assert(names.has(name)); teams.add(name.split(" ")[0]);
+      }
+      assert.equal(teams.size,5);
+      await count("#circa > .jmac-gallery img",3);
+      const allImages=page.locator("#phone > .jmac-gallery img, #circa > .jmac-gallery img");
+      for(const image of await allImages.all()){
+        await image.scrollIntoViewIfNeeded();
+        await image.evaluate(img=>img.decode());
+        assert(await image.evaluate(img=>img.naturalWidth>=390 && img.naturalHeight>img.naturalWidth));
+      }
+      await noOverflow();
+      await page.locator("#phone > .jmac-gallery").scrollIntoViewIfNeeded();
+      await page.screenshot({path:path.join(output,`n209-gallery-${width}.png`)});
     });
     await check(`${width}px: N207 Thanksgiving forecast coverage and phone navigation`, async () => {
       await page.goto(new URL("week-12-field-notes/n207/", base).href, { waitUntil: "domcontentloaded" });

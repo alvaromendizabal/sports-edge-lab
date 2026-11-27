@@ -13,8 +13,36 @@
   "selection_game_count": 164,
   "new_derived_columns": 8868,
   "estimated_qualification_cost_usd": 1.84,
-  "full_owner_status": "ACTIVE_AT_CHECK",
-  "full_owner_status_as_of": "2026-11-26T21:32:00Z",
+  "full_owner_status": "COMPLETE_REGISTERED_STAGES",
+  "full_owner_status_as_of": "2026-11-27T00:04:42Z",
   "planned_full_fit_units": 304,
-  "pr_receipt": "https://github.com/alvaromendizabal/sports-edge-lab/pull/451#issuecomment-7203835276"
+  "pr_receipt": "https://github.com/alvaromendizabal/sports-edge-lab/pull/451#issuecomment-7203835276",
+  "run_id": "20261126T213200Z-074698813aba",
+  "owner_execution": {
+    "planned_units": 304,
+    "completed_units": 304,
+    "reused_units": 0,
+    "new_units": 304,
+    "failed_units": 0,
+    "blocked_units": 0,
+    "deferred_units": 0,
+    "new_probability_estimators": 1216,
+    "new_calibrators": 2736,
+    "optimizer_completions": 3952,
+    "optimizer_cpu_seconds": 116709.751472091,
+    "peak_simultaneous_optimizers": 39,
+    "worker_ceiling": 39,
+    "worker_cpu_seconds": 123673.890793898,
+    "elapsed_seconds": 4626.677222175,
+    "restored_from_verified_return": 0
+  },
+  "owner_exit_code": 0,
+  "full_v13_status": "INCOMPLETE",
+  "owner_logical_return": {
+    "bytes": 5538928798,
+    "sha256": "e76dc0fc7deb7508548135bccf9ab003fecfd5d3856fc13f83996da2d065f5f4"
+  },
+  "owner_game_count": 165,
+  "owner_candidate_count": 8216,
+  "owner_estimated_compute_cost_usd": 6.54
 }
