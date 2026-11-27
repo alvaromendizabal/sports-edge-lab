@@ -1,0 +1,218 @@
+{
+  "audit_sha256": "c3af89ffaec0a959d04ac4d415c5c9d312e9f7fe0168d258773f48575b5b8a04",
+  "cost": {
+    "default_guard_usd": 200,
+    "estimated_whole_instance_invocation_usd": 2.2304176828818876,
+    "exclusive_owner_allocation": false,
+    "guard_triggered": false,
+    "invoice": false,
+    "rate_usd_per_hour": 2.57
+  },
+  "cpu": {
+    "mean_owner_core_equivalents": 0.884373573181346,
+    "owner_cpu_measurement_wall_seconds": 3124.3205335279927,
+    "owner_cpu_seconds_total": 2763.066514,
+    "peak_actual_process_tree_cores": 1.0850666915046974,
+    "peak_actual_scientific_workers": 0,
+    "peak_granted_cpus": 12,
+    "requested_ceiling": 36,
+    "scientific_utilization_12_to36_proven": false
+  },
+  "current_bounded_acceptance": {
+    "average_registered_kernel_core_equivalents": 8.806821062262857,
+    "champion_promotions": 0,
+    "configured_cores_are_acceptance_evidence": false,
+    "cost_is_invoice": false,
+    "elapsed_seconds": 221.91351419400598,
+    "estimated_whole_instance_cost_usd": 0.1584215920773876,
+    "family_counts": {
+      "catboost": 12,
+      "lightgbm": 12,
+      "pytorch": 12,
+      "tensorflow": 12
+    },
+    "full_owner_campaign_complete": false,
+    "gate_eligible_seconds": 95.13657032398623,
+    "gate_measurement_seconds": 182.02926496000146,
+    "gate_reason": "REGISTERED_FITS_PRESERVED_WHILE_CURRENT_HOST_HEADROOM_PREVENTS_NEW_TARGET_ADMISSION",
+    "gate_status": "CONDITIONAL_SHARED_HOST_DRAINING_ACTIVE_FITS",
+    "kernel_measurement_scope": "UNCHANGED_REGISTERED_KERNEL_WITH_PREPROCESSING_INFERENCE_AND_LOCAL_PERSISTENCE",
+    "new_physical_fits_completed": 48,
+    "note": "A separate finite validation acceptance completed 48 genuinely new registered fits and preserved their model and result receipts. Peak observed scientific worker overlap was 28. The sustained capacity gate remains conditional because only 95.137 of 182.029 measured seconds were eligible while shared-host capacity changed and the finite queue drained. These are bounded preparation results; the full NCAA owner campaign has not run.",
+    "old_completed_units_refitted": 0,
+    "owner_runs": 0,
+    "peak_real_scientific_worker_overlap": 28,
+    "provider_requests": 0,
+    "registered_kernel_cpu_seconds": 1831.132163734,
+    "registered_kernel_measurement_span_seconds": 207.9220357479935,
+    "release": "R34",
+    "remaining_candidate_tasks": 0,
+    "status": "COMPLETED_FINITE_ACCEPTANCE_CATALOG",
+    "sustained_180_second_75_percent_gate_certified": false,
+    "test_rows_used": 0,
+    "utilization_of_safely_admitted_cpu_budget": 0.8669806349264785,
+    "verified_completed_tasks": 48
+  },
+  "execution": {
+    "elapsed_seconds": 3126.3261266629997,
+    "payloads_verified": 553,
+    "recorded_terminal_status": "INTERRUPTED_RESUMABLE",
+    "return_bytes": 47016491,
+    "return_sha256": "4376b0dc9915207e0623147a4db128a12dca2d71f2ac52110bbe8443924d08b0",
+    "return_verified_at": "2026-11-19T04:29:26.064351Z",
+    "scientific_completeness": "PARTIAL",
+    "source_stage_seconds": 2683.134944905003,
+    "started_at": "2026-11-19T03:36:44.696993+00:00",
+    "summary_completed_at": "2026-11-19T04:28:50.742359+00:00"
+  },
+  "failure": {
+    "automatic_stop_reason": "LIVE_EXECUTION_OBSERVATION_FAILED",
+    "explanation": "The live heartbeat accumulated a large work inventory and exceeded its event-size bound. The observation error set an automatic stop request; the next source-publication boundary preserved partial work and interrupted the owner. The generic boundary-stop exception did not establish a user-requested stop. No provider denial is established as this terminal cause.",
+    "first_error": "B068_EVENT_SIZE_BOUND",
+    "phase": "04b_incremental_model_source_refresh",
+    "root_cause": "HEARTBEAT_EXCEEDED_LIVE_EVENT_SIZE_BOUND",
+    "user_requested_stop": false
+  },
+  "latest_release": "R33",
+  "next_preparation": {
+    "canonical_gate_passed": true,
+    "canonical_source": {
+      "bytes": 63101302,
+      "sha256": "861328bebd71ab13817acbaac081ea24af6e92c54a8216b1ac994c800b045ad8"
+    },
+    "installation_receipt_sha256": "4abb0060fd3b5826afff55edf3ae2b4c6b0842216119f61b1bf7b1d611dabc91",
+    "native_acceptance": {
+      "new_fits": 0,
+      "owner_dispatches": 0,
+      "provider_requests": 0,
+      "report_sha256": "7b84eca41eb3cb86dbd055b26aa4b0bc10d0941d3908a84c83537621b59be676"
+    },
+    "native_engineering": {
+      "errors": 0,
+      "failures": 0,
+      "new_scientific_fits": 0,
+      "owner_runs": 0,
+      "report_sha256": "8e851d9c749f7ec35163bd841cbcf70708ddbb234ceba314e6fb95c1763ffd71",
+      "skips": 0,
+      "source": {
+        "bytes": 63101302,
+        "sha256": "861328bebd71ab13817acbaac081ea24af6e92c54a8216b1ac994c800b045ad8"
+      },
+      "status": "PASSED",
+      "tests_run": 1572
+    },
+    "new_scientific_fits": 48,
+    "note": "The final R34 executable passed 1,572 native engineering tests. Authentic startup recovery preserved 108 historical checkpoints, 36 prior acceptance models, three completed stages and two old worker results without new fitting. The 48 new bounded validation fits remain preserved for reuse. Canonical installation is verified; user execution of the full owner campaign remains pending, and the sustained capacity gate is not certified. Verification reused the completed recovery phases after an accounting assertion incorrectly expected two new publications. Both original contracts were already committed; zero expensive phases or fits were repeated.",
+    "owner_executions": 0,
+    "release": "R34",
+    "status": "PREPARED_VERIFIED",
+    "upload_verified": true
+  },
+  "observed_at": "2026-11-19T06:13:16.465651+00:00",
+  "owner": "NCAA basketball",
+  "preserved_bounded_acceptance": {
+    "completed_at": "2026-11-18T22:55:15.176Z",
+    "kernel_average_core_equivalents": 9.079332136469457,
+    "kernel_measurement_scope": "REGISTERED_PREPROCESSING_FIT_INFERENCE_AND_LOCAL_PERSISTENCE_NOT_OPTIMIZER_ONLY",
+    "new_physical_fits_completed": 36,
+    "overlap_of_24_or_36_real_estimator_kernels_observed": false,
+    "peak_real_estimator_kernel_overlap": 21,
+    "peak_sampled_owner_core_equivalents": 21.060894366812324,
+    "report_sha256": "3c83b5dafdd18661fce17e5fecbc1af75d6a1ba54e7225203540cd26f324b9a9",
+    "started_at": "2026-11-18T22:51:28.116Z",
+    "sustained_180_second_75_percent_gate_certified": false,
+    "verified_output_checkpoints": 36
+  },
+  "publication": {
+    "deployment_verified": false,
+    "new_fits": 0,
+    "new_forecasts": 0,
+    "note": "This is a prepared NCAA execution-status update. A preserved return records partial work; it does not establish a completed research campaign. Source review, owner execution and website deployment remain separate.",
+    "owner_runs": 0,
+    "provider_requests": 0,
+    "source_state": "PREPARED"
+  },
+  "remaining_scientific_work": [
+    "Resume incomplete market snapshot and source requests from their authenticated receipts; preserve explicit source gaps and original as-of clocks.",
+    "Reuse the three valid completed stages, 108 historical estimators, 36 earlier acceptance models and two recovered old worker results without refitting.",
+    "Prepare independent remaining contexts and fit useful work under shared-host and memory admission, targeting 12 workers and scaling toward 24 or 36 when supported.",
+    "Complete full-population validation and held-out test scoring, calibration, blends, market comparisons and all-game forecasts separately for men and women.",
+    "Measure real fitting overlap and the conditional 180-second, 75% utilization gate; source retrieval, snapshot normalization and reserved slots are separate workloads."
+  ],
+  "schema": "sel.ncaa.public.latest_execution.v2",
+  "science_contract": {
+    "new_full_population_champion": false,
+    "note": "Men and women retain independent populations and champion registries. Selection uses annual 2024\u201325 and 2025\u201326 validation metrics, with 50/50 primary and the four declared sensitivity ratios. Changing these ratios does not change training weights or predictions. Completed 2026\u201327 games remain a frozen test report, with zero selection weight. Earlier test exposure remains disclosed; full official populations and a new qualified champion are still incomplete.",
+    "primary_weights": [
+      0.5,
+      0.5
+    ],
+    "test_exposure_erased": false,
+    "test_season": "2026-27",
+    "test_selection_weight": 0,
+    "validation_seasons": [
+      "2024-25",
+      "2025-26"
+    ]
+  },
+  "source_progress": {
+    "additional_partial_snapshot": 1,
+    "box": {
+      "completed": 130,
+      "reused": 0,
+      "total": 130
+    },
+    "cache_receipt_verification": {
+      "HTTP_200_receipts": 508,
+      "HTTP_422_alias_receipts": 254,
+      "distinct_successful_snapshot_ids": 508,
+      "elapsed_seconds": 53.803300108003896,
+      "full_source_coverage_certified": false,
+      "logical_row_closure_revalidated": false,
+      "new_fits": 0,
+      "normalized_completion_receipts_verified": 209,
+      "owner_executions": 0,
+      "physical_artifact_refs_verified": 3231,
+      "provider_requests": 0,
+      "report_sha256": "9303f5c62ff15f431bc81a65ea46f2642817d2a7186304bdcf9631655fe64a3c",
+      "source_task_completion_receipts_verified": 162,
+      "successful_snapshot_ids_without_normalized_completion": 299
+    },
+    "completed_normalized_market_snapshots": 209,
+    "full_source_coverage_certified": false,
+    "normalized_request_tasks": {
+      "completed": 153,
+      "pending": 0,
+      "reused": 9,
+      "total": 162
+    },
+    "note": "All 32 scoreboard tasks and 130 box tasks have durable normalized outputs. Their completed/reused dispositions depend on raw-request reuse. The separate market work has 209 completed normalized snapshots and one partially committed snapshot. Zero pending scoreboard/box tasks does not mean the market population or source stage is complete.",
+    "outcome_rows": 1873609,
+    "quote_rows": 490484,
+    "scoreboard": {
+      "completed": 23,
+      "reused": 9,
+      "total": 32
+    },
+    "source_tasks_are_scientific_fits": false
+  },
+  "source_sha256": "8a5b9f7377e69f9a3d0367732693da7e20a41142f0f8fb8f381c9153d3a3cdd3",
+  "status": "FAILED_AUTOMATIC_INTERRUPTION_RESUMABLE",
+  "tally": {
+    "failed_terminal_status_invocations": 0,
+    "historical_estimator_fits_reused": 108,
+    "interrupted_resumable_invocations": 1,
+    "invalidated_stages": 0,
+    "new_calibration_fits": 0,
+    "new_scientific_fits": 0,
+    "new_stage_completions": 1,
+    "owner_invocations": 1,
+    "prior_worker_results_republished_without_optimizer": 2,
+    "reused_completed_stages": 3,
+    "saved_prior_acceptance_models_verified_without_refitting": 36,
+    "stage_graph_nodes": 21,
+    "successful_complete_owner_campaigns": 0,
+    "unfinished_stage_nodes": 17,
+    "unsuccessful_due_to_execution_defect": 1
+  }
+}

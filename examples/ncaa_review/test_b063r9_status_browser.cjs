@@ -76,7 +76,7 @@ async function verifyR9(browser, filename) {
       assert.match(await page.locator('#b063r9-latest-status').innerText(),/No complete current-season or upcoming-game refresh occurred/);
       assert.equal(await page.locator('#b063r9-latest-status a').getAttribute('href'),'b063r9.html');
       assert.equal(await page.locator('main > :first-child').getAttribute('id'),'v12-current-evidence');
-      assert.deepEqual(await page.locator('#v12-current-evidence a').evaluateAll(links=>links.map(link=>link.getAttribute('href'))),['three_seasons.html','v12.html']);
+      assert.deepEqual(await page.locator('#v12-current-evidence a').evaluateAll(links=>links.map(link=>link.getAttribute('href'))),['execution.html','three_seasons.html','v12.html']);
       assert.equal(await page.locator('main > :nth-child(2)').getAttribute('id'),'b063r9-latest-status');
       assert.equal(await page.locator('#b063r1-data, #terminal-data, #b063-data').count(),3);
       assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth),true,
@@ -88,7 +88,16 @@ async function verifyR9(browser, filename) {
     }
     assert.deepEqual(failures,[]);
     assert.deepEqual(external,[]);
-    return {viewports,actualOwnerRelease:'B063R8',actualOwnerStatus:'FAILED_PARTIAL_WORK_PRESERVED',
+    // Keep the pinned legacy runner intact; this existing companion hook also
+    // verifies the independent current execution page after the dated R9 checks.
+    const currentExecution = await require('./test_execution_status_browser.cjs').verifyExecutionStatus(
+      browser, path.join(path.dirname(filename), 'execution.html'));
+    assert.equal(currentExecution.actual_observed_release, 'R31');
+    assert.equal(currentExecution.corrupt_evidence_rejections, require('./execution_status_invalid_fixtures.cjs').mutations.length);
+    assert.equal(currentExecution.checked_cells_per_viewport, 180);
+    // The dated R9/R8 values below remain historical; only the separate current
+    // execution hook advances to R31 evidence.
+    return {viewports,currentExecution,actualOwnerRelease:'B063R8',actualOwnerStatus:'FAILED_PARTIAL_WORK_PRESERVED',
       actualPeakReservedCPUs:1,actualNewOwnerFits:0,actualVerifiedCacheReads:118,actualHeartbeatRows:26,
       completePostCaptureLogClaim:false,retainedMetricLeaders:14,realChromium:true,
       scriptErrors:0,externalRequests:0};

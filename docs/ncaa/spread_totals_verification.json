@@ -1,0 +1,132 @@
+{
+  "actual_owner_findings_sha256": "be60dc4e0e648c315960f6f832ae1371ce4bee196783530401cce50e640c8f38",
+  "all_game_rows": 3910,
+  "all_workstream_fit_totals_not_inferred_from_typed_zeros": true,
+  "current_public_projection_sha256": "36250c3c903d32a4eb46055de10576ab3f8b7228746f5658580bca57b7baad0d",
+  "current_publication": {
+    "commit_identity_and_status": "REFER_TO_SEPARATE_PUBLICATION_RECEIPT",
+    "future_commit_identity_inferred": false,
+    "live_deployment_verified": false,
+    "receipt_scope": "Exact six-file source publication and remote readback; separate from this immutable review artifact"
+  },
+  "dated_game_rows_unchanged_from_previous_public_projection": true,
+  "deployed": null,
+  "deployment_performed_by_reporting_builder": false,
+  "deployment_status": "UNVERIFIED",
+  "embedded_dataset_roundtrip_verified": true,
+  "engineering_evidence": {
+    "acceptance": {
+      "bytes": 139373,
+      "name": "R52_ENGINEERING_ACCEPTANCE.json",
+      "sha256": "7ac18aeb7515f46f1034412ff72305355024a190bee5c6e200e47b7910237a57"
+    },
+    "distinct_observed_test_ids": 367,
+    "fresh_reports": [
+      {
+        "completed_at": "2026-11-26T03:10:57Z",
+        "count": 362,
+        "reference": {
+          "bytes": 187940,
+          "name": "e2a1dc06f56208db_R52_NATIVE_STARTUP_REPORT.json",
+          "sha256": "e2a1dc06f56208dbc3074202dace482b136e5606c9198d6e81ee353a95560979"
+        },
+        "schema": "sel.ncaa.r52.observed_native_startup.v1"
+      },
+      {
+        "completed_at": "2026-11-26T03:11:40Z",
+        "count": 5,
+        "reference": {
+          "bytes": 19119,
+          "name": "a8a2ef14f745b036_R52_NATIVE_WITNESSES_REPORT.json",
+          "sha256": "a8a2ef14f745b036835d7fd498d73b4a8f1cab624bc038a44b0af6a05d96daae"
+        },
+        "schema": "sel.ncaa.r52.observed_native_engineering_witnesses.v1"
+      }
+    ],
+    "full_import_consumer": {
+      "authentication_mocked": false,
+      "current_inputs_runtime_and_fresh_remote_readbacks_still_required": true,
+      "fitted_model_import_performed": false,
+      "full_method_completed": true,
+      "pinned_historical_fixtures_only": true,
+      "reference": {
+        "bytes": 6272941,
+        "name": "67c7d28d5052a3f0_R52_ACTUAL_STORE_PREPARE_IMPORT.json",
+        "sha256": "67c7d28d5052a3f07c48cb5aa74cc976c44680b8036c7c27830b719e12a17dd3"
+      }
+    },
+    "observed_pass_cases": 367,
+    "owner_research_executions": 0,
+    "owner_scientific_fit_credit": 0,
+    "production_fit_throughput_qualified": false,
+    "scientific_completion_certified": false,
+    "source": {
+      "bytes": 77508626,
+      "sha256": "68ad7f0d53bfb1e6fb83cf0a014e5959ac625d47e77e88933b29bde3d5ee18e3"
+    },
+    "status": "PASS_CURRENT_SOURCE_ENGINEERING_ONLY"
+  },
+  "game_identities_unique": true,
+  "git_mutation_performed_by_reporting_builder": false,
+  "invented_forecasts": 0,
+  "javascript_syntax_check": {
+    "browser_execution_claimed": false,
+    "exit_code": 0
+  },
+  "men_rows": 1964,
+  "merge_performed_by_reporting_builder": false,
+  "new_fits_by_this_reporting_update": 0,
+  "previous_public_projection_sha256": "ab971b39f13d7fff0ab6b637945db53b1f6dbb0fb48e834368eaa2eef7cc2837",
+  "private_native_contracts_count": 10347,
+  "public_boundary_review": "Existing NCAA aggregate-only surface: no quote arrays, private grids, recipes, cloud addresses or execution archives",
+  "publication_status": "REVIEW_ARTIFACT_ENGINEERING_QUALIFIED_DEPLOYMENT_UNVERIFIED",
+  "r52_source_qualification_claimed": true,
+  "r52_source_qualification_scope": "CURRENT_SOURCE_ENGINEERING_ONLY",
+  "raw_native_contract_rows_published": 0,
+  "schema": "sel.ncaa.r52.public_board_verification.v1",
+  "scientific_data_and_qualification_pins_unchanged_from_final_snapshot": true,
+  "static_render": {
+    "artifacts": [
+      {
+        "bytes": 3359,
+        "name": "spread_totals_phone.static.html",
+        "sha256": "332bde38c51373285a36eb94b40f619258ed4898ef13fd5a6d0de608ea8084b9"
+      },
+      {
+        "bytes": 103490,
+        "name": "spread_totals_phone.pdf",
+        "sha256": "c77fb642c496e73a4ee063caf10a80b33e3a48dce489cd7bca2aafcdeafb06af"
+      },
+      {
+        "bytes": 326673,
+        "name": "spread_totals_phone.png",
+        "sha256": "858bf91824770a86969551bae9c73b0a5b67b29e84b64ea13d2d6e7f1096a65b"
+      },
+      {
+        "bytes": 4076,
+        "name": "spread_totals_desktop.static.html",
+        "sha256": "29845ab37e7abd3aa5df9055853123607e751ffacab663aefa46e30ad05602b9"
+      },
+      {
+        "bytes": 106176,
+        "name": "spread_totals_desktop.pdf",
+        "sha256": "e59b5a3784e639902dd577a6032f027eda3b9b1f4d8b657bf43ab3e5d0c8b906"
+      },
+      {
+        "bytes": 313335,
+        "name": "spread_totals_desktop.png",
+        "sha256": "a7ab75f65ec36d893da430a6bcc1de952a69ce7ff62457cc3d49b68ad021c701"
+      }
+    ],
+    "browser_interaction_tested_this_update": false,
+    "browser_screenshot_claimed": false,
+    "renderer": "PyMuPDF Story 1.26.6",
+    "responsive_browser_qa_verified": false,
+    "static_html_rendered": true,
+    "visual_review": "PASS_STATIC_HTML_RENDER",
+    "visual_review_scope": "Both exact phone and desktop PNGs viewed: complete content, legible status/footer, no clipped cards; static PyMuPDF render only, no browser or responsive interaction claim.",
+    "visual_reviewed_at_utc": "2026-11-26T03:29:16.605254+00:00"
+  },
+  "status": "REVIEW_ARTIFACT_RENDER_AND_ENGINEERING_EVIDENCE_VERIFIED",
+  "women_rows": 1946
+}
