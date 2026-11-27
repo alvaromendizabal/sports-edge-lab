@@ -1,5 +1,16 @@
 # Sports Edge Lab · NBA
 
+<!-- NBA NOVEMBER 26 R1 STATUS BEGIN -->
+## November 26: R1 recovered saved publications, then stopped; B121 in preparation
+
+[Open the current Spread & Totals board](../../docs/nba/spread-totals/index.html) · [Read the status and saved forecast clocks](current/README.md) · [iPhone graphics](current/graphics/).
+
+The latest R1 run preserved a **resumable partial report at 21:42 UTC**. It recovered **all 2,140 prior publication tasks** without inference or new forecast generation, then stopped while adopting a missing authenticated saved frontier-input reference. It recorded **zero new model fits and zero provider requests**. Its terminal exit code is unverified; checkpoints remain preserved. **B121 is being prepared, with qualification pending.**
+
+A separate official weekly calendar check at November 26, 3:43 PM Pacific confirms the same 48 game IDs, teams and tip times, now 22 final and 26 scheduled. Nine November 25 final scores are newly visible; this did not rerun models or reissue forecasts. The board retains the B119 saved forecast values and original November 19 / November 25 issue clocks. The observed 1,200-game census, 261 completed games, 26 selected roles, and explicit source/contract gaps are unchanged. Repository publication, current research completion, and website deployment are separate; current hosting is unverified. Earlier reviews below remain dated historical records.
+<!-- NBA NOVEMBER 26 R1 STATUS END -->
+
+
 
 <!-- NBA B095 CURRENT REVIEW BEGIN -->
 ## November 17 Pacific: two B095 failures before research; B096 prepared
@@ -1587,3 +1598,10 @@ No new B071 real NBA fitting, inference, source refresh, rescoring or production
 Historical market-response R13–R20 remains source-blocked: the accepted record has **0 strictly qualified response quotes and 0 event-clock records**. The **99,372 venue/recency cells** are a missingness inventory, not materialized predictive features. Raw and score/clock-adjusted historical response cannot yet be compared empirically. Missing licensed tick histories and exact checkpoint clocks remain explicit; no synthetic values fill them.
 
 The public files contain selected rounded derived issues, real source/issue clocks, role coverage and coarse champion-family/metric summaries. Complete journals, recipe identifiers, tuned parameters, weights, exact feature transforms, raw feeds, private cloud paths and owner executable/return packages remain private under the [NBA publication extension](../../docs/PUBLICATION_BOUNDARY.md#selected-nba-research-outputs-november-11-extension). This snapshot is research-only and non-wagering. A repository commit is separate from a website deployment or a fresh owner execution.
+
+
+### Descriptive saved-week check
+
+The saved winner picks were correct in 9 of the 22 completed games (40.9%). This is a descriptive check of the rounded T−120 view against the latest final scores, separate from the saved annual research metrics. It does not establish an original issued record or qualified calibration. Actual issue clocks remain unchanged on each game card; this check did not choose or update a model.
+
+The observation covers the 22 finals in the November 23–29 week, checked November 26 at 3:43 PM Pacific. It does not grade the 26 scheduled games, change any of the 48 saved game forecasts, or establish market prices or prospective returns. Nominal T60/T120 views retain their distinct actual issue clocks.

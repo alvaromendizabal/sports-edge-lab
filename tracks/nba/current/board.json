@@ -1,7 +1,7 @@
 {
   "schema": "public.nba.spread_totals.v1",
   "owner": "NBA",
-  "release": "B120 R1 prepared for owner launch · B119 verified partial research evidence",
+  "release": "R1 partial run · B121 in preparation · B119 saved outlooks",
   "source_observed_at_utc": "2026-11-25T19:34:47.323874+00:00",
   "market_comparison_asof_utc": "2026-11-25T19:33:33.256583Z",
   "publication_status": "Static public source snapshot · website deployment unverified",
@@ -31886,6 +31886,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600287",
+        "home_abbr": "CHA",
+        "away_abbr": "MEM",
+        "tip_at_utc": "2026-11-24T00:00:00+00:00",
+        "status": "FINAL",
+        "completed": true,
+        "home_score": 111,
+        "away_score": 117,
+        "source_checked_at_utc": "2026-11-26T23:43:52.612329+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-23"
       }
     },
     {
@@ -32014,6 +32027,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600288",
+        "home_abbr": "PHI",
+        "away_abbr": "POR",
+        "tip_at_utc": "2026-11-24T00:00:00+00:00",
+        "status": "FINAL",
+        "completed": true,
+        "home_score": 111,
+        "away_score": 128,
+        "source_checked_at_utc": "2026-11-26T23:43:52.612329+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-23"
       }
     },
     {
@@ -32142,6 +32168,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600289",
+        "home_abbr": "IND",
+        "away_abbr": "OKC",
+        "tip_at_utc": "2026-11-24T00:30:00+00:00",
+        "status": "FINAL",
+        "completed": true,
+        "home_score": 125,
+        "away_score": 120,
+        "source_checked_at_utc": "2026-11-26T23:43:52.612329+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-23"
       }
     },
     {
@@ -32270,6 +32309,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600290",
+        "home_abbr": "TOR",
+        "away_abbr": "MIL",
+        "tip_at_utc": "2026-11-24T00:30:00+00:00",
+        "status": "FINAL",
+        "completed": true,
+        "home_score": 111,
+        "away_score": 116,
+        "source_checked_at_utc": "2026-11-26T23:43:52.612329+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-23"
       }
     },
     {
@@ -32398,6 +32450,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600291",
+        "home_abbr": "MIN",
+        "away_abbr": "BKN",
+        "tip_at_utc": "2026-11-24T00:30:00+00:00",
+        "status": "FINAL",
+        "completed": true,
+        "home_score": 142,
+        "away_score": 116,
+        "source_checked_at_utc": "2026-11-26T23:43:52.612329+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-23"
       }
     },
     {
@@ -32526,6 +32591,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600292",
+        "home_abbr": "CHI",
+        "away_abbr": "CLE",
+        "tip_at_utc": "2026-11-24T01:00:00+00:00",
+        "status": "FINAL",
+        "completed": true,
+        "home_score": 122,
+        "away_score": 108,
+        "source_checked_at_utc": "2026-11-26T23:43:52.612329+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-23"
       }
     },
     {
@@ -32654,6 +32732,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600293",
+        "home_abbr": "NOP",
+        "away_abbr": "PHX",
+        "tip_at_utc": "2026-11-24T01:00:00+00:00",
+        "status": "FINAL",
+        "completed": true,
+        "home_score": 119,
+        "away_score": 123,
+        "source_checked_at_utc": "2026-11-26T23:43:52.612329+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-23"
       }
     },
     {
@@ -32782,6 +32873,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600294",
+        "home_abbr": "HOU",
+        "away_abbr": "LAC",
+        "tip_at_utc": "2026-11-24T01:30:00+00:00",
+        "status": "FINAL",
+        "completed": true,
+        "home_score": 116,
+        "away_score": 104,
+        "source_checked_at_utc": "2026-11-26T23:43:52.612329+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-23"
       }
     },
     {
@@ -32910,6 +33014,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600295",
+        "home_abbr": "LAL",
+        "away_abbr": "UTA",
+        "tip_at_utc": "2026-11-24T03:00:00+00:00",
+        "status": "FINAL",
+        "completed": true,
+        "home_score": 109,
+        "away_score": 94,
+        "source_checked_at_utc": "2026-11-26T23:43:52.612329+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-23"
       }
     },
     {
@@ -33038,6 +33155,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600296",
+        "home_abbr": "SAC",
+        "away_abbr": "SAS",
+        "tip_at_utc": "2026-11-24T03:00:00+00:00",
+        "status": "FINAL",
+        "completed": true,
+        "home_score": 107,
+        "away_score": 123,
+        "source_checked_at_utc": "2026-11-26T23:43:52.612329+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-23"
       }
     },
     {
@@ -33166,6 +33296,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600052",
+        "home_abbr": "ORL",
+        "away_abbr": "DET",
+        "tip_at_utc": "2026-11-25T00:00:00+00:00",
+        "status": "FINAL",
+        "completed": true,
+        "home_score": 86,
+        "away_score": 104,
+        "source_checked_at_utc": "2026-11-26T23:43:52.663100+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-24"
       }
     },
     {
@@ -33294,6 +33437,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600053",
+        "home_abbr": "WAS",
+        "away_abbr": "BOS",
+        "tip_at_utc": "2026-11-25T01:00:00+00:00",
+        "status": "FINAL",
+        "completed": true,
+        "home_score": 116,
+        "away_score": 131,
+        "source_checked_at_utc": "2026-11-26T23:43:52.663100+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-24"
       }
     },
     {
@@ -33422,6 +33578,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600054",
+        "home_abbr": "DEN",
+        "away_abbr": "DAL",
+        "tip_at_utc": "2026-11-25T03:00:00+00:00",
+        "status": "FINAL",
+        "completed": true,
+        "home_score": 101,
+        "away_score": 120,
+        "source_checked_at_utc": "2026-11-26T23:43:52.663100+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-24"
       }
     },
     {
@@ -33550,6 +33719,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600055",
+        "home_abbr": "PHI",
+        "away_abbr": "MIA",
+        "tip_at_utc": "2026-11-25T22:00:00+00:00",
+        "status": "FINAL",
+        "completed": true,
+        "home_score": 111,
+        "away_score": 104,
+        "source_checked_at_utc": "2026-11-26T23:43:52.205201+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-25"
       }
     },
     {
@@ -33678,6 +33860,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600056",
+        "home_abbr": "CHA",
+        "away_abbr": "CHI",
+        "tip_at_utc": "2026-11-26T00:00:00+00:00",
+        "status": "FINAL",
+        "completed": true,
+        "home_score": 105,
+        "away_score": 107,
+        "source_checked_at_utc": "2026-11-26T23:43:52.205201+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-25"
       }
     },
     {
@@ -33806,6 +34001,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600057",
+        "home_abbr": "NYK",
+        "away_abbr": "CLE",
+        "tip_at_utc": "2026-11-26T00:30:00+00:00",
+        "status": "FINAL",
+        "completed": true,
+        "home_score": 121,
+        "away_score": 102,
+        "source_checked_at_utc": "2026-11-26T23:43:52.205201+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-25"
       }
     },
     {
@@ -33934,6 +34142,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600058",
+        "home_abbr": "OKC",
+        "away_abbr": "MIN",
+        "tip_at_utc": "2026-11-26T00:30:00+00:00",
+        "status": "FINAL",
+        "completed": true,
+        "home_score": 106,
+        "away_score": 113,
+        "source_checked_at_utc": "2026-11-26T23:43:52.205201+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-25"
       }
     },
     {
@@ -34062,6 +34283,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600059",
+        "home_abbr": "MEM",
+        "away_abbr": "LAC",
+        "tip_at_utc": "2026-11-26T01:00:00+00:00",
+        "status": "FINAL",
+        "completed": true,
+        "home_score": 115,
+        "away_score": 97,
+        "source_checked_at_utc": "2026-11-26T23:43:52.205201+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-25"
       }
     },
     {
@@ -34190,6 +34424,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600060",
+        "home_abbr": "MIL",
+        "away_abbr": "BKN",
+        "tip_at_utc": "2026-11-26T01:00:00+00:00",
+        "status": "FINAL",
+        "completed": true,
+        "home_score": 97,
+        "away_score": 104,
+        "source_checked_at_utc": "2026-11-26T23:43:52.205201+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-25"
       }
     },
     {
@@ -34318,6 +34565,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600061",
+        "home_abbr": "HOU",
+        "away_abbr": "PHX",
+        "tip_at_utc": "2026-11-26T01:30:00+00:00",
+        "status": "FINAL",
+        "completed": true,
+        "home_score": 116,
+        "away_score": 104,
+        "source_checked_at_utc": "2026-11-26T23:43:52.205201+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-25"
       }
     },
     {
@@ -34446,6 +34706,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600062",
+        "home_abbr": "GSW",
+        "away_abbr": "SAC",
+        "tip_at_utc": "2026-11-26T03:00:00+00:00",
+        "status": "FINAL",
+        "completed": true,
+        "home_score": 129,
+        "away_score": 110,
+        "source_checked_at_utc": "2026-11-26T23:43:52.205201+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-25"
       }
     },
     {
@@ -34574,6 +34847,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600063",
+        "home_abbr": "POR",
+        "away_abbr": "SAS",
+        "tip_at_utc": "2026-11-26T03:00:00+00:00",
+        "status": "FINAL",
+        "completed": true,
+        "home_score": 116,
+        "away_score": 111,
+        "source_checked_at_utc": "2026-11-26T23:43:52.205201+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-25"
       }
     },
     {
@@ -34702,6 +34988,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600064",
+        "home_abbr": "NYK",
+        "away_abbr": "MIA",
+        "tip_at_utc": "2026-11-28T00:00:00+00:00",
+        "status": "SCHEDULED",
+        "completed": false,
+        "home_score": null,
+        "away_score": null,
+        "source_checked_at_utc": "2026-11-26T23:43:52.256818+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-27"
       }
     },
     {
@@ -34830,6 +35129,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600065",
+        "home_abbr": "DET",
+        "away_abbr": "MIL",
+        "tip_at_utc": "2026-11-28T00:30:00+00:00",
+        "status": "SCHEDULED",
+        "completed": false,
+        "home_score": null,
+        "away_score": null,
+        "source_checked_at_utc": "2026-11-26T23:43:52.256818+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-27"
       }
     },
     {
@@ -34958,6 +35270,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600066",
+        "home_abbr": "IND",
+        "away_abbr": "PHI",
+        "tip_at_utc": "2026-11-28T00:30:00+00:00",
+        "status": "SCHEDULED",
+        "completed": false,
+        "home_score": null,
+        "away_score": null,
+        "source_checked_at_utc": "2026-11-26T23:43:52.256818+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-27"
       }
     },
     {
@@ -35086,6 +35411,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600067",
+        "home_abbr": "TOR",
+        "away_abbr": "BKN",
+        "tip_at_utc": "2026-11-28T00:30:00+00:00",
+        "status": "SCHEDULED",
+        "completed": false,
+        "home_score": null,
+        "away_score": null,
+        "source_checked_at_utc": "2026-11-26T23:43:52.256818+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-27"
       }
     },
     {
@@ -35214,6 +35552,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600068",
+        "home_abbr": "BOS",
+        "away_abbr": "ATL",
+        "tip_at_utc": "2026-11-28T01:00:00+00:00",
+        "status": "SCHEDULED",
+        "completed": false,
+        "home_score": null,
+        "away_score": null,
+        "source_checked_at_utc": "2026-11-26T23:43:52.256818+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-27"
       }
     },
     {
@@ -35342,6 +35693,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600069",
+        "home_abbr": "MIN",
+        "away_abbr": "MEM",
+        "tip_at_utc": "2026-11-28T01:30:00+00:00",
+        "status": "SCHEDULED",
+        "completed": false,
+        "home_score": null,
+        "away_score": null,
+        "source_checked_at_utc": "2026-11-26T23:43:52.256818+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-27"
       }
     },
     {
@@ -35470,6 +35834,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600070",
+        "home_abbr": "PHX",
+        "away_abbr": "DAL",
+        "tip_at_utc": "2026-11-28T02:00:00+00:00",
+        "status": "SCHEDULED",
+        "completed": false,
+        "home_score": null,
+        "away_score": null,
+        "source_checked_at_utc": "2026-11-26T23:43:52.256818+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-27"
       }
     },
     {
@@ -35598,6 +35975,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600071",
+        "home_abbr": "SAS",
+        "away_abbr": "LAL",
+        "tip_at_utc": "2026-11-28T02:30:00+00:00",
+        "status": "SCHEDULED",
+        "completed": false,
+        "home_score": null,
+        "away_score": null,
+        "source_checked_at_utc": "2026-11-26T23:43:52.256818+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-27"
       }
     },
     {
@@ -35726,6 +36116,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600072",
+        "home_abbr": "UTA",
+        "away_abbr": "DEN",
+        "tip_at_utc": "2026-11-28T02:30:00+00:00",
+        "status": "SCHEDULED",
+        "completed": false,
+        "home_score": null,
+        "away_score": null,
+        "source_checked_at_utc": "2026-11-26T23:43:52.256818+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-27"
       }
     },
     {
@@ -35854,6 +36257,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600073",
+        "home_abbr": "LAC",
+        "away_abbr": "NOP",
+        "tip_at_utc": "2026-11-28T02:30:00+00:00",
+        "status": "SCHEDULED",
+        "completed": false,
+        "home_score": null,
+        "away_score": null,
+        "source_checked_at_utc": "2026-11-26T23:43:52.256818+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-27"
       }
     },
     {
@@ -35982,6 +36398,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600074",
+        "home_abbr": "POR",
+        "away_abbr": "GSW",
+        "tip_at_utc": "2026-11-28T02:30:00+00:00",
+        "status": "SCHEDULED",
+        "completed": false,
+        "home_score": null,
+        "away_score": null,
+        "source_checked_at_utc": "2026-11-26T23:43:52.256818+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-27"
       }
     },
     {
@@ -36110,6 +36539,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600297",
+        "home_abbr": "WAS",
+        "away_abbr": "ORL",
+        "tip_at_utc": "2026-11-28T22:00:00+00:00",
+        "status": "SCHEDULED",
+        "completed": false,
+        "home_score": null,
+        "away_score": null,
+        "source_checked_at_utc": "2026-11-26T23:43:52.854079+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-28"
       }
     },
     {
@@ -36238,6 +36680,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600298",
+        "home_abbr": "CHA",
+        "away_abbr": "BKN",
+        "tip_at_utc": "2026-11-28T23:00:00+00:00",
+        "status": "SCHEDULED",
+        "completed": false,
+        "home_score": null,
+        "away_score": null,
+        "source_checked_at_utc": "2026-11-26T23:43:52.854079+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-28"
       }
     },
     {
@@ -36366,6 +36821,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600299",
+        "home_abbr": "CHI",
+        "away_abbr": "IND",
+        "tip_at_utc": "2026-11-29T01:00:00+00:00",
+        "status": "SCHEDULED",
+        "completed": false,
+        "home_score": null,
+        "away_score": null,
+        "source_checked_at_utc": "2026-11-26T23:43:52.854079+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-28"
       }
     },
     {
@@ -36494,6 +36962,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600300",
+        "home_abbr": "MIL",
+        "away_abbr": "OKC",
+        "tip_at_utc": "2026-11-29T01:00:00+00:00",
+        "status": "SCHEDULED",
+        "completed": false,
+        "home_score": null,
+        "away_score": null,
+        "source_checked_at_utc": "2026-11-26T23:43:52.854079+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-28"
       }
     },
     {
@@ -36622,6 +37103,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600301",
+        "home_abbr": "HOU",
+        "away_abbr": "PHI",
+        "tip_at_utc": "2026-11-29T01:30:00+00:00",
+        "status": "SCHEDULED",
+        "completed": false,
+        "home_score": null,
+        "away_score": null,
+        "source_checked_at_utc": "2026-11-26T23:43:52.854079+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-28"
       }
     },
     {
@@ -36750,6 +37244,19 @@
             "issue_lane": "NO_VERIFIED_PREGAME_ISSUE"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600305",
+        "home_abbr": "CLE",
+        "away_abbr": "MIA",
+        "tip_at_utc": "2026-11-29T20:30:00+00:00",
+        "status": "SCHEDULED",
+        "completed": false,
+        "home_score": null,
+        "away_score": null,
+        "source_checked_at_utc": "2026-11-26T23:43:53.993028+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-29"
       }
     },
     {
@@ -36878,6 +37385,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600302",
+        "home_abbr": "MEM",
+        "away_abbr": "LAL",
+        "tip_at_utc": "2026-11-29T21:00:00+00:00",
+        "status": "SCHEDULED",
+        "completed": false,
+        "home_score": null,
+        "away_score": null,
+        "source_checked_at_utc": "2026-11-26T23:43:53.993028+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-29"
       }
     },
     {
@@ -37006,6 +37526,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600303",
+        "home_abbr": "SAS",
+        "away_abbr": "BOS",
+        "tip_at_utc": "2026-11-29T21:00:00+00:00",
+        "status": "SCHEDULED",
+        "completed": false,
+        "home_score": null,
+        "away_score": null,
+        "source_checked_at_utc": "2026-11-26T23:43:53.993028+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-29"
       }
     },
     {
@@ -37134,6 +37667,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600304",
+        "home_abbr": "UTA",
+        "away_abbr": "PHX",
+        "tip_at_utc": "2026-11-29T22:00:00+00:00",
+        "status": "SCHEDULED",
+        "completed": false,
+        "home_score": null,
+        "away_score": null,
+        "source_checked_at_utc": "2026-11-26T23:43:53.993028+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-29"
       }
     },
     {
@@ -37262,6 +37808,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600306",
+        "home_abbr": "DET",
+        "away_abbr": "ORL",
+        "tip_at_utc": "2026-11-29T23:00:00+00:00",
+        "status": "SCHEDULED",
+        "completed": false,
+        "home_score": null,
+        "away_score": null,
+        "source_checked_at_utc": "2026-11-26T23:43:53.993028+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-29"
       }
     },
     {
@@ -37390,6 +37949,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600307",
+        "home_abbr": "NYK",
+        "away_abbr": "ATL",
+        "tip_at_utc": "2026-11-29T23:00:00+00:00",
+        "status": "SCHEDULED",
+        "completed": false,
+        "home_score": null,
+        "away_score": null,
+        "source_checked_at_utc": "2026-11-26T23:43:53.993028+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-29"
       }
     },
     {
@@ -37518,6 +38090,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600308",
+        "home_abbr": "TOR",
+        "away_abbr": "DEN",
+        "tip_at_utc": "2026-11-29T23:00:00+00:00",
+        "status": "SCHEDULED",
+        "completed": false,
+        "home_score": null,
+        "away_score": null,
+        "source_checked_at_utc": "2026-11-26T23:43:53.993028+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-29"
       }
     },
     {
@@ -37646,6 +38231,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600309",
+        "home_abbr": "POR",
+        "away_abbr": "NOP",
+        "tip_at_utc": "2026-11-29T23:00:00+00:00",
+        "status": "SCHEDULED",
+        "completed": false,
+        "home_score": null,
+        "away_score": null,
+        "source_checked_at_utc": "2026-11-26T23:43:53.993028+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-29"
       }
     },
     {
@@ -37774,6 +38372,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600310",
+        "home_abbr": "GSW",
+        "away_abbr": "LAC",
+        "tip_at_utc": "2026-11-30T01:30:00+00:00",
+        "status": "SCHEDULED",
+        "completed": false,
+        "home_score": null,
+        "away_score": null,
+        "source_checked_at_utc": "2026-11-26T23:43:53.993028+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-29"
       }
     },
     {
@@ -37902,6 +38513,19 @@
             "issue_lane": "SAVED_EARLY_OUTLOOK"
           }
         }
+      },
+      "calendar_observation": {
+        "observation_scope": "WEEK_ONLY",
+        "game_id": "0022600311",
+        "home_abbr": "SAC",
+        "away_abbr": "MIN",
+        "tip_at_utc": "2026-11-30T02:00:00+00:00",
+        "status": "SCHEDULED",
+        "completed": false,
+        "home_score": null,
+        "away_score": null,
+        "source_checked_at_utc": "2026-11-26T23:43:53.993028+00:00",
+        "source_url": "https://www.nba.com/games?date=2026-11-29"
       }
     },
     {
@@ -155072,9 +155696,9 @@
   "contract_primary_strike_policy": "No admitted contract universe; no primary strike or rank is selected in this publication.",
   "b119_new_model_fits": 0,
   "b119_durable_publication_failed_tasks": 2140,
-  "b120_owner_execution": "STARTED_RECOVERY_BLOCKED",
-  "owner_execution_status_asof_utc": "2026-11-26T00:26:23.282535Z",
-  "prepared_execution_status": "VERIFIED_R1_READY_FOR_OWNER_LAUNCH",
+  "b120_owner_execution": "R1_PARTIAL_RESUMABLE_AFTER_PUBLICATION_RECOVERY",
+  "owner_execution_status_asof_utc": "2026-11-26T21:42:11.563504Z",
+  "prepared_execution_status": "B121_IN_PREPARATION_NOT_QUALIFIED_FOR_LAUNCH",
   "b119_frontier_publication_failed_tasks": 1200,
   "b119_legacy_publication_failed_tasks": 940,
   "b119_legacy_failure_branches": {
@@ -155083,7 +155707,140 @@
     "stacks": 540
   },
   "branch_failure_summary_is_not_additional_tasks": true,
-  "prepared_execution_status_asof_utc": "2026-11-26T04:27:13.095679+00:00",
-  "prepared_execution_scope": "Exact-source native diagnostics and prepare-only rehearsal passed; owner execution is separate.",
-  "r1_owner_results_included": false
+  "prepared_execution_status_asof_utc": "2026-11-26T23:54:00.610302+00:00",
+  "prepared_execution_scope": "A replacement is being prepared after the observed R1 failure. No B121 launch qualification or owner result is claimed.",
+  "r1_owner_results_included": false,
+  "r1_operational_status_included": true,
+  "r1_new_forecasts_included": false,
+  "r1_operational_execution": {
+    "status": "PARTIAL_RESUMABLE",
+    "started_at_utc": "2026-11-26T20:48:51.124347Z",
+    "finished_at_utc": "2026-11-26T21:42:11.563504Z",
+    "elapsed_seconds": 3200.570032374,
+    "owner_executions": 1,
+    "completed_owner_executions": 0,
+    "failed_or_partial_owner_executions": 1,
+    "terminal_exit_code": null,
+    "terminal_exit_code_verified": false,
+    "new_estimator_fits": 0,
+    "new_calibration_fits": 0,
+    "new_residual_distribution_fits": 0,
+    "new_meta_model_fits": 0,
+    "new_provider_requests": 0,
+    "prior_publication_tasks_recovered": 2140,
+    "prior_publication_tasks_total": 2140,
+    "publication_recovery_by_scope": {
+      "frontier": 1200,
+      "box": 240,
+      "original_model": 160,
+      "stack": 540
+    },
+    "publication_recovery_inference_calls": 0,
+    "publication_recovery_new_prediction_ledgers": 0,
+    "original_failure_history_preserved": true,
+    "stop_reason": "Missing authenticated saved frontier-input reference during continuation.",
+    "stop_reason_code": "B115_FRONTIER_RESUME_REFERENCE_REQUIRED",
+    "monitor_stage_label_was_stale": true,
+    "checkpoints_preserved": true,
+    "new_forecasts_included": false,
+    "new_current_population_claimed": false
+  },
+  "earlier_b120_execution_status": {
+    "asof_utc": "2026-11-26T00:26:23.282535Z",
+    "status": "STARTED_RECOVERY_BLOCKED",
+    "scope": "Earlier dated owner attempt; superseded as the latest execution status, retained as history."
+  },
+  "earlier_r1_preparation_status": {
+    "asof_utc": "2026-11-26T04:27:13.095679+00:00",
+    "status": "VERIFIED_R1_READY_FOR_OWNER_LAUNCH",
+    "scope": "Historical native diagnostics and preparation rehearsal; they did not establish later owner execution success."
+  },
+  "latest_week_calendar": {
+    "schema": "public.nba.week_calendar.v1",
+    "provider": "NBA official games",
+    "observation_scope": "WEEK_ONLY",
+    "checked_at_utc": "2026-11-26T23:43:54.021302+00:00",
+    "week_start_pacific": "2026-11-23",
+    "week_end_pacific": "2026-11-29",
+    "observed_games": 48,
+    "final_games": 22,
+    "scheduled_games": 26,
+    "game_ids": [
+      "0022600052",
+      "0022600053",
+      "0022600054",
+      "0022600055",
+      "0022600056",
+      "0022600057",
+      "0022600058",
+      "0022600059",
+      "0022600060",
+      "0022600061",
+      "0022600062",
+      "0022600063",
+      "0022600064",
+      "0022600065",
+      "0022600066",
+      "0022600067",
+      "0022600068",
+      "0022600069",
+      "0022600070",
+      "0022600071",
+      "0022600072",
+      "0022600073",
+      "0022600074",
+      "0022600287",
+      "0022600288",
+      "0022600289",
+      "0022600290",
+      "0022600291",
+      "0022600292",
+      "0022600293",
+      "0022600294",
+      "0022600295",
+      "0022600296",
+      "0022600297",
+      "0022600298",
+      "0022600299",
+      "0022600300",
+      "0022600301",
+      "0022600302",
+      "0022600303",
+      "0022600304",
+      "0022600305",
+      "0022600306",
+      "0022600307",
+      "0022600308",
+      "0022600309",
+      "0022600310",
+      "0022600311"
+    ],
+    "date_game_counts": {
+      "2026-11-23": 10,
+      "2026-11-24": 3,
+      "2026-11-25": 9,
+      "2026-11-26": 0,
+      "2026-11-27": 11,
+      "2026-11-28": 5,
+      "2026-11-29": 10
+    },
+    "source_urls": [
+      "https://www.nba.com/games?date=2026-11-23",
+      "https://www.nba.com/games?date=2026-11-24",
+      "https://www.nba.com/games?date=2026-11-25",
+      "https://www.nba.com/games?date=2026-11-26",
+      "https://www.nba.com/games?date=2026-11-27",
+      "https://www.nba.com/games?date=2026-11-28",
+      "https://www.nba.com/games?date=2026-11-29"
+    ],
+    "official_requests": 7,
+    "date_coverage_complete": true,
+    "game_team_and_tip_identity_unchanged": true,
+    "status_or_score_updated_games": 9,
+    "forecast_inputs_refreshed": false,
+    "forecasts_reissued": false,
+    "full_season_census_refreshed": false,
+    "new_fits": 0,
+    "model_inference_calls": 0
+  }
 }

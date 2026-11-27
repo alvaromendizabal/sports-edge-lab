@@ -1,14 +1,23 @@
-# NBA Spread & Totals — saved B119 evidence, B120 preparation
+# NBA Spread & Totals — R1 partial run, saved B119 outlooks
 
 [Open the board source](../../../docs/nba/spread-totals/index.html) · [Public data](board.json) · [iPhone graphics](graphics/)
 
-This is the selected-role analytical projection of the verified B119 partial return. B119 reported **2,140 unique durable-publication task failures and zero new model fits** (1,200 frontier tasks plus 940 legacy application tasks: 240 box, 160 original-model and 540 stack tasks; the three-branch summary is not an additional task count). Its partial return still preserves authenticated saved research and some current-population applications. **B120 remains preparation only at this publication cutoff; the owner launches its research run.** Publishing these files is not a model fit, a source refresh, a qualified contract application, or a production model deployment.
+The latest observed **B120 R1 owner run ended in a resumable partial report on November 26, 2026 at 21:42:11 UTC** after 53 minutes 21 seconds. It **recovered all 2,140 saved publication tasks**: 1,200 frontier, 240 box, 160 original-model, and 540 stack tasks. This recovery reused saved outputs with **zero inference calls and zero new prediction ledgers**. The run then stopped during continuation because an authenticated saved frontier-input reference was missing. It reported **zero new estimator, residual-distribution, calibration, or meta-model fits and zero provider requests**. The terminal exit code remains unverified. Checkpoints were preserved. **B121 is in preparation; replacement qualification and owner execution are pending.**
+
+The 2,140 publication failures originally recorded by B119 remain dated history, not a new R1 failure count. Their successful recovery does not establish completed current-season research. This board keeps the same selected-role projection, game identities and tip times, research metrics, missingness, and forecast source/issue clocks from the verified B119 partial evidence. It includes the new operational status, **no new R1 forecast values**, and no production model deployment. Publishing these files does not refresh sources or qualify market contracts.
+
+
+## Latest weekly calendar — November 26, 3:43 PM Pacific
+
+A separate bounded official NBA check covered every date from November 23 through November 29: **48 games, now 22 final and 26 scheduled**. Daily counts are **10, 3, 9, 0, 11, 5, 10**. All 48 game IDs, teams, and tip times match the saved board. Nine November 25 games gained final status and scores. Per-game calendar observations retain their actual retrieval clocks and links to the official NBA date schedules.
+
+This update made seven official requests and **no model fits or inference calls**. It did not advance the saved forecast issue times, update market quotes, regenerate predictions, or recalculate model metrics. The original season census remains **261 completed / 1,200 declared at November 25, 11:34 AM Pacific**. Calendar observations are a separate weekly layer; they do not claim a fresh full-season census. The missing Miami at Cleveland total remains unavailable.
 
 ## Population and issue clocks
 
 The official NBA census was observed on November 25, 2026 at **19:34:47 UTC**. The public board retains all **1,200 observed 2026–27 games**, including **261 completed** games. Future calendar completeness remains unproved where tournament/postseason scheduling has not been released. The board neither invents those games nor treats bookmaker overlap as the game manifest.
 
-The November 23–29 Pacific week contains **48 games**: 10 Monday, 3 Tuesday, 9 Wednesday, none Thursday, 11 Friday, 5 Saturday, and 10 Sunday. At the saved census cutoff, 13 were completed and 35 were upcoming. The default board opens the upcoming portion and provides full-week, completed, future, and full-season filters.
+The November 23–29 Pacific week contains **48 games**: 10 Monday, 3 Tuesday, 9 Wednesday, none Thursday, 11 Friday, 5 Saturday, and 10 Sunday. At the saved census cutoff, 13 were completed and 35 were upcoming. The separate November 26 calendar check now has 22 final and 26 scheduled; the default board opens those 26 scheduled week games. Full-week and full-season filters retain every observed game, and status labels show the applicable observation clock.
 
 At nominal T120, **47 of 48 week games** have all three selected point-role issues with saved pregame clocks. Miami at Cleveland on November 29 retains its winner and margin issues, but its total stays unavailable because the saved forecast's fixture time differs from the current observed schedule. This is explicit in the game details.
 
@@ -43,6 +52,13 @@ python -m examples.nba_branch.build_review --check
 
 The graphics generator requires Pillow and DejaVu fonts. It produces 12 PNGs at 1080 × 1920: one overview plus 11 date pages covering all 48 week games exactly once. Its manifest records each image's hash and game membership.
 
-Desktop browser rendering and a 375-pixel content-width mobile viewport were inspected. Search, horizon switching, full-season coverage, missing-role details, and card overflow were checked. Automated regression probes reject private recipe fields, post-tip issues, missing manifest games, and test metrics substituted for validation selection. Local checks and hosted CI are separate evidence.
+Earlier board rendering was inspected on desktop and a 375-pixel content-width mobile viewport. The present status patch is awaiting its own browser review before publication. Search, horizon switching, full-season coverage, missing-role details, and card overflow were checked. Automated regression probes reject private recipe fields, post-tip issues, missing manifest games, and test metrics substituted for validation selection. Local checks and hosted CI are separate evidence.
 
 **Publication state:** static public source snapshot; production website deployment unverified. The optional hosting registration did not complete. Public source publication does not imply website deployment or a provider refresh. Historical NBA pages remain dated archives; no other owner's files are changed.
+
+
+### Descriptive saved-week check
+
+The saved winner picks were correct in 9 of the 22 completed games (40.9%). This is a descriptive check of the rounded T−120 view against the latest final scores, separate from the saved annual research metrics. It does not establish an original issued record or qualified calibration. Actual issue clocks remain unchanged on each game card; this check did not choose or update a model.
+
+The observation covers the 22 finals in the November 23–29 week, checked November 26 at 3:43 PM Pacific. It does not grade the 26 scheduled games, change any of the 48 saved game forecasts, or establish market prices or prospective returns. Nominal T60/T120 views retain their distinct actual issue clocks.
