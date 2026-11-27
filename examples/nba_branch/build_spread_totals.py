@@ -9,7 +9,7 @@ import argparse
 import hashlib
 import json
 import math
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -20,6 +20,70 @@ OUTPUT = ROOT / "docs/nba/spread-totals"
 
 def parse_time(value):
     return datetime.fromisoformat(value.replace("Z", "+00:00"))
+
+
+def validate_week_calendar(data):
+    """Keep a later weekly status check separate from saved research evidence."""
+    calendar = data.get("latest_week_calendar")
+    observed = [game for game in data["games"] if "calendar_observation" in game]
+    if calendar is None:
+        if observed:
+            raise ValueError("weekly calendar summary required")
+        return
+    if calendar.get("schema") != "public.nba.week_calendar.v1" or calendar.get("observation_scope") != "WEEK_ONLY":
+        raise ValueError("weekly calendar scope required")
+    for key in ("forecast_inputs_refreshed", "forecasts_reissued", "full_season_census_refreshed"):
+        if calendar.get(key) is not False:
+            raise ValueError("weekly calendar cannot claim forecast or season research refresh")
+    if calendar.get("new_fits") != 0 or calendar.get("model_inference_calls") != 0:
+        raise ValueError("weekly calendar contains no fitting or model inference")
+    if calendar.get("date_coverage_complete") is not True or calendar.get("game_team_and_tip_identity_unchanged") is not True:
+        raise ValueError("weekly calendar exact date and game identity required")
+    week = [game for game in data["games"] if game["in_week"]]
+    expected_ids = {game["game_id"] for game in week}
+    if len(observed) != len(week) or {game["game_id"] for game in observed} != expected_ids:
+        raise ValueError("weekly calendar must cover exactly the full saved week")
+    if calendar.get("game_ids") != sorted(expected_ids) or calendar.get("observed_games") != len(week):
+        raise ValueError("weekly calendar denominator differs")
+    if any(calendar.get(key) != data[key] for key in ("week_start_pacific", "week_end_pacific")):
+        raise ValueError("weekly calendar date window differs")
+    start, end = (datetime.fromisoformat(data[key]).date() for key in ("week_start_pacific", "week_end_pacific"))
+    dates = [(start + timedelta(days=i)).isoformat() for i in range((end - start).days + 1)]
+    counts = {date: sum(game["pacific_date"] == date for game in week) for date in dates}
+    if calendar.get("date_game_counts") != counts or calendar.get("official_requests") != len(dates):
+        raise ValueError("weekly calendar includes every date, including empty dates")
+    if calendar.get("source_urls") != ["https://www.nba.com/games?date=" + date for date in dates]:
+        raise ValueError("official weekly date sources required")
+    checked = parse_time(calendar["checked_at_utc"])
+    saved = parse_time(data["source_observed_at_utc"])
+    if checked.tzinfo is None or checked < saved:
+        raise ValueError("weekly calendar observation clock is older than saved census")
+    final = updated = 0
+    for game in observed:
+        row = game["calendar_observation"]
+        if row.get("observation_scope") != "WEEK_ONLY" or any(row.get(key) != game[key] for key in ("game_id", "home_abbr", "away_abbr")):
+            raise ValueError("weekly calendar game identity differs")
+        if parse_time(row["tip_at_utc"]) != parse_time(game["tip_at_utc"]):
+            raise ValueError("weekly calendar cannot rebind a saved forecast tip time")
+        source_clock = parse_time(row["source_checked_at_utc"])
+        if source_clock.tzinfo is None or not saved <= source_clock <= checked:
+            raise ValueError("weekly calendar per-game clock is outside its observed interval")
+        if row.get("source_url") != "https://www.nba.com/games?date=" + game["pacific_date"]:
+            raise ValueError("weekly calendar source date differs")
+        if row.get("status") not in {"FINAL", "SCHEDULED"} or row.get("completed") is not (row["status"] == "FINAL"):
+            raise ValueError("weekly calendar status is inconsistent")
+        scores = (row.get("away_score"), row.get("home_score"))
+        if row["completed"]:
+            if parse_time(game["tip_at_utc"]) >= source_clock or any(type(score) is not int or score < 0 for score in scores):
+                raise ValueError("final weekly calendar requires observed final scores")
+            final += 1
+        elif any(score is not None for score in scores):
+            raise ValueError("scheduled weekly calendar cannot invent final scores")
+        updated += (game["completed"], game["away_score"], game["home_score"]) != (row["completed"], *scores)
+    if calendar.get("final_games") != final or calendar.get("scheduled_games") != len(week) - final:
+        raise ValueError("weekly calendar final/scheduled counts differ")
+    if calendar.get("status_or_score_updated_games") != updated:
+        raise ValueError("weekly calendar update count differs")
 
 
 def validate(data):
@@ -64,6 +128,7 @@ def validate(data):
         raise ValueError("duplicate observed game")
     if sum(r["completed"] for r in games) != data["completed_games"]:
         raise ValueError("completed game denominator differs")
+    validate_week_calendar(data)
     for game in games:
         if game["season"] != "2026-27":
             raise ValueError("this public snapshot has one declared NBA season")

@@ -1,6 +1,6 @@
 {
   "schema": "public.nba.phone_graphics.v1",
-  "source_projection_sha256": "6f8fe476562d1d6bf3bbaba79a6e906c363713a1e9b5026d8cfe1dbc53f37882",
+  "source_projection_sha256": "f4df6adf0504d46281206d9d37123ea64872b0531ae71005cb3fb426aedecdb9",
   "games": 48,
   "images": [
     {
@@ -8,7 +8,7 @@
       "game_ids": [],
       "width": 1080,
       "height": 1920,
-      "sha256": "11f75644797c6774d2a19dfc061a61cd0c121479d7097523812cfd50f1eb8508"
+      "sha256": "5bf46662f4dc840d826dd8264be236d3ebafd68f4adbe62147a0b7862483eda5"
     },
     {
       "file": "nba_2026-11-23_page_01.png",
@@ -21,7 +21,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "4908f5ef6e34f94016281bc313b276fed8a5fff0ec429d1d16c1fb0f2535b493"
+      "sha256": "7d99f4a039803001863c516414e0e517315ea4fcf32e3b0ba2a06fbaa1ed183f"
     },
     {
       "file": "nba_2026-11-23_page_02.png",
@@ -34,7 +34,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "f52ce9c538f912efc7ca3dca59423364d6078842855bf6ecc2592556685909c2"
+      "sha256": "ba6da4502bba81d8165fc3a200c796f382041c313280bc19774d2b820f1ced71"
     },
     {
       "file": "nba_2026-11-24_page_01.png",
@@ -45,7 +45,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "6203c93b560f5b541ce693c9bf61381293f876779830e20d6a5bc312528787b3"
+      "sha256": "eb8a78404f788cf7d0ac667d90d893888549eaf05ab0cb055b7173eba58e1beb"
     },
     {
       "file": "nba_2026-11-25_page_01.png",
@@ -58,7 +58,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "cf7ce5978b4fba6a62d37b6f038393d1bab44b999b230707072a059037940453"
+      "sha256": "410795c32a9ffca453d2caddf19cbd9cfcbdd7b745720ebcbbe9846b6f475c90"
     },
     {
       "file": "nba_2026-11-25_page_02.png",
@@ -70,7 +70,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "d83628952a660ed62d58f1e5dbe16b3b987bbe15339e935d8edddb5ade0af30a"
+      "sha256": "574c82a08da852a7887519d1788ce27b7309f97ffe3f0d8e9ff9b9109529c330"
     },
     {
       "file": "nba_2026-11-27_page_01.png",
@@ -83,7 +83,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "737213cf9293d9782a183481637c2a0783ab3992b0f2e9caf257dea983ef087a"
+      "sha256": "dc126f0d6599fae6f893a4db23ab95a37f1e1cd9383f173b036cdf8bab04f833"
     },
     {
       "file": "nba_2026-11-27_page_02.png",
@@ -96,7 +96,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "8ca85b958eb793c0f7d1d72a90691bdeff5ec8761ac770373de731105abaa936"
+      "sha256": "b03783105b08ea2352b602bb6c25ccb37fd249c860046c6df9eaef268bfb8250"
     },
     {
       "file": "nba_2026-11-27_page_03.png",
@@ -105,7 +105,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "e30bc3dcc1c7b9c0236f4ce3f7c7e336578331c81de9378d88a5a0d153d5cd82"
+      "sha256": "5f4b662a78d5befb75de50aa5c64eaa8284396a93a9d40f9b9aacca20328a6f0"
     },
     {
       "file": "nba_2026-11-28_page_01.png",
@@ -118,7 +118,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "d90ad4ef9ed62d28885935215bd54606bdc8dcbe7f9b07d253171ca3616fc0f3"
+      "sha256": "3c1c0c8534d214a92972e004856af5274e34c4b5e3791860e20fb2888fa21e44"
     },
     {
       "file": "nba_2026-11-29_page_01.png",
@@ -131,7 +131,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "86fd5528a8f7a542a4dcb65651520ebaf838b46d0a2ed84ce44bc82453c97bc7"
+      "sha256": "8c14d56900963bd77c3b60dcd46e332f69ba29b094d095430ad539ea5fcb6250"
     },
     {
       "file": "nba_2026-11-29_page_02.png",
@@ -144,15 +144,24 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "5cb4b40f95e8fe487956ce7798201757ff6714a26c9bef7c59412a8e9398f342"
+      "sha256": "209a1d21bd05f3f640131c87a88e5ce64d58e23ce58092295f1eecf2df1a93ac"
     }
   ],
-  "snapshot_label": "B119 saved outlooks \u00b7 R1 prepared for launch",
-  "owner_status_asof_utc": "2026-11-26T00:26:23.282535Z",
-  "owner_status": "Earlier B120 recovery blocked at recorded checkpoint",
-  "prepared_execution_status": "VERIFIED_R1_READY_FOR_OWNER_LAUNCH",
-  "prepared_execution_status_asof_utc": "2026-11-26T04:27:13.095679+00:00",
+  "snapshot_label": "B119 saved outlooks \u00b7 R1 partial run",
+  "owner_status_asof_utc": "2026-11-26T21:42:11.563504Z",
+  "owner_status": "R1 partial after all 2,140 saved publication tasks recovered",
+  "prepared_execution_status": "B121_IN_PREPARATION_NOT_QUALIFIED_FOR_LAUNCH",
+  "prepared_execution_status_asof_utc": "2026-11-26T23:54:00.610302+00:00",
   "R1_owner_results_included": false,
+  "R1_operational_status_included": true,
+  "R1_new_forecasts_included": false,
+  "prior_publication_tasks_recovered": 2140,
+  "new_model_fits": 0,
+  "new_provider_requests": 0,
   "forecasts_changed_by_graphics_generation": false,
+  "calendar_checked_at_utc": "2026-11-26T23:43:54.021302+00:00",
+  "calendar_final_games": 22,
+  "calendar_scheduled_games": 26,
+  "full_season_census_refreshed": false,
   "publication_status": "Repository assets only; public hosting unverified"
 }

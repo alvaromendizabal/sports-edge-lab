@@ -47,6 +47,45 @@ class PublicBoardBoundaryTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "annual validation"):
             validate(data)
 
+    def test_new_week_calendar_retains_saved_research_population_and_gap(self):
+        data = validate(self.data)
+        self.assertEqual(data["completed_games"], 261)
+        self.assertEqual(data["latest_week_calendar"]["final_games"], 22)
+        self.assertEqual(data["latest_week_calendar"]["scheduled_games"], 26)
+        self.assertEqual(data["latest_week_calendar"]["status_or_score_updated_games"], 9)
+        self.assertEqual(data["latest_week_calendar"]["date_game_counts"]["2026-11-26"], 0)
+        changed = [g for g in data["games"] if g.get("calendar_observation", {}).get("completed") and not g["completed"]]
+        self.assertEqual(len(changed), 9)
+        self.assertTrue(all(g["pacific_date"] == "2026-11-25" for g in changed))
+
+    def test_week_calendar_cannot_drop_game_or_claim_season_research_refresh(self):
+        data = copy.deepcopy(self.data)
+        next(g for g in data["games"] if g["in_week"]).pop("calendar_observation")
+        with self.assertRaisesRegex(ValueError, "full saved week"):
+            validate(data)
+        data = copy.deepcopy(self.data)
+        data["latest_week_calendar"]["full_season_census_refreshed"] = True
+        with self.assertRaisesRegex(ValueError, "cannot claim"):
+            validate(data)
+
+    def test_week_calendar_rejects_rebound_tip_and_unobserved_future_clock(self):
+        data = copy.deepcopy(self.data)
+        game = next(g for g in data["games"] if g["in_week"])
+        game["calendar_observation"]["tip_at_utc"] = "2026-11-01T00:00:00Z"
+        with self.assertRaisesRegex(ValueError, "rebind"):
+            validate(data)
+        data = copy.deepcopy(self.data)
+        next(g for g in data["games"] if g["in_week"])["calendar_observation"]["source_checked_at_utc"] = "2026-11-27T00:00:00Z"
+        with self.assertRaisesRegex(ValueError, "outside its observed interval"):
+            validate(data)
+
+    def test_week_calendar_rejects_invented_scheduled_score(self):
+        data = copy.deepcopy(self.data)
+        game = next(g for g in data["games"] if g.get("calendar_observation", {}).get("status") == "SCHEDULED")
+        game["calendar_observation"]["away_score"] = 1
+        with self.assertRaisesRegex(ValueError, "invent final scores"):
+            validate(data)
+
 
 if __name__ == "__main__":
     unittest.main()
