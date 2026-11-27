@@ -2,8 +2,9 @@
 import copy
 import json
 import unittest
+from datetime import timedelta
 
-from examples.nba_branch.build_spread_totals import DATA, validate
+from examples.nba_branch.build_spread_totals import DATA, parse_time, validate
 
 
 class PublicBoardBoundaryTests(unittest.TestCase):
@@ -75,7 +76,8 @@ class PublicBoardBoundaryTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "rebind"):
             validate(data)
         data = copy.deepcopy(self.data)
-        next(g for g in data["games"] if g["in_week"])["calendar_observation"]["source_checked_at_utc"] = "2026-11-27T00:00:00Z"
+        after_check = parse_time(data["latest_week_calendar"]["checked_at_utc"]) + timedelta(minutes=1)
+        next(g for g in data["games"] if g["in_week"])["calendar_observation"]["source_checked_at_utc"] = after_check.isoformat()
         with self.assertRaisesRegex(ValueError, "outside its observed interval"):
             validate(data)
 
@@ -84,6 +86,43 @@ class PublicBoardBoundaryTests(unittest.TestCase):
         game = next(g for g in data["games"] if g.get("calendar_observation", {}).get("status") == "SCHEDULED")
         game["calendar_observation"]["away_score"] = 1
         with self.assertRaisesRegex(ValueError, "invent final scores"):
+            validate(data)
+
+    def test_live_status_remains_nonfinal_and_cannot_gain_final_score(self):
+        data = copy.deepcopy(self.data)
+        game = next(g for g in data["games"] if g.get("calendar_observation", {}).get("status") == "SCHEDULED")
+        game["calendar_observation"]["status"] = "LIVE"
+        calendar = data["latest_week_calendar"]
+        calendar["scheduled_games"] -= 1
+        calendar["status_counts"]["SCHEDULED"] -= 1
+        calendar["status_counts"]["LIVE"] = 1
+        calendar["status_or_score_updated_games"] += 1
+        self.assertFalse(validate(data)["games"][data["games"].index(game)]["calendar_observation"]["completed"])
+        game["calendar_observation"]["away_score"] = 50
+        with self.assertRaisesRegex(ValueError, "invent final scores"):
+            validate(data)
+
+    def test_calendar_refresh_does_not_establish_fresh_forecasts(self):
+        data = copy.deepcopy(self.data)
+        data["forecast_freshness"]["model_inputs_refreshed"] = True
+        with self.assertRaisesRegex(ValueError, "freshness cannot claim a new model issue"):
+            validate(data)
+
+    def test_observed_contracts_keep_alternatives_and_no_model_probability(self):
+        self.assertEqual(len(validate(self.data)["observed_contracts"]), 682)
+        data = copy.deepcopy(self.data)
+        data["observed_contracts"][0]["p_yes"] = .7
+        with self.assertRaisesRegex(ValueError, "cannot infer a model probability"):
+            validate(data)
+        data = copy.deepcopy(self.data)
+        data["observed_contracts"].pop()
+        with self.assertRaisesRegex(ValueError, "contract denominator"):
+            validate(data)
+
+    def test_unavailable_no_ask_quantity_is_not_replaced_with_zero(self):
+        data = copy.deepcopy(self.data)
+        data["observed_contracts"][0]["no_ask_quantity"] = 0
+        with self.assertRaisesRegex(ValueError, "quantity availability differs"):
             validate(data)
 
 

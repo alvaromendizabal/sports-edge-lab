@@ -1,5 +1,17 @@
 # Sports Edge Lab · NBA
 
+<!-- NBA NOVEMBER 27 SOURCE STATUS BEGIN -->
+## November 27: fresh sources, stale saved model outlooks
+
+[Open Spread & Totals](https://sports-edge-lab-nba.alv-mendizabal.chatgpt.site) · [Current status and exact clocks](current/README.md) · [iPhone graphics](https://sports-edge-lab-nba.alv-mendizabal.chatgpt.site/graphics/index.html).
+
+The official weekly calendar was rechecked at **19:16:52 UTC (11:16 AM Pacific)**: the same **48 games, 22 final and 26 scheduled**, with no changed identities, tip times or scores. A separate official Kalshi capture at **19:20:53 UTC (11:20 AM Pacific)** preserves **682 exact pending propositions across 11 games**, including every observed spread/total strike and dated YES/NO ask. Fifteen scheduled games have no observation in this capture and remain visible. NO ask quantities are unavailable; current execution size and exact fees are unqualified.
+
+These source-only diagnostics made **13 HTTP requests in total and zero fits or inference calls**. The original B119 point forecasts and annual research metrics remain unchanged. Every nonfinal forecast is labeled **Stale saved outlook**, with separate actual winner, margin and T−60/T−120 total issue times. No threshold probability, selected market side, ranking or net return is inferred from a point forecast.
+
+**B120 R3 is prepared and rehearsed for user launch at November 27, 12:02 PM Pacific; the latest verified owner execution remains R1 partial.** All 1,298 native tests passed, and the 77.49-second exact prepare-only rehearsal exited 0 with seven unchanged controls and zero new fits or main launches. Frozen-state continuity and authenticated physical partial-return delivery passed. The public source-observation and R3 preparation snapshot deployed successfully as Site version 3 at **20:14:17 UTC (12:14 PM Pacific)**; this preparation and deployment establish no new owner run, model forecast or production promotion. Current readiness and hosting receipts are recorded in the linked status page; the November 26 R2 evidence below remains preserved history.
+<!-- NBA NOVEMBER 27 SOURCE STATUS END -->
+
 <!-- NBA NOVEMBER 26 R2 STATUS BEGIN -->
 ## November 26: B120 R2 prepared and verified; main owner run not observed
 

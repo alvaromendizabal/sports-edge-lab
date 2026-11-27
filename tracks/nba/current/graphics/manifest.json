@@ -1,6 +1,6 @@
 {
   "schema": "public.nba.phone_graphics.v1",
-  "source_projection_sha256": "bcd6ae208c0258b7b230ad5a353cd45174aa11cb83a55e969bcabfc2596e0b42",
+  "source_projection_sha256": "582fb8a8c91e8f8b8df96790affea12d646fc9ff1b271fa02def556a565ffeda",
   "games": 48,
   "images": [
     {
@@ -8,7 +8,7 @@
       "game_ids": [],
       "width": 1080,
       "height": 1920,
-      "sha256": "1fb06b4f825ed28de9a53e9ba6b1ccaff98f65d7dd1645eb4777d7a41d603045"
+      "sha256": "56bc6dfca84cf72706648ec37503a752f84ae1c5f29866f13e2cc8f2e1554017"
     },
     {
       "file": "nba_2026-11-23_page_01.png",
@@ -21,7 +21,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "f450c8f68ceb9e41366a3a6a68c7d708fb7516a32bb575193ea4a4668fc8be6f"
+      "sha256": "9e2d9b901c217c0ae0f8a60d47b0481e733ed8cb3307f6d0a8b196084c30c1ce"
     },
     {
       "file": "nba_2026-11-23_page_02.png",
@@ -34,7 +34,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "7d8136c87ecdb4822b9ce40fcc90d88ab52e7e33b66360c262eb085c6e5e92ca"
+      "sha256": "5d5c96744de0a582ae5a4c005cacd6788f6e242a23cd4ed0327400ee68bed82b"
     },
     {
       "file": "nba_2026-11-24_page_01.png",
@@ -45,7 +45,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "7d4aa3b032173b981aba0e29ea7603438817b32abac7230d406c75f8f52e74dd"
+      "sha256": "61a4ec7323cbc8c0635cbf42aee92cfbac69cce5e35d9efacb3be11ecf71eaba"
     },
     {
       "file": "nba_2026-11-25_page_01.png",
@@ -58,7 +58,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "ef46f4b7ca2b2b7df0528dd505a3567fc8be7671314fae3bd1e1aee7c1f8d62c"
+      "sha256": "9982f75022592214c5fed1988e1303ba7d6ef8203b8d71a752a0355b84ea3b51"
     },
     {
       "file": "nba_2026-11-25_page_02.png",
@@ -70,7 +70,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "d9d7c74578ec35c3b138e18a104916c948ef2a5dbeae6dcf853d80f5ae2e9cd0"
+      "sha256": "0cf04fa2a15d45f930ae3862c73259e4d58a09830187dde75e50cc7edd0d1a58"
     },
     {
       "file": "nba_2026-11-27_page_01.png",
@@ -83,7 +83,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "1587d479b3ce9e8a525818eea54ab6a6da637e4882f091a39c6a5fca34107575"
+      "sha256": "7d1e6e98c519636353f7d8b397c8f53258155fa315e874031c7424a4aef8c3fc"
     },
     {
       "file": "nba_2026-11-27_page_02.png",
@@ -96,7 +96,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "a5ff4de1e87c763e3ab21e25d3822f340b42b5cbb73cd8b0554941d7cad88ca0"
+      "sha256": "9c1ec861723eaa65c43e389ac76997f6a7db934e220cb1ba2f15846b96f43e04"
     },
     {
       "file": "nba_2026-11-27_page_03.png",
@@ -105,7 +105,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "2c3ce22d919c7edd8561198311e42a187488dc5d761056b1b86803b7c4a46d13"
+      "sha256": "235bb9461f24d3300a6158885cf8fbe773ae74ca8fd6349a81b8e027ce066c89"
     },
     {
       "file": "nba_2026-11-28_page_01.png",
@@ -118,7 +118,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "a200dca069b8a0a03c492cef5810415d94f3a26db8eeb3b44e816987f95bc19c"
+      "sha256": "09cdc352da2d077c25849eae74a31f6b4f72c86d06371acabc78f56371a8b86b"
     },
     {
       "file": "nba_2026-11-29_page_01.png",
@@ -131,7 +131,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "3281ab64543f339cc078900dd7cdba9c4acc86d42d8da1cb6392f90d8390350a"
+      "sha256": "215a171c39541107c5011e6a3543f137c6b1c82a49fee56036d35f70e731c228"
     },
     {
       "file": "nba_2026-11-29_page_02.png",
@@ -144,20 +144,39 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "7c457893f01fa4bb40df65b74d9611610ae5c67ba3aee90d711dec6a31ae5006"
+      "sha256": "53c337b998a94b48a568bc1cdb543cf2828a62b6d9a5c43c27cb0f74b5a39386"
     }
   ],
-  "snapshot_label": "B119 saved outlooks \u00b7 R2 prepared",
+  "snapshot_label": "B119 stale saved outlooks \u00b7 B120 R3 \u00b7 ready for owner launch",
   "owner_status_asof_utc": "2026-11-26T21:42:11.563504Z",
   "owner_status": "R1 partial after all 2,140 saved publication tasks recovered",
-  "prepared_execution_status": "B120_R2_PREPARED_VERIFIED",
-  "prepared_execution_status_asof_utc": "2026-11-27T01:27:42.870128+00:00",
+  "owner_control_observation": {
+    "observed_at_utc": "2026-11-27T19:10:22.466535+00:00",
+    "latest_verified_owner_run": "B120 R1",
+    "latest_verified_owner_status": "PARTIAL_RESUMABLE",
+    "newer_owner_execution_verified": false,
+    "scope": "Saved owner controls and launch evidence; observation only",
+    "new_fits": 0,
+    "main_owner_research_launched_by_observer": false
+  },
+  "prepared_execution_status": "PREPARED_AND_REHEARSED_USER_LAUNCH_READY",
+  "prepared_execution_status_asof_utc": "2026-11-27T20:02:28.248617+00:00",
+  "next_release_preparation": {
+    "release_label": "B120 R3",
+    "status": "PREPARED_AND_REHEARSED_USER_LAUNCH_READY",
+    "owner_launch_ready": true,
+    "status_label": "Ready for owner launch",
+    "verified_at_utc": "2026-11-27T20:02:28.248617+00:00",
+    "summary": "B120 R3 preparation and its exact prepare-only launcher were verified November 27 at 12:02 PM Pacific. All 1,298 native engineering tests passed. The launcher rehearsal exited 0 in 77.49 seconds, left all seven owner controls unchanged, and made zero new fits or owner research launches. Frozen-state restoration and physical delivery of the authenticated partial return also passed. The user launches the main campaign; no new model forecasts or promotion are claimed.",
+    "new_forecasts_published": false
+  },
   "R1_owner_results_included": false,
   "R1_operational_status_included": true,
   "R1_new_forecasts_included": false,
   "prior_publication_tasks_recovered": 2140,
   "new_owner_campaign_fits": 0,
-  "new_provider_requests": 0,
+  "new_provider_requests_by_graphics_generation": 0,
+  "calendar_provider_requests": 7,
   "r2_preparation": {
     "release": "B120",
     "revision": "R2",
@@ -187,12 +206,73 @@
     "scientific_owner_occupancy_gate_qualified": false,
     "new_forecast_values_published": false
   },
+  "forecast_freshness": {
+    "schema": "public.nba.saved_forecast_freshness.v1",
+    "reviewed_at_utc": "2026-11-27T19:20:53.067315+00:00",
+    "status": "STALE_SAVED_OUTLOOKS",
+    "reason": "Scheduled-game values are retained B119 issues. A later model-input refresh and new issue have not been verified.",
+    "age_is_descriptive_only": true,
+    "age_threshold_used": false,
+    "forecast_values_changed": false,
+    "model_inputs_refreshed": false,
+    "new_forecasts_issued": 0
+  },
+  "observed_contract_snapshot": {
+    "schema": "public.nba.observed_contract_snapshot.v1",
+    "source": "Kalshi official public HTTPS",
+    "captured_at_utc": "2026-11-27T19:20:53.067315+00:00",
+    "status": "EXACT_TERMS_OBSERVED_MODEL_PROBABILITIES_UNAVAILABLE",
+    "source_requests": 6,
+    "provider_credits": 0,
+    "full_week_games": 48,
+    "scheduled_week_games": 26,
+    "games_with_observed_contracts": 11,
+    "scheduled_games_without_observed_contracts": 15,
+    "observed_contract_count": 682,
+    "spread_count": 363,
+    "total_count": 319,
+    "source_series_pagination_complete": true,
+    "quote_lane": "LAST_OBSERVED_PREGAME",
+    "fixed_model_horizon_join_qualified": false,
+    "source_observations_are_model_inputs": false,
+    "qualified_side_probabilities": 0,
+    "qualified_fees": 0,
+    "new_fits": 0,
+    "new_model_inference_calls": 0,
+    "normal_settlements_observed": 0,
+    "pending_contracts": 682,
+    "fair_price_or_void_resolutions_observed": 0,
+    "display_order": "Game, target, margin orientation, then numeric strike; no primary strike or model ranking selected",
+    "unobserved_scheduled_game_ids": [
+      "0022600297",
+      "0022600298",
+      "0022600299",
+      "0022600300",
+      "0022600301",
+      "0022600302",
+      "0022600303",
+      "0022600304",
+      "0022600305",
+      "0022600306",
+      "0022600307",
+      "0022600308",
+      "0022600309",
+      "0022600310",
+      "0022600311"
+    ],
+    "yes_ask_quantity_available": 682,
+    "no_ask_quantity_available": 0
+  },
   "forecasts_changed_by_graphics_generation": false,
-  "calendar_checked_at_utc": "2026-11-26T23:43:54.021302+00:00",
+  "calendar_checked_at_utc": "2026-11-27T19:16:52.633910+00:00",
   "calendar_final_games": 22,
   "calendar_scheduled_games": 26,
+  "calendar_status_counts": {
+    "FINAL": 22,
+    "SCHEDULED": 26
+  },
   "full_season_census_refreshed": false,
-  "publication_status": "Public snapshot published \u00b7 initial hosting verified November 26, 5:38 PM Pacific",
+  "publication_status": "Public snapshot published \u00b7 hosting verified November 27, 12:14 PM Pacific (20:14:17 UTC)",
   "public_site_url": "https://sports-edge-lab-nba.alv-mendizabal.chatgpt.site",
   "public_graphics_url": "https://sports-edge-lab-nba.alv-mendizabal.chatgpt.site/graphics/index.html",
   "initial_hosting_verification": {
