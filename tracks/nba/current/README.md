@@ -1,6 +1,6 @@
 # NBA Spread & Totals — B120 R2 prepared and verified, saved B119 outlooks
 
-[Open the board source](../../../docs/nba/spread-totals/index.html) · [Public data](board.json) · [iPhone graphics](graphics/)
+[Open the published board](https://sports-edge-lab-nba.alv-mendizabal.chatgpt.site) · [Versioned source](../../../docs/nba/spread-totals/index.html) · [Public data](board.json) · [iPhone graphics](https://sports-edge-lab-nba.alv-mendizabal.chatgpt.site/graphics/index.html)
 
 The latest observed **B120 R1 owner run ended in a resumable partial report on November 26, 2026 at 21:42:11 UTC** after 53 minutes 21 seconds. It **recovered all 2,140 saved publication tasks**: 1,200 frontier, 240 box, 160 original-model, and 540 stack tasks. This recovery reused saved outputs with **zero inference calls and zero new prediction ledgers**. The run then stopped during continuation because an authenticated saved frontier-input reference was missing. It reported **zero new estimator, residual-distribution, calibration, or meta-model fits and zero provider requests**. The terminal exit code remains unverified. Checkpoints were preserved. **B120 R2 preparation is now verified; the main replacement owner run has not been observed.**
 
@@ -60,7 +60,7 @@ The graphics generator requires Pillow and DejaVu fonts. It produces 12 PNGs at 
 
 Earlier board rendering was inspected on desktop and a 375-pixel content-width mobile viewport. The current preparation status update has separate validation from the earlier owner result; local generation and boundary checks are recorded with its pull request. Search, horizon switching, full-season coverage, missing-role details, and card overflow were checked. Automated regression probes reject private recipe fields, post-tip issues, missing manifest games, and test metrics substituted for validation selection. Local checks and hosted CI are separate evidence.
 
-**Publication state:** static public source snapshot; production website deployment unverified. The optional hosting registration did not complete. Public source publication does not imply website deployment or a provider refresh. Historical NBA pages remain dated archives; no other owner's files are changed.
+**Publication state:** public snapshot published at [https://sports-edge-lab-nba.alv-mendizabal.chatgpt.site](https://sports-edge-lab-nba.alv-mendizabal.chatgpt.site), with the [twelve phone graphics](https://sports-edge-lab-nba.alv-mendizabal.chatgpt.site/graphics/index.html). Initial hosting verification is **2026-11-27 01:38:44.742760 UTC** (November 26, 5:38 PM Pacific), site version 1. Later publication metadata updates do not change that first verification time. Deployment did not refresh providers, issue forecasts, select or promote models, or launch the owner campaign. Historical NBA pages remain dated archives; no other owner's files are changed.
 
 
 ### Descriptive saved-week check

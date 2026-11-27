@@ -1,6 +1,6 @@
 {
   "schema": "public.nba.phone_graphics.v1",
-  "source_projection_sha256": "9b35fe0ad0961d7b52097925b80cf47c07843839741decf7f7f0748ef71f912a",
+  "source_projection_sha256": "bcd6ae208c0258b7b230ad5a353cd45174aa11cb83a55e969bcabfc2596e0b42",
   "games": 48,
   "images": [
     {
@@ -8,7 +8,7 @@
       "game_ids": [],
       "width": 1080,
       "height": 1920,
-      "sha256": "757f1e9ae3be7f08664f567857701ecf89a284dcf64bb8dcaae1a1d90f7b6794"
+      "sha256": "1fb06b4f825ed28de9a53e9ba6b1ccaff98f65d7dd1645eb4777d7a41d603045"
     },
     {
       "file": "nba_2026-11-23_page_01.png",
@@ -21,7 +21,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "a30cd0efcbd5cb960a933e036500e4b0a47534fe182acb479d8eb313919d6ec2"
+      "sha256": "f450c8f68ceb9e41366a3a6a68c7d708fb7516a32bb575193ea4a4668fc8be6f"
     },
     {
       "file": "nba_2026-11-23_page_02.png",
@@ -34,7 +34,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "2ce3bc1d7e4f0d584d65e5bf93621ee1009f8a0bb755b13c13b10e259dc05f3a"
+      "sha256": "7d8136c87ecdb4822b9ce40fcc90d88ab52e7e33b66360c262eb085c6e5e92ca"
     },
     {
       "file": "nba_2026-11-24_page_01.png",
@@ -45,7 +45,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "8bdc261d7b5544060aeb8acfe0c9682d18da57f77d64d0ddafd2a24be977cefd"
+      "sha256": "7d4aa3b032173b981aba0e29ea7603438817b32abac7230d406c75f8f52e74dd"
     },
     {
       "file": "nba_2026-11-25_page_01.png",
@@ -58,7 +58,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "b6bf16356669d55e0b69151464df52499d70e26e076986dfcc25ace934229fd8"
+      "sha256": "ef46f4b7ca2b2b7df0528dd505a3567fc8be7671314fae3bd1e1aee7c1f8d62c"
     },
     {
       "file": "nba_2026-11-25_page_02.png",
@@ -70,7 +70,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "6c899c48d0c76f38dfba67d7e2753e6d8099c7b9f5ef48455f07c2a174be5273"
+      "sha256": "d9d7c74578ec35c3b138e18a104916c948ef2a5dbeae6dcf853d80f5ae2e9cd0"
     },
     {
       "file": "nba_2026-11-27_page_01.png",
@@ -83,7 +83,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "bf23ed7118b42a446ccd48e8fb98664c1105012c6acc3a22ad13eaa0a114bf19"
+      "sha256": "1587d479b3ce9e8a525818eea54ab6a6da637e4882f091a39c6a5fca34107575"
     },
     {
       "file": "nba_2026-11-27_page_02.png",
@@ -96,7 +96,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "6ed593d2d7d0bb2739019c450abdb4bc3ab6976be6dae17267dc3d3d6da77ea7"
+      "sha256": "a5ff4de1e87c763e3ab21e25d3822f340b42b5cbb73cd8b0554941d7cad88ca0"
     },
     {
       "file": "nba_2026-11-27_page_03.png",
@@ -105,7 +105,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "ee4cc2ecea11f5d226cced636fdf589cce7487359bc3506f82429b5a635daa65"
+      "sha256": "2c3ce22d919c7edd8561198311e42a187488dc5d761056b1b86803b7c4a46d13"
     },
     {
       "file": "nba_2026-11-28_page_01.png",
@@ -118,7 +118,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "28950eb710331be5dade3f3edca668d637544d511b8df2dc02158041ebdb1fce"
+      "sha256": "a200dca069b8a0a03c492cef5810415d94f3a26db8eeb3b44e816987f95bc19c"
     },
     {
       "file": "nba_2026-11-29_page_01.png",
@@ -131,7 +131,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "f6c0e21cadf3126e2419d1c1fd0e11e60c623fde1abc18697c6fca57def74b0e"
+      "sha256": "3281ab64543f339cc078900dd7cdba9c4acc86d42d8da1cb6392f90d8390350a"
     },
     {
       "file": "nba_2026-11-29_page_02.png",
@@ -144,7 +144,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "019e538ef80723f640d8d72179574bcd4410dfc5c2dfc5740b2add0a5f51ea68"
+      "sha256": "7c457893f01fa4bb40df65b74d9611610ae5c67ba3aee90d711dec6a31ae5006"
     }
   ],
   "snapshot_label": "B119 saved outlooks \u00b7 R2 prepared",
@@ -192,5 +192,14 @@
   "calendar_final_games": 22,
   "calendar_scheduled_games": 26,
   "full_season_census_refreshed": false,
-  "publication_status": "Repository assets only; public hosting unverified"
+  "publication_status": "Public snapshot published \u00b7 initial hosting verified November 26, 5:38 PM Pacific",
+  "public_site_url": "https://sports-edge-lab-nba.alv-mendizabal.chatgpt.site",
+  "public_graphics_url": "https://sports-edge-lab-nba.alv-mendizabal.chatgpt.site/graphics/index.html",
+  "initial_hosting_verification": {
+    "status": "PUBLISHED",
+    "verified_at_utc": "2026-11-27T01:38:44.742760+00:00",
+    "initial_site_version": 1,
+    "initial_site_source_commit": "e5d3c979b62881348eadce8d794ccced4a6ab0de",
+    "scope": "INITIAL_PUBLIC_SNAPSHOT_DEPLOYMENT; NO_RESEARCH_OR_SOURCE_REFRESH"
+  }
 }

@@ -129,7 +129,7 @@ def main():
             text(d, (60, footer_y + 166), "B120 R2 prepared; owner run not observed.", 22, MUTED)
             text(d, (60, footer_y + 202), "R1 recovered 2,140 tasks; 0 qualified contracts.", 21, MUTED)
             text(d, (60, footer_y + 232), "PIT / calibration incomplete; forecast clocks retained.", 21, MUTED)
-            text(d, (60, footer_y + 262), "Repository assets only · public hosting unverified.", 21, MUTED)
+            text(d, (60, footer_y + 262), "Public board published · hosting verified Nov 26, 5:38 PM PST.", 21, MUTED)
             p = OUT / f"nba_{date}_page_{i+1:02d}.png"
             img.save(p, optimize=True)
             outputs.append({"file": p.name, "game_ids": [g["game_id"] for g in selected], "width": 1080, "height": 1920, "sha256": hashlib.sha256(p.read_bytes()).hexdigest()})
@@ -149,11 +149,11 @@ def main():
     text(d,(60,1762),"Forecast census: " + clock(data["source_observed_at_utc"]),22,MUTED)
     text(d,(60,1795),"Weekly calendar: " + clock(data["latest_week_calendar"]["checked_at_utc"]),22,MUTED)
     text(d,(60,1830),"PIT / calibration incomplete; no admitted sides or prices.",23,MUTED)
-    text(d,(60,1870),"Repository assets only · public hosting unverified.",23,TEAL,True)
+    text(d,(60,1870),"Public board published · hosting verified Nov 26, 5:38 PM PST.",23,TEAL,True)
     p=OUT/'nba_2026-11-23_week_overview.png';img.save(p,optimize=True)
     outputs.insert(0,{"file":p.name,"game_ids":[],"width":1080,"height":1920,"sha256":hashlib.sha256(p.read_bytes()).hexdigest()})
     assert sorted(gid for r in outputs for gid in r["game_ids"]) == sorted(g["game_id"] for g in week)
-    (OUT/'manifest.json').write_text(json.dumps({"schema":"public.nba.phone_graphics.v1","source_projection_sha256":hashlib.sha256(DATA.read_bytes()).hexdigest(),"games":48,"images":outputs,"snapshot_label":"B119 saved outlooks · R2 prepared","owner_status_asof_utc":data["owner_execution_status_asof_utc"],"owner_status":"R1 partial after all 2,140 saved publication tasks recovered","prepared_execution_status":data["prepared_execution_status"],"prepared_execution_status_asof_utc":data["prepared_execution_status_asof_utc"],"R1_owner_results_included":False,"R1_operational_status_included":True,"R1_new_forecasts_included":False,"prior_publication_tasks_recovered":2140,"new_owner_campaign_fits":0,"new_provider_requests":0,"r2_preparation":data["r2_preparation"],"forecasts_changed_by_graphics_generation":False,"calendar_checked_at_utc":data["latest_week_calendar"]["checked_at_utc"],"calendar_final_games":22,"calendar_scheduled_games":26,"full_season_census_refreshed":False,"publication_status":"Repository assets only; public hosting unverified"},indent=2)+'\n')
+    (OUT/'manifest.json').write_text(json.dumps({"schema":"public.nba.phone_graphics.v1","source_projection_sha256":hashlib.sha256(DATA.read_bytes()).hexdigest(),"games":48,"images":outputs,"snapshot_label":"B119 saved outlooks · R2 prepared","owner_status_asof_utc":data["owner_execution_status_asof_utc"],"owner_status":"R1 partial after all 2,140 saved publication tasks recovered","prepared_execution_status":data["prepared_execution_status"],"prepared_execution_status_asof_utc":data["prepared_execution_status_asof_utc"],"R1_owner_results_included":False,"R1_operational_status_included":True,"R1_new_forecasts_included":False,"prior_publication_tasks_recovered":2140,"new_owner_campaign_fits":0,"new_provider_requests":0,"r2_preparation":data["r2_preparation"],"forecasts_changed_by_graphics_generation":False,"calendar_checked_at_utc":data["latest_week_calendar"]["checked_at_utc"],"calendar_final_games":22,"calendar_scheduled_games":26,"full_season_census_refreshed":False,"publication_status":data["publication_status"],"public_site_url":data["public_site_url"],"public_graphics_url":data["public_graphics_url"],"initial_hosting_verification":data["initial_hosting_verification"]},indent=2)+'\n')
     print(json.dumps({"images":len(outputs),"covered_games":48,"bytes":sum(p.stat().st_size for p in OUT.glob('*.png'))}))
 
 

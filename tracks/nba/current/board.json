@@ -4,7 +4,7 @@
   "release": "B120 R2 prepared and verified · B119 saved outlooks",
   "source_observed_at_utc": "2026-11-25T19:34:47.323874+00:00",
   "market_comparison_asof_utc": "2026-11-25T19:33:33.256583Z",
-  "publication_status": "Static public source snapshot · website deployment unverified",
+  "publication_status": "Public snapshot published · initial hosting verified November 26, 5:38 PM Pacific",
   "research_status": "PARTIAL_RESUMABLE",
   "production_model_deployment": "NOT_PERFORMED",
   "selection_uses_test_labels": false,
@@ -155876,5 +155876,14 @@
     "champion_selection_performed": false,
     "scientific_owner_occupancy_gate_qualified": false,
     "new_forecast_values_published": false
+  },
+  "public_site_url": "https://sports-edge-lab-nba.alv-mendizabal.chatgpt.site",
+  "public_graphics_url": "https://sports-edge-lab-nba.alv-mendizabal.chatgpt.site/graphics/index.html",
+  "initial_hosting_verification": {
+    "status": "PUBLISHED",
+    "verified_at_utc": "2026-11-27T01:38:44.742760+00:00",
+    "initial_site_version": 1,
+    "initial_site_source_commit": "e5d3c979b62881348eadce8d794ccced4a6ab0de",
+    "scope": "INITIAL_PUBLIC_SNAPSHOT_DEPLOYMENT; NO_RESEARCH_OR_SOURCE_REFRESH"
   }
 }
