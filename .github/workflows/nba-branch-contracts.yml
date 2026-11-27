@@ -41,6 +41,10 @@ jobs:
         run: python -m examples.nba_branch.contracts
       - name: Verify standalone NBA page agrees with sanitized evidence
         run: python -m examples.nba_branch.build_review --check
+      - name: Verify current Spread and Totals source, clocks and observation boundaries
+        run: |
+          python -m examples.nba_branch.build_spread_totals --check
+          python -m unittest examples.nba_branch.test_spread_totals_public -v
       - name: Test NBA evidence admission and partial-owner boundaries
         run: python -m unittest discover -s tracks/nba/public_monitor/tests -v
       - name: Execute the invented NBA monitor walkthrough
@@ -133,6 +137,11 @@ jobs:
           PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/nba-current-browser/node_modules/playwright
           NBA_MONITOR_SCREENSHOTS: ${{ runner.temp }}/nba-current-status-screenshots
         run: node tracks/nba/reports/b095_review.browser.cjs
+      - name: Render current Spread and Totals freshness and exact observed alternatives
+        env:
+          PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/nba-current-browser/node_modules/playwright
+          NBA_MONITOR_SCREENSHOTS: ${{ runner.temp }}/nba-current-status-screenshots
+        run: node examples/nba_branch/spread_totals.browser.cjs
       - name: Preserve current NBA desktop and mobile evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
