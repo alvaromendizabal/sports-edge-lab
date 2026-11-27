@@ -1,6 +1,16 @@
 # NBA Spread & Totals — fresh calendar, stale saved outlooks
 
-**Local preparation snapshot; publication pending.** The next B120 R3 release is being prepared and is not qualified for owner launch. The latest verified owner result remains the B120 R1 partial return. A new observation of owner controls and launch evidence at **2026-11-27 19:10:22 UTC** found no later verifiable owner execution. This observation made no model fits or research launch.
+**B120 R3 is prepared, rehearsed and ready for user launch. Public snapshot published.** Native preparation and the exact prepare-only launcher passed at **2026-11-27 20:02:28.248617 UTC (12:02 PM Pacific)**. The latest verified owner result remains the B120 R1 partial return. A new observation of owner controls and launch evidence at **2026-11-27 19:10:22 UTC** found no later verifiable owner execution. This observation made no model fits or research launch.
+
+## B120 R3 preparation and launch rehearsal
+
+All **1,298 native engineering tests passed**, with zero failures, errors or skips. The corrected release follows three failures caught in an earlier preparation candidate; those failures occurred before any main owner launch and are preserved separately. Native frozen-state restoration, including 24 V6 states, passed with **zero refits**.
+
+The exact prepare-only command rehearsal ran from **20:01:10.759834 to 20:02:28.248617 UTC**, exited **0** after **77.488932922 seconds**, and left all **seven owner controls unchanged**. The prepare-only rehearsal did not resolve the newest durable checkpoint; the main launcher must resolve it when the user starts it. The rehearsal made **zero new scientific fits and zero main owner research launches**. This engineering proof does not establish sustained scientific occupancy or a completed research campaign.
+
+The authenticated **56,524,696-byte R1 partial return** passed physical delivery verification, including full SHA, ZIP CRC and payload checks. Cold recovery required one object retrieval; warm reuse required zero. The new release adds launch journaling and verified physical return handling while retaining scientific identities and valid completed work. Prepared-control publication remains separate from these launch and delivery qualifications.
+
+The main execution is reserved for the user. No model forecasts, calibration qualification, annual scientific metrics or production promotion were changed by this preparation.
 
 ## Latest calendar — November 27, 11:16 AM Pacific
 
@@ -96,7 +106,9 @@ The graphics generator requires Pillow and DejaVu fonts. It produces 12 PNGs at 
 
 Earlier board rendering was inspected on desktop and a 375-pixel content-width mobile viewport. The current preparation status update has separate validation from the earlier owner result; local generation and boundary checks are recorded with its pull request. Search, horizon switching, full-season coverage, missing-role details, and card overflow were checked. Automated regression probes reject private recipe fields, post-tip issues, missing manifest games, and test metrics substituted for validation selection. Local checks and hosted CI are separate evidence.
 
-**Previously verified hosting:** the earlier public snapshot was published at [https://sports-edge-lab-nba.alv-mendizabal.chatgpt.site](https://sports-edge-lab-nba.alv-mendizabal.chatgpt.site), with the [twelve phone graphics](https://sports-edge-lab-nba.alv-mendizabal.chatgpt.site/graphics/index.html). Initial hosting verification is **2026-11-27 01:38:44.742760 UTC** (November 26, 5:38 PM Pacific), site version 1. Later publication metadata updates do not change that first verification time. Deployment did not refresh providers, issue forecasts, select or promote models, or launch the owner campaign. Historical NBA pages remain dated archives; no other owner's files are changed.
+**Current verified hosting:** the updated source-observation and R3 preparation snapshot deployed successfully as **Site version 3 at 2026-11-27 20:14:17.222217 UTC (November 27, 12:14 PM Pacific)**, from Site source `3e9f112ad3aa6953794b992523a1729cbc4a55da`. This receipt is separate from the 19:16 calendar check, 19:20 contract capture and original model issue clocks. Publication adds no new forecast, fit or owner execution.
+
+**Earlier hosting:** the first public snapshot was published at [https://sports-edge-lab-nba.alv-mendizabal.chatgpt.site](https://sports-edge-lab-nba.alv-mendizabal.chatgpt.site), with the [twelve phone graphics](https://sports-edge-lab-nba.alv-mendizabal.chatgpt.site/graphics/index.html). Initial hosting verification is **2026-11-27 01:38:44.742760 UTC** (November 26, 5:38 PM Pacific), site version 1. Later publication metadata updates do not change that first verification time. Deployment did not refresh providers, issue forecasts, select or promote models, or launch the owner campaign. Historical NBA pages remain dated archives; no other owner's files are changed.
 
 
 ### Descriptive saved-week check

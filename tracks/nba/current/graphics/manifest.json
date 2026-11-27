@@ -1,6 +1,6 @@
 {
   "schema": "public.nba.phone_graphics.v1",
-  "source_projection_sha256": "46191a3f9ac88b928ca32ae783c698231f97240ddcf44261d1be18a5d9c7c0c4",
+  "source_projection_sha256": "582fb8a8c91e8f8b8df96790affea12d646fc9ff1b271fa02def556a565ffeda",
   "games": 48,
   "images": [
     {
@@ -8,7 +8,7 @@
       "game_ids": [],
       "width": 1080,
       "height": 1920,
-      "sha256": "e7e6e1b503e94fc9885425e1e9a9a1faacabf98a00c42d74d9953c3eb1f17dac"
+      "sha256": "56bc6dfca84cf72706648ec37503a752f84ae1c5f29866f13e2cc8f2e1554017"
     },
     {
       "file": "nba_2026-11-23_page_01.png",
@@ -21,7 +21,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "ec6d04cb2f3abcf0bbd8703c71597f88af8aaea68a3731997d95108971527987"
+      "sha256": "9e2d9b901c217c0ae0f8a60d47b0481e733ed8cb3307f6d0a8b196084c30c1ce"
     },
     {
       "file": "nba_2026-11-23_page_02.png",
@@ -34,7 +34,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "1de9d3802d9e7fe63ff07899cf3da1cd51435bed1a1e6bd0c9f9f7c3847a0ddd"
+      "sha256": "5d5c96744de0a582ae5a4c005cacd6788f6e242a23cd4ed0327400ee68bed82b"
     },
     {
       "file": "nba_2026-11-24_page_01.png",
@@ -45,7 +45,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "a49e33e657754909dca84feb3df0ed0f649acd0360decd83f3fb8c94a3c662f4"
+      "sha256": "61a4ec7323cbc8c0635cbf42aee92cfbac69cce5e35d9efacb3be11ecf71eaba"
     },
     {
       "file": "nba_2026-11-25_page_01.png",
@@ -58,7 +58,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "4cbdf50760969ef76bfc083c5bd1ff02641f357558cfb1613f7bc4732e8a002c"
+      "sha256": "9982f75022592214c5fed1988e1303ba7d6ef8203b8d71a752a0355b84ea3b51"
     },
     {
       "file": "nba_2026-11-25_page_02.png",
@@ -70,7 +70,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "bb2c5d89ad5b2712c24b43413add60fb75cc85704e9a9431fbc0a244aadd1229"
+      "sha256": "0cf04fa2a15d45f930ae3862c73259e4d58a09830187dde75e50cc7edd0d1a58"
     },
     {
       "file": "nba_2026-11-27_page_01.png",
@@ -83,7 +83,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "5ac4c8147371528bae29d2747b571a6cabce3b01d764b0b761a0db1f9b66b44a"
+      "sha256": "7d1e6e98c519636353f7d8b397c8f53258155fa315e874031c7424a4aef8c3fc"
     },
     {
       "file": "nba_2026-11-27_page_02.png",
@@ -96,7 +96,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "9aae2329467ee9c4ec4a1eda82809f988b4273d6af5fa4f53007c08edf504d6b"
+      "sha256": "9c1ec861723eaa65c43e389ac76997f6a7db934e220cb1ba2f15846b96f43e04"
     },
     {
       "file": "nba_2026-11-27_page_03.png",
@@ -105,7 +105,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "5e64adaa1549a2a2b6fe5781807fc87c9f72ff8076d00dd47a9ea2075dbd32de"
+      "sha256": "235bb9461f24d3300a6158885cf8fbe773ae74ca8fd6349a81b8e027ce066c89"
     },
     {
       "file": "nba_2026-11-28_page_01.png",
@@ -118,7 +118,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "b6abe1c9930e426db347ec8646cea87f78e304273f1f13885df5a3072c3ea9a0"
+      "sha256": "09cdc352da2d077c25849eae74a31f6b4f72c86d06371acabc78f56371a8b86b"
     },
     {
       "file": "nba_2026-11-29_page_01.png",
@@ -131,7 +131,7 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "4e0693a46786fdd80c721e8c32ba21ff30e419ce171b9a948c45ab616fc2c190"
+      "sha256": "215a171c39541107c5011e6a3543f137c6b1c82a49fee56036d35f70e731c228"
     },
     {
       "file": "nba_2026-11-29_page_02.png",
@@ -144,10 +144,10 @@
       ],
       "width": 1080,
       "height": 1920,
-      "sha256": "1033d1184d17c8c054588c51e6911acdc5eceb4a974cc344e3d50da92ec9e7c4"
+      "sha256": "53c337b998a94b48a568bc1cdb543cf2828a62b6d9a5c43c27cb0f74b5a39386"
     }
   ],
-  "snapshot_label": "B119 stale saved outlooks \u00b7 B120 R3 \u00b7 preparation pending",
+  "snapshot_label": "B119 stale saved outlooks \u00b7 B120 R3 \u00b7 ready for owner launch",
   "owner_status_asof_utc": "2026-11-26T21:42:11.563504Z",
   "owner_status": "R1 partial after all 2,140 saved publication tasks recovered",
   "owner_control_observation": {
@@ -159,14 +159,15 @@
     "new_fits": 0,
     "main_owner_research_launched_by_observer": false
   },
-  "prepared_execution_status": "B120_R2_PREPARED_VERIFIED",
-  "prepared_execution_status_asof_utc": "2026-11-27T01:27:42.870128+00:00",
+  "prepared_execution_status": "PREPARED_AND_REHEARSED_USER_LAUNCH_READY",
+  "prepared_execution_status_asof_utc": "2026-11-27T20:02:28.248617+00:00",
   "next_release_preparation": {
     "release_label": "B120 R3",
-    "status": "IN_PREPARATION_NOT_QUALIFIED",
-    "owner_launch_ready": false,
-    "status_label": "Preparation pending",
-    "summary": "Launch and return safeguards are being prepared. No verified replacement owner execution or new model forecasts are available.",
+    "status": "PREPARED_AND_REHEARSED_USER_LAUNCH_READY",
+    "owner_launch_ready": true,
+    "status_label": "Ready for owner launch",
+    "verified_at_utc": "2026-11-27T20:02:28.248617+00:00",
+    "summary": "B120 R3 preparation and its exact prepare-only launcher were verified November 27 at 12:02 PM Pacific. All 1,298 native engineering tests passed. The launcher rehearsal exited 0 in 77.49 seconds, left all seven owner controls unchanged, and made zero new fits or owner research launches. Frozen-state restoration and physical delivery of the authenticated partial return also passed. The user launches the main campaign; no new model forecasts or promotion are claimed.",
     "new_forecasts_published": false
   },
   "R1_owner_results_included": false,
@@ -271,7 +272,7 @@
     "SCHEDULED": 26
   },
   "full_season_census_refreshed": false,
-  "publication_status": "Local draft \u00b7 updated snapshot not published",
+  "publication_status": "Public snapshot published \u00b7 hosting verified November 27, 12:14 PM Pacific (20:14:17 UTC)",
   "public_site_url": "https://sports-edge-lab-nba.alv-mendizabal.chatgpt.site",
   "public_graphics_url": "https://sports-edge-lab-nba.alv-mendizabal.chatgpt.site/graphics/index.html",
   "initial_hosting_verification": {

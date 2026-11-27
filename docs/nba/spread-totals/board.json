@@ -1,10 +1,10 @@
 {
   "schema": "public.nba.spread_totals.v1",
   "owner": "NBA",
-  "release": "B120 R3 preparation pending · B119 saved outlooks",
+  "release": "B120 R3 ready for owner launch · B119 stale saved outlooks",
   "source_observed_at_utc": "2026-11-25T19:34:47.323874+00:00",
   "market_comparison_asof_utc": "2026-11-25T19:33:33.256583Z",
-  "publication_status": "Local draft · updated snapshot not published",
+  "publication_status": "Public snapshot published · hosting verified November 27, 12:14 PM Pacific (20:14:17 UTC)",
   "research_status": "PARTIAL_RESUMABLE",
   "production_model_deployment": "NOT_PERFORMED",
   "selection_uses_test_labels": false,
@@ -155794,7 +155794,7 @@
   "b119_durable_publication_failed_tasks": 2140,
   "b120_owner_execution": "R1_PARTIAL_RESUMABLE_AFTER_PUBLICATION_RECOVERY",
   "owner_execution_status_asof_utc": "2026-11-26T21:42:11.563504Z",
-  "prepared_execution_status": "B120_R2_PREPARED_VERIFIED",
+  "prepared_execution_status": "PREPARED_AND_REHEARSED_USER_LAUNCH_READY",
   "b119_frontier_publication_failed_tasks": 1200,
   "b119_legacy_publication_failed_tasks": 940,
   "b119_legacy_failure_branches": {
@@ -155803,8 +155803,8 @@
     "stacks": 540
   },
   "branch_failure_summary_is_not_additional_tasks": true,
-  "prepared_execution_status_asof_utc": "2026-11-27T01:27:42.870128+00:00",
-  "prepared_execution_scope": "B120 R2 preparation is verified. The exact launch preparation rehearsal passed; the main owner research run has not been observed. Saved B119 forecast values and issue clocks are unchanged.",
+  "prepared_execution_status_asof_utc": "2026-11-27T20:02:28.248617+00:00",
+  "prepared_execution_scope": "Native engineering and exact prepare-only launcher verified; main owner research reserved for user launch",
   "r1_owner_results_included": false,
   "r1_operational_status_included": true,
   "r1_new_forecasts_included": false,
@@ -156102,10 +156102,11 @@
   },
   "next_release_preparation": {
     "release_label": "B120 R3",
-    "status": "IN_PREPARATION_NOT_QUALIFIED",
-    "owner_launch_ready": false,
-    "status_label": "Preparation pending",
-    "summary": "Launch and return safeguards are being prepared. No verified replacement owner execution or new model forecasts are available.",
+    "status": "PREPARED_AND_REHEARSED_USER_LAUNCH_READY",
+    "owner_launch_ready": true,
+    "status_label": "Ready for owner launch",
+    "verified_at_utc": "2026-11-27T20:02:28.248617+00:00",
+    "summary": "B120 R3 preparation and its exact prepare-only launcher were verified November 27 at 12:02 PM Pacific. All 1,298 native engineering tests passed. The launcher rehearsal exited 0 in 77.49 seconds, left all seven owner controls unchanged, and made zero new fits or owner research launches. Frozen-state restoration and physical delivery of the authenticated partial return also passed. The user launches the main campaign; no new model forecasts or promotion are claimed.",
     "new_forecasts_published": false
   },
   "observed_contracts": [
@@ -180732,5 +180733,53 @@
       "fees": "Exact event and clearing fees are not qualified."
     }
   ],
-  "b119_contract_readiness": "BLOCKED_EXACT_CONTRACT_AUTHORITY_UNAVAILABLE"
+  "b119_contract_readiness": "BLOCKED_EXACT_CONTRACT_AUTHORITY_UNAVAILABLE",
+  "r3_preparation": {
+    "status": "PREPARED_AND_REHEARSED_USER_LAUNCH_READY",
+    "verified_at_utc": "2026-11-27T20:02:28.248617+00:00",
+    "native_engineering_tests_passed": 1298,
+    "native_engineering_failures": 0,
+    "native_engineering_errors": 0,
+    "native_engineering_skips": 0,
+    "earlier_candidate_preparation_test_failures": 3,
+    "earlier_failures_are_owner_runs": false,
+    "native_frozen_state_restoration": "PASS_ZERO_REFITS",
+    "v6_native_states_restored": 24,
+    "restoration_refits": 0,
+    "exact_launch_rehearsal": {
+      "status": "PASS_EXACT_PREPARE_ONLY_COMMAND_REHEARSAL",
+      "started_at_utc": "2026-11-27T20:01:10.759834+00:00",
+      "finished_at_utc": "2026-11-27T20:02:28.248617+00:00",
+      "elapsed_seconds": 77.48893292200228,
+      "exit_code": 0,
+      "owner_controls_unchanged": 7,
+      "owner_control_or_prepared_pointer_writes": 0,
+      "new_scientific_fits": 0,
+      "main_owner_run_launched": false,
+      "newest_checkpoint_resolved_during_rehearsal": false,
+      "resolve_newest_checkpoint_again_at_main_launch": true
+    },
+    "physical_partial_return_delivery": {
+      "status": "PASS_AUTHENTICATED_PARTIAL_RETURN",
+      "bytes": 56524696,
+      "cold_object_gets": 1,
+      "warm_object_gets": 0,
+      "full_sha_crc_payload_verification": true
+    },
+    "new_model_forecasts": 0,
+    "new_scientific_fits": 0,
+    "scientific_occupancy_qualified": false,
+    "prepared_control_publication": "PENDING_FINAL_PREPARATION_BUNDLE",
+    "main_campaign_launch_policy": "USER_LAUNCH_ONLY"
+  },
+  "latest_observed_hosting_verification": {
+    "status": "PUBLISHED",
+    "verified_at_utc": "2026-11-27T20:14:17.222217+00:00",
+    "site_version": 3,
+    "site_source_commit": "3e9f112ad3aa6953794b992523a1729cbc4a55da",
+    "scope": "PUBLIC_NBA_SOURCE_OBSERVATION_AND_R3_PREPARATION_SNAPSHOT; NO_NEW_MODEL_FORECASTS_OR_OWNER_RESEARCH_LAUNCH",
+    "source_refresh_performed_by_deployment": false,
+    "new_scientific_fits": 0,
+    "main_owner_run_launched": false
+  }
 }

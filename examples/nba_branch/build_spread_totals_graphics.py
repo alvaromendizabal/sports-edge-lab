@@ -59,7 +59,7 @@ def clock(value, short=False):
 
 
 def publication_note(data):
-    return "Local draft · updated snapshot not published" if data["publication_status"].startswith("Local draft") else "Published snapshot · forecast issue clocks retained"
+    return "Prepared snapshot · website deployment pending" if (data["publication_status"].startswith("Local draft") or "pending" in data["publication_status"].lower()) else "Published snapshot · forecast issue clocks retained"
 
 
 def preparation_note(data):
