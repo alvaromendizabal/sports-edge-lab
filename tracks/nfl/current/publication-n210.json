@@ -1,0 +1,2833 @@
+{
+  "version": "NFL_N210_SAVED_MODEL_ISSUE",
+  "status": "DEPLOYED_AWAITING_HTTP_HASH_AUDIT",
+  "public_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
+  "field_notes_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n210/",
+  "all_games_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n210/#games",
+  "dedicated_circa_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n210/#circa",
+  "phone_cards_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n210/#phone",
+  "deployed_at": "2026-11-27T19:35:17.914473+00:00",
+  "site_version": 75,
+  "site_source_commit": "dbf6cc2279dca350190a452390215e3d03fa8413",
+  "archive_sha256": "f0c0ef2de10b81960687bd44fb8299e77a1808374d38de651e3b70e153674445",
+  "provider_saved_tar_sha256": "sha256:f0c0ef2de10b81960687bd44fb8299e77a1808374d38de651e3b70e153674445",
+  "audience": "public",
+  "native_publication_receipt": "publication-n210.json",
+  "prior_publication_receipt": "publication-n210-v74.json",
+  "github_source_provenance": "The exact-head NFL GitHub Actions job verifies committed source against the deployed asset bytes and tests N210 interactions at desktop and mobile widths. Deployment success is separate from those HTTP/browser checks.",
+  "scientific_scope": {
+    "release": "N210",
+    "forecast_issued_utc": "2026-11-27T04:46:48.395449+00:00",
+    "completed_population": 166,
+    "candidate_count": 10268,
+    "weekly_games": 16,
+    "issued_games": 12,
+    "preserved_original_games": 4,
+    "new_features": 5412,
+    "completed_fit_units": 304,
+    "optimizer_calls": 4864,
+    "scope": "Ordinary spread and total selection uses exposed 2026 games. Four completed games retain their original issued picks; standing V13 and Circa retain their separate 2024/2025 rules.",
+    "v13": "INCOMPLETE",
+    "strict_wins": {
+      "margin": {
+        "wins": 99,
+        "losses": 64,
+        "pushes": 3,
+        "games": 166,
+        "brier": 0.2469343188604152,
+        "logloss": 0.6896424865782597
+      },
+      "total": {
+        "wins": 100,
+        "losses": 66,
+        "pushes": 0,
+        "games": 166,
+        "brier": 0.2451335279600139,
+        "logloss": 0.6831212218866705
+      }
+    },
+    "prior_week_replay": [
+      {
+        "target": "margin",
+        "wins": 84,
+        "losses": 79,
+        "settlement_pushes": 3,
+        "eligible": 166,
+        "conditional_decisive_accuracy": 0.5153374233128835,
+        "scope": "Best retrospectively compared prior-week reconstruction; recipes had prior test exposure; not originally issued"
+      },
+      {
+        "target": "total",
+        "wins": 92,
+        "losses": 74,
+        "settlement_pushes": 0,
+        "eligible": 166,
+        "conditional_decisive_accuracy": 0.5542168674698795,
+        "scope": "Best retrospectively compared prior-week reconstruction; recipes had prior test exposure; not originally issued"
+      }
+    ],
+    "current_issue_markets": {
+      "executable_options": 0,
+      "status": "ARCHIVED_REFERENCE_LINES_ONLY",
+      "fresh_prices": "PENDING_OWNER_RECOVERY"
+    },
+    "markets": {
+      "sources": 80,
+      "records": 2894,
+      "matched_combinations": 2838,
+      "named_slots": 144,
+      "named_population": 144,
+      "status_records": {
+        "MATCHED_CURRENT": 2838,
+        "MISSING_MARKET_PRICE": 32,
+        "OLDER_THAN_10_MINUTES": 16,
+        "PRIOR_OR_MISSING": 8
+      },
+      "games": 16,
+      "scope": "Preserved N195 league dashboard market section only",
+      "observed_utc": "2026-11-25T21:27:16.332247+00:00"
+    },
+    "production_promotion": false
+  },
+  "verification": {
+    "base_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
+    "all_match": false,
+    "assets": [
+      {
+        "path": "against-the-spread/index.html",
+        "bytes": 41921,
+        "sha256": "196b997aba1d14bd399a126c0af030341c8a48b3207c3636ac2bf81a237a24d8",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "all-games/index.html",
+        "bytes": 42914,
+        "sha256": "247cd936fe1b6368ee2f664278169f9ce4bd7d2898b1988bc4b42cec07e6d120",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "app.js",
+        "bytes": 47150,
+        "sha256": "493376db6674be2e3b1baca34c2c1ed536a5e6fa7ed0f1f7ab9387f08a3707e3",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n186/assets/Barlow-LICENSE.txt",
+        "bytes": 4377,
+        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n186/assets/barlow-bold.ttf",
+        "bytes": 109912,
+        "sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n186/gameday.css",
+        "bytes": 12778,
+        "sha256": "4e1f69fd2d4df9105bae4753e94c49bfa87a8deb368fb1ff563f494019c19722",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n186/gameday.js",
+        "bytes": 2182,
+        "sha256": "9b77b31ff3a6ce9dad39c094b76c308cebf2d6a3d358e7a91ea73945a56e992a",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n186/index.html",
+        "bytes": 41690,
+        "sha256": "19c58c9225d27de51fb59a1f5e7bf6e0b7634908c4f26862ca2f1daaab985b86",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n186/legacy-route.js",
+        "bytes": 1017,
+        "sha256": "c180d2af2c08d4d56a868594cc7d1a9c0ac7d681ee9862ece603ce9f9917901a",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n186/research-history.html",
+        "bytes": 330,
+        "sha256": "e6920e73f0f8396e333ba2bb8f1e548d95e8653387f9e5998d36fd1ea43fc9d2",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n186/share/circa-options-1.png",
+        "bytes": 172358,
+        "sha256": "ee3d4fafafe104b83ca4ca9fb7c6d5c19b4dac79c52b935b8207d1c0c3439235",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n186/share/circa-options-2.png",
+        "bytes": 174360,
+        "sha256": "2ae1a3d5fa62e2a61c36bade1c485ba48b798b4209f627698284af555e1ba338",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n186/share/circa-options-3.png",
+        "bytes": 195784,
+        "sha256": "adaa89b5a9b912802b8df5ef8acbe482d8d7200871065f7202a5147ae9f8f4c1",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n186/share/packers-rams.png",
+        "bytes": 151339,
+        "sha256": "9ab09919f11bba02c859785f027bc968571df0aa4a781741998c050e6b39d7aa",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n187/archive/n186/index.html",
+        "bytes": 330,
+        "sha256": "038306be8d13bc97fb68486e6f1f938e1ab574bc342ee3cae63cbf9867356fa7",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n187/assets/Barlow-LICENSE.txt",
+        "bytes": 4377,
+        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n187/assets/barlow-bold.ttf",
+        "bytes": 109912,
+        "sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n187/gameday.css",
+        "bytes": 13281,
+        "sha256": "1e32810c0867e58d567ed836603d5f2b5e20a62cadff34f3fbb61cbad5483cef",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n187/gameday.js",
+        "bytes": 2605,
+        "sha256": "9bfc59ee022cd96ac5dfeaba72a356f79d15fca59584f608e4e81835aaed859a",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n187/index.html",
+        "bytes": 94155,
+        "sha256": "81df8bdc012459553d90b3143dbd7e9e7242b83acc3dee6ddd64b34b6ae99700",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n187/legacy-route.js",
+        "bytes": 1017,
+        "sha256": "c180d2af2c08d4d56a868594cc7d1a9c0ac7d681ee9862ece603ce9f9917901a",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n187/research-history.html",
+        "bytes": 336,
+        "sha256": "df44f15ef7e34799193ce87ee623b039fb05601f1fb1bfb5b8aa7fc9a0ed11aa",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n187/share/circa-options-1.png",
+        "bytes": 172473,
+        "sha256": "b7f1c93065008e0f6158c94f333c303d4346a4aaee56d5831f360262bd70e44b",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n187/share/circa-options-2.png",
+        "bytes": 174935,
+        "sha256": "7ed824a8e56228075d64d3c99835e0d1e7245d194af859903423e85bef8ff169",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n187/share/circa-options-3.png",
+        "bytes": 196378,
+        "sha256": "9aea192f91bfecbf85b509fbc1628205f8fa658a51eea694c7116a75d66ff5e9",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n187/share/packers-rams.png",
+        "bytes": 151538,
+        "sha256": "3bf4f3f90732b49f166e26c889837de359b471b9eaf1d0a94d89a074346786d0",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n188/archive/n186/index.html",
+        "bytes": 330,
+        "sha256": "038306be8d13bc97fb68486e6f1f938e1ab574bc342ee3cae63cbf9867356fa7",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n188/archive/n187/index.html",
+        "bytes": 330,
+        "sha256": "5e5abbb396a7d1a372dec74f7121bff7514eda695477899aa8c7038f580e23b0",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n188/assets/Barlow-LICENSE.txt",
+        "bytes": 4377,
+        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n188/assets/barlow-bold.ttf",
+        "bytes": 109912,
+        "sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n188/circa/index.html",
+        "bytes": 21549,
+        "sha256": "a27ebbb817628bec27259f9580393c20608b2b5aec94d8ae0cd026a32fb42d8c",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n188/gameday.css",
+        "bytes": 13281,
+        "sha256": "1e32810c0867e58d567ed836603d5f2b5e20a62cadff34f3fbb61cbad5483cef",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n188/gameday.js",
+        "bytes": 2605,
+        "sha256": "9bfc59ee022cd96ac5dfeaba72a356f79d15fca59584f608e4e81835aaed859a",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n188/index.html",
+        "bytes": 128572,
+        "sha256": "1a013a8097bfcc6ba1ef8a5e168de0a9f7c2e85637180d43bf9bdfe246b22ecd",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n188/legacy-route.js",
+        "bytes": 1017,
+        "sha256": "c180d2af2c08d4d56a868594cc7d1a9c0ac7d681ee9862ece603ce9f9917901a",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n188/research-history.html",
+        "bytes": 336,
+        "sha256": "df44f15ef7e34799193ce87ee623b039fb05601f1fb1bfb5b8aa7fc9a0ed11aa",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n188/share/circa-options-1.png",
+        "bytes": 172922,
+        "sha256": "fc0c3acedf29c7f09e45a98232e9759425674c902fd282ed8452bad8681e6a09",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n188/share/circa-options-2.png",
+        "bytes": 175407,
+        "sha256": "564dff0355466d3f142e83dff27146170f989a26291e356b660d287591b55e76",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n188/share/circa-options-3.png",
+        "bytes": 197203,
+        "sha256": "5b9b1c6d46ce51700e797ec7341c86f45b2cfc2ea73ee85dde26f58b7d5f8947",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n188/share/model-performance.png",
+        "bytes": 162669,
+        "sha256": "473576f1852fafb006e765c435dd71831e55b20c7a064c695329ad3152c5f7a8",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n188/share/packers-rams.png",
+        "bytes": 149285,
+        "sha256": "6ef5aa9877b7afb46ec8df7802d121464063285da412b53767b046cc79d5bf2e",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n189/archive/n186/index.html",
+        "bytes": 352,
+        "sha256": "7e4d9ad0c281756b5aa47df0ed5eb929104da190ca6d114728fd3ddb20ec421d",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n189/archive/n187/index.html",
+        "bytes": 352,
+        "sha256": "452888cbad36406c309179928e71e2255607529061345d9c64e769600497c090",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n189/archive/n188/index.html",
+        "bytes": 352,
+        "sha256": "bc560a5e32e7b4ea6c1beceff9a3df62afd29e7295b59a764f5a34bc10aba81e",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n189/assets/Barlow-LICENSE.txt",
+        "bytes": 4377,
+        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n189/assets/barlow-bold.ttf",
+        "bytes": 109912,
+        "sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n189/circa/index.html",
+        "bytes": 30291,
+        "sha256": "b31952e7fc7d7a3472801ab37e133a0d72daa0a08ebafb25d5e24ea799d9c0e3",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n189/gameday.css",
+        "bytes": 13281,
+        "sha256": "1e32810c0867e58d567ed836603d5f2b5e20a62cadff34f3fbb61cbad5483cef",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n189/gameday.js",
+        "bytes": 2605,
+        "sha256": "9bfc59ee022cd96ac5dfeaba72a356f79d15fca59584f608e4e81835aaed859a",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n189/index.html",
+        "bytes": 171581,
+        "sha256": "5a50ce9a7a21eadb927169764c6153541fb05fcfa1e73a4ce6bfc114b2682956",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n189/legacy-route.js",
+        "bytes": 1017,
+        "sha256": "c180d2af2c08d4d56a868594cc7d1a9c0ac7d681ee9862ece603ce9f9917901a",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n189/research-history.html",
+        "bytes": 358,
+        "sha256": "d05d6aaf878915c64d77efe80e47dfb7b7b5889047abb6afa2c7f1bee9de66a5",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n189/share/circa-options-1.png",
+        "bytes": 172472,
+        "sha256": "d7bba593b1285b1ac49890cc78b6369e9ee70399ec53dfea60b79f2cf23e1bed",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n189/share/circa-options-2.png",
+        "bytes": 174958,
+        "sha256": "fdd00972fb886d0b91e4a07f861017ee6893b6f9c36be0cff7f1b8e5d739e130",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n189/share/circa-options-3.png",
+        "bytes": 196716,
+        "sha256": "3db1b0689b65940116249e50365ec102261c497fde702c0583d5598ff96ef617",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n189/share/joint-team-scores.png",
+        "bytes": 186754,
+        "sha256": "14ddcb68515cb77b85dc213253d8fedfcab5fb93b3c177247aad169ec040d32b",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n189/share/model-performance.png",
+        "bytes": 163691,
+        "sha256": "4a64ae19a4669cf681a866ac4a39d900e47f28ce84c6cb4910303cd81614f80a",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n189/share/packers-rams.png",
+        "bytes": 149361,
+        "sha256": "a54e5a858e0c08e2889f3257f076233cb869a68de5ca80734b7ee498e513ebef",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n190/assets/Barlow-LICENSE.txt",
+        "bytes": 4377,
+        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n190/assets/barlow-bold.ttf",
+        "bytes": 109912,
+        "sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n190/circa/draftkings-1003.html",
+        "bytes": 29837,
+        "sha256": "22d7254a48dcb591f57ea9cf719b187950aeb97f14e4c240b6402ca9a6f5fac6",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n190/circa/index.html",
+        "bytes": 32104,
+        "sha256": "e03e50b148ddae83e24073aa53829b0545b0d7222459987d065a3f2ddf283350",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n190/gameday.css",
+        "bytes": 13281,
+        "sha256": "1e32810c0867e58d567ed836603d5f2b5e20a62cadff34f3fbb61cbad5483cef",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n190/gameday.js",
+        "bytes": 2605,
+        "sha256": "9bfc59ee022cd96ac5dfeaba72a356f79d15fca59584f608e4e81835aaed859a",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n190/holiday.css",
+        "bytes": 2770,
+        "sha256": "1bf5805f062dc40fe35df2480c8a328adb2b0dc990b41c65bfc00dc319070bf4",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n190/index.html",
+        "bytes": 209997,
+        "sha256": "7c04c6afa5d1fcd9fc660c460828287ae02e3f716753fcc995fb1f2c4fab4e7c",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n190/legacy-route.js",
+        "bytes": 1017,
+        "sha256": "c180d2af2c08d4d56a868594cc7d1a9c0ac7d681ee9862ece603ce9f9917901a",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n190/research-history.html",
+        "bytes": 273,
+        "sha256": "992c3d8c356793b1ee4a3a79a0017daddb33ea71df43c629f365343fae91a861",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n190/thanksgiving/index.html",
+        "bytes": 7961,
+        "sha256": "fc8187e36a49d869fdb5b6b20eec44977f5a8182fd7add1c6305dd2a3c8014e1",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n190/weeks/12/index.html",
+        "bytes": 17267,
+        "sha256": "0eda4d9ac31ac484fe7d10db3de7f0c83f4fc1b84211f446fa74236bc8bc1cd8",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n190/weeks/13/index.html",
+        "bytes": 11799,
+        "sha256": "a6b858d18469882b6d6b63b5d51a5a30a72e4694b8ed724208a83515d2613243",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n190/weeks/14/index.html",
+        "bytes": 12548,
+        "sha256": "64f5ec6865d533aa8d5f439492a196f86631c7964c9e65d7cf1f61eb3a41ddb0",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n190/weeks/15/index.html",
+        "bytes": 13277,
+        "sha256": "fc09ddca9a412ac88981fb51723a0629fa9a64a01be5ad39da7d844831d4db33",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n190/weeks/16/index.html",
+        "bytes": 13276,
+        "sha256": "987300814a1fbac0bb780046ee2281be8b28b57c5042df3c8948b18e5af19326",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n190/weeks/17/index.html",
+        "bytes": 13272,
+        "sha256": "0fa6c324352e9ffcf78120bde09803abe8ecd016f724944f987dd66c1923dc9e",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n190/weeks/18/index.html",
+        "bytes": 13292,
+        "sha256": "efb4ee45e5919d4df8e69fcf49e10c4abdcd2e26ba1bad6e25c5bd9eb26a2c86",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n191/assets/Barlow-LICENSE.txt",
+        "bytes": 4377,
+        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n191/assets/barlow-bold.ttf",
+        "bytes": 109912,
+        "sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n191/circa/draftkings-1003.html",
+        "bytes": 29837,
+        "sha256": "22d7254a48dcb591f57ea9cf719b187950aeb97f14e4c240b6402ca9a6f5fac6",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n191/circa/index.html",
+        "bytes": 43307,
+        "sha256": "4d7b89985160b00af9764fb3cb2b7ac46680813c78b1e5785b2ec0045b19fa1d",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n191/gameday.css",
+        "bytes": 13281,
+        "sha256": "1e32810c0867e58d567ed836603d5f2b5e20a62cadff34f3fbb61cbad5483cef",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n191/gameday.js",
+        "bytes": 2605,
+        "sha256": "9bfc59ee022cd96ac5dfeaba72a356f79d15fca59584f608e4e81835aaed859a",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n191/holiday.css",
+        "bytes": 3464,
+        "sha256": "1b6ed29d480c43a76987f9a130f2be1e2fc513babb35ed5e858af4a6a91d0317",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n191/index.html",
+        "bytes": 287629,
+        "sha256": "ecc49b2cf458a17c9077d49256065c9007beca24dabc5781e3a2efab6930014b",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n191/legacy-route.js",
+        "bytes": 1017,
+        "sha256": "c180d2af2c08d4d56a868594cc7d1a9c0ac7d681ee9862ece603ce9f9917901a",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n191/research-history.html",
+        "bytes": 273,
+        "sha256": "992c3d8c356793b1ee4a3a79a0017daddb33ea71df43c629f365343fae91a861",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n191/thanksgiving/index.html",
+        "bytes": 10092,
+        "sha256": "7718564ad6c5fde84329dd0b4e293be5e8a3a1f752870a9cc998cb1e7352b78f",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n191/weeks/12/index.html",
+        "bytes": 28424,
+        "sha256": "eceaec9c65dd15e0fc044f8b5341c7a0d30d9eaa3269cce172913818067a628b",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n191/weeks/13/index.html",
+        "bytes": 21483,
+        "sha256": "4b5a97cedc6dc735696a9455e2e89f22b977ce753882cf7ae9c8d0928d6501d8",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n191/weeks/14/index.html",
+        "bytes": 22928,
+        "sha256": "cb6f2cbfcbcc4a4e351954e45932d45b1105de681ab58b0bc2a8ae26c579fc70",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n191/weeks/15/index.html",
+        "bytes": 24337,
+        "sha256": "33afd6f75a491cae7d2579896eefc927f98c59e5b900ccd3e12907d879303b42",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n191/weeks/16/index.html",
+        "bytes": 24344,
+        "sha256": "3a9c08f6ef554fc024701bf6c5c8f64cab9103cb39533abfe0a34f2e6b0f5b18",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n191/weeks/17/index.html",
+        "bytes": 24337,
+        "sha256": "1dfafc398d54c52bb6884286949585446c418c99cc6dda4d28c72616fce1c313",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n191/weeks/18/index.html",
+        "bytes": 24358,
+        "sha256": "ce333281f67dabf56789b2724f0add9551f87d1cfa45be07ad96d2afd741a853",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n192/assets/Barlow-LICENSE.txt",
+        "bytes": 4377,
+        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n192/assets/barlow-bold.ttf",
+        "bytes": 109912,
+        "sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n192/circa/index.html",
+        "bytes": 63625,
+        "sha256": "11a537556468d0c40641d77fe4c0c15584847be21301cb1c4e2f6028c6bb75ea",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n192/gameday.css",
+        "bytes": 13281,
+        "sha256": "1e32810c0867e58d567ed836603d5f2b5e20a62cadff34f3fbb61cbad5483cef",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n192/gameday.js",
+        "bytes": 2605,
+        "sha256": "9bfc59ee022cd96ac5dfeaba72a356f79d15fca59584f608e4e81835aaed859a",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n192/holiday.css",
+        "bytes": 4040,
+        "sha256": "f0d42aff7c3fab78b5a231e1df87c580a6e71c23015dcfc17d443ccda8ab459f",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n192/index.html",
+        "bytes": 407932,
+        "sha256": "e471287626a86b10cb70a54c6c91bf359e0df891b1c60a9ffb6f5eb01dd8e860",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n192/legacy-route.js",
+        "bytes": 1017,
+        "sha256": "c180d2af2c08d4d56a868594cc7d1a9c0ac7d681ee9862ece603ce9f9917901a",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n192/research-history.html",
+        "bytes": 273,
+        "sha256": "992c3d8c356793b1ee4a3a79a0017daddb33ea71df43c629f365343fae91a861",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n192/thanksgiving/index.html",
+        "bytes": 15624,
+        "sha256": "1d62cf6f2d093afba5a1dd9b660d990fce78350474049538277e812945b80e81",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n192/weeks/12/index.html",
+        "bytes": 57160,
+        "sha256": "7912f25f78d502f43cfbfa137898b55173c488ff8a8098a5f0022948cec8dd84",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n192/weeks/13/index.html",
+        "bytes": 46529,
+        "sha256": "1d0519c3ae421ceb5def6639735d6b457256fe31b1bf3cf6b3cc1a8106e91ba3",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n192/weeks/14/index.html",
+        "bytes": 49768,
+        "sha256": "5d5d9a983e66ded7196ac231188f9c10a65e1365213084be8adee693c8fe271d",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n192/weeks/15/index.html",
+        "bytes": 52965,
+        "sha256": "ba722724251635df31d7447ffadf41ea49d69f3e66089af99566ca8ed061daed",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n192/weeks/16/index.html",
+        "bytes": 52976,
+        "sha256": "b1d358535c2171a36265b5ab351d54c2de44eff13606ff9a13916fd9efb3ba97",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n192/weeks/17/index.html",
+        "bytes": 52969,
+        "sha256": "82cfebd853fe1ed7a460b60570ae59fb1893e748b0003ce99196f7533e2850ec",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n192/weeks/18/index.html",
+        "bytes": 52987,
+        "sha256": "34d69f3c65122d319daf088c85fe2594e4e5c9039cf2107dad189ba57201e11b",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n193/all-games/index.html",
+        "bytes": 40523,
+        "sha256": "4dbd7efd5aa87a304b17c4b103655354271ca3089fac808de525c3f0916bf5ab",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n193/assets/Barlow-LICENSE.txt",
+        "bytes": 4377,
+        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n193/assets/barlow-bold.ttf",
+        "bytes": 109912,
+        "sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n193/circa/draftkings-1003.html",
+        "bytes": 29837,
+        "sha256": "22d7254a48dcb591f57ea9cf719b187950aeb97f14e4c240b6402ca9a6f5fac6",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n193/circa/index.html",
+        "bytes": 89845,
+        "sha256": "20c25a3675a07bccd5132ee77c4bb61d58a3f9798c7d4c0213b91cfaa2234481",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n193/gameday.css",
+        "bytes": 13281,
+        "sha256": "1e32810c0867e58d567ed836603d5f2b5e20a62cadff34f3fbb61cbad5483cef",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n193/gameday.js",
+        "bytes": 2605,
+        "sha256": "9bfc59ee022cd96ac5dfeaba72a356f79d15fca59584f608e4e81835aaed859a",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n193/holiday.css",
+        "bytes": 4364,
+        "sha256": "b3bb42d2c69173f99dc4d578288ab16967a78062c846a13d66b2bb7c7b3bfef8",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n193/index.html",
+        "bytes": 488808,
+        "sha256": "12f48e10fa6ae81663bbc4d61019a823a7e6b922f5ab2dc6b8abf152db1b03c9",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n193/legacy-route.js",
+        "bytes": 1017,
+        "sha256": "c180d2af2c08d4d56a868594cc7d1a9c0ac7d681ee9862ece603ce9f9917901a",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n193/research-history.html",
+        "bytes": 273,
+        "sha256": "992c3d8c356793b1ee4a3a79a0017daddb33ea71df43c629f365343fae91a861",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n193/thanksgiving/index.html",
+        "bytes": 22044,
+        "sha256": "3e304c9e37f814c39f31c36d697aca792d6391b125ccdb6fff99854fc66246c4",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n193/weeks/12/index.html",
+        "bytes": 91389,
+        "sha256": "e1a708ab315523278194e55be45da37f9ce1659ec17fa4788d535ba625866344",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n193/weeks/13/index.html",
+        "bytes": 69738,
+        "sha256": "7371f782dcdce798578d24ab7799a94e589767bcf3667adb50f13d88b5a23443",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n193/weeks/14/index.html",
+        "bytes": 74647,
+        "sha256": "85d10b12166f170c8abb5d5c2fb97ed6edf7588a73e7b43173b035d4f0818a21",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n193/weeks/15/index.html",
+        "bytes": 79494,
+        "sha256": "68fb7b75e3aaa46c33b31e6111d931ae06b36a2781b5fa00d6bf199d55e2d700",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n193/weeks/16/index.html",
+        "bytes": 79509,
+        "sha256": "ef2b0269291dd9c409e7e978698e92a9f76260920e7672056477c384f41f9c00",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n193/weeks/17/index.html",
+        "bytes": 79494,
+        "sha256": "b8c01c0ef60550b7ddd93a6a7ee1d61fe65c4ff3951a30f074dbd672e5474bab",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n193/weeks/18/index.html",
+        "bytes": 79525,
+        "sha256": "256eb88d999b37662cc33265bfbb78e1231e1714c2cc54417f0f96cc0b25952a",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n194/all-games/index.html",
+        "bytes": 42458,
+        "sha256": "1e24802fde88c3bc352c96238d951e2f14a3a401a088c48c087d9cc6a2f53739",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n194/assets/Barlow-LICENSE.txt",
+        "bytes": 4377,
+        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n194/assets/barlow-bold.ttf",
+        "bytes": 109912,
+        "sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n194/circa/draftkings-1003.html",
+        "bytes": 29837,
+        "sha256": "22d7254a48dcb591f57ea9cf719b187950aeb97f14e4c240b6402ca9a6f5fac6",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n194/circa/index.html",
+        "bytes": 118082,
+        "sha256": "19ef28b1811390b2a853303809f5d988044b35ca9bae6c50fac5dfa715f69466",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n194/gameday.css",
+        "bytes": 13281,
+        "sha256": "1e32810c0867e58d567ed836603d5f2b5e20a62cadff34f3fbb61cbad5483cef",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n194/gameday.js",
+        "bytes": 2605,
+        "sha256": "9bfc59ee022cd96ac5dfeaba72a356f79d15fca59584f608e4e81835aaed859a",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n194/holiday.css",
+        "bytes": 4364,
+        "sha256": "b3bb42d2c69173f99dc4d578288ab16967a78062c846a13d66b2bb7c7b3bfef8",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n194/index.html",
+        "bytes": 569179,
+        "sha256": "cc2b729d9162b54c2449f91c92e136d58341ab6aa7d0d80913ffbc0edb8a1899",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n194/legacy-route.js",
+        "bytes": 1017,
+        "sha256": "c180d2af2c08d4d56a868594cc7d1a9c0ac7d681ee9862ece603ce9f9917901a",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n194/research-history.html",
+        "bytes": 273,
+        "sha256": "992c3d8c356793b1ee4a3a79a0017daddb33ea71df43c629f365343fae91a861",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n194/thanksgiving/index.html",
+        "bytes": 27506,
+        "sha256": "aa8cfa3d901515b00ec1fcba86da13cb30e98645dc9d3ee32ec938b3583a2bcd",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n194/weeks/12/index.html",
+        "bytes": 121348,
+        "sha256": "d21a300ba09195604ef077e767ccecaa7b48c29c18510724352be195d04d417f",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n194/weeks/13/index.html",
+        "bytes": 90618,
+        "sha256": "fdc546733a5545e384378dc455adf1725f712fe4c027de0784d967038f2cb540",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n194/weeks/14/index.html",
+        "bytes": 97044,
+        "sha256": "a2f6509bf1ab2d642686d41c5ea6a5ff320717e74d53f0aa254bc148634ce3b7",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n194/weeks/15/index.html",
+        "bytes": 103386,
+        "sha256": "46fddd3bab3bea52e21a0febe06aa96786bc360da95b9ca2eabfe5701640b735",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n194/weeks/16/index.html",
+        "bytes": 103405,
+        "sha256": "76056257197aec31d941e0bbdadfdbb28c0e135484a87041c2d55969d95067f0",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n194/weeks/17/index.html",
+        "bytes": 103386,
+        "sha256": "f523364c9c0aafb16f1790cff70350729e8782a5f9bafdaf61a704202bd11ebb",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "archive/n194/weeks/18/index.html",
+        "bytes": 103430,
+        "sha256": "0a0388b8170d2de550089d82ce5f0ee351d25c02dc48e367b242e37706beaa28",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "assets/Barlow-LICENSE.txt",
+        "bytes": 4377,
+        "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "assets/barlow-bold.ttf",
+        "bytes": 109912,
+        "sha256": "e476562ec9c1e16cf16475895b511f08c804f438cc9a9f80a44ea50a0eeb5b65",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "circa/draftkings-1003.html",
+        "bytes": 29837,
+        "sha256": "22d7254a48dcb591f57ea9cf719b187950aeb97f14e4c240b6402ca9a6f5fac6",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "circa/index.html",
+        "bytes": 118908,
+        "sha256": "1bffc79e6d8a43eb12a5645e5eb96f70c02ecca70257a08661e1f29ddf29e577",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "circa_evidence.json",
+        "bytes": 29196,
+        "sha256": "c289471d8d45bde905b2c037bd314f93368f8595ba361c1e933067ccaaf702dc",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "data.json",
+        "bytes": 97247,
+        "sha256": "5815e9c27bdca24dae4124daea44d056bae8973deca0f261afde9892f5e12cb7",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "evidence.json",
+        "bytes": 2363,
+        "sha256": "66a149027c8a84d871cf8824ba33489d2fc2270f41947e8b0504b3d205dde2e7",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "execution_status.json",
+        "bytes": 1310529,
+        "sha256": "d9f0a36f97ab14403264e018a500f4bc53d536052ca42aa506bab5f76201db74",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "gameday.css",
+        "bytes": 13281,
+        "sha256": "1e32810c0867e58d567ed836603d5f2b5e20a62cadff34f3fbb61cbad5483cef",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "gameday.js",
+        "bytes": 2605,
+        "sha256": "9bfc59ee022cd96ac5dfeaba72a356f79d15fca59584f608e4e81835aaed859a",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "holiday.css",
+        "bytes": 4364,
+        "sha256": "b3bb42d2c69173f99dc4d578288ab16967a78062c846a13d66b2bb7c7b3bfef8",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "index.html",
+        "bytes": 572111,
+        "sha256": "27c1a228254b74eb4940abfb4ec32b9ccf31376f6723453b931ec46f7c24f8d1",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "legacy-route.js",
+        "bytes": 1017,
+        "sha256": "c180d2af2c08d4d56a868594cc7d1a9c0ac7d681ee9862ece603ce9f9917901a",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "newest_model_comparison.json",
+        "bytes": 8860,
+        "sha256": "97f501f0cd40bde3e54cc80821744558602db916a9f883cc93480777fa66a442",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "research-history.html",
+        "bytes": 229463,
+        "sha256": "80bf439ad4567d16edc600195785b202c14524c8fd03d0cca5a7502fb1453aba",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/circa-official-five.png",
+        "bytes": 150573,
+        "sha256": "23f79eb14f157444e37d94bd4eca96aaa15c17b1f0016f43f8284e7b98022902",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/circa-official-week12-1.png",
+        "bytes": 167735,
+        "sha256": "262622f67a6773961cb60b64ac7992c2f9204c03aa81196a578e6ca73ab234c3",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/circa-official-week12-2.png",
+        "bytes": 160049,
+        "sha256": "9483af594e427ddb90315cea438c3386b0b91ee4c16361c725af56c748ce6672",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/circa-official-week12-3.png",
+        "bytes": 159771,
+        "sha256": "39cd862051e9a8690b55beb8c27ee103b98874decc9096bb18257aeb86cd8c2b",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/circa-official-week12-4.png",
+        "bytes": 155090,
+        "sha256": "1090b12699a04bcf2068b067ebe760ea42b3eecdd5461a0e2e51df20b4a1b6e7",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/circa-options-1.png",
+        "bytes": 172472,
+        "sha256": "d7bba593b1285b1ac49890cc78b6369e9ee70399ec53dfea60b79f2cf23e1bed",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/circa-options-2.png",
+        "bytes": 174958,
+        "sha256": "fdd00972fb886d0b91e4a07f861017ee6893b6f9c36be0cff7f1b8e5d739e130",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/circa-options-3.png",
+        "bytes": 196716,
+        "sha256": "3db1b0689b65940116249e50365ec102261c497fde702c0583d5598ff96ef617",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/circa-week12-1.png",
+        "bytes": 166501,
+        "sha256": "55820bae320e4399d1f9adcbb9eb10123bf90d72ddf303250c51267c8c72ebe7",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/circa-week12-2.png",
+        "bytes": 154281,
+        "sha256": "1ac708ac8754417f05c748cab74c688a34e396d42ee7d4f1c924c601895ef230",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/circa-week12-3.png",
+        "bytes": 157505,
+        "sha256": "5b4d59b858a8f3d52ac149e120aa412830c790a2cf1283ff6917da9046dca22b",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/circa-week12-4.png",
+        "bytes": 155441,
+        "sha256": "aa0265fea8bcbc1b06ebb2def5e1c653446962607e0f199f8ad2243ae74fab6c",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/joint-team-scores.png",
+        "bytes": 186754,
+        "sha256": "14ddcb68515cb77b85dc213253d8fedfcab5fb93b3c177247aad169ec040d32b",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/model-performance.png",
+        "bytes": 163691,
+        "sha256": "4a64ae19a4669cf681a866ac4a39d900e47f28ce84c6cb4910303cd81614f80a",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n191-circa-five.png",
+        "bytes": 150648,
+        "sha256": "53b3bfe092e973b5b92c850e0c1f61fd4727a1383ec042867c0799095d6393b8",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n191-circa-week12-1.png",
+        "bytes": 166360,
+        "sha256": "b7a1acbd712d77378277cb257f0322ba0ed6fcc570f33027321c0bc290b9a8be",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n191-circa-week12-2.png",
+        "bytes": 164423,
+        "sha256": "b0f0a204d590224bbf9ffd8cae3fc1daa9a4ad2aaa9273ae61e5b7b7fdb95670",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n191-circa-week12-3.png",
+        "bytes": 158711,
+        "sha256": "a05c9c6689cfb66cb9d0b1584c97ba9735cef151b03f9764bd8252a53545fd0f",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n191-circa-week12-4.png",
+        "bytes": 154532,
+        "sha256": "aa0f899e6f9eaf19fca7491db81831ba3e83befcca7db164431d881f60dc189b",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n191-thanksgiving-chi-det.png",
+        "bytes": 121683,
+        "sha256": "9933a96df62c90ad4eebf2099833de7c16f037595677eeba7c46b3fb31098283",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n191-thanksgiving-kc-buf.png",
+        "bytes": 130235,
+        "sha256": "20626f6166924fdec238c832181de0a36344ce01a6525560bf5ca33668bbe258",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n191-thanksgiving-phi-dal.png",
+        "bytes": 130848,
+        "sha256": "27ed95fd570428875f2eb50dbbc9686dd39e25b1ab5f941214a89da17c2e40ca",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n191-thanksgiving.png",
+        "bytes": 151589,
+        "sha256": "36ee4fae71d519a3730d75bb2bdcac939597b195d009c7b6933c7e262d336e50",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n191-week12-1.png",
+        "bytes": 178240,
+        "sha256": "84fe9ccec55382ee90479c28e9b0979918f6d742f6ef8a6839c8afa830aaa9d2",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n191-week12-2.png",
+        "bytes": 182823,
+        "sha256": "6d4f018f81fe8fe09f275a02ded8c1352aeef05091f0b1bcfe517777d33cfb15",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n191-week12-3.png",
+        "bytes": 179058,
+        "sha256": "4c573b441f6b98d89e12ba230149d8780a7cabb5c339a9762d84104d29577bb1",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n191-week12-4.png",
+        "bytes": 183742,
+        "sha256": "768b2e0b44295e1592528a33a2f21650a85ad96c7267b5ddb10ad7b3fae4667e",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n192-circa-five.png",
+        "bytes": 150339,
+        "sha256": "210d801ec87260094e696fbaf4f30396fbbf4fffe62206abb6c0c0b0fd022a5f",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n192-circa-four-points.png",
+        "bytes": 151532,
+        "sha256": "066f7a17b06b30bcd2736c843aafa07cbe8dc84fbffcdaf1dcc832bd9ac7930d",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n192-circa-four-wins.png",
+        "bytes": 151787,
+        "sha256": "750d604aed9dd2baf535014809c96eaaf335ade3646e60846c32108c4de92cf4",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n192-circa-perfect-weeks.png",
+        "bytes": 149562,
+        "sha256": "b879c6096f0457c6cc919e6c10c7a8a273c71da4104ee8ac0efe39ccd4acb20b",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n192-circa-week12-1.png",
+        "bytes": 166048,
+        "sha256": "d97472fd8170e8f17d0bdb88d28a5001b6594360552d6c7d6c7f076e19abcf1c",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n192-circa-week12-2.png",
+        "bytes": 164106,
+        "sha256": "9e3fd83b62ff716ecb61184e8c51c94284967aeb7daacf97537769da0a9f52f6",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n192-circa-week12-3.png",
+        "bytes": 158393,
+        "sha256": "8bfda7213c065bf7cab4bdf4da82983a6ef16238b13be3ef32b8bf65aa7cfcdf",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n192-circa-week12-4.png",
+        "bytes": 154216,
+        "sha256": "f5f63f22125d5b949ae501524afc87b7146b761b471057b4c48f9a85600dedeb",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n192-thanksgiving-chi-det.png",
+        "bytes": 129668,
+        "sha256": "c5d9b05f55c127709612d52f7e0d5df24db873459314f50760061d7f06a4765a",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n192-thanksgiving-kc-buf.png",
+        "bytes": 132455,
+        "sha256": "62622391355a59e73798c076b2067b38b141e024f22fb0c0a2184a4a023073fb",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n192-thanksgiving-phi-dal.png",
+        "bytes": 134487,
+        "sha256": "9cf57d1d8a2b8a33fbbdcc784957309a187a59ef730883714577e2b940f91df0",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n192-thanksgiving.png",
+        "bytes": 143180,
+        "sha256": "7bfe1232e4367eff3d360f166e409ca68d6b7c7782efa4ae70450287633799d6",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n192-week12-1.png",
+        "bytes": 161697,
+        "sha256": "a0ad8e3d531ec61f9688228347599a46b7ae354acb7521225f73fd7ed819e87d",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n192-week12-2.png",
+        "bytes": 166231,
+        "sha256": "9ce4a00fd4b941679511b6e2a7241f6eeb9a863ed5475911d03912a25a615426",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n192-week12-3.png",
+        "bytes": 160946,
+        "sha256": "83d3ad0d49f65214470ae824a5ae8528690f0d38ebd6b61936234f2277cebd67",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n192-week12-4.png",
+        "bytes": 165464,
+        "sha256": "dcd2d5c63cbf226be3a23a87484937d0a6b3fbe1d9abc8b7509d23f4fc7a208f",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n193-circa-five.png",
+        "bytes": 149998,
+        "sha256": "d25b6952480117b04626f393eb3d4c4699768c3ef36ef506a2610e3b038f2a43",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n193-circa-four-wins.png",
+        "bytes": 151744,
+        "sha256": "3d6d7719b6776e97e1286a66e725ae9f42667c4533ed0aca54ebd0866a990218",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n193-circa-perfect-weeks.png",
+        "bytes": 149556,
+        "sha256": "0914c0c0f2b58dc8e930f97283f8d368d899d9cf7450eb942cb5fae3128d8cce",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n193-circa-side-brier.png",
+        "bytes": 153797,
+        "sha256": "35abcdbc0ed04f162ed7213f1f50c045ce1a8af80fc21fb8016ae6b0a044fe9e",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n193-circa-week12-1.png",
+        "bytes": 165681,
+        "sha256": "eced6a9971978f2ea150e26709ae68666a666bb795436a8809cb6d16bbe709ab",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n193-circa-week12-2.png",
+        "bytes": 163744,
+        "sha256": "44eea6c19c4bb37d5b5733d78864393da8a56168f33cf14348ce6777e29cb911",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n193-circa-week12-3.png",
+        "bytes": 158027,
+        "sha256": "014d06e8120e82da2ed74b506093e8b6303fdfba605fd9f22167ae9d1490f00f",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n193-circa-week12-4.png",
+        "bytes": 153854,
+        "sha256": "3e2995ed50d62cb924a0924ec55f8a9f82cf2f539923d371234fac8a25336d12",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n193-packers-rams.png",
+        "bytes": 123613,
+        "sha256": "fe4be10f9ea002819c07a557062b1792420d6038ca73bfa94666767956dbfb12",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n193-thanksgiving-chi-det.png",
+        "bytes": 119727,
+        "sha256": "1b411e2e77b761db8de84a8e681b71a4bdc0b144d0a5321332fc15dc6cbfb4a8",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n193-thanksgiving-kc-buf.png",
+        "bytes": 121153,
+        "sha256": "4eb4fd58fa11cd9545f817523eb946116d9869815718e0b435ebeda297a0a57d",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n193-thanksgiving-phi-dal.png",
+        "bytes": 124775,
+        "sha256": "7c7c023414176b3507b17280c4fa6bf89e5cee87df7e3c2a79ba6d21d18c0699",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n193-thanksgiving.png",
+        "bytes": 122065,
+        "sha256": "743c4aa60521c675e5e953187bf58005a58a93c751dc16200234b917dda4bfdf",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n193-week12-1.png",
+        "bytes": 135540,
+        "sha256": "1c046263dbf02b1a7952bca96824cc40f4c9c8897425625a7e8b70c0a9564841",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n193-week12-2.png",
+        "bytes": 138193,
+        "sha256": "6bf4c556438e1be000498725abb5ca914908994d12c3ede8cfdd1ea9a3ec3690",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n193-week12-3.png",
+        "bytes": 136856,
+        "sha256": "f28afc7db5d641cff7e8f8c7af39386d387a0004a576106a312e17a58bf1ad48",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n193-week12-4.png",
+        "bytes": 139101,
+        "sha256": "750af3186a62c2a9d53f9ff1f4eb509bf162c18882c89f5012e9d717ebaeb789",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n194-circa-five.png",
+        "bytes": 150209,
+        "sha256": "b1b80cd48319e5975b8e9d98f03f2c608bd0325e6e549971989b91155dfa9f9c",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n194-circa-four-wins.png",
+        "bytes": 151982,
+        "sha256": "ef1c3cfdc57e558e2b2a4362ed5ae4d811943beed0c8ae56be7cbb4121b871dd",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n194-circa-perfect-weeks.png",
+        "bytes": 149794,
+        "sha256": "e4414fee6705adea3408f4e461abf4309c4ca16a82679a542b582cca1a80256f",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n194-circa-side-brier.png",
+        "bytes": 154217,
+        "sha256": "629c1f45659a56d337ba0de5f486af85cfd4a314b2aa3a9716d3df6181b8a864",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n194-circa-side-logloss.png",
+        "bytes": 156542,
+        "sha256": "547b6c3bc0d6d51e231fad75d5ef332e8824aa0a50e19f95821040e5edbe616b",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n194-circa-week12-1.png",
+        "bytes": 165921,
+        "sha256": "5bea15338d94247969f1d763598e7af79e4fe464a1d47ce1208f58fc18fa0a43",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n194-circa-week12-2.png",
+        "bytes": 163977,
+        "sha256": "c468b94a04eddbeeadcc39e8675af3bbb2faeaf0e5a0aac35dbae880358342f0",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n194-circa-week12-3.png",
+        "bytes": 158270,
+        "sha256": "99373955114096a8ca053eaa41eb5d7104b8252ff17c2675cb233de960a53350",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n194-circa-week12-4.png",
+        "bytes": 154095,
+        "sha256": "4f82d477a91593faac067ceebaf9a3b6ae40ad6271873030cf8dc5383b723827",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n194-packers-rams.png",
+        "bytes": 124340,
+        "sha256": "699f55bf5b11a93fcf4b855a1a480e9b8752aa40fff0f5dba084eff31a9cc34e",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n194-thanksgiving-chi-det.png",
+        "bytes": 120527,
+        "sha256": "d1f61dc29544496ebd32bc90d94da64ee23fb88a9bcdef10be4e3bdf0c245e36",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n194-thanksgiving-kc-buf.png",
+        "bytes": 122001,
+        "sha256": "1258cce644605d13d7f0c1b94e97a690aaebc29e152039601d29d0ae7847d325",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n194-thanksgiving-phi-dal.png",
+        "bytes": 125620,
+        "sha256": "6fc565703ccd11b2c774616e68463bcd69d934d7ee02311cde60e86aa057354f",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n194-thanksgiving.png",
+        "bytes": 123018,
+        "sha256": "34e490a897f1fa4cc47ae2c22faa3175956dcd217804e4340cbf48c6a4370aad",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n194-week12-1.png",
+        "bytes": 136550,
+        "sha256": "cbce43b5c0b74ec0420817783002e65ee5b65eea91de6c40acde2cdde2771ad5",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n194-week12-2.png",
+        "bytes": 139162,
+        "sha256": "1be0f4880b67c443d74e3649d91b65e8147efec493bb27593bdf19d6eb721155",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n194-week12-3.png",
+        "bytes": 137811,
+        "sha256": "76acdc6bd454e7263eb6d0a26751cb882b47d481291f72022a1c472667c0cacc",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n194-week12-4.png",
+        "bytes": 139959,
+        "sha256": "f8197955afa8b865e7f2683bf81965dc65ebc8256b526e6746ef5398b3e7b18f",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n195-five.png",
+        "bytes": 149959,
+        "sha256": "53e98d2bf26e64a612004b9e38b2dd2e6ec2fc47bf7153a6cdf295c9205a479a",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n195-week12-1.png",
+        "bytes": 163640,
+        "sha256": "304f0b3b42df88ed7f2e46b883b71cf8e7ee88dbe45a3055e411218458b256da",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n195-week12-2.png",
+        "bytes": 169062,
+        "sha256": "b274f86820e0a81ac91b39d06495801a26cb5a17bbd2ee7385c331b7f19d2cb7",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n195-week12-3.png",
+        "bytes": 171397,
+        "sha256": "e58a50889eab6dc05e3fdc0d369d9c259f3dd5830ffd46465f18177082b5a23a",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/n195-week12-4.png",
+        "bytes": 170522,
+        "sha256": "5201d00501d4aa9d1ff337882954e29684f913fe6fda27fa203cda811e82f950",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/packers-rams.png",
+        "bytes": 149361,
+        "sha256": "a54e5a858e0c08e2889f3257f076233cb869a68de5ca80734b7ee498e513ebef",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/thanksgiving-bears-lions.png",
+        "bytes": 148825,
+        "sha256": "c882ce91929ecfb8d0be9811e0cd52d03c8c10563f12ae2c0cd825b746db5508",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/thanksgiving-chiefs-bills.png",
+        "bytes": 155689,
+        "sha256": "b47d0f48ea8c38dd4b7933267b84d60cafdaf68dbdfd7fb0680fa6b3e1484352",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/thanksgiving-eagles-cowboys.png",
+        "bytes": 162680,
+        "sha256": "cf5ab5c57da361faf83136c955f0f15a47b0825dcae18e27e717c74028da67c5",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/thanksgiving-tripleheader.png",
+        "bytes": 130100,
+        "sha256": "0df9091e9209905c64d36be89c1772d4a7aca910815eb5494798885a27dec147",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/week12-1.png",
+        "bytes": 147933,
+        "sha256": "cdbd6f86731448a1ac9b215bd3adf24f10f7435185486f8d41c804a6afbf50d7",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/week12-2.png",
+        "bytes": 152267,
+        "sha256": "c81925ddb6efc3498f5f730964958206002ecd49055fead75e0877cb077ad0fb",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/week12-3.png",
+        "bytes": 148866,
+        "sha256": "f720c6bcdc7a02d09440ce892e831d483839acf8e3042a70eb75072b7cbab023",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "share/week12-4.png",
+        "bytes": 153256,
+        "sha256": "025a70af46a5694808000f67a998d854347035620281d3814d1879c2484f2ce8",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "styles.css",
+        "bytes": 40562,
+        "sha256": "b5d96c7ab1ee471e50dd804dbf9e080e9ee2d66f5b09d901a73d8cd356670920",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "thanksgiving/index.html",
+        "bytes": 27907,
+        "sha256": "722946357f6eb03e38a99232cbbaccbf247d204c01ecaff38647d21dfd839dcf",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/N198-public-Circa-five.png",
+        "bytes": 168932,
+        "sha256": "405eb0a7922a6ca86e57d6a3e3cee7495a659dc39341080f6c4e2a24f31a5666",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/N198-public-Circa-options-1.png",
+        "bytes": 298023,
+        "sha256": "7362ee5f44f53de4d171ef913ec1cd09b98006ed6467c7aaedaaec51295942a1",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/N198-public-Circa-options-2.png",
+        "bytes": 302048,
+        "sha256": "a713f18149915cb9497f4c12a84595d5bed145d815080662bcce12f96153967c",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/N198-public-forecast-1.png",
+        "bytes": 178680,
+        "sha256": "eb8ab5e7403f94c18818dfbe12bbe6f57e55a7ef72d7cca725be5ebef3561bb3",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/N198-public-forecast-2.png",
+        "bytes": 185184,
+        "sha256": "b96bfae6cf1700d4513b559e87006db52b7747da3ace0bc9f1f354957a48254d",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/N198-public-forecast-3.png",
+        "bytes": 183539,
+        "sha256": "e5c6574552d978618c114372aaa39a77fdcfab32386773cfc1846fa12589ad0c",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/N198-public-forecast-4.png",
+        "bytes": 183171,
+        "sha256": "6c3c5200c032dbbdd7aed120a0a67ff99b164534ac1936ffaa44130ae25e5905",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/N199-public-Circa-five.png",
+        "bytes": 157048,
+        "sha256": "0f8add0c92a7650b358985caa6953df9a1ba2b3501ce62107788b5c1344491b2",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/N199-public-Circa-options-1.png",
+        "bytes": 244901,
+        "sha256": "43bf8a60ba089afb84d7592df73bc10d8e203e473cd909ad5bbbeea8ea371d69",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/N199-public-Circa-options-2.png",
+        "bytes": 249794,
+        "sha256": "cf85fa96f9c2129fbd783d2750fcd1e9f48ef14d9bbd9b7c9d4b209fe1afb03b",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/N199-public-forecast-1.png",
+        "bytes": 180775,
+        "sha256": "f2bb758315231ebf224bd3b560224e8e873b792c9e06151315f21107f19479b9",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/N199-public-forecast-2.png",
+        "bytes": 183461,
+        "sha256": "4024262209129b204e7ecf2e2bb106977aa4ab1cebceb22c9ececb3f59a996ce",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/N199-public-forecast-3.png",
+        "bytes": 182420,
+        "sha256": "6367dc4df110ceda207a74a68e63ebb6ed002ec1d6417779a5e78bacc967f4cf",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/N199-public-forecast-4.png",
+        "bytes": 183132,
+        "sha256": "9b5ef6e262a581f2a0a30e78b4f98034cae501a7ce6e572fbed069ee7128921c",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/N200-public-Circa-five.png",
+        "bytes": 157952,
+        "sha256": "6863159f91ef18662de81384708480ea6212809d3cc932f455dbfc780db40a55",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/N200-public-Circa-options-1.png",
+        "bytes": 245630,
+        "sha256": "a516f6cf1aca316da493109f04882f8a00ed89f3e8858eb3f5138cd9971749cf",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/N200-public-Circa-options-2.png",
+        "bytes": 246275,
+        "sha256": "51ce2a8ee2b4899b15bf04de28cad51cd70572c96a32e69f083a2259b82c4e71",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/N200-public-forecast-1.png",
+        "bytes": 179645,
+        "sha256": "be53c67550720c6cd9f599df19f4b84ede0ad9a7e84dea630b9132facbe8fa84",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/N200-public-forecast-2.png",
+        "bytes": 185702,
+        "sha256": "c66aefaf8244bcb466b1c462adddfdd5693ca85fca0a8e97ecc9bfe19c9e91de",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/N200-public-forecast-3.png",
+        "bytes": 185230,
+        "sha256": "6603fce3078ceb991ddf8df0e32739ae2b5eb980e49b6ede6db9b995755acf78",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/N200-public-forecast-4.png",
+        "bytes": 185039,
+        "sha256": "dd545a1125d060f0760f33bf35602a662bcee8b4f1ae32c58ea304427a47ddd0",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/N201-public-Circa-five.png",
+        "bytes": 167965,
+        "sha256": "56cc1dcab5a509141c8e16646d97deddd40d3799708ea00707bc44576c5cd640",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/N201-public-Circa-options-1.png",
+        "bytes": 294796,
+        "sha256": "0d4428540c070fbada5f82e8bf09ce60582179de8eb9112a099c89860a6698ec",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/N201-public-Circa-options-2.png",
+        "bytes": 296801,
+        "sha256": "f6e07481716c7801f9b1ccb0c58d94194e25e1f44ab56bdd47556a2fbac37c91",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/N201-public-forecast-1.png",
+        "bytes": 182352,
+        "sha256": "c0c8a3e920a397d64e001c306551fb085fe2b1da9454f77f67bf19c88c3025d3",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/N201-public-forecast-2.png",
+        "bytes": 184708,
+        "sha256": "aa59219d70dc2e159eda61d1f58dc45b29e1fd9398e823575d8e5d33bd38c4d2",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/N201-public-forecast-3.png",
+        "bytes": 184769,
+        "sha256": "35bb726c318183f523e215186d38fdc210eff32e9833f6551bdc34c876af5457",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/N201-public-forecast-4.png",
+        "bytes": 185220,
+        "sha256": "557958da4f4050a7be80d53acc234b4e084323940121ca8c10b6540a6118ac98",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/N202-public-Circa-five.png",
+        "bytes": 163566,
+        "sha256": "cc975be78470acf08e892d2dbab36d8c737d88ddd7cee9ec6b9f6e14f5831e8c",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/N202-public-Circa-options-1.png",
+        "bytes": 253408,
+        "sha256": "84e542c6708ac7c7982d407a9b2b65d36f32ba73274bd32ac0eae6e453900cec",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/N202-public-Circa-options-2.png",
+        "bytes": 253682,
+        "sha256": "c630811e9f636be0564b5ef26a60c76602406b2d030cf28a98d6a8bdd51ea871",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/N202-public-forecast-1.png",
+        "bytes": 187332,
+        "sha256": "e910ca37e664709509bcdf971d950d78c4d0f70a9fb0e249d11a21972f528331",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/N202-public-forecast-2.png",
+        "bytes": 188039,
+        "sha256": "a9974217eabefde5fbdaf0adf653f88fae4ff4b128f196da7c57d54eb3a214b5",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/N202-public-forecast-3.png",
+        "bytes": 187329,
+        "sha256": "431db17e533c7fb8ce5686601bbc520a37cb9edaf1ff7dea96ac353900896f6d",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/N202-public-forecast-4.png",
+        "bytes": 187443,
+        "sha256": "c92b1d450424d9c7f7038aca837558e6d7e4b2698054a7af4379459ad8b295bc",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/N202-public-ordinary-1.png",
+        "bytes": 188924,
+        "sha256": "29d0d631681c59af1d4eec26a027d06561eb2c7e482c7a6cd5a4a279da219ce3",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/N202-public-ordinary-2.png",
+        "bytes": 186421,
+        "sha256": "f262d06d66d418536d1a0c1ddb39c1dd89374f32c1bd67c400cb691d9b65f61f",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/N202-public-ordinary-3.png",
+        "bytes": 186843,
+        "sha256": "f637dab6f3907914a2fc4e285e5a5225da849181d9c2893ee0e9805f4b83a4ba",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/N202-public-ordinary-4.png",
+        "bytes": 192848,
+        "sha256": "ac6957a2808ff5e32ed9e66b9a69145c6c63ea760e5d06631bd1f23616f0b6d1",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/NFL-W12-Circa-all-1.png",
+        "bytes": 153109,
+        "sha256": "3ab52ff6a4e4ecbdd6bd8c13d0fa10f8149d0380089239f38e180dab266af082",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/NFL-W12-Circa-all-2.png",
+        "bytes": 154966,
+        "sha256": "f6527fb953186440db38469404380a3668aaacf6e12f192e4db9ad188381794f",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/NFL-W12-Circa-five.png",
+        "bytes": 162339,
+        "sha256": "2777e29f8e3743d1c959a2b3394d13f0ef97acc2bc5c1e6a436415b99567ca12",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/NFL-W12-games-1.png",
+        "bytes": 155824,
+        "sha256": "eebc9d86ce8b12c6202268895899679050a9578749fca3af007be0751b994479",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/NFL-W12-games-2.png",
+        "bytes": 163948,
+        "sha256": "578cf0c06be9318b4b368dfa754cdc6f2cbb865719618cd7cda3005344347baf",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/NFL-W12-games-3.png",
+        "bytes": 157116,
+        "sha256": "a60399219d97a76e209b2a7631811bb2ab424a77cb223bbae06ce634d5b75847",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/NFL-W12-games-4.png",
+        "bytes": 157917,
+        "sha256": "fc72121463ae4de0d0064c59cb6c81324401d1707ede2179e63ba4c2b4003beb",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/board.css",
+        "bytes": 6591,
+        "sha256": "427e6fab4a5b18ed9df70cf837e48bc40f37bd4f1d02082d23c579b931bf8089",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/board.js",
+        "bytes": 637,
+        "sha256": "625236e76a2d1ce212964d6d4dd3ddf7d97b330b217fea7182c302463f4a2321",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/index.html",
+        "bytes": 114840,
+        "sha256": "8fa7c5d0066c3ba4d19dab0b5edb4a453ff34186deb1a6b5e6fce0877e1ce19f",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n196.html",
+        "bytes": 43079,
+        "sha256": "fa30648adcff1d18dcd1debba0add692b5536911988ce903e51acdc3a83f3ca2",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n197-1512.html",
+        "bytes": 65884,
+        "sha256": "f65f318941f63264f1ed7690630f37efba505b2c8c7c0072535287b824a4c07b",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n198-1533.html",
+        "bytes": 90026,
+        "sha256": "02054a7d8a67e188d32aad223827e920a14a26ae99dcf4120def61c34abd3ef0",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n198-1545.html",
+        "bytes": 91418,
+        "sha256": "a72645f5a71b5de7ed0882d4e41e123ee64011bb0e54ebb35204357615029af9",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n198-1554.html",
+        "bytes": 92985,
+        "sha256": "7e70e1d128a8712a03a32e8ee7436ee963cdc0f1b83f4a3c83e514569b9f68e8",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n199-1557.html",
+        "bytes": 93016,
+        "sha256": "20e2d83ca465ebef81d4f18a40fdceea59a85710bfa5fe61faf87f9070b7c60f",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n199-weekly/index.html",
+        "bytes": 12416,
+        "sha256": "c7ba55eb7e427ed8ffdd0116057215a597d2b5e39aa25a018daf53972291866b",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n199-weekly/manifest.json",
+        "bytes": 232,
+        "sha256": "b6896d213fd31383550492393760bf2d5ef710a3d0b91bc2155cc66630af55cc",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n199-weekly/weekly.json",
+        "bytes": 32386,
+        "sha256": "ff7bb48a00d167b675807b12edb75970e13c03ff1493038fd1e81821abf9c82c",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n200-1618.html",
+        "bytes": 94940,
+        "sha256": "aa32977748b9fc08f85545d2823bd0a7b14a5749bcbbc92058e87f6dc3eb018f",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n200-weekly/index.html",
+        "bytes": 12435,
+        "sha256": "d9ac5fc0e59130e8bdfbd0716a4828fe0b88de5a734e31fb06fdf2ccd0ad5138",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n200-weekly/manifest.json",
+        "bytes": 232,
+        "sha256": "50a8b68ac3446dbf975efff0d70fd8c129df7c12f57555fc1349f579ac4ffb53",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n200-weekly/weekly.json",
+        "bytes": 32354,
+        "sha256": "14bf937d8691e386a85e35e73d20369c4df7eb1626144d41aa02b1fc3a89c030",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n201-1636.html",
+        "bytes": 95202,
+        "sha256": "c0c007d3f8b21eca2714dd1f4891010c76c526e91c92420c5c4ac7cf71841c03",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n201-weekly/index.html",
+        "bytes": 12436,
+        "sha256": "4b3b724791052c110addb884df0ffc51790503f69dd3555b6e45b84763c2281c",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n201-weekly/manifest.json",
+        "bytes": 232,
+        "sha256": "a6118ec1e0cf640f1a601090918a124904b877ef635ba4c280c7772bb88ede78",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n201-weekly/weekly.json",
+        "bytes": 32517,
+        "sha256": "b37df53bde08ef2520fe1d3658fccb7b767a777a59f18d7066a87d317c5316a5",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n202-incomplete-population-20261125-1704.html",
+        "bytes": 112619,
+        "sha256": "53e2e908267abc36e4a69c2e22081841b42375a390c7b4d939109ebc66ce41f6",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n202-weekly/index.html",
+        "bytes": 656,
+        "sha256": "4426de4c9b557667bc2413e403eda4ad474bee2e94af7629fd7180e7649ba32e",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n202-weekly/manifest.json",
+        "bytes": 539,
+        "sha256": "d4cb975e4ae83f5902c58cc0717f021150ec069e63bc3295d26f47ab930f788f",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n202-weekly/original-issue.html",
+        "bytes": 14391,
+        "sha256": "77fd9c0b751dca36b6763114a0a243ca35884111201046e6012e345eaabe1e9b",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n202-weekly/weekly.json",
+        "bytes": 34453,
+        "sha256": "4c15ac17aac837aa4d7131913cf7345401d8a23fa410a71b4763c8e59ac8bad1",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n202/N202-Circa-five.png",
+        "bytes": 191867,
+        "sha256": "75046d8f040eec5cb990a9ac45a0ffb0631da9d48df24abbf3043d5e08debd90",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n202/N202-Circa-options-1.png",
+        "bytes": 235697,
+        "sha256": "e7a2929f6adddc2dd5ccaa386acf986448711ff33b68860e8184a79c9f79b103",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n202/N202-Circa-options-2.png",
+        "bytes": 219495,
+        "sha256": "966c626240568ae5b78113c4ed696443d910d7f373d3aae44652842c3ccb6832",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n202/N202-games-1.png",
+        "bytes": 259958,
+        "sha256": "12c5da872a8b5a4bd7fc76577f8bedadcf5601198e4e8ae0b1643c0fc7cc489a",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n202/N202-games-2.png",
+        "bytes": 260133,
+        "sha256": "10f0ffae07b6d13193bbd46fcc0ebb768cebabe79a55fa6c9ad702b3b91d858a",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n202/N202-games-3.png",
+        "bytes": 260222,
+        "sha256": "d36d0dc36db57c673ff8cb37a87fd5bcbf3e5ae4acd51d597d2e568c2187c2ff",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n202/N202-games-4.png",
+        "bytes": 265504,
+        "sha256": "9fe3188cb94ada2993177f5fda0235675831fc813250e7bde7fe7980ef88c332",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n202/VERIFICATION.json",
+        "bytes": 2824,
+        "sha256": "17a13732e13d5d693f0ab3ba3d9b75c34a2a14497307f3e6fdab374f15d3fb82",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n202/board.css",
+        "bytes": 10431,
+        "sha256": "2fb08699d5c99d188a516229b1e6c8504bb9c37d19c2c4b84c8857797611798d",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n202/board.js",
+        "bytes": 12664,
+        "sha256": "c08d2d69cdc846226d301eb91f5a8087e4525f934d572d814335c9d4410b573d",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n202/index.html",
+        "bytes": 10644,
+        "sha256": "cc7de812289d022d2c79108225a9255a90eb67677004ec0b44fadeeb9d327715",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n202/snapshot.json",
+        "bytes": 150754,
+        "sha256": "951100a8f72c22210e1c10d75d166211443976960ff992d434f30e825b052ebd",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n203/N203-Circa-five.png",
+        "bytes": 195800,
+        "sha256": "3d86a66b471a1349af74097ca3601ab235d2ad564058081a2f99fa7be81f5868",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n203/N203-Circa-options-1.png",
+        "bytes": 245763,
+        "sha256": "82b84ff459f117fa4b92cff232e238ccee8a0b33045398da78e3a954403ae253",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n203/N203-Circa-options-2.png",
+        "bytes": 224484,
+        "sha256": "e0e34bb21306eb2dbf58cfad6341323b754035affcd3fb6d13d2fb4e244a610b",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n203/N203-games-1.png",
+        "bytes": 269940,
+        "sha256": "591195cb7dc4701e897bbf2d8ef43053a1265d99ff6ef25753f564de6660a104",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n203/N203-games-2.png",
+        "bytes": 276749,
+        "sha256": "52a7eff1b0d497d5cc2d145e507b5b558c59effb2b2668c249b025320feefb8d",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n203/N203-games-3.png",
+        "bytes": 285878,
+        "sha256": "09b3ebb45e62100ff690bf34955896425841882be260237d75e44b8b5b8d6d39",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n203/N203-games-4.png",
+        "bytes": 279863,
+        "sha256": "dd0224e3aaf6730cc528967c7502c1f44bc8462f0ba80d858847357bf530079d",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n203/VERIFICATION.json",
+        "bytes": 2338,
+        "sha256": "45bf9754bb751e9e484dbd5c65f9efde7a158821436274dd14a60e65b3cebc91",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n203/board.css",
+        "bytes": 11351,
+        "sha256": "38fc441e96c36e820bfefd05cec6005b80652ca6e0d07b48b6e5b8c2116db9c6",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n203/board.js",
+        "bytes": 20112,
+        "sha256": "0f44caf1da8e28d02c2dc3886517422230937694881fd55fb18c68471ee11b29",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n203/index.html",
+        "bytes": 12434,
+        "sha256": "a72ea69dc64823e871c3b560f144da77573c86634956f1b33a2c9490cbc05427",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n203/snapshot.json",
+        "bytes": 3002981,
+        "sha256": "5fcd468baff6f6d98a5d77eedab6a03144fe7cab96f3e3cde6640991790ad62e",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n204/N204-games-1.png",
+        "bytes": 282757,
+        "sha256": "86ddee97b7e22f801cf7ad32947edda4b70aa13ef8cea54d75be22d24fa1d3bd",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n204/N204-games-2.png",
+        "bytes": 294499,
+        "sha256": "6fa78086af3c36b7cf5fb6837fe597680cbe37b8e05ed5cf3b35c7a2f79c5eeb",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n204/N204-games-3.png",
+        "bytes": 300386,
+        "sha256": "5c5c36391eacb14a171dd977afd7c755249cd935decc85f1951e15333e7bff89",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n204/N204-games-4.png",
+        "bytes": 297299,
+        "sha256": "2d2afa4cb70dfab22d39d87167bfbc668316aac3ab03e6e447d12da01dd421f7",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n204/audit.json",
+        "bytes": 1062,
+        "sha256": "2782ce09e2be00e03f8a230c5ccbf1afac6d91249f0574b31addaf0c212bbc30",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n204/board.css",
+        "bytes": 11786,
+        "sha256": "9219d3fcdbf2f8f7f5444babc3e150d5564ccb6abbab9c9ee514d233f915cea6",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n204/board.js",
+        "bytes": 23966,
+        "sha256": "57447e5fb211c69d8659a5973145f7d27405c598ccddc8026fdaf9da1df6bb5d",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n204/index.html",
+        "bytes": 14234,
+        "sha256": "c4e159298a728cca7b1964a907a37e7b393f03734ead51b967d3a9f2d2b0dcfd",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n204/snapshot.json",
+        "bytes": 3366449,
+        "sha256": "506418f629ddb5b8e0ac664d5233e3c2307020a51ea78b8dd832f51e380ea094",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n204/verification.json",
+        "bytes": 613,
+        "sha256": "6db15f778790b64507fca10f9fa845a8ca3492f92b16359d21786ae0ac3ffcf3",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n205/N205-games-1.png",
+        "bytes": 304528,
+        "sha256": "e95adfa3f4350eb1c4b5540320f0f2e0d8e1cf2f96c1edf7fecf2fb41521277e",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n205/N205-games-2.png",
+        "bytes": 323705,
+        "sha256": "1dd581d98163aeb1a36c345a2dcf0745677d0ad7dbe2e593c003d521ace9bd87",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n205/N205-games-3.png",
+        "bytes": 329344,
+        "sha256": "0effb46a6814a3cda10180c2872b7cc8f87f73a7391da0baa1271365cfb19f38",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n205/N205-games-4.png",
+        "bytes": 326177,
+        "sha256": "695625b8fd2994021af7f2a8022ae5174fa04bbabd92474abfd572306ccb7f3d",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n205/audit.json",
+        "bytes": 989,
+        "sha256": "823599c6d0449412a327f0a44dad0aa72e377c1c4ae6e44ccb21232f6faedb85",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n205/board.css",
+        "bytes": 13189,
+        "sha256": "5a1b7fcc0946676c313f50b4b89e1e26a5602394fb27d9e02c174cfa86eb0562",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n205/board.js",
+        "bytes": 30056,
+        "sha256": "8bdf1d215e03170209c95d277f9d13f84f635c4571f083137fdc1f9e0e9b9100",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n205/index.html",
+        "bytes": 14921,
+        "sha256": "897b66b4bf5cd4ff5d7cffda014f0b23e1fbf51a1aaa9d80802add3b88da44e7",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n205/snapshot.json",
+        "bytes": 4149006,
+        "sha256": "899bef112b2d5ba24a4ea7df42abbd7eb81e88bd67fff5f7fe1807cd6a64d7bf",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n205/verification.json",
+        "bytes": 699,
+        "sha256": "451e2e667c03097759c526dbbe25dae0eb9ba29c01b84760ed9dd1bd72da1776",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n206/N206-games-1.png",
+        "bytes": 294497,
+        "sha256": "d9fa05e86c657a6c03a69e93f39f0c11582d6c83f6e299df7571fcf56e8a38fb",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n206/N206-games-2.png",
+        "bytes": 321350,
+        "sha256": "b94b1fa4d8ea42cade639c4f60838bdbb542f9d2cb2a7bc5753fbeb0568a8100",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n206/N206-games-3.png",
+        "bytes": 323552,
+        "sha256": "b2faf350f9aef7121420f0a8972484f41394334ab7b235f7f3938b8e45e86326",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n206/N206-games-4.png",
+        "bytes": 325466,
+        "sha256": "f92cc5865fdef451ba2cc12da6d7f6e974afbb6a997114607eb3735381d5d1eb",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n206/audit.json",
+        "bytes": 3320,
+        "sha256": "467c6e198b9aba6a9910a286a3ca720fed02f9692f2f63ce666641f317548ba4",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n206/board.css",
+        "bytes": 13189,
+        "sha256": "5a1b7fcc0946676c313f50b4b89e1e26a5602394fb27d9e02c174cfa86eb0562",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n206/board.js",
+        "bytes": 32894,
+        "sha256": "308f483866a5c310171edd6b9e9969a07aa8f4ce27e85c12397557168acefdd5",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n206/field-notes/NFL-Week12-1-Thanksgiving.png",
+        "bytes": 222813,
+        "sha256": "64cd3d25558abec0f349ced99f52221e00772f9f39a46eabf7dc1191176b7040",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n206/field-notes/NFL-Week12-2-Friday-Sunday.png",
+        "bytes": 240855,
+        "sha256": "5c3652cdc026787a2afe0f82727df82153adaa618cfabc26d2c561d00cf28785",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n206/field-notes/NFL-Week12-3-Sunday-slate.png",
+        "bytes": 241929,
+        "sha256": "c4599a21e77e2b3fc89ebd5f47ca3a0fb937521a793e0c3493e5b10f5e175525",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n206/field-notes/NFL-Week12-4-Sunday-Monday.png",
+        "bytes": 245418,
+        "sha256": "db1f553d954aa72f5b3e2bb11ca83e02b1ac3df4517fa619f4fb5d9f9940db00",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n206/field-notes/NFL-Week12-5-Circa-Selected-Five.png",
+        "bytes": 199039,
+        "sha256": "97513405694e91b66d73a7d73159c9d24c5fb8af9f462c78ec533ac204f54400",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n206/field-notes/NFL-Week12-6-Circa-Alternatives.png",
+        "bytes": 245726,
+        "sha256": "654c3a3b9b3f3c08dc891bd6489bc3486d8d5cf832d6d4fc143903b5f447091b",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n206/field-notes/NFL-Week12-7-Circa-Alternatives.png",
+        "bytes": 255525,
+        "sha256": "2671a3ce761a20b1d45c139df99b7f263854d27b94738986c7ffba5c29a1691a",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n206/field-notes/index.html",
+        "bytes": 15945,
+        "sha256": "25f48ce965aa4132db70456a87a323a0a59f773351ac4c2ab0751605eba06c23",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n206/index.html",
+        "bytes": 15195,
+        "sha256": "231b198b3f316b85fa5f4db8a7a025eab7cc8f9172a39782d0ff9a5913d450cd",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n206/snapshot.json",
+        "bytes": 4172507,
+        "sha256": "1ab42f3ead6a6fd02330bbf275e59f9e246ae4e04ff87ece76581b7e2145acb9",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n206/verification.json",
+        "bytes": 700,
+        "sha256": "dae7ab763050f2d058028429f272d4fa43fd2e1388c5af955d5489c2f9e772ac",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n207/01-N207-Week12-Games.png",
+        "bytes": 241130,
+        "sha256": "a8a2d9618c3f9cda4448445a52ca0cb3c84432313af3caaa91ecc4ec4d98815a",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n207/02-N207-Week12-Games.png",
+        "bytes": 259559,
+        "sha256": "21c2b1e35202ab967ec5bcede45595454eeee3b80d5754a22daf01fe35674d2b",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n207/03-N207-Week12-Games.png",
+        "bytes": 261796,
+        "sha256": "6fd88616e5cdd4b816eabf622aa58354fe13e207446d36a83569e122de820c49",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n207/04-N207-Week12-Games.png",
+        "bytes": 262550,
+        "sha256": "60c9189f576e746d54396c233638f80103ce03feaea24e564ec3c550b8ccb3ee",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n207/05-N207-Circa-Five.png",
+        "bytes": 198002,
+        "sha256": "8843b43d5b040090340ea72f0dead1e8db990c4d235430995ba6cea6f1f6d87e",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n207/06-N207-Circa-Alternatives.png",
+        "bytes": 255912,
+        "sha256": "6efec1b64b270715ac2beb3e00a8c0695adff6c7fcd234de3308956f36fc6d70",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n207/07-N207-Circa-Alternatives.png",
+        "bytes": 247693,
+        "sha256": "e7ef98c6619d465b5e919c59caf697a6afbc2df42059107310e24364d7369720",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n207/08-N207-Thanksgiving-Side-Comparison.png",
+        "bytes": 186489,
+        "sha256": "e0e659f62c2426cf694207588fdcf5f6b2557bdb6bbeb01cb48af5c2ffb0fc25",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n207/index.html",
+        "bytes": 80692,
+        "sha256": "e0400a692b0d0f68012a1e2a5e2bc9605aac9f60bed474caa52705fe800d7168",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n207/kalshi/index.html",
+        "bytes": 228924,
+        "sha256": "361ac9cdc0d2b8358dcd455cb558b724592d3658dc785474a8c1153df2889b76",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n207/polymarket/index.html",
+        "bytes": 393457,
+        "sha256": "b6caf7da77b20e44984b91c88b365b8dcd99a89c0df230f9fd0c1a2884c9669a",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n207/standing-results/index.html",
+        "bytes": 12715,
+        "sha256": "d8d614bb8716ffbc78c48afa4068b338c61fc73accfb42b2ce6c0ca6fd98bc16",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n207/standing-results/proof.json",
+        "bytes": 18153,
+        "sha256": "9fdc2a7d656d598ba3b61e70fae699705bf12ff66c5380822320dc98d4c17cbe",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n208/01-N208-Week12-Games.png",
+        "bytes": 285851,
+        "sha256": "0f4a0a26191fad1442896478f31393ba07989d9dc62be3baff14160eade0c2bc",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n208/02-N208-Week12-Games.png",
+        "bytes": 315253,
+        "sha256": "f71dfe811e3a9f192f5d7018bb67cac1b94aab6588b2dab87bc693978214c3c5",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n208/03-N208-Week12-Games.png",
+        "bytes": 316860,
+        "sha256": "e884d47f22e4b74e6d372728913a473dc61b5ba192ef32f6d150fbd899104e1b",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n208/04-N208-Week12-Games.png",
+        "bytes": 320689,
+        "sha256": "94a6cd29d495a36a9fe048c2a7b40b85081e15e203e86f306f431e06e2240bca",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n208/05-N208-Circa-Five.png",
+        "bytes": 198366,
+        "sha256": "7af86fb13b3a061d1b3dd51729b1204b920ed1073cc158f8b6f7ebfb88d2d533",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n208/06-N208-Circa-Alternatives.png",
+        "bytes": 249190,
+        "sha256": "84c96e4af3e43b3873da0be9b095db4cbb4865dce21ea8cb3b6268ba35e48d32",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n208/07-N208-Circa-Alternatives.png",
+        "bytes": 249994,
+        "sha256": "a4dcce8d8dff145048a23bdcd4c6afffae8e9eb6246adb54468908851a40f27b",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n208/08-N208-Thanksgiving-Side-Comparison.png",
+        "bytes": 192020,
+        "sha256": "9f37f7c1e4a163d1beb6db3f500a3211f2742927e4ec6b83097eb096e6257919",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n208/09-N208-Circa-Original-Five.png",
+        "bytes": 197482,
+        "sha256": "0dcb43f906617f4f3d2760ee75816450719ec63bd44c1e476f13d914126863ff",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n208/10-N208-Morning-Comparison.png",
+        "bytes": 156699,
+        "sha256": "2e2a2341af8c66562bce406d1ff22b73e4bf945a82a16de636e2655a6d93dc26",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n208/11-N208-Margin-Model-Check.png",
+        "bytes": 208628,
+        "sha256": "3e864434b31fe11b1677a3aa5559d53f65dc3cf21409df617733bc192adb26a8",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n208/game-day-status.json",
+        "bytes": 1837,
+        "sha256": "0568ef58b6db870b683f1cadecdd9626c6965e45ed94591db4caa4cc499812ac",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n208/index.html",
+        "bytes": 122584,
+        "sha256": "9cf71cf8e2850f693a99be1ee95d90c96bf57acc0fb088f5306f7bf7e8428f39",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n208/jmac.css",
+        "bytes": 2808,
+        "sha256": "ebe957f043b6c875e3cd86de06f027b17054f02f9a1b6b10f929fbd8ecf40d47",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n208/postseason/index.html",
+        "bytes": 31048,
+        "sha256": "879af2f6c61277ec96da0c7d54514bf7caee84743e0ce38d125d263eef4dab79",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n208/postseason/proof.json",
+        "bytes": 12447,
+        "sha256": "a3a81269b607656c934cacd7c961f9c79a220522760c0eef588dfdeedfc67e74",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n208/results.json",
+        "bytes": 5793,
+        "sha256": "27611bb1376f8007125e714195a066df61664d02d851a1ae6f8e67a6204354a6",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n208/week-12-picks-1.png",
+        "bytes": 226184,
+        "sha256": "1733f09effb164227d53c2c0e9eb0d5a827951fb62079a96242a62317595e40a",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n208/week-12-picks-2.png",
+        "bytes": 211109,
+        "sha256": "600988057947ad4903ae7cce2e52862c24e3b01d08f66bc9e5c2e26b44f12c59",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n208/week-12-picks-3.png",
+        "bytes": 208132,
+        "sha256": "73eee5997231bd93ef2529130c2cd968540a5d2d4d2f82238bd2e78a99bccf6c",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n208/week-12-picks-4.png",
+        "bytes": 216701,
+        "sha256": "fc6b09db25f21b5ea7e7b8935d69f6421cd784e03cc6037c00fec1df02f10039",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n209/circa-week-12-five.png",
+        "bytes": 148775,
+        "sha256": "fa470e00c6b64604620503b45c0175801b4eb59ddd4f7774ea841f9e593ae11b",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n209/circa-week-12-sides-1.png",
+        "bytes": 195593,
+        "sha256": "2cb5f913546b6f6b246e0b52b68f38a9f09ce3af2e0b47089fa22a668b3f2df6",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n209/circa-week-12-sides-2.png",
+        "bytes": 198132,
+        "sha256": "68ad5adc88f0ab8874bd78034d29cd405a01eeb34b7b97a4e12f169ef50182f7",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n209/index.html",
+        "bytes": 126874,
+        "sha256": "ab438b42e32b12b7a18647caaa1590720b4d5ef0240fc3fb24e9459bf97559ca",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n209/jmac.css",
+        "bytes": 2808,
+        "sha256": "ebe957f043b6c875e3cd86de06f027b17054f02f9a1b6b10f929fbd8ecf40d47",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n209/postseason/index.html",
+        "bytes": 10347,
+        "sha256": "a17c0edb3d81d52cac1af13ad92872b66ecb85d3fc202a7501362920d86d5aae",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n209/postseason/proof.json",
+        "bytes": 15434,
+        "sha256": "ffe769c02d4b4db5335d95eadd6c0c01c3eaf7a71389e2d3a28b321e48b8c54c",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n209/results.json",
+        "bytes": 725,
+        "sha256": "af21c1feb31223e0b41dacb9f92f7e22ec1e9a70436546561b0f291df9de1a30",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n209/week-12-picks-1.png",
+        "bytes": 227984,
+        "sha256": "042d370aa7a92a8d3dad7b327a486b91654b8968ceace25610e55a29f21cf33b",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n209/week-12-picks-2.png",
+        "bytes": 211448,
+        "sha256": "2d6999af79282408b1da0f1490350013445862e3476622594af9071ae91998c1",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n209/week-12-picks-3.png",
+        "bytes": 206948,
+        "sha256": "7e10456ff34bacdf8f6a24f644a775391a95b050b43d7bd86f59848b7dd6baf7",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n209/week-12-picks-4.png",
+        "bytes": 215556,
+        "sha256": "0c4a12ff7717b15e60918688e8f8b03237c0bd22e4b0910b5d06c8dfde933645",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n209/week-12-picks.json",
+        "bytes": 49205,
+        "sha256": "ff19cdcdf4a08c1d0e49d0e5db3e626358fb586d560148ca812e0a68a9d77541",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n210/index.html",
+        "bytes": 44001,
+        "sha256": "02f4662b5bb1093d57683f17162681419e025346d209990cea5c1eb823b96bc4",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n210/week-12-picks-1.png",
+        "bytes": 191462,
+        "sha256": "8e4cc5badbc41a63c6e1f528c3eda899ba4c173b367a7a2bfb2d879471784bbe",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n210/week-12-picks-2.png",
+        "bytes": 180028,
+        "sha256": "cc8d974f11481fe7ad17483dadd3f7afdf7d0766b35ebb30d20c45c21e7b879c",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n210/week-12-picks-3.png",
+        "bytes": 183188,
+        "sha256": "0e7c7443179bb641d7c9163419c765c44eb382c08233aa46791a3dcb882fcdbf",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n210/week-12-picks-4.png",
+        "bytes": 184115,
+        "sha256": "e7d21fa160e2ca8615656f9c3e0b5e100ddc1782976442927987ec571007cbcd",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n210/week-12-picks.json",
+        "bytes": 32993,
+        "sha256": "4c295fc485d0ba7f9ff110887ca19affb257d7c4146a0d8b2379759575897bbe",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "weeks/12/index.html",
+        "bytes": 124467,
+        "sha256": "4d56d5d2b6a731e5477d5a7635bbb39ae421aab838e1c0de067f2a3bf2348eaa",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "weeks/13/index.html",
+        "bytes": 90623,
+        "sha256": "636e04ae4af81c47f8769e7095df30779d46aa9a528ede812a9bae6d9289585f",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "weeks/14/index.html",
+        "bytes": 97049,
+        "sha256": "ad3fbd9004a9131bf2e681fdb1372fe9664f5214c9c0d0650cb10af0c256f4d8",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "weeks/15/index.html",
+        "bytes": 103391,
+        "sha256": "ac8c8486cdd23099bd818af299ced5822f74e5e8ac6667097d0fabb2dc634c1d",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "weeks/16/index.html",
+        "bytes": 103410,
+        "sha256": "3b9e6f65f96f88e7b4554de0d550e79eb20c624f2f9b92be57a12969e416122c",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "weeks/17/index.html",
+        "bytes": 103391,
+        "sha256": "9a9fcf0d9d1e8cd0e0543e309c2d9258451287c40ab57892217c035ac3c6dd1a",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "weeks/18/index.html",
+        "bytes": 103435,
+        "sha256": "6de87da2fb775f0026118916c3e3c001c9c5e267a458a1e483d2d1d3894a8676",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      }
+    ],
+    "method": "Prepared source SHA-256 manifest. Anonymous HTTP comparison remains pending the exact-head GitHub check.",
+    "browser_status": "Version 74 passed the live public asset audit and hosted desktop/mobile N210 interactions. Version 75 adds explicit original-role clocks and primary push probabilities and corrects phone-card labels; its exact-head hosted audit remains pending.",
+    "local_controls": "PASS_DESKTOP_PREVIEW",
+    "viewports_required": [
+      1440,
+      390
+    ],
+    "guest_utc": null,
+    "actual_counts": {
+      "PENDING": 451
+    },
+    "browser_render_verified": false
+  },
+  "standing_results_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n207/standing-results/",
+  "postseason_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n209/postseason/",
+  "historical_archive_preservation": {
+    "prior_deployed_asset_count": 445,
+    "unchanged_asset_count": 444,
+    "modified_existing_paths": [
+      "index.html"
+    ],
+    "new_public_asset_count": 6
+  },
+  "prior_version_verification": {
+    "site_version": 74,
+    "github_head": "11fa43bca5348da09fbafa359d6afe6ada5e37e3",
+    "workflow_run_url": "https://github.com/alvaromendizabal/sports-edge-lab/actions/runs/46057033921",
+    "hosted_asset_and_browser_job": "PASS",
+    "scope": "451 source asset comparisons plus local and hosted N210 desktop/mobile interactions; separate README vocabulary contract failed and is corrected in this revision."
+  }
+}

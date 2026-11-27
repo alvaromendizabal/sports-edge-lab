@@ -1,0 +1,106 @@
+{
+  "release": "N210",
+  "owner_status": "PARTIAL_RESUMABLE_CURRENT_QUOTES",
+  "scope": "Registered fitting completed; current quote coverage incomplete",
+  "evaluation": "EXPOSED_2026_SELECTION",
+  "completed_population": 166,
+  "completed_units": 304,
+  "optimizer_calls": 4864,
+  "new_features": 5412,
+  "candidate_policies": 10268,
+  "current_executable_options": 0,
+  "forecast_issued_utc": "2026-11-27T04:46:48.395449+00:00",
+  "v13_status": "INCOMPLETE",
+  "champions": [
+    {
+      "target": "margin",
+      "objective": "brier",
+      "family": "probability blend",
+      "wins": 92,
+      "losses": 71,
+      "pushes": 3,
+      "games": 166,
+      "brier": 0.24290189968262652,
+      "logloss": 0.6788245132576847
+    },
+    {
+      "target": "margin",
+      "objective": "logloss",
+      "family": "probability blend",
+      "wins": 92,
+      "losses": 71,
+      "pushes": 3,
+      "games": 166,
+      "brier": 0.24290189968262652,
+      "logloss": 0.6788245132576847
+    },
+    {
+      "target": "margin",
+      "objective": "strict_wins",
+      "family": "TensorFlow",
+      "wins": 99,
+      "losses": 64,
+      "pushes": 3,
+      "games": 166,
+      "brier": 0.2469343188604152,
+      "logloss": 0.6896424865782597
+    },
+    {
+      "target": "total",
+      "objective": "brier",
+      "family": "LightGBM",
+      "wins": 94,
+      "losses": 72,
+      "pushes": 0,
+      "games": 166,
+      "brier": 0.24332802275907292,
+      "logloss": 0.6794267746058009
+    },
+    {
+      "target": "total",
+      "objective": "logloss",
+      "family": "LightGBM",
+      "wins": 94,
+      "losses": 72,
+      "pushes": 0,
+      "games": 166,
+      "brier": 0.24332802275907292,
+      "logloss": 0.6794267746058009
+    },
+    {
+      "target": "total",
+      "objective": "strict_wins",
+      "family": "LightGBM",
+      "wins": 100,
+      "losses": 66,
+      "pushes": 0,
+      "games": 166,
+      "brier": 0.2451335279600139,
+      "logloss": 0.6831212218866705
+    }
+  ],
+  "prior_week_replay": [
+    {
+      "target": "margin",
+      "wins": 84,
+      "losses": 79,
+      "settlement_pushes": 3,
+      "eligible": 166,
+      "conditional_decisive_accuracy": 0.5153374233128835,
+      "scope": "Best retrospectively compared prior-week reconstruction; recipes had prior test exposure; not originally issued"
+    },
+    {
+      "target": "total",
+      "wins": 92,
+      "losses": 74,
+      "settlement_pushes": 0,
+      "eligible": 166,
+      "conditional_decisive_accuracy": 0.5542168674698795,
+      "scope": "Best retrospectively compared prior-week reconstruction; recipes had prior test exposure; not originally issued"
+    }
+  ],
+  "forecast_game_count": 16,
+  "new_issue_games": 12,
+  "preserved_original_games": 4,
+  "production_promotion": false
+}
