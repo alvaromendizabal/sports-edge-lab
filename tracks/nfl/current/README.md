@@ -1,5 +1,10 @@
 # NFL game day and research dashboard
 
+**[N210 saved model issue and phone cards](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n210/)**
+
+N210 completed all 304 fitting units and 4,864 optimizer calls. Its 166-game exposed selection leaders record 99–64–3 spreads and 100–66 totals. The earlier-week replay leaders record 84–79–3 and 92–74. The overnight issue is saved, with archived lines explicitly identified; executable quote coverage was incomplete and the owner return remains resumable. Site version 74 is deployed; anonymous asset hashes and hosted desktop/mobile interactions are checked by the exact-head NFL workflow. [Deployment receipt](publication-n210.json).
+
+
 **[Open the Week 12 dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n209/)** · [All 16 matchups](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n209/#slate) · [Model records](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n209/#performance) · [Seven phone graphics](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n209/#phone) · [Circa card and all 32 sides](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n209/#circa)
 
 The November 26 N209 issue at **3:58 p.m. Pacific** covers 13 games before kickoff. The other three retain their original pregame picks. The dashboard shows the winner model's probability, both spread and total models’ picks, the projected margin and combined score, and the original lines and issue times. Later reconstructions have separate labels.
@@ -241,6 +246,7 @@ python3 tracks/nfl/current/validate_snapshot.py
 The snapshot validator checks unique game identities, finite nullable values, probability bounds, cover/push conservation, half-point push rules, expected-point arithmetic, issue-before-kickoff ordering, linked local assets, document controls and private-path exclusions. `--allow-empty` is available only while preparing a placeholder; a populated publication uses the normal command.
 
 Browser checks on the live Site are separate from this structural/data validation. Source publication, deployment and research refresh are different events.
+
 
 
 

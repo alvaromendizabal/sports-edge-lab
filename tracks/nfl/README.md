@@ -1,5 +1,13 @@
 # NFL Week 12 · Sports Edge Lab V13
 
+**[Open the N210 Week 12 board](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n210/)** · [Four phone cards](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n210/#phone) · [Model results](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n210/#research)
+
+N210 finished all 304 fitting units and 4,864 optimizer calls. All 16 games have selected spread and total picks; four completed games retain their original pregame forecasts. The November 26, 8:46 p.m. Pacific issue has archived reference lines and no admitted current executable prices. Its owner return remains resumable.
+
+The 166-game exposed selection leaders record 99–64–3 spreads and 100–66 totals; the best prior-week replays record 84–79–3 and 92–74. These retrospective results do not establish future accuracy or a new-fit improvement. Winner projections use a separately identified point-display layer. Circa's original five, alternatives and selection protocol are preserved. Full V13 acceptance remains incomplete.
+
+## Prior dated NFL issue
+
 **[Open the Week 12 field notes](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/)** · [All 16 game forecasts](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/#games) · [Official Circa sides](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/#latest-circa) · [All 32 team availability reports](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/#availability) · [Roster forecasts](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/#latest-forecasts) · [Three models at the official line](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/#worksheet-models) · [Phone graphics](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/#phone)
 
 The November 25 N202 run issued 30 ordinary side and total picks for 15 Week 12 games at 5:04 p.m. Pacific. Green Bay–Los Angeles had already started. Its last pregame roster estimate is preserved from N201. The new policies trained on the 2024 and 2025 NFL seasons and used completed 2026 games to select a side. Their selection records were 84–66 for sides and 82–70 for totals. A replay selecting only from earlier weeks went 61–89 and 75–77. Neither policy reached 70% confidence on a qualifying validation game. The standing N195 Circa card and V13 distributions retain their own selection protocol and issue times. [Current sides and totals](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/#ordinary) · [Portable weekly board](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n202-weekly/) · [Public forecast JSON](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n202-weekly/weekly.json) · [Prior N201 edition](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n201-1636.html).
@@ -92,5 +100,3 @@ The executable retained the N084 scientific namespace. The later N086 execution 
 </details>
 
 </details>
-
-

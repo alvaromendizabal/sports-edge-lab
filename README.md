@@ -1,5 +1,13 @@
 # NFL Week 12 · Sports Edge Lab V13
 
+**[Open the N210 Week 12 board](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n210/)** · [Four phone cards](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n210/#phone) · [Model results](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n210/#research)
+
+N210 finished all 304 fitting units and 4,864 optimizer calls. All 16 games have selected spread and total picks; four completed games retain their original pregame forecasts. The November 26, 8:46 p.m. Pacific issue has archived reference lines and no admitted current executable prices. Its owner return remains resumable.
+
+The 166-game exposed selection leaders record 99–64–3 spreads and 100–66 totals; the best prior-week replays record 84–79–3 and 92–74. These retrospective results do not establish future accuracy or a new-fit improvement. Winner projections use a separately identified point-display layer. Circa's original five, alternatives and selection protocol are preserved. Full V13 acceptance remains incomplete.
+
+## Prior dated NFL issue
+
 **[Open the Week 12 dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n209/)** · [All 16 matchups](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n209/#slate) · [Model records](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n209/#performance) · [Seven phone graphics](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n209/#phone) · [Circa card and all 32 sides](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n209/#circa)
 
 The November 26 N209 issue at **3:58 p.m. Pacific** covers 13 games before kickoff. The other three retain their original pregame picks. The dashboard shows the winner model's probability, both spread and total models’ picks, the projected margin and combined score, and the original lines and issue times. Later reconstructions have separate labels.
@@ -381,10 +389,3 @@ The latest authenticated V056 owner added 31 base fits and five statistical stat
 V057 prepares exact historical-recipe recovery, reusable per-candidate metrics before global closure, and bounded recovery that can advance after interruption. Its 64-unit chunks retain the eight-chunk ceiling, for an effective maximum of 512 units per recovery slice. Complete-population cache reuse requires independent canonical receipt, source and selector verification. No V057 AWS execution, new model improvement or automatic promotion is claimed. The requirement for hundreds of certified new feature concepts remains unmet.
 
 Evidence: [latest saved owner counts](docs/fbs/actual-owner-v056.json), [historical scorecards and qualifications](docs/fbs/historical-contenders-v057.json), and [FBS evidence dashboard](docs/fbs/current.html). Publication is not a data refresh or model run. NFL, NBA and NCAA basketball retain their independent owners and evidence.
-
-
-
-
-
-
-
