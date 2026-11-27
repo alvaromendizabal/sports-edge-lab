@@ -6,6 +6,8 @@ The November 26 N209 issue at **3:58 p.m. Pacific** covers 13 games before kicko
 
 On the 165 completed 2026 games used for ordinary spread and total selection, the most-wins spread model went **98–64–3** and the totals model **99–66**. Both tied their predecessors in wins when rescored on the same games. Spread Brier error fell from 0.27928 to 0.24725. When model selection used only earlier weeks, the best replay went **84–78–3** on spreads and **91–74** on totals. Thirteen upcoming games were locked for prospective grading.
 
+The six selected spread and total objectives now cover **285 of 285 games** in each of 2024 and 2025, including both Super Bowls. The most-wins spread model went 15–10–1 across the two postseasons. The totals model went 11–15. These are reconstructions from frozen held-season models. The broader rankings still have 272/285 games in each season. [Full-season and playoff results](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n209/postseason/)
+
 N209 completed all 304 registered fit units, with 1,216 new estimators, 2,736 calibrators and 39 simultaneous optimizers at peak. The 8,216-candidate comparison included 6,506 retained candidates. Ordinary 2026 model selection is exposed. The standing V13 and NFL Circa selections follow their separate 2024/2025 rules. Full V13 acceptance remains open.
 
 ## 2024 and 2025 playoff results

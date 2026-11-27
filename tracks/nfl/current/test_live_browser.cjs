@@ -356,6 +356,23 @@ function verifyHostedHtml(observed, source, context) {
       assert.deepEqual([n208.census,n208.candidate_count,n208.issued_game_count,n208.execution.completed_units],[164,6506,14,256]);
       assert.deepEqual([n208.champions.length,n208.incompatible_raw_strict_point_pairs.length,n208.forward_lock.model_decisions],[6,4,56]);
     });
+    await check(`${width}px: full-season N209 replay for six selected objectives`, async () => {
+      const week = new URL("week-12-field-notes/n209/", base);
+      await page.goto(week.href, {waitUntil:"domcontentloaded"});
+      await page.getByRole("link", {name:"2024 and 2025 playoff replay", exact:true}).click();
+      await page.getByRole("heading", {name:"Playoff replay", exact:true}).waitFor();
+      const data = await (await page.request.get(new URL("postseason/proof.json", week).href)).json();
+      assert.deepEqual([data.roles, data.unique_candidates, data.optimizer_updates, data.originally_issued], [6, 5, 0, false]);
+      assert.equal(data.annual.length, 12);
+      for (const row of data.annual) {
+        assert.equal(row.regular.eligible, 272);
+        assert.equal(row.postseason.eligible, 13);
+        assert.equal(row.combined.eligible, 285);
+        assert.equal(row.combined.wins + row.combined.losses + row.combined.settlement_pushes, 285);
+      }
+      await page.getByText("2025 season · all six roles", {exact:true}).click();
+      await noOverflow();
+    });
     await check(`${width}px: all sixteen JMac games match issued sources and preserve the clock for Rams and Packers`, async () => {
       const board=new URL("week-12-field-notes/n209/",base);
       const response=await page.goto(board.href,{waitUntil:"domcontentloaded"});

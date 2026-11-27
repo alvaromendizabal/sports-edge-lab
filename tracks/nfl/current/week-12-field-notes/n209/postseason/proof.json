@@ -1,0 +1,504 @@
+{
+  "owner": "NFL",
+  "release": "N209",
+  "original_run_id": "20261126T213200Z-074698813aba",
+  "logical_return_sha256": "e76dc0fc7deb7508548135bccf9ab003fecfd5d3856fc13f83996da2d065f5f4",
+  "owner_initial_return_modified": false,
+  "optimizer_updates": 0,
+  "standing_champion_changes": 0,
+  "independently_replayed_chronological_folds": true,
+  "originally_issued": false,
+  "annual_population_per_season": 285,
+  "postseason_games_per_year": 13,
+  "unique_candidates": 5,
+  "roles": 6,
+  "total_model_game_rows": 130,
+  "reused_rows": 78,
+  "new_replay_rows": 52,
+  "annual": [
+    {
+      "target": "margin",
+      "objective": "strict_wins",
+      "candidate": "N208/market_only/tensorflow/expanded/conditional_cdf/logscore_shrink",
+      "season": 2024,
+      "regular": {
+        "eligible": 272,
+        "decisive": 267,
+        "wins": 123,
+        "losses": 144,
+        "settlement_pushes": 5,
+        "brier": 0.2756746279930747,
+        "logloss": 0.7480366111476477
+      },
+      "postseason": {
+        "eligible": 13,
+        "decisive": 12,
+        "wins": 8,
+        "losses": 4,
+        "settlement_pushes": 1,
+        "brier": 0.19528526055948472,
+        "logloss": 0.5757301543737624
+      },
+      "combined": {
+        "eligible": 285,
+        "wins": 131,
+        "losses": 148,
+        "settlement_pushes": 6,
+        "decisive": 279,
+        "brier": 0.27221702079162996,
+        "logloss": 0.740625580748771
+      }
+    },
+    {
+      "target": "margin",
+      "objective": "strict_wins",
+      "candidate": "N208/market_only/tensorflow/expanded/conditional_cdf/logscore_shrink",
+      "season": 2025,
+      "regular": {
+        "eligible": 272,
+        "decisive": 269,
+        "wins": 145,
+        "losses": 124,
+        "settlement_pushes": 3,
+        "brier": 0.27943943493385076,
+        "logloss": 0.766453625966931
+      },
+      "postseason": {
+        "eligible": 13,
+        "decisive": 13,
+        "wins": 7,
+        "losses": 6,
+        "settlement_pushes": 0,
+        "brier": 0.273512564620845,
+        "logloss": 0.7541064857434365
+      },
+      "combined": {
+        "eligible": 285,
+        "wins": 152,
+        "losses": 130,
+        "settlement_pushes": 3,
+        "decisive": 282,
+        "brier": 0.2791662104158753,
+        "logloss": 0.765884431559465
+      }
+    },
+    {
+      "target": "margin",
+      "objective": "brier",
+      "candidate": "N204_BLEND/without_line_shape/expanded/identity/convex_brier",
+      "season": 2024,
+      "regular": {
+        "eligible": 272,
+        "decisive": 267,
+        "wins": 122,
+        "losses": 145,
+        "settlement_pushes": 5,
+        "brier": 0.28101246554114856,
+        "logloss": 0.7608991196982765
+      },
+      "postseason": {
+        "eligible": 13,
+        "decisive": 12,
+        "wins": 2,
+        "losses": 10,
+        "settlement_pushes": 1,
+        "brier": 0.36185763608072824,
+        "logloss": 0.9347248456023571
+      },
+      "combined": {
+        "eligible": 285,
+        "wins": 124,
+        "losses": 155,
+        "settlement_pushes": 6,
+        "decisive": 279,
+        "brier": 0.28448967717725954,
+        "logloss": 0.768375495005979
+      }
+    },
+    {
+      "target": "margin",
+      "objective": "brier",
+      "candidate": "N204_BLEND/without_line_shape/expanded/identity/convex_brier",
+      "season": 2025,
+      "regular": {
+        "eligible": 272,
+        "decisive": 269,
+        "wins": 127,
+        "losses": 142,
+        "settlement_pushes": 3,
+        "brier": 0.26786660269340407,
+        "logloss": 0.7306512776395381
+      },
+      "postseason": {
+        "eligible": 13,
+        "decisive": 13,
+        "wins": 3,
+        "losses": 10,
+        "settlement_pushes": 0,
+        "brier": 0.346137228860529,
+        "logloss": 0.8988689773626692
+      },
+      "combined": {
+        "eligible": 285,
+        "wins": 130,
+        "losses": 152,
+        "settlement_pushes": 3,
+        "decisive": 282,
+        "brier": 0.2714748230486261,
+        "logloss": 0.7384059942934413
+      }
+    },
+    {
+      "target": "margin",
+      "objective": "logloss",
+      "candidate": "N204/without_line_shape/xgboost/expanded/beta",
+      "season": 2024,
+      "regular": {
+        "eligible": 272,
+        "decisive": 267,
+        "wins": 130,
+        "losses": 137,
+        "settlement_pushes": 5,
+        "brier": 0.26801628228397056,
+        "logloss": 0.7961722317732619
+      },
+      "postseason": {
+        "eligible": 13,
+        "decisive": 12,
+        "wins": 6,
+        "losses": 6,
+        "settlement_pushes": 1,
+        "brier": 0.3436943000974321,
+        "logloss": 1.1446270200613597
+      },
+      "combined": {
+        "eligible": 285,
+        "wins": 136,
+        "losses": 143,
+        "settlement_pushes": 6,
+        "decisive": 279,
+        "brier": 0.2712712507920764,
+        "logloss": 0.8111595344953306
+      }
+    },
+    {
+      "target": "margin",
+      "objective": "logloss",
+      "candidate": "N204/without_line_shape/xgboost/expanded/beta",
+      "season": 2025,
+      "regular": {
+        "eligible": 272,
+        "decisive": 269,
+        "wins": 125,
+        "losses": 144,
+        "settlement_pushes": 3,
+        "brier": 0.2515257185522377,
+        "logloss": 0.6940182973299345
+      },
+      "postseason": {
+        "eligible": 13,
+        "decisive": 13,
+        "wins": 4,
+        "losses": 9,
+        "settlement_pushes": 0,
+        "brier": 0.2779251215211763,
+        "logloss": 0.7495838062443597
+      },
+      "combined": {
+        "eligible": 285,
+        "wins": 129,
+        "losses": 153,
+        "settlement_pushes": 3,
+        "decisive": 282,
+        "brier": 0.25274271230612494,
+        "logloss": 0.6965798278827272
+      }
+    },
+    {
+      "target": "total",
+      "objective": "strict_wins",
+      "candidate": "N209/legacy_control/lightgbm/expanded/conditional_cdf/key_crps_shrink",
+      "season": 2024,
+      "regular": {
+        "eligible": 272,
+        "decisive": 266,
+        "wins": 131,
+        "losses": 135,
+        "settlement_pushes": 6,
+        "brier": 0.2591307983646645,
+        "logloss": 0.7123197544720219
+      },
+      "postseason": {
+        "eligible": 13,
+        "decisive": 13,
+        "wins": 4,
+        "losses": 9,
+        "settlement_pushes": 0,
+        "brier": 0.25946611920363066,
+        "logloss": 0.7111332889649253
+      },
+      "combined": {
+        "eligible": 285,
+        "wins": 135,
+        "losses": 144,
+        "settlement_pushes": 6,
+        "decisive": 279,
+        "brier": 0.2591464226331468,
+        "logloss": 0.7122644711329816
+      }
+    },
+    {
+      "target": "total",
+      "objective": "strict_wins",
+      "candidate": "N209/legacy_control/lightgbm/expanded/conditional_cdf/key_crps_shrink",
+      "season": 2025,
+      "regular": {
+        "eligible": 272,
+        "decisive": 272,
+        "wins": 137,
+        "losses": 135,
+        "settlement_pushes": 0,
+        "brier": 0.25808892804500005,
+        "logloss": 0.710188764692302
+      },
+      "postseason": {
+        "eligible": 13,
+        "decisive": 13,
+        "wins": 7,
+        "losses": 6,
+        "settlement_pushes": 0,
+        "brier": 0.2739720431412904,
+        "logloss": 0.7461081987434385
+      },
+      "combined": {
+        "eligible": 285,
+        "wins": 144,
+        "losses": 141,
+        "settlement_pushes": 0,
+        "decisive": 285,
+        "brier": 0.2588134210143045,
+        "logloss": 0.7118271950174415
+      }
+    },
+    {
+      "target": "total",
+      "objective": "brier",
+      "candidate": "N208/without_tempo/lightgbm/expanded_balanced/conditional_cdf/fixed_half",
+      "season": 2024,
+      "regular": {
+        "eligible": 272,
+        "decisive": 266,
+        "wins": 126,
+        "losses": 140,
+        "settlement_pushes": 6,
+        "brier": 0.2589441064853351,
+        "logloss": 0.7120331918359843
+      },
+      "postseason": {
+        "eligible": 13,
+        "decisive": 13,
+        "wins": 5,
+        "losses": 8,
+        "settlement_pushes": 0,
+        "brier": 0.252222890306705,
+        "logloss": 0.6962718743641013
+      },
+      "combined": {
+        "eligible": 285,
+        "wins": 131,
+        "losses": 148,
+        "settlement_pushes": 6,
+        "decisive": 279,
+        "brier": 0.25863093153794375,
+        "logloss": 0.7112987935308428
+      }
+    },
+    {
+      "target": "total",
+      "objective": "brier",
+      "candidate": "N208/without_tempo/lightgbm/expanded_balanced/conditional_cdf/fixed_half",
+      "season": 2025,
+      "regular": {
+        "eligible": 272,
+        "decisive": 272,
+        "wins": 136,
+        "losses": 136,
+        "settlement_pushes": 0,
+        "brier": 0.25827194761449485,
+        "logloss": 0.7105594354028445
+      },
+      "postseason": {
+        "eligible": 13,
+        "decisive": 13,
+        "wins": 7,
+        "losses": 6,
+        "settlement_pushes": 0,
+        "brier": 0.2741267924233679,
+        "logloss": 0.7468184657721787
+      },
+      "combined": {
+        "eligible": 285,
+        "wins": 143,
+        "losses": 142,
+        "settlement_pushes": 0,
+        "decisive": 285,
+        "brier": 0.2589951510619171,
+        "logloss": 0.712213356086358
+      }
+    },
+    {
+      "target": "total",
+      "objective": "logloss",
+      "candidate": "N208/without_tempo/lightgbm/expanded_balanced/conditional_cdf/fixed_half",
+      "season": 2024,
+      "regular": {
+        "eligible": 272,
+        "decisive": 266,
+        "wins": 126,
+        "losses": 140,
+        "settlement_pushes": 6,
+        "brier": 0.2589441064853351,
+        "logloss": 0.7120331918359843
+      },
+      "postseason": {
+        "eligible": 13,
+        "decisive": 13,
+        "wins": 5,
+        "losses": 8,
+        "settlement_pushes": 0,
+        "brier": 0.252222890306705,
+        "logloss": 0.6962718743641013
+      },
+      "combined": {
+        "eligible": 285,
+        "wins": 131,
+        "losses": 148,
+        "settlement_pushes": 6,
+        "decisive": 279,
+        "brier": 0.25863093153794375,
+        "logloss": 0.7112987935308428
+      }
+    },
+    {
+      "target": "total",
+      "objective": "logloss",
+      "candidate": "N208/without_tempo/lightgbm/expanded_balanced/conditional_cdf/fixed_half",
+      "season": 2025,
+      "regular": {
+        "eligible": 272,
+        "decisive": 272,
+        "wins": 136,
+        "losses": 136,
+        "settlement_pushes": 0,
+        "brier": 0.25827194761449485,
+        "logloss": 0.7105594354028445
+      },
+      "postseason": {
+        "eligible": 13,
+        "decisive": 13,
+        "wins": 7,
+        "losses": 6,
+        "settlement_pushes": 0,
+        "brier": 0.2741267924233679,
+        "logloss": 0.7468184657721787
+      },
+      "combined": {
+        "eligible": 285,
+        "wins": 143,
+        "losses": 142,
+        "settlement_pushes": 0,
+        "decisive": 285,
+        "brier": 0.2589951510619171,
+        "logloss": 0.712213356086358
+      }
+    }
+  ],
+  "controls": [
+    {
+      "candidate": "N208/market_only/tensorflow/expanded/conditional_cdf/logscore_shrink",
+      "held_year": 2024,
+      "training_before": 2024,
+      "gate_max_training_season": 2023,
+      "regular_games_checked": 272,
+      "score_diagnostic_differences": {
+        "mean": 5.329070518200751e-15,
+        "standard_deviation": 1.4210854715202004e-14,
+        "q10": 0.0,
+        "q50": 0.0,
+        "q90": 0.0,
+        "crps": 1.7763568394002505e-15,
+        "integer_log_score": 6.217248937900877e-15
+      },
+      "matrix_source_sha256": "1ce3a11e35e6a54c0af985f2ec4b17aca19c11f2d39555a2e82b527c32ddd0a4",
+      "frozen_fit_sha256": "a052f86bcb1fcf89ffc0a4a7c97cc2a54fd955084e1ce476f4ebb7c12e596e5f",
+      "baseline_frozen_fit_sha256": "2fbb221a31a329e34d70242d64f840d2d8f81cd9b0e650a68f12241bbd86bfac"
+    },
+    {
+      "candidate": "N208/market_only/tensorflow/expanded/conditional_cdf/logscore_shrink",
+      "held_year": 2025,
+      "training_before": 2025,
+      "gate_max_training_season": 2024,
+      "regular_games_checked": 272,
+      "score_diagnostic_differences": {
+        "mean": 8.881784197001252e-15,
+        "standard_deviation": 7.105427357601002e-15,
+        "q10": 0.0,
+        "q50": 0.0,
+        "q90": 0.0,
+        "crps": 3.552713678800501e-15,
+        "integer_log_score": 1.7763568394002505e-15
+      },
+      "matrix_source_sha256": "1ce3a11e35e6a54c0af985f2ec4b17aca19c11f2d39555a2e82b527c32ddd0a4",
+      "frozen_fit_sha256": "a052f86bcb1fcf89ffc0a4a7c97cc2a54fd955084e1ce476f4ebb7c12e596e5f",
+      "baseline_frozen_fit_sha256": "2fbb221a31a329e34d70242d64f840d2d8f81cd9b0e650a68f12241bbd86bfac"
+    },
+    {
+      "candidate": "N209/legacy_control/lightgbm/expanded/conditional_cdf/key_crps_shrink",
+      "held_year": 2024,
+      "training_before": 2024,
+      "gate_max_training_season": 2023,
+      "regular_games_checked": 272,
+      "score_diagnostic_differences": {
+        "mean": 1.4210854715202004e-14,
+        "standard_deviation": 4.263256414560601e-14,
+        "q10": 0.0,
+        "q50": 0.0,
+        "q90": 0.0,
+        "crps": 1.7763568394002505e-15,
+        "integer_log_score": 8.881784197001252e-16
+      },
+      "matrix_source_sha256": "fca9f110a5a46eb8a9d71518e7e7a32ce78323a717da98d65834848f69da3249",
+      "frozen_fit_sha256": "d20fb4f91dfb89e9200e171e62ad412892e28c4139c24902ebf2f1e8e51241df",
+      "baseline_frozen_fit_sha256": "35057dbbd3dd18d703d57001e9b49a7ad10a0759184197275afabf2e58d53d00"
+    },
+    {
+      "candidate": "N209/legacy_control/lightgbm/expanded/conditional_cdf/key_crps_shrink",
+      "held_year": 2025,
+      "training_before": 2025,
+      "gate_max_training_season": 2024,
+      "regular_games_checked": 272,
+      "score_diagnostic_differences": {
+        "mean": 2.1316282072803006e-14,
+        "standard_deviation": 2.842170943040401e-14,
+        "q10": 0.0,
+        "q50": 0.0,
+        "q90": 0.0,
+        "crps": 2.220446049250313e-15,
+        "integer_log_score": 8.881784197001252e-16
+      },
+      "matrix_source_sha256": "fca9f110a5a46eb8a9d71518e7e7a32ce78323a717da98d65834848f69da3249",
+      "frozen_fit_sha256": "d20fb4f91dfb89e9200e171e62ad412892e28c4139c24902ebf2f1e8e51241df",
+      "baseline_frozen_fit_sha256": "35057dbbd3dd18d703d57001e9b49a7ad10a0759184197275afabf2e58d53d00"
+    }
+  ],
+  "source": {
+    "book": "DraftKings",
+    "quote_pairs": 52,
+    "pregame_clock": "Nearest verified snapshot before the lock one hour before the first kickoff of the playoff round; fixed bookmaker preference selected DraftKings throughout.",
+    "acquisition": "Archived quotes retrieved after the games; use the source and retrieval timestamps per row. All 26 historical games were absent from the original model market line. The archived quote supplies the evaluation threshold for the frozen score laws or explicit strike query for direct N204 models.",
+    "source_min_minutes_before_own_game": 64.33333333333333,
+    "source_csv_sha256": "a6f2113c92513fca27e3ff4bc71a138474aa200c03dc3617ce7dd70ab0e48405",
+    "prior_evidence_sha256": "fcfb6348566d61a5e00fb31a2e644493eac17d3718fdfdb627e083be41b8747c"
+  },
+  "protocol": "Historical chronological held-season replay. The 2024 estimators and calibrators used earlier seasons. The 2025 components used earlier seasons including eligible 2024 observations. Candidate identities were selected on exposed 2026. Strict standing V13 selection remains frozen. The remaining all-candidate annual source gap is unchanged."
+}
