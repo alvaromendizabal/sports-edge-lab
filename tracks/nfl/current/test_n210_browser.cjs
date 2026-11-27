@@ -51,6 +51,10 @@ const server = http.createServer((req, res) => {
       assert.equal(await page.locator('article[data-game]:visible').count(), 12);
       await page.getByRole('button', { name: 'Final', exact: true }).click();
       assert.equal(await page.locator('article[data-game]:visible').count(), 4);
+      const preserved = page.locator('article[data-game="GB LAR"]');
+      await preserved.locator('summary').click();
+      const preservedText = await preserved.innerText();
+      for (const phrase of ['Point accuracy', '4:18 PM PT', '4:35 PM PT']) assert(preservedText.includes(phrase), phrase);
       await page.getByRole('button', { name: 'All games', exact: true }).click();
       await page.getByRole('textbox', { name: 'Search teams' }).fill('DEN');
       assert.equal(await page.locator('article[data-game]:visible').count(), 1);
@@ -59,6 +63,11 @@ const server = http.createServer((req, res) => {
       assert.match(await page.locator('article[data-game]:visible').innerText(), /no separate historical validation/);
       await page.getByRole('textbox', { name: 'Search teams' }).fill('');
       assert.equal(await page.locator('#phone img').count(), 4);
+      for (const image of await page.locator('#phone img').all()) {
+        await image.scrollIntoViewIfNeeded();
+        const dimensions = await image.evaluate(async element => { await element.decode(); return [element.naturalWidth, element.naturalHeight]; });
+        assert.deepEqual(dimensions, [1170, 2240]);
+      }
       assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1));
       await page.screenshot({ path: path.join(output, `n210-board-${origin.label}-${width}.png`), fullPage: true });
       await page.close();

@@ -6,14 +6,14 @@
   "all_games_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n210/#games",
   "dedicated_circa_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n210/#circa",
   "phone_cards_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n210/#phone",
-  "deployed_at": "2026-11-27T19:27:21.305470+00:00",
-  "site_version": 74,
-  "site_source_commit": "964e7c735f27b2ffcfd6d56d29b738a1e1219dc3",
-  "archive_sha256": "3977c3dd864a22545ce732ccf4a4b020c9c3322f9d02f7b212453688c3183735",
-  "provider_saved_tar_sha256": "sha256:3977c3dd864a22545ce732ccf4a4b020c9c3322f9d02f7b212453688c3183735",
+  "deployed_at": "2026-11-27T19:35:17.914473+00:00",
+  "site_version": 75,
+  "site_source_commit": "dbf6cc2279dca350190a452390215e3d03fa8413",
+  "archive_sha256": "f0c0ef2de10b81960687bd44fb8299e77a1808374d38de651e3b70e153674445",
+  "provider_saved_tar_sha256": "sha256:f0c0ef2de10b81960687bd44fb8299e77a1808374d38de651e3b70e153674445",
   "audience": "public",
   "native_publication_receipt": "publication-n210.json",
-  "prior_publication_receipt": "publication-n209.json",
+  "prior_publication_receipt": "publication-n210-v74.json",
   "github_source_provenance": "The exact-head NFL GitHub Actions job verifies committed source against the deployed asset bytes and tests N210 interactions at desktop and mobile widths. Deployment success is separate from those HTTP/browser checks.",
   "scientific_scope": {
     "release": "N210",
@@ -2723,38 +2723,38 @@
       },
       {
         "path": "week-12-field-notes/n210/index.html",
-        "bytes": 37091,
-        "sha256": "d13e261f558dbb2b496b624111f9e6b95e936af42409c8a68930a187f320e6a9",
+        "bytes": 44001,
+        "sha256": "02f4662b5bb1093d57683f17162681419e025346d209990cea5c1eb823b96bc4",
         "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
       },
       {
         "path": "week-12-field-notes/n210/week-12-picks-1.png",
-        "bytes": 192257,
-        "sha256": "0fce267b22dee11f21b168b238c8b98fb3bbea9e88010fa6d2d33d02a0c2a01e",
+        "bytes": 191462,
+        "sha256": "8e4cc5badbc41a63c6e1f528c3eda899ba4c173b367a7a2bfb2d879471784bbe",
         "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
       },
       {
         "path": "week-12-field-notes/n210/week-12-picks-2.png",
-        "bytes": 180776,
-        "sha256": "97544eecd41497227be0954911b32a75dfb6eb2230ec4f1829977e856f220bd2",
+        "bytes": 180028,
+        "sha256": "cc8d974f11481fe7ad17483dadd3f7afdf7d0766b35ebb30d20c45c21e7b879c",
         "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
       },
       {
         "path": "week-12-field-notes/n210/week-12-picks-3.png",
-        "bytes": 183932,
-        "sha256": "146b17721f06806d9a6108f1380b1bd9bafbc78097fc89df3f7c0d95e0dbe0e3",
+        "bytes": 183188,
+        "sha256": "0e7c7443179bb641d7c9163419c765c44eb382c08233aa46791a3dcb882fcdbf",
         "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
       },
       {
         "path": "week-12-field-notes/n210/week-12-picks-4.png",
-        "bytes": 184859,
-        "sha256": "cf49e6b16a959395430a3b4f0075b2a9ad1b8bee1765307af63a977b7abadda1",
+        "bytes": 184115,
+        "sha256": "e7d21fa160e2ca8615656f9c3e0b5e100ddc1782976442927987ec571007cbcd",
         "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
       },
       {
         "path": "week-12-field-notes/n210/week-12-picks.json",
         "bytes": 32993,
-        "sha256": "1e9567ceea58570971d056a52b57b8437038151fd1c136c801ddf2feb3954a70",
+        "sha256": "4c295fc485d0ba7f9ff110887ca19affb257d7c4146a0d8b2379759575897bbe",
         "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
       },
       {
@@ -2801,7 +2801,7 @@
       }
     ],
     "method": "Prepared source SHA-256 manifest. Anonymous HTTP comparison remains pending the exact-head GitHub check.",
-    "browser_status": "Live public board reopened: 16 game cards, four final grades, 12 saved upcoming games, four phone-card links, original Circa five and all 32 alternatives; upcoming filter returned 12 and reset to 16. Automated 390px interactions and complete HTTP asset hashes remain pending exact-head CI.",
+    "browser_status": "Version 74 passed the live public asset audit and hosted desktop/mobile N210 interactions. Version 75 adds explicit original-role clocks and primary push probabilities and corrects phone-card labels; its exact-head hosted audit remains pending.",
     "local_controls": "PASS_DESKTOP_PREVIEW",
     "viewports_required": [
       1440,
@@ -2811,7 +2811,7 @@
     "actual_counts": {
       "PENDING": 451
     },
-    "browser_render_verified": true
+    "browser_render_verified": false
   },
   "standing_results_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n207/standing-results/",
   "postseason_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n209/postseason/",
@@ -2822,5 +2822,12 @@
       "index.html"
     ],
     "new_public_asset_count": 6
+  },
+  "prior_version_verification": {
+    "site_version": 74,
+    "github_head": "11fa43bca5348da09fbafa359d6afe6ada5e37e3",
+    "workflow_run_url": "https://github.com/alvaromendizabal/sports-edge-lab/actions/runs/46057033921",
+    "hosted_asset_and_browser_job": "PASS",
+    "scope": "451 source asset comparisons plus local and hosted N210 desktop/mobile interactions; separate README vocabulary contract failed and is corrected in this revision."
   }
 }

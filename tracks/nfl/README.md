@@ -2,9 +2,9 @@
 
 **[Open the N210 Week 12 board](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n210/)** · [Four phone cards](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n210/#phone) · [Model results](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n210/#research)
 
-N210 finished all 304 fitting units and 4,864 optimizer calls. All 16 games have selected spread and total picks; four completed games retain their original pregame forecasts. The November 26, 8:46 p.m. Pacific issue has archived reference lines and no admitted current executable prices. Its owner return remains resumable.
+N210 finished all 304 fitting units and 4,864 optimizer calls. All 16 games have selected side and total picks; four completed games retain their original pregame forecasts. The November 26, 8:46 p.m. Pacific issue has archived reference lines and no admitted current executable prices. Its owner return remains resumable.
 
-The 166-game exposed selection leaders record 99–64–3 spreads and 100–66 totals; the best prior-week replays record 84–79–3 and 92–74. These retrospective results do not establish future accuracy or a new-fit improvement. Winner projections use a separately identified point-display layer. Circa's original five, alternatives and selection protocol are preserved. Full V13 acceptance remains incomplete.
+The 166-game exposed selection leaders record 99–64–3 sides and 100–66 totals; the best prior-week replays record 84–79–3 and 92–74. These retrospective results do not establish future accuracy or a new-fit improvement. Winner projections use a separately identified point-display layer. Circa's original five, alternatives and selection protocol are preserved. Full V13 acceptance remains incomplete.
 
 ## Prior dated NFL issue
 

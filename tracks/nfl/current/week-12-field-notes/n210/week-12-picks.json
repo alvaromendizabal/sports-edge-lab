@@ -1,7 +1,7 @@
 {
   "edition": "N210",
   "forecast_issued_utc": "2026-11-27T04:46:48.395449+00:00",
-  "rendered_utc": "2026-11-27T19:12:34.688176+00:00",
+  "rendered_utc": "2026-11-27T19:33:15.368480+00:00",
   "forecast_scope": "Saved overnight issue at archived observed lines. No current executable prices are claimed.",
   "source_results": "https://www.nfl.com/schedules/2026/by-week/week-12",
   "selection": "Exposed 2026 selection; available pre-2026 history, including 2024 and 2025, trains the models. V13/Circa selection remains separate.",
