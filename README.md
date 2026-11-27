@@ -231,7 +231,7 @@ a narrow missing-clock checkpoint repair.
 |---|---|---|
 | NFL | [Week 12 and Thanksgiving](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/thanksgiving/) · [Public dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/) · [Evidence](tracks/nfl/README.md) | N194 covers 109 scheduled and 163 completed games with separately dated model, market and contest evidence. |
 | NCAA FBS | [Browser dashboard](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [Track](tracks/ncaaf/README.md) | Actual V053 partial; V055 prepared; 500 saved issue contexts across 122 games, with dated provider coverage |
-| NBA | [Research view](docs/NBA_RESEARCH_CARD.md) | Separately dated basketball evidence |
+| NBA | [Current Spread & Totals board](docs/nba/spread-totals/index.html) · [Status and saved forecast clocks](tracks/nba/current/README.md) | R1 partial run: all 2,140 saved publication tasks recovered; B119 outlooks retain their original issue times. Hosting unverified. |
 | NCAA basketball | [Open dashboards](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/) · [Men's evidence](tracks/ncaam/README.md) · [Women's evidence](tracks/ncaaw/README.md) · [Runnable contracts](examples/ncaa_review/README.md) | Separate historical selections, current execution gaps and three-provider qualification |
 
 Each track has its own scientific ownership and update history. Shared infrastructure and navigation changes are coordinated through a scoped PR. [Contribution and ownership rules](CONTRIBUTING.md) · [Security](SECURITY.md) · [Public-use scope](docs/PUBLICATION_BOUNDARY.md)
