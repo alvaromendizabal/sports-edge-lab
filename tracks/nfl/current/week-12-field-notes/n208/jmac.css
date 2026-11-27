@@ -1,0 +1,37 @@
+.hero{align-items:center;padding:2.7rem 0 2.2rem}
+.hero aside{display:grid;gap:.2rem}
+.hero aside a{width:fit-content;margin-top:.45rem;font-weight:650}
+#slate{padding-top:2rem}
+.gamegrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.15rem;align-items:start}
+.game{padding:1.15rem 1.3rem 1.05rem;border-radius:.8rem}
+.game h3{font-family:Georgia,serif;font-weight:normal;font-size:clamp(1.65rem,3.1vw,2.15rem);margin:.35rem 0 .85rem;letter-spacing:-.025em}
+.game .versus{font:italic .95rem Georgia,serif;padding:0 .06rem}
+.game .metrics{display:grid;grid-template-columns:1fr 1.2fr .8fr;gap:.55rem;border-top:1px solid var(--line);padding-top:.6rem;margin-bottom:.75rem}
+.game .metric b{line-height:1.32}
+.game .metric span{line-height:1.3;margin-bottom:.2rem}
+.game .metric .winner-prob{font-variant-numeric:tabular-nums;color:var(--deep);margin-top:.15rem;font-weight:650}
+.forecast-clock{font-size:.86rem;line-height:1.35;color:var(--soft);margin:.45rem 0}
+.forecast-clock strong{color:var(--deep)}
+.policy{border:1px solid #d3dfd3;border-radius:.5rem;margin:.5rem 0;padding:.55rem .8rem .65rem;background:#f2f7f0}
+.policy.wins{background:#fff;border-color:#cbd7ce}
+.policy h4,.replay-box>h4{margin:0 0 .4rem;font-size:.96rem;line-height:1.3;color:#244b3e}
+.pick-pair{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.pick-cell{min-width:0}
+.pick-cell+.pick-cell{border-left:1px solid #c8d7ca;padding-left:.85rem}
+.pick-cell .field{display:block;color:#52665b;font-size:.875rem;line-height:1.3}
+.pick-cell strong{display:block;line-height:1.35;color:#173d30;font-size:1.09rem;letter-spacing:-.02em}
+.pick-meta{display:flex;align-items:center;gap:.5rem;font-size:.91rem;font-variant-numeric:tabular-nums;line-height:1.3}
+.pick-meta .confidence{color:#304d3f}
+.outcome{font-size:.78rem;font-weight:650}
+.outcome.won{color:#216046}.outcome.lost{color:#98482e}
+.game .model-source{margin-top:.65rem}
+.game .model-source p,.archive-cards>p{font-size:.93rem;margin:.6rem 0}
+.replay-box{margin-top:.8rem;border-top:1px dashed #b8c1b8;padding-top:.65rem}
+.replay-box>h4{color:#875139;margin-bottom:.15rem}
+.replay-box>p{color:#625d54;font-size:.875rem;line-height:1.35}
+.replay-box .policy{background:#fffdf8;border-color:#dbd6ca}
+.jmac-gallery img{max-height:unset;width:100%;height:auto;object-fit:contain;border-radius:.6rem}
+.archive-cards{margin:1.2rem 0}
+@media(min-width:1100px){.gamegrid{grid-template-columns:repeat(3,minmax(0,1fr))}.game{padding:1.05rem}.pick-cell strong{font-size:1.04rem}}
+@media(max-width:680px){.gamegrid{grid-template-columns:1fr}.game{padding:1rem}.hero{padding:1.8rem 0 1.25rem;gap:1rem}.hero aside{padding-left:1rem}.hero aside a{margin-top:.18rem}}
+@media(max-width:355px){.game{padding:.8rem}.policy{padding:.5rem .6rem}.pick-cell+.pick-cell{padding-left:.55rem}}

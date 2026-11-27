@@ -1,0 +1,27 @@
+{
+  "release": "N209",
+  "issue_id": "f9415a851988ae43aea259e1859be46e598a426848bb167709a280cc0a2b5a97",
+  "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+  "return_sha256": "e76dc0fc7deb7508548135bccf9ab003fecfd5d3856fc13f83996da2d065f5f4",
+  "completed_population": 165,
+  "candidate_count": 8216,
+  "issued_games": 13,
+  "weekly_games": 16,
+  "strict_wins": {
+    "margin": {
+      "wins": 98,
+      "losses": 64,
+      "settlement_pushes": 3,
+      "brier": 0.24725389199722908,
+      "logloss": 0.6903008367051524
+    },
+    "total": {
+      "wins": 99,
+      "losses": 66,
+      "settlement_pushes": 0,
+      "brier": 0.24547838605807898,
+      "logloss": 0.6838134191418123
+    }
+  },
+  "official_circa_sides": 32
+}

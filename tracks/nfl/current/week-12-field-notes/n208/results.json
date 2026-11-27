@@ -16,19 +16,19 @@
   "new_generated_feature_columns": 5061,
   "new_recipe_columns": 5061,
   "new_raw_columns": 0,
-  "display_point_source": "N208 lowest point MAE for margin and total",
-  "display_spread_and_total_source": "N208 minimum Brier, conditional on no push",
+  "display_point_source": "Point-MAE leaders from N208 for 14 games, N207 for Chicago at Detroit, and standing V13 for Green Bay at Los Angeles.",
+  "display_spread_and_total_source": "N208 original minimum-Brier and most-wins picks on 14 games; archived N207 picks for Chicago at Detroit and standing V13 picks for Green Bay at Los Angeles. The separately labelled N208 replay for Green Bay used the completed game during selection.",
   "winner_probability_source": "Standing V13 minimum Brier at its original issue",
   "point_errors": [
     [
       "Spread point MAE",
-      "N208 TensorFlow \u00b7 3ea2d5ffca",
+      "N208 TensorFlow · 3ea2d5ffca",
       "164",
       "9.4238 points"
     ],
     [
       "Total point MAE",
-      "N208 ridge regression \u00b7 cb1dc9ec71",
+      "N208 ridge regression · cb1dc9ec71",
       "164",
       "10.4499 points"
     ]
@@ -143,7 +143,7 @@
     [
       "Spread",
       "Most wins",
-      "84\u201377\u20133",
+      "84–77–3",
       164,
       "0.2506",
       "0.6943"
@@ -151,7 +151,7 @@
     [
       "Spread",
       "Lowest Brier",
-      "78\u201383\u20133",
+      "78–83–3",
       164,
       "0.2503",
       "0.6937"
@@ -159,7 +159,7 @@
     [
       "Total",
       "Most wins",
-      "91\u201373\u20130",
+      "91–73–0",
       164,
       "0.2497",
       "0.6926"
@@ -167,7 +167,7 @@
     [
       "Total",
       "Lowest Brier",
-      "91\u201373\u20130",
+      "91–73–0",
       164,
       "0.2497",
       "0.6926"
@@ -180,7 +180,7 @@
     "remaining_five": 5,
     "as_of_utc": "2026-11-26T20:26:57.477680+00:00"
   },
-  "cards": 11,
+  "cards": 15,
   "forward_lock": {
     "at_utc": "2026-11-26T20:43:08.995508+00:00",
     "sha256": "2b249f5933da433cef3511d6220dc72b7339b86d9b375c36846d5f818759450f",
@@ -231,5 +231,15 @@
     "Kalshi": 52,
     "Polymarket": 56
   },
-  "v13": "INCOMPLETE"
+  "v13": "INCOMPLETE",
+  "jmac_week12": {
+    "games_with_pregame_picks": 16,
+    "original_n208_games": 14,
+    "original_n207_games": 1,
+    "original_standing_v13_games": 1,
+    "replays_shown_separately": [
+      "2026_12_GB_LA"
+    ],
+    "phone_cards": 4
+  }
 }

@@ -1,0 +1,1422 @@
+{
+  "edition": "N209",
+  "as_of_utc": "2026-11-27T00:26:02.549027+00:00",
+  "new_issue": "f9415a851988ae43aea259e1859be46e598a426848bb167709a280cc0a2b5a97",
+  "regular_week": 12,
+  "games": [
+    {
+      "id": "2026_12_GB_LA",
+      "away": "GB",
+      "home": "LAR",
+      "kickoff_utc": "2026-11-26T01:00:00+00:00",
+      "winner": "LAR",
+      "win_probability": 0.579969985743727,
+      "tie_probability": 0.02979126069540161,
+      "outright_probabilities": {
+        "away": 0.39023875356087134,
+        "home": 0.579969985743727,
+        "tie": 0.02979126069540161
+      },
+      "outright_issue": "2026-11-25T06:08:46.629440+00:00",
+      "points": {
+        "margin": -4.655126736380717,
+        "total": 47.21936743615401
+      },
+      "pregame": {
+        "points": {
+          "margin": {
+            "side": "LAR",
+            "line": -2.5,
+            "probability": 0.618,
+            "p_push": 0.0,
+            "issued_utc": "2026-11-26T00:18:05.076303+00:00",
+            "role": "points",
+            "model": "V13 points",
+            "quote_utc": "2026-11-26T00:35:22.995550+00:00",
+            "result": "Won"
+          },
+          "total": {
+            "side": "over",
+            "line": 43.5,
+            "probability": 0.607,
+            "p_push": 0.0,
+            "issued_utc": "2026-11-26T00:35:17.356461+00:00",
+            "role": "points",
+            "model": "V13 points",
+            "quote_utc": "2026-11-26T00:35:22.995550+00:00",
+            "result": "Lost"
+          }
+        },
+        "probability": {
+          "margin": {
+            "side": "LAR",
+            "line": -2.5,
+            "probability": 0.5539999999999999,
+            "p_push": 0.0,
+            "issued_utc": "2026-11-25T22:17:05.323662+00:00",
+            "role": "probability",
+            "model": "V13 Brier",
+            "quote_utc": "2026-11-26T00:35:22.995550+00:00",
+            "result": "Won"
+          },
+          "total": {
+            "side": "over",
+            "line": 43.5,
+            "probability": 0.606,
+            "p_push": 0.0,
+            "issued_utc": "2026-11-25T22:17:05.323662+00:00",
+            "role": "probability",
+            "model": "V13 Brier",
+            "quote_utc": "2026-11-26T00:35:22.995550+00:00",
+            "result": "Lost"
+          }
+        }
+      },
+      "replay": {
+        "probability": {
+          "margin": {
+            "side": "GB",
+            "line": 2.5,
+            "probability": 0.5491590797980408,
+            "p_push": null,
+            "role": "probability",
+            "model": "N204_BLEND/without_line_shape/expanded/identity/convex_brier",
+            "result": "Lost"
+          },
+          "total": {
+            "side": "over",
+            "line": 43.5,
+            "probability": 0.509026340366548,
+            "p_push": 0.0,
+            "role": "probability",
+            "model": "N208/without_tempo/lightgbm/expanded_balanced/conditional_cdf/fixed_half",
+            "result": "Lost"
+          }
+        },
+        "wins": {
+          "margin": {
+            "side": "LAR",
+            "line": -2.5,
+            "probability": 0.7349227894420838,
+            "p_push": 0.0,
+            "role": "wins",
+            "model": "N208/full_history/torch/expanded_balanced/conditional_cdf/raw",
+            "result": "Won"
+          },
+          "total": {
+            "side": "under",
+            "line": 43.5,
+            "probability": 0.5084805032502167,
+            "p_push": 0.0,
+            "role": "wins",
+            "model": "N208/full_history/lightgbm/expanded/conditional_cdf/crps_shrink",
+            "result": "Won"
+          }
+        }
+      },
+      "score": {
+        "GB": 13,
+        "LAR": 26
+      },
+      "book": "DraftKings",
+      "edition": "V13",
+      "issue": "2026-11-25T22:17:05.323662+00:00",
+      "point_issues": {
+        "margin": "2026-11-25T20:40:39.298002+00:00",
+        "total": "2026-11-25T06:08:46.629440+00:00"
+      },
+      "replay_n209": {
+        "wins": {
+          "margin": {
+            "side": "LAR",
+            "line": -2.5,
+            "probability": 0.6892907248958045,
+            "p_push": 0.0,
+            "role": "wins",
+            "model": "N208/market_only/tensorflow/expanded/conditional_cdf/logscore_shrink",
+            "result": "Won"
+          },
+          "total": {
+            "side": "under",
+            "line": 43.5,
+            "probability": 0.5082266708390666,
+            "p_push": 0.0,
+            "role": "wins",
+            "model": "N209/legacy_control/lightgbm/expanded/conditional_cdf/key_crps_shrink",
+            "result": "Won"
+          }
+        },
+        "probability": {
+          "margin": {
+            "side": "GB",
+            "line": 2.5,
+            "probability": 0.5491590797980408,
+            "p_push": null,
+            "role": "probability",
+            "model": "N204_BLEND/without_line_shape/expanded/identity/convex_brier",
+            "result": "Lost"
+          },
+          "total": {
+            "side": "over",
+            "line": 43.5,
+            "probability": 0.509026340366548,
+            "p_push": 0.0,
+            "role": "probability",
+            "model": "N208/without_tempo/lightgbm/expanded_balanced/conditional_cdf/fixed_half",
+            "result": "Lost"
+          }
+        }
+      }
+    },
+    {
+      "id": "2026_12_CHI_DET",
+      "away": "CHI",
+      "home": "DET",
+      "kickoff_utc": "2026-11-26T18:00:00+00:00",
+      "winner": "CHI",
+      "win_probability": 0.5365918157419589,
+      "tie_probability": 0.03013104202763406,
+      "outright_probabilities": {
+        "away": 0.5365918157419589,
+        "home": 0.43327714223040736,
+        "tie": 0.03013104202763406
+      },
+      "outright_issue": "2026-11-25T06:08:46.629440+00:00",
+      "points": {
+        "margin": 1.040230195211584,
+        "total": 62.80325605319726
+      },
+      "pregame": {
+        "probability": {
+          "margin": {
+            "side": "CHI",
+            "line": -1.5,
+            "probability": 0.5686620883914032,
+            "p_push": 0.0,
+            "role": "probability",
+            "model": "N204_BLEND/without_line_shape/expanded/identity/convex_brier",
+            "issued_utc": "2026-11-26T08:37:00.790452+00:00",
+            "quote_utc": "2026-11-26T08:32:32.979536+00:00",
+            "result": "Won"
+          },
+          "total": {
+            "side": "over",
+            "line": 55.5,
+            "probability": 0.5087840796803457,
+            "p_push": 0.0,
+            "role": "probability",
+            "model": "N205/full_history/hist_gradient/expanded/conditional_scale/identity",
+            "issued_utc": "2026-11-26T08:37:00.790452+00:00",
+            "quote_utc": "2026-11-26T08:32:32.979536+00:00",
+            "result": "Won"
+          }
+        },
+        "wins": {
+          "margin": {
+            "side": "DET",
+            "line": 1.5,
+            "probability": 0.6342202796397718,
+            "p_push": 0.0,
+            "role": "wins",
+            "model": "N206/market_only/tensorflow/expanded/conditional_cdf/logscore_shrink",
+            "issued_utc": "2026-11-26T08:37:00.790452+00:00",
+            "quote_utc": "2026-11-26T08:32:32.979536+00:00",
+            "result": "Lost"
+          },
+          "total": {
+            "side": "over",
+            "line": 55.5,
+            "probability": 0.68427145550445,
+            "p_push": 0.0,
+            "role": "wins",
+            "model": "N207/without_role_matchup/tensorflow/expanded/conditional_cdf/crps_shrink",
+            "issued_utc": "2026-11-26T08:37:00.790452+00:00",
+            "quote_utc": "2026-11-26T08:32:32.979536+00:00",
+            "result": "Won"
+          }
+        }
+      },
+      "replay": {},
+      "score": {
+        "DET": 35,
+        "CHI": 39
+      },
+      "book": "DraftKings",
+      "edition": "N207",
+      "issue": "2026-11-26T08:37:00.790452+00:00",
+      "point_issues": {
+        "margin": "2026-11-26T08:37:00.790452+00:00",
+        "total": "2026-11-26T08:37:00.790452+00:00"
+      },
+      "replay_n209": {
+        "wins": {
+          "margin": {
+            "side": "CHI",
+            "line": -2.5,
+            "probability": 0.5262446957354192,
+            "p_push": 0.0,
+            "role": "wins",
+            "model": "N208/market_only/tensorflow/expanded/conditional_cdf/logscore_shrink",
+            "result": "Won"
+          },
+          "total": {
+            "side": "over",
+            "line": 55.5,
+            "probability": 0.5553525431919538,
+            "p_push": 0.0,
+            "role": "wins",
+            "model": "N209/legacy_control/lightgbm/expanded/conditional_cdf/key_crps_shrink",
+            "result": "Won"
+          }
+        },
+        "probability": {
+          "margin": {
+            "side": "CHI",
+            "line": -2.5,
+            "probability": 0.5771450148041423,
+            "p_push": null,
+            "role": "probability",
+            "model": "N204_BLEND/without_line_shape/expanded/identity/convex_brier",
+            "result": "Won"
+          },
+          "total": {
+            "side": "over",
+            "line": 55.5,
+            "probability": 0.5820132682621185,
+            "p_push": 0.0,
+            "role": "probability",
+            "model": "N208/without_tempo/lightgbm/expanded_balanced/conditional_cdf/fixed_half",
+            "result": "Won"
+          }
+        }
+      }
+    },
+    {
+      "id": "2026_12_PHI_DAL",
+      "away": "PHI",
+      "home": "DAL",
+      "kickoff_utc": "2026-11-26T21:30:00+00:00",
+      "winner": "DAL",
+      "win_probability": 0.7856362834129444,
+      "tie_probability": 0.015319414849438995,
+      "outright_probabilities": {
+        "away": 0.19904430173761656,
+        "home": 0.7856362834129444,
+        "tie": 0.015319414849438995
+      },
+      "outright_issue": "2026-11-25T06:08:46.629440+00:00",
+      "points": {
+        "margin": -5.865896033017617,
+        "total": 48.0380873785861
+      },
+      "pregame": {
+        "probability": {
+          "margin": {
+            "side": "PHI",
+            "line": 8.5,
+            "probability": 0.5043382454801036,
+            "p_push": 0.0,
+            "role": "probability",
+            "model": "N204_BLEND/without_line_shape/expanded/identity/convex_brier",
+            "issued_utc": "2026-11-26T20:30:24.657315+00:00",
+            "quote_utc": "2026-11-26T20:26:34.667737+00:00"
+          },
+          "total": {
+            "side": "over",
+            "line": 49.5,
+            "probability": 0.5694651848514286,
+            "p_push": 0.0,
+            "role": "probability",
+            "model": "N208/without_tempo/lightgbm/expanded_balanced/conditional_cdf/fixed_half",
+            "issued_utc": "2026-11-26T20:30:24.657315+00:00",
+            "quote_utc": "2026-11-26T20:26:34.667737+00:00"
+          }
+        },
+        "wins": {
+          "margin": {
+            "side": "PHI",
+            "line": 8.5,
+            "probability": 0.7908329402345896,
+            "p_push": 0.0,
+            "role": "wins",
+            "model": "N208/full_history/torch/expanded_balanced/conditional_cdf/raw",
+            "issued_utc": "2026-11-26T20:30:24.657315+00:00",
+            "quote_utc": "2026-11-26T20:26:34.667737+00:00"
+          },
+          "total": {
+            "side": "over",
+            "line": 49.5,
+            "probability": 0.5623595679593505,
+            "p_push": 0.0,
+            "role": "wins",
+            "model": "N208/full_history/lightgbm/expanded/conditional_cdf/crps_shrink",
+            "issued_utc": "2026-11-26T20:30:24.657315+00:00",
+            "quote_utc": "2026-11-26T20:26:34.667737+00:00"
+          }
+        }
+      },
+      "replay": {},
+      "score": null,
+      "book": "DraftKings",
+      "edition": "N208",
+      "issue": "2026-11-26T20:30:24.657315+00:00",
+      "point_issues": {
+        "margin": "2026-11-26T20:30:24.657315+00:00",
+        "total": "2026-11-26T20:30:24.657315+00:00"
+      }
+    },
+    {
+      "id": "2026_12_KC_BUF",
+      "away": "KC",
+      "home": "BUF",
+      "kickoff_utc": "2026-11-27T01:20:00+00:00",
+      "winner": "BUF",
+      "win_probability": 0.6451524775091066,
+      "tie_probability": 0.02710809427167793,
+      "outright_probabilities": {
+        "away": 0.3277394282192155,
+        "home": 0.6451524775091066,
+        "tie": 0.02710809427167793
+      },
+      "outright_issue": "2026-11-25T06:08:46.629440+00:00",
+      "points": {
+        "margin": -8.956680874135158,
+        "total": 48.87602020283028
+      },
+      "pregame": {
+        "probability": {
+          "margin": {
+            "side": "BUF",
+            "line": -3.0,
+            "probability": 0.6289330819088734,
+            "p_push": 0.040431026853021294,
+            "role": "probability",
+            "model": "N204_BLEND/without_line_shape/expanded/identity/convex_brier",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          },
+          "total": {
+            "side": "over",
+            "line": 45.5,
+            "probability": 0.6143574766432873,
+            "p_push": 0.0,
+            "role": "probability",
+            "model": "N208/without_tempo/lightgbm/expanded_balanced/conditional_cdf/fixed_half",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          }
+        },
+        "wins": {
+          "margin": {
+            "side": "BUF",
+            "line": -3.0,
+            "probability": 0.6868360964079722,
+            "p_push": 0.03279176662686165,
+            "role": "wins",
+            "model": "N208/market_only/tensorflow/expanded/conditional_cdf/logscore_shrink",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          },
+          "total": {
+            "side": "over",
+            "line": 45.5,
+            "probability": 0.5999707151836755,
+            "p_push": 0.0,
+            "role": "wins",
+            "model": "N209/legacy_control/lightgbm/expanded/conditional_cdf/key_crps_shrink",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          }
+        }
+      },
+      "replay": {},
+      "score": null,
+      "book": "DraftKings",
+      "edition": "N209",
+      "issue": "2026-11-26T23:58:08.258376+00:00",
+      "point_issues": {
+        "margin": "2026-11-26T23:58:08.258376+00:00",
+        "total": "2026-11-26T23:58:08.258376+00:00"
+      },
+      "previous_edition": "N208",
+      "joint_basis": "POINT_MAE_MARGINAL_PRODUCT_CONDITIONAL_ON_ADMISSIBLE_INTEGER_SCORE_PAIRS",
+      "score_model_win": {
+        "p_away_win": 0.22643942191789776,
+        "p_home_win": 0.7536839310992643,
+        "p_tie": 0.01987664698283774
+      }
+    },
+    {
+      "id": "2026_12_DEN_PIT",
+      "away": "DEN",
+      "home": "PIT",
+      "kickoff_utc": "2026-11-27T20:00:00+00:00",
+      "winner": "DEN",
+      "win_probability": 0.5867263908473752,
+      "tie_probability": 0.029727415431263643,
+      "outright_probabilities": {
+        "away": 0.5867263908473752,
+        "home": 0.38354619372136134,
+        "tie": 0.029727415431263643
+      },
+      "outright_issue": "2026-11-25T06:08:46.629440+00:00",
+      "points": {
+        "margin": 6.7831050615035995,
+        "total": 38.69182433355286
+      },
+      "pregame": {
+        "probability": {
+          "margin": {
+            "side": "DEN",
+            "line": -4.5,
+            "probability": 0.5126738621264858,
+            "p_push": 0.0,
+            "role": "probability",
+            "model": "N204_BLEND/without_line_shape/expanded/identity/convex_brier",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          },
+          "total": {
+            "side": "over",
+            "line": 36.5,
+            "probability": 0.5774316030695866,
+            "p_push": 0.0,
+            "role": "probability",
+            "model": "N208/without_tempo/lightgbm/expanded_balanced/conditional_cdf/fixed_half",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          }
+        },
+        "wins": {
+          "margin": {
+            "side": "DEN",
+            "line": -4.5,
+            "probability": 0.6013241242751881,
+            "p_push": 0.0,
+            "role": "wins",
+            "model": "N208/market_only/tensorflow/expanded/conditional_cdf/logscore_shrink",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          },
+          "total": {
+            "side": "over",
+            "line": 36.5,
+            "probability": 0.5864339590069951,
+            "p_push": 0.0,
+            "role": "wins",
+            "model": "N209/legacy_control/lightgbm/expanded/conditional_cdf/key_crps_shrink",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          }
+        }
+      },
+      "replay": {},
+      "score": null,
+      "book": "DraftKings",
+      "edition": "N209",
+      "issue": "2026-11-26T23:58:08.258376+00:00",
+      "point_issues": {
+        "margin": "2026-11-26T23:58:08.258376+00:00",
+        "total": "2026-11-26T23:58:08.258376+00:00"
+      },
+      "previous_edition": "N208",
+      "joint_basis": "POINT_MAE_MARGINAL_PRODUCT_CONDITIONAL_ON_ADMISSIBLE_INTEGER_SCORE_PAIRS",
+      "score_model_win": {
+        "p_away_win": 0.7124943864216915,
+        "p_home_win": 0.25792533918500404,
+        "p_tie": 0.029580274393304438
+      }
+    },
+    {
+      "id": "2026_12_ATL_MIN",
+      "away": "ATL",
+      "home": "MIN",
+      "kickoff_utc": "2026-11-29T18:00:00+00:00",
+      "winner": "MIN",
+      "win_probability": 0.709567190861796,
+      "tie_probability": 0.022427680202090128,
+      "outright_probabilities": {
+        "away": 0.26800512893611395,
+        "home": 0.709567190861796,
+        "tie": 0.022427680202090128
+      },
+      "outright_issue": "2026-11-25T06:08:46.629440+00:00",
+      "points": {
+        "margin": -8.38178674677565,
+        "total": 41.44446043281417
+      },
+      "pregame": {
+        "probability": {
+          "margin": {
+            "side": "ATL",
+            "line": 7.0,
+            "probability": 0.5862985749667586,
+            "p_push": 0.03781195376235619,
+            "role": "probability",
+            "model": "N204_BLEND/without_line_shape/expanded/identity/convex_brier",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          },
+          "total": {
+            "side": "over",
+            "line": 41.5,
+            "probability": 0.5339097638303615,
+            "p_push": 0.0,
+            "role": "probability",
+            "model": "N208/without_tempo/lightgbm/expanded_balanced/conditional_cdf/fixed_half",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          }
+        },
+        "wins": {
+          "margin": {
+            "side": "MIN",
+            "line": -7.0,
+            "probability": 0.5558853323014581,
+            "p_push": 0.014744181489859128,
+            "role": "wins",
+            "model": "N208/market_only/tensorflow/expanded/conditional_cdf/logscore_shrink",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          },
+          "total": {
+            "side": "over",
+            "line": 41.5,
+            "probability": 0.5358575266717021,
+            "p_push": 0.0,
+            "role": "wins",
+            "model": "N209/legacy_control/lightgbm/expanded/conditional_cdf/key_crps_shrink",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          }
+        }
+      },
+      "replay": {},
+      "score": null,
+      "book": "DraftKings",
+      "edition": "N209",
+      "issue": "2026-11-26T23:58:08.258376+00:00",
+      "point_issues": {
+        "margin": "2026-11-26T23:58:08.258376+00:00",
+        "total": "2026-11-26T23:58:08.258376+00:00"
+      },
+      "previous_edition": "N208",
+      "joint_basis": "POINT_MAE_MARGINAL_PRODUCT_CONDITIONAL_ON_ADMISSIBLE_INTEGER_SCORE_PAIRS",
+      "score_model_win": {
+        "p_away_win": 0.22901338618443892,
+        "p_home_win": 0.7419252101901024,
+        "p_tie": 0.029061403625458743
+      }
+    },
+    {
+      "id": "2026_12_BAL_HOU",
+      "away": "BAL",
+      "home": "HOU",
+      "kickoff_utc": "2026-11-29T18:00:00+00:00",
+      "winner": "HOU",
+      "win_probability": 0.6679421407119499,
+      "tie_probability": 0.03543554441662372,
+      "outright_probabilities": {
+        "away": 0.29662231487142654,
+        "home": 0.6679421407119499,
+        "tie": 0.03543554441662372
+      },
+      "outright_issue": "2026-11-25T06:08:46.629440+00:00",
+      "points": {
+        "margin": -6.478296259222653,
+        "total": 49.20696852338256
+      },
+      "pregame": {
+        "probability": {
+          "margin": {
+            "side": "HOU",
+            "line": -6.5,
+            "probability": 0.5739986965489596,
+            "p_push": 0.0,
+            "role": "probability",
+            "model": "N204_BLEND/without_line_shape/expanded/identity/convex_brier",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          },
+          "total": {
+            "side": "under",
+            "line": 47.5,
+            "probability": 0.5089221608112069,
+            "p_push": 0.0,
+            "role": "probability",
+            "model": "N208/without_tempo/lightgbm/expanded_balanced/conditional_cdf/fixed_half",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          }
+        },
+        "wins": {
+          "margin": {
+            "side": "BAL",
+            "line": 6.5,
+            "probability": 0.5141473574702371,
+            "p_push": 0.0,
+            "role": "wins",
+            "model": "N208/market_only/tensorflow/expanded/conditional_cdf/logscore_shrink",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          },
+          "total": {
+            "side": "under",
+            "line": 47.5,
+            "probability": 0.5185877801560463,
+            "p_push": 0.0,
+            "role": "wins",
+            "model": "N209/legacy_control/lightgbm/expanded/conditional_cdf/key_crps_shrink",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          }
+        }
+      },
+      "replay": {},
+      "score": null,
+      "book": "DraftKings",
+      "edition": "N209",
+      "issue": "2026-11-26T23:58:08.258376+00:00",
+      "point_issues": {
+        "margin": "2026-11-26T23:58:08.258376+00:00",
+        "total": "2026-11-26T23:58:08.258376+00:00"
+      },
+      "previous_edition": "N208",
+      "joint_basis": "POINT_MAE_MARGINAL_PRODUCT_CONDITIONAL_ON_ADMISSIBLE_INTEGER_SCORE_PAIRS",
+      "score_model_win": {
+        "p_away_win": 0.2810977421898014,
+        "p_home_win": 0.6912901417172166,
+        "p_tie": 0.02761211609298222
+      }
+    },
+    {
+      "id": "2026_12_NO_CIN",
+      "away": "NO",
+      "home": "CIN",
+      "kickoff_utc": "2026-11-29T18:00:00+00:00",
+      "winner": "CIN",
+      "win_probability": 0.8252348973548178,
+      "tie_probability": 0.015166188323265162,
+      "outright_probabilities": {
+        "away": 0.1595989143219173,
+        "home": 0.8252348973548178,
+        "tie": 0.015166188323265162
+      },
+      "outright_issue": "2026-11-25T06:08:46.629440+00:00",
+      "points": {
+        "margin": -11.756604710577372,
+        "total": 52.1947633323946
+      },
+      "pregame": {
+        "probability": {
+          "margin": {
+            "side": "CIN",
+            "line": -10.0,
+            "probability": 0.6449558706255187,
+            "p_push": 0.04204401302705588,
+            "role": "probability",
+            "model": "N204_BLEND/without_line_shape/expanded/identity/convex_brier",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          },
+          "total": {
+            "side": "over",
+            "line": 49.5,
+            "probability": 0.515551337286184,
+            "p_push": 0.0,
+            "role": "probability",
+            "model": "N208/without_tempo/lightgbm/expanded_balanced/conditional_cdf/fixed_half",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          }
+        },
+        "wins": {
+          "margin": {
+            "side": "CIN",
+            "line": -10.0,
+            "probability": 0.5460298739598303,
+            "p_push": 0.03288564596022774,
+            "role": "wins",
+            "model": "N208/market_only/tensorflow/expanded/conditional_cdf/logscore_shrink",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          },
+          "total": {
+            "side": "over",
+            "line": 49.5,
+            "probability": 0.5303712102189555,
+            "p_push": 0.0,
+            "role": "wins",
+            "model": "N209/legacy_control/lightgbm/expanded/conditional_cdf/key_crps_shrink",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          }
+        }
+      },
+      "replay": {},
+      "score": null,
+      "book": "DraftKings",
+      "edition": "N209",
+      "issue": "2026-11-26T23:58:08.258376+00:00",
+      "point_issues": {
+        "margin": "2026-11-26T23:58:08.258376+00:00",
+        "total": "2026-11-26T23:58:08.258376+00:00"
+      },
+      "previous_edition": "N208",
+      "joint_basis": "POINT_MAE_MARGINAL_PRODUCT_CONDITIONAL_ON_ADMISSIBLE_INTEGER_SCORE_PAIRS",
+      "score_model_win": {
+        "p_away_win": 0.18503909029169302,
+        "p_home_win": 0.8030059713295625,
+        "p_tie": 0.011954938378744479
+      }
+    },
+    {
+      "id": "2026_12_NYG_IND",
+      "away": "NYG",
+      "home": "IND",
+      "kickoff_utc": "2026-11-29T18:00:00+00:00",
+      "winner": "NYG",
+      "win_probability": 0.6467318731754268,
+      "tie_probability": 0.037519933467186795,
+      "outright_probabilities": {
+        "away": 0.6467318731754268,
+        "home": 0.31574819335738685,
+        "tie": 0.037519933467186795
+      },
+      "outright_issue": "2026-11-25T06:08:46.629440+00:00",
+      "points": {
+        "margin": 4.115226919364816,
+        "total": 44.74486549431278
+      },
+      "pregame": {
+        "probability": {
+          "margin": {
+            "side": "IND",
+            "line": 6.0,
+            "probability": 0.551121136855387,
+            "p_push": 0.038357689362645185,
+            "role": "probability",
+            "model": "N204_BLEND/without_line_shape/expanded/identity/convex_brier",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          },
+          "total": {
+            "side": "over",
+            "line": 41.5,
+            "probability": 0.5150206991771805,
+            "p_push": 0.0,
+            "role": "probability",
+            "model": "N208/without_tempo/lightgbm/expanded_balanced/conditional_cdf/fixed_half",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          }
+        },
+        "wins": {
+          "margin": {
+            "side": "IND",
+            "line": 6.0,
+            "probability": 0.5412348064236725,
+            "p_push": 0.03038861354876008,
+            "role": "wins",
+            "model": "N208/market_only/tensorflow/expanded/conditional_cdf/logscore_shrink",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          },
+          "total": {
+            "side": "over",
+            "line": 41.5,
+            "probability": 0.5146071662188592,
+            "p_push": 0.0,
+            "role": "wins",
+            "model": "N209/legacy_control/lightgbm/expanded/conditional_cdf/key_crps_shrink",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          }
+        }
+      },
+      "replay": {},
+      "score": null,
+      "book": "DraftKings",
+      "edition": "N209",
+      "issue": "2026-11-26T23:58:08.258376+00:00",
+      "point_issues": {
+        "margin": "2026-11-26T23:58:08.258376+00:00",
+        "total": "2026-11-26T23:58:08.258376+00:00"
+      },
+      "previous_edition": "N208",
+      "joint_basis": "POINT_MAE_MARGINAL_PRODUCT_CONDITIONAL_ON_ADMISSIBLE_INTEGER_SCORE_PAIRS",
+      "score_model_win": {
+        "p_away_win": 0.6039024403740116,
+        "p_home_win": 0.365706973230321,
+        "p_tie": 0.0303905863956673
+      }
+    },
+    {
+      "id": "2026_12_NYJ_MIA",
+      "away": "NYJ",
+      "home": "MIA",
+      "kickoff_utc": "2026-11-29T18:00:00+00:00",
+      "winner": "NYJ",
+      "win_probability": 0.5846924800025901,
+      "tie_probability": 0.03148746573883346,
+      "outright_probabilities": {
+        "away": 0.5846924800025901,
+        "home": 0.38382005425857657,
+        "tie": 0.03148746573883346
+      },
+      "outright_issue": "2026-11-25T06:08:46.629440+00:00",
+      "points": {
+        "margin": 9.790570489980514,
+        "total": 47.04531750379209
+      },
+      "pregame": {
+        "probability": {
+          "margin": {
+            "side": "MIA",
+            "line": 4.5,
+            "probability": 0.5528198879853417,
+            "p_push": 0.0,
+            "role": "probability",
+            "model": "N204_BLEND/without_line_shape/expanded/identity/convex_brier",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          },
+          "total": {
+            "side": "under",
+            "line": 39.5,
+            "probability": 0.5925370701956323,
+            "p_push": 0.0,
+            "role": "probability",
+            "model": "N208/without_tempo/lightgbm/expanded_balanced/conditional_cdf/fixed_half",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          }
+        },
+        "wins": {
+          "margin": {
+            "side": "NYJ",
+            "line": -4.5,
+            "probability": 0.6961040603457435,
+            "p_push": 0.0,
+            "role": "wins",
+            "model": "N208/market_only/tensorflow/expanded/conditional_cdf/logscore_shrink",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          },
+          "total": {
+            "side": "under",
+            "line": 39.5,
+            "probability": 0.5968312171871925,
+            "p_push": 0.0,
+            "role": "wins",
+            "model": "N209/legacy_control/lightgbm/expanded/conditional_cdf/key_crps_shrink",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          }
+        }
+      },
+      "replay": {},
+      "score": null,
+      "book": "DraftKings",
+      "edition": "N209",
+      "issue": "2026-11-26T23:58:08.258376+00:00",
+      "point_issues": {
+        "margin": "2026-11-26T23:58:08.258376+00:00",
+        "total": "2026-11-26T23:58:08.258376+00:00"
+      },
+      "previous_edition": "N208",
+      "joint_basis": "POINT_MAE_MARGINAL_PRODUCT_CONDITIONAL_ON_ADMISSIBLE_INTEGER_SCORE_PAIRS",
+      "score_model_win": {
+        "p_away_win": 0.785217853209406,
+        "p_home_win": 0.1966948924166616,
+        "p_tie": 0.018087254373932406
+      }
+    },
+    {
+      "id": "2026_12_TEN_JAX",
+      "away": "TEN",
+      "home": "JAX",
+      "kickoff_utc": "2026-11-29T18:00:00+00:00",
+      "winner": "JAX",
+      "win_probability": 0.8861678011021071,
+      "tie_probability": 0.01946278910239796,
+      "outright_probabilities": {
+        "away": 0.09436940979549507,
+        "home": 0.8861678011021071,
+        "tie": 0.01946278910239796
+      },
+      "outright_issue": "2026-11-25T06:08:46.629440+00:00",
+      "points": {
+        "margin": -13.217484301473396,
+        "total": 51.69362562280027
+      },
+      "pregame": {
+        "probability": {
+          "margin": {
+            "side": "JAX",
+            "line": -14.5,
+            "probability": 0.5562731108901192,
+            "p_push": 0.0,
+            "role": "probability",
+            "model": "N204_BLEND/without_line_shape/expanded/identity/convex_brier",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          },
+          "total": {
+            "side": "under",
+            "line": 49.5,
+            "probability": 0.5065328300268994,
+            "p_push": 0.0,
+            "role": "probability",
+            "model": "N208/without_tempo/lightgbm/expanded_balanced/conditional_cdf/fixed_half",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          }
+        },
+        "wins": {
+          "margin": {
+            "side": "TEN",
+            "line": 14.5,
+            "probability": 0.5457021108685812,
+            "p_push": 0.0,
+            "role": "wins",
+            "model": "N208/market_only/tensorflow/expanded/conditional_cdf/logscore_shrink",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          },
+          "total": {
+            "side": "over",
+            "line": 49.5,
+            "probability": 0.5095733102918105,
+            "p_push": 0.0,
+            "role": "wins",
+            "model": "N209/legacy_control/lightgbm/expanded/conditional_cdf/key_crps_shrink",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          }
+        }
+      },
+      "replay": {},
+      "score": null,
+      "book": "DraftKings",
+      "edition": "N209",
+      "issue": "2026-11-26T23:58:08.258376+00:00",
+      "point_issues": {
+        "margin": "2026-11-26T23:58:08.258376+00:00",
+        "total": "2026-11-26T23:58:08.258376+00:00"
+      },
+      "previous_edition": "N208",
+      "joint_basis": "POINT_MAE_MARGINAL_PRODUCT_CONDITIONAL_ON_ADMISSIBLE_INTEGER_SCORE_PAIRS",
+      "score_model_win": {
+        "p_away_win": 0.16249578978498447,
+        "p_home_win": 0.8211563014951019,
+        "p_tie": 0.016347908719913536
+      }
+    },
+    {
+      "id": "2026_12_NE_LAC",
+      "away": "NE",
+      "home": "LAC",
+      "kickoff_utc": "2026-11-29T21:05:00+00:00",
+      "winner": "NE",
+      "win_probability": 0.5415739861762612,
+      "tie_probability": 0.03009912755970104,
+      "outright_probabilities": {
+        "away": 0.5415739861762612,
+        "home": 0.4283268862640378,
+        "tie": 0.03009912755970104
+      },
+      "outright_issue": "2026-11-25T06:08:46.629440+00:00",
+      "points": {
+        "margin": 3.684770364989419,
+        "total": 44.17391666167308
+      },
+      "pregame": {
+        "probability": {
+          "margin": {
+            "side": "LAC",
+            "line": 2.5,
+            "probability": 0.6352112592784371,
+            "p_push": 0.0,
+            "role": "probability",
+            "model": "N204_BLEND/without_line_shape/expanded/identity/convex_brier",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          },
+          "total": {
+            "side": "over",
+            "line": 35.5,
+            "probability": 0.6369501684369816,
+            "p_push": 0.0,
+            "role": "probability",
+            "model": "N208/without_tempo/lightgbm/expanded_balanced/conditional_cdf/fixed_half",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          }
+        },
+        "wins": {
+          "margin": {
+            "side": "NE",
+            "line": -2.5,
+            "probability": 0.5884696993975141,
+            "p_push": 0.0,
+            "role": "wins",
+            "model": "N208/market_only/tensorflow/expanded/conditional_cdf/logscore_shrink",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          },
+          "total": {
+            "side": "over",
+            "line": 35.5,
+            "probability": 0.6288192906866759,
+            "p_push": 0.0,
+            "role": "wins",
+            "model": "N209/legacy_control/lightgbm/expanded/conditional_cdf/key_crps_shrink",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          }
+        }
+      },
+      "replay": {},
+      "score": null,
+      "book": "DraftKings",
+      "edition": "N209",
+      "issue": "2026-11-26T23:58:08.258376+00:00",
+      "point_issues": {
+        "margin": "2026-11-26T23:58:08.258376+00:00",
+        "total": "2026-11-26T23:58:08.258376+00:00"
+      },
+      "previous_edition": "N208",
+      "joint_basis": "POINT_MAE_MARGINAL_PRODUCT_CONDITIONAL_ON_ADMISSIBLE_INTEGER_SCORE_PAIRS",
+      "score_model_win": {
+        "p_away_win": 0.5933588664113578,
+        "p_home_win": 0.38093182870092224,
+        "p_tie": 0.025709304887719754
+      }
+    },
+    {
+      "id": "2026_12_SEA_SF",
+      "away": "SEA",
+      "home": "SF",
+      "kickoff_utc": "2026-11-29T21:25:00+00:00",
+      "winner": "SF",
+      "win_probability": 0.5501608106586395,
+      "tie_probability": 0.03876562706410969,
+      "outright_probabilities": {
+        "away": 0.41107356227725067,
+        "home": 0.5501608106586395,
+        "tie": 0.03876562706410969
+      },
+      "outright_issue": "2026-11-25T06:08:46.629440+00:00",
+      "points": {
+        "margin": -2.5394831781398044,
+        "total": 45.09837753406952
+      },
+      "pregame": {
+        "probability": {
+          "margin": {
+            "side": "SEA",
+            "line": 3.0,
+            "probability": 0.5007142552984166,
+            "p_push": 0.0393809284578038,
+            "role": "probability",
+            "model": "N204_BLEND/without_line_shape/expanded/identity/convex_brier",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          },
+          "total": {
+            "side": "over",
+            "line": 43.5,
+            "probability": 0.569596604316492,
+            "p_push": 0.0,
+            "role": "probability",
+            "model": "N208/without_tempo/lightgbm/expanded_balanced/conditional_cdf/fixed_half",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          }
+        },
+        "wins": {
+          "margin": {
+            "side": "SEA",
+            "line": 3.0,
+            "probability": 0.5122977761635974,
+            "p_push": 0.03721394625107249,
+            "role": "wins",
+            "model": "N208/market_only/tensorflow/expanded/conditional_cdf/logscore_shrink",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          },
+          "total": {
+            "side": "over",
+            "line": 43.5,
+            "probability": 0.5664035355616522,
+            "p_push": 0.0,
+            "role": "wins",
+            "model": "N209/legacy_control/lightgbm/expanded/conditional_cdf/key_crps_shrink",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          }
+        }
+      },
+      "replay": {},
+      "score": null,
+      "book": "DraftKings",
+      "edition": "N209",
+      "issue": "2026-11-26T23:58:08.258376+00:00",
+      "point_issues": {
+        "margin": "2026-11-26T23:58:08.258376+00:00",
+        "total": "2026-11-26T23:58:08.258376+00:00"
+      },
+      "previous_edition": "N208",
+      "joint_basis": "POINT_MAE_MARGINAL_PRODUCT_CONDITIONAL_ON_ADMISSIBLE_INTEGER_SCORE_PAIRS",
+      "score_model_win": {
+        "p_away_win": 0.39546820922742676,
+        "p_home_win": 0.5701518202402653,
+        "p_tie": 0.03437997053230788
+      }
+    },
+    {
+      "id": "2026_12_WAS_ARI",
+      "away": "WAS",
+      "home": "ARI",
+      "kickoff_utc": "2026-11-29T21:25:00+00:00",
+      "winner": "WAS",
+      "win_probability": 0.7053146702275976,
+      "tie_probability": 0.04000592744160893,
+      "outright_probabilities": {
+        "away": 0.7053146702275976,
+        "home": 0.25467940233079345,
+        "tie": 0.04000592744160893
+      },
+      "outright_issue": "2026-11-25T06:08:46.629440+00:00",
+      "points": {
+        "margin": 7.45686997171197,
+        "total": 48.44692494415116
+      },
+      "pregame": {
+        "probability": {
+          "margin": {
+            "side": "ARI",
+            "line": 6.5,
+            "probability": 0.5715626728859375,
+            "p_push": 0.0,
+            "role": "probability",
+            "model": "N204_BLEND/without_line_shape/expanded/identity/convex_brier",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          },
+          "total": {
+            "side": "over",
+            "line": 41.5,
+            "probability": 0.6401393197772595,
+            "p_push": 0.0,
+            "role": "probability",
+            "model": "N208/without_tempo/lightgbm/expanded_balanced/conditional_cdf/fixed_half",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          }
+        },
+        "wins": {
+          "margin": {
+            "side": "WAS",
+            "line": -6.5,
+            "probability": 0.5517560578116174,
+            "p_push": 0.0,
+            "role": "wins",
+            "model": "N208/market_only/tensorflow/expanded/conditional_cdf/logscore_shrink",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          },
+          "total": {
+            "side": "over",
+            "line": 41.5,
+            "probability": 0.6426795460433161,
+            "p_push": 0.0,
+            "role": "wins",
+            "model": "N209/legacy_control/lightgbm/expanded/conditional_cdf/key_crps_shrink",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          }
+        }
+      },
+      "replay": {},
+      "score": null,
+      "book": "DraftKings",
+      "edition": "N209",
+      "issue": "2026-11-26T23:58:08.258376+00:00",
+      "point_issues": {
+        "margin": "2026-11-26T23:58:08.258376+00:00",
+        "total": "2026-11-26T23:58:08.258376+00:00"
+      },
+      "previous_edition": "N208",
+      "joint_basis": "POINT_MAE_MARGINAL_PRODUCT_CONDITIONAL_ON_ADMISSIBLE_INTEGER_SCORE_PAIRS",
+      "score_model_win": {
+        "p_away_win": 0.7193012767306662,
+        "p_home_win": 0.2541471810527669,
+        "p_tie": 0.026551542216566942
+      }
+    },
+    {
+      "id": "2026_12_LV_CLE",
+      "away": "LV",
+      "home": "CLE",
+      "kickoff_utc": "2026-11-30T01:20:00+00:00",
+      "winner": "CLE",
+      "win_probability": 0.593600338345792,
+      "tie_probability": 0.027902332524786466,
+      "outright_probabilities": {
+        "away": 0.37849732912942163,
+        "home": 0.593600338345792,
+        "tie": 0.027902332524786466
+      },
+      "outright_issue": "2026-11-25T06:08:46.629440+00:00",
+      "points": {
+        "margin": -4.263381429130735,
+        "total": 40.797762648033164
+      },
+      "pregame": {
+        "probability": {
+          "margin": {
+            "side": "CLE",
+            "line": -4.5,
+            "probability": 0.6001400885519705,
+            "p_push": 0.0,
+            "role": "probability",
+            "model": "N204_BLEND/without_line_shape/expanded/identity/convex_brier",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          },
+          "total": {
+            "side": "over",
+            "line": 40.5,
+            "probability": 0.6244065484532834,
+            "p_push": 0.0,
+            "role": "probability",
+            "model": "N208/without_tempo/lightgbm/expanded_balanced/conditional_cdf/fixed_half",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          }
+        },
+        "wins": {
+          "margin": {
+            "side": "LV",
+            "line": 4.5,
+            "probability": 0.50637865379113,
+            "p_push": 0.0,
+            "role": "wins",
+            "model": "N208/market_only/tensorflow/expanded/conditional_cdf/logscore_shrink",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          },
+          "total": {
+            "side": "over",
+            "line": 40.5,
+            "probability": 0.6160127303697531,
+            "p_push": 0.0,
+            "role": "wins",
+            "model": "N209/legacy_control/lightgbm/expanded/conditional_cdf/key_crps_shrink",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          }
+        }
+      },
+      "replay": {},
+      "score": null,
+      "book": "DraftKings",
+      "edition": "N209",
+      "issue": "2026-11-26T23:58:08.258376+00:00",
+      "point_issues": {
+        "margin": "2026-11-26T23:58:08.258376+00:00",
+        "total": "2026-11-26T23:58:08.258376+00:00"
+      },
+      "previous_edition": "N208",
+      "joint_basis": "POINT_MAE_MARGINAL_PRODUCT_CONDITIONAL_ON_ADMISSIBLE_INTEGER_SCORE_PAIRS",
+      "score_model_win": {
+        "p_away_win": 0.33711429403105037,
+        "p_home_win": 0.6351059365277579,
+        "p_tie": 0.02777976944119176
+      }
+    },
+    {
+      "id": "2026_12_CAR_TB",
+      "away": "CAR",
+      "home": "TB",
+      "kickoff_utc": "2026-12-01T01:15:00+00:00",
+      "winner": "TB",
+      "win_probability": 0.6221758832161819,
+      "tie_probability": 0.031003000777696743,
+      "outright_probabilities": {
+        "away": 0.3468211160061214,
+        "home": 0.6221758832161819,
+        "tie": 0.031003000777696743
+      },
+      "outright_issue": "2026-11-25T06:08:46.629440+00:00",
+      "points": {
+        "margin": 0.15180819564944734,
+        "total": 46.12704002833703
+      },
+      "pregame": {
+        "probability": {
+          "margin": {
+            "side": "CAR",
+            "line": 3.0,
+            "probability": 0.6661343152055332,
+            "p_push": 0.03933744969472061,
+            "role": "probability",
+            "model": "N204_BLEND/without_line_shape/expanded/identity/convex_brier",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          },
+          "total": {
+            "side": "under",
+            "line": 43.5,
+            "probability": 0.5352951988821862,
+            "p_push": 0.0,
+            "role": "probability",
+            "model": "N208/without_tempo/lightgbm/expanded_balanced/conditional_cdf/fixed_half",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          }
+        },
+        "wins": {
+          "margin": {
+            "side": "CAR",
+            "line": 3.0,
+            "probability": 0.6092525223251734,
+            "p_push": 0.040277647808779356,
+            "role": "wins",
+            "model": "N208/market_only/tensorflow/expanded/conditional_cdf/logscore_shrink",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          },
+          "total": {
+            "side": "under",
+            "line": 43.5,
+            "probability": 0.5528665720397549,
+            "p_push": 0.0,
+            "role": "wins",
+            "model": "N209/legacy_control/lightgbm/expanded/conditional_cdf/key_crps_shrink",
+            "issued_utc": "2026-11-26T23:58:08.258376+00:00",
+            "quote_utc": "2026-11-26T23:51:56.466543+00:00"
+          }
+        }
+      },
+      "replay": {},
+      "score": null,
+      "book": "DraftKings",
+      "edition": "N209",
+      "issue": "2026-11-26T23:58:08.258376+00:00",
+      "point_issues": {
+        "margin": "2026-11-26T23:58:08.258376+00:00",
+        "total": "2026-11-26T23:58:08.258376+00:00"
+      },
+      "previous_edition": "N208",
+      "joint_basis": "POINT_MAE_MARGINAL_PRODUCT_CONDITIONAL_ON_ADMISSIBLE_INTEGER_SCORE_PAIRS",
+      "score_model_win": {
+        "p_away_win": 0.489810349713578,
+        "p_home_win": 0.481331306580521,
+        "p_tie": 0.02885834370590101
+      }
+    }
+  ]
+}
