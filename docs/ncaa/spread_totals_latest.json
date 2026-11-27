@@ -89,14 +89,21 @@
     }
   ],
   "owner_return": {
+    "archive_members_crc_verified": 427,
     "bytes": 160531287,
     "completed_at": "2026-11-27T03:18:21.582431+00:00",
+    "current_physical_fit_reuses": 0,
     "elapsed_seconds": 15463.508455767002,
     "failed_stage": "04b_incremental_model_source_refresh",
     "failure": {
       "message": "COMPATIBLE_COORDINATOR_LOCK_TIMEOUT",
       "type": null
     },
+    "historical_reuse_scope": "HISTORICAL_RESULTS_RECOVERED_OR_REUSED_AT_STAGE_LEVEL; NOT_NEW_OPTIMIZATIONS_OR_CURRENT_PHYSICAL_FIT_REUSES",
+    "independent_archive_verified_at": "2026-11-27T19:18:46.217923+00:00",
+    "independent_full_integrity_verified_at": "2026-11-27T19:22:40.308973+00:00",
+    "independent_payloads_verified": 427,
+    "latest_local_and_s3_controls_agree": true,
     "new_owner_fits": 0,
     "new_owner_fits_scope": "NEW_VERIFIED_FITS_AS_RECORDED_IN_OWNER_POINTER",
     "new_qualified_current_forecasts_in_this_review": 0,
@@ -110,7 +117,7 @@
     "previously_completed_stages_reused": 4,
     "release": "B063R52",
     "retained_return_integrity_verified": true,
-    "reused_historical_target_fits": 0,
+    "reused_historical_target_fits": 108,
     "run_id": "20261126T230000Z_d6159a0f",
     "science_stages_completed": 4,
     "science_stages_registered": 21,
@@ -119,7 +126,8 @@
     "source_sha256": "68ad7f0d53bfb1e6fb83cf0a014e5959ac625d47e77e88933b29bde3d5ee18e3",
     "started_at": "2026-11-26T23:00:38.073810+00:00",
     "status": "FAILED_PARTIAL_WORK_PRESERVED",
-    "verification_scope": "LIVE_OWNER_POINTER_AND_STATUS; FULL_ARCHIVE_READBACK_RECORDED_IN_OWNER_EVIDENCE"
+    "unlisted_archive_members": 0,
+    "verification_scope": "INDEPENDENT_FULL_ARCHIVE_SHA256_CRC_AND_ALL_427_PAYLOAD_SIZE_SHA256_PINS_VERIFIED"
   },
   "prepared_at": "2026-11-26T03:25:46.951523+00:00",
   "preserved_prior_science": {
@@ -169,7 +177,7 @@
   "product": "Spread & Totals",
   "public_native_contract_rows": 0,
   "public_projection": true,
-  "public_projection_sha256": "e4a2ca501a66f8f456aff85faf7a0935a2b1d1e686a9aa9f66ae2ae37a5c9346",
+  "public_projection_sha256": "dfbab8e6ed0441dd397c354e11b3acc618f2d5b9cde85cd0b73406fec7dd8cb7",
   "publication_boundary": "NCAA selected all-game research outputs; no raw native quotes, provider arrays or candidate grids",
   "publication_history": [
     {
