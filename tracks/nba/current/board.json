@@ -1,10 +1,10 @@
 {
   "schema": "public.nba.spread_totals.v1",
   "owner": "NBA",
-  "release": "B120 R3 ready for owner launch · B119 stale saved outlooks",
+  "release": "B120 R3 startup blocked · R4 preparation pending · B119 stale saved outlooks",
   "source_observed_at_utc": "2026-11-25T19:34:47.323874+00:00",
   "market_comparison_asof_utc": "2026-11-25T19:33:33.256583Z",
-  "publication_status": "Public snapshot published · hosting verified November 27, 12:14 PM Pacific (20:14:17 UTC)",
+  "publication_status": "Public website snapshot · last verified hosting receipt November 27, 12:17 PM Pacific; execution and forecast clocks are separate",
   "research_status": "PARTIAL_RESUMABLE",
   "production_model_deployment": "NOT_PERFORMED",
   "selection_uses_test_labels": false,
@@ -155792,9 +155792,9 @@
   "contract_primary_strike_policy": "All observed alternatives are preserved. No primary strike is selected or tested in this source-only publication; the primary-strike rule requires preregistration before testing.",
   "b119_new_model_fits": 0,
   "b119_durable_publication_failed_tasks": 2140,
-  "b120_owner_execution": "R1_PARTIAL_RESUMABLE_AFTER_PUBLICATION_RECOVERY",
-  "owner_execution_status_asof_utc": "2026-11-26T21:42:11.563504Z",
-  "prepared_execution_status": "PREPARED_AND_REHEARSED_USER_LAUNCH_READY",
+  "b120_owner_execution": "R3_SELF_PREDECESSOR_WAIT_BEFORE_SCIENCE",
+  "owner_execution_status_asof_utc": "2026-11-28T18:58:42.200403+00:00",
+  "prepared_execution_status": "R4_NATIVE_QUALIFICATION_PENDING",
   "b119_frontier_publication_failed_tasks": 1200,
   "b119_legacy_publication_failed_tasks": 940,
   "b119_legacy_failure_branches": {
@@ -155803,8 +155803,8 @@
     "stacks": 540
   },
   "branch_failure_summary_is_not_additional_tasks": true,
-  "prepared_execution_status_asof_utc": "2026-11-27T20:02:28.248617+00:00",
-  "prepared_execution_scope": "Native engineering and exact prepare-only launcher verified; main owner research reserved for user launch",
+  "prepared_execution_status_asof_utc": "2026-11-28T18:58:42.200403+00:00",
+  "prepared_execution_scope": "R4 launch-ancestry correction in preparation; native qualification and exact command rehearsal pending",
   "r1_owner_results_included": false,
   "r1_operational_status_included": true,
   "r1_new_forecasts_included": false,
@@ -156081,17 +156081,20 @@
     "model_inference_calls": 0
   },
   "owner_control_observation": {
-    "observed_at_utc": "2026-11-27T19:10:22.466535+00:00",
+    "observed_at_utc": "2026-11-28T18:59:50.278964+00:00",
     "latest_verified_owner_run": "B120 R1",
     "latest_verified_owner_status": "PARTIAL_RESUMABLE",
-    "newer_owner_execution_verified": false,
-    "scope": "Saved owner controls and launch evidence; observation only",
+    "latest_observed_owner_execution": "User-launched B120 R3",
+    "latest_observed_owner_execution_status": "SELF_PREDECESSOR_WAIT_BEFORE_SCIENCE",
+    "newer_owner_execution_verified": true,
+    "newer_scientific_return_verified": false,
+    "scope": "Read-only owner controls and live launch ancestry; science remains at the authenticated R1 partial return",
     "new_fits": 0,
     "main_owner_research_launched_by_observer": false
   },
   "forecast_freshness": {
     "schema": "public.nba.saved_forecast_freshness.v1",
-    "reviewed_at_utc": "2026-11-27T19:20:53.067315+00:00",
+    "reviewed_at_utc": "2026-11-28T18:58:42.200403+00:00",
     "status": "STALE_SAVED_OUTLOOKS",
     "reason": "Scheduled-game values are retained B119 issues. A later model-input refresh and new issue have not been verified.",
     "age_is_descriptive_only": true,
@@ -156101,12 +156104,12 @@
     "new_forecasts_issued": 0
   },
   "next_release_preparation": {
-    "release_label": "B120 R3",
-    "status": "PREPARED_AND_REHEARSED_USER_LAUNCH_READY",
-    "owner_launch_ready": true,
-    "status_label": "Ready for owner launch",
-    "verified_at_utc": "2026-11-27T20:02:28.248617+00:00",
-    "summary": "B120 R3 preparation and its exact prepare-only launcher were verified November 27 at 12:02 PM Pacific. All 1,298 native engineering tests passed. The launcher rehearsal exited 0 in 77.49 seconds, left all seven owner controls unchanged, and made zero new fits or owner research launches. Frozen-state restoration and physical delivery of the authenticated partial return also passed. The user launches the main campaign; no new model forecasts or promotion are claimed.",
+    "release_label": "B120 R4",
+    "status": "R4_NATIVE_QUALIFICATION_PENDING",
+    "owner_launch_ready": false,
+    "status_label": "Native qualification pending",
+    "verified_at_utc": null,
+    "summary": "R4 repairs the authenticated launch-chain boundary and adds a real same-archive census diagnostic. Unrelated NBA processes must remain blockers. Native qualification and the exact guarded command rehearsal remain pending; no main research execution, new fit or forecast is established by this preparation.",
     "new_forecasts_published": false
   },
   "observed_contracts": [
@@ -180774,12 +180777,46 @@
   },
   "latest_observed_hosting_verification": {
     "status": "PUBLISHED",
-    "verified_at_utc": "2026-11-27T20:14:17.222217+00:00",
-    "site_version": 3,
-    "site_source_commit": "3e9f112ad3aa6953794b992523a1729cbc4a55da",
-    "scope": "PUBLIC_NBA_SOURCE_OBSERVATION_AND_R3_PREPARATION_SNAPSHOT; NO_NEW_MODEL_FORECASTS_OR_OWNER_RESEARCH_LAUNCH",
+    "verified_at_utc": "2026-11-27T20:17:32.120778+00:00",
+    "site_version": 4,
+    "site_source_commit": "f76c759705910635f8de36820d3a4303aa60bde7",
+    "scope": "PRIOR_PUBLISHED_NBA_SOURCE_OBSERVATION_AND_R3_PREPARATION_SNAPSHOT; THIS_EXECUTION_CORRECTION_IS_A_SEPARATE_SOURCE_UPDATE",
     "source_refresh_performed_by_deployment": false,
     "new_scientific_fits": 0,
     "main_owner_run_launched": false
+  },
+  "previous_owner_control_observation": {
+    "observed_at_utc": "2026-11-27T19:10:22.466535+00:00",
+    "latest_verified_owner_run": "B120 R1",
+    "latest_verified_owner_status": "PARTIAL_RESUMABLE",
+    "newer_owner_execution_verified": false,
+    "scope": "Saved owner controls and launch evidence; observation only",
+    "new_fits": 0,
+    "main_owner_research_launched_by_observer": false
+  },
+  "r3_operational_execution": {
+    "schema": "public.nba.startup_incident.v1",
+    "status": "SELF_PREDECESSOR_WAIT_BEFORE_SCIENCE",
+    "observed_at_utc": "2026-11-28T18:58:42.200403+00:00",
+    "user_launched": true,
+    "diagnosis": "The owner counted its own outer launch journal as an earlier NBA process; the immediate supervisor alone had been excluded.",
+    "evidence_scope": "Issued logs, live process ancestry and exact released source",
+    "last_inspected_log_at_utc": "2026-11-28T18:51:47.534587+00:00",
+    "last_inspected_wait_elapsed_seconds": 79328.31112554298,
+    "terminal_exit_code": null,
+    "terminal_exit_verified": false,
+    "scientific_admission_reached": false,
+    "new_scientific_fits": 0,
+    "new_forecasts_published": 0,
+    "latest_verified_scientific_result_changed": false,
+    "processes_stopped_by_observer": 0,
+    "main_run_launched_by_observer": false,
+    "prepare_only_qualification_gap": "The R3 prepare-only rehearsal returned before the real supervisor and predecessor census began."
+  },
+  "r3_preparation_followup": {
+    "observed_at_utc": "2026-11-28T18:58:42.200403+00:00",
+    "prior_prepare_only_receipt_retained": true,
+    "prior_prepare_only_receipt_proved_main_census": false,
+    "later_user_launch_status": "SELF_PREDECESSOR_WAIT_BEFORE_SCIENCE"
   }
 }
