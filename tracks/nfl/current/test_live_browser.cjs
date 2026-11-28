@@ -54,6 +54,7 @@ function verifyHostedHtml(observed, source, context) {
 (async () => {
   const receipt = JSON.parse(fs.readFileSync(path.join(root, "publication.json"), "utf8"));
   const historyReceipt = JSON.parse(fs.readFileSync(path.join(root, "publication-n175.json"), "utf8"));
+  const legacyRootReceipt = JSON.parse(fs.readFileSync(path.join(root, "publication-n210.json"), "utf8"));
   const data = JSON.parse(fs.readFileSync(path.join(root, "data.json"), "utf8"));
   const snapshot = JSON.parse(fs.readFileSync(path.join(root, "week-12-field-notes/n202/snapshot.json"), "utf8"));
   const currentSnapshot = JSON.parse(fs.readFileSync(path.join(root, "week-12-field-notes/n203/snapshot.json"), "utf8"));
@@ -853,7 +854,7 @@ function verifyHostedHtml(observed, source, context) {
       await count("[data-market-game]:visible tbody tr", 9);
       assert.match(await text("[data-market-game]:visible"), /Kalshi/);
       await page.locator("#market-matchup").selectOption("2026_12_GB_LA");
-      assert.equal(await page.locator(".source-ledger summary").filter({hasText:receipt.scientific_scope.markets.sources + " sources"}).count(), 1);
+      assert.equal(await page.locator(".source-ledger summary").filter({hasText:legacyRootReceipt.scientific_scope.markets.sources + " sources"}).count(), 1);
       const archiveLink=page.locator('a[href="archive/n186/index.html"]');
       assert.equal(await archiveLink.count(),1);
       await count("#games details.game:visible", 16);

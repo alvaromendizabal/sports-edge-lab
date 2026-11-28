@@ -1,5 +1,22 @@
 # NFL game day and research dashboard
 
+
+## N211 completed research — November 27
+
+**[Open the N211 Week 12 board](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n211/)** · [Execution and scientific limits](n211-execution-status.json)
+
+N211 completed all ten registered stages at **3:15 p.m. Pacific**, exiting 0 after about **3 hours 31 minutes**. The run added **160 fitting units**, comprising **640 CDF estimators and 1,920 calibration gates**, and preserved the prior 304-unit bank. No new fitting unit failed, was blocked, or was deferred. The full matrix added 4,308 feature columns; these are engineered representations, not 4,308 new raw observations.
+
+On the same **167-game exposed 2026 population**, the selected totals mixture went **101–66**, one win above the best preserved contender's **100–67**. The spread leader remains a preserved neural model at **99–64–4**; the best new spread contender did not displace it. Lower-Brier and lower-log-loss heads remain separate from highest-win selection. The best forward-week reconstructions were **84–79–4 spreads** and **90–77 totals**. None of these retrospective selection results establishes prospective profit or a 70% future win rate.
+
+The **3:06 p.m. Pacific** issue refreshed eleven games before kickoff: 22 new target forecasts and 2,314 priced option rows at issuance. It retained 186 other target issues under their original clocks. DraftKings and Polymarket comparisons cover all eleven current games; Kalshi covers ten, with New England–Los Angeles Chargers unavailable. Quoted observations were fresh at issuance; this public snapshot does not refresh prices or establish an executable fill. The displayed point/win conditioning has no separate historical validation; spread and total pick probabilities preserve their own selected heads.
+
+A later weather forecast capture, **November 27 at 4:11 p.m. Pacific**, adds kickoff, +2-hour and +4-hour stadium-grid forecasts and roof context to the eleven upcoming game cards. Forecasts are available for all eleven venues after an explicit retry recovered the two initial timeouts. This weather capture occurred after the N211 model issue and did not change its picks or probabilities. Stadium-grid forecasts are not on-field measurements, indoor conditions or assumed canopy wind attenuation.
+
+**Standing V13 remains incomplete.** The 2024 and 2025 manifests each contain 285 games, with thirteen missing settlement-quote rows per season. The measured fit-occupancy lower bound was about **47.7%**, below the 75% acceptance threshold, despite 41 simultaneous optimizers at peak. Completed science is preserved; execution completion does not erase these gaps. Successor preparation and public hosting are recorded separately from completed N211 science.
+
+**Publication status:** Site version 78 is deployed, including all sixteen game cards, eleven later venue forecasts, three-provider comparisons and four phone graphics. The exact-head NFL workflow checks anonymous asset hashes and hosted desktop/mobile interactions. [Deployment receipt](publication-n211.json). Earlier N210 and historical issues below remain unchanged.
+
 **[N210 saved model issue and phone cards](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n210/)**
 
 N210 completed all 304 fitting units and 4,864 optimizer calls. Its 166-game exposed selection leaders record 99–64–3 spreads and 100–66 totals. The earlier-week replay leaders record 84–79–3 and 92–74. The overnight issue is saved, with archived lines explicitly identified; executable quote coverage was incomplete and the owner return remains resumable. Site version 75 is deployed; anonymous asset hashes and hosted desktop/mobile interactions are checked by the exact-head NFL workflow. [Deployment receipt](publication-n210.json).

@@ -1,0 +1,676 @@
+{
+  "schema": "nfl.current-weather-display/1",
+  "captured_utc": "2026-11-28T00:11:11.518274Z",
+  "assembled_utc": "2026-11-28T00:13:11.611142Z",
+  "model_application": "NOT_APPLIED_TO_N211_PICKS",
+  "units": {
+    "temperature_c": "degrees_C",
+    "wind_mps": "metres_per_second",
+    "gust_mps": "metres_per_second",
+    "precip_probability": "probability_0_to_1",
+    "precip_mm": "millimetres_in_forecast_hour",
+    "snow_mm": "millimetres_in_forecast_hour"
+  },
+  "games": [
+    {
+      "game_id": "2026_12_ATL_MIN",
+      "venue": {
+        "name": "U.S. Bank Stadium",
+        "structural_roof": "fixed_closed",
+        "roof_status": {
+          "status": "unknown"
+        }
+      },
+      "status": "AVAILABLE",
+      "forecast_issued_utc": "2026-11-27T22:51:47Z",
+      "captured_utc": "2026-11-28T00:11:03.974047Z",
+      "source_url": "https://api.weather.gov/gridpoints/MPX/109,72",
+      "samples": [
+        {
+          "offset_hours": 0,
+          "valid_utc": "2026-11-29T18:00:00Z",
+          "temperature_c": 1.1111111111111112,
+          "wind_mps": 5.658888888888889,
+          "gust_mps": 10.288888888888888,
+          "precip_probability": 0.0,
+          "precip_mm": null,
+          "snow_mm": null,
+          "missing_fields": [
+            "precip_mm",
+            "snow_mm"
+          ]
+        },
+        {
+          "offset_hours": 2,
+          "valid_utc": "2026-11-29T20:00:00Z",
+          "temperature_c": 2.2222222222222223,
+          "wind_mps": 5.658888888888889,
+          "gust_mps": 10.288888888888888,
+          "precip_probability": 0.0,
+          "precip_mm": null,
+          "snow_mm": null,
+          "missing_fields": [
+            "precip_mm",
+            "snow_mm"
+          ]
+        },
+        {
+          "offset_hours": 4,
+          "valid_utc": "2026-11-29T22:00:00Z",
+          "temperature_c": 1.6666666666666667,
+          "wind_mps": 5.144444444444444,
+          "gust_mps": 9.26,
+          "precip_probability": 0.0,
+          "precip_mm": null,
+          "snow_mm": null,
+          "missing_fields": [
+            "precip_mm",
+            "snow_mm"
+          ]
+        }
+      ],
+      "venue_source_url": "https://www.usbankstadium.com/about-the-stadium/a-z-guide",
+      "field_weather_note": "External stadium-location grid forecast; not an in-bowl observation or model probability adjustment."
+    },
+    {
+      "game_id": "2026_12_BAL_HOU",
+      "venue": {
+        "name": "Reliant Stadium",
+        "structural_roof": "retractable",
+        "roof_status": {
+          "status": "unknown"
+        }
+      },
+      "status": "AVAILABLE",
+      "forecast_issued_utc": "2026-11-27T18:21:26Z",
+      "captured_utc": "2026-11-28T00:07:29.798235Z",
+      "source_url": "https://api.weather.gov/gridpoints/HGX/61,91",
+      "samples": [
+        {
+          "offset_hours": 0,
+          "valid_utc": "2026-11-29T18:00:00Z",
+          "temperature_c": 18.88888888888889,
+          "wind_mps": 7.716666666666667,
+          "gust_mps": 11.317777777777778,
+          "precip_probability": 0.0,
+          "precip_mm": null,
+          "snow_mm": null,
+          "missing_fields": [
+            "precip_mm",
+            "snow_mm"
+          ]
+        },
+        {
+          "offset_hours": 2,
+          "valid_utc": "2026-11-29T20:00:00Z",
+          "temperature_c": 19.444444444444443,
+          "wind_mps": 7.716666666666667,
+          "gust_mps": 11.83222222222222,
+          "precip_probability": 0.0,
+          "precip_mm": null,
+          "snow_mm": null,
+          "missing_fields": [
+            "precip_mm",
+            "snow_mm"
+          ]
+        },
+        {
+          "offset_hours": 4,
+          "valid_utc": "2026-11-29T22:00:00Z",
+          "temperature_c": 18.88888888888889,
+          "wind_mps": 6.687777777777778,
+          "gust_mps": 10.288888888888888,
+          "precip_probability": 0.0,
+          "precip_mm": null,
+          "snow_mm": null,
+          "missing_fields": [
+            "precip_mm",
+            "snow_mm"
+          ]
+        }
+      ],
+      "venue_source_url": "https://www.reliantpark.com/reliant-stadium/",
+      "field_weather_note": "External stadium-location grid forecast; not an in-bowl observation or model probability adjustment."
+    },
+    {
+      "game_id": "2026_12_CAR_TB",
+      "venue": {
+        "name": "Raymond James Stadium",
+        "structural_roof": "fixed_open",
+        "roof_status": {
+          "status": "unknown"
+        }
+      },
+      "status": "AVAILABLE",
+      "forecast_issued_utc": "2026-11-27T18:57:29Z",
+      "captured_utc": "2026-11-28T00:07:36.790238Z",
+      "source_url": "https://api.weather.gov/gridpoints/TBW/69,99",
+      "samples": [
+        {
+          "offset_hours": 0,
+          "valid_utc": "2026-12-01T01:15:00Z",
+          "temperature_c": 19.444444444444443,
+          "wind_mps": 2.057777777777778,
+          "gust_mps": 4.115555555555556,
+          "precip_probability": 0.34,
+          "precip_mm": null,
+          "snow_mm": null,
+          "missing_fields": [
+            "precip_mm",
+            "snow_mm"
+          ]
+        },
+        {
+          "offset_hours": 2,
+          "valid_utc": "2026-12-01T03:15:00Z",
+          "temperature_c": 18.88888888888889,
+          "wind_mps": 2.057777777777778,
+          "gust_mps": 4.63,
+          "precip_probability": 0.34,
+          "precip_mm": null,
+          "snow_mm": null,
+          "missing_fields": [
+            "precip_mm",
+            "snow_mm"
+          ]
+        },
+        {
+          "offset_hours": 4,
+          "valid_utc": "2026-12-01T05:15:00Z",
+          "temperature_c": 18.333333333333332,
+          "wind_mps": 2.057777777777778,
+          "gust_mps": 4.115555555555556,
+          "precip_probability": 0.34,
+          "precip_mm": null,
+          "snow_mm": null,
+          "missing_fields": [
+            "precip_mm",
+            "snow_mm"
+          ]
+        }
+      ],
+      "venue_source_url": "https://raymondjamesstadium.com/hostyourevent",
+      "field_weather_note": "External stadium-location grid forecast; not an in-bowl observation or model probability adjustment."
+    },
+    {
+      "game_id": "2026_12_LV_CLE",
+      "venue": {
+        "name": "Huntington Bank Field",
+        "structural_roof": "fixed_open",
+        "roof_status": {
+          "status": "unknown"
+        }
+      },
+      "status": "AVAILABLE",
+      "forecast_issued_utc": "2026-11-27T20:01:50Z",
+      "captured_utc": "2026-11-28T00:07:43.530033Z",
+      "source_url": "https://api.weather.gov/gridpoints/CLE/83,65",
+      "samples": [
+        {
+          "offset_hours": 0,
+          "valid_utc": "2026-11-30T01:20:00Z",
+          "temperature_c": 8.333333333333334,
+          "wind_mps": 4.63,
+          "gust_mps": 9.26,
+          "precip_probability": 1.0,
+          "precip_mm": null,
+          "snow_mm": null,
+          "missing_fields": [
+            "precip_mm",
+            "snow_mm"
+          ]
+        },
+        {
+          "offset_hours": 2,
+          "valid_utc": "2026-11-30T03:20:00Z",
+          "temperature_c": 7.777777777777778,
+          "wind_mps": 5.144444444444444,
+          "gust_mps": 11.317777777777778,
+          "precip_probability": 1.0,
+          "precip_mm": null,
+          "snow_mm": null,
+          "missing_fields": [
+            "precip_mm",
+            "snow_mm"
+          ]
+        },
+        {
+          "offset_hours": 4,
+          "valid_utc": "2026-11-30T05:20:00Z",
+          "temperature_c": 6.666666666666667,
+          "wind_mps": 6.687777777777778,
+          "gust_mps": 16.462222222222223,
+          "precip_probability": 1.0,
+          "precip_mm": null,
+          "snow_mm": null,
+          "missing_fields": [
+            "precip_mm",
+            "snow_mm"
+          ]
+        }
+      ],
+      "venue_source_url": "https://www.clevelandbrowns.com/news/rclco-conducts-study-on-stadium-anchored-mixed-use-development-in-brook-park",
+      "field_weather_note": "External stadium-location grid forecast; not an in-bowl observation or model probability adjustment."
+    },
+    {
+      "game_id": "2026_12_NE_LAC",
+      "venue": {
+        "name": "SoFi Stadium",
+        "structural_roof": "open_air_canopy",
+        "roof_status": {
+          "status": "unknown"
+        }
+      },
+      "status": "AVAILABLE",
+      "forecast_issued_utc": "2026-11-27T18:26:38Z",
+      "captured_utc": "2026-11-28T00:07:51.454066Z",
+      "source_url": "https://api.weather.gov/gridpoints/LOX/151,41",
+      "samples": [
+        {
+          "offset_hours": 0,
+          "valid_utc": "2026-11-29T21:05:00Z",
+          "temperature_c": 23.333333333333332,
+          "wind_mps": 4.115555555555556,
+          "gust_mps": 5.144444444444444,
+          "precip_probability": 0.0,
+          "precip_mm": null,
+          "snow_mm": null,
+          "missing_fields": [
+            "precip_mm",
+            "snow_mm"
+          ]
+        },
+        {
+          "offset_hours": 2,
+          "valid_utc": "2026-11-29T23:05:00Z",
+          "temperature_c": 22.22222222222222,
+          "wind_mps": 4.115555555555556,
+          "gust_mps": 5.144444444444444,
+          "precip_probability": 0.0,
+          "precip_mm": null,
+          "snow_mm": null,
+          "missing_fields": [
+            "precip_mm",
+            "snow_mm"
+          ]
+        },
+        {
+          "offset_hours": 4,
+          "valid_utc": "2026-11-30T01:05:00Z",
+          "temperature_c": 20.555555555555557,
+          "wind_mps": 3.601111111111111,
+          "gust_mps": 4.115555555555556,
+          "precip_probability": 0.08,
+          "precip_mm": null,
+          "snow_mm": null,
+          "missing_fields": [
+            "precip_mm",
+            "snow_mm"
+          ]
+        }
+      ],
+      "venue_source_url": "https://www.sofistadium.com/stadium",
+      "field_weather_note": "External stadium-location grid forecast; not an in-bowl observation or model probability adjustment."
+    },
+    {
+      "game_id": "2026_12_NO_CIN",
+      "venue": {
+        "name": "Paycor Stadium",
+        "structural_roof": "fixed_open",
+        "roof_status": {
+          "status": "unknown"
+        }
+      },
+      "status": "AVAILABLE",
+      "forecast_issued_utc": "2026-11-27T23:22:40Z",
+      "captured_utc": "2026-11-28T00:07:58.430318Z",
+      "source_url": "https://api.weather.gov/gridpoints/ILN/35,38",
+      "samples": [
+        {
+          "offset_hours": 0,
+          "valid_utc": "2026-11-29T18:00:00Z",
+          "temperature_c": 10.555555555555555,
+          "wind_mps": 5.658888888888889,
+          "gust_mps": 10.288888888888888,
+          "precip_probability": 1.0,
+          "precip_mm": null,
+          "snow_mm": null,
+          "missing_fields": [
+            "precip_mm",
+            "snow_mm"
+          ]
+        },
+        {
+          "offset_hours": 2,
+          "valid_utc": "2026-11-29T20:00:00Z",
+          "temperature_c": 11.666666666666666,
+          "wind_mps": 6.687777777777778,
+          "gust_mps": 10.803333333333335,
+          "precip_probability": 1.0,
+          "precip_mm": null,
+          "snow_mm": null,
+          "missing_fields": [
+            "precip_mm",
+            "snow_mm"
+          ]
+        },
+        {
+          "offset_hours": 4,
+          "valid_utc": "2026-11-29T22:00:00Z",
+          "temperature_c": 11.11111111111111,
+          "wind_mps": 6.687777777777778,
+          "gust_mps": 11.83222222222222,
+          "precip_probability": 1.0,
+          "precip_mm": null,
+          "snow_mm": null,
+          "missing_fields": [
+            "precip_mm",
+            "snow_mm"
+          ]
+        }
+      ],
+      "venue_source_url": "https://www.bengals.com/news/hobson-s-choice-super-slight-725725",
+      "field_weather_note": "External stadium-location grid forecast; not an in-bowl observation or model probability adjustment."
+    },
+    {
+      "game_id": "2026_12_NYG_IND",
+      "venue": {
+        "name": "Lucas Oil Stadium",
+        "structural_roof": "retractable",
+        "roof_status": {
+          "status": "unknown"
+        }
+      },
+      "status": "AVAILABLE",
+      "forecast_issued_utc": "2026-11-27T23:45:20Z",
+      "captured_utc": "2026-11-28T00:08:05.355710Z",
+      "source_url": "https://api.weather.gov/gridpoints/IND/58,69",
+      "samples": [
+        {
+          "offset_hours": 0,
+          "valid_utc": "2026-11-29T18:00:00Z",
+          "temperature_c": 8.333333333333334,
+          "wind_mps": 4.115555555555556,
+          "gust_mps": 9.774444444444445,
+          "precip_probability": 1.0,
+          "precip_mm": null,
+          "snow_mm": null,
+          "missing_fields": [
+            "precip_mm",
+            "snow_mm"
+          ]
+        },
+        {
+          "offset_hours": 2,
+          "valid_utc": "2026-11-29T20:00:00Z",
+          "temperature_c": 9.444444444444445,
+          "wind_mps": 3.0866666666666664,
+          "gust_mps": 8.745555555555557,
+          "precip_probability": 1.0,
+          "precip_mm": null,
+          "snow_mm": null,
+          "missing_fields": [
+            "precip_mm",
+            "snow_mm"
+          ]
+        },
+        {
+          "offset_hours": 4,
+          "valid_utc": "2026-11-29T22:00:00Z",
+          "temperature_c": 8.88888888888889,
+          "wind_mps": 4.63,
+          "gust_mps": 10.288888888888888,
+          "precip_probability": 1.0,
+          "precip_mm": null,
+          "snow_mm": null,
+          "missing_fields": [
+            "precip_mm",
+            "snow_mm"
+          ]
+        }
+      ],
+      "venue_source_url": "https://www.lucasoilstadium.com/tours-stadium-info/background-history/",
+      "field_weather_note": "External stadium-location grid forecast; not an in-bowl observation or model probability adjustment."
+    },
+    {
+      "game_id": "2026_12_NYJ_MIA",
+      "venue": {
+        "name": "Hard Rock Stadium",
+        "structural_roof": "fixed_open",
+        "roof_status": {
+          "status": "unknown"
+        }
+      },
+      "status": "AVAILABLE",
+      "forecast_issued_utc": "2026-11-27T19:47:32Z",
+      "captured_utc": "2026-11-28T00:11:11.518274Z",
+      "source_url": "https://api.weather.gov/gridpoints/MFL/107,58",
+      "samples": [
+        {
+          "offset_hours": 0,
+          "valid_utc": "2026-11-29T18:00:00Z",
+          "temperature_c": 25.0,
+          "wind_mps": 2.572222222222222,
+          "gust_mps": 5.144444444444444,
+          "precip_probability": 0.05,
+          "precip_mm": null,
+          "snow_mm": null,
+          "missing_fields": [
+            "precip_mm",
+            "snow_mm"
+          ]
+        },
+        {
+          "offset_hours": 2,
+          "valid_utc": "2026-11-29T20:00:00Z",
+          "temperature_c": 25.555555555555557,
+          "wind_mps": 2.057777777777778,
+          "gust_mps": 4.115555555555556,
+          "precip_probability": 0.05,
+          "precip_mm": null,
+          "snow_mm": null,
+          "missing_fields": [
+            "precip_mm",
+            "snow_mm"
+          ]
+        },
+        {
+          "offset_hours": 4,
+          "valid_utc": "2026-11-29T22:00:00Z",
+          "temperature_c": 25.555555555555557,
+          "wind_mps": 1.028888888888889,
+          "gust_mps": 3.0866666666666664,
+          "precip_probability": 0.05,
+          "precip_mm": null,
+          "snow_mm": null,
+          "missing_fields": [
+            "precip_mm",
+            "snow_mm"
+          ]
+        }
+      ],
+      "venue_source_url": "https://www.hok.com/projects/view/miami-dolphins-hard-rock-stadium/",
+      "field_weather_note": "External stadium-location grid forecast; not an in-bowl observation or model probability adjustment."
+    },
+    {
+      "game_id": "2026_12_SEA_SF",
+      "venue": {
+        "name": "Levi's Stadium",
+        "structural_roof": "fixed_open",
+        "roof_status": {
+          "status": "unknown"
+        }
+      },
+      "status": "AVAILABLE",
+      "forecast_issued_utc": "2026-11-27T20:31:49Z",
+      "captured_utc": "2026-11-28T00:08:15.370060Z",
+      "source_url": "https://api.weather.gov/gridpoints/MTR/97,86",
+      "samples": [
+        {
+          "offset_hours": 0,
+          "valid_utc": "2026-11-29T21:25:00Z",
+          "temperature_c": 18.333333333333332,
+          "wind_mps": 7.202222222222222,
+          "gust_mps": 13.375555555555556,
+          "precip_probability": 0.78,
+          "precip_mm": null,
+          "snow_mm": null,
+          "missing_fields": [
+            "precip_mm",
+            "snow_mm"
+          ]
+        },
+        {
+          "offset_hours": 2,
+          "valid_utc": "2026-11-29T23:25:00Z",
+          "temperature_c": 18.333333333333332,
+          "wind_mps": 7.202222222222222,
+          "gust_mps": 13.375555555555556,
+          "precip_probability": 0.78,
+          "precip_mm": null,
+          "snow_mm": null,
+          "missing_fields": [
+            "precip_mm",
+            "snow_mm"
+          ]
+        },
+        {
+          "offset_hours": 4,
+          "valid_utc": "2026-11-30T01:25:00Z",
+          "temperature_c": 17.22222222222222,
+          "wind_mps": 6.173333333333333,
+          "gust_mps": 12.346666666666666,
+          "precip_probability": 0.99,
+          "precip_mm": null,
+          "snow_mm": null,
+          "missing_fields": [
+            "precip_mm",
+            "snow_mm"
+          ]
+        }
+      ],
+      "venue_source_url": "https://levisstadium.com/seats/",
+      "field_weather_note": "External stadium-location grid forecast; not an in-bowl observation or model probability adjustment."
+    },
+    {
+      "game_id": "2026_12_TEN_JAX",
+      "venue": {
+        "name": "EverBank Stadium",
+        "structural_roof": "fixed_open",
+        "roof_status": {
+          "status": "unknown"
+        }
+      },
+      "status": "AVAILABLE",
+      "forecast_issued_utc": "2026-11-27T23:31:18Z",
+      "captured_utc": "2026-11-28T00:08:23.433960Z",
+      "source_url": "https://api.weather.gov/gridpoints/JAX/66,64",
+      "samples": [
+        {
+          "offset_hours": 0,
+          "valid_utc": "2026-11-29T18:00:00Z",
+          "temperature_c": 16.11111111111111,
+          "wind_mps": 3.601111111111111,
+          "gust_mps": 5.658888888888889,
+          "precip_probability": 0.01,
+          "precip_mm": null,
+          "snow_mm": null,
+          "missing_fields": [
+            "precip_mm",
+            "snow_mm"
+          ]
+        },
+        {
+          "offset_hours": 2,
+          "valid_utc": "2026-11-29T20:00:00Z",
+          "temperature_c": 17.22222222222222,
+          "wind_mps": 3.601111111111111,
+          "gust_mps": 6.173333333333333,
+          "precip_probability": 0.01,
+          "precip_mm": null,
+          "snow_mm": null,
+          "missing_fields": [
+            "precip_mm",
+            "snow_mm"
+          ]
+        },
+        {
+          "offset_hours": 4,
+          "valid_utc": "2026-11-29T22:00:00Z",
+          "temperature_c": 17.77777777777778,
+          "wind_mps": 3.601111111111111,
+          "gust_mps": 6.173333333333333,
+          "precip_probability": 0.01,
+          "precip_mm": null,
+          "snow_mm": null,
+          "missing_fields": [
+            "precip_mm",
+            "snow_mm"
+          ]
+        }
+      ],
+      "venue_source_url": "https://www.jaguars.com/stadiumofthefuture/faqs",
+      "field_weather_note": "External stadium-location grid forecast; not an in-bowl observation or model probability adjustment."
+    },
+    {
+      "game_id": "2026_12_WAS_ARI",
+      "venue": {
+        "name": "State Farm Stadium",
+        "structural_roof": "retractable",
+        "roof_status": {
+          "status": "unknown"
+        }
+      },
+      "status": "AVAILABLE",
+      "forecast_issued_utc": "2026-11-27T22:41:40Z",
+      "captured_utc": "2026-11-28T00:08:32.230539Z",
+      "source_url": "https://api.weather.gov/gridpoints/PSR/152,62",
+      "samples": [
+        {
+          "offset_hours": 0,
+          "valid_utc": "2026-11-29T21:25:00Z",
+          "temperature_c": 25.555555555555557,
+          "wind_mps": 2.572222222222222,
+          "gust_mps": 4.63,
+          "precip_probability": 0.0,
+          "precip_mm": null,
+          "snow_mm": null,
+          "missing_fields": [
+            "precip_mm",
+            "snow_mm"
+          ]
+        },
+        {
+          "offset_hours": 2,
+          "valid_utc": "2026-11-29T23:25:00Z",
+          "temperature_c": 25.555555555555557,
+          "wind_mps": 1.028888888888889,
+          "gust_mps": 2.057777777777778,
+          "precip_probability": 0.0,
+          "precip_mm": null,
+          "snow_mm": null,
+          "missing_fields": [
+            "precip_mm",
+            "snow_mm"
+          ]
+        },
+        {
+          "offset_hours": 4,
+          "valid_utc": "2026-11-30T01:25:00Z",
+          "temperature_c": 22.22222222222222,
+          "wind_mps": 0.5144444444444445,
+          "gust_mps": 1.028888888888889,
+          "precip_probability": 0.0,
+          "precip_mm": null,
+          "snow_mm": null,
+          "missing_fields": [
+            "precip_mm",
+            "snow_mm"
+          ]
+        }
+      ],
+      "venue_source_url": "https://www.statefarmstadium.com/plan-your-visit/a-z-guide",
+      "field_weather_note": "External stadium-location grid forecast; not an in-bowl observation or model probability adjustment."
+    }
+  ]
+}

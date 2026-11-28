@@ -1,91 +1,70 @@
 {
-  "version": "NFL_N210_SAVED_MODEL_ISSUE",
+  "version": "NFL_N211_SAVED_MODEL_ISSUE_WEATHER_CONTEXT",
   "status": "DEPLOYED_AWAITING_HTTP_HASH_AUDIT",
   "public_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
-  "field_notes_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n210/",
-  "all_games_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n210/#games",
-  "dedicated_circa_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n210/#circa",
-  "phone_cards_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n210/#phone",
-  "deployed_at": "2026-11-27T19:35:17.914473+00:00",
-  "site_version": 75,
-  "site_source_commit": "dbf6cc2279dca350190a452390215e3d03fa8413",
-  "archive_sha256": "f0c0ef2de10b81960687bd44fb8299e77a1808374d38de651e3b70e153674445",
-  "provider_saved_tar_sha256": "sha256:f0c0ef2de10b81960687bd44fb8299e77a1808374d38de651e3b70e153674445",
+  "field_notes_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n211/",
+  "all_games_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n211/#games",
+  "dedicated_circa_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n211/#circa",
+  "phone_cards_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n211/#phone",
+  "deployed_at": "2026-11-28T00:40:05.517074+00:00",
+  "site_version": 78,
+  "site_source_commit": "d4a2ae4c25438f87bbb9c686d9e364698438e257",
+  "archive_sha256": "fe800befa1e5126a44af002441f57e6ab7b9f91cde4334d9c459549c801c156f",
+  "provider_saved_tar_sha256": "sha256:fe800befa1e5126a44af002441f57e6ab7b9f91cde4334d9c459549c801c156f",
   "audience": "public",
-  "native_publication_receipt": "publication-n210.json",
-  "prior_publication_receipt": "publication-n210-v74.json",
-  "github_source_provenance": "The exact-head NFL GitHub Actions job verifies committed source against the deployed asset bytes and tests N210 interactions at desktop and mobile widths. Deployment success is separate from those HTTP/browser checks.",
+  "native_publication_receipt": "publication-n211.json",
+  "prior_publication_receipt": "publication-n211-v77.json",
+  "github_source_provenance": "Exact-head NFL Actions verifies all declared public bytes and local/hosted N211 interactions at desktop and mobile widths. Native deployment is separate from HTTP and browser verification.",
   "scientific_scope": {
-    "release": "N210",
-    "forecast_issued_utc": "2026-11-27T04:46:48.395449+00:00",
-    "completed_population": 166,
-    "candidate_count": 10268,
+    "release": "N211",
+    "forecast_issued_utc": "2026-11-27T23:06:11.996730+00:00",
+    "completed_population": 167,
+    "candidate_comparisons": 11348,
     "weekly_games": 16,
-    "issued_games": 12,
-    "preserved_original_games": 4,
-    "new_features": 5412,
-    "completed_fit_units": 304,
-    "optimizer_calls": 4864,
-    "scope": "Ordinary spread and total selection uses exposed 2026 games. Four completed games retain their original issued picks; standing V13 and Circa retain their separate 2024/2025 rules.",
+    "issued_games": 11,
+    "preserved_original_games": 5,
+    "new_engineered_features": 4308,
+    "completed_fit_units": 160,
+    "optimizer_calls": 2560,
+    "scope": "Ordinary spread and total selection uses exposed 2026 games; 2024 and 2025 may train this lane. Five original pregame records remain unchanged. Standing V13 and Circa retain separate 2024/2025 selection rules.",
     "v13": "INCOMPLETE",
     "strict_wins": {
       "margin": {
         "wins": 99,
         "losses": 64,
-        "pushes": 3,
-        "games": 166,
-        "brier": 0.2469343188604152,
-        "logloss": 0.6896424865782597
+        "pushes": 4,
+        "games": 167
       },
       "total": {
-        "wins": 100,
+        "wins": 101,
         "losses": 66,
         "pushes": 0,
-        "games": 166,
-        "brier": 0.2451335279600139,
-        "logloss": 0.6831212218866705
+        "games": 167
       }
     },
-    "prior_week_replay": [
-      {
-        "target": "margin",
-        "wins": 84,
-        "losses": 79,
-        "settlement_pushes": 3,
-        "eligible": 166,
-        "conditional_decisive_accuracy": 0.5153374233128835,
-        "scope": "Best retrospectively compared prior-week reconstruction; recipes had prior test exposure; not originally issued"
-      },
-      {
-        "target": "total",
-        "wins": 92,
-        "losses": 74,
-        "settlement_pushes": 0,
-        "eligible": 166,
-        "conditional_decisive_accuracy": 0.5542168674698795,
-        "scope": "Best retrospectively compared prior-week reconstruction; recipes had prior test exposure; not originally issued"
-      }
+    "point_publication_adjustment_backtested": false,
+    "public_option_rows": 128,
+    "research_option_rows": 2314,
+    "public_sources": [
+      "draftkings",
+      "kalshi",
+      "polymarket"
     ],
-    "current_issue_markets": {
-      "executable_options": 0,
-      "status": "ARCHIVED_REFERENCE_LINES_ONLY",
-      "fresh_prices": "PENDING_OWNER_RECOVERY"
-    },
-    "markets": {
-      "sources": 80,
-      "records": 2894,
-      "matched_combinations": 2838,
-      "named_slots": 144,
-      "named_population": 144,
-      "status_records": {
-        "MATCHED_CURRENT": 2838,
-        "MISSING_MARKET_PRICE": 32,
-        "OLDER_THAN_10_MINUTES": 16,
-        "PRIOR_OR_MISSING": 8
-      },
-      "games": 16,
-      "scope": "Preserved N195 league dashboard market section only",
-      "observed_utc": "2026-11-25T21:27:16.332247+00:00"
+    "prices_are_live": false,
+    "venue_weather": {
+      "captured_utc": "2026-11-28T00:11:11.518274Z",
+      "games": 11,
+      "available": 11,
+      "source_failed": 0,
+      "failed_games": [],
+      "model_application": "NOT_APPLIED_TO_N211_PICKS",
+      "forecast_offsets_hours": [
+        0,
+        2,
+        4
+      ],
+      "source_type": "NWS forecast at approximate stadium grid; not on-field measurements",
+      "public_file": "week-12-field-notes/n211/weather.json"
     },
     "production_promotion": false
   },
@@ -1055,14 +1034,20 @@
       },
       {
         "path": "index.html",
-        "bytes": 572111,
-        "sha256": "27c1a228254b74eb4940abfb4ec32b9ccf31376f6723453b931ec46f7c24f8d1",
+        "bytes": 571771,
+        "sha256": "86fbac9bd95c4ea11ad455fdbf6a9713088b3dfae8da3e239f166da0da3ca9d7",
         "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
       },
       {
         "path": "legacy-route.js",
         "bytes": 1017,
         "sha256": "c180d2af2c08d4d56a868594cc7d1a9c0ac7d681ee9862ece603ce9f9917901a",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "n211-execution-status.json",
+        "bytes": 6239,
+        "sha256": "5888c4356c838828657c00e8b6321b7500bd9f5181774752e51325d303b0a836",
         "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
       },
       {
@@ -2758,6 +2743,60 @@
         "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
       },
       {
+        "path": "week-12-field-notes/n211/all-book-options.json",
+        "bytes": 42743,
+        "sha256": "9a67503174c0f8b4eef01af4596892186203392bbb38b2168a418d65ff105b75",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n211/index.html",
+        "bytes": 101017,
+        "sha256": "eacac37e2ef5fbe4807933176669ae9ca8e4a84e97b6e0be2ff1726ec9afb65d",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n211/weather-context.js",
+        "bytes": 7782,
+        "sha256": "38311f875a7209a93a233965aec4bfc1e10f1cd2820d2c828faecc053f4bfd0d",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n211/weather.json",
+        "bytes": 21201,
+        "sha256": "87664dbf6d25390c22966fda0090a6fae5857d5257566ec73d90321b852fd6c0",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n211/week-12-picks-1.png",
+        "bytes": 196419,
+        "sha256": "d448cf90516746609f441d0dcbc9833c647935cfd2f21f35de40ebe6cf13fff8",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n211/week-12-picks-2.png",
+        "bytes": 189493,
+        "sha256": "ca42f0eb3c25296298ff1a488c82f75dfc12cc6be0047adedff8699b218503af",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n211/week-12-picks-3.png",
+        "bytes": 189842,
+        "sha256": "faacb6421552cea596623c74a61bf7f2b6ac4ca5f890ec41bb218234b892632b",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n211/week-12-picks-4.png",
+        "bytes": 188731,
+        "sha256": "a891f92a2e76c0f4329686b2824b7f44744fed3978ffbad2ebca019d3f7cffa2",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n211/week-12-picks.json",
+        "bytes": 56930,
+        "sha256": "a16be6a1a28470528533a37bf73a53299fb00a06d8ea3dbdfae01cf9be1c5b85",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
         "path": "weeks/12/index.html",
         "bytes": 124467,
         "sha256": "4d56d5d2b6a731e5477d5a7635bbb39ae421aab838e1c0de067f2a3bf2348eaa",
@@ -2800,34 +2839,45 @@
         "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
       }
     ],
-    "method": "Prepared source SHA-256 manifest. Anonymous HTTP comparison remains pending the exact-head GitHub check.",
-    "browser_status": "Version 74 passed the live public asset audit and hosted desktop/mobile N210 interactions. Version 75 adds explicit original-role clocks and primary push probabilities and corrects phone-card labels; its exact-head hosted audit remains pending.",
-    "local_controls": "PASS_DESKTOP_PREVIEW",
+    "method": "Declared source SHA-256 manifest matched against the native deployed bundle. Anonymous HTTP comparison is performed by exact-head CI.",
+    "browser_status": "Root live Edge review of the identical v77 interface passed all sixteen games, eleven venue forecasts and fixed/retractable/canopy roof distinctions. V78 changes only publication metadata. Exact-head Chromium rechecks source and hosted 1440/390-pixel views and all declared public hashes.",
+    "local_controls": "PASS_STATIC_SOURCE_CHECKS_507",
     "viewports_required": [
       1440,
       390
     ],
     "guest_utc": null,
     "actual_counts": {
-      "PENDING": 451
+      "PENDING": 461
     },
     "browser_render_verified": false
   },
   "standing_results_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n207/standing-results/",
   "postseason_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n209/postseason/",
   "historical_archive_preservation": {
-    "prior_deployed_asset_count": 445,
-    "unchanged_asset_count": 444,
+    "prior_declared_asset_count": 460,
+    "unchanged_declared_assets": 460,
     "modified_existing_paths": [
-      "index.html"
+      "n211-execution-status.json"
     ],
-    "new_public_asset_count": 6
+    "newly_audited_existing_paths": [
+      "n211-execution-status.json"
+    ],
+    "new_public_asset_count": 0,
+    "n211_prior_issue_baseline": {
+      "site_version": 75,
+      "declared_assets": 451,
+      "unchanged_assets": 450,
+      "modified_existing_paths": [
+        "index.html"
+      ],
+      "new_n211_assets": 10
+    }
   },
-  "prior_version_verification": {
-    "site_version": 74,
-    "github_head": "11fa43bca5348da09fbafa359d6afe6ada5e37e3",
-    "workflow_run_url": "https://github.com/alvaromendizabal/sports-edge-lab/actions/runs/46057033921",
-    "hosted_asset_and_browser_job": "PASS",
-    "scope": "451 source asset comparisons plus local and hosted N210 desktop/mobile interactions; separate README vocabulary contract failed and is corrected in this revision."
+  "native_bundle": {
+    "file_count": 473,
+    "archive_bytes": 75653120,
+    "declared_current_assets": 461,
+    "other_preserved_archive_files": 12
   }
 }
