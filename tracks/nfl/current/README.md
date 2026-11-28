@@ -1,5 +1,23 @@
 # NFL game day and research dashboard
 
+<!-- N214_EXECUTION_STATUS_BEGIN -->
+## N214 user execution is running; N213 failure remains recoverable
+
+**The preceding N213 owner execution exited with a recoverable failure during stage 3 of 10.** It completed recovery and source collection, then stopped when the inherited scorer tried to replace an original model-bank census with a newer scoring census. The integrity check correctly refused the mismatch. The run produced **zero new fitting units, optimizer calls or forecast issues**. Its partial return passed complete remote readback and preserved 10,876 members across 19 ordered parts. [Sanitized execution status](n214-execution-status.json).
+
+The last completed scientific comparison remains **N211 on 167 games**: the most-wins spread leader records **99–64–4** and the totals leader **101–66**. N213's newer completed-game census did not finish rescoring, so these records have not been extended or relabeled. They are exposed 2026 selection results, not prospective betting accuracy. The [N211 Week 12 board](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n211/) retains its issued values and original clocks.
+
+N214 separates immutable bank ancestry from the current scoring population while retaining the original corruption checks and fitted-model identities. Qualification now exercises the actual failed bank-loading path on a changed census and two representative frozen predictions. The full historical rescore remains owner-run work. It also checks bounded real-data diagnostic fitting and warm reuse separately from the owner campaign. **The exact N214 executable passed 350 native tests across 50 suites, with zero skips, and its guarded command has been delivered.** The changed-census check reached the original failed consumer on 168 completed games while preserving all 160 retained N211 fitting units. Two bounded real-data diagnostic units completed 32 optimizer calls; their warm repeat reused both units with zero optimizer calls. At qualification completion, the owner campaign had not been launched. **The user subsequently launched N214 at 07:27:39 UTC on November 28.** Its 07:35:51 UTC heartbeat shows stage 2 of 10, initial source collection, after about eight minutes; no completed exit or new scientific result has been verified. The assistant did not launch or stop the campaign. The full historical rescore and fitting results remain pending.
+
+N213's bounded historical weather retrieval decoded **223 fixture records**; 32 were blocked and 6,930 deferred, with 104 future fixtures routed separately. Decoding is source-retrieval evidence, not a claim of complete eligible history or model improvement. The next execution retains the weather, venue, availability, prior-event quote and football research already registered, with as-of clocks and disclosed missing coverage. It has ten stages and registers at most 72 fitting units; the qualified input removes one duplicate control, leaving 66 distinct units. Launch-time state and source identities determine actual new work. No full-campaign runtime estimate is inferred from stage numbers or qualification timing.
+
+**[Open the N214 Week 12 reader update](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n214/).** Site version79 is deployed. It retains N211 model outputs, distinguishes four retrospective replays from original issues, and presents later weather as display context. All sixteen games have selected spread and total directions; the Denver final is displayed without extending the historical model scorecard. Four phone graphics remain directly viewable. This reader release does not make the running N214 research campaign a completed model result. [Publication receipt](publication-n214.json).
+
+Ordinary spreads and totals retain the requested **exposed 2026 selection** policy, with 2024 and 2025 available for training. Strict V13 and Circa selections remain separate. No prospective 70% accuracy, production promotion or full V13 acceptance is claimed. The earlier preparation notice below remains a dated record of what was known before the owner execution.
+
+<!-- N214_EXECUTION_STATUS_END -->
+
+
 <!-- N213_PREPARATION_STATUS_BEGIN -->
 ## N213 qualified execution ready — November 27
 

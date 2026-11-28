@@ -108,11 +108,17 @@ const server=http.createServer((req,res)=>{
       assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
       await page.screenshot({path:path.join(output,`n211-board-${origin.label}-${width}.png`),fullPage:true});
       await page.goto(origin.url,{waitUntil:'domcontentloaded'});
-      assert.match(await page.title(),/N211 Week 12 Spread & Totals/);
+      assert.equal(await page.title(),'Week 12 · JMac’s Model Picks | Sports Edge Lab');
+      const currentReader=load('publication.json');
+      const currentLink=page.locator('#n214-reader-update > a[href="week-12-field-notes/n214/"]');
+      assert.equal(await currentLink.count(),1);
+      assert.equal(new URL(await currentLink.getAttribute('href'),page.url()).pathname,new URL(currentReader.field_notes_url).pathname);
       assert.match(await page.locator('meta[name="description"]').getAttribute('content'),/Exposed 2026 selection/);
       assert.match(await page.locator('meta[property="og:title"]').getAttribute('content'),/N211/);
-      assert.equal(await page.locator('#n211-current-issue a[href="week-12-field-notes/n211/"]').count(),1);
-      assert.match(await page.locator('#n211-current-issue').innerText(),/Eleven new pregame issues and five preserved/);
+      const originalN211=page.locator('#n214-reader-update nav a[href="week-12-field-notes/n211/"]');
+      assert.equal(await originalN211.count(),1);
+      assert.equal(await originalN211.innerText(),'Original N211');
+      assert.match(await page.locator('meta[name="description"]').getAttribute('content'),/eleven new pregame issues and five preserved/i);
       assert.match(await page.locator('#n206-complete-population-notice').innerText(),/N206 completed/);
       assert.equal(await page.locator('#n206-complete-population-notice a[href="week-12-field-notes/n206/"]').count(),1);
       assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
@@ -124,3 +130,4 @@ const server=http.createServer((req,res)=>{
     console.log('PASS N211 data invariants, original preservation, options filters, pagination and desktop/mobile browser checks');
   }finally{await browser.close();server.close();}
 })().catch(e=>{console.error(e);server.close();process.exitCode=1;});
+

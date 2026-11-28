@@ -1,20 +1,20 @@
 {
-  "version": "NFL_N211_SAVED_MODEL_ISSUE_WEATHER_CONTEXT",
+  "version": "NFL_N214_READER_UPDATE_PRESERVED_N211_MODELS",
   "status": "DEPLOYED_AWAITING_HTTP_HASH_AUDIT",
   "public_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
-  "field_notes_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n211/",
-  "all_games_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n211/#games",
-  "dedicated_circa_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n211/#circa",
-  "phone_cards_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n211/#phone",
-  "deployed_at": "2026-11-28T00:40:05.517074+00:00",
-  "site_version": 78,
-  "site_source_commit": "d4a2ae4c25438f87bbb9c686d9e364698438e257",
-  "archive_sha256": "fe800befa1e5126a44af002441f57e6ab7b9f91cde4334d9c459549c801c156f",
-  "provider_saved_tar_sha256": "sha256:fe800befa1e5126a44af002441f57e6ab7b9f91cde4334d9c459549c801c156f",
+  "field_notes_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n214/",
+  "all_games_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n214/#games",
+  "dedicated_circa_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n214/#circa",
+  "phone_cards_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n214/#phone",
+  "deployed_at": "2026-11-28T07:24:22.957906+00:00",
+  "site_version": 79,
+  "site_source_commit": "5838f712e13ff1ee59428c6a8a12f72f71a80b8d",
+  "archive_sha256": "8d1a9cd3ec3246c8e62a7cdaefaebe56be0d62c05682055a22bc7308412901d1",
+  "provider_saved_tar_sha256": "sha256:8d1a9cd3ec3246c8e62a7cdaefaebe56be0d62c05682055a22bc7308412901d1",
   "audience": "public",
-  "native_publication_receipt": "publication-n211.json",
-  "prior_publication_receipt": "publication-n211-v77.json",
-  "github_source_provenance": "Exact-head NFL Actions verifies all declared public bytes and local/hosted N211 interactions at desktop and mobile widths. Native deployment is separate from HTTP and browser verification.",
+  "native_publication_receipt": "publication-n214.json",
+  "prior_publication_receipt": "publication-n211.json",
+  "github_source_provenance": "This NFL-only update mirrors the twelve public files of deployed Site version79. Exact-head NFL Actions verifies every declared asset and retained historical desktop/mobile interactions. N214 reader publication is separate from the user-launched N214 owner campaign, observed collecting initial sources at 2026-11-28T07:35:51.431Z without a verified new scientific result.",
   "scientific_scope": {
     "release": "N211",
     "forecast_issued_utc": "2026-11-27T23:06:11.996730+00:00",
@@ -1034,8 +1034,8 @@
       },
       {
         "path": "index.html",
-        "bytes": 571771,
-        "sha256": "86fbac9bd95c4ea11ad455fdbf6a9713088b3dfae8da3e239f166da0da3ca9d7",
+        "sha256": "dae3d5e6d85ed831a71c4b3e25ed428694b79b5dbf67a9e65862bf254998fcc3",
+        "bytes": 571892,
         "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
       },
       {
@@ -1916,8 +1916,8 @@
       },
       {
         "path": "week-12-field-notes/index.html",
-        "bytes": 114840,
-        "sha256": "8fa7c5d0066c3ba4d19dab0b5edb4a453ff34186deb1a6b5e6fce0877e1ce19f",
+        "sha256": "af2e0c2c66be7eb9f6bb6e7100e7dd8609de937c044d297983764e486be241b1",
+        "bytes": 114911,
         "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
       },
       {
@@ -2576,8 +2576,8 @@
       },
       {
         "path": "week-12-field-notes/n208/index.html",
-        "bytes": 122584,
-        "sha256": "9cf71cf8e2850f693a99be1ee95d90c96bf57acc0fb088f5306f7bf7e8428f39",
+        "sha256": "c1d8799ea878196023ff6e3b87a77ae4111d3964d89e8fc2331d83184892d821",
+        "bytes": 122711,
         "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
       },
       {
@@ -2797,6 +2797,60 @@
         "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
       },
       {
+        "path": "week-12-field-notes/n214/all-book-options.json",
+        "sha256": "9a67503174c0f8b4eef01af4596892186203392bbb38b2168a418d65ff105b75",
+        "bytes": 42743,
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n214/index.html",
+        "sha256": "f2ee588ed4e20af5affc73d000fc31025dfc7d7a1316a03844af566cf02f6b53",
+        "bytes": 109650,
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n214/weather-context.js",
+        "sha256": "536609e00d27902f8ca134dd455ca2c66e731745014bb170b05990d4de366abd",
+        "bytes": 8435,
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n214/weather.json",
+        "sha256": "854985f492c2ed356e4969e1bf59322c66ea6008743cd4c96b74cd26bf39e5c3",
+        "bytes": 28461,
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n214/week-12-picks-1.png",
+        "sha256": "98f994035d8e99bb206391d97024a7e6d549b7df63132f7bc08f833e5bd8c51d",
+        "bytes": 268307,
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n214/week-12-picks-2.png",
+        "sha256": "3e71a81c205e8ff9d4bcd539a82a95af404b0c3233b3d1f41ab8de21e0e6329c",
+        "bytes": 265980,
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n214/week-12-picks-3.png",
+        "sha256": "d5cb6832014a097a5925a728375d11ced5ac2a9178505a97ca5f0e8d608f09c9",
+        "bytes": 262409,
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n214/week-12-picks-4.png",
+        "sha256": "24f9d4d7817624a43b3c218a976269269050aafeae9c9ef943acbdba805007a4",
+        "bytes": 262073,
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "week-12-field-notes/n214/week-12-picks.json",
+        "sha256": "0e0de4d75fdac74ad3f3ab283ab4ba54a32f60668066f98213b12fef0cbfafc7",
+        "bytes": 65221,
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
         "path": "weeks/12/index.html",
         "bytes": 124467,
         "sha256": "4d56d5d2b6a731e5477d5a7635bbb39ae421aab838e1c0de067f2a3bf2348eaa",
@@ -2840,44 +2894,52 @@
       }
     ],
     "method": "Declared source SHA-256 manifest matched against the native deployed bundle. Anonymous HTTP comparison is performed by exact-head CI.",
-    "browser_status": "Root live Edge review of the identical v77 interface passed all sixteen games, eleven venue forecasts and fixed/retractable/canopy roof distinctions. V78 changes only publication metadata. Exact-head Chromium rechecks source and hosted 1440/390-pixel views and all declared public hashes.",
-    "local_controls": "PASS_STATIC_SOURCE_CHECKS_507",
+    "browser_status": "New reader passed managed-preview desktop and 390px mobile interactions; 299 source continuity, clock, result and publication checks passed. Exact-head hosted verification is pending.",
+    "local_controls": "PASS_N214_SOURCE_CHECKS_299",
     "viewports_required": [
       1440,
       390
     ],
     "guest_utc": null,
     "actual_counts": {
-      "PENDING": 461
+      "PENDING": 470
     },
     "browser_render_verified": false
   },
   "standing_results_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n207/standing-results/",
   "postseason_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n209/postseason/",
   "historical_archive_preservation": {
-    "prior_declared_asset_count": 460,
-    "unchanged_declared_assets": 460,
+    "prior_declared_asset_count": 461,
+    "unchanged_declared_assets": 458,
     "modified_existing_paths": [
-      "n211-execution-status.json"
+      "index.html",
+      "week-12-field-notes/index.html",
+      "week-12-field-notes/n208/index.html"
     ],
-    "newly_audited_existing_paths": [
-      "n211-execution-status.json"
-    ],
-    "new_public_asset_count": 0,
-    "n211_prior_issue_baseline": {
-      "site_version": 75,
-      "declared_assets": 451,
-      "unchanged_assets": 450,
-      "modified_existing_paths": [
-        "index.html"
-      ],
-      "new_n211_assets": 10
-    }
+    "new_public_asset_count": 9,
+    "n211_issue_assets_unchanged": true,
+    "prior_receipt": "publication-n211.json"
   },
   "native_bundle": {
-    "file_count": 473,
-    "archive_bytes": 75653120,
-    "declared_current_assets": 461,
+    "file_count": 482,
+    "archive_bytes": 76974080,
+    "declared_current_assets": 470,
     "other_preserved_archive_files": 12
+  },
+  "reader_scope": {
+    "reader_edition": "N214",
+    "model_edition": "N211",
+    "new_n214_owner_fits": null,
+    "weekly_games": 16,
+    "retrospective_selected_model_replay_games": 4,
+    "replays_received_original_issue_credit": false,
+    "denver_pittsburgh_result_updated": true,
+    "historical_model_population_still": 167,
+    "later_weather_applied_to_frozen_model_probabilities": false,
+    "venue_forecast_games": 11,
+    "source_weather_file": "week-12-field-notes/n214/weather.json",
+    "scientific_full_census_rescore_pending": true,
+    "owner_run_observed": "USER_LAUNCHED_IN_PROGRESS_STAGE_2_AS_OF_2026-11-28T07:35:51.431Z",
+    "new_n214_owner_fits_verified": false
   }
 }
