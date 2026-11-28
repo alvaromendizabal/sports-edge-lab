@@ -102,7 +102,18 @@ const server=http.createServer((req,res)=>{
         const url=await link.getAttribute('href');assert.equal((await page.request.get(new URL(url,page.url()).href)).status(),200);
       }
       assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
-      await page.screenshot({path:path.join(output,`n211-board-${origin.label}-${width}.png`),fullPage:true});await page.close();
+      await page.screenshot({path:path.join(output,`n211-board-${origin.label}-${width}.png`),fullPage:true});
+      await page.goto(origin.url,{waitUntil:'domcontentloaded'});
+      assert.match(await page.title(),/N211 Week 12 Spread & Totals/);
+      assert.match(await page.locator('meta[name="description"]').getAttribute('content'),/Exposed 2026 selection/);
+      assert.match(await page.locator('meta[property="og:title"]').getAttribute('content'),/N211/);
+      assert.equal(await page.locator('#n211-current-issue a[href="week-12-field-notes/n211/"]').count(),1);
+      assert.match(await page.locator('#n211-current-issue').innerText(),/Eleven new pregame issues and five preserved/);
+      assert.match(await page.locator('#n206-complete-population-notice').innerText(),/N206 completed/);
+      assert.equal(await page.locator('#n206-complete-population-notice a[href="week-12-field-notes/n206/"]').count(),1);
+      assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+      await page.screenshot({path:path.join(output,`n211-entry-${origin.label}-${width}.png`),fullPage:false});
+      await page.close();
     }
     assert.deepEqual(errors,[]);
     fs.writeFileSync(path.join(output,'n211-browser.json'),JSON.stringify({status:'PASS',games:16,retained_originals:5,new_issues:11,public_option_rows:128,viewports:[1440,390],origins:origins.map(o=>o.label)},null,2));
