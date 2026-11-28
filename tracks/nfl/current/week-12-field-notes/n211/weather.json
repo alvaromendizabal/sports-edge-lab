@@ -1,6 +1,7 @@
 {
   "schema": "nfl.current-weather-display/1",
-  "captured_utc": "2026-11-28T00:08:32.260692Z",
+  "captured_utc": "2026-11-28T00:11:11.518274Z",
+  "assembled_utc": "2026-11-28T00:13:11.611142Z",
   "model_application": "NOT_APPLIED_TO_N211_PICKS",
   "units": {
     "temperature_c": "degrees_C",
@@ -20,25 +21,21 @@
           "status": "unknown"
         }
       },
-      "status": "SOURCE_FAILED",
-      "forecast_issued_utc": null,
-      "captured_utc": null,
-      "source_url": null,
+      "status": "AVAILABLE",
+      "forecast_issued_utc": "2026-11-27T22:51:47Z",
+      "captured_utc": "2026-11-28T00:11:03.974047Z",
+      "source_url": "https://api.weather.gov/gridpoints/MPX/109,72",
       "samples": [
         {
           "offset_hours": 0,
           "valid_utc": "2026-11-29T18:00:00Z",
-          "temperature_c": null,
-          "wind_mps": null,
-          "gust_mps": null,
-          "precip_probability": null,
+          "temperature_c": 1.1111111111111112,
+          "wind_mps": 5.658888888888889,
+          "gust_mps": 10.288888888888888,
+          "precip_probability": 0.0,
           "precip_mm": null,
           "snow_mm": null,
           "missing_fields": [
-            "temperature_c",
-            "wind_mps",
-            "gust_mps",
-            "precip_probability",
             "precip_mm",
             "snow_mm"
           ]
@@ -46,17 +43,13 @@
         {
           "offset_hours": 2,
           "valid_utc": "2026-11-29T20:00:00Z",
-          "temperature_c": null,
-          "wind_mps": null,
-          "gust_mps": null,
-          "precip_probability": null,
+          "temperature_c": 2.2222222222222223,
+          "wind_mps": 5.658888888888889,
+          "gust_mps": 10.288888888888888,
+          "precip_probability": 0.0,
           "precip_mm": null,
           "snow_mm": null,
           "missing_fields": [
-            "temperature_c",
-            "wind_mps",
-            "gust_mps",
-            "precip_probability",
             "precip_mm",
             "snow_mm"
           ]
@@ -64,17 +57,13 @@
         {
           "offset_hours": 4,
           "valid_utc": "2026-11-29T22:00:00Z",
-          "temperature_c": null,
-          "wind_mps": null,
-          "gust_mps": null,
-          "precip_probability": null,
+          "temperature_c": 1.6666666666666667,
+          "wind_mps": 5.144444444444444,
+          "gust_mps": 9.26,
+          "precip_probability": 0.0,
           "precip_mm": null,
           "snow_mm": null,
           "missing_fields": [
-            "temperature_c",
-            "wind_mps",
-            "gust_mps",
-            "precip_probability",
             "precip_mm",
             "snow_mm"
           ]
@@ -452,25 +441,21 @@
           "status": "unknown"
         }
       },
-      "status": "SOURCE_FAILED",
-      "forecast_issued_utc": null,
-      "captured_utc": null,
-      "source_url": null,
+      "status": "AVAILABLE",
+      "forecast_issued_utc": "2026-11-27T19:47:32Z",
+      "captured_utc": "2026-11-28T00:11:11.518274Z",
+      "source_url": "https://api.weather.gov/gridpoints/MFL/107,58",
       "samples": [
         {
           "offset_hours": 0,
           "valid_utc": "2026-11-29T18:00:00Z",
-          "temperature_c": null,
-          "wind_mps": null,
-          "gust_mps": null,
-          "precip_probability": null,
+          "temperature_c": 25.0,
+          "wind_mps": 2.572222222222222,
+          "gust_mps": 5.144444444444444,
+          "precip_probability": 0.05,
           "precip_mm": null,
           "snow_mm": null,
           "missing_fields": [
-            "temperature_c",
-            "wind_mps",
-            "gust_mps",
-            "precip_probability",
             "precip_mm",
             "snow_mm"
           ]
@@ -478,17 +463,13 @@
         {
           "offset_hours": 2,
           "valid_utc": "2026-11-29T20:00:00Z",
-          "temperature_c": null,
-          "wind_mps": null,
-          "gust_mps": null,
-          "precip_probability": null,
+          "temperature_c": 25.555555555555557,
+          "wind_mps": 2.057777777777778,
+          "gust_mps": 4.115555555555556,
+          "precip_probability": 0.05,
           "precip_mm": null,
           "snow_mm": null,
           "missing_fields": [
-            "temperature_c",
-            "wind_mps",
-            "gust_mps",
-            "precip_probability",
             "precip_mm",
             "snow_mm"
           ]
@@ -496,17 +477,13 @@
         {
           "offset_hours": 4,
           "valid_utc": "2026-11-29T22:00:00Z",
-          "temperature_c": null,
-          "wind_mps": null,
-          "gust_mps": null,
-          "precip_probability": null,
+          "temperature_c": 25.555555555555557,
+          "wind_mps": 1.028888888888889,
+          "gust_mps": 3.0866666666666664,
+          "precip_probability": 0.05,
           "precip_mm": null,
           "snow_mm": null,
           "missing_fields": [
-            "temperature_c",
-            "wind_mps",
-            "gust_mps",
-            "precip_probability",
             "precip_mm",
             "snow_mm"
           ]

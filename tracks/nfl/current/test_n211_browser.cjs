@@ -17,7 +17,7 @@ const server=http.createServer((req,res)=>{
   const rel=decodeURIComponent(req.url.split('?')[0]);
   const file=path.resolve(root,'.'+rel+(rel.endsWith('/')?'index.html':''));
   if(!file.startsWith(root+path.sep)){res.writeHead(403);return res.end();}
-  fs.readFile(file,(err,content)=>{if(err){res.writeHead(404);return res.end();}res.setHeader('Content-Type',file.endsWith('.png')?'image/png':file.endsWith('.json')?'application/json':'text/html; charset=utf-8');res.end(content);});
+  fs.readFile(file,(err,content)=>{if(err){res.writeHead(404);return res.end();}res.setHeader('Content-Type',file.endsWith('.png')?'image/png':file.endsWith('.json')?'application/json':file.endsWith('.js')?'text/javascript':'text/html; charset=utf-8');res.end(content);});
 });
 (async()=>{
   assert.equal(data.games.length,16);assert.equal(new Set(data.games.map(g=>g.id)).size,16);
