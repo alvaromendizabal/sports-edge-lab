@@ -1,0 +1,140 @@
+{
+  "schema": "nfl.release-preparation-status.v1",
+  "release": "N213",
+  "status": "VERIFIED_INSTALLED_OWNER_RUN_NOT_LAUNCHED_BY_ASSISTANT",
+  "prepared_date_pacific": "2026-11-27",
+  "scope": "SANITIZED_OPERATIONAL_AND_SOURCE_PREPARATION; NO_PRIVATE_RUNTIME_OR_ACTIVE_RECIPE",
+  "last_actual_attempt": {
+    "release": "N212",
+    "exit_code": 75,
+    "owner_started": false,
+    "new_fitting_units": 0,
+    "new_estimator_fits": 0,
+    "new_calibrator_fits": 0,
+    "last_recovery_heartbeat_elapsed_seconds": 810.4286,
+    "failure_class": "FIRST_RECOVERY_MISSING_DESTINATION_STAGE_DIRECTORY"
+  },
+  "initial_native_recovery_diagnostic": {
+    "status": "PASS",
+    "elapsed_seconds": 20.16446077999717,
+    "authenticated_members": 8884,
+    "archive_payload_reads_bytes": 0,
+    "new_fits": 0,
+    "owner_launches": 0,
+    "scientific_pointer_writes": 0,
+    "scope": "EARLIER_LOOSE_MODULE_DIAGNOSTIC; SUPERSEDED_BY_CANONICAL_NATIVE_QUALIFICATION_BELOW; NOT_FULL_RUN_TIMING"
+  },
+  "native_weather_diagnostic": {
+    "status": "PASS",
+    "games": 1,
+    "valid_hours": 5,
+    "fits": 0,
+    "http_requests": 0,
+    "horizon": "ACTUAL_PREPARED_WEEK_OPEN_CUTOFF",
+    "availability_evidence": "ARCHIVAL_OBJECT_TIMESTAMP_PROXY_RECONSTRUCTION_NOT_ORIGINALLY_WITNESSED",
+    "full_history_coverage_established": false,
+    "canonical_source_pipeline_status": "PASS",
+    "canonical_pipeline_elapsed_seconds": 150.38176657899749,
+    "canonical_raw_http_requests": 0
+  },
+  "prior_event_quote_adapter": {
+    "raw_feature_count": 192,
+    "nonzero_columns": 184,
+    "prepared_manifest_rows": 7289,
+    "pre2026_rows_with_history": 837,
+    "target_cutoff": "ACTUAL_PREPARED_ROW_CUTOFF",
+    "target_game_live_quotes_used": false,
+    "source_final_outcomes_read": false,
+    "evidence": "RECONSTRUCTION; PHYSICAL_AS_ISSUED_COVERAGE_REPORTED_SEPARATELY",
+    "new_provider_calls": 0
+  },
+  "planned_owner_campaign": {
+    "registered_fitting_units_upper_bound": 72,
+    "numerical_optimizer_calls_upper_bound": 1152,
+    "top_level_stages": 10,
+    "actual_counts_depend_on": "EXACT_INPUT_ALIASES_AND_AUTHENTICATED_RESUME",
+    "worker_hard_ceiling": 42,
+    "compute_guard_usd": 200,
+    "main_run_launched_by_assistant": false,
+    "native_qualified_nonaliased_fitting_units": 66,
+    "native_qualified_nonaliased_optimizer_calls": 1056,
+    "alias_count": 1
+  },
+  "selection": {
+    "ordinary_spread_totals": "2024_2025_TRAINING_ALLOWED; EXPOSED_2026_SELECTION",
+    "strict_v13_and_circa": "PRESERVED_SEPARATE_2024_2025_SELECTION",
+    "untouched_test_claimed": false,
+    "prospective_70_percent_claimed": false
+  },
+  "scientific_output": {
+    "new_n213_owner_runs": 0,
+    "new_n213_fits": 0,
+    "new_n213_forecast_issues": 0,
+    "champion_promotions": 0,
+    "latest_verified_completed_science": "N211",
+    "published_n211_issues_modified": false,
+    "v13_acceptance": "INCOMPLETE"
+  },
+  "publication": {
+    "source_update": "VERIFIED_RELEASE_READINESS_REPORT",
+    "website_deployments": 0,
+    "provider_refresh_from_publication": false,
+    "public_forecast_values_changed": false,
+    "private_delivery": {
+      "status": "VERIFIED_INSTALLED_NOT_LAUNCHED",
+      "verified_utc": "2026-11-28T02:50:07.633573+00:00",
+      "complete_byte_readback": true,
+      "native_authorization": "PASS_EXACT_CANONICAL_RUNTIME_AND_ACTUAL_CONSUMER_PROOF",
+      "cli_parser": "PASS_EXACT_CANONICAL_RESUME_ARGV",
+      "evidence_sha256": "0eb1e7306a04b57be1ecb7ee8fdfe34abc221cd98d335e78841b2011cff90165"
+    }
+  },
+  "feature_inventory": {
+    "full_schema_columns": 78344,
+    "new_interaction_columns": 23280,
+    "raw_environment_and_prior_quote_fields": 277,
+    "interpretation": "FORMULA_AND_SCHEMA_COUNTS_NOT_INDEPENDENT_OBSERVATIONS_OR_PROVEN_PREDICTIVE_SIGNALS"
+  },
+  "local_engineering_tests": {
+    "status": "PASS",
+    "tests": 277,
+    "scope": "EARLIER_LOCAL_SYNTHETIC_AND_OPERATIONAL_TESTS; FINAL_NATIVE_COUNT_REPORTED_SEPARATELY",
+    "new_real_nfl_fits": 0
+  },
+  "native_engineering_qualification": {
+    "status": "PASS",
+    "tests_passed": 294,
+    "qualified_utc": "2026-11-28T02:48:52.437335+00:00",
+    "scope": "FINAL_CANONICAL_EXECUTABLE; REAL_FRESH_RECOVERY; EXACT_CUTOFF_WEATHER_AND_PRIOR_QUOTE_FEATURES; DISK_PREFLIGHT",
+    "new_real_nfl_fits": 0,
+    "owner_campaign_launched": false,
+    "canonical_build_sha256": "eee28f5a28e0dfffc93ffde1f6d71c7554e01c8f566e0a49f85c35b1e475882a",
+    "qualification_sha256": "8f79e6833d8ca219d75c5cf3331cc1b632fc5ca887b657faffa6fe8fbc194a2e",
+    "actual_consumer_evidence_sha256": "ea930bd9c64b2b4533e05d232f9c4993d3e831d22086da2d6595d7f65694fe7c"
+  },
+  "evidence_as_of_utc": "2026-11-28T02:50:07.633573+00:00",
+  "canonical_native_recovery": {
+    "status": "PASS",
+    "elapsed_seconds": 566.0986348349979,
+    "scope": "FINAL_CANONICAL_FRESH_DESTINATION_RESTORE; NEXT_STAGE_READERS; FINALIZER_INVENTORY_AND_SEAL",
+    "authenticated_members": 8884,
+    "first_resident_bytes_hashed": 9127989354,
+    "first_resident_legacy_proofs_migrated": 8884,
+    "initial_seal_bytes_hashed": 9128054963,
+    "warm_restore_seconds": 1.3570743929885793,
+    "warm_resident_bytes_hashed": 0,
+    "warm_seal_seconds": 0.40489056600199547,
+    "warm_seal_bytes_hashed": 134680,
+    "new_fits": 0,
+    "owner_launches": 0,
+    "scientific_pointer_writes": 0,
+    "full_return_packaging_tested_by_this_probe": false
+  },
+  "native_disk_preflight": {
+    "status": "PASS",
+    "estimated_peak_additional_bytes": 31525133441,
+    "observed_free_bytes": 198887534592,
+    "automatic_deletions": 0,
+    "estimate_is_guaranteed_size": false
+  }
+}
