@@ -1,5 +1,21 @@
 # NFL game day and research dashboard
 
+<!-- N213_PREPARATION_STATUS_BEGIN -->
+## N213 qualified execution ready — November 27
+
+**N213 is installed and the guarded owner command has been delivered.** Native qualification passed **294 tests**, real fresh-destination recovery, next-stage scientific readers, finalization checks, the exact-cutoff weather pipeline and disk preflight. Full-byte delivery and the exact launch arguments were verified. These are preparation checks: **zero N213 owner fits or new forecast issues** are credited. [Sanitized execution status](n213-execution-status.json). The published [N211 Week 12 board](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n211/) remains the latest verified scientific issue.
+
+The N212 attempt stopped before fitting because first recovery inspected a directory before creating it. The corrected canonical recovery check took **566.10 seconds**, including migration of 8,884 legacy verification records and initial content sealing. Its subsequent warm restore took **1.36 seconds**, and warm sealing took **0.40 seconds**, rehashing 134,680 bytes. The earlier 20.16-second loose-module diagnostic remains separately recorded; it is not the timing of the final canonical check or the full research run.
+
+The finite campaign registers **at most 72 fitting units / 1,152 optimizer calls**. Native exact-input checks identify one duplicate control, leaving **66 independent units / 1,056 calls** for that qualified input snapshot; launch-time identities determine actual new work. Its full schema has **78,344 columns**, including 23,280 new interaction columns and 277 raw environment/prior-quote fields. Formula counts do not establish independent information or predictive value.
+
+Weather covers a five-hour game trajectory and distinguishes stadium structures and roof uncertainty. One authentic historical trajectory passed native replay at the model's original week-opening cutoff; later weather observations were excluded. The prior-event quote adapter produces **192 aggregate inputs**, with history on **837 pre-2026 rows** of the unchanged 7,289-row manifest. It reads earlier quotes, excludes target-game live quotes and does not read final outcomes. Historical forecast and quote reconstructions remain distinct from observations physically captured by the project before a game. Coverage and ablation results must be measured by the owner run.
+
+Ordinary spread/total research permits 2024–2025 training and disclosed **exposed 2026 selection**. The preserved strict V13/Circa lane retains its separate selection policy. No new champion, updated public pick or prospective 70% accuracy is claimed. Full V13 acceptance remains incomplete.
+
+<!-- N213_PREPARATION_STATUS_END -->
+
+
 
 ## N211 completed research — November 27
 
