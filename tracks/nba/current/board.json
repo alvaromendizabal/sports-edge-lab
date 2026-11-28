@@ -1,10 +1,10 @@
 {
   "schema": "public.nba.spread_totals.v1",
   "owner": "NBA",
-  "release": "B120 R3 startup blocked · R4 preparation pending · B119 stale saved outlooks",
+  "release": "B120 R4 ready for owner launch · B119 stale saved outlooks",
   "source_observed_at_utc": "2026-11-25T19:34:47.323874+00:00",
   "market_comparison_asof_utc": "2026-11-25T19:33:33.256583Z",
-  "publication_status": "Public website snapshot · last verified hosting receipt November 27, 12:17 PM Pacific; execution and forecast clocks are separate",
+  "publication_status": "Public incident-status snapshot published · hosting verified November 28, 11:24 AM Pacific (19:24:17 UTC); research clocks remain separate",
   "research_status": "PARTIAL_RESUMABLE",
   "production_model_deployment": "NOT_PERFORMED",
   "selection_uses_test_labels": false,
@@ -155794,7 +155794,7 @@
   "b119_durable_publication_failed_tasks": 2140,
   "b120_owner_execution": "R3_SELF_PREDECESSOR_WAIT_BEFORE_SCIENCE",
   "owner_execution_status_asof_utc": "2026-11-28T18:58:42.200403+00:00",
-  "prepared_execution_status": "R4_NATIVE_QUALIFICATION_PENDING",
+  "prepared_execution_status": "PREPARED_AND_REHEARSED_USER_LAUNCH_READY",
   "b119_frontier_publication_failed_tasks": 1200,
   "b119_legacy_publication_failed_tasks": 940,
   "b119_legacy_failure_branches": {
@@ -155803,8 +155803,8 @@
     "stacks": 540
   },
   "branch_failure_summary_is_not_additional_tasks": true,
-  "prepared_execution_status_asof_utc": "2026-11-28T18:58:42.200403+00:00",
-  "prepared_execution_scope": "R4 launch-ancestry correction in preparation; native qualification and exact command rehearsal pending",
+  "prepared_execution_status_asof_utc": "2026-11-28T19:51:39.909341+00:00",
+  "prepared_execution_scope": "All four current-source native stages, the exact prepare-only launcher and final delivery passed; user launch is required, and no new scientific result is claimed",
   "r1_owner_results_included": false,
   "r1_operational_status_included": true,
   "r1_new_forecasts_included": false,
@@ -156105,12 +156105,13 @@
   },
   "next_release_preparation": {
     "release_label": "B120 R4",
-    "status": "R4_NATIVE_QUALIFICATION_PENDING",
-    "owner_launch_ready": false,
-    "status_label": "Native qualification pending",
-    "verified_at_utc": null,
-    "summary": "R4 repairs the authenticated launch-chain boundary and adds a real same-archive census diagnostic. Unrelated NBA processes must remain blockers. Native qualification and the exact guarded command rehearsal remain pending; no main research execution, new fit or forecast is established by this preparation.",
-    "new_forecasts_published": false
+    "status": "PREPARED_AND_REHEARSED_USER_LAUNCH_READY",
+    "owner_launch_ready": true,
+    "status_label": "Ready for owner launch",
+    "verified_at_utc": "2026-11-28T19:51:39.909341+00:00",
+    "summary": "R4 is verified and delivered; the user launches the main campaign. All 1,342 native engineering tests, the real launch-chain census and prepared-component continuity passed, including all 24 retained V6 states with zero refits. The independent live NBA predecessor stayed protected. The exact prepare-only launcher passed in 82.26 seconds; all seven controls stayed unchanged. Final delivery and the prepared-release update then passed, preserving all six scientific controls. Preparation made zero new scientific fits or forecasts. Newest-checkpoint resolution and measured scientific occupancy remain main-run gates.",
+    "new_forecasts_published": false,
+    "owner_launch_state": "USER_LAUNCH_REQUIRED"
   },
   "observed_contracts": [
     {
@@ -180777,10 +180778,10 @@
   },
   "latest_observed_hosting_verification": {
     "status": "PUBLISHED",
-    "verified_at_utc": "2026-11-27T20:17:32.120778+00:00",
-    "site_version": 4,
-    "site_source_commit": "f76c759705910635f8de36820d3a4303aa60bde7",
-    "scope": "PRIOR_PUBLISHED_NBA_SOURCE_OBSERVATION_AND_R3_PREPARATION_SNAPSHOT; THIS_EXECUTION_CORRECTION_IS_A_SEPARATE_SOURCE_UPDATE",
+    "verified_at_utc": "2026-11-28T19:24:17.002425+00:00",
+    "site_version": 5,
+    "site_source_commit": "0cc91e14273b9422f8c42f0b1e75c56e2b968204",
+    "scope": "PUBLISHED_OBSERVED_R3_STARTUP_INCIDENT_AND_R4_PENDING_STATUS; NO_NEW_SCIENTIFIC_RESULT",
     "source_refresh_performed_by_deployment": false,
     "new_scientific_fits": 0,
     "main_owner_run_launched": false
@@ -180818,5 +180819,84 @@
     "prior_prepare_only_receipt_retained": true,
     "prior_prepare_only_receipt_proved_main_census": false,
     "later_user_launch_status": "SELF_PREDECESSOR_WAIT_BEFORE_SCIENCE"
+  },
+  "previous_observed_hosting_verification": {
+    "status": "PUBLISHED",
+    "verified_at_utc": "2026-11-27T20:17:32.120778+00:00",
+    "site_version": 4,
+    "site_source_commit": "f76c759705910635f8de36820d3a4303aa60bde7",
+    "scope": "PRIOR_PUBLISHED_NBA_SOURCE_OBSERVATION_AND_R3_PREPARATION_SNAPSHOT; THIS_EXECUTION_CORRECTION_IS_A_SEPARATE_SOURCE_UPDATE",
+    "source_refresh_performed_by_deployment": false,
+    "new_scientific_fits": 0,
+    "main_owner_run_launched": false
+  },
+  "r4_preparation": {
+    "status": "PREPARED_AND_REHEARSED_USER_LAUNCH_READY",
+    "native_verified_at_utc": "2026-11-28T19:34:02.002761+00:00",
+    "native_engineering_tests_passed": 1342,
+    "native_engineering_failures": 0,
+    "native_engineering_errors": 0,
+    "native_engineering_skips": 0,
+    "native_stages_passed": 4,
+    "native_stage_elapsed_seconds": {
+      "engineering": 173.36995553199085,
+      "launch_chain": 1.0023636940168217,
+      "prepared_continuity": 21.07377936600824,
+      "prepared_v6": 17.546315359009895
+    },
+    "native_owner_controls_unchanged": 7,
+    "real_launch_chain_diagnostic": "PASS_OWN_LAUNCH_CHAIN_EXCLUDED_EXTERNAL_BLOCKERS_PRESERVED",
+    "independent_live_predecessor_preserved": true,
+    "new_estimator_fits": 0,
+    "new_calibration_fits": 0,
+    "new_residual_distribution_fits": 0,
+    "new_model_forecasts": 0,
+    "v6_native_states_restored_and_consumed": 24,
+    "restoration_refits": 0,
+    "main_owner_run_launched_by_preparer": false,
+    "scientific_occupancy_qualified": false,
+    "newest_durable_checkpoint_resolved_by_diagnostics": false,
+    "exact_command_rehearsal": {
+      "status": "PASS_EXACT_PREPARE_ONLY_COMMAND_REHEARSAL",
+      "started_at_utc": "2026-11-28T19:41:55.881441+00:00",
+      "finished_at_utc": "2026-11-28T19:43:18.145978+00:00",
+      "elapsed_seconds": 82.26467961000162,
+      "child_exit_code": 0,
+      "all_seven_owner_controls_unchanged": true,
+      "owner_control_or_prepared_pointer_writes": 0,
+      "new_scientific_fits": 0,
+      "main_owner_run_launched": false,
+      "newest_checkpoint_resolution_performed_by_rehearsal": false,
+      "newest_checkpoint_resolution_required_again_at_main_launch": true
+    },
+    "canonical_delivery": {
+      "status": "PASS_NATIVE_HOME_DELIVERY_AND_PREPARED_RELEASE",
+      "verified_at_utc": "2026-11-28T19:51:39.909341+00:00",
+      "installed_files_verified": 10,
+      "additional_release_reference_bodies_verified": 9,
+      "verification_scope": "FULL_BODY_SHA256_AND_LOCAL_READBACK",
+      "preparation_archive_members_verified": 113,
+      "preparation_archive_reconstruction_verified": true,
+      "prepared_release_publication": "ONE_CONDITIONAL_UPDATE_WITH_FULL_READBACK",
+      "scientific_controls_unchanged": 6,
+      "scientific_control_writes": 0,
+      "main_owner_run_launched": false,
+      "new_scientific_fits": 0,
+      "new_forecasts": 0
+    },
+    "historical_source_retrieval_policy": {
+      "cache_first": true,
+      "new_http_requests_per_tranche": 128,
+      "new_listing_pages_per_series": 8,
+      "network_dispatch_window_seconds": 600,
+      "consecutive_retryable_failure_limit": 3,
+      "inflight_request_may_finish_after_dispatch_cutoff": true,
+      "main_wall_limit_changed": false
+    },
+    "new_forecast_values_published": false,
+    "earlier_native_candidate_test_failures": 1,
+    "earlier_native_candidate_failure_is_main_owner_run": false,
+    "native_test_count_scope": "CURRENT_FINAL_CANDIDATE_NOT_CUMULATIVE_ATTEMPTS",
+    "owner_launch_state": "USER_LAUNCH_REQUIRED"
   }
 }
