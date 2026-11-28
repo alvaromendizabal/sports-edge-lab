@@ -1,20 +1,20 @@
 {
-  "version": "NFL_N214_READER_UPDATE_PRESERVED_N211_MODELS",
+  "version": "NFL_N214_ACTUAL_RETURN_STATUS_PRESERVED_N211_MODELS",
   "status": "DEPLOYED_AWAITING_HTTP_HASH_AUDIT",
   "public_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
   "field_notes_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n214/",
   "all_games_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n214/#games",
   "dedicated_circa_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n214/#circa",
   "phone_cards_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n214/#phone",
-  "deployed_at": "2026-11-28T07:24:22.957906+00:00",
-  "site_version": 79,
-  "site_source_commit": "5838f712e13ff1ee59428c6a8a12f72f71a80b8d",
-  "archive_sha256": "8d1a9cd3ec3246c8e62a7cdaefaebe56be0d62c05682055a22bc7308412901d1",
-  "provider_saved_tar_sha256": "sha256:8d1a9cd3ec3246c8e62a7cdaefaebe56be0d62c05682055a22bc7308412901d1",
+  "deployed_at": "2026-11-28T19:25:57.027821+00:00",
+  "site_version": 80,
+  "site_source_commit": "9598b14495687b4ad3c22fabdd2c5cf19d2a1d1c",
+  "archive_sha256": "0c519fa99a051771d8ecbf7518671ad3428a1d20c5aa7cd4328d49dfd61c3990",
+  "provider_saved_tar_sha256": "sha256:0c519fa99a051771d8ecbf7518671ad3428a1d20c5aa7cd4328d49dfd61c3990",
   "audience": "public",
-  "native_publication_receipt": "publication-n214.json",
-  "prior_publication_receipt": "publication-n211.json",
-  "github_source_provenance": "This NFL-only update mirrors the twelve public files of deployed Site version79. Exact-head NFL Actions verifies every declared asset and retained historical desktop/mobile interactions. N214 reader publication is separate from the user-launched N214 owner campaign, observed collecting initial sources at 2026-11-28T07:35:51.431Z without a verified new scientific result.",
+  "native_publication_receipt": "publication-n214-v80.json",
+  "prior_publication_receipt": "publication-n214.json",
+  "github_source_provenance": "This NFL-only status update mirrors deployed Site version 80. N214 completed all 66 source-qualified fitting units and 1,056 optimizer calls, then exited during checkpoint hashing before completing the new-source comparison or issuing forecasts. The 168-game inherited comparison remains separate from the preserved N211 issue and is labeled exposed-2026 reconstruction. Exact-head NFL Actions checks every declared live asset and retained desktop/mobile interactions.",
   "scientific_scope": {
     "release": "N211",
     "forecast_issued_utc": "2026-11-27T23:06:11.996730+00:00",
@@ -1034,8 +1034,8 @@
       },
       {
         "path": "index.html",
-        "sha256": "dae3d5e6d85ed831a71c4b3e25ed428694b79b5dbf67a9e65862bf254998fcc3",
-        "bytes": 571892,
+        "sha256": "e84e58960f5f7d7dbd12cdc401b90b8a9c2dd2fb724b5661c0181e2e96149738",
+        "bytes": 571989,
         "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
       },
       {
@@ -1048,6 +1048,12 @@
         "path": "n211-execution-status.json",
         "bytes": 6239,
         "sha256": "5888c4356c838828657c00e8b6321b7500bd9f5181774752e51325d303b0a836",
+        "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
+      },
+      {
+        "path": "n214-execution-status.json",
+        "bytes": 7926,
+        "sha256": "39e7668c213c2d7e414ce69d3ce06adaca8861a27befcc717e63cdbd77b184e8",
         "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
       },
       {
@@ -2804,8 +2810,8 @@
       },
       {
         "path": "week-12-field-notes/n214/index.html",
-        "sha256": "f2ee588ed4e20af5affc73d000fc31025dfc7d7a1316a03844af566cf02f6b53",
-        "bytes": 109650,
+        "sha256": "a2e9ceb2fce518d2b80c4d33451a21f46b6496cfa0d4efb06ebc6f3e493020a6",
+        "bytes": 110182,
         "verification": "AWAITING_DEPLOYED_HTTP_CHECK"
       },
       {
@@ -2894,42 +2900,42 @@
       }
     ],
     "method": "Declared source SHA-256 manifest matched against the native deployed bundle. Anonymous HTTP comparison is performed by exact-head CI.",
-    "browser_status": "New reader passed managed-preview desktop and 390px mobile interactions; 299 source continuity, clock, result and publication checks passed. Exact-head hosted verification is pending.",
-    "local_controls": "PASS_N214_SOURCE_CHECKS_299",
+    "browser_status": "Exact-head hosted desktop/mobile and live asset verification pending. All sixteen existing game-card bodies, issue metrics, scripts, and phone graphic references passed local continuity checks.",
+    "local_controls": "PASS_N214_RETURN_AND_PUBLICATION_STATUS_CHECKS_98",
     "viewports_required": [
       1440,
       390
     ],
     "guest_utc": null,
     "actual_counts": {
-      "PENDING": 470
+      "PENDING": 471
     },
     "browser_render_verified": false
   },
   "standing_results_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n207/standing-results/",
   "postseason_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n209/postseason/",
   "historical_archive_preservation": {
-    "prior_declared_asset_count": 461,
-    "unchanged_declared_assets": 458,
+    "prior_declared_asset_count": 470,
+    "unchanged_declared_assets": 468,
     "modified_existing_paths": [
       "index.html",
-      "week-12-field-notes/index.html",
-      "week-12-field-notes/n208/index.html"
+      "week-12-field-notes/n214/index.html"
     ],
-    "new_public_asset_count": 9,
+    "new_public_asset_count": 1,
     "n211_issue_assets_unchanged": true,
-    "prior_receipt": "publication-n211.json"
+    "n214_game_cards_and_phone_graphics_unchanged": true,
+    "prior_receipt": "publication-n214.json"
   },
   "native_bundle": {
-    "file_count": 482,
-    "archive_bytes": 76974080,
-    "declared_current_assets": 470,
+    "file_count": 483,
+    "archive_bytes": 76984320,
+    "declared_current_assets": 471,
     "other_preserved_archive_files": 12
   },
   "reader_scope": {
     "reader_edition": "N214",
     "model_edition": "N211",
-    "new_n214_owner_fits": null,
+    "new_n214_owner_fits": 66,
     "weekly_games": 16,
     "retrospective_selected_model_replay_games": 4,
     "replays_received_original_issue_credit": false,
@@ -2938,8 +2944,16 @@
     "later_weather_applied_to_frozen_model_probabilities": false,
     "venue_forecast_games": 11,
     "source_weather_file": "week-12-field-notes/n214/weather.json",
-    "scientific_full_census_rescore_pending": true,
-    "owner_run_observed": "USER_LAUNCHED_IN_PROGRESS_STAGE_2_AS_OF_2026-11-28T07:35:51.431Z",
-    "new_n214_owner_fits_verified": false
+    "scientific_full_census_rescore_pending": false,
+    "owner_run_observed": "EXIT_75_VERIFIED_PARTIAL_RESUMABLE_2026-11-28T10:23:32.132625+00:00",
+    "new_n214_owner_fits_verified": true,
+    "new_n214_numerical_optimizer_calls": 1056,
+    "distinct_measured_fit_pids": 40,
+    "inherited_full_census_rescore_completed": true,
+    "inherited_comparison_population": 168,
+    "inherited_comparison_label": "EXPOSED_2026_RECONSTRUCTION_SELECTION",
+    "new_source_candidate_comparison_pending": true,
+    "new_forecast_issue_created": false,
+    "execution_status_file": "n214-execution-status.json"
   }
 }
