@@ -1,14 +1,15 @@
 {
   "schema": "nfl.execution-recovery-status.v1",
   "release": "N214",
-  "status": "USER_OWNER_RUN_IN_PROGRESS",
+  "status": "OWNER_FITS_COMPLETED_PARTIAL_RESUMABLE_SCORING_PENDING",
   "scope": "SANITIZED_NFL_OPERATIONAL_AND_SCIENTIFIC_AGGREGATES",
   "preserved_partial_return": {
+    "release": "N214",
     "status": "VERIFIED_PARTIAL_RESUMABLE",
     "full_remote_readback": true,
-    "verified_members": 10876,
-    "ordered_parts": 19,
-    "complete_logical_bytes": 10195216721,
+    "verified_members": 13695,
+    "ordered_parts": 22,
+    "complete_logical_bytes": 11405509490,
     "latest_resumable_pointer_advanced_after_verification": true,
     "scientific_completion_claimed": false
   },
@@ -93,7 +94,8 @@
     "main_run_launched_by_assistant": false,
     "qualified_nonaliased_fitting_units": 66,
     "qualified_nonaliased_optimizer_calls": 1056,
-    "full_campaign_eta": "NOT_ESTABLISHED"
+    "full_campaign_eta": "NOT_ESTABLISHED",
+    "next_work": "REUSE_ALL_66_COMMITTED_FITS_COMPLETE_COMPARISON_AND_REFRESH_CURRENT_FORECASTS"
   },
   "selection": {
     "ordinary_spread_totals": "2024_2025_TRAINING_ALLOWED; EXPOSED_2026_SELECTION",
@@ -103,7 +105,7 @@
     "v13_acceptance": "INCOMPLETE"
   },
   "publication": {
-    "source_update": "QUALIFIED_DELIVERY_AND_RECOVERY_STATUS",
+    "source_update": "VERIFIED_N214_OWNER_OUTCOME_AND_PRESERVED_N211_ISSUE",
     "private_delivery": "VERIFIED_DELIVERED",
     "website_deployments_by_this_status_update": 0,
     "provider_refresh_from_publication": false,
@@ -112,9 +114,10 @@
     "n214_reader_update_is_n214_model_result": false,
     "latest_verified_scientific_issue": "N211",
     "reader_site_version": 79,
-    "reader_public_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n214/"
+    "reader_public_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n214/",
+    "new_forecast_issues_from_status_update": 0
   },
-  "evidence_as_of_utc": "2026-11-28T07:35:51.431Z",
+  "evidence_as_of_utc": "2026-11-28T18:56:07.893337Z",
   "previous_failed_owner_attempt": {
     "release": "N213",
     "owner_executions": 1,
@@ -141,17 +144,69 @@
   },
   "current_owner_attempt": {
     "release": "N214",
-    "status": "IN_PROGRESS",
+    "status": "PARTIAL_RESUMABLE",
     "launched_by": "USER",
     "assistant_launches": 0,
     "started_utc": "2026-11-28T07:27:39Z",
-    "observed_heartbeat_utc": "2026-11-28T07:35:51.431Z",
-    "active_stage": "initial_sources",
-    "active_stage_number": 2,
+    "exit_utc": "2026-11-28T10:23:32.132625+00:00",
+    "exit_code": 75,
+    "successful_owner_executions": 0,
+    "failed_owner_executions": 1,
+    "interrupted_stage": "new_science",
+    "interrupted_stage_number": 3,
     "top_level_stages": 10,
-    "elapsed_seconds": 492.24,
-    "completed_exit_observed": false,
-    "new_fit_count_verified": false,
-    "new_model_result_claimed": false
+    "completed_exit_observed": true,
+    "completed_registered_stages": [
+      "recovery",
+      "initial_sources"
+    ],
+    "new_fit_count_verified": true,
+    "new_fitting_units": 66,
+    "new_optimizer_calls": 1056,
+    "completed_unit_events": 66,
+    "optimizer_cpu_seconds": 26757.101,
+    "distinct_measured_fit_processes": 40,
+    "worker_hard_ceiling": 42,
+    "inherited_n211_units_reused": 160,
+    "inherited_n211_refits": 0,
+    "new_fits_final_comparison_complete": false,
+    "new_forecast_issues": 0,
+    "new_model_accuracy_improvement_claimed": false,
+    "failure_class": "CHECKPOINT_HASHED_MUTATING_WORKER_STATUS_FILE",
+    "fit_corruption_established": false,
+    "compute_cost_estimate_usd": 7.53362,
+    "actual_cloud_bill_claimed": false
+  },
+  "latest_completed_inherited_comparison": {
+    "comparison": "PRESERVED_MODEL_BANK_RESCORE_BEFORE_NEW_SOURCE_MODEL_COMPARISON",
+    "completed_population": 168,
+    "spread_most_wins": {
+      "wins": 100,
+      "losses": 64,
+      "pushes": 4
+    },
+    "total_most_wins": {
+      "wins": 101,
+      "losses": 67,
+      "pushes": 0
+    },
+    "evaluation": "EXPOSED_2026_SELECTION_NOT_PROSPECTIVE_VALIDATION",
+    "changes_original_issue_values_or_167_game_metrics": false,
+    "performance_of_66_new_source_models": false
+  },
+  "n214_historical_weather_capture": {
+    "decoded_new_fixture_records": 200,
+    "reused_fixture_records": 223,
+    "decoded_or_reused_fixture_records": 423,
+    "blocked_fixtures": 31,
+    "deferred_fixtures": 6731,
+    "future_current_source_lane_fixtures": 104,
+    "new_requests": 1991,
+    "cache_hits": 4191,
+    "request_failures": 0,
+    "source_capture_seconds": 1200.275,
+    "forecast_availability_evidence": "ARCHIVAL_OBJECT_TIMESTAMP_PROXY_RECONSTRUCTION",
+    "complete_eligible_history_claimed": false,
+    "predictive_improvement_claimed": false
   }
 }
