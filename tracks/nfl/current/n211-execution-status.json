@@ -176,5 +176,23 @@
   "publication": {
     "status": "PREPARED_NOT_YET_DEPLOYED",
     "source_publication_separate_from_owner_execution": true
+  },
+  "later_weather_context": {
+    "captured_utc": "2026-11-28T00:08:32.260692Z",
+    "games": 11,
+    "available": 9,
+    "source_failed": 2,
+    "failed_games": [
+      "2026_12_ATL_MIN",
+      "2026_12_NYJ_MIA"
+    ],
+    "model_application": "NOT_APPLIED_TO_N211_PICKS",
+    "forecast_offsets_hours": [
+      0,
+      2,
+      4
+    ],
+    "source_type": "NWS forecast at approximate stadium grid; not on-field measurements",
+    "public_file": "week-12-field-notes/n211/weather.json"
   }
 }

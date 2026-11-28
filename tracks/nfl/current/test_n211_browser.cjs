@@ -10,6 +10,7 @@ const data = load('week-12-field-notes/n211/week-12-picks.json');
 const previous = load('week-12-field-notes/n210/week-12-picks.json');
 const options = load('week-12-field-notes/n211/all-book-options.json');
 const status = load('n211-execution-status.json');
+const weather = load('week-12-field-notes/n211/weather.json');
 const output = process.env.NFL_CURRENT_EVIDENCE || path.join(process.env.RUNNER_TEMP || '/tmp','nfl-n211-browser');
 fs.mkdirSync(output,{recursive:true});
 const server=http.createServer((req,res)=>{
@@ -46,7 +47,15 @@ const server=http.createServer((req,res)=>{
     assert(Math.abs(row.p_win+row.p_loss+row.p_push-1)<0.00015);
     assert(Math.abs(row.expected_profit_per_unit-(row.p_win*(row.decimal_price-1)-row.p_loss))<0.00025);
   }
-  assert.doesNotMatch(JSON.stringify({data,options,status}),/s3:\/\/|\/home\/sagemaker|conditional_cdf|expanded_balanced|private-research|N211X\//);
+  assert.equal(weather.model_application,'NOT_APPLIED_TO_N211_PICKS');
+  assert.equal(weather.games.length,11);
+  assert.equal(new Set(weather.games.map(g=>g.game_id)).size,11);
+  for(const game of weather.games){
+    assert(data.games.some(g=>g.id===game.game_id&&!g.retained_original));
+    assert(Date.parse(game.captured_utc||weather.captured_utc)>Date.parse(data.forecast_issued_utc));
+    for(const sample of game.samples||[])if(sample.precip_probability!==null&&sample.precip_probability!==undefined)assert(sample.precip_probability>=0&&sample.precip_probability<=1);
+  }
+  assert.doesNotMatch(JSON.stringify({data,options,status,weather}),/s3:\/\/|\/home\/sagemaker|conditional_cdf|expanded_balanced|private-research|N211X\//);
   await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
   const browser=await chromium.launch({headless:true});const errors=[];
   try{
@@ -57,9 +66,18 @@ const server=http.createServer((req,res)=>{
     }
     for(const origin of origins)for(const width of [1440,390]){
       const page=await browser.newPage({viewport:{width,height:1000}});page.on('pageerror',e=>errors.push(e.message));
-      await page.clock.install({time:new Date('2026-11-27T23:59:00Z')});
+      await page.clock.install({time:new Date('2026-11-28T12:00:00Z')});
       const response=await page.goto(new URL('week-12-field-notes/n211/',origin.url).href);assert.equal(response.status(),200);
       assert.equal(await page.locator('article[data-game]:visible').count(),16);
+      await page.waitForFunction(()=>document.documentElement.dataset.weatherLoaded==='true');
+      assert.equal(await page.locator('[data-weather-game]').count(),11);
+      const weatherPanel=page.locator('[data-weather-game]').first();
+      await weatherPanel.locator('summary').click();
+      assert.match(await weatherPanel.innerText(),/not used in the frozen N211 picks/);
+      assert.equal(await weatherPanel.locator('tbody tr').count(),3);
+      assert.match(await weatherPanel.innerText(),/roof status:/);
+      assert.match(await weatherPanel.innerText(),/Forecast (captured|check)/);
+
       for(const [name,count] of [['Upcoming',11],['Started',1],['Final',4],['All games',16]]){
         await page.getByRole('button',{name,exact:true}).click();assert.equal(await page.locator('article[data-game]:visible').count(),count);
       }
