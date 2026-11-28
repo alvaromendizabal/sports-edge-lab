@@ -1,0 +1,139 @@
+{
+  "schema": "nfl.execution-recovery-status.v1",
+  "release": "N214",
+  "status": "VERIFIED_QUALIFIED_DELIVERED_OWNER_RUN_UNLAUNCHED",
+  "scope": "SANITIZED_NFL_OPERATIONAL_AND_SCIENTIFIC_AGGREGATES",
+  "last_actual_owner_attempt": {
+    "release": "N213",
+    "owner_executions": 1,
+    "successful_owner_executions": 0,
+    "failed_owner_executions": 1,
+    "exit_code": 75,
+    "exit_utc": "2026-11-28T06:16:59.090874+00:00",
+    "status": "PARTIAL_RESUMABLE",
+    "interrupted_stage_number": 3,
+    "registered_stages": 10,
+    "completed_scientific_or_source_stages": [
+      "recovery",
+      "initial_sources"
+    ],
+    "failure_class": "DESCENDANT_SCORING_CENSUS_COLLIDED_WITH_IMMUTABLE_BANK_ANCESTRY",
+    "integrity_guard_rejected_mismatch": true,
+    "new_fitting_units": 0,
+    "new_optimizer_calls": 0,
+    "new_forecast_issues": 0,
+    "current_census_rescoring_completed": false,
+    "scientific_fit_cpu_seconds": 0,
+    "compute_cost_estimate_usd": 1.7773513244980639,
+    "actual_cloud_bill_claimed": false
+  },
+  "preserved_partial_return": {
+    "status": "VERIFIED_PARTIAL_RESUMABLE",
+    "full_remote_readback": true,
+    "verified_members": 10876,
+    "ordered_parts": 19,
+    "complete_logical_bytes": 10195216721,
+    "latest_resumable_pointer_advanced_after_verification": true,
+    "scientific_completion_claimed": false
+  },
+  "latest_completed_science": {
+    "release": "N211",
+    "completed_population": 167,
+    "preserved_fitted_units": 160,
+    "preserved_candidates": 11348,
+    "spread_most_wins": {
+      "wins": 99,
+      "losses": 64,
+      "pushes": 4
+    },
+    "total_most_wins": {
+      "wins": 101,
+      "losses": 66,
+      "pushes": 0
+    },
+    "evaluation": "EXPOSED_2026_SELECTION_NOT_PROSPECTIVE_VALIDATION",
+    "updated_to_later_completed_game_population": false
+  },
+  "n213_historical_weather_capture": {
+    "decoded_fixture_records": 223,
+    "blocked_fixtures": 32,
+    "deferred_fixtures": 6930,
+    "future_current_source_lane_fixtures": 104,
+    "new_requests": 2000,
+    "cache_hits": 4883,
+    "request_failures": 1,
+    "source_capture_seconds": 1087.958,
+    "forecast_availability_evidence": "ARCHIVAL_OBJECT_TIMESTAMP_PROXY_RECONSTRUCTION",
+    "complete_eligible_history_claimed": false,
+    "predictive_improvement_claimed": false
+  },
+  "n214_repair": {
+    "ancestry_policy": "VERIFY_RETAINED_BANK_AND_ORIGINAL_CENSUS_SEPARATELY_FROM_ACTIVE_SCORING_CENSUS",
+    "existing_corruption_guards_preserved": true,
+    "inherited_numerical_modules_changed": false,
+    "preserved_fitted_task_identities_changed": false,
+    "changed_census_frozen_scoring_qualification": "PASS_BOUNDED_FAILED_CONSUMER_PATH",
+    "local_engineering_tests": {
+      "status": "PASS",
+      "passed": 350
+    },
+    "native_qualification": {
+      "status": "PASS",
+      "tests_passed": 350,
+      "suites": 50,
+      "skipped": 0,
+      "exit_utc": "2026-11-28T07:19:44Z",
+      "estimated_compute_cost_usd": 1.38665,
+      "actual_cloud_bill_claimed": false
+    },
+    "diagnostic_fits": {
+      "status": "PASS",
+      "new_bounded_real_data_fit_units": 2,
+      "optimizer_calls": 32,
+      "warm_reused_units": 2,
+      "warm_optimizer_calls": 0,
+      "owner_campaign_credit": 0
+    },
+    "owner_research_executions": 0,
+    "new_owner_campaign_fits": 0,
+    "new_owner_forecast_issues": 0,
+    "champion_promotions": 0,
+    "production_promotions": 0,
+    "changed_census_qualification_scope": "ACTUAL_FAILED_BANK_LOADING_PATH_AND_TWO_FROZEN_PREDICTIONS",
+    "full_historical_rescore_performed_in_qualification": false,
+    "qualification_completed_population": 168,
+    "retained_n211_fit_units_verified_unchanged": 160,
+    "private_delivery_status": "EXACT_EXECUTABLE_CERTIFICATE_AND_OWNER_COMMAND_VERIFIED_DELIVERED"
+  },
+  "planned_owner_campaign": {
+    "top_level_stages": 10,
+    "registered_fitting_units_upper_bound": 72,
+    "registered_optimizer_calls_upper_bound": 1152,
+    "actual_new_counts_depend_on": "VERIFIED_RESUME_AND_EXACT_INPUT_ALIAS_ELIMINATION",
+    "worker_hard_ceiling": 42,
+    "compute_guard_usd": 200,
+    "launch_resolves_latest_durable_checkpoint": true,
+    "main_run_launched_by_assistant": false,
+    "qualified_nonaliased_fitting_units": 66,
+    "qualified_nonaliased_optimizer_calls": 1056,
+    "full_campaign_eta": "NOT_ESTABLISHED"
+  },
+  "selection": {
+    "ordinary_spread_totals": "2024_2025_TRAINING_ALLOWED; EXPOSED_2026_SELECTION",
+    "strict_v13_and_circa": "PRESERVED_SEPARATE_2024_2025_SELECTION",
+    "untouched_test_claimed": false,
+    "prospective_70_percent_claimed": false,
+    "v13_acceptance": "INCOMPLETE"
+  },
+  "publication": {
+    "source_update": "QUALIFIED_DELIVERY_AND_RECOVERY_STATUS",
+    "private_delivery": "VERIFIED_DELIVERED",
+    "website_deployments_by_this_status_update": 0,
+    "provider_refresh_from_publication": false,
+    "public_forecast_values_changed": false,
+    "n214_reader_update": "SEPARATE_READER_PUBLICATION_USING_N211_MODELS_REPLAY_LABELS_AND_LATER_WEATHER_DISPLAY",
+    "n214_reader_update_is_n214_model_result": false,
+    "latest_verified_scientific_issue": "N211"
+  },
+  "evidence_as_of_utc": "2026-11-28T07:19:44Z"
+}
