@@ -1,32 +1,8 @@
 {
   "schema": "nfl.execution-recovery-status.v1",
   "release": "N214",
-  "status": "VERIFIED_QUALIFIED_DELIVERED_OWNER_RUN_UNLAUNCHED",
+  "status": "USER_OWNER_RUN_IN_PROGRESS",
   "scope": "SANITIZED_NFL_OPERATIONAL_AND_SCIENTIFIC_AGGREGATES",
-  "last_actual_owner_attempt": {
-    "release": "N213",
-    "owner_executions": 1,
-    "successful_owner_executions": 0,
-    "failed_owner_executions": 1,
-    "exit_code": 75,
-    "exit_utc": "2026-11-28T06:16:59.090874+00:00",
-    "status": "PARTIAL_RESUMABLE",
-    "interrupted_stage_number": 3,
-    "registered_stages": 10,
-    "completed_scientific_or_source_stages": [
-      "recovery",
-      "initial_sources"
-    ],
-    "failure_class": "DESCENDANT_SCORING_CENSUS_COLLIDED_WITH_IMMUTABLE_BANK_ANCESTRY",
-    "integrity_guard_rejected_mismatch": true,
-    "new_fitting_units": 0,
-    "new_optimizer_calls": 0,
-    "new_forecast_issues": 0,
-    "current_census_rescoring_completed": false,
-    "scientific_fit_cpu_seconds": 0,
-    "compute_cost_estimate_usd": 1.7773513244980639,
-    "actual_cloud_bill_claimed": false
-  },
   "preserved_partial_return": {
     "status": "VERIFIED_PARTIAL_RESUMABLE",
     "full_remote_readback": true,
@@ -103,7 +79,8 @@
     "full_historical_rescore_performed_in_qualification": false,
     "qualification_completed_population": 168,
     "retained_n211_fit_units_verified_unchanged": 160,
-    "private_delivery_status": "EXACT_EXECUTABLE_CERTIFICATE_AND_OWNER_COMMAND_VERIFIED_DELIVERED"
+    "private_delivery_status": "EXACT_EXECUTABLE_CERTIFICATE_AND_OWNER_COMMAND_VERIFIED_DELIVERED",
+    "owner_counts_scope": "NATIVE_QUALIFICATION_AND_DELIVERY_AS_OF_2026-11-28T07:19:44Z_BEFORE_USER_LAUNCH"
   },
   "planned_owner_campaign": {
     "top_level_stages": 10,
@@ -137,5 +114,44 @@
     "reader_site_version": 79,
     "reader_public_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n214/"
   },
-  "evidence_as_of_utc": "2026-11-28T07:19:44Z"
+  "evidence_as_of_utc": "2026-11-28T07:35:51.431Z",
+  "previous_failed_owner_attempt": {
+    "release": "N213",
+    "owner_executions": 1,
+    "successful_owner_executions": 0,
+    "failed_owner_executions": 1,
+    "exit_code": 75,
+    "exit_utc": "2026-11-28T06:16:59.090874+00:00",
+    "status": "PARTIAL_RESUMABLE",
+    "interrupted_stage_number": 3,
+    "registered_stages": 10,
+    "completed_scientific_or_source_stages": [
+      "recovery",
+      "initial_sources"
+    ],
+    "failure_class": "DESCENDANT_SCORING_CENSUS_COLLIDED_WITH_IMMUTABLE_BANK_ANCESTRY",
+    "integrity_guard_rejected_mismatch": true,
+    "new_fitting_units": 0,
+    "new_optimizer_calls": 0,
+    "new_forecast_issues": 0,
+    "current_census_rescoring_completed": false,
+    "scientific_fit_cpu_seconds": 0,
+    "compute_cost_estimate_usd": 1.7773513244980639,
+    "actual_cloud_bill_claimed": false
+  },
+  "current_owner_attempt": {
+    "release": "N214",
+    "status": "IN_PROGRESS",
+    "launched_by": "USER",
+    "assistant_launches": 0,
+    "started_utc": "2026-11-28T07:27:39Z",
+    "observed_heartbeat_utc": "2026-11-28T07:35:51.431Z",
+    "active_stage": "initial_sources",
+    "active_stage_number": 2,
+    "top_level_stages": 10,
+    "elapsed_seconds": 492.24,
+    "completed_exit_observed": false,
+    "new_fit_count_verified": false,
+    "new_model_result_claimed": false
+  }
 }

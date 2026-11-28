@@ -376,7 +376,9 @@ function verifyHostedHtml(observed, source, context) {
       const response=await page.goto(new URL("week-12-field-notes/n208/",base).href,{waitUntil:"domcontentloaded"});
       assert.equal(response.status(),200);
       await count("[data-game]",16);
-      assert((await page.locator('a[href*="n209/"]').count())>0);
+      const currentReader=page.locator('#n214-reader-update');
+      assert.equal(await currentReader.count(),1);
+      assert.equal(new URL(await currentReader.getAttribute("href"),page.url()).href,receipt.field_notes_url);
       await count("#latest-venue-prices details",14);
       const dk=page.locator("#latest-venue-prices details").filter({hasText:"PHI at DAL"}).first();
       await dk.locator("summary").click();

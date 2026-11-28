@@ -14,7 +14,7 @@
   "audience": "public",
   "native_publication_receipt": "publication-n214.json",
   "prior_publication_receipt": "publication-n211.json",
-  "github_source_provenance": "This NFL-only update mirrors the twelve public files of deployed Site version79. Exact-head NFL Actions verifies every declared asset and retained historical desktop/mobile interactions. N214 reader publication is separate from the unlaunched N214 owner campaign.",
+  "github_source_provenance": "This NFL-only update mirrors the twelve public files of deployed Site version79. Exact-head NFL Actions verifies every declared asset and retained historical desktop/mobile interactions. N214 reader publication is separate from the user-launched N214 owner campaign, observed collecting initial sources at 2026-11-28T07:35:51.431Z without a verified new scientific result.",
   "scientific_scope": {
     "release": "N211",
     "forecast_issued_utc": "2026-11-27T23:06:11.996730+00:00",
@@ -2929,7 +2929,7 @@
   "reader_scope": {
     "reader_edition": "N214",
     "model_edition": "N211",
-    "new_n214_owner_fits": 0,
+    "new_n214_owner_fits": null,
     "weekly_games": 16,
     "retrospective_selected_model_replay_games": 4,
     "replays_received_original_issue_credit": false,
@@ -2938,6 +2938,8 @@
     "later_weather_applied_to_frozen_model_probabilities": false,
     "venue_forecast_games": 11,
     "source_weather_file": "week-12-field-notes/n214/weather.json",
-    "scientific_full_census_rescore_pending": true
+    "scientific_full_census_rescore_pending": true,
+    "owner_run_observed": "USER_LAUNCHED_IN_PROGRESS_STAGE_2_AS_OF_2026-11-28T07:35:51.431Z",
+    "new_n214_owner_fits_verified": false
   }
 }
