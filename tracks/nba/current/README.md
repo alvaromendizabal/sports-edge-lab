@@ -1,8 +1,18 @@
-# NBA Spread & Totals — fresh calendar, stale saved outlooks
+# NBA Spread & Totals — dated sources and stale saved outlooks
 
-**B120 R3 is prepared, rehearsed and ready for user launch. Public snapshot published.** Native preparation and the exact prepare-only launcher passed at **2026-11-27 20:02:28.248617 UTC (12:02 PM Pacific)**. The latest verified owner result remains the B120 R1 partial return. A new observation of owner controls and launch evidence at **2026-11-27 19:10:22 UTC** found no later verifiable owner execution. This observation made no model fits or research launch.
+**The user-launched B120 R3 execution was observed stuck before scientific admission, with zero new fits. R4 native qualification is pending.** Live process ancestry and the exact released source confirmed the diagnosis at **2026-11-28 18:58:42 UTC (10:58 AM Pacific)**: the owner counted its own outer launch journal as an earlier NBA process, while excluding only its immediate supervisor. The inspected log had reached **79,328 seconds of predecessor waiting, more than 22 hours**, by 18:51:47 UTC. This is a startup deadlock; a terminal exit has not been verified.
 
-## B120 R3 preparation and launch rehearsal
+Owner controls checked at **2026-11-28 18:59:50 UTC** still identify the **B120 R1 partial return** as the latest verified scientific result. The R3 waiting invocation produced no new scientific fits or forecasts. The read-only diagnosis sent no signals, stopped no process and launched no owner research. Saved forecasts remain stale with their original clocks; the November 27 calendar and contract snapshots are separate dated observations.
+
+## R4 correction and qualification status
+
+R4 authenticates the exact journal → supervisor → owner ancestry before excluding either launch ancestor from the predecessor census. Unrelated NBA processes remain blockers. A real same-archive three-process diagnostic, an independent live predecessor control, and an interruption regression are required. **Native qualification and the exact guarded command rehearsal remain pending.** Local engineering checks do not establish completed native qualification or an owner run. The user launches the main campaign after the verified command is delivered.
+
+The public board, every selected model role, all game/contract values and all 12 saved iPhone graphics retain their original scientific/source dates. Publication changes operational status only; it does not refresh model inputs, issue forecasts, select champions or deploy a model.
+
+## Earlier B120 R3 preparation — November 27
+
+The following preparation evidence remains valid within its original scope. **The prepare-only rehearsal returned before the real supervisor and predecessor census began. It did not exercise the launch boundary that subsequently deadlocked.** Its success must not be read as a successful main execution.
 
 All **1,298 native engineering tests passed**, with zero failures, errors or skips. The corrected release follows three failures caught in an earlier preparation candidate; those failures occurred before any main owner launch and are preserved separately. Native frozen-state restoration, including 24 V6 states, passed with **zero refits**.
 
@@ -28,7 +38,7 @@ Every available nonfinal-game role is explicitly labeled **Stale saved outlook**
 | T−60 total | 25/26 | November 25, 00:42:36 | November 24, 4:42 PM |
 | T−120 total | 25/26 | November 19, 22:10:55 | November 19, 2:10 PM |
 
-Miami at Cleveland on November 29 still has no matching saved total issue. The expected value stays unavailable, with the fixture-time mismatch named. The saved historical comparison qualifications remain unchanged. A separate fresh Kalshi capture is described below. No model side probability, current execution price, fee-adjusted return or new forecast is inferred from a calendar or quote observation.
+Miami at Cleveland on November 29 still has no matching saved total issue. The expected value stays unavailable, with the fixture-time mismatch named. The saved historical comparison qualifications remain unchanged. The separate November 27 Kalshi capture is described below. No model side probability, current execution price, fee-adjusted return or new forecast is inferred from a calendar or quote observation.
 
 The public display now derives calendar labels and status counts from the observation rather than a fixed date. Nonfinal status cases remain visible and cannot receive final-score grading. Calendar freshness, model issue freshness, owner execution and public hosting each retain their own timestamp.
 
@@ -36,7 +46,7 @@ The public display now derives calendar labels and status counts from the observ
 
 The official Kalshi capture completed at **2026-11-27 19:20:53.067315 UTC** with **682 distinct propositions across 11 games**: **363 spread** and **319 total** contracts. Both registered series completed pagination. Six HTTP requests used zero provider credits, with zero source failures, model fits or inference calls.
 
-The board preserves every observed alternative with the exact proposition, original numeric strike, strict threshold operator, named margin orientation, full-game/overtime scope and actual capture time. All **682 are pending**; no settled outcome or model win/loss is claimed. The actual source floor strike is retained without an invented half-point adjustment. The [official spread terms](https://assets.kalshi.com/contract_terms/BASKETBALLSPREADS.pdf) and [official total terms](https://assets.kalshi.com/contract_terms/BASKETBALLTOTALS.pdf) govern ordinary and fair-price resolution.
+The board preserves every observed alternative with the exact proposition, original numeric strike, strict threshold operator, named margin orientation, full-game/overtime scope and actual capture time. All **682 were pending at capture**; no later settlement observation or model win/loss is claimed. The actual source floor strike is retained without an invented half-point adjustment. The [official spread terms](https://assets.kalshi.com/contract_terms/BASKETBALLSPREADS.pdf) and [official total terms](https://assets.kalshi.com/contract_terms/BASKETBALLTOTALS.pdf) govern ordinary and fair-price resolution.
 
 YES and NO asks are **captured snapshots**, with no claim of current execution availability. YES ask quantity is available in all 682 observations; NO ask quantity is absent and remains **unavailable**, rather than zero. Current execution size is unqualified; the captured NO price alone does not establish an executable fill. Exchange quote timestamps are absent; source capture times are shown, and market metadata timestamps are not substituted for quote times.
 
@@ -106,7 +116,7 @@ The graphics generator requires Pillow and DejaVu fonts. It produces 12 PNGs at 
 
 Earlier board rendering was inspected on desktop and a 375-pixel content-width mobile viewport. The current preparation status update has separate validation from the earlier owner result; local generation and boundary checks are recorded with its pull request. Search, horizon switching, full-season coverage, missing-role details, and card overflow were checked. Automated regression probes reject private recipe fields, post-tip issues, missing manifest games, and test metrics substituted for validation selection. Local checks and hosted CI are separate evidence.
 
-**Current verified hosting:** the updated source-observation and R3 preparation snapshot deployed successfully as **Site version 3 at 2026-11-27 20:14:17.222217 UTC (November 27, 12:14 PM Pacific)**, from Site source `3e9f112ad3aa6953794b992523a1729cbc4a55da`. This receipt is separate from the 19:16 calendar check, 19:20 contract capture and original model issue clocks. Publication adds no new forecast, fit or owner execution.
+**Last observed hosting receipt:** the source-observation and R3 preparation snapshot deployed successfully as **Site version 4 at 2026-11-27 20:17:32.120778 UTC (November 27, 12:17 PM Pacific)**, from Site source `f76c759705910635f8de36820d3a4303aa60bde7`. This earlier receipt is separate from the November 28 execution-status correction, the November 27 calendar/contract captures and each original model issue clock. Source publication and a later website deployment require their own evidence. Publication adds no new forecast, fit or owner execution.
 
 **Earlier hosting:** the first public snapshot was published at [https://sports-edge-lab-nba.alv-mendizabal.chatgpt.site](https://sports-edge-lab-nba.alv-mendizabal.chatgpt.site), with the [twelve phone graphics](https://sports-edge-lab-nba.alv-mendizabal.chatgpt.site/graphics/index.html). Initial hosting verification is **2026-11-27 01:38:44.742760 UTC** (November 26, 5:38 PM Pacific), site version 1. Later publication metadata updates do not change that first verification time. Deployment did not refresh providers, issue forecasts, select or promote models, or launch the owner campaign. Historical NBA pages remain dated archives; no other owner's files are changed.
 
