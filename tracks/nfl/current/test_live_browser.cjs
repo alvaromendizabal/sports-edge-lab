@@ -312,6 +312,41 @@ function verifyHostedHtml(observed, source, context) {
     const text = selector => page.locator(selector).innerText();
     const count = (selector, expected) => page.locator(selector).count().then(actual => assert.equal(actual, expected, selector));
     const noOverflow = async () => { const layout = await page.evaluate(() => ({ width: window.innerWidth, scroll: document.documentElement.scrollWidth, outside: [...document.querySelectorAll("main *, header *")].filter(e => e.getBoundingClientRect().right > innerWidth + 1 && !e.closest(".scroll, .table-scroll")).slice(0, 8).map(e => [e.tagName, e.id, e.className, e.getBoundingClientRect().right]) })); assert(layout.scroll <= layout.width + 1, JSON.stringify(layout)); };
+
+    await check(`${width}px: N214 reader preserves N211 picks, replay labels, venue forecasts and all Sunday games`, async () => {
+      await page.goto(new URL("week-12-field-notes/n214/", base).href, {waitUntil:"domcontentloaded"});
+      await page.waitForFunction(() => document.documentElement.dataset.weatherLoaded === "true");
+      await count("article[data-game-id]", 16);
+      await count(".replay-block", 4);
+      await count(".venue-weather", 11);
+      assert.match(await text("main"), /N211/);
+      const rams = page.locator('article[data-game-id="2026_12_GB_LA"]');
+      assert.match(await rams.innerText(), /68\.9%/);
+      assert.match(await rams.innerText(), /51\.3%/);
+      await count('article[data-game-id="2026_12_GB_LA"] .original-issue', 1);
+      assert.match(await rams.locator(".replay-block").innerText(), /replay/i);
+      await page.locator('[data-filter="sunday"]').click();
+      await count("article[data-game-id]:visible", 10);
+      assert.equal(await page.locator('article[data-game-id="2026_12_LV_CLE"]').isVisible(), true);
+      await page.locator("#search").fill("LAC");
+      await count("article[data-game-id]:visible", 1);
+      assert.equal(await page.locator('article[data-game-id="2026_12_NE_LAC"]').isVisible(), true);
+      await page.locator("#search").fill("");
+      await page.locator('[data-filter="all"]').click();
+      const forecast = page.locator('article[data-game-id="2026_12_NE_LAC"] .venue-weather');
+      await forecast.locator("summary").click();
+      await count('article[data-game-id="2026_12_NE_LAC"] [data-weather-offset]', 3);
+      assert.match(await forecast.innerText(), /canopy/i);
+      await page.locator('[data-source="kalshi"]').click();
+      assert.equal(await text("#market-count"), "40 of 128 observed options");
+      await count("#market-body tr", 25);
+      await page.locator("#market-next").click();
+      await count("#market-body tr", 15);
+      assert.equal(await text("#market-page"), "Page 2 / 2");
+      await count('#phone .gallery a[href$=".png"]', 4);
+      await noOverflow();
+      await page.screenshot({path:path.join(output, `n214-reader-${width}.png`), fullPage:true});
+    });
     await check(`${width}px: retrospective NFL postseason results and complete annual denominators`,async()=>{
       await page.goto(new URL("week-12-field-notes/n208/",base).href,{waitUntil:"domcontentloaded"});
       await page.getByRole("link",{name:"How N208 performed in the 2024 and 2025 playoffs",exact:true}).click();
@@ -1304,5 +1339,6 @@ function verifyHostedHtml(observed, source, context) {
   save();
   console.log(JSON.stringify(report));
 });
+
 
 

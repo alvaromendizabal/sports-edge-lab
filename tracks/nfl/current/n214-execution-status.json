@@ -131,9 +131,11 @@
     "website_deployments_by_this_status_update": 0,
     "provider_refresh_from_publication": false,
     "public_forecast_values_changed": false,
-    "n214_reader_update": "SEPARATE_READER_PUBLICATION_USING_N211_MODELS_REPLAY_LABELS_AND_LATER_WEATHER_DISPLAY",
+    "n214_reader_update": "DEPLOYED_SITE_VERSION_79_USING_N211_MODELS_REPLAY_LABELS_AND_LATER_WEATHER_DISPLAY",
     "n214_reader_update_is_n214_model_result": false,
-    "latest_verified_scientific_issue": "N211"
+    "latest_verified_scientific_issue": "N211",
+    "reader_site_version": 79,
+    "reader_public_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n214/"
   },
   "evidence_as_of_utc": "2026-11-28T07:19:44Z"
 }
