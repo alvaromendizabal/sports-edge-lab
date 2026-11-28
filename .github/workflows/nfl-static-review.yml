@@ -161,6 +161,7 @@ jobs:
         env:
           PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/nfl-static-browser/node_modules/playwright
           NFL_CURRENT_EVIDENCE: ${{ runner.temp }}/nfl-static-evidence/n211-source
+          NFL_N211_VERIFY_HOSTED: "1"
         run: node tracks/nfl/current/test_n211_browser.cjs
       - name: Preserve exact public bundle and browser evidence
         if: always()

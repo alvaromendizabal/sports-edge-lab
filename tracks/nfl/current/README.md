@@ -13,9 +13,9 @@ The **3:06 p.m. Pacific** issue refreshed eleven games before kickoff: 22 new ta
 
 A later weather forecast capture, **November 27 at 4:11 p.m. Pacific**, adds kickoff, +2-hour and +4-hour stadium-grid forecasts and roof context to the eleven upcoming game cards. Forecasts are available for all eleven venues after an explicit retry recovered the two initial timeouts. This weather capture occurred after the N211 model issue and did not change its picks or probabilities. Stadium-grid forecasts are not on-field measurements, indoor conditions or assumed canopy wind attenuation.
 
-**Standing V13 remains incomplete.** The 2024 and 2025 manifests each contain 285 games, with thirteen missing settlement-quote rows per season. The measured fit-occupancy lower bound was about **47.7%**, below the 75% acceptance threshold, despite 41 simultaneous optimizers at peak. Completed science is preserved; execution completion does not erase these gaps. The successor's native delivery and public hosting status are recorded separately when verified.
+**Standing V13 remains incomplete.** The 2024 and 2025 manifests each contain 285 games, with thirteen missing settlement-quote rows per season. The measured fit-occupancy lower bound was about **47.7%**, below the 75% acceptance threshold, despite 41 simultaneous optimizers at peak. Completed science is preserved; execution completion does not erase these gaps. Successor preparation and public hosting are recorded separately from completed N211 science.
 
-**Publication status:** N211 board source is being prepared; no N211 deployment is claimed by this status record. Earlier N210 and historical issues below remain unchanged.
+**Publication status:** Site version 78 is deployed, including all sixteen game cards, eleven later venue forecasts, three-provider comparisons and four phone graphics. The exact-head NFL workflow checks anonymous asset hashes and hosted desktop/mobile interactions. [Deployment receipt](publication-n211.json). Earlier N210 and historical issues below remain unchanged.
 
 **[N210 saved model issue and phone cards](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n210/)**
 

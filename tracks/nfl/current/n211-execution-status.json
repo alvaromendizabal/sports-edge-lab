@@ -174,7 +174,7 @@
   "actual_bill_claimed": false,
   "production_promotion": false,
   "publication": {
-    "status": "PREPARED_NOT_YET_DEPLOYED",
+    "status": "PUBLICATION_RECORDED_SEPARATELY",
     "source_publication_separate_from_owner_execution": true
   },
   "later_weather_context": {

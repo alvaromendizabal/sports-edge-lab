@@ -40,11 +40,22 @@
       if (!game) { unavailable(panel, 'No weather forecast is available for this venue. The saved model picks are unchanged.'); continue; }
       const samples = Array.isArray(game.samples) ? game.samples : [];
       const kickoff = samples.find(sample => sample.offset_hours === 0);
-      const headline = kickoff ? degrees(kickoff.temperature_c) + ' · wind ' + speed(kickoff.wind_mps) : 'forecast unavailable';
-      panel.replaceChildren(element('summary', 'Venue forecast · ' + headline));
-      panel.dataset.weatherStatus = game.status || 'UNAVAILABLE';
       const venue = game.venue || {};
-      panel.append(element('p', [venue.name || 'Venue', human(venue.structural_roof) + ' · roof status: ' + human(venue.roof_status)].join(' · '), 'weather-venue'));
+      const type = String(venue.structural_roof || '').toLowerCase();
+      const roofInfo = venue.roof_status || {};
+      const announced = roofInfo.source_url && (roofInfo.announced_utc || roofInfo.announcement_utc);
+      const roofState = announced && ['open','closed'].includes(roofInfo.status) ? roofInfo.status : 'unknown';
+      const venueLabel = type === 'fixed_closed' ? 'Enclosed stadium · fixed roof'
+        : type === 'fixed_open' ? 'Open-air stadium'
+        : type === 'retractable' ? 'Retractable roof · status ' + roofState
+        : type.includes('canopy') ? 'Open-air canopy' : 'Roof type unknown';
+      const exposure = type === 'fixed_closed' ? 'Enclosed stadium · outdoor forecast'
+        : type === 'retractable' ? 'Retractable roof · ' + roofState + ' · outdoor forecast'
+        : venueLabel + (type === 'fixed_open' || type.includes('canopy') ? ' forecast' : ' · outdoor forecast');
+      const headline = kickoff ? degrees(kickoff.temperature_c) + ' · wind ' + speed(kickoff.wind_mps) : 'forecast unavailable';
+      panel.replaceChildren(element('summary', exposure + ' · ' + headline));
+      panel.dataset.weatherStatus = game.status || 'UNAVAILABLE';
+      panel.append(element('p', [venue.name || 'Venue', venueLabel].join(' · '), 'weather-venue'));
       panel.append(element('p', (game.status === 'AVAILABLE' ? 'Forecast captured ' + clock(game.captured_utc || data.captured_utc) + ' · forecast updated ' + clock(game.forecast_issued_utc) : 'Forecast check ' + clock(data.captured_utc) + ' · source unavailable') + '.', 'weather-clock'));
       panel.append(element('p', 'Later forecast capture; not used in the frozen N211 picks issued ' + clock(modelIssue) + '. No probabilities have been adjusted.', 'weather-separation'));
       if (game.status !== 'AVAILABLE') panel.append(element('p', 'Forecast coverage: ' + human(game.status) + '. Missing forecast fields remain unavailable.'));
@@ -67,12 +78,13 @@
         const cell = element('td', probability); cell.append(element('small', rain), element('small', snow)); row.append(cell); body.append(row);
       }
       table.append(body); wrapper.append(table); panel.append(wrapper);
-      const type = String(venue.structural_roof || '').toLowerCase();
       const context = type.includes('canopy')
         ? 'Approximate outdoor stadium-grid forecast. The canopy covers the field, but no wind attenuation inside the bowl is assumed.'
-        : /fixed|dome|retract|closed|indoor/.test(type)
-          ? 'Approximate outdoor stadium-grid forecast, not on-field measurements or indoor playing conditions. A retractable roof is not assumed closed.'
-          : 'Approximate outdoor stadium-grid forecast, not on-field measurements. Conditions and later forecasts may differ.';
+        : type === 'fixed_closed'
+          ? 'This enclosed stadium has a fixed roof. The figures are outside ambient forecasts, not indoor playing conditions or on-field measurements.'
+          : type === 'retractable'
+            ? 'Approximate outdoor stadium-grid forecast, not on-field measurements or an estimate of indoor conditions. Roof status: ' + roofState + '.'
+            : 'Approximate outdoor stadium-grid forecast, not on-field measurements. Conditions and later forecasts may differ.';
       panel.append(element('p', context, 'weather-context'));
       if (typeof game.venue_source_url === 'string' && game.venue_source_url.startsWith('https://')) {
         const venueLink = element('a', 'Venue / roof source');venueLink.href=game.venue_source_url;venueLink.target='_blank';venueLink.rel='noopener noreferrer';panel.append(venueLink, document.createTextNode(' · '));

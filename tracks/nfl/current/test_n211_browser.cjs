@@ -17,7 +17,7 @@ const server=http.createServer((req,res)=>{
   const rel=decodeURIComponent(req.url.split('?')[0]);
   const file=path.resolve(root,'.'+rel+(rel.endsWith('/')?'index.html':''));
   if(!file.startsWith(root+path.sep)){res.writeHead(403);return res.end();}
-  fs.readFile(file,(err,content)=>{if(err){res.writeHead(404);return res.end();}res.setHeader('Content-Type',file.endsWith('.png')?'image/png':file.endsWith('.json')?'application/json':file.endsWith('.js')?'text/javascript':'text/html; charset=utf-8');res.end(content);});
+  fs.readFile(file,(err,content)=>{if(err){res.writeHead(404);return res.end();}res.setHeader('Content-Type',({'.png':'image/png','.jpg':'image/jpeg','.json':'application/json','.js':'text/javascript','.css':'text/css','.ttf':'font/ttf','.woff':'font/woff','.woff2':'font/woff2','.svg':'image/svg+xml'})[path.extname(file)]||'text/html; charset=utf-8');res.end(content);});
 });
 (async()=>{
   assert.equal(data.games.length,16);assert.equal(new Set(data.games.map(g=>g.id)).size,16);
@@ -75,7 +75,11 @@ const server=http.createServer((req,res)=>{
       await weatherPanel.locator('summary').click();
       assert.match(await weatherPanel.innerText(),/not used in the frozen N211 picks/);
       assert.equal(await weatherPanel.locator('tbody tr').count(),3);
-      assert.match(await weatherPanel.innerText(),/roof status:/);
+      assert.match(await weatherPanel.innerText(),/Enclosed stadium · fixed roof/);
+      assert.match(await weatherPanel.locator('summary').innerText(),/Enclosed stadium · outdoor forecast/);
+      assert.match(await page.locator('[data-weather-game="2026_12_BAL_HOU"] summary').innerText(),/Retractable roof · unknown · outdoor forecast/);
+      assert.match(await page.locator('[data-weather-game="2026_12_NE_LAC"] summary').innerText(),/Open-air canopy forecast/);
+      assert.match(await page.locator('[data-weather-game="2026_12_LV_CLE"] summary').innerText(),/Open-air stadium forecast/);
       assert.match(await weatherPanel.innerText(),/Forecast (captured|check)/);
 
       for(const [name,count] of [['Upcoming',11],['Started',1],['Final',4],['All games',16]]){
